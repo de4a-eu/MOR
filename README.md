@@ -9,7 +9,7 @@
 
 ## Tasks
 
-- [Translation of the canonical models](#1),
-- [Implementation of explicit request (ER) page](#2),
-- [Implementation of preview](#3),
-- [Interchangeable CSS for individual portal](#4).
+- **Translation** of the canonical models #1,
+- Implementation of **explicit request (ER) page** #2,
+- Implementation of **preview** #3,
+- Interchangeable CSS for individual portal #4.
