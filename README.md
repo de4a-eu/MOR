@@ -11,8 +11,11 @@ MOR components can access Connector’s APIs by means of Javascript HTTP request
 
 MOR ER = {
 to be invoked when the user select the evidence types to be issued abroad
+
 input parameters: {defaulLang, requesterCountryCode, [canonicalEvidenceType], outputJSArraytId}
+
 output parameters: [ outputJSArraytId=ialProvisionData ]
+
 Interactions:
 - the connector provides the mor contents in the selected language
 - the user  can see the information provided in the selected language for one of the canonical types
@@ -27,7 +30,9 @@ Interactions:
 MOR Preview = {
 
 to be invoked when the required evidences have been received
+
 input parameters = {defaultLang, postActionValue, [ { evidenceXMLobjectId, canonicalEvidenceType } ] }
+
 Interations:
 - the connector provides the mor contents in the selected language
 - the user  sees each evidence in the selected language 
