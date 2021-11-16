@@ -1,0 +1,46 @@
+[
+	{
+		"countryCode": "ES",
+		"atuLevel": "nuts0",
+		"provisions": [
+			{
+				"dataOwnerId": "iso6523-actorid-upis::9921:E00003901",
+				"params": [
+					{
+						"title": "ES/nuts2"
+					}
+				],
+				"dataOwnerPrefLabel": "Registro Civil, Ministerio de Justicia",
+				"atuCode": "ES",
+				"atuLatinName": "ESPAÑA",
+				"provisionType": "ip"
+			}
+		]
+	},
+	{
+		"countryCode": "LU",
+		"atuLevel": "nuts0",
+		"provisions": [
+			{
+				"dataOwnerId": "iso6523-actorid-upis::9991:LU000000025",
+				"dataOwnerPrefLabel": "CENTRE DES TECHNOLOGIES DE L'INFORMATION DE L'ETAT",
+				"atuCode": "LU",
+				"atuLatinName": "LUXEMBOURG",
+				"provisionType": "ip"
+			}
+		]
+	},
+	{
+		"countryCode": "SI",
+		"atuLevel": "nuts0",
+		"provisions": [
+			{
+				"dataOwnerId": "iso6523-actorid-upis::9991:SI990000105",
+				"dataOwnerPrefLabel": "Minister za notranje zadeve",
+				"atuCode": "SI",
+				"atuLatinName": "SLOVENIJA",
+				"provisionType": "ip"
+			}
+		]
+	}
+]

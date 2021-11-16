@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./js/idk.js"></script>
+	<script type="text/javascript" src="./js/mor.js"></script>
+	<title>PoC MOR MA UC2 - NUTS</title>
+	<script type="text/javascript" src="js/logic.js"></script>
+	<link rel="stylesheet" href="css/demoMOR.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+	<form>
+
+		<h2 align="center"><img src="img/nl.jpg" class="flag"> Required Evidence</h2>
+
+		<div id="area"></div>
+
+		<div align="center">
+			<div class="person" align="center"  style="width:20em">
+				<h3 style="margin-left:1em">Evidence related to:</h3>
+				<div class="tr">
+					<div class="td">Given name:</div>
+					<div class="th">Lisa</div>
+				</div>
+				<div class="tr">
+					<div class="td">Family name:</div>
+					<div class="th">Simpson</div>
+				</div>
+				<div class="tr">
+					<div class="td">Birth Date:</div>
+					<div class="th">20/02/2002</div>
+				</div>
+				<br>
+			</div>
+			<br>
+			<div id="evform">
+				<div class="tr">
+					<div class="td" style="width:20em">
+						<span class="see" style="padding:7px" title="Evidence that provides the person's birth legal information">Proof of Birth</span>
+					</div>
+					<div class="td"  style="width:30em">
+					    <select id="countryBirthCertificate">
+							<option value="AT">Austria</option>
+							<option value="BE">Belgium</option>
+							<option value="BG">Bulgaria</option>
+							<option value="HR">Croatia</option>
+							<option value="CY">Cyprus</option>
+							<option value="CZ">Czechia</option>
+							<option value="DK">Denmark</option>
+							<option value="DL">Digitaland</option>
+							<option value="EE">Estonia</option>
+							<option value="FI">Finland</option>
+							<option value="FR">France</option>
+							<option value="GE">Germany</option>
+							<option value="EL">Greece</option>
+							<option value="HU">Hungary</option>
+							<option value="IT">Italy</option>
+							<option value="IE">Ireland</option>
+							<option value="LV">Latvia</option>
+							<option value="LT">Lithuania</option>
+							<option value="LU">Luxembourg</option>
+							<option value="MT">Malta</option>
+							<option selected value="NL">Netherlands</option>
+							<option value="PO">Poland</option>
+							<option value="PT">Portugal</option>
+							<option value="RO">Romania</option>
+							<option value="SK">Slovakia</option>
+							<option value="SI">Slovenia</option>
+							<option value="ES">Spain</option>
+							<option value="SE">Sweden</option>
+					    </select>	
+					</div>		
+				</div>
+				<div class="tr">
+					<div class="td"  style="width:20em">
+						<span class="see" style="padding:7px"
+							title="Evidence that provides the person's marriage legal information">Proof of Marriage</span>
+					</div>
+					<div class="td" style="width:30em">
+					    <select  id="countryMarriageCertificate">
+							<option value="AT">Austria</option>
+							<option value="BE">Belgium</option>
+							<option value="BG">Bulgaria</option>
+							<option value="HR">Croatia</option>
+							<option value="CY">Cyprus</option>
+							<option value="CZ">Czechia</option>
+							<option value="DK">Denmark</option>
+							<option value="DL">Digitaland</option>
+							<option value="EE">Estonia</option>
+							<option value="FI">Finland</option>
+							<option value="FR">France</option>
+							<option value="GE">Germany</option>
+							<option value="EL">Greece</option>
+							<option value="HU">Hungary</option>
+							<option value="IT">Italy</option>
+							<option value="IE">Ireland</option>
+							<option value="LV">Latvia</option>
+							<option value="LT">Lithuania</option>
+							<option value="LU">Luxembourg</option>
+							<option value="MT">Malta</option>
+							<option selected value="NL">Netherlands</option>
+							<option value="PO">Poland</option>
+							<option value="PT">Portugal</option>
+							<option value="RO">Romania</option>
+							<option value="SK">Slovakia</option>
+							<option value="SI">Slovenia</option>
+							<option value="ES">Spain</option>
+							<option value="SE">Sweden</option>
+						</select>	
+					</div>		
+				</div>
+				<div style="display:block">
+					<br><input type="button" value="Proceed" onclick="selected()">
+				</div>
+			</div>			
+			<div id="explicit" style="display:none">
+				<div class="tr">
+					<div class="td" style="width:20em">
+						<input type="button" class="see" value="Proof of Birth"
+							title="See an example of the received data when evidence is automatically retrieved" onclick="show('BirthCertificate','en', true)">
+						<img src="img/help3.png" title="See an example of the received data when evidence is automatically retrieved" onclick="show('BirthCertificate','en', true)">
+					</div>
+					<div class="td"  style="width:30em">
+					    <input type="checkbox" id="ckBirthCertificate" onclick="if (this.checked) {document.getElementById('liBirthCertificate').style.display='none';document.getElementById('inBirthCertificate').style.display='none';} else document.getElementById('inBirthCertificate').style.display='block';"> I will upload the evidence document					
+					    <input class="idropdown" id="inBirthCertificate" onchange="showLi(this,'BirthCertificate')" onclick="showLi(this,'BirthCertificate')" onkeypress="showLi(this,'BirthCertificate')" onpaste="showLi(this,'BirthCertificate')" oninput="showLi(this,'BirthCertificate')" 
+					    placeholder="AVAILABLE SOURCES FOR AUTOMATIC PROVISION">
+					    <ul class="down" id="liBirthCertificate">
+					    <li><input type="button" title="Close" class="close" value="[Close]" onclick="document.getElementById('liBirthCertificate').style.display='none'"></li>
+					    </ul>	
+					</div>			
+				</div>
+				<div class="tr">
+					<div class="td"  style="width:20em">
+						<input type="button" class="see" value="Proof of Marriage"
+							title="See an example of the received data when evidence is automatically retrieved" onclick="show('MarriageCertificate','en', true)">
+						<img src="img/help3.png" title="See an example of the received data when evidence is automatically retrieved" onclick="show('MarriageCertificate','en', true)">
+					</div>
+					<div class="td" style="width:30em">
+					    <input type="checkbox" id="ckMarriageCertificate" onclick="if (this.checked) {document.getElementById('inMarriageCertificate').style.display='none'; document.getElementById('liMarriageCertificate').style.display='none';} else document.getElementById('inMarriageCertificate').style.display='block';"> I will upload the evidence document					
+					    <input class="idropdown" id="inMarriageCertificate" onchange="showLi(this,'MarriageCertificate')" onclick="showLi(this,'MarriageCertificate')" onkeypress="showLi(this,'MarriageCertificate')" onpaste="showLi(this,'MarriageCertificate')" oninput="showLi(this,'MarriageCertificate')" 
+					    placeholder="AVAILABLE SOURCES FOR AUTOMATIC PROVISION">
+					    <ul class="down" id="liMarriageCertificate">
+					    	 <li><input type="button" title="Close" class="close" value="[Close]" onclick="document.getElementById('liMarriageCertificate').style.display='none'"></li>					    
+					    </ul>	
+					</div>			
+				</div>
+				<div style="display:block">
+					<br><input type="button" value="Proceed" onclick="proceed('en')">
+				</div>
+			</div>
+			<div id="preview" style="display:none">
+				<div class="tr" id="BirthCertificate_REQ_URL" style="display:none">
+					<div class="td">&nbsp;</div>
+					<div class="td">
+						Your are being redirected to a portal in <b><em>@@country@@</em></b> for completing the request 
+						of the <em><b>@@evidence@@</em></b>	
+						to <em><b>@@do@@</em></b>					
+					</div>
+				</div>			
+				<div class="tr" id="BirthCertificate_PARAM" style="display:none">
+					<h2>Params</h2>
+				</div>							
+				<div class="tr" id="BirthCertificate_AUTO" style="display:none">
+					<div class="td">
+						<input type="button" class="see" value="Proof of Birth"
+							title="See the data received as evidence" onclick="show('BirthCertificate','en', false)">
+						<img src="img/view3.png" title="See the data received as evidence" onclick="show('BirthCertificate','en', false)">
+					</div>
+					<div class="td" id="text_BirthCertificate_AUTO">
+						Retrieved from xx, xx
+					</div>
+					<div class="td">
+						<input type="radio" name="radio_BirthCertificate_AUTO" checked="checked" value="1" title="Include evidence in the procedure">Include
+						<input type="radio" name="radio_BirthCertificate_AUTO" value="0" title="Exclude evidence from the procedure" onclick="cancel('BirthCertificate')">Exclude
+					</div>
+				</div>
+				<div class="tr" id="BirthCertificate_MANU" style="display:none">
+					<div class="td">
+						<input type="button" class="see" value="Proof of Birth" title="See instructions for uploading" onclick="">
+						<img src="img/help3.png" title="See instructions for uploading" onclick="">
+					</div>
+					<div class="td">
+						<input type="file">
+					</div>
+					<div class="td" >
+						<input type="button" id="revert_BirthCertificate_MANU" style="display:none" value="Revert" title="Revert to automatic retrieval" onclick="revert('BirthCertificate')">
+					</div>
+				</div>
+				
+				<div class="tr" id="MarriageCertificate_REQ_URL" style="display:none">
+					<div class="td">&nbsp;</div>
+					<div class="td">
+						Your are been redirected to a portal in <b><em>@@country@@</em></b> for completing the request 
+						of the <em><b>@@evidence@@</em></b>	
+						to <em><b>@@do@@</em></b>					
+					</div>
+				</div>			
+				<div class="tr" id="MarriageCertificate_PARAM" style="display:none">
+					<h2>Params</h2>
+				</div>														
+				<div class="tr" id="MarriageCertificate_AUTO" style="display:none">
+					<div class="td">
+						<input type="button" class="see" value="Proof of Marriage"
+							title="See the data received as evidence" onclick="show('MarriageCertificate','en', false)">
+						<img src="img/view3.png" title="See the data received as evidence" onclick="show('MarriageCertificate','en', false)">							
+					</div>
+					<div class="td" id="text_MarriageCertificate_AUTO">
+						Retrieved from xx, xx
+					</div>
+					<div class="td">
+						<input type="radio" name="radio_MarriageCertificate_AUTO" checked="checked" value="1" title="Include evidence in the procedure">Include
+						<input type="radio" name="radio_MarriageCertificate_AUTO" value="0" title="Exclude evidence from the procedure" onclick="cancel('MarriageCertificate')">Exclude
+					</div>					
+				</div>				
+				<div class="tr" id="MarriageCertificate_MANU" style="display:none">
+					<div class="td">
+						<input type="button" class="see" value="Proof of Marriage" title="See instructions for uploading" onclick="">
+						<img src="img/help3.png" title="See instructions for uploading" onclick="">
+					</div>
+					<div class="td">
+						<input type="file">
+					</div>
+					<div class="td">
+						<input type="button" id="revert_MarriageCertificate_MANU" style="display:none" value="Revert" title="Revert to automatic retrieval" onclick="revert('MarriageCertificate')">
+					</div>
+					
+				</div>
+				<div>
+					<br><input type="button" class="see" value="Continue" onclick="request('en')">
+				</div>
+			</div>			
+		</div>
+	</form>
+</body>
+
+</html>

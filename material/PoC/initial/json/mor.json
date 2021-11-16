@@ -1,0 +1,497 @@
+{
+	"BirthCertificate": {
+		"en": {
+			"label": "Birth Proof",
+			"description": "Data that proves a Birth",
+			"example": ""
+		},
+		"es": {
+			"label": "Prueba de Nacimiento",
+			"description": "Prueba de Nacimiento",
+			"example": ""
+		}
+	},
+	"BirthCertificate/Child": {
+		"en": {
+			"label": "Person born",
+			"description": "Data of the Person born",
+			"example": ""
+		},
+		"es": {
+			"label": "Nacido",
+			"description": "Persona del nacimiento",
+			"example": ""
+		}
+	},
+	"BirthCertificate/Child/GivenName": {
+		"ref": "BirthCertificate/Child:Person",
+		"en": {
+			"label": "Forename",
+			"description": "Given name at birth",
+			"example": "Mary"
+		},
+		"es": {
+			"description": "Nombre del nacido",
+			"example": "Juana"
+		}
+	},
+	"BirthCertificate/Child/FamilyName": {
+		"ref": "BirthCertificate/Child:Person",
+		"en": {
+			"label": "Surname",
+			"description": "Family name at birth",
+			"example": "Ford"
+		},
+		"es": {			
+			"description": "Apellidos del nacido",
+			"example": "de Arco Martínez"
+		}
+	},
+	"BirthCertificate/Child/Gender": {
+		"ref" : "BirthCertificate/Child:Person",
+		"en": {
+			"description": "Gender at birth"
+		},
+		"es": {
+			"description": "Sexo del nacido"
+		}
+	},
+	"BirthCertificate/Child/BirthDate": {
+		"en": {
+			"label": "Birth Date",
+			"description": "Date of the birth",
+			"example": "20/12/1989"
+		},
+		"es": {
+			"label": "Fecha de Nacimiento",
+			"description": "Fecha en que tuvo lugar el nacimiento",
+			"example": "20/12/1989"
+		}
+	},
+	"BirthCertificate/Child/PlaceOfBirth": {
+		"en": {
+			"label": "Birth Place",
+			"description": "Place of the birth",
+			"example": ""
+		},
+		"es": {
+			"label": "Lugar de Nacimiento",
+			"description": "Lugar en que tuvo lugar el nacimiento",
+			"example": ""
+		}
+	},
+	"BirthCertificate/Child/PlaceOfBirth/geographicIdentifier": {
+		"en": {
+			"label": "Geographical code",
+			"description": "Code of the geographical location",
+			"example": ""
+		},
+		"es": {
+			"label": "Código geográfico",
+			"description": "Código geográfico del lugar el nacimiento",
+			"example": ""
+		}
+	},
+	"BirthCertificate/Child/PlaceOfBirth/geographicName": {
+		"en": {
+			"label": "Location name",
+			"description": "Name of the geographical location",
+			"example": "Dublin, Ireland"
+		},
+		"es": {
+			"label": "Denominación",
+			"description": "Denominación del lugar el nacimiento",
+			"example": "Robledo de Chavela, Madrid, España"
+		}
+	},
+	"BirthCertificate/Parent": {
+		"en": {
+			"label": "Parent",
+			"description": "Parent's identifying details",
+			"example": ""
+		},
+		"es": {
+			"label": "Progenitor",
+			"description": "Datos identificativos de un Progenitor",
+			"example": ""
+		}
+	},
+	"BirthCertificate/Parent/GivenName": {
+		"ref": "BirthCertificate/Parent:Person",
+		"en": {
+			"description": "Parent's Given Name"
+		},
+		"es": {
+			"description": "Nombre del progenitor",
+			"example": "María"
+		}
+	},
+	"BirthCertificate/Parent/FamilyName": {
+		"ref": "BirthCertificate/Parent:Person",
+		"en": {
+			"description": "Parent's Family Name"
+		},
+		"es": {			
+			"description": "Apellidos del progenitor"
+		}
+	},
+	"BirthCertificate/Parent/Identifier": {
+		"ref": "BirthCertificate/Parent:Person",
+		"en": {			
+			"description": "Parent's identity number details"
+		},
+		"es": {
+			"description": "Documento de Identidad del progenitor"
+		}
+	},
+	"BirthCertificate/Parent/Identifier/IdType": {
+		"ref": "BirthCertificate/Parent:Person"
+	},
+	"BirthCertificate/Parent/Identifier/Number": {
+		"ref": "BirthCertificate/Parent:Person"
+	},
+	"MarriageCertificate": {
+		"en": {
+			"label": "Marriage Proof",
+			"description": "Data that proves a Marriage",
+			"example": ""
+		},
+		"es": {
+			"label": "Prueba de Matrimonio",
+			"description": "Prueba de Matrimonio",
+			"example": ""
+		}
+	},
+	"MarriageCertificate/MarriageDate": {
+		"en": {
+			"label": "Marriage Date",
+			"description": "Date of the Marriage",
+			"example": "20/12/2020"
+		},
+		"es": {
+			"label": "Fecha de Matrimonio",
+			"description": "Fecha en que tuvo lugar el Matrimonio",
+			"example": "20/12/2020"
+		}
+	},
+	"MarriageCertificate/PlaceOfMarriage": {
+		"en": {
+			"label": "Marriage Place",
+			"description": "Place of the marriage",
+			"example": ""
+		},
+		"es": {
+			"label": "Lugar de Matrimonio",
+			"description": "Lugar en que tuvo lugar el Matrimonio",
+			"example": ""
+		}
+	},
+	"MarriageCertificate/PlaceOfMarriage/geographicIdentifier": {
+		"en": {
+			"label": "Geographical code",
+			"description": "Code of the geographical location",
+			"example": ""
+		},
+		"es": {
+			"label": "Código geográfico",
+			"description": "Código geográfico del lugar el nacimiento",
+			"example": ""
+		}
+	},
+	"MarriageCertificate/PlaceOfMarriage/geographicName": {
+		"en": {
+			"label": "Location name",
+			"description": "Name of the geographical location",
+			"example": "Dublin, Ireland"
+		},
+		"es": {
+			"label": "Denominación",
+			"description": "Denominación del lugar",
+			"example": "San Pedro del Pinatar, Murcia, España"
+		}
+	},
+	"MarriageCertificate/Spouse": {
+		"en": {
+			"label": "Spouse",
+			"description": "Spouse Data",
+			"example": ""
+		},
+		"es": {
+			"label": "Cónyuge",
+			"description": "Datos identificativos de un Cónyuge",
+			"example": ""
+		}
+	},
+	"MarriageCertificate/Spouse/GivenName": {
+		"en": {
+			"label": "Forename",
+			"description": "Given name at birth",
+			"example": "Mary"
+		},
+		"es": {
+			"label": "Nombre",
+			"description": "Nombre del cónyuge",
+			"example": "María"
+		}
+	},
+	"MarriageCertificate/Spouse/FamilyName": {
+		"en": {
+			"label": "Surname",
+			"description": "Family name at birth",
+			"example": "Ford"
+		},
+		"es": {
+			"label": "Apellidos",
+			"description": "Apellidos del cónyuge",
+			"example": "Garcia Pérez"
+		}
+	},
+	"MarriageCertificate/Spouse/Gender": {
+		"en": {
+			"label": "Gender",
+			"description": "Gender at marriage",
+			"example": "Female"
+		},
+		"es": {
+			"label": "Sexo",
+			"description": "Sexo",
+			"example": "Mujer"
+		}
+	},
+	"MarriageCertificate/Spouse/BirthDate": {
+		"en": {
+			"label": "Birth Date",
+			"description": "Date of the birth",
+			"example": "20/12/1989"
+		},
+		"es": {
+			"label": "Fecha de Nacimiento",
+			"description": "Fecha de nacimiento del cónyuge",
+			"example": "20/12/1989"
+		}
+	},
+	"MarriageCertificate/Spouse/Identifier": {
+		"en": {
+			"label": "Identitiy card",
+			"description": "Identitiy card",
+			"example": ""
+		},
+		"es": {
+			"label": "Documento de Identidad",
+			"description": "Documento de Identida del cónyuge",
+			"example": ""
+		}
+	},
+	"MarriageCertificate/Spouse/Identifier/IdType": {
+		"ref": "MarriageCertificate/Spouse:Person"
+	},
+	"MarriageCertificate/Spouse/Identifier/Number": {
+		"ref": "MarriageCertificate/Spouse:Person"
+	},
+	"Person/GivenName": {
+		"en": {
+			"label": "Given name",
+			"description": "Current given name",
+			"example": "Eve"
+		},
+		"es": {
+			"label": "Nombre",
+			"description": "Nombre actual de la persona",
+			"example": "María"
+		}
+	},
+	"Person/FamilyName": {
+		"en": {
+			"label": "Family name",
+			"description": "Current family name",
+			"example": "Smith"
+		},
+		"es": {
+			"label": "Apellidos",
+			"description": "Apellidos actuales de la persona",
+			"example": "Garcia Pérez"
+		}
+	},
+	"Person/Identifier/IdType": {
+		"en": {
+			"label": "Type",
+			"description": "Type of Identitiy card",
+			"example": "Passport"
+		},
+		"es": {
+			"label": "Tipo",
+			"description": "Tipo de Documento de Identidad",
+			"example": "DNI"
+		}
+	},
+	"Person/Identifier/Number": {
+		"en": {
+			"label": "Number",
+			"description": "Identitiy number",
+			"example": "Z-22930472W"
+		},
+		"es": {
+			"label": "Número",
+			"description": "Número de identidad",
+			"example": "22930472W"
+		}
+	},
+	"Person/Gender": {
+		"enum" : "ref@https://remote.eu/sparql?dataset=gender&lang=##lang##",
+		"type" : "enumType",
+		"en": {
+			"label": "Gender",
+			"description": "Person's Gender",
+			"example": "Female"
+		},
+		"es": {
+			"label": "Sexo",
+			"description": "Sexo de la persona",
+			"example": "Femenino"
+		}
+	},
+	"BE/nuts1": {
+		"en": {
+			"label": "Belgic Region",
+			"description": "",
+			"example": ""
+		},
+		"es": {
+			"label": "Región de Bélgica",
+			"description": "",
+			"example": ""
+		}
+	},
+	"DL/nuts1": {
+		"en": {
+			"label": "Digital Communities",
+			"description": "",
+			"example": ""
+		},
+		"es": {
+			"label": "Comunidades Digitales",
+			"description": "",
+			"example": ""
+		}
+	},
+	"CivilRegistry/SearchEntry": {
+		"en": {
+			"label": "Search by entry",
+			"description": "Search by entry of the Civil Registry",
+			"example": ""
+		},
+		"es": {
+			"label": "Buscar por Entrada de Registro",
+			"description": "Búsqueda por entrada del Registro Civil",
+			"example": ""
+		}
+	},
+	"CivilRegistry/Book": {
+		"en": {
+			"label": "Book",
+			"description": "Book of the Civil Registry",
+			"example": "23xZ",
+			"optional": false,
+			"type": "xs:string"
+		},
+		"es": {
+			"label": "Libro",
+			"description": "Libro del Registro Civil",
+			"example": "23xZ",
+			"optional": false,
+			"type": "xs:string"
+		}
+	},
+	"CivilRegistry/Volume": {
+		"en": {
+			"label": "Volume",
+			"description": "Volume of the Civil Registry",
+			"example": "II",
+			"optional": false,
+			"type": "xs:string"
+		},
+		"es": {
+			"label": "Volumen",
+			"description": "Volumen del Registro Civil",
+			"example": "II",
+			"optional": false,
+			"type": "xs:string"
+		}
+	},
+	"CivilRegistry/Page": {
+		"en": {
+			"label": "Page",
+			"description": "Page of the Civil Registry",
+			"example": "34",
+			"optional": false,
+			"type": "xs:string"
+		},
+		"es": {
+			"label": "Página",
+			"description": "Página del Registro Civil",
+			"example": "34",
+			"optional": false,
+			"type": "xs:string"
+		}
+	},
+	"CivilRegistry/SearchFiliation": {
+		"en": {
+			"label": "Search by supplementary person's data",
+			"description": "Search by supplementary person's data in Spain",
+			"example": ""
+		},
+		"es": {
+			"label": "Buscar por Datos complementarios",
+			"description": "Datos complementarios de la persona",
+			"example": ""
+		}
+	},
+	"Person/FirstFamilyName": {
+		"en": {
+			"label": "First FamilyName",
+			"description": "First Family Name of the Person",
+			"example": "García",
+			"optional": false,
+			"type": "xs:string"
+		},
+		"es": {
+			"label": "Primer Apellido",
+			"description": "Primer Apellido de la Persona",
+			"example": "García",
+			"optional": false,
+			"type": "xs:string"
+		}
+	},
+	"Person/SecondFamilyName": {
+		"en": {
+			"label": "Second FamilyName",
+			"description": "Second Family Name of the Person",
+			"example": "Muñoz",
+			"optional": true,
+			"type": "xs:string"
+		},
+		"es": {
+			"label": "Segundo Apellido",
+			"description": "Segundo Apellido de la Persona",
+			"example": "Muñoz",
+			"optional": true,
+			"type": "xs:string"
+		}
+	},
+	"Person/hasnotSecondFamilyName": {
+		"en": {
+			"label": "Second FamilyName Absence",
+			"description": "Checked if the Person has not Second Family Name",
+			"example": "",
+			"optional": true,
+			"type": "xs:boolean"
+		},
+		"es": {
+			"label": "Ausencia de Segundo Apellido",
+			"description": "Activar si la persona carece de segundo apellido ",
+			"example": "",
+			"optional": true,
+			"type": "xs:boolean"
+		}
+	}
+}

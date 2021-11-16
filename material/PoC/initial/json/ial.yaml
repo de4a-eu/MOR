@@ -1,0 +1,293 @@
+openapi: 3.0.3
+info:
+  description: DE4A IDK Swagger for the IAL API
+  version: 2.0.2
+  title: Swagger DEA4 IDK Issuing Authority Locator
+  contact:
+    email: apiteam@de4a.eu
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers: 
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/anarosa-es/ialAPI/1.0.0
+  - url: https://idk.de4a.eu/v1
+    description: production server
+
+paths:
+  /ial/{canonicalEvidenceTypeId}:
+    get:
+      parameters:
+        - name: canonicalEvidenceTypeId
+          in: path
+          required: true
+          description: evidence type with a canonical definition
+          schema: 
+            $ref: '#/components/schemas/CanonicalEvidenceType'  
+          example: BirthCertificate
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json charset=utf-8:
+              schema:
+                anyOf:
+                  - $ref: '#/components/schemas/AvailableSources'
+        '5XX':
+          description: Unexpected error
+        '400':
+          description: Bad request. Evidence Type ID must be    
+              - HigherEdCertificate
+              - SecondaryEdCertificate
+              - ResidencyProof
+              - BirthCertificate
+              - MarriageCertificate
+              - CompanyRegistration
+
+  /ial/{canonicalEvidenceTypeId}/{countryCode}:
+    get:
+      parameters:
+        - name: canonicalEvidenceTypeId
+          in: path
+          required: true
+          description: evidence type with a canonical definition
+          schema: 
+            $ref: '#/components/schemas/CanonicalEvidenceType'  
+          example: BirthCertificate
+        - name: countryCode
+          in: path
+          required: true
+          description: country of the available sources
+          schema:
+            type: string
+            pattern: '[A-Z][A-Z]'
+          example: ES
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  atuLevel: 
+                    $ref: '#/components/schemas/AtuLevel'
+                  provisions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProvisionItem'
+        '5XX':
+          description: Unexpected error
+        '400':
+          description: Bad request. Evidence Type ID must be    
+              - HigherEdCertificate
+              - SecondaryEdCertificate
+              - ResidencyProof
+              - BirthCertificate
+              - MarriageCertificate
+              - CompanyRegistration              
+        '404':
+          description: Not found country code    
+
+  /provision:
+    get:
+      parameters:
+        - name: canonicalEvidenceTypeId
+          in: query
+          required: true
+          description: evidence type with a canonical definition
+          schema: 
+            $ref: '#/components/schemas/CanonicalEvidenceType'  
+          example: BirthCertificate
+        - name: dataOwnerId
+          in: query
+          required: true
+          description: country of the available sources
+          schema:
+            type: string
+            pattern: 'iso6523-actorid-upis::[0-9][0-9][0-9][0-9]:[A-Z0-9]{1,15}'
+          example: iso6523-actorid-upis::9991:LU000000025
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json charset=utf-8:
+              schema:
+                type: object
+                properties:
+                  atuLevel: 
+                    $ref: '#/components/schemas/AtuLevel'
+                  provision:
+                      $ref: '#/components/schemas/Provision'
+        '5XX':
+          description: Unexpected error
+        '400':
+          description: Bad request. Evidence Type ID must be    
+              - HigherEdCertificate
+              - SecondaryEdCertificate
+              - ResidencyProof
+              - BirthCertificate
+              - MarriageCertificate
+              - CompanyRegistration              
+        '404':
+          description: Not found country code  
+          
+components:
+  schemas:
+  
+    AvailableSources:
+      type: array
+      description: list of available sources for a canonical evidence type organised by country
+      example: 
+          - countryCode: ES
+            atuLevel: lau
+            provisions:
+              numProvisions: 8123
+              organisation: ES/nuts2/nuts3
+          - countryCode: SI
+            atuLevel: nuts0
+            provisions:
+              atuCode: SI031
+              atuLatinName: Mura
+              dataOwnerId: iso6523-actorid-upis::9991:SI990000105
+              dataOwnerPrefLabel: Vlada Mure
+              provisionType: usip
+              redirectURL : https://moai.gov.si/usip
+          - countryCode: LU
+            atuLevel: nuts0
+            provisions: 
+              dataOwnerId: iso6523-actorid-upis::9991:LU000000025
+              dataOwnerPrefLabel: CENTRE DES TECHNOLOGIES DE L'INFORMATION DE L'ETAT
+              atuCode: LU
+              atuLatinName: LUXEMBOURG
+              provisionType: ip
+          - countryCode: SI
+            atuLevel: nuts0
+            provisions:
+              dataOwnerId: iso6523-actorid-upis::9991:SI990000105
+              params:
+                title: SI/nuts3
+                paramset: 
+                  - SI/SI031
+                  - SI/SI034
+              dataOwnerPrefLabel: Minister za notranje zadeve
+              atuCode: SI
+              atuLatinName: SLOVENIJA
+              provisionType: ip             
+      items:
+        type: object
+        properties:
+          countryCode:
+            type: string
+            description: iso 3166 Alpha-2 
+            example: ES
+          atuLevel:
+            $ref: '#/components/schemas/AtuLevel'
+          provisions:
+            oneOf:
+            - type: object
+              description: with too many provisions
+              required:
+                - numProvisions
+              properties:
+                numProvisions:
+                  type: integer
+                  nullable: false
+                  example: 8123
+                organisation:
+                  type: string
+                  description: upper-level territorial levels that help to select the ATU provision
+                  nullable: false
+                  example: ES/nuts2/nuts3
+            - type: array
+              items:
+                $ref: '#/components/schemas/ProvisionItem'
+                 
+    ProvisionItem:
+      type: object
+      properties:
+        atuCode:
+          type: string
+          example: ES
+        atuLatinName:
+          type: string
+          example: España
+        dataOwnerId: 
+          type: string  
+          example: urn:de4a-eu:provision::9920:ESS2833002E:BirthCertificate
+        dataOwnerPrefLabel:
+          type: string
+          example: Ministerio de Justicia
+        provision:
+          $ref: '#/components/schemas/Provision'
+    Provision:
+          oneOf:
+            - type: object
+              description: user supported intermediation pattern provision
+              required:
+                - provisionType
+                - redirectURL
+              properties:
+                provisionType: 
+                  type: string
+                  nullable: false
+                  enum:
+                    - usip
+                  example: usip
+                redirectURL:
+                  type: string
+                  nullable: false
+                  example: https://ctie.lu/usip
+            - type: object
+              description: intermediation pattern provision
+              required:
+                - provisionType
+              properties:
+                provisionType: 
+                  type: string
+                  nullable: false
+                  enum:
+                    - ip
+                  example: ip
+                params:
+                  type: array
+                  nullable: false
+                  items:
+                    type: object
+                    required:
+                      - title
+                    properties:
+                      title:
+                        type: string
+                        nullable: false
+                        example: SI/nuts3
+                      paramset:
+                        type: array
+                        nullable: false
+                        items:
+                          type: string
+                          example: SI031
+          discriminator:
+            propertyName: provisionType                  
+          
+    AtuLevel:
+      type: string
+      enum: 
+        - nuts0
+        - nuts1
+        - nuts2
+        - nuts3
+        - lau
+        - edu
+      example: nuts0
+      
+    CanonicalEvidenceType:
+      type: string
+      enum:
+        - HigherEdCertificate
+        - SecondaryEdCertificate
+        - ResidencyProof
+        - BirthCertificate
+        - MarriageCertificate
+        - CompanyRegistration

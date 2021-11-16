@@ -1,0 +1,80 @@
+{
+	"BirthCertificate" : [
+ 		{
+  			"countryCode" : "ES",
+ 			"atuLevel" : "nuts0" ,
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9920:ESS2833002E",
+ 					"redirectURL": "https://pid.gob.es/usip"
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"countryCode" : "LU",
+ 			"atuLevel" : "nuts0",
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9920:ESS2833002E",
+ 					"redirectURL": "https://ctie.lu/usip"
+ 				}
+ 			]
+ 		}, 
+ 		{
+ 			"countryCode" : "DL",
+ 		 	"atuLevel" : "nuts1",
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9991:DL000000001",
+ 					"redirectURL": "https://quantum.gov.dl/usip"
+ 				},
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9991:DL000000002",
+ 					"redirectURL": "https://binary.gov.dl/usip"
+ 				}
+ 			]
+ 		}, 
+ 		{
+  			"countryCode" : "SI",
+ 		 	"atuLevel" : "nuts0",
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9920:ESS2833002E",
+ 					"redirectURL": "https://moai.gov.si/usip"
+ 				}
+ 			]
+ 		}
+	],
+	"MarriageCertificate" : [
+ 		{
+  			"countryCode" : "ES",
+ 			"atuLevel" : "nuts0" ,
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9920:ESS2833002E",
+ 					"redirectURL": "https://pid.gob.es/usip"
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"countryCode" : "LU",
+ 			"atuLevel" : "nuts0",
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9920:ESS2833002E",
+ 					"redirectURL": "https://ctie.lu/usip"
+ 				}
+ 			]
+ 		}, 
+ 		{
+  			"countryCode" : "SI",
+ 		 	"atuLevel" : "nuts0",
+ 			"provisions" : [
+ 				{
+ 					"dataOwnerId" : "iso6523-actorid-upis::9920:ESS2833002E",
+ 					"redirectURL": "https://moai.gov.si/usip"
+ 				}
+ 			]
+ 		}
+	]
+}

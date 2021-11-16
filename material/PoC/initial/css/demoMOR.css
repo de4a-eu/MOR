@@ -1,0 +1,336 @@
+*::-webkit-scrollbar {
+  width: 1.2em;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #dbebf3;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #618fa7;    /* color of the scroll thumb */
+  border-radius: 1.2em;       /* roundness of the scroll thumb */
+  border: 3px solid #dbebf3;  /* creates padding around scroll thumb */
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #c0c0c0;
+  font-size: smaller;
+  font-style: italic; 
+  text-shadow:0 0 .125em transparent;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #c0c0c0;
+  font-size: smaller;
+  font-style: italic; 
+  text-shadow:0 0 .125em transparent;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #c0c0c0;
+  font-size: smaller;  
+  font-style: italic; 
+  text-shadow:0 0 .125em transparent;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #c0c0c0;
+  font-size: smaller;
+  font-style: italic; 
+  text-shadow:0 0 .125em transparent;
+}
+input[type=radio] {
+  border: 1px solid #6a7d8c;
+  padding: 0.4em;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-color: white;
+}
+li > label {
+	cursor: pointer;
+}
+.close {
+	padding: 0 !important;
+    float: right;
+    margin: 0 !important;
+    background: white;
+    border: 0;
+    color: #6a7d8c;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+input[type=radio] {
+  background-color:  white;
+  border: 1px solid white;
+}
+input[type=radio]:checked {
+  background-color:  #6a7d8c;
+  border: 2px solid white;
+}
+
+input[type=radio]:focus {
+  outline-color: transparent;
+}
+img {
+	margin-bottom: 0.2em;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.flag {
+	width: 2%; 
+	height: 2%;
+	cursor: default;
+}
+h3 {
+	text-align: left;
+	margin-left: 1.2em;
+	font-size: large;
+}
+h3 > input {
+	margin-right: 1.2em;
+}
+.param {
+	padding-top: 0.15em !important;
+	padding-bottom: 0.15em !important;
+}
+.idropdown {
+	    display: block;
+    width: 30em;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.down {
+	top: 0;
+    left: 0;
+    display: none;
+    position: absolute;
+    width: 304px;
+    max-height: 212px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9999;
+    font-size: 14px;
+    background-color: white;
+    border: 0.05em solid #eeeeee;
+    color: black;
+    font-weight: 500;
+    padding-inline-start: 0.7em;
+}
+.ulhide{
+    max-height: 212px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 9999;
+    padding-inline-start: 0.01em;
+    list-style-type: none;
+}
+.down >li:hover {
+	font-weight: 900;
+}
+.idropdown:focus {
+	border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+.down > li {
+	position: relative;
+	margin: 0;
+	display: list-item;
+    text-align: -webkit-match-parent;
+	padding: 3px 1em 3px .4em;
+	cursor: pointer;
+	min-height: 0; /* support: IE7 */
+	/* support: IE10, see #8844 */
+	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+	
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #c0c0c0;
+  color: #404040;
+  padding: 0.3em;
+  margin-right: 0.8em;
+  font-size: 1em;
+  border: none;
+  border-radius: .5em;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #ffffff;
+  min-width: 50%;
+  max-height: 30em;
+  height: 30em;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: .5em;
+  font-size: 0.8em;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;  
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #404040;
+  color: white;
+}
+
+.addparh2 {
+	text-align: center;
+	display: table-row;
+	margin: 1em;
+	font-size: larger;
+	font-weight: 900;
+	color: #3a3a6f;
+}
+.langOn {
+	background-color: #9bb4c7;
+	color: white;
+	border-radius: 8px;
+	border: 0;
+}
+.langOff {
+	background-color: #9bb4c7;
+	color: white;
+	border-radius: 8px;
+	border: 0;
+}
+.tr {
+	display: table-row-group;
+	font-family: Arial;
+	font-size: 1em;
+	background-color: #badbec;
+	padding: 1em 1em 1em 1em;
+}
+.th {
+	display: table-flex;
+	font-family: Arial;
+	font-size: 1em;
+	font-weight: bold;	
+	padding: 1em 1em 1em 1em;
+	text-align: end;
+}
+.td {
+	display: table-cell;
+	font-family: Arial;
+	font-size: 1em;
+	padding: 1em 1em 1em 1em;
+	text-align: right;
+}
+.td:nth-child(2) {
+	text-align: left;
+}
+.person {
+	width: fit-content;
+	margin	: auto;
+	border: 0.1em solid #badbec;
+}
+.person .tr {
+	display: table-row;
+	font-family: Arial;
+	font-size: 1em;
+	background-color: white;
+	padding: 0.1em 1em 0.11em 1em;
+}
+.person .tr .th {
+	display: table-flex;
+	font-family: Arial;
+	font-size: 1em;
+	font-weight: bold;	
+	text-align: end;
+	text-align: left;
+	padding: 0.1em 1em 0.11em 0.1em;
+}
+.person .tr .td {
+	display: table-cell;
+	font-family: Arial;
+	font-size: 1em;
+	text-align: right;
+	padding: 0.1em 1em 0.11em 1em;
+}
+.label {
+	font-weight: 800;
+	font-family: Calibri;
+	cursor: help;
+}
+.see {
+	background-color: #6a7d8c;
+	color: white;
+	border-radius: 12px;
+	border: 0;
+	font-size: 1.2em;
+	font-weigth: 900;
+}
+.see:hover {
+  background-color: #323279; 
+  color: white;
+  cursor: pointer;
+}
+#close {
+	position: relative;
+	float: right;
+	color: #bb0000;
+	font-weight: 900;
+	font-size: medium;
+	cursor: pointer;
+	margin-right: -1em;
+}
+#area {
+    width: auto;
+    white-space: nowrap;
+    height: fit-content;
+    block-size: fit-content;
+    max-height: 90%;
+    max-width: 90%;
+    margin	: auto;
+    background-color: #4a5377;
+    border-radius: 8px;
+    display: none;
+    color: white;
+    padding: 1em 3em 1em 2em;
+    position: fixed;
+    overflow: auto;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.1em;
+  font-family: Arial;
+}

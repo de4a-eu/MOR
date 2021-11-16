@@ -9,7 +9,12 @@
 
 ## Tasks
 
-- **Translation** of the canonical models #1,
-- Implementation of **explicit request (ER) page** #2,
-- Implementation of **preview** #3,
-- Interchangeable CSS for individual portal #4.
+- [**Translation** of the canonical models](/../../issues/1),
+- [Implementation of **explicit request (ER) page**](/../../issues/2),
+- [Implementation of **preview**](/../../issues/3),
+- [Interchangeable CSS for individual portal](/../../issues/4).
+
+## Materials
+
+- [initial PoC](material/PoC/initial) provided by Ana Rosa,
+- [translation](material/translation) of the descriptions of the the canonical evidence type and associated common types.

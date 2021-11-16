@@ -1,0 +1,20 @@
+{
+ 	"LU" : { "LU" : "LUXEMBOURG" },
+ 	"SI" : { "SI" : "SLOVENIJA" },
+ 	"DL" : {
+ 		"DL" : "DIGITALAND",
+ 		"DL1" : "Quantumland", 
+		"DL2" : "Binaryland"   		
+ 	},
+ 	"BE" : {
+ 		 "BE" : "BELGIQUE-BELGIË" ,
+ 		 "BE1" : "RÉGION DE BRUXELLES-CAPITALE/BRUSSELS HOOFDSTEDELIJK GEWEST" , 
+	 	 "BE2" : "VLAAMS GEWEST" , 
+	 	 "BE3" : "R�GION WALLONNE" 
+ 	},
+ 	"ES" : {
+ 		"ES" : "ESPAÑA" ,
+ 		"ES23" : "La Rioja" , 
+ 		"ES70" : "Canarias" 
+ 	}
+ }

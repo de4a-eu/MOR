@@ -1,0 +1,33 @@
+{
+	"iso6523-actorid-upis::9991:LU000000025" : {
+		"dataOwnerPrefLabel" : "CENTRE DES TECHNOLOGIES DE L'INFORMATION DE L'ETAT",
+		"atu" : "LU",
+		"lang" : "fr"
+	},
+	"iso6523-actorid-upis::9991:SI990000105" : {
+		"dataOwnerPrefLabel" : "Minister za notranje zadeve",
+		"atu" : "SI",
+		"lang" : "si"
+	},
+	"iso6523-actorid-upis::9921:E00003901" : {
+		"dataOwnerPrefLabel" : "Registro Civil, Ministerio de Justicia",
+		"atu" : "ES",
+		"lang" : "es"
+	},
+	"iso6523-actorid-upis::9991:DL000000002" : {
+		"dataOwnerPrefLabel" : "Binary Central Agency",
+		"atu" : "DL2",
+		"lang" : "en"
+	},
+	"iso6523-actorid-upis::9991:DL000000001" : {
+		"dataOwnerPrefLabel" : "Quantum Central Agency",
+		"atu" : "DL1",
+		"lang" : "es"
+	},
+	"iso6523-actorid-upis::9991:BE000000025" : {
+		"dataOwnerPrefLabel" : "Ministère de la Justice",
+		"atu" : "BE",
+		"lang" : "fr"
+	}
+	
+}
