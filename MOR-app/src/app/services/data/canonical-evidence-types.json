@@ -1,0 +1,4 @@
+[
+  { "name": "Proof of Birth", "code": "birth" },
+  { "name": "Proof of Marriage", "code": "marriage" }
+]

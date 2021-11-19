@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="row mt-4 mb-4">
+    <div class="col-12">
+      <h1>MOR-app <small>entry page</small></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">Input parameters</div>
+        <div class="card-body">
+          <h5 class="card-title">Default language</h5>
+          <div class="dropdown mb-3">
+            <a
+              class="btn btn-sm btn-light dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuLanguage"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >{{ parameters.defaultLang }}</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLanguage">
+              <li *ngFor="let language of getLanguages()">
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="setLanguage(language.code)"
+                  [ngClass]="{
+                    disabled: language.code == parameters.defaultLang
+                  }"
+                  ><span
+                    class="me-2 flag-icon flag-icon-{{
+                      language.flagCode | lowercase
+                    }}"
+                  ></span
+                  >{{ language.name }} <b>({{ language.code }})</b></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <h5 class="card-title">Requester country</h5>
+          <div class="dropdown mb-3">
+            <a
+              class="btn btn-sm btn-light dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuRequester"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >{{ parameters.requesterCountryCode }}</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequester">
+              <li *ngFor="let country of getCountries()">
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  (click)="setCountry(country.code)"
+                  [ngClass]="{
+                    disabled: country.code == parameters.requesterCountryCode
+                  }"
+                  ><span
+                    class="me-2 flag-icon flag-icon-{{
+                      country.code | lowercase
+                    }}"
+                  ></span
+                  >{{ country.name }} <b>({{ country.code }})</b></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <h5 class="card-title">Canonical evidence types</h5>
+          <span
+            *ngFor="
+              let canonicalEvidenceType of parameters.canonicalEvidenceTypes
+            "
+          >
+            {{ canonicalEvidenceType }}
+          </span>
+
+          <div class="dropdown mb-3">
+            <a
+              class="btn btn-sm btn-light dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownEvidenceTypes"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Add</a
+            >
+            <ul class="dropdown-menu" aria-labelledby="dropdownEvidenceTypes">
+              <li
+                *ngFor="
+                  let canonicalEvidenceType of getCanonicalEvidenceTypes()
+                "
+              >
+                <a class="dropdown-item" href="#"
+                  >{{ canonicalEvidenceType.name }}
+                  <b>({{ canonicalEvidenceType.code }})</b></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
