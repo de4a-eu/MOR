@@ -19,13 +19,37 @@ export class DataLoaderService {
     return this.canonicalEvidenceTypes;
   };
 
+  public getCanonicalEvidenceType(code: string) {
+    return (
+      this.canonicalEvidenceTypes.find(
+        (evidenceType) => evidenceType.code.toUpperCase() == code.toUpperCase()
+      ) || new Language()
+    );
+  }
+
   getCountries = () => {
     return this.countries;
   };
 
+  public getCountry(code: string) {
+    return (
+      this.countries.find(
+        (country) => country.code.toUpperCase() == code.toUpperCase()
+      ) || new Country()
+    );
+  }
+
   getLanguages = () => {
     return this.languages;
   };
+
+  public getLanguage(code: string) {
+    return (
+      this.languages.find(
+        (language) => language.code.toUpperCase() == code.toUpperCase()
+      ) || new Language()
+    );
+  }
 
   constructor() {}
 }

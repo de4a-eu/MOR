@@ -1,0 +1,109 @@
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card border-secondary">
+        <div class="card-header bg-secondary text-white">
+          <div class="d-flex justify-content-between">
+            <div>
+              <b>MOR</b> component
+              <small class="ms-1"
+                >in
+                <span
+                  class="me-2 flag-icon flag-icon-{{
+                    getLanguage(language).flagCode | lowercase
+                  }}"
+                ></span
+                ><b>{{ getLanguage(language).name }} language</b> for requester
+                country<span
+                  class="ms-2 me-2 flag-icon flag-icon-{{
+                    requesterCountry | lowercase
+                  }}"
+                ></span
+                ><b>{{ getCountry(requesterCountry).name }}</b></small
+              >
+            </div>
+            <div><span class="badge rounded-pill bg-secondary">3</span></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <fa-icon [icon]="faAddressCard"></fa-icon><b>Person</b>
+                  <small> (evidence relates to)</small>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-6">Given name</div>
+                    <div class="col-6">...</div>
+                    <div class="col-6">Family name</div>
+                    <div class="col-6">...</div>
+                    <div class="col-6">Birth date</div>
+                    <div class="col-6">...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="row row-cols-1 row-cols-2 g-4">
+                <div
+                  class="col"
+                  *ngFor="
+                    let evidenceType of getSelectedCanonicalEvidenceTypes()
+                  "
+                >
+                  <div class="card h-100">
+                    <div class="card-header">
+                      <fa-icon [icon]="faIdCardAlt"></fa-icon
+                      ><b>{{ evidenceType.name }}</b>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                      <div class="row">
+                        <div class="col-12 text-center">
+                          <div class="dropdown mb-3">
+                            <a
+                              class="btn btn-sm btn-light dropdown-toggle"
+                              href="#"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              ><span>Select country</span></a
+                            >
+                            <ul class="dropdown-menu">
+                              <li *ngFor="let country of getCountries()">
+                                <a class="dropdown-item" href="#"
+                                  ><span
+                                    class="me-2 flag-icon flag-icon-{{
+                                      country.code | lowercase
+                                    }}"
+                                  ></span
+                                  >{{ country.name }}
+                                  <b>({{ country.code }})</b></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-12 text-center text-muted">
+                          <span class="display-1"
+                            ><fa-icon [icon]="faCloudUploadAlt"></fa-icon
+                          ></span>
+                        </div>
+                        <div class="col-12 text-center text-muted">
+                          <small
+                            >Upload <b>{{ evidenceType.name }}</b></small
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,21 @@
 <div class="container">
   <div class="row mt-4 mb-4">
     <div class="col-12">
-      <h1>MOR-app <small>entry page</small></h1>
+      <h1>MOR <small>demo</small></h1>
     </div>
   </div>
   <div class="row">
     <div class="col-6">
-      <div class="card">
-        <div class="card-header">Input parameters</div>
+      <div class="card h-100">
+        <div class="card-header">
+          <div class="d-flex justify-content-between">
+            <div>
+              <fa-icon [icon]="faSignInAlt"></fa-icon><b>Input parameters</b> of
+              the component
+            </div>
+            <div><span class="badge rounded-pill bg-secondary">1</span></div>
+          </div>
+        </div>
         <div class="card-body">
           <h5 class="card-title">Default language</h5>
           <div class="dropdown mb-3">
@@ -18,7 +26,15 @@
               id="dropdownMenuLanguage"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              >{{ parameters.defaultLang }}</a
+              ><span *ngIf="parameters.language.code"
+                ><span
+                  class="me-2 flag-icon flag-icon-{{
+                    parameters.language.flagCode | lowercase
+                  }}"
+                ></span
+                >{{ parameters.language.name }}
+                <b>({{ parameters.language.code }})</b></span
+              ><span *ngIf="!parameters.language.code">Select language</span></a
             >
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLanguage">
               <li *ngFor="let language of getLanguages()">
@@ -26,9 +42,6 @@
                   class="dropdown-item"
                   href="#"
                   (click)="setLanguage(language.code)"
-                  [ngClass]="{
-                    disabled: language.code == parameters.defaultLang
-                  }"
                   ><span
                     class="me-2 flag-icon flag-icon-{{
                       language.flagCode | lowercase
@@ -39,27 +52,36 @@
               </li>
             </ul>
           </div>
-
           <h5 class="card-title">Requester country</h5>
           <div class="dropdown mb-3">
             <a
               class="btn btn-sm btn-light dropdown-toggle"
               href="#"
               role="button"
-              id="dropdownMenuRequester"
+              id="dropdownMenuRequesterCountry"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              >{{ parameters.requesterCountryCode }}</a
+              ><span *ngIf="parameters.requesterCountryCode.code"
+                ><span
+                  class="me-2 flag-icon flag-icon-{{
+                    parameters.requesterCountryCode.code | lowercase
+                  }}"
+                ></span
+                >{{ parameters.requesterCountryCode.name }}
+                <b>({{ parameters.requesterCountryCode.code }})</b></span
+              ><span *ngIf="!parameters.requesterCountryCode.code"
+                >Select country</span
+              ></a
             >
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequester">
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuRequesterCountry"
+            >
               <li *ngFor="let country of getCountries()">
                 <a
                   class="dropdown-item"
                   href="#"
                   (click)="setCountry(country.code)"
-                  [ngClass]="{
-                    disabled: country.code == parameters.requesterCountryCode
-                  }"
                   ><span
                     class="me-2 flag-icon flag-icon-{{
                       country.code | lowercase
@@ -70,16 +92,7 @@
               </li>
             </ul>
           </div>
-
           <h5 class="card-title">Canonical evidence types</h5>
-          <span
-            *ngFor="
-              let canonicalEvidenceType of parameters.canonicalEvidenceTypes
-            "
-          >
-            {{ canonicalEvidenceType }}
-          </span>
-
           <div class="dropdown mb-3">
             <a
               class="btn btn-sm btn-light dropdown-toggle"
@@ -88,7 +101,23 @@
               id="dropdownEvidenceTypes"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              >Add</a
+              ><span
+                ><span
+                  *ngFor="
+                    let canonicalEvidenceType of parameters.canonicalEvidenceTypes;
+                    index as i
+                  "
+                >
+                  <span *ngIf="i > 0">, </span
+                  >{{ canonicalEvidenceType.code }}</span
+                ></span
+              ><span
+                *ngIf="
+                  parameters.canonicalEvidenceTypes.length == 0 ||
+                  !parameters.canonicalEvidenceTypes[0].code
+                "
+                >Select canonical evidence type</span
+              ></a
             >
             <ul class="dropdown-menu" aria-labelledby="dropdownEvidenceTypes">
               <li
@@ -96,7 +125,12 @@
                   let canonicalEvidenceType of getCanonicalEvidenceTypes()
                 "
               >
-                <a class="dropdown-item" href="#"
+                <a
+                  class="dropdown-item"
+                  (click)="
+                    toggleCanonicalEvidenceType(canonicalEvidenceType.code)
+                  "
+                  href="#"
                   >{{ canonicalEvidenceType.name }}
                   <b>({{ canonicalEvidenceType.code }})</b></a
                 >
@@ -104,7 +138,55 @@
             </ul>
           </div>
         </div>
+        <div class="card-footer text-muted">
+          <small><fa-icon [icon]="faExclamationCircle"></fa-icon>Defined at a level of the specific procedure at a national agency.</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card h-100">
+        <div class="card-header">
+          <div class="d-flex justify-content-between">
+            <div>
+              <fa-icon [icon]="faCode"></fa-icon><b>Source code</b> for
+              including the component
+            </div>
+            <div><span class="badge rounded-pill bg-secondary">2</span></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <pre><code>&lt;<b>script</b> src="..."&gt;&lt;<b>/script</b>&gt;
+&lt;<b>app-mor</b>
+  defaultLang="<b>{{ parameters.language.code }}</b>"
+  requesterCountryCode="<b>{{ parameters.requesterCountryCode.code }}</b>"
+  canonicalEvidenceTypes="<b>{{ selectedCanonicalEvidenceTypes }}</b>"
+&gt;&lt;<b>/app-mor</b>&gt;</code></pre>
+        </div>
+        <div class="card-footer text-muted">
+          <small
+            ><fa-icon [icon]="faExclamationCircle"></fa-icon>Integration is
+            planned by defining
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
+              target="_blank"
+              ><fa-icon [icon]="faGlobeEurope"></fa-icon>custom elements</a
+            >
+            that are part of
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+              target="_blank"
+              ><fa-icon [icon]="faGlobeEurope"></fa-icon>Web Components</a
+            >
+            standard.</small
+          >
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<app-mor
+  defaultLang="{{ parameters.language.code }}"
+  requesterCountryCode="{{ parameters.requesterCountryCode.code }}"
+  canonicalEvidenceTypes="{{ selectedCanonicalEvidenceTypes }}"
+></app-mor>
