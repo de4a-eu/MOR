@@ -1,6 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { DataLoaderService } from 'src/app/services/data-loader.service';
-import { faAddressCard, faIdCardAlt, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAddressCard,
+  faIdCardAlt,
+  faCloudUploadAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import { CanonicalEvidence } from 'src/app/classes/canonical-evidence';
+import { Country } from 'src/app/classes/country';
 
 @Component({
   selector: 'app-mor',
@@ -12,29 +18,37 @@ export class MORComponent implements OnInit {
   @Input('requesterCountryCode') requesterCountry!: string;
   @Input('canonicalEvidenceTypes') canonicalEvidenceTypes!: string;
 
-  faAddressCard = faAddressCard;
-  faIdCardAlt = faIdCardAlt;
-  faCloudUploadAlt = faCloudUploadAlt;
+  public evidences: CanonicalEvidence[] = [];
 
   constructor(private dataLoader: DataLoaderService) {}
 
-  public getMaxEvidences(): number {
-    return this.canonicalEvidenceTypes
-      ? this.canonicalEvidenceTypes.split(',').length
-      : 0;
-  }
-
-  public getCanonicalEvidenceType(code: string) {
+  private getCanonicalEvidenceType(code: string) {
     return this.dataLoader.getCanonicalEvidenceType(code);
   }
 
-  public getSelectedCanonicalEvidenceTypes = () => {
-    return this.canonicalEvidenceTypes.length == 0
-      ? []
-      : this.canonicalEvidenceTypes
-          .split(',')
-          .map((x) => this.getCanonicalEvidenceType(x));
-  };
+  public getEvidenceProviderCountry(evidenceCode: string): Country {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    return evidence.providerCountry;
+  }
+
+  public setEvidenceProviderCountry(
+    evidenceCode: string,
+    countryCode: string
+  ): void {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    evidence.providerCountry = this.getCountry(countryCode);
+  }
+
+  public evidenceProviderCountrySet(evidenceCode: string): boolean {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    return evidence.providerCountry.code != undefined;
+  }
 
   public getLanguage(code: string) {
     return this.dataLoader.getLanguage(code);
@@ -49,4 +63,26 @@ export class MORComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['canonicalEvidenceTypes']) {
+      this.evidences = [];
+      let codes = this.canonicalEvidenceTypes.split(',');
+      if (codes.length > 0) {
+        codes.forEach((code) => {
+          if (code.length > 0)
+            this.evidences.push(
+              new CanonicalEvidence(
+                this.getCanonicalEvidenceType(code),
+                new Country()
+              )
+            );
+        });
+      }
+    }
+  }
+
+  faAddressCard = faAddressCard;
+  faIdCardAlt = faIdCardAlt;
+  faCloudUploadAlt = faCloudUploadAlt;
 }
