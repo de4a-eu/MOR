@@ -131,7 +131,7 @@
                     toggleCanonicalEvidenceType(canonicalEvidenceType.code)
                   "
                   href="#"
-                  >{{ canonicalEvidenceType.name }}
+                  ><fa-icon [icon]="faPlus" [hidden]="isCanonicalEvidenceTypeSelected(canonicalEvidenceType.code)"></fa-icon><fa-icon [icon]="faMinus" [hidden]="!isCanonicalEvidenceTypeSelected(canonicalEvidenceType.code)"></fa-icon>{{ canonicalEvidenceType.name }}
                   <b>({{ canonicalEvidenceType.code }})</b></a
                 >
               </li>

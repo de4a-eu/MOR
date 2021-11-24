@@ -3,7 +3,14 @@ import { Country } from 'src/app/classes/country';
 import { DataLoaderService } from 'src/app/services/data-loader.service';
 import { Language } from '../../classes/language';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
-import { faGlobeEurope, faSignInAlt, faCode, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGlobeEurope,
+  faSignInAlt,
+  faCode,
+  faExclamationCircle,
+  faMinus,
+  faPlus,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-entry-page',
@@ -15,6 +22,8 @@ export class EntryPageComponent implements OnInit {
   faSignInAlt = faSignInAlt;
   faCode = faCode;
   faExclamationCircle = faExclamationCircle;
+  faMinus = faMinus;
+  faPlus = faPlus;
 
   public parameters = {
     language: new Language(),
@@ -36,6 +45,10 @@ export class EntryPageComponent implements OnInit {
       .map((evidenceType) => evidenceType.code)
       .join(',');
   };
+
+  public isCanonicalEvidenceTypeSelected(code: string): boolean {
+    return this.selectedCanonicalEvidenceTypes.includes(code);
+  }
 
   public toggleCanonicalEvidenceType(code: string) {
     if (

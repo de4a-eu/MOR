@@ -4,6 +4,10 @@ import {
   faAddressCard,
   faIdCardAlt,
   faCloudUploadAlt,
+  faTimes,
+  faFileContract,
+  faCheck,
+  faExclamationCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { CanonicalEvidence } from 'src/app/classes/canonical-evidence';
 import { Country } from 'src/app/classes/country';
@@ -41,6 +45,7 @@ export class MORComponent implements OnInit {
       (evidence) => evidence.type.code == evidenceCode
     )[0];
     evidence.providerCountry = this.getCountry(countryCode);
+    evidence.status = 'Preview and select appropriate action.';
   }
 
   public evidenceProviderCountrySet(evidenceCode: string): boolean {
@@ -60,6 +65,44 @@ export class MORComponent implements OnInit {
 
   public getCountry(code: string) {
     return this.dataLoader.getCountry(code);
+  }
+
+  public confirmSending(evidenceCode: string): void {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    evidence.status = 'Evidence is confirmed for sending.';
+  }
+
+  public cancelSending(evidenceCode: string): void {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    evidence.status = 'Upload evidence.';
+  }
+
+  public showUpload(evidenceCode: string): boolean {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    return evidence.status == 'Upload evidence.';
+  }
+
+  public showDocument(evidenceCode: string): boolean {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    return (
+      evidence.status == 'Preview and select appropriate action.' ||
+      evidence.status == 'Evidence is confirmed for sending.'
+    );
+  }
+
+  public showButtons(evidenceCode: string): boolean {
+    let evidence: CanonicalEvidence = this.evidences.filter(
+      (evidence) => evidence.type.code == evidenceCode
+    )[0];
+    return evidence.status == 'Preview and select appropriate action.';
   }
 
   ngOnInit(): void {}
@@ -85,4 +128,8 @@ export class MORComponent implements OnInit {
   faAddressCard = faAddressCard;
   faIdCardAlt = faIdCardAlt;
   faCloudUploadAlt = faCloudUploadAlt;
+  faTimes = faTimes;
+  faFileContract = faFileContract;
+  faCheck = faCheck;
+  faExclamationCircle = faExclamationCircle;
 }

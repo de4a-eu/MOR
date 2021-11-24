@@ -1,4 +1,8 @@
 [
-  { "name": "Proof of Birth", "code": "birth" },
-  { "name": "Proof of Marriage", "code": "marriage" }
+  { "name": "Birth certificate", "code": "birth" },
+  { "name": "Marriage certificate", "code": "marriage" },
+  { "name": "Residency proof", "code": "residency"},
+  { "name": "Company registration", "code": "companyRegistration" },
+  { "name": "Higher education certificate", "code": "higherEd" },
+  { "name": "Secondary education certificate", "code": "secondaryEd"}
 ]
