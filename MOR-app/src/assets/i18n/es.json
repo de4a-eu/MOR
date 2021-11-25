@@ -1,0 +1,20 @@
+{
+  "title": {
+    "component": "Componente MOR",
+    "evidenceRelates": "la evidencia se relaciona con"
+  },
+  "term": {
+    "Person": {
+      "label": "Persona",
+      "GivenName": {
+        "label": "Nombre"
+      },
+      "FamilyName": {
+        "label": "Apellido"
+      },
+      "BirthDate": {
+        "label": "Fecha de nacimiento"
+      }
+    }
+  }
+}

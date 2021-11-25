@@ -5,10 +5,9 @@
         <div class="card-header bg-secondary text-white">
           <div class="d-flex justify-content-between">
             <div>
-              <b>MOR</b> component
-              <small class="ms-1"
-                >in
-                <span
+              <b>{{ 'title.component' | translate }}</b>
+              <!--<span class="ms-1"
+                ><span
                   class="me-2 flag-icon flag-icon-{{
                     getLanguage(language).flagCode | lowercase
                   }}"
@@ -19,8 +18,8 @@
                     requesterCountry | lowercase
                   }}"
                 ></span
-                ><b>{{ getCountry(requesterCountry).name }}</b></small
-              >
+                ><b>{{ getCountry(requesterCountry).name }}</b></span
+              >-->
             </div>
             <div><span class="badge rounded-pill bg-secondary">3</span></div>
           </div>
@@ -30,16 +29,16 @@
             <div class="col">
               <div class="card h-100">
                 <div class="card-header">
-                  <fa-icon [icon]="faAddressCard"></fa-icon><b>Person</b>
-                  <small> (evidence relates to)</small>
+                  <fa-icon [icon]="faAddressCard"></fa-icon><b>{{ 'term.Person.label' | translate }}</b>
+                  <small> ({{ 'title.evidenceRelates' | translate }})</small>
                 </div>
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-6">Given name</div>
+                    <div class="col-6">{{ 'term.Person.GivenName.label' | translate }}</div>
                     <div class="col-6">...</div>
-                    <div class="col-6">Family name</div>
+                    <div class="col-6">{{ 'term.Person.FamilyName.label' | translate }}</div>
                     <div class="col-6">...</div>
-                    <div class="col-6">Birth date</div>
+                    <div class="col-6">{{ 'term.Person.BirthDate.label' | translate }}</div>
                     <div class="col-6">...</div>
                   </div>
                 </div>

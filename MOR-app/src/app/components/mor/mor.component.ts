@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { CanonicalEvidence } from 'src/app/classes/canonical-evidence';
 import { Country } from 'src/app/classes/country';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mor',
@@ -24,7 +25,17 @@ export class MORComponent implements OnInit {
 
   public evidences: CanonicalEvidence[] = [];
 
-  constructor(private dataLoader: DataLoaderService) {}
+  constructor(
+    private dataLoader: DataLoaderService,
+    private translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'sl']);
+    translate.setDefaultLang('en');
+    /*const browserLang = translate.getBrowserLang();
+    translate.use(
+      !browserLang || browserLang.match(/en|sl/) ? 'en' : browserLang
+    );*/
+  }
 
   private getCanonicalEvidenceType(code: string) {
     return this.dataLoader.getCanonicalEvidenceType(code);
@@ -122,6 +133,8 @@ export class MORComponent implements OnInit {
             );
         });
       }
+    } else if (changes['language']) {
+      this.translate.use(this.language);
     }
   }
 

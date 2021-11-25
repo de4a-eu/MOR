@@ -1,0 +1,24 @@
+{
+  "title": {
+    "component": "MOR component",
+    "evidenceRelates": "evidence relates to"
+  },
+  "term": {
+    "Person": {
+      "label": "Person",
+      "description": "Data of a natural person",
+      "GivenName": {
+        "label": "Given name",
+        "descritpion": "Current given name or forename"
+      },
+      "FamilyName": {
+        "label": "Family name",
+        "description": "Current family name or surname"
+      },
+      "BirthDate": {
+        "label": "Birth date",
+        "description": "Date of the birth (year, month, day)"
+      }
+    }
+  }
+}

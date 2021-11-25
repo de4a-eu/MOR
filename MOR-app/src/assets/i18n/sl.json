@@ -1,0 +1,20 @@
+{
+  "title": {
+    "component": "Komponenta MOR",
+    "evidenceRelates": "potrdilo se nanaša na"
+  },
+  "term": {
+    "Person": {
+      "label": "Oseba",
+      "GivenName": {
+        "label": "Ime"
+      },
+      "FamilyName": {
+        "label": "Priimek"
+      },
+      "BirthDate": {
+        "label": "Datum rojstva"
+      }
+    }
+  }
+}
