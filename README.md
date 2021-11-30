@@ -37,3 +37,12 @@
 ### 3. Specification of interfaces for data retrieval.
 
 * Where can we get the specification of interfaces for data retrieval to be able to provide mock data?
+
+#### 4. Existing implementation in Slovenia
+
+* There is already an existing application in Slovenia as part of DE4A that supports a preview of canonical evidence. How should this be considered in the proposal?
+* There is some demo material available: 
+  * presentational videos available:
+    * [Slovenia as a Data Provider](./material/SI-preview-app/final_es-de_si-do_compressed.mp4),
+    * [Spain as a Data Provider](./material/SI-preview-app/SI-DE_ES-DO-2021-11-05.mp4),
+  * screenshots of preview app ([select an evidence to preview](./material/SI-preview-app/si-previewapp-1.png), [preview of evidence](./material/SI-preview-app/si-previewapp-2.png)).
