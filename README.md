@@ -14,6 +14,10 @@
 - [Implementation of **preview**](/../../issues/3),
 - [Interchangeable CSS for individual portal](/../../issues/4).
 
+## Demo
+
+- https://de4a-wp3.github.io/MOR/
+
 ## Materials
 
 - [initial PoC](material/PoC/initial) provided by Ana Rosa,
@@ -38,7 +42,7 @@
 
 * Where can we get the specification of interfaces for data retrieval to be able to provide mock data?
 
-#### 4. Existing implementation in Slovenia
+### 4. Existing implementation in Slovenia
 
 * There is already an existing application in Slovenia as part of DE4A that supports a preview of canonical evidence. How should this be considered in the proposal?
 * There is some demo material available: 
