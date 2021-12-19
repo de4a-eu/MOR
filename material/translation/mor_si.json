@@ -1,0 +1,4253 @@
+{
+"BirthEvidence" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/Identifier" = { 
+	"type" = "Identifier",
+	"cardinality" = "00",
+	"comment" = "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)"
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/IssueDate" = { 
+	"type" = "UDT/Date",
+	"cardinality" = "10",
+	"comment" = "It is the DateType from unqualified data types from UBL-2.3"
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/IssuingAuthority" = { 
+	"type" = "PublicOrganisation",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/IssuingPlace" = { 
+	"type" = "ConstrainedLocationAddress",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth" = { 
+	"type" = "",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child" = { 
+	"type" = "",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child/DateOfBirth" = { 
+	"type" = "Person/DateOfBirth",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child/Gender" = { 
+	"type" = "PersonGenderEnum",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child/PlaceOfBirth" = { 
+	"type" = "LocationAddress",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child/PersonName" = { 
+	"type" = "Person/PersonName",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child/Identifier" = { 
+	"type" = "Identifier",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Child/Citizenship" = { 
+	"type" = "Person/Jurisdiction",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent" = { 
+	"type" = "Person",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent/DateOfBirth" = { 
+	"type" = "Person/DateOfBirth",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent/Gender" = { 
+	"type" = "PersonGenderEnum",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent/PlaceOfBirth" = { 
+	"type" = "LocationAddress",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent/PersonName" = { 
+	"type" = "Person/PersonName",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent/Identifier" = { 
+	"type" = "Identifier",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"BirthEvidence/CertifiesBirth/Parent/Citizenship" = { 
+	"type" = "Person/Jurisdiction",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+}
+"ConstrainedLocationAddress" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/AdminUnitL2" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/AdminUnitL1" = { 
+	"type" = "CountryEnum",
+	"cardinality" = "10",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/PoBox" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/Thoroughfare" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/LocatorDesignator" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/LocatorName" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/AddressArea" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/PostName" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"ConstrainedLocationAddress/PostCode" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"CountryEnum" = { 
+	"type" = "xs:enumeration",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/1A0" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ABW" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AFG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AFI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AGO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AIA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ALA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ALB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AND" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ANT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ARE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ARG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ARM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ASM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ATA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ATB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ATF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ATG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ATN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AUS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AUT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/AZE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BDI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BEL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BEN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BES" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BFA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BGD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BGR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BHR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BHS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BIH" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BLM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BLR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BLZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BMU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BOL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BRA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BRB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BRN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BTN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BUR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BVT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BWA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/BYS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CAF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CAN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CCK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CHE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CHL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CHN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CIV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CMR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/COD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/COG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/COK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/COL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/COM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CPT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CPV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CRI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CSK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CTE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CUB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CUW" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CXR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CYM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CYP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/CZE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DDR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DEU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DHY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DJI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DMA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DNK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DOM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/DZA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ECU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/EGY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ERI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ESH" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ESP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/EST" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ETH" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/EUR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FIN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FJI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FLK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FQ0" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FRA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FRO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FSM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/FXX" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GAB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GBR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GEL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GEO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GGY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GHA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GIB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GIN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GLP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GMB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GNB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GNQ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GRC" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GRD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GRL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GTM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GUF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GUM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/GUY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HKG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HMD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HND" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HRV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HTI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HUN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/HVO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IDN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IMN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IND" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IOT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IRL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IRN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/IRQ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ISL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ISR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ITA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/JAM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/JEY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/JOR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/JPN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/JTN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KAZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KEN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KGZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KHM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KIR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KNA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KOR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/KWT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LAO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LBN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LBR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LBY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LCA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LIE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LKA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LSO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LTU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LUX" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/LVA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MAC" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MAF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MAR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MCO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MDA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MDG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MDV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MEX" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MHL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MID" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MKD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MLI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MLT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MMR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MNE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MNG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MNP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MOZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MRT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MSR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MTQ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MUS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MWI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MYS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/MYT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NAM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NCL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NER" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NFK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NGA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NHB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NIC" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NIU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NLD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NOR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NPL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NRU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NTZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/NZL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/OMN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PAK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PAN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PCI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PCN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PCZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PER" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PHL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PLW" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PNG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/POL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PRI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PRK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PRT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PRY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PSE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PUS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/PYF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/QAT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/REU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/RHO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ROU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/RUS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/RWA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SAU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SCG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SDN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SEN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SGP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SGS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SHN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SJM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SKM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SLB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SLE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SLV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SMR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SOM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SPM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SRB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SSD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/STP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SUN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SUR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SVK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SVN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SWE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SWZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SXM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SYC" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/SYR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TCA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TCD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TGO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/THA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TJK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TKL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TKM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TLS" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TMP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TON" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TTO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TUN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TUR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TUV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TWN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/TZA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/UGA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/UKR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/UMI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/URY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/USA" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/UZB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VAT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VCT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VDR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VEN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VGB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VIR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VNM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/VUT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/WAK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/WLF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/WSM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/YEM" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/YMD" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/YUG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ZAF" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ZMB" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ZR0" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"CountryEnum/ZWE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+}
+"Identifier" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Identifier/Identifier" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Identifier/IdentifierType" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Identifier/IssueDate" = { 
+	"type" = "UDT/Date",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Identifier/IssuingAuthority" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Identifier/IssuingAuthorityID" = { 
+	"type" = "UDT/Identifier",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"Jurisdiction" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Jurisdiction/Identifier" = { 
+	"type" = "Identifier",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Jurisdiction/Name" = { 
+	"type" = "CountryEnum",
+	"cardinality" = "11",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"LocationAddress" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/AdminUnitL2" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/AdminUnitL1" = { 
+	"type" = "CountryEnum",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/PoBox" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/Thoroughfare" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/LocatorDesignator" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/LocatorName" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/AddressArea" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/PostName" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"LocationAddress/PostCode" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"Person" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/DateOfBirth" = { 
+	"type" = "",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/DateOfBirth/Year" = { 
+	"type" = "xsd:gYear",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/DateOfBirth/Month" = { 
+	"type" = "xsd:gMonth",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/DateOfBirth/Day" = { 
+	"type" = "xsd:gDay",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/Gender" = { 
+	"type" = "UDT/Identifier",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/PlaceOfBirth" = { 
+	"type" = "LocationAddress",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/PersonName" = { 
+	"type" = "",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/PersonName/FamilyName" = { 
+	"type" = "UDT/Name",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/PersonName/GivenName" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"Person/Identifier" = { 
+	"type" = "Identifier",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"Person/Citizenship" = { 
+	"type" = "Jurisdiction",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+}
+"PersonGenderEnum" = { 
+	"type" = "xs:enumeration",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PersonGenderEnum/Female" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PersonGenderEnum/Male" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PersonGenderEnum/NAP" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PersonGenderEnum/NKN" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PersonGenderEnum/NST" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"PublicOrganisation" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PublicOrganisation/Identifier" = { 
+	"type" = "Identifier",
+	"cardinality" = "01",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"PublicOrganisation/PrefLabel" = { 
+	"type" = "UDT/Text",
+	"cardinality" = "11",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"UDT" = { 
+	"type" = "",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"UDT/Text" = { 
+	"type" = "xsd:string",
+	"cardinality" = "00",
+	"comment" = "It is the DateType from unqualified data types from UBL-2.3"
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"UDT/Text/@LanguageID" = { 
+	"type" = "xsd:language",
+	"cardinality" = "00",
+	"comment" = ""
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+},
+"UDT/Text/@LanguageLocaleID" = { 
+	"type" = "xsd:normalizedString",
+	"cardinality" = "00",
+	"comment" = ""
+},
+"UDT/Date" = { 
+	"type" = "xsd:date",
+	"cardinality" = "00",
+	"comment" = "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)"
+	, "si" = { 
+		"label" = "",
+		"description" = "",
+		"example" = "",
+		"verified" = "true"
+	}
+}
+"NUTS0Enum" = { 
+	"type" = "xs:enumeration",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Držav Clanic",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/AT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Avstrija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/BE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Belgija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/BG" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Bolgarija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/CY" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Ciper",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/CZ" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Ceška",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/DE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Nemcija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/DK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Danska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/EE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Estonija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/EL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Grcija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/ES" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Španija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/FI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Finska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/FR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Francija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/HR" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Hrvaška",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/HU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Madžarska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/IE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Irska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/IT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Italija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/LT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Litva",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/LU" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Luksemburg",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/LV" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Latvija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/MT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Malta",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/NL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Nizozemska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/PL" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Poljska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/PT" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Portugalska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/RO" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Romunija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/SE" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Švedska",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/SI" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Slovenija",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+},
+"NUTS0Enum/SK" = { 
+	"type" = "xs:token",
+	"cardinality" = "",
+	"comment" = ""
+	, "si" = { 
+		"label" = "Slovaška ",
+		"description" = "",
+		"example" = "",
+		"verified" = "false"
+	}
+}
+}
