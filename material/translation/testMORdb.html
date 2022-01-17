@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/mor.js"></script>
+<style>
+.label {color: darkblue; font-style: italic; font-weight: 750}
+span {cursor: help}
+</style>
+</head>
+<body>
+<form name="f">
+<input type="text" value="BirthEvidence" name="element" id="element">
+<select name="lang"><option value="en" selected>en</option></select>
+<input type="button" value="Process" onClick="init();describeElement(null,f.lang.value)">
+</form>
+<div id="output" style="width:100%;border-color:1px solid red"></div>
+<script>
+var morJSON;
+const xmlhttp = new XMLHttpRequest();
+const url = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/mor_en.json"
+//const url='http://localhost:8080/DE4A-MOR/js/mor_en.json';
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	//outcome.innerHTML = this.responseText
+        morJSON = JSON.parse(this.responseText)
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+function hasChildren(termName) {
+	var r = true
+	for (var termJSON in morJSON) {
+		if (termJSON.startsWith(termName+"/") ) 
+			t = false
+	}
+	t= true
+	console.log("<hasChildern> "+termName +" = " + t)
+	return t
+}
+
+function printError(funcName, errMsg) {
+	console.log(funcName+errMsg)
+	alert(errMsg)
+}
+var elements = new Map()
+var subtypes = new Set()
+var totals = new Set()
+const debug = true
+
+function describeElement(e , lang) {
+	var ele = (e==null?element:e)
+	if (debug) console.log("<describeElement> DEBUG: call '"+ele+"', "+lang+", "+(e==null))
+	if (elements.has(ele)) {
+		if (debug) console.log("<describeElement> DEBUG: elements already has '"+ele+"'")
+		return
+	}
+	if (! morJSON.hasOwnProperty(ele)) {
+		console.log("<describeElement> WARN: not in MOR '"+ele+"'")
+		return
+	}
+	var m = new Map()
+	for (var s in morJSON) {
+		if (s.startsWith(ele+"/") || s == ele) {
+			var type = morJSON[s].type
+			if (debug && type.indexOf(":token")<100) console.log("<describeElement> DEBUG: m.set "+ele+": '"+s+"', "+JSON.stringify(morJSON[s]))
+			m.set(s, morJSON[s])
+			if (type.indexOf("/")<0 && type.indexOf(":")<0)
+				describeElement(type, lang)
+		}
+	}
+	elements.set(ele, m)
+	if (e == null) {
+		printElements(ele,lang, "")
+		printSubElements(lang)
+	}
+}
+var cont=0
+function printSubElements(lang) {
+	if (debug) console.log("<printSubElements> DEBUG: Call "+lang+ ": "+subtypes.size)
+	var again = new Set()
+	if (subtypes.size > 0)outcome.innerHTML += "<hr><h2>Sub-Types</h2>"
+	var print = true
+	subtypes.forEach((v,t) => {
+		if (t!=element) {
+			outcome.innerHTML += "<br><br><b>"+t+"</b><a name='"+t+"'></a>"
+			if (debug) console.log("<printSubElements> DEBUG: t= '"+t+"'")
+			var e=t
+			if (t.indexOf("/")>0) {
+				e = t.substr(0,t.indexOf("/"))
+			}
+			if (!elements.has(e) && morJSON.hasOwnProperty(e)){
+				if (debug) console.log("<printSubElements> DEBUG: add= '"+t+"'")
+				describeElement(t,lang)
+			}
+			elements.get(e).forEach((value,key)=>{
+							
+				if (key.startsWith(t+"/") || (key == t && key.indexOf("/")>0)) {
+					if (value.type.indexOf(":token")<0) {
+							printItem(lang,key,value,null)
+						if(!totals.has(key)) {
+							again.add(key)
+						}
+					} else {
+						if (debug && print) console.log("<printSubElements> DEBUG: option= '"+key)	
+						var op = document.createElement('option');
+						op.innerHTML = key.substr(key.indexOf("/")+1) + " - " + value[lang].label
+						var sel = document.getElementById('enum_'+key.substr(0,key.indexOf("/")))
+						if (debug && print) console.log("<printSubElements> DEBUG: enum= '"+sel.id+"'")
+						sel.appendChild(op)
+						print = false
+					}
+				} else if (value.type.indexOf(":enum")>0) {
+					print = true
+					outcome.innerHTML += "---"+ value[lang].label + ": " +  value[lang].description
+					outcome.innerHTML += "<p>---<select id='enum_"+e+"'></select></p>"
+					if(!totals.has(key)) {
+						again.add(key)
+					}
+				} else
+					if (debug) console.log("<printSubElements> DEBUG: skip= '"+key)
+			})
+		}
+	})
+	if (again.size > 0) {
+		if (debug) console.log("<printSubElements> DEBUG: again subtypes= '"+subtypes.size+", "+again.size)
+		subtypes.delete()
+		subtypes = new Set();
+		again.forEach((v,t) => {
+			adding(t)
+		})
+		if (debug) console.log("<printSubElements> DEBUG: again= '"+subtypes.size)
+		printSubElements(lang)
+	}
+}
+function printElements(ele, lang, parent) {
+	if (debug) console.log("<printElements> DEBUG: Call '"+ele+"', "+lang+"', "+parent)
+	var skip = (ele != element && ! ele.startsWith(element+"") && ele.indexOf("/")<0)
+
+	if (elements.has(ele))
+		elements.get(ele).forEach((value,key)=>{
+			if (debug) console.log("<printElements> DEBUG: Each '"+key+"', "+JSON.stringify(value))
+			JSON.parse(JSON.stringify(value))
+			var type = value.type
+			var complex = (type.indexOf(":")<0)
+			var root = (type.indexOf("/")<0?type:type.substr(0,type.indexOf("/")))
+			var subEle = null
+			if (complex) {
+				if (debug) console.log("<printElements> DEBUG: root '"+root+"', "+elements.has(root))
+				if (elements.has(root)) {
+					if (debug) console.log("<printElements> DEBUG: subEle Get '"+type+"', "+JSON.stringify(elements.get(root)))
+					subEle = elements.get(root).get(type)
+					JSON.parse(JSON.stringify(subEle))
+					if (debug) console.log("<printElements> DEBUG: subEle '"+type+"', "+JSON.stringify(subEle))
+				}
+			}
+			var path = key
+			if (parent != "" ) {
+				if (key.startsWith(element+"/"))
+					path = parent + "/" + key
+				else if (key.indexOf("/")>0 && ! key.startsWith(element+"/"))
+					path = parent  + key.substr(key.indexOf("/"))
+			}
+			if (debug) console.log("<printElements> DEBUG: path print "+key+" '"+path+", "+elements.get(element).has(path))
+			if (! skip || ele != key) {
+				if (key.startsWith(element+"/") || ! isOverloaded(path)) 
+					printItem(lang, path, value, subEle)
+				else
+					skip = true
+			}
+			if (debug && skip) console.log("<printElements> DEBUG: skip print "+key+" '"+path+", "+elements.get(element).has(path))
+
+			if (subEle != null && subEle.type.indexOf(":enum")<0 && subEle.type.indexOf(":token")<0) {
+				if (debug) console.log("<printElements> DEBUG: set- & down '"+type+"', "+path)
+				printElements(type, lang, path)
+			} 
+				
+	    })
+	else
+		console.log("<printElements> ERROR: elements has not '"+ele+"'")
+}
+function adding(type) {
+	if (debug) console.log("<adding> DEBUG:  '"+type+"' "+totals.has(type))
+	if (type.indexOf("/")>0) {
+		adding(type.substr(0,type.indexOf("/")))
+	}
+	else
+	if (! totals.has(type)){
+		subtypes.add(type)
+		totals.add(type)
+		if (debug) console.log("<adding> DEBUG:  '"+type+"' "+subtypes.size+"' "+totals.size)
+	}
+}
+function isOverloaded(path){
+	if (debug && path.indexOf("DateOfBirth")>0) 
+		console.log("<isOverloaded> DEBUG: Call '"+path+"' "+elements.get(element).has(path)+" : "+path.indexOf("/")+"!="+path.lastIndexOf("/"))
+	if (elements.get(element).has(path)) return true;
+	if (path.indexOf("/")>0 && path.indexOf("/")!=path.lastIndexOf("/")) {
+		return isOverloaded(path.substr(0,path.lastIndexOf("/")))
+	}
+	return false
+}
+function printItem(lang,path,ele,subEle){
+	if (debug) console.log("<printItem> DEBUG: Call '"+path+"', "+lang+", ele: '"+JSON.stringify(ele)+"' -- "+(ele.type.indexOf(":")<0 || ele.type.indexOf(":enum")>0))
+	var type = (ele.type==""?":none:":ele.type)
+	var parts = path.split("/")
+	outcome.innerHTML += "<br>"
+	for (var i=0; i<parts.length; i++) outcome.innerHTML += "---"
+		if (debug) console.log("<printItem> DEBUG: Path Parts "+parts.length)
+
+	var complex = (ele.type.indexOf(":")<0 && ! morJSON.hasOwnProperty(ele.type))
+	
+	if (type.indexOf(":")<0 || type.indexOf(":enum")>0) {
+		var refType = (type.indexOf("/")<0?type:type.substr(0,type.indexOf("/")))
+		adding(refType)
+		type = "<a href='#"+ refType +"'>"+type+"</a>"
+		if (debug) console.log("<printItem> DEBUG: reference "+type)
+	}
+	outcome.innerHTML += "| <span class='label' title='" 
+			+ (ele[lang].description=="" && subEle != null
+					? subEle[lang].description
+					: ele[lang].description) 					
+			+ "'>" 
+			+ (ele[lang].label=="" && subEle != null
+					? subEle[lang].label
+					: ele[lang].label) 
+			+ "</span> "
+			+ "[ <span title='"+path+"'"+(ele.type!="" && complex?"style='background-color:pink'":"")+">" 
+			+ type +" </span>; "
+			+ (ele.cardinality=="" && subEle != null
+					? subEle.cardinality
+					: ele.cardinality) 
+			
+			+" ] - "
+}
+function init() {
+	outcome.innerHTML=''
+	elements = new Map()
+	element = document.getElementById("element").value
+}
+var outcome = document.getElementById("output")
+var element = document.getElementById("element").value
+</script>
+
+</body>
+</html>
