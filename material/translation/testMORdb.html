@@ -228,11 +228,14 @@ function printItem(lang,path,ele,subEle){
 			+ "</span> "
 			+ "[ <span title='"+path+"'"+(ele.type!="" && complex?"style='background-color:pink'":"")+">" 
 			+ type +" </span>; "
-			+ (ele.cardinality=="" && subEle != null
+			+ printCardinatity(ele.cardinality=="" && subEle != null
 					? subEle.cardinality
 					: ele.cardinality) 
 			
 			+" ] - "
+}
+function printCardinatity(card){
+	return card.charAt(0) + ".." + (card.charAt(1)=="0"?"1":"n") 
 }
 function init() {
 	outcome.innerHTML=''
