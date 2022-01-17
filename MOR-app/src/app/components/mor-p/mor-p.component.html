@@ -1,0 +1,22 @@
+<div class="position-relative">
+  <div class="position-absolute top-0 end-0">
+    <app-language-selector
+      [(selectedLanguage)]="selectedLanguage"
+    ></app-language-selector>
+  </div>
+</div>
+<p><b>Input</b>:</p>
+<ul>
+  <li>
+    Default language &rarr; <b>{{ defaultLanguage }}</b>
+  </li>
+  <li>Post action value &rarr; ...</li>
+</ul>
+<p><b>Interactions</b>:</p>
+<ul>
+  <li>Selected language &rarr; <b>{{ selectedLanguage }}</b></li>
+</ul>
+<p><b>Output</b>:</p>
+<ul>
+  <li>List of IDs (token names) of confirmed canonical types.</li>
+</ul>

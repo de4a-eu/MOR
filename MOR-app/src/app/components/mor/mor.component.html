@@ -1,12 +1,9 @@
-<div class="container mt-4 mb-4">
-  <div class="row">
-    <div class="col-12">
-      <div class="card border-secondary">
-        <div class="card-header bg-secondary text-white">
-          <div class="d-flex justify-content-between">
-            <div>
-              <b>{{ 'title.component' | translate }}</b>
-              <!--<span class="ms-1"
+<div class="card border-secondary">
+  <div class="card-header bg-secondary text-white">
+    <div class="d-flex justify-content-between">
+      <div>
+        <b>{{ "title.component" | translate }}</b>
+        <!--<span class="ms-1"
                 ><span
                   class="me-2 flag-icon flag-icon-{{
                     getLanguage(language).flagCode | lowercase
@@ -20,155 +17,149 @@
                 ></span
                 ><b>{{ getCountry(requesterCountry).name }}</b></span
               >-->
+      </div>
+      <div><span class="badge rounded-pill bg-secondary">3</span></div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row row-cols-1 row-cols-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-header">
+            <fa-icon [icon]="faAddressCard"></fa-icon
+            ><b>{{ "term.Person.label" | translate }}</b>
+            <small> ({{ "title.evidenceRelates" | translate }})</small>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6">
+                {{ "term.Person.GivenName.label" | translate }}
+              </div>
+              <div class="col-6">...</div>
+              <div class="col-6">
+                {{ "term.Person.FamilyName.label" | translate }}
+              </div>
+              <div class="col-6">...</div>
+              <div class="col-6">
+                {{ "term.Person.BirthDate.label" | translate }}
+              </div>
+              <div class="col-6">...</div>
             </div>
-            <div><span class="badge rounded-pill bg-secondary">3</span></div>
           </div>
         </div>
-        <div class="card-body">
-          <div class="row row-cols-1 row-cols-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-header">
-                  <fa-icon [icon]="faAddressCard"></fa-icon><b>{{ 'term.Person.label' | translate }}</b>
-                  <small> ({{ 'title.evidenceRelates' | translate }})</small>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-6">{{ 'term.Person.GivenName.label' | translate }}</div>
-                    <div class="col-6">...</div>
-                    <div class="col-6">{{ 'term.Person.FamilyName.label' | translate }}</div>
-                    <div class="col-6">...</div>
-                    <div class="col-6">{{ 'term.Person.BirthDate.label' | translate }}</div>
-                    <div class="col-6">...</div>
-                  </div>
-                </div>
+      </div>
+      <div class="col" *ngFor="let evidence of evidences">
+        <div class="card h-100">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              <div class="align-self-center">
+                <fa-icon [icon]="faIdCardAlt"></fa-icon
+                ><b>{{ evidence.type.name }}</b>
+              </div>
+              <div class="dropdown align-self-center">
+                <a
+                  class="btn btn-sm btn-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  ><span *ngIf="evidenceProviderCountrySet(evidence.type.code)"
+                    ><span
+                      class="ms-2 me-2 flag-icon flag-icon-{{
+                        getEvidenceProviderCountry(evidence.type.code).code
+                          | lowercase
+                      }}"
+                    ></span
+                    >{{ getEvidenceProviderCountry(evidence.type.code).name }}
+                    <b
+                      >({{
+                        getEvidenceProviderCountry(evidence.type.code).code
+                      }})</b
+                    ></span
+                  ><span *ngIf="!evidenceProviderCountrySet(evidence.type.code)"
+                    >Select provider country</span
+                  ></a
+                >
+                <ul class="dropdown-menu">
+                  <li *ngFor="let country of getCountries()">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      (click)="
+                        setEvidenceProviderCountry(
+                          evidence.type.code,
+                          country.code
+                        )
+                      "
+                      ><span
+                        class="me-2 flag-icon flag-icon-{{
+                          country.code | lowercase
+                        }}"
+                      ></span
+                      >{{ country.name }} <b>({{ country.code }})</b></a
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col" *ngFor="let evidence of evidences">
-              <div class="card h-100">
-                <div class="card-header">
-                  <div class="d-flex justify-content-between">
-                    <div class="align-self-center">
-                      <fa-icon [icon]="faIdCardAlt"></fa-icon
-                      ><b>{{ evidence.type.name }}</b>
-                    </div>
-                    <div class="dropdown align-self-center">
-                      <a
-                        class="btn btn-sm btn-light dropdown-toggle"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        ><span
-                          *ngIf="evidenceProviderCountrySet(evidence.type.code)"
-                          ><span
-                            class="ms-2 me-2 flag-icon flag-icon-{{
-                              getEvidenceProviderCountry(evidence.type.code)
-                                .code | lowercase
-                            }}"
-                          ></span
-                          >{{
-                            getEvidenceProviderCountry(evidence.type.code).name
-                          }}
-                          <b
-                            >({{
-                              getEvidenceProviderCountry(evidence.type.code)
-                                .code
-                            }})</b
-                          ></span
-                        ><span
-                          *ngIf="
-                            !evidenceProviderCountrySet(evidence.type.code)
-                          "
-                          >Select provider country</span
-                        ></a
-                      >
-                      <ul class="dropdown-menu">
-                        <li *ngFor="let country of getCountries()">
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            (click)="
-                              setEvidenceProviderCountry(
-                                evidence.type.code,
-                                country.code
-                              )
-                            "
-                            ><span
-                              class="me-2 flag-icon flag-icon-{{
-                                country.code | lowercase
-                              }}"
-                            ></span
-                            >{{ country.name }} <b>({{ country.code }})</b></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body d-flex justify-content-center">
-                  <div
-                    class="row"
-                    *ngIf="evidenceProviderCountrySet(evidence.type.code)"
-                  >
-                    <div
-                      class="col-12 text-center text-muted"
-                      *ngIf="showDocument(evidence.type.code)"
-                    >
-                      <span class="display-1"
-                        ><fa-icon [icon]="faFileContract"></fa-icon
-                      ></span>
-                    </div>
-                    <div
-                      class="col-12 text-center"
-                      *ngIf="showButtons(evidence.type.code)"
-                    >
-                      <button
-                        type="button"
-                        (click)="confirmSending(evidence.type.code)"
-                        class="btn btn-sm btn-secondary mb-2"
-                      >
-                        <b><fa-icon [icon]="faCheck"></fa-icon>Confirm</b>
-                        sending
-                      </button>
-                      <button
-                        type="button"
-                        (click)="cancelSending(evidence.type.code)"
-                        class="btn btn-sm btn-secondary mb-2 ms-2"
-                      >
-                        <b><fa-icon [icon]="faTimes"></fa-icon>Cancel</b> and
-                        <b
-                          ><fa-icon [icon]="faCloudUploadAlt"></fa-icon
-                          >upload</b
-                        >
-                      </button>
-                    </div>
-                    <div
-                      class="col-12 text-center text-muted"
-                      *ngIf="showUpload(evidence.type.code)"
-                    >
-                      <span class="display-1"
-                        ><fa-icon [icon]="faCloudUploadAlt"></fa-icon
-                      ></span>
-                    </div>
-                    <div
-                      class="col-12 text-center text-muted"
-                      *ngIf="showUpload(evidence.type.code)"
-                    >
-                      <small
-                        >Upload <b>{{ evidence.type.name }}</b></small
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer text-muted">
-                  <small
-                    ><fa-icon [icon]="faExclamationCircle"></fa-icon
-                    >{{ evidence.status }}</small
-                  >
-                </div>
+          </div>
+          <div class="card-body d-flex justify-content-center">
+            <div
+              class="row"
+              *ngIf="evidenceProviderCountrySet(evidence.type.code)"
+            >
+              <div
+                class="col-12 text-center text-muted"
+                *ngIf="showDocument(evidence.type.code)"
+              >
+                <span class="display-1"
+                  ><fa-icon [icon]="faFileContract"></fa-icon
+                ></span>
+              </div>
+              <div
+                class="col-12 text-center"
+                *ngIf="showButtons(evidence.type.code)"
+              >
+                <button
+                  type="button"
+                  (click)="confirmSending(evidence.type.code)"
+                  class="btn btn-sm btn-secondary mb-2"
+                >
+                  <b><fa-icon [icon]="faCheck"></fa-icon>Confirm</b>
+                  sending
+                </button>
+                <button
+                  type="button"
+                  (click)="cancelSending(evidence.type.code)"
+                  class="btn btn-sm btn-secondary mb-2 ms-2"
+                >
+                  <b><fa-icon [icon]="faTimes"></fa-icon>Cancel</b> and
+                  <b><fa-icon [icon]="faCloudUploadAlt"></fa-icon>upload</b>
+                </button>
+              </div>
+              <div
+                class="col-12 text-center text-muted"
+                *ngIf="showUpload(evidence.type.code)"
+              >
+                <span class="display-1"
+                  ><fa-icon [icon]="faCloudUploadAlt"></fa-icon
+                ></span>
+              </div>
+              <div
+                class="col-12 text-center text-muted"
+                *ngIf="showUpload(evidence.type.code)"
+              >
+                <small
+                  >Upload <b>{{ evidence.type.name }}</b></small
+                >
               </div>
             </div>
+          </div>
+          <div class="card-footer text-muted">
+            <small
+              ><fa-icon [icon]="faExclamationCircle"></fa-icon
+              >{{ evidence.status }}</small
+            >
           </div>
         </div>
       </div>

@@ -1,0 +1,30 @@
+<div class="dropdown mb-3">
+  <a
+    class="btn btn-sm btn-light dropdown-toggle"
+    href="#"
+    role="button"
+    id="dropdownMenuRequesterCountry"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    ><span *ngIf="countryCode"
+      ><span
+        class="me-2 flag-icon flag-icon-{{
+          getCountryFlagCode(countryCode) | lowercase
+        }}"
+      ></span
+      >{{ getCountryName(countryCode) }} <b>({{ countryCode }})</b></span
+    ><span *ngIf="!countryCode">Select country</span></a
+  >
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequesterCountry">
+    <li *ngFor="let country of countries.getCountries()">
+      <a class="dropdown-item" href="#" (click)="setCountry(country.code)"
+        ><span
+          class="me-2 flag-icon flag-icon-{{
+            getCountryFlagCode(country.code) | lowercase
+          }}"
+        ></span
+        >{{ country.name }} <b>({{ country.code }})</b></a
+      >
+    </li>
+  </ul>
+</div>

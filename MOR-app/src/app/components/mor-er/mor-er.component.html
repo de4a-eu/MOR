@@ -1,0 +1,32 @@
+<div class="position-relative">
+  <div class="position-absolute top-0 end-0">
+    <app-language-selector
+      [(selectedLanguage)]="selectedLanguage"
+    ></app-language-selector>
+  </div>
+</div>
+<p><b>Input</b>:</p>
+<ul>
+  <li>
+    Default language &rarr; <b>{{ defaultLanguage }}</b>
+  </li>
+  <li>
+    Requester country &rarr; <b>{{ requesterCountry }}</b>
+  </li>
+  <li>
+    Canonical evidence types &rarr; <b>{{ canonicalEvidenceTypes }}</b>
+  </li>
+  <li>
+    JavaScript array ID &rarr; <b>{{ outputJSArrayId }}</b>
+  </li>
+</ul>
+<p><b>Interactions</b>:</p>
+<ul>
+  <li>Selected language &rarr; <b>{{ selectedLanguage }}</b></li>
+</ul>
+<p><b>Output</b>:</p>
+<ul>
+  <li>
+    IAL Provision Data &rarr; <b>{{ outputJSArrayId }}</b>
+  </li>
+</ul>

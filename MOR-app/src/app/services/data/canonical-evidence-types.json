@@ -1,8 +1,32 @@
 [
-  { "name": "Birth certificate", "code": "birth" },
-  { "name": "Marriage certificate", "code": "marriage" },
-  { "name": "Residency proof", "code": "residency"},
-  { "name": "Company registration", "code": "companyRegistration" },
-  { "name": "Higher education certificate", "code": "higherEd" },
-  { "name": "Secondary education certificate", "code": "secondaryEd"}
+  {
+    "name": "Birth certificate",
+    "code": "birth",
+    "tokenName": "BirthCertificate"
+  },
+  {
+    "name": "Marriage certificate",
+    "code": "marriage",
+    "tokenName": "MarriageCertificate"
+  },
+  {
+    "name": "Residency proof",
+    "code": "residency",
+    "tokenName": "ResidencyProof"
+  },
+  {
+    "name": "Company registration",
+    "code": "companyRegistration",
+    "tokenName": "CompanyRegistration"
+  },
+  {
+    "name": "Higher education certificate",
+    "code": "higherEd",
+    "tokenName": "HigherEdCertificate"
+  },
+  {
+    "name": "Secondary education certificate",
+    "code": "secondaryEd",
+    "tokenName": "SecondaryEdCertificate"
+  }
 ]

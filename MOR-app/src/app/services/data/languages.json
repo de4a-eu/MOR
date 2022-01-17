@@ -1,5 +1,5 @@
 [
-  { "name": "English", "code": "en", "flagCode": "GB" },
-  { "name": "Spanish", "code": "es", "flagCode": "ES" },
-  { "name": "Slovenian", "code": "sl", "flagCode": "SI" }
+  { "code": "en", "name": "English", "flagCode": "GB" },
+  { "code": "es", "name": "Spanish", "flagCode": "ES" },
+  { "code": "sl", "name": "Slovenian", "flagCode": "SI" }
 ]

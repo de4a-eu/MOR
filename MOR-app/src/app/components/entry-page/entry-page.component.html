@@ -3,190 +3,274 @@
     <div class="col-12">
       <h1>MOR <small>demo</small></h1>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-6">
-      <div class="card h-100">
-        <div class="card-header">
-          <div class="d-flex justify-content-between">
-            <div>
-              <fa-icon [icon]="faSignInAlt"></fa-icon><b>Input parameters</b> of
-              the component
+    <!-- MOR Explicit Request (ER) -->
+    <details open class="mt-4">
+      <summary class="mb-3">MOR <b>Explicit Request</b> (ER)</summary>
+      <div class="row">
+        <div class="col-6"><app-input-parameters-mor-er-selector></app-input-parameters-mor-er-selector></div>
+        <div class="col-6">...</div>
+        <div class="col-12 mt-3">
+          <div class="card border-secondary">
+            <div class="card-header bg-secondary text-white">
+              <div class="d-flex justify-content-between">
+                <div><b>MOR Explicit Request (ER)</b></div>
+                <div>
+                  <span class="badge rounded-pill bg-secondary">3</span>
+                </div>
+              </div>
             </div>
-            <div><span class="badge rounded-pill bg-secondary">1</span></div>
+            <div class="card-body pb-0">
+              <app-mor-er
+                defaultLang="en"
+                requesterCountryCode="ES"
+                canonicalEvidenceTypes="birth,marriage"
+                outputJSArrayId="results"
+              ></app-mor-er>
+            </div>
           </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Default language</h5>
-          <div class="dropdown mb-3">
-            <a
-              class="btn btn-sm btn-light dropdown-toggle"
-              href="#"
-              role="button"
-              id="dropdownMenuLanguage"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              ><span *ngIf="parameters.language.code"
-                ><span
-                  class="me-2 flag-icon flag-icon-{{
-                    parameters.language.flagCode | lowercase
-                  }}"
-                ></span
-                >{{ parameters.language.name }}
-                <b>({{ parameters.language.code }})</b></span
-              ><span *ngIf="!parameters.language.code">Select language</span></a
-            >
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLanguage">
-              <li *ngFor="let language of getLanguages()">
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  (click)="setLanguage(language.code)"
-                  ><span
-                    class="me-2 flag-icon flag-icon-{{
-                      language.flagCode | lowercase
-                    }}"
-                  ></span
-                  >{{ language.name }} <b>({{ language.code }})</b></a
-                >
-              </li>
-            </ul>
+      </div>
+    </details>
+    <!-- MOR Preview -->
+    <details class="mt-4">
+      <summary class="mb-3">MOR <b>Preview</b></summary>
+      <div class="col-12">
+        <div class="card border-secondary">
+          <div class="card-header bg-secondary text-white">
+            <div class="d-flex justify-content-between">
+              <div><b>MOR Preview</b></div>
+              <div><span class="badge rounded-pill bg-secondary">4</span></div>
+            </div>
           </div>
-          <h5 class="card-title">Requester country</h5>
-          <div class="dropdown mb-3">
-            <a
-              class="btn btn-sm btn-light dropdown-toggle"
-              href="#"
-              role="button"
-              id="dropdownMenuRequesterCountry"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              ><span *ngIf="parameters.requesterCountryCode.code"
-                ><span
-                  class="me-2 flag-icon flag-icon-{{
-                    parameters.requesterCountryCode.code | lowercase
-                  }}"
-                ></span
-                >{{ parameters.requesterCountryCode.name }}
-                <b>({{ parameters.requesterCountryCode.code }})</b></span
-              ><span *ngIf="!parameters.requesterCountryCode.code"
-                >Select country</span
-              ></a
-            >
-            <ul
-              class="dropdown-menu"
-              aria-labelledby="dropdownMenuRequesterCountry"
-            >
-              <li *ngFor="let country of getCountries()">
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  (click)="setCountry(country.code)"
-                  ><span
-                    class="me-2 flag-icon flag-icon-{{
-                      country.code | lowercase
-                    }}"
-                  ></span
-                  >{{ country.name }} <b>({{ country.code }})</b></a
-                >
-              </li>
-            </ul>
+          <div class="card-body pb-0">
+            <app-mor-p defaultLang="en"></app-mor-p>
           </div>
-          <h5 class="card-title">Canonical evidence types</h5>
-          <div class="dropdown mb-3">
-            <a
-              class="btn btn-sm btn-light dropdown-toggle"
-              href="#"
-              role="button"
-              id="dropdownEvidenceTypes"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              ><span
-                ><span
-                  *ngFor="
-                    let canonicalEvidenceType of parameters.canonicalEvidenceTypes;
-                    index as i
-                  "
+        </div>
+      </div>
+    </details>
+    <!-- Previous version -->
+    <details open class="mt-4 mb-4">
+      <summary class="mb-3">Previous version</summary>
+      <div class="row">
+        <!-- Input parameters -->
+        <div class="col-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <fa-icon [icon]="faSignInAlt"></fa-icon
+                  ><b>Input parameters</b> of the component
+                </div>
+                <div>
+                  <span class="badge rounded-pill bg-secondary">1</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Default language</h5>
+              <div class="dropdown mb-3">
+                <a
+                  class="btn btn-sm btn-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLanguage"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  ><span *ngIf="parameters.language.code"
+                    ><span
+                      class="me-2 flag-icon flag-icon-{{
+                        parameters.language.flagCode | lowercase
+                      }}"
+                    ></span
+                    >{{ parameters.language.name }}
+                    <b>({{ parameters.language.code }})</b></span
+                  ><span *ngIf="!parameters.language.code"
+                    >Select language</span
+                  ></a
                 >
-                  <span *ngIf="i > 0">, </span
-                  >{{ canonicalEvidenceType.code }}</span
-                ></span
-              ><span
-                *ngIf="
-                  parameters.canonicalEvidenceTypes.length == 0 ||
-                  !parameters.canonicalEvidenceTypes[0].code
-                "
-                >Select canonical evidence type</span
-              ></a
-            >
-            <ul class="dropdown-menu" aria-labelledby="dropdownEvidenceTypes">
-              <li
-                *ngFor="
-                  let canonicalEvidenceType of getCanonicalEvidenceTypes()
-                "
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuLanguage"
+                >
+                  <li *ngFor="let language of getLanguages()">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      (click)="setLanguage(language.code)"
+                      ><span
+                        class="me-2 flag-icon flag-icon-{{
+                          language.flagCode | lowercase
+                        }}"
+                      ></span
+                      >{{ language.name }} <b>({{ language.code }})</b></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <h5 class="card-title">Requester country</h5>
+              <div class="dropdown mb-3">
+                <a
+                  class="btn btn-sm btn-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuRequesterCountry"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  ><span *ngIf="parameters.requesterCountryCode.code"
+                    ><span
+                      class="me-2 flag-icon flag-icon-{{
+                        parameters.requesterCountryCode.code | lowercase
+                      }}"
+                    ></span
+                    >{{ parameters.requesterCountryCode.name }}
+                    <b>({{ parameters.requesterCountryCode.code }})</b></span
+                  ><span *ngIf="!parameters.requesterCountryCode.code"
+                    >Select country</span
+                  ></a
+                >
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuRequesterCountry"
+                >
+                  <li *ngFor="let country of getCountries()">
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      (click)="setCountry(country.code)"
+                      ><span
+                        class="me-2 flag-icon flag-icon-{{
+                          country.code | lowercase
+                        }}"
+                      ></span
+                      >{{ country.name }} <b>({{ country.code }})</b></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <h5 class="card-title">Canonical evidence types</h5>
+              <div class="dropdown mb-3">
+                <a
+                  class="btn btn-sm btn-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownEvidenceTypes"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  ><span
+                    ><span
+                      *ngFor="
+                        let canonicalEvidenceType of parameters.canonicalEvidenceTypes;
+                        index as i
+                      "
+                    >
+                      <span *ngIf="i > 0">, </span
+                      >{{ canonicalEvidenceType.code }}</span
+                    ></span
+                  ><span
+                    *ngIf="
+                      parameters.canonicalEvidenceTypes.length == 0 ||
+                      !parameters.canonicalEvidenceTypes[0].code
+                    "
+                    >Select canonical evidence type</span
+                  ></a
+                >
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownEvidenceTypes"
+                >
+                  <li
+                    *ngFor="
+                      let canonicalEvidenceType of getCanonicalEvidenceTypes()
+                    "
+                  >
+                    <a
+                      class="dropdown-item"
+                      (click)="
+                        toggleCanonicalEvidenceType(canonicalEvidenceType.code)
+                      "
+                      href="#"
+                      ><fa-icon
+                        [icon]="faPlus"
+                        [hidden]="
+                          isCanonicalEvidenceTypeSelected(
+                            canonicalEvidenceType.code
+                          )
+                        "
+                      ></fa-icon
+                      ><fa-icon
+                        [icon]="faMinus"
+                        [hidden]="
+                          !isCanonicalEvidenceTypeSelected(
+                            canonicalEvidenceType.code
+                          )
+                        "
+                      ></fa-icon
+                      >{{ canonicalEvidenceType.name }}
+                      <b>({{ canonicalEvidenceType.code }})</b></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              <small
+                ><fa-icon [icon]="faExclamationCircle"></fa-icon>Defined at a
+                level of the specific procedure at a national agency.</small
               >
-                <a
-                  class="dropdown-item"
-                  (click)="
-                    toggleCanonicalEvidenceType(canonicalEvidenceType.code)
-                  "
-                  href="#"
-                  ><fa-icon [icon]="faPlus" [hidden]="isCanonicalEvidenceTypeSelected(canonicalEvidenceType.code)"></fa-icon><fa-icon [icon]="faMinus" [hidden]="!isCanonicalEvidenceTypeSelected(canonicalEvidenceType.code)"></fa-icon>{{ canonicalEvidenceType.name }}
-                  <b>({{ canonicalEvidenceType.code }})</b></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer text-muted">
-          <small><fa-icon [icon]="faExclamationCircle"></fa-icon>Defined at a level of the specific procedure at a national agency.</small>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card h-100">
-        <div class="card-header">
-          <div class="d-flex justify-content-between">
-            <div>
-              <fa-icon [icon]="faCode"></fa-icon><b>Source code</b> for
-              including the component
             </div>
-            <div><span class="badge rounded-pill bg-secondary">2</span></div>
           </div>
         </div>
-        <div class="card-body">
-          <pre><code>&lt;<b>script</b> src="..."&gt;&lt;<b>/script</b>&gt;
-&lt;<b>app-mor</b>
-  defaultLang="<b>{{ parameters.language.code }}</b>"
-  requesterCountryCode="<b>{{ parameters.requesterCountryCode.code }}</b>"
-  canonicalEvidenceTypes="<b>{{ selectedCanonicalEvidenceTypes }}</b>"
-&gt;&lt;<b>/app-mor</b>&gt;</code></pre>
+        <!-- Source code -->
+        <div class="col-6">
+          <div class="card h-100">
+            <div class="card-header">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <fa-icon [icon]="faCode"></fa-icon><b>Source code</b> for
+                  including the component
+                </div>
+                <div>
+                  <span class="badge rounded-pill bg-secondary">2</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <pre><code>&lt;<b>script</b> src="..."&gt;&lt;<b>/script</b>&gt;
+    &lt;<b>app-mor</b>
+    defaultLang="<b>{{ parameters.language.code }}</b>"
+    requesterCountryCode="<b>{{ parameters.requesterCountryCode.code }}</b>"
+    canonicalEvidenceTypes="<b>{{ selectedCanonicalEvidenceTypes }}</b>"
+    &gt;&lt;<b>/app-mor</b>&gt;</code></pre>
+            </div>
+            <div class="card-footer text-muted">
+              <small
+                ><fa-icon [icon]="faExclamationCircle"></fa-icon>Integration is
+                planned by defining
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
+                  target="_blank"
+                  ><fa-icon [icon]="faGlobeEurope"></fa-icon>custom elements</a
+                >
+                that are part of
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+                  target="_blank"
+                  ><fa-icon [icon]="faGlobeEurope"></fa-icon>Web Components</a
+                >
+                standard.</small
+              >
+            </div>
+          </div>
         </div>
-        <div class="card-footer text-muted">
-          <small
-            ><fa-icon [icon]="faExclamationCircle"></fa-icon>Integration is
-            planned by defining
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
-              target="_blank"
-              ><fa-icon [icon]="faGlobeEurope"></fa-icon>custom elements</a
-            >
-            that are part of
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
-              target="_blank"
-              ><fa-icon [icon]="faGlobeEurope"></fa-icon>Web Components</a
-            >
-            standard.</small
-          >
+        <!-- MOR component -->
+        <div class="col-12 mt-4">
+          <app-mor
+            defaultLang="{{ parameters.language.code }}"
+            requesterCountryCode="{{ parameters.requesterCountryCode.code }}"
+            canonicalEvidenceTypes="{{ selectedCanonicalEvidenceTypes }}"
+          ></app-mor>
         </div>
       </div>
-    </div>
+    </details>
   </div>
 </div>
-
-<app-mor
-  defaultLang="{{ parameters.language.code }}"
-  requesterCountryCode="{{ parameters.requesterCountryCode.code }}"
-  canonicalEvidenceTypes="{{ selectedCanonicalEvidenceTypes }}"
-></app-mor>
