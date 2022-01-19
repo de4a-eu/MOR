@@ -1,0 +1,42 @@
+<div class="card h-100">
+  <div class="card-header">
+    <div class="d-flex justify-content-between">
+      <div>
+        <fa-icon [icon]="faCode"></fa-icon><b>Source code</b> for including the
+        component
+      </div>
+      <div class="link" (click)="isDisplayed = !isDisplayed">
+        <small class="text-muted"
+          ><fa-icon [icon]="isDisplayed ? faEyeSlash : faEye"></fa-icon
+        ></small>
+      </div>
+    </div>
+  </div>
+  <div class="card-body" *ngIf="isDisplayed">
+    <pre><code>&lt;<b>script</b> src="..."&gt;&lt;<b>/script</b>&gt;
+&lt;<b>app-mor</b>
+  defaultLang="<b>{{ defaultLanguage }}</b>"
+  requesterCountryCode="<b>{{ requesterCountryCode }}</b>"
+  canonicalEvidenceTypes="<b>{{ selectedCanonicalEvidenceTypes }}</b>"
+  outputJSArrayId="<b>{{ outputJSArrayId }}</b>"
+&gt;&lt;<b>/app-mor</b>&gt;</code></pre>
+  </div>
+  <div class="card-footer text-muted" *ngIf="isDisplayed">
+    <small
+      ><fa-icon [icon]="faExclamationCircle"></fa-icon>Integration is planned by
+      defining
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
+        target="_blank"
+        ><fa-icon [icon]="faGlobeEurope"></fa-icon>custom elements</a
+      >
+      that are part of
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+        target="_blank"
+        ><fa-icon [icon]="faGlobeEurope"></fa-icon>Web Components</a
+      >
+      standard.</small
+    >
+  </div>
+</div>

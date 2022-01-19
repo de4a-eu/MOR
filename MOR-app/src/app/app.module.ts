@@ -14,6 +14,8 @@ import { LanguageSelectorComponent } from './components/language-selector/langua
 import { InputParametersMorErSelectorComponent } from './components/input-parameters-mor-er-selector/input-parameters-mor-er-selector.component';
 import { CountrySelectorComponent } from './components/country-selector/country-selector.component';
 import { CanonicalEvidenceTypeSelectorComponent } from './components/canonical-evidence-type-selector/canonical-evidence-type-selector.component';
+import { SourceCodeMorErIncludeComponent } from './components/source-code-mor-er-include/source-code-mor-er-include.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,15 @@ import { CanonicalEvidenceTypeSelectorComponent } from './components/canonical-e
     LanguageSelectorComponent,
     InputParametersMorErSelectorComponent,
     CountrySelectorComponent,
-    CanonicalEvidenceTypeSelectorComponent
+    CanonicalEvidenceTypeSelectorComponent,
+    SourceCodeMorErIncludeComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,

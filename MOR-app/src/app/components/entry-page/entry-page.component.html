@@ -7,24 +7,35 @@
     <details open class="mt-4">
       <summary class="mb-3">MOR <b>Explicit Request</b> (ER)</summary>
       <div class="row">
-        <div class="col-6"><app-input-parameters-mor-er-selector></app-input-parameters-mor-er-selector></div>
-        <div class="col-6">...</div>
+        <div class="col-6">
+          <app-input-parameters-mor-er-selector
+            (defaultLanguageChange)="defaultLanguage = $event"
+            (requesterCountryChange)="requesterCountryCode = $event"
+            (canonicalEvidenceTypesChange)="canonicalEvidenceTypes = $event"
+            (outputJSArrayIdChange)="outputJSArrayId = $event"
+          ></app-input-parameters-mor-er-selector>
+        </div>
+        <div class="col-6">
+          <app-source-code-mor-er-include
+            [defaultLanguage]="defaultLanguage"
+            [requesterCountryCode]="requesterCountryCode"
+            [selectedCanonicalEvidenceTypes]="canonicalEvidenceTypes"
+            [outputJSArrayId]="outputJSArrayId"
+          ></app-source-code-mor-er-include>
+        </div>
         <div class="col-12 mt-3">
           <div class="card border-secondary">
             <div class="card-header bg-secondary text-white">
               <div class="d-flex justify-content-between">
                 <div><b>MOR Explicit Request (ER)</b></div>
-                <div>
-                  <span class="badge rounded-pill bg-secondary">3</span>
-                </div>
               </div>
             </div>
             <div class="card-body pb-0">
               <app-mor-er
-                defaultLang="en"
-                requesterCountryCode="ES"
-                canonicalEvidenceTypes="birth,marriage"
-                outputJSArrayId="results"
+                [defaultLang]="defaultLanguage"
+                [requesterCountryCode]="requesterCountryCode"
+                [canonicalEvidenceTypes]="canonicalEvidenceTypes"
+                [outputJSArrayId]="outputJSArrayId"
               ></app-mor-er>
             </div>
           </div>
@@ -49,10 +60,10 @@
       </div>
     </details>
     <!-- Previous version -->
+    <!--
     <details open class="mt-4 mb-4">
       <summary class="mb-3">Previous version</summary>
       <div class="row">
-        <!-- Input parameters -->
         <div class="col-6">
           <div class="card h-100">
             <div class="card-header">
@@ -220,7 +231,6 @@
             </div>
           </div>
         </div>
-        <!-- Source code -->
         <div class="col-6">
           <div class="card h-100">
             <div class="card-header">
@@ -262,7 +272,6 @@
             </div>
           </div>
         </div>
-        <!-- MOR component -->
         <div class="col-12 mt-4">
           <app-mor
             defaultLang="{{ parameters.language.code }}"
@@ -272,5 +281,6 @@
         </div>
       </div>
     </details>
+    -->
   </div>
 </div>

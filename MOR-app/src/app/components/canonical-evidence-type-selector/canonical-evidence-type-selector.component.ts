@@ -17,7 +17,9 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
   constructor(public loader: DataLoaderCanonicalEvidenceTypesService) {}
 
   public getSelectedTypes = () => {
-    return this.selectedTypes.length == 0 ? [] : this.selectedTypes.split(',');
+    return !this.selectedTypes || this.selectedTypes.length == 0
+      ? []
+      : this.selectedTypes.split(',');
   };
 
   public getTypeName(code: string): string | null {
@@ -32,6 +34,7 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
   }
 
   public toggleType(tokenName: string | undefined) {
+    if (!this.selectedTypes) this.selectedTypes = "";
     if (this.isTypeSelected(tokenName)) {
       this.selectedTypes = this.getSelectedTypes()
         .filter((x) => x != tokenName)
@@ -40,7 +43,7 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
       this.selectedTypes +=
         (this.getSelectedTypes().length > 0 ? ',' : '') + tokenName;
     }
-    console.log(this.getSelectedTypes());
+    this.selectedTypesChange.emit(this.selectedTypes);
   }
 
   ngOnInit(): void {}
