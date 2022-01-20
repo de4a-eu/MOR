@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="BirthEvidence-en-test-outcome_files/mor.js"></script>
+<style>
+.label {color: darkblue; font-style: italic; font-weight: 750}
+span {cursor: help}
+</style>
+</head>
+<body>
+<form name="f">
+<input type="text" value="BirthEvidence" name="element" id="element">
+<select name="lang"><option value="en" selected="selected">en</option></select>
+<input type="button" value="Process" onclick="init();describeElement(null,f.lang.value)">
+</form>
+<div id="output" style="width:100%;border-color:1px solid red"><br>------| <span class="label" title="An unambiguous reference to the Birth Evidence.">Identifier</span> [ <span title="BirthEvidence/Identifier"><a href="#Identifier">Identifier</a> </span>; 0..1 ] - <br>------| <span class="label" title="The most recent date on which the Birth Evidence instance was issued.">Issue date</span> [ <span title="BirthEvidence/IssueDate"><a href="#UDT">UDT/Date</a> </span>; 1..1 ] - <br>------| <span class="label" title="A Public Organisation with official authority in charge of issuing the Birth Evidence.">Issuing authority</span> [ <span title="BirthEvidence/IssuingAuthority"><a href="#PublicOrganisation">PublicOrganisation</a> </span>; 1..1 ] - <br>------| <span class="label" title="The Location where the Birth Evidence was issued.">Issuing place</span> [ <span title="BirthEvidence/IssuingPlace"><a href="#LocationAddress">LocationAddress</a> </span>; 1..1 ] - <br>---------| <span class="label" title="The region of the address, usually a county, state or other such area that typically encompasses several localities.">Admin unit level 2</span> [ <span title="BirthEvidence/IssuingPlace/AdminUnitL2"><a href="#LocationAddress">LocationAddress/AdminUnitL2</a> </span>; 1..1 ] - <br>---------| <span class="label" title="The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.">Admin unit level 1</span> [ <span title="BirthEvidence/IssuingPlace/AdminUnitL1"><a href="#LocationAddress">LocationAddress/AdminUnitL1</a> </span>; 1..1 ] - <br>------| <span class="label" title="Attesting in a formal way that the Birth is true.">Certifies birth</span> [ <span title="BirthEvidence/CertifiesBirth">:none: </span>; 1..1 ] - <br>---------| <span class="label" title="The Person who is born at the Birth. A Person of any age, who is a son or daughter.">Child</span> [ <span title="BirthEvidence/CertifiesBirth/Child"><a href="#Person">Person</a> </span>; 1..1 ] - <br>------------| <span class="label" title="The day on which the person was born.">Date of birth</span> [ <span title="BirthEvidence/CertifiesBirth/Child/DateOfBirth"><a href="#Person">Person/DateOfBirth</a> </span>; 1..1 ] - <br>------------| <span class="label" title="Gender of the born person">Person gender</span> [ <span title="BirthEvidence/CertifiesBirth/Child/Gender"><a href="#PersonGenderEnum">PersonGenderEnum</a> </span>; 1..1 ] - <br>------------| <span class="label" title="">Address</span> [ <span title="BirthEvidence/CertifiesBirth/Child/PlaceOfBirth"><a href="#LocationAddress">LocationAddress</a> </span>; 1..1 ] - <br>---------| <span class="label" title="The Parent of the Child. One of the two Persons who are jointly the cause of the Child" s="" birth,="" i.e.="" natural="" parent.'="">Parent</span> [ <span title="BirthEvidence/CertifiesBirth/Parent"><a href="#Person">Person</a> </span>; 0..n ] - <hr><h2>Sub-Types</h2><br><br><b>Identifier</b><a name="Identifier"></a><br>------| <span class="label" title="Content - alpha-numeric string">Content</span> [ <span title="Identifier/Identifier"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The type of identifier issued (if the authority issues more than one type of identifier).">Identifier Type</span> [ <span title="Identifier/IdentifierType"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The date on which it was issued">Issue Date</span> [ <span title="Identifier/IssueDate"><a href="#UDT">UDT/Date</a> </span>; 0..1 ] - <br>------| <span class="label" title="The name of the issuing agency">Issuing Authority</span> [ <span title="Identifier/IssuingAuthority"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The issuing agency ID">Issuing Authority ID</span> [ <span title="Identifier/IssuingAuthorityID" style="background-color:pink"><a href="#UDT">UDT/Identifier</a> </span>; 0..1 ] - <br><br><b>UDT</b><a name="UDT"></a><br>------| <span class="label" title="A character string (i.e. a finite set of characters), generally in the form of words of a language.">Text</span> [ <span title="UDT/Text">xsd:string </span>; 0..1 ] - <br>---------| <span class="label" title="The identifier of the language used in the content component.">Language ID</span> [ <span title="UDT/Text/@LanguageID">xsd:language </span>; 0..1 ] - <br>---------| <span class="label" title="The identification of the locale of the language.">Language Locale ID</span> [ <span title="UDT/Text/@LanguageLocaleID">xsd:normalizedString </span>; 0..1 ] - <br>------| <span class="label" title="One calendar day according the Gregorian calendar.">Date</span> [ <span title="UDT/Date">xsd:date </span>; 0..1 ] - <br><br><b>PublicOrganisation</b><a name="PublicOrganisation"></a><br>------| <span class="label" title="Many organisations are referred to by an acronym or some other identifier. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European AntiN/AFraud Office, and so on. These are formally recognised by the European Commission which provides a list of such acronyms. Analogous lists should be used in other contexts.">Identifier</span> [ <span title="PublicOrganisation/Identifier"><a href="#Identifier">Identifier</a> </span>; 0..n ] - <br>------| <span class="label" title="As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property. ">Preferred label</span> [ <span title="PublicOrganisation/PrefLabel"><a href="#UDT">UDT/Text</a> </span>; 1..n ] - <br><br><b>LocationAddress</b><a name="LocationAddress"></a><br>------| <span class="label" title="The region of the address, usually a county, state or other such area that typically encompasses several localities.">Admin unit level 2</span> [ <span title="LocationAddress/AdminUnitL2"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.">Admin unit level 1</span> [ <span title="LocationAddress/AdminUnitL1"><a href="#CountryEnum">CountryEnum</a> </span>; 0..1 ] - <br>------| <span class="label" title="The Post Office Box number. INSPIRE" s="" name="" for="" this="" is="" 'postaldeliveryidentifier'="" which="" it="" uses="" the="" locator="" designator="" property="" with="" a="" type="" attribute="" of="" that="" name.="" vocabulary="" separates="" out="" post="" office="" box="" greater="" independence="" technology.'="">PoBox</span> [ <span title="LocationAddress/PoBox"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="Quoting from the INSPIRE guidelines, a thoroughfare is: " an="" address="" component="" that="" represents="" the="" name="" of="" a="" passage="" or="" way="" through="" from="" one="" location="" to="" another.="" thoroughfare="" is="" not="" necessarily="" road,="" it="" might="" be="" waterway="" some="" other="" feature.'="">Thoroughface</span> [ <span title="LocationAddress/Thoroughfare"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The locator designator is defined by the INSPIRE guidelines as " a="" number="" or="" sequence="" of="" characters="" that="" uniquely="" identifies="" the="" locator="" within="" relevant="" scope(s).="" full="" identification="" could="" include="" one="" more="" designators.'="" in="" simpler="" terms,="" this="" is="" building="" number,="" apartment="" etc.="" for="" an="" address="" such="" as="" 'flat="" 3,="" 17="" bridge="" street',="" 17.''="">Locator designator</span> [ <span title="LocationAddress/LocatorDesignator"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="Based on the INSPIRE guidelines, locator name is defined as: " proper="" noun(s)="" applied="" to="" the="" real="" world="" entity="" identified="" by="" locator.="" locator="" name="" could="" be="" of="" property="" or="" complex,="" building="" part="" building,="" it="" a="" room="" inside="" building.="" key="" difference="" between="" and="" is="" that="" latter="" unlikely="" include="" digits.="" for="" example,="" 'shumann,="" berlaymont'="" meeting="" within="" european="" commission="" headquarters="" which="" more="" appropriate="" than="" locator.'="">Locator name</span> [ <span title="LocationAddress/LocatorName"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="Taking the definition from INSPIRE, the address area is: the name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit." this="" would="" typically="" be="" part="" of="" a="" city,="" neighbourhood="" or="" village.'="">Address area</span> [ <span title="LocationAddress/AddressArea"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The key postal division of the address, usually the city. (INSPIRE" s="" definition="" is="" 'one="" or="" more="" names="" created="" and="" maintained="" for="" postal="" purposes="" to="" identify="" a="" subdivision="" of="" addresses="" delivery="" points.)'="">Post name</span> [ <span title="LocationAddress/PostName"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br>------| <span class="label" title="The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries" postal="" address="" systems.'="">Post code</span> [ <span title="LocationAddress/PostCode"><a href="#UDT">UDT/Text</a> </span>; 0..1 ] - <br><br><b>Person</b><a name="Person"></a><br>------| <span class="label" title="The day on which the person was born.">Date of birth</span> [ <span title="Person/DateOfBirth">:none: </span>; 0..1 ] - <br>---------| <span class="label" title="A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in � 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.">Year</span> [ <span title="Person/DateOfBirth/Year">xsd:gYear </span>; 0..1 ] - <br>---------| <span class="label" title="A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in � 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.">Month</span> [ <span title="Person/DateOfBirth/Month">xsd:gMonth </span>; 0..1 ] - <br>---------| <span class="label" title="A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in � 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.">Day</span> [ <span title="Person/DateOfBirth/Day">xsd:gDay </span>; 0..1 ] - <br>------| <span class="label" title="The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.">Gender</span> [ <span title="Person/Gender"><a href="#PersonGenderEnum">PersonGenderEnum</a> </span>; 0..1 ] - <br>------| <span class="label" title="The Location where the person was born.">Place of birth</span> [ <span title="Person/PlaceOfBirth"><a href="#LocationAddress">LocationAddress</a> </span>; 0..1 ] - <br>------| <span class="label" title="The family name and given name of a Person. At least one of the two must exist.">Person name</span> [ <span title="Person/PersonName">:none: </span>; 1..1 ] - <br>---------| <span class="label" title="A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. " de="" boer',="" 'van="" putte',="" 'von="" und="" zu="" orlow'.="" multiple="" family="" names,="" such="" as="" are="" commonly="" found="" in="" hispanic="" countries,="" recorded="" the="" single="" name="" field="" so="" that,="" for="" example,="" miguel="" cervantes="" saavedra's="" would="" be="" 'de="" saavedra'.'="">Family name</span> [ <span title="Person/PersonName/FamilyName" style="background-color:pink"><a href="#UDT">UDT/Name</a> </span>; 0..n ] - <br>---------| <span class="label" title="A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as " given="" names'="" through="" a="" formal="" process.="" all="" names="" are="" ordered="" in="" one="" field="" so="" that,="" for="" example,="" the="" name="" johann="" sebastian="" bach="" is="" 'johann="" sebastian'.'="">Given name</span> [ <span title="Person/PersonName/GivenName"><a href="#UDT">UDT/Text</a> </span>; 0..n ] - <br>------| <span class="label" title="The identifier relation is used to link a Person to any formally issued Identifier for that Person.">Identifier</span> [ <span title="Person/Identifier"><a href="#Identifier">Identifier</a> </span>; 0..n ] - <br>------| <span class="label" title="The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.">Citizenship</span> [ <span title="Person/Citizenship"><a href="#Jurisdiction">Jurisdiction</a> </span>; 0..n ] - <br><br><b>PersonGenderEnum</b><a name="PersonGenderEnum"></a>---Person gender: List of human genders.<p>---<select id="enum_PersonGenderEnum"><option selected="selected">Female - Female</option><option>Male - Male</option><option>NAP - Not applicable</option><option>NKN - Not known</option><option>NST - Not stated</option></select></p><br><br><b>CountryEnum</b><a name="CountryEnum"></a>---:
+ ISO 3166-1 alpha-3 codes are three-letter country codes defined in ISO 
+3166-1, part of the ISO 3166 standard published by the International 
+Organization for Standardization, to represent countries, dependent 
+territories, and special areas of geographical interest.<p>---<select id="enum_CountryEnum"><option selected="selected">1A0 - Kosovo</option><option>ABW - Aruba</option><option>AFG - Afghanistan</option><option>AFI - French Afar and Issas</option><option>AGO - Angola</option><option>AIA - Anguilla</option><option>ALA - �land Islands</option><option>ALB - Albania</option><option>AND - Andorra</option><option>ANT - Netherlands Antilles</option><option>ARE - United Arab Emirates</option><option>ARG - Argentina</option><option>ARM - Armenia</option><option>ASM - American Samoa</option><option>ATA - Antarctica</option><option>ATB - British Antarctic Territory</option><option>ATF - French Southern Lands</option><option>ATG - Antigua and Barbuda</option><option>ATN - Dronning Maud Land</option><option>AUS - Australia</option><option>AUT - Austria</option><option>AZE - Azerbaijan</option><option>BDI - Burundi</option><option>BEL - Belgium</option><option>BEN - Benin</option><option>BES - Bonaire, Sint Eustatius and Saba</option><option>BFA - Burkina Faso</option><option>BGD - Bangladesh</option><option>BGR - Bulgaria</option><option>BHR - Bahrain</option><option>BHS - Bahamas</option><option>BIH - Bosnia and Herzegovina</option><option>BLM - Saint Barth�lemy</option><option>BLR - Belarus</option><option>BLZ - Belize</option><option>BMU - Bermuda</option><option>BOL - Bolivia</option><option>BRA - Brazil</option><option>BRB - Barbados</option><option>BRN - Brunei</option><option>BTN - Bhutan</option><option>BUR - Burma</option><option>BVT - Bouvet Island</option><option>BWA - Botswana</option><option>BYS - Belarus</option><option>CAF - Central African Republic</option><option>CAN - Canada</option><option>CCK - Cocos (Keeling) Islands</option><option>CHE - Switzerland</option><option>CHL - Chile</option><option>CHN - China</option><option>CIV - C�te d�Ivoire</option><option>CMR - Cameroon</option><option>COD - Democratic Republic of the Congo</option><option>COG - Congo</option><option>COK - Cook Islands</option><option>COL - Colombia</option><option>COM - Comoros</option><option>CPT - Clipperton</option><option>CPV - Cabo Verde</option><option>CRI - Costa Rica</option><option>CSK - Czechoslovakia</option><option>CTE - Canton and Enderbury Islands</option><option>CUB - Cuba</option><option>CUW - Cura�ao</option><option>CXR - Christmas Island</option><option>CYM - Cayman Islands</option><option>CYP - Cyprus</option><option>CZE - Czechia</option><option>DDR - East Germany</option><option>DEU - Germany</option><option>DHY - Dahomey</option><option>DJI - Djibouti</option><option>DMA - Dominica</option><option>DNK - Denmark</option><option>DOM - Dominican Republic</option><option>DZA - Algeria</option><option>ECU - Ecuador</option><option>EGY - Egypt</option><option>ERI - Eritrea</option><option>ESH - Western Sahara</option><option>ESP - Spain</option><option>EST - Estonia</option><option>ETH - Ethiopia</option><option>EUR - European Union</option><option>FIN - Finland</option><option>FJI - Fiji</option><option>FLK - Falkland Islands</option><option>FQ0 - French Southern and Antarctic Lands</option><option>FRA - France</option><option>FRO - Faroes</option><option>FSM - Micronesia</option><option>FXX - Metropolitan France</option><option>GAB - Gabon</option><option>GBR - United Kingdom</option><option>GEL - Gilbert and Ellice Islands</option><option>GEO - Georgia</option><option>GGY - Guernsey</option><option>GHA - Ghana</option><option>GIB - Gibraltar</option><option>GIN - Guinea</option><option>GLP - Guadeloupe</option><option>GMB - The Gambia</option><option>GNB - Guinea-Bissau</option><option>GNQ - Equatorial Guinea</option><option>GRC - Greece</option><option>GRD - Grenada</option><option>GRL - Greenland</option><option>GTM - Guatemala</option><option>GUF - French Guiana</option><option>GUM - Guam</option><option>GUY - Guyana</option><option>HKG - Hong Kong</option><option>HMD - Heard Island and McDonald Islands</option><option>HND - Honduras</option><option>HRV - Croatia</option><option>HTI - Haiti</option><option>HUN - Hungary</option><option>HVO - Upper Volta</option><option>IDN - Indonesia</option><option>IMN - Isle of Man</option><option>IND - India</option><option>IOT - British Indian Ocean Territory</option><option>IRL - Ireland</option><option>IRN - Iran</option><option>IRQ - Iraq</option><option>ISL - Iceland</option><option>ISR - Israel</option><option>ITA - Italy</option><option>JAM - Jamaica</option><option>JEY - Jersey</option><option>JOR - Jordan</option><option>JPN - Japan</option><option>JTN - Johnston Island</option><option>KAZ - Kazakhstan</option><option>KEN - Kenya</option><option>KGZ - Kyrgyzstan</option><option>KHM - Cambodia</option><option>KIR - Kiribati</option><option>KNA - Saint Kitts and Nevis</option><option>KOR - South Korea</option><option>KWT - Kuwait</option><option>LAO - Laos</option><option>LBN - Lebanon</option><option>LBR - Liberia</option><option>LBY - Libya</option><option>LCA - Saint Lucia</option><option>LIE - Liechtenstein</option><option>LKA - Sri Lanka</option><option>LSO - Lesotho</option><option>LTU - Lithuania</option><option>LUX - Luxembourg</option><option>LVA - Latvia</option><option>MAC - Macau</option><option>MAF - Saint Martin</option><option>MAR - Morocco</option><option>MCO - Monaco</option><option>MDA - Moldova</option><option>MDG - Madagascar</option><option>MDV - Maldives</option><option>MEX - Mexico</option><option>MHL - Marshall Islands</option><option>MID - Midway Islands</option><option>MKD - North Macedonia</option><option>MLI - Mali</option><option>MLT - Malta</option><option>MMR - Myanmar/Burma</option><option>MNE - Montenegro</option><option>MNG - Mongolia</option><option>MNP - Northern Mariana Islands</option><option>MOZ - Mozambique</option><option>MRT - Mauritania</option><option>MSR - Montserrat</option><option>MTQ - Martinique</option><option>MUS - Mauritius</option><option>MWI - Malawi</option><option>MYS - Malaysia</option><option>MYT - Mayotte</option><option>NAM - Namibia</option><option>NCL - New Caledonia</option><option>NER - Niger</option><option>NFK - Norfolk Island</option><option>NGA - Nigeria</option><option>NHB - New Hebrides</option><option>NIC - Nicaragua</option><option>NIU - Niue</option><option>NLD - Netherlands</option><option>NOR - Norway</option><option>NPL - Nepal</option><option>NRU - Nauru</option><option>NTZ - Neutral Zone</option><option>NZL - New Zealand</option><option>OMN - Oman</option><option>PAK - Pakistan</option><option>PAN - Panama</option><option>PCI - Trust Territory of the Pacific Islands</option><option>PCN - Pitcairn Islands</option><option>PCZ - Panama Canal Zone</option><option>PER - Peru</option><option>PHL - Philippines</option><option>PLW - Palau</option><option>PNG - Papua New Guinea</option><option>POL - Poland</option><option>PRI - Puerto Rico</option><option>PRK - North Korea</option><option>PRT - Portugal</option><option>PRY - Paraguay</option><option>PSE - Palestine</option><option>PUS - US Miscellaneous Pacific Islands</option><option>PYF - French Polynesia</option><option>QAT - Qatar</option><option>REU - R�union</option><option>RHO - Southern Rhodesia</option><option>ROU - Romania</option><option>RUS - Russia</option><option>RWA - Rwanda</option><option>SAU - Saudi Arabia</option><option>SCG - Serbia and Montenegro</option><option>SDN - Sudan</option><option>SEN - Senegal</option><option>SGP - Singapore</option><option>SGS - South Georgia and the South Sandwich Islands</option><option>SHN - Saint Helena, Ascension and Tristan da Cunha</option><option>SJM - Svalbard and Jan Mayen</option><option>SKM - Sikkim</option><option>SLB - Solomon Islands</option><option>SLE - Sierra Leone</option><option>SLV - El Salvador</option><option>SMR - San Marino</option><option>SOM - Somalia</option><option>SPM - Saint Pierre and Miquelon</option><option>SRB - Serbia</option><option>SSD - South Sudan</option><option>STP - S�o Tom� and Pr�ncipe</option><option>SUN - Soviet Union</option><option>SUR - Suriname</option><option>SVK - Slovakia</option><option>SVN - Slovenia</option><option>SWE - Sweden</option><option>SWZ - Eswatini</option><option>SXM - Sint Maarten</option><option>SYC - Seychelles</option><option>SYR - Syria</option><option>TCA - Turks and Caicos Islands</option><option>TCD - Chad</option><option>TGO - Togo</option><option>THA - Thailand</option><option>TJK - Tajikistan</option><option>TKL - Tokelau</option><option>TKM - Turkmenistan</option><option>TLS - Timor-Leste</option><option>TMP - East Timor</option><option>TON - Tonga</option><option>TTO - Trinidad and Tobago</option><option>TUN - Tunisia</option><option>TUR - Turkey</option><option>TUV - Tuvalu</option><option>TWN - Taiwan</option><option>TZA - Tanzania</option><option>UGA - Uganda</option><option>UKR - Ukraine</option><option>UMI - United States Minor Outlying Islands</option><option>URY - Uruguay</option><option>USA - United States</option><option>UZB - Uzbekistan</option><option>VAT - Vatican City State</option><option>VCT - Saint Vincent and the Grenadines</option><option>VDR - Democratic Republic of Vietnam</option><option>VEN - Venezuela</option><option>VGB - British Virgin Islands</option><option>VIR - US Virgin Islands</option><option>VNM - Vietnam</option><option>VUT - Vanuatu</option><option>WAK - Wake Islands</option><option>WLF - Wallis and Futuna</option><option>WSM - Samoa</option><option>YEM - Yemen</option><option>YMD - North Yemen</option><option>YUG - Yugoslavia</option><option>ZAF - South Africa</option><option>ZMB - Zambia</option><option>ZR0 - Zaire</option><option>ZWE - Republic of Zimbabwe</option></select></p><br><br><b>Jurisdiction</b><a name="Jurisdiction"></a><br>------| <span class="label" title=" The value for the id property is a URI for that Jurisdiction.">Identifier</span> [ <span title="Jurisdiction/Identifier"><a href="#Identifier">Identifier</a> </span>; 0..1 ] - <br>------| <span class="label" title="The name is simply a string that identifies the Jurisdiction, typically a country, with or without a language tag.">Name</span> [ <span title="Jurisdiction/Name"><a href="#CountryEnum">CountryEnum</a> </span>; 1..n ] - </div>
+<script>
+var morJSON;
+const xmlhttp = new XMLHttpRequest();
+const url = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/mor_en.json"
+//const url='http://localhost:8080/DE4A-MOR/js/mor_en.json';
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	//outcome.innerHTML = this.responseText
+        morJSON = JSON.parse(this.responseText)
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+function hasChildren(termName) {
+	var r = true
+	for (var termJSON in morJSON) {
+		if (termJSON.startsWith(termName+"/") ) 
+			t = false
+	}
+	t= true
+	console.log("<hasChildern> "+termName +" = " + t)
+	return t
+}
+
+function printError(funcName, errMsg) {
+	console.log(funcName+errMsg)
+	alert(errMsg)
+}
+var elements = new Map()
+var subtypes = new Set()
+var totals = new Set()
+const debug = true
+
+function describeElement(e , lang) {
+	var ele = (e==null?element:e)
+	if (debug) console.log("<describeElement> DEBUG: call '"+ele+"', "+lang+", "+(e==null))
+	if (elements.has(ele)) {
+		if (debug) console.log("<describeElement> DEBUG: elements already has '"+ele+"'")
+		return
+	}
+	if (! morJSON.hasOwnProperty(ele)) {
+		console.log("<describeElement> WARN: not in MOR '"+ele+"'")
+		return
+	}
+	var m = new Map()
+	for (var s in morJSON) {
+		if (s.startsWith(ele+"/") || s == ele) {
+			var type = morJSON[s].type
+			if (debug && type.indexOf(":token")<100) console.log("<describeElement> DEBUG: m.set "+ele+": '"+s+"', "+JSON.stringify(morJSON[s]))
+			m.set(s, morJSON[s])
+			if (type.indexOf("/")<0 && type.indexOf(":")<0)
+				describeElement(type, lang)
+		}
+	}
+	elements.set(ele, m)
+	if (e == null) {
+		printElements(ele,lang, "")
+		printSubElements(lang)
+	}
+}
+var cont=0
+function printSubElements(lang) {
+	if (debug) console.log("<printSubElements> DEBUG: Call "+lang+ ": "+subtypes.size)
+	var again = new Set()
+	if (subtypes.size > 0)outcome.innerHTML += "<hr><h2>Sub-Types</h2>"
+	var print = true
+	subtypes.forEach((v,t) => {
+		if (t!=element) {
+			outcome.innerHTML += "<br><br><b>"+t+"</b><a name='"+t+"'></a>"
+			if (debug) console.log("<printSubElements> DEBUG: t= '"+t+"'")
+			var e=t
+			if (t.indexOf("/")>0) {
+				e = t.substr(0,t.indexOf("/"))
+			}
+			if (!elements.has(e) && morJSON.hasOwnProperty(e)){
+				if (debug) console.log("<printSubElements> DEBUG: add= '"+t+"'")
+				describeElement(t,lang)
+			}
+			elements.get(e).forEach((value,key)=>{
+							
+				if (key.startsWith(t+"/") || (key == t && key.indexOf("/")>0)) {
+					if (value.type.indexOf(":token")<0) {
+							printItem(lang,key,value,null)
+						if(!totals.has(key)) {
+							again.add(key)
+						}
+					} else {
+						if (debug && print) console.log("<printSubElements> DEBUG: option= '"+key)	
+						var op = document.createElement('option');
+						op.innerHTML = key.substr(key.indexOf("/")+1) + " - " + value[lang].label
+						var sel = document.getElementById('enum_'+key.substr(0,key.indexOf("/")))
+						if (debug && print) console.log("<printSubElements> DEBUG: enum= '"+sel.id+"'")
+						sel.appendChild(op)
+						print = false
+					}
+				} else if (value.type.indexOf(":enum")>0) {
+					print = true
+					outcome.innerHTML += "---"+ value[lang].label + ": " +  value[lang].description
+					outcome.innerHTML += "<p>---<select id='enum_"+e+"'></select></p>"
+					if(!totals.has(key)) {
+						again.add(key)
+					}
+				} else
+					if (debug) console.log("<printSubElements> DEBUG: skip= '"+key)
+			})
+		}
+	})
+	if (again.size > 0) {
+		if (debug) console.log("<printSubElements> DEBUG: again subtypes= '"+subtypes.size+", "+again.size)
+		subtypes.delete()
+		subtypes = new Set();
+		again.forEach((v,t) => {
+			adding(t)
+		})
+		if (debug) console.log("<printSubElements> DEBUG: again= '"+subtypes.size)
+		printSubElements(lang)
+	}
+}
+function printElements(ele, lang, parent) {
+	if (debug) console.log("<printElements> DEBUG: Call '"+ele+"', "+lang+"', "+parent)
+	var skip = (ele != element && ! ele.startsWith(element+"") && ele.indexOf("/")<0)
+
+	if (elements.has(ele))
+		elements.get(ele).forEach((value,key)=>{
+			if (debug) console.log("<printElements> DEBUG: Each '"+key+"', "+JSON.stringify(value))
+			JSON.parse(JSON.stringify(value))
+			var type = value.type
+			var complex = (type.indexOf(":")<0)
+			var root = (type.indexOf("/")<0?type:type.substr(0,type.indexOf("/")))
+			var subEle = null
+			if (complex) {
+				if (debug) console.log("<printElements> DEBUG: root '"+root+"', "+elements.has(root))
+				if (elements.has(root)) {
+					if (debug) console.log("<printElements> DEBUG: subEle Get '"+type+"', "+JSON.stringify(elements.get(root)))
+					subEle = elements.get(root).get(type)
+					JSON.parse(JSON.stringify(subEle))
+					if (debug) console.log("<printElements> DEBUG: subEle '"+type+"', "+JSON.stringify(subEle))
+				}
+			}
+			var path = key
+			if (parent != "" ) {
+				if (key.startsWith(element+"/"))
+					path = parent + "/" + key
+				else if (key.indexOf("/")>0 && ! key.startsWith(element+"/"))
+					path = parent  + key.substr(key.indexOf("/"))
+			}
+			if (debug) console.log("<printElements> DEBUG: path print "+key+" '"+path+", "+elements.get(element).has(path))
+			if (! skip || ele != key) {
+				if (key.startsWith(element+"/") || ! isOverloaded(path)) 
+					printItem(lang, path, value, subEle)
+				else
+					skip = true
+			}
+			if (debug && skip) console.log("<printElements> DEBUG: skip print "+key+" '"+path+", "+elements.get(element).has(path))
+
+			if (subEle != null && subEle.type.indexOf(":enum")<0 && subEle.type.indexOf(":token")<0) {
+				if (debug) console.log("<printElements> DEBUG: set- & down '"+type+"', "+path)
+				printElements(type, lang, path)
+			} 
+				
+	    })
+	else
+		console.log("<printElements> ERROR: elements has not '"+ele+"'")
+}
+function adding(type) {
+	if (debug) console.log("<adding> DEBUG:  '"+type+"' "+totals.has(type))
+	if (type.indexOf("/")>0) {
+		adding(type.substr(0,type.indexOf("/")))
+	}
+	else
+	if (! totals.has(type)){
+		subtypes.add(type)
+		totals.add(type)
+		if (debug) console.log("<adding> DEBUG:  '"+type+"' "+subtypes.size+"' "+totals.size)
+	}
+}
+function isOverloaded(path){
+	if (debug && path.indexOf("DateOfBirth")>0) 
+		console.log("<isOverloaded> DEBUG: Call '"+path+"' "+elements.get(element).has(path)+" : "+path.indexOf("/")+"!="+path.lastIndexOf("/"))
+	if (elements.get(element).has(path)) return true;
+	if (path.indexOf("/")>0 && path.indexOf("/")!=path.lastIndexOf("/")) {
+		return isOverloaded(path.substr(0,path.lastIndexOf("/")))
+	}
+	return false
+}
+function printItem(lang,path,ele,subEle){
+	if (debug) console.log("<printItem> DEBUG: Call '"+path+"', "+lang+", ele: '"+JSON.stringify(ele)+"' -- "+(ele.type.indexOf(":")<0 || ele.type.indexOf(":enum")>0))
+	var type = (ele.type==""?":none:":ele.type)
+	var parts = path.split("/")
+	outcome.innerHTML += "<br>"
+	for (var i=0; i<parts.length; i++) outcome.innerHTML += "---"
+		if (debug) console.log("<printItem> DEBUG: Path Parts "+parts.length)
+
+	var complex = (ele.type.indexOf(":")<0 && ! morJSON.hasOwnProperty(ele.type))
+	
+	if (type.indexOf(":")<0 || type.indexOf(":enum")>0) {
+		var refType = (type.indexOf("/")<0?type:type.substr(0,type.indexOf("/")))
+		adding(refType)
+		type = "<a href='#"+ refType +"'>"+type+"</a>"
+		if (debug) console.log("<printItem> DEBUG: reference "+type)
+	}
+	outcome.innerHTML += "| <span class='label' title='" 
+			+ (ele[lang].description=="" && subEle != null
+					? subEle[lang].description
+					: ele[lang].description) 					
+			+ "'>" 
+			+ (ele[lang].label=="" && subEle != null
+					? subEle[lang].label
+					: ele[lang].label) 
+			+ "</span> "
+			+ "[ <span title='"+path+"'"+(ele.type!="" && complex?"style='background-color:pink'":"")+">" 
+			+ type +" </span>; "
+			+ printCardinatity(ele.cardinality=="" && subEle != null
+					? subEle.cardinality
+					: ele.cardinality) 
+			
+			+" ] - "
+}
+function printCardinatity(card){
+	return card.charAt(0) + ".." + (card.charAt(1)=="0"?"1":"n") 
+}
+function init() {
+	outcome.innerHTML=''
+	elements = new Map()
+	element = document.getElementById("element").value
+}
+var outcome = document.getElementById("output")
+var element = document.getElementById("element").value
+</script>
+
+
+</body></html>
