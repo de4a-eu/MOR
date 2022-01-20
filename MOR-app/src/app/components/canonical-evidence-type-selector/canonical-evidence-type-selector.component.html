@@ -16,7 +16,7 @@
     ></a
   >
   <ul class="dropdown-menu" aria-labelledby="dropdownEvidenceTypes">
-    <li *ngFor="let type of loader.getCanonicalEvidenceTypes()">
+    <li *ngFor="let type of loader.getAllCanonicalEvidenceTypes()">
       <a class="dropdown-item" (click)="toggleType(type.tokenName)" href="#">
         <fa-icon
           [icon]="faPlus"

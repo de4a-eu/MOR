@@ -11,9 +11,19 @@ import CanonicalEvidenceTypes from 'src/app/services/data/canonical-evidence-typ
 export class DataLoaderCanonicalEvidenceTypesService {
   constructor() {}
 
-  private canonicalEvidenceTypes: CanonicalEvidenceType[] = CanonicalEvidenceTypes;
+  private canonicalEvidenceTypes: CanonicalEvidenceType[] =
+    CanonicalEvidenceTypes;
 
-  getCanonicalEvidenceTypes = () => {
+  getAllCanonicalEvidenceTypes = () => {
     return this.canonicalEvidenceTypes;
+  };
+
+  getSelectedCanonicalEvidenceTypes = (
+    tokenNames: string
+  ): CanonicalEvidenceType[] => {
+    let listOfTokenNames: string[] = tokenNames.split(',');
+    return this.canonicalEvidenceTypes.filter((x) =>
+      listOfTokenNames.includes(x.tokenName || '')
+    );
   };
 }

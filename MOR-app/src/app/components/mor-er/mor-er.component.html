@@ -1,11 +1,37 @@
-<div class="position-relative">
+<div class="position-relative" style="z-index: 1100">
   <div class="position-absolute top-0 end-0">
     <app-language-selector
       [(selectedLanguage)]="selectedLanguage"
     ></app-language-selector>
   </div>
 </div>
-<p><b>Input</b>:</p>
+
+<div
+  class="row d-flex justify-content-center align-items-center"
+  *ngFor="let evidenceType of getEvidenceTypes()"
+>
+  <div class="col-6 text-end p-2">
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="
+        getIalIP(
+          evidenceType.tokenName || '',
+          canonicalEvidenceCountries[evidenceType.tokenName || '']
+        )
+      "
+    >
+      {{ evidenceType.name }}
+    </button>
+  </div>
+  <div class="col-6 p-2">
+    <app-country-selector
+      [(countryCode)]="canonicalEvidenceCountries[evidenceType.tokenName || '']"
+    ></app-country-selector>
+  </div>
+</div>
+
+<h4>Input</h4>
 <ul>
   <li>
     Default language &rarr; <b>{{ defaultLanguage }}</b>
@@ -20,11 +46,14 @@
     JavaScript array ID &rarr; <b>{{ outputJSArrayId }}</b>
   </li>
 </ul>
-<p><b>Interactions</b>:</p>
+<h4>Interactions</h4>
 <ul>
-  <li>Selected language &rarr; <b>{{ selectedLanguage }}</b></li>
+  <li>
+    Selected language &rarr; <b>{{ selectedLanguage }}</b>
+  </li>
 </ul>
-<p><b>Output</b>:</p>
+
+<h4>Output</h4>
 <ul>
   <li>
     IAL Provision Data &rarr; <b>{{ outputJSArrayId }}</b>

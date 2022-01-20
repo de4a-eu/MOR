@@ -24,7 +24,7 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
 
   public getTypeName(code: string): string | null {
     let type = this.loader
-      .getCanonicalEvidenceTypes()
+      .getAllCanonicalEvidenceTypes()
       .find((x) => code == x.code);
     return type ? type.name : null;
   }
