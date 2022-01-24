@@ -2,6 +2,9 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
+import { faFileCode } from '@fortawesome/free-solid-svg-icons';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-mor-er',
@@ -9,6 +12,8 @@ import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
   styleUrls: ['./mor-er.component.css'],
 })
 export class MORERComponent implements OnInit {
+  faFileCode = faFileCode;
+
   @Input('defaultLang') defaultLanguage!: string;
   public selectedLanguage!: string;
   @Input('requesterCountryCode') requesterCountry!: string;
@@ -40,5 +45,12 @@ export class MORERComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
+  }
+
+  ngAfterViewInit(): void {
+    // Enable Bootstrap tooltip
+    [].slice
+      .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      .map((element) => new bootstrap.Tooltip(element));
   }
 }

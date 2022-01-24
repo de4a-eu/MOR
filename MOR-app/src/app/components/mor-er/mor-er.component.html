@@ -1,6 +1,10 @@
 <div class="position-relative" style="z-index: 1100">
   <div class="position-absolute top-0 end-0">
     <app-language-selector
+      data-bs-toggle="tooltip"
+      data-bs-html="true"
+      data-bs-placement="left"
+      title="<b>Change language</b><br>of displayed content"
       [(selectedLanguage)]="selectedLanguage"
     ></app-language-selector>
   </div>
@@ -21,7 +25,18 @@
         )
       "
     >
-      {{ evidenceType.name }}
+      <fa-icon
+        class="me-2"
+        [icon]="faFileCode"
+        data-bs-toggle="tooltip"
+        data-bs-html="true"
+        [title]="
+          '<b>TO-DO</b>: View schema of <b>' +
+          evidenceType.name +
+          '</b> canonical evidence type.'
+        "
+      ></fa-icon
+      >{{ evidenceType.name }}
     </button>
   </div>
   <div class="col-6 p-2">
@@ -31,6 +46,7 @@
   </div>
 </div>
 
+<!--
 <h4>Input</h4>
 <ul>
   <li>
@@ -59,3 +75,4 @@
     IAL Provision Data &rarr; <b>{{ outputJSArrayId }}</b>
   </li>
 </ul>
+-->
