@@ -1,4 +1,4 @@
-<div class="position-relative" style="z-index: 1100">
+<div class="position-relative" style="z-index: 1040">
   <div class="position-absolute top-0 end-0">
     <app-language-selector
       data-bs-toggle="tooltip"
@@ -15,16 +15,7 @@
   *ngFor="let evidenceType of getEvidenceTypes()"
 >
   <div class="col-6 text-end p-2">
-    <button
-      type="button"
-      class="btn btn-secondary"
-      (click)="
-        getIalIP(
-          evidenceType.tokenName || '',
-          canonicalEvidenceCountries[evidenceType.tokenName || '']
-        )
-      "
-    >
+    <button type="button" class="btn btn-sm btn-secondary">
       <fa-icon
         class="me-2"
         [icon]="faFileCode"
@@ -40,39 +31,86 @@
     </button>
   </div>
   <div class="col-6 p-2">
+    <!-- TO-DO: Disable countries without provisions -->
     <app-country-selector
       [(countryCode)]="canonicalEvidenceCountries[evidenceType.tokenName || '']"
     ></app-country-selector>
   </div>
 </div>
 
-<!--
-<h4>Input</h4>
-<ul>
-  <li>
-    Default language &rarr; <b>{{ defaultLanguage }}</b>
-  </li>
-  <li>
-    Requester country &rarr; <b>{{ requesterCountry }}</b>
-  </li>
-  <li>
-    Canonical evidence types &rarr; <b>{{ canonicalEvidenceTypes }}</b>
-  </li>
-  <li>
-    JavaScript array ID &rarr; <b>{{ outputJSArrayId }}</b>
-  </li>
-</ul>
-<h4>Interactions</h4>
-<ul>
-  <li>
-    Selected language &rarr; <b>{{ selectedLanguage }}</b>
-  </li>
-</ul>
+<div class="row p-2 mt-2" *ngIf="canonicalEvidenceCountriesSelected()">
+  <div class="col-12 text-center">
+    <button
+      type="button"
+      class="btn btn-sm btn-secondary"
+      (click)="requestProvisions()"
+      data-bs-toggle="modal"
+      data-bs-target="#requestEvidenceModel"
+    >
+      <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
+      ><b>Request</b> cross-border evidence
+    </button>
+  </div>
+</div>
 
-<h4>Output</h4>
-<ul>
-  <li>
-    IAL Provision Data &rarr; <b>{{ outputJSArrayId }}</b>
-  </li>
-</ul>
--->
+<!-- Modal: Cross-boder evidence request -->
+<div
+  class="modal fade"
+  id="requestEvidenceModel"
+  tabindex="-1"
+  aria-labelledby="requestEvidenceModelLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestEvidenceModelLabel">
+          Cross-border evidence request
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          The <b>DE4A Technical System</b> will be used to request the following
+          cross-border evidence:
+        </p>
+        <p class="text-danger">
+          <b>TO-DO</b>: If multiple provisions, user selects provision per &lt;evidence, country&gt; pair.
+        </p>
+        <ul>
+          <li *ngFor="let evidenceType of getEvidenceTypes()">
+            <b>{{ evidenceType.name }}</b> from
+            <b>{{
+              dataLoaderCountries.getName(
+                canonicalEvidenceCountries[evidenceType.tokenName || ""]
+              )
+            }}</b> ({{ getProvision(evidenceType.tokenName || "") }})
+          </li>
+        </ul>
+        <p>
+          You will be able to inspect the received evidence and choose if you
+          want to proceed.
+        </p>
+        <p><b>Are you sure that you want use the DE4A Technical System?</b></p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-sm btn-light"
+          data-bs-dismiss="modal"
+        >
+          <fa-icon class="me-1" [icon]="faTimesCircle"></fa-icon>
+          Cancel
+        </button>
+        <button type="button" class="btn btn-sm btn-secondary">
+          <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Request
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

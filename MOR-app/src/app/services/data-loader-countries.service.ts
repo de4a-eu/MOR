@@ -14,6 +14,11 @@ export class DataLoaderCountriesService {
     return this.countries;
   };
 
+  getName = (code: string) => {
+    let country = this.countries.find(x => x.code == code);
+    return country ? country.name : null;
+  }
+
   getAtuLevels = () => {
     return ['nuts0', 'nuts1', 'nuts2', 'nuts3', 'lau', 'edu'];
   };
