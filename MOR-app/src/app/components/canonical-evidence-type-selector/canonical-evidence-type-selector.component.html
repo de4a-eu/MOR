@@ -1,7 +1,6 @@
 <div class="dropdown">
   <a
-    class="btn btn-sm btn-light dropdown-toggle"
-    href="#"
+    class="btn btn-sm btn-light dropdown-toggle pointer"
     role="button"
     id="dropdownEvidenceTypes"
     data-bs-toggle="dropdown"
@@ -17,16 +16,14 @@
   >
   <ul class="dropdown-menu" aria-labelledby="dropdownEvidenceTypes">
     <li *ngFor="let type of loader.getAllCanonicalEvidenceTypes()">
-      <a class="dropdown-item" (click)="toggleType(type.tokenName)" href="#">
+      <a class="dropdown-item pointer" (click)="toggleType(type.tokenName)">
         <fa-icon
           [icon]="faPlus"
           [hidden]="isTypeSelected(type.tokenName)"
         ></fa-icon
         ><fa-icon
           [icon]="faMinus"
-          [hidden]="
-            !isTypeSelected(type.tokenName)
-          "
+          [hidden]="!isTypeSelected(type.tokenName)"
         ></fa-icon
         >{{ type.name }} <b>({{ type.tokenName }})</b></a
       >

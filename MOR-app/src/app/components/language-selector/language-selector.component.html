@@ -18,7 +18,7 @@
   >
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLanguage">
     <li *ngFor="let language of languages.getLanguages()">
-      <a class="dropdown-item" href="#" (click)="setLanguage(language.code)">
+      <a class="dropdown-item pointer" (click)="setLanguage(language.code)">
         <span
           class="me-2 flag-icon flag-icon-{{ language.flagCode | lowercase }}"
         ></span

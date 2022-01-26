@@ -2,7 +2,13 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
-import { faFileCode, faSignInAlt, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFileCode,
+  faSignInAlt,
+  faCheckCircle,
+  faTimesCircle,
+  faSyncAlt,
+} from '@fortawesome/free-solid-svg-icons';
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
 
 declare var bootstrap: any;
@@ -17,6 +23,7 @@ export class MORERComponent implements OnInit {
   faSignInAlt = faSignInAlt;
   faCheckCircle = faCheckCircle;
   faTimesCircle = faTimesCircle;
+  faSyncAlt = faSyncAlt;
 
   @Input('defaultLang') defaultLanguage!: string;
   public selectedLanguage!: string;
@@ -31,7 +38,9 @@ export class MORERComponent implements OnInit {
   ) {}
 
   public canonicalEvidenceCountries: any = {};
-  public provisions: any = {};
+  public retrievalType: any = {}; // By request (provision) or upload
+  public provisions: any = {}; // Provisions
+  public uploads: any = {}; // Content of uploaded files
 
   public canonicalEvidenceCountriesSelected(): boolean {
     return (
@@ -46,6 +55,16 @@ export class MORERComponent implements OnInit {
     );
   }
 
+  public getEvidenceTypesForRequest(): CanonicalEvidenceType[] {
+    return this.getEvidenceTypes().filter(
+      (evidenceType) => {
+        let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
+        let provision = this.provisions[evidenceType.tokenName || ''];
+        return retrievalType == "request" && typeof provision == "object";
+      }
+    );
+  }
+
   public getIalIP(canonicalEvidenceTypeId: string, countryCode: string): any {
     let result = this.dataLoaderIal.getIal(
       canonicalEvidenceTypeId,
@@ -55,26 +74,50 @@ export class MORERComponent implements OnInit {
     return result;
   }
 
+  public requestProvision(canonicalEvidenceType: string): void {
+    let country = this.canonicalEvidenceCountries[canonicalEvidenceType];
+    let provisions = this.getIalIP(canonicalEvidenceType, country);
+    if (provisions == null) provisions = 'not available';
+    this.provisions[canonicalEvidenceType] = provisions;
+  }
+
   public requestProvisions(): void {
     for (let canonicalEvidenceType in this.canonicalEvidenceCountries) {
-      let provisions = this.getIalIP(
-        canonicalEvidenceType,
-        this.canonicalEvidenceCountries[canonicalEvidenceType]
-      );
-      this.provisions[canonicalEvidenceType] = provisions;
+      this.requestProvision(canonicalEvidenceType);
     }
   }
 
   public getProvision(canonicalEvidenceType: string): any {
     let provision = this.provisions[canonicalEvidenceType];
-    if (provision != null) {
-      // TO-DO: Currently only first is returned
-      return provision.provisions[0].dataOwnerPrefLabel;
-    } return "not available";
+    if (!provision) {
+      return null;
+    } else if (typeof provision == 'string' && provision == 'not available') {
+      return 'Provision not available, please upload the evidence.';
+    } else if (typeof provision == 'object') {
+      if (provision.provisions.length > 1) {
+        return 'please select 1 provision';
+      } else {
+        // TO-DO: Currently only first is returned
+        return provision.provisions[0].dataOwnerPrefLabel;
+      }
+    }
+  }
+
+  public toggleRetrievalType(
+    canonicalEvidenceType: string,
+    type: string
+  ): void {
+    this.retrievalType[canonicalEvidenceType] = type;
   }
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
+  }
+
+  ngOnChanges(): void {
+    this.getEvidenceTypes().map((x) => {
+      this.retrievalType[x.tokenName || ''] = 'request';
+    });
   }
 
   ngAfterViewInit(): void {

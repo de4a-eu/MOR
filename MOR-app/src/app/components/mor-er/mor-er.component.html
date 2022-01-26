@@ -1,3 +1,4 @@
+<!-- Language selector-->
 <div class="position-relative" style="z-index: 1040">
   <div class="position-absolute top-0 end-0">
     <app-language-selector
@@ -10,14 +11,16 @@
   </div>
 </div>
 
+<!-- List of evidence types with corresponding actions -->
 <div
   class="row d-flex justify-content-center align-items-center"
   *ngFor="let evidenceType of getEvidenceTypes()"
 >
+  <!-- Evidence -->
   <div class="col-6 text-end p-2">
-    <button type="button" class="btn btn-sm btn-secondary">
+    <button type="button" class="btn btn-sm btn-secondary normal">
       <fa-icon
-        class="me-2"
+        class="me-2 help"
         [icon]="faFileCode"
         data-bs-toggle="tooltip"
         data-bs-html="true"
@@ -30,22 +33,99 @@
       >{{ evidenceType.name }}
     </button>
   </div>
+  <!-- Actions -->
   <div class="col-6 p-2">
-    <!-- TO-DO: Disable countries without provisions -->
-    <app-country-selector
-      [(countryCode)]="canonicalEvidenceCountries[evidenceType.tokenName || '']"
-    ></app-country-selector>
+    <div class="small">
+      Select
+      <div class="form-check form-check-inline me-0 ms-1">
+        <input
+          class="form-check-input"
+          type="radio"
+          [name]="'radio_' + evidenceType.tokenName"
+          [id]="'radio_' + evidenceType.tokenName + '_country'"
+          (click)="toggleRetrievalType(evidenceType.tokenName || '', 'request')"
+          checked
+        />
+        <label
+          class="form-check-label pointer"
+          [for]="'radio_' + evidenceType.tokenName + '_country'"
+        >
+          <b>provider country</b>
+        </label>
+      </div>
+      or
+      <div class="form-check form-check-inline me-0 ms-1">
+        <input
+          class="form-check-input"
+          type="radio"
+          [name]="'radio_' + evidenceType.tokenName"
+          [id]="'radio_' + evidenceType.tokenName + '_upload'"
+          (click)="toggleRetrievalType(evidenceType.tokenName || '', 'upload')"
+        />
+        <label
+          class="form-check-label pointer"
+          [for]="'radio_' + evidenceType.tokenName + '_upload'"
+        >
+          <b>upload evidence</b>
+        </label>
+      </div>
+    </div>
+
+    <!-- Provisions -->
+    <div class="d-flex justify-content-start align-items-center">
+      <!-- Provider country selection -->
+      <div
+        *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'request'"
+      >
+        <app-country-selector
+          (click)="provisions[evidenceType.tokenName || ''] = undefined"
+          [(countryCode)]="
+            canonicalEvidenceCountries[evidenceType.tokenName || '']
+          "
+        ></app-country-selector>
+      </div>
+      <div
+        *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'request'"
+      >
+        <!-- Button for provision selection -->
+        <div
+          *ngIf="this.canonicalEvidenceCountries[evidenceType.tokenName || '']"
+        >
+          <button
+            type="button"
+            class="btn btn-sm btn-light ms-2"
+            (click)="requestProvision(evidenceType.tokenName || '')"
+            *ngIf="!provisions[evidenceType.tokenName || '']"
+          >
+            <fa-icon [icon]="faSyncAlt" class="me-1"></fa-icon>Select provision
+          </button>
+        </div>
+        <div
+          class="small ms-2"
+          *ngIf="getProvision(evidenceType.tokenName || '')"
+        >
+          {{ getProvision(evidenceType.tokenName || "") }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload -->
+    <div *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'upload'">
+      <input class="form-control form-control-sm" type="file" />
+    </div>
   </div>
 </div>
 
+<!-- Button: Request cross-border evidence -->
 <div class="row p-2 mt-2" *ngIf="canonicalEvidenceCountriesSelected()">
   <div class="col-12 text-center">
     <button
       type="button"
-      class="btn btn-sm btn-secondary"
+      class="btn btn-sm btn-light"
       (click)="requestProvisions()"
       data-bs-toggle="modal"
       data-bs-target="#requestEvidenceModel"
+      *ngIf="getEvidenceTypesForRequest().length > 0"
     >
       <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
       ><b>Request</b> cross-border evidence
@@ -79,17 +159,15 @@
           The <b>DE4A Technical System</b> will be used to request the following
           cross-border evidence:
         </p>
-        <p class="text-danger">
-          <b>TO-DO</b>: If multiple provisions, user selects provision per &lt;evidence, country&gt; pair.
-        </p>
         <ul>
-          <li *ngFor="let evidenceType of getEvidenceTypes()">
+          <li *ngFor="let evidenceType of getEvidenceTypesForRequest()">
             <b>{{ evidenceType.name }}</b> from
             <b>{{
               dataLoaderCountries.getName(
                 canonicalEvidenceCountries[evidenceType.tokenName || ""]
               )
-            }}</b> ({{ getProvision(evidenceType.tokenName || "") }})
+            }}</b>
+            ({{ getProvision(evidenceType.tokenName || "") }})
           </li>
         </ul>
         <p>
@@ -107,7 +185,7 @@
           <fa-icon class="me-1" [icon]="faTimesCircle"></fa-icon>
           Cancel
         </button>
-        <button type="button" class="btn btn-sm btn-secondary">
+        <button type="button" class="btn btn-sm btn-secondary disabled">
           <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Request
         </button>
       </div>

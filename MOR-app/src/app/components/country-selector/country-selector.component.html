@@ -1,7 +1,6 @@
 <div class="dropdown">
   <a
-    class="btn btn-sm btn-light dropdown-toggle"
-    href="#"
+    class="btn btn-sm btn-light dropdown-toggle pointer"
     role="button"
     id="dropdownMenuRequesterCountry"
     data-bs-toggle="dropdown"
@@ -17,7 +16,7 @@
   >
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequesterCountry">
     <li *ngFor="let country of countries.getCountries()">
-      <a class="dropdown-item" href="#" (click)="setCountry(country.code)"
+      <a class="dropdown-item pointer" (click)="setCountry(country.code)"
         ><span
           class="me-2 flag-icon flag-icon-{{
             getCountryFlagCode(country.code) | lowercase
