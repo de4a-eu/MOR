@@ -42,6 +42,13 @@ export class MORERComponent implements OnInit {
   public provisions: any = {}; // Provisions
   public uploads: any = {}; // Content of uploaded files
 
+  public modalSelectProvision: any;
+  public modalSelectProvisionData: any = {
+    canonicalEvidenceType: '',
+    canonicalEvidenceTypeName: '',
+    country: '',
+  };
+
   public canonicalEvidenceCountriesSelected(): boolean {
     return (
       this.getEvidenceTypes().length ==
@@ -56,13 +63,11 @@ export class MORERComponent implements OnInit {
   }
 
   public getEvidenceTypesForRequest(): CanonicalEvidenceType[] {
-    return this.getEvidenceTypes().filter(
-      (evidenceType) => {
-        let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
-        let provision = this.provisions[evidenceType.tokenName || ''];
-        return retrievalType == "request" && typeof provision == "object";
-      }
-    );
+    return this.getEvidenceTypes().filter((evidenceType) => {
+      let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
+      let provision = this.provisions[evidenceType.tokenName || ''];
+      return retrievalType == 'request' && typeof provision == 'object';
+    });
   }
 
   public getIalIP(canonicalEvidenceTypeId: string, countryCode: string): any {
@@ -74,20 +79,63 @@ export class MORERComponent implements OnInit {
     return result;
   }
 
-  public requestProvision(canonicalEvidenceType: string): void {
+  public requestProvision(
+    canonicalEvidenceType: string,
+    showModal: boolean = true
+  ): void {
     let country = this.canonicalEvidenceCountries[canonicalEvidenceType];
     let provisions = this.getIalIP(canonicalEvidenceType, country);
     if (provisions == null) provisions = 'not available';
     this.provisions[canonicalEvidenceType] = provisions;
+    if (typeof provisions == 'object' && provisions.provisions.length > 1) {
+      let type = this.getEvidenceTypesForRequest().find(
+        (x) => x.tokenName == canonicalEvidenceType
+      );
+      this.modalSelectProvisionData.canonicalEvidenceType =
+        canonicalEvidenceType;
+      this.modalSelectProvisionData.canonicalEvidenceName = type
+        ? type.name
+        : '';
+      this.modalSelectProvisionData.country =
+        this.dataLoaderCountries.getName(country);
+      if (showModal)
+        this.modalSelectProvision.show();
+    }
   }
 
   public requestProvisions(): void {
     for (let canonicalEvidenceType in this.canonicalEvidenceCountries) {
-      this.requestProvision(canonicalEvidenceType);
+      this.requestProvision(canonicalEvidenceType, false);
     }
   }
 
-  public getProvision(canonicalEvidenceType: string): any {
+  public selectProvision(
+    canonicalEvidenceType: string,
+    iProvision: number
+  ): void {
+    for (
+      let i = 0;
+      i < this.provisions[canonicalEvidenceType].provisions.length;
+      i++
+    )
+      this.provisions[canonicalEvidenceType].provisions[i].selected =
+        i == iProvision;
+  }
+
+  public getProvisions(canonicalEvidenceType: string): any[] {
+    let provision = this.provisions[canonicalEvidenceType];
+    if (!provision) {
+      return [];
+    } else if (typeof provision == 'string' && provision == 'not available') {
+      return [];
+    } else if (typeof provision == 'object') {
+      return provision.provisions;
+    } else {
+      return [];
+    }
+  }
+
+  public displayProvision(canonicalEvidenceType: string): any {
     let provision = this.provisions[canonicalEvidenceType];
     if (!provision) {
       return null;
@@ -95,9 +143,12 @@ export class MORERComponent implements OnInit {
       return 'Provision not available, please upload the evidence.';
     } else if (typeof provision == 'object') {
       if (provision.provisions.length > 1) {
+        for (let i = 0; i < provision.provisions.length; i++) {
+          if (provision.provisions[i].selected)
+            return provision.provisions[i].dataOwnerPrefLabel;
+        }
         return 'please select 1 provision';
       } else {
-        // TO-DO: Currently only first is returned
         return provision.provisions[0].dataOwnerPrefLabel;
       }
     }
@@ -125,5 +176,9 @@ export class MORERComponent implements OnInit {
     [].slice
       .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       .map((element) => new bootstrap.Tooltip(element));
+    // Bootstrap modals
+    this.modalSelectProvision = new bootstrap.Modal(
+      document.getElementById('selectProvisionModal')
+    );
   }
 }

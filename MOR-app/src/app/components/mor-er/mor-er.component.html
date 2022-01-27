@@ -102,9 +102,9 @@
         </div>
         <div
           class="small ms-2"
-          *ngIf="getProvision(evidenceType.tokenName || '')"
+          *ngIf="displayProvision(evidenceType.tokenName || '')"
         >
-          {{ getProvision(evidenceType.tokenName || "") }}
+          {{ displayProvision(evidenceType.tokenName || "") }}
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
       class="btn btn-sm btn-light"
       (click)="requestProvisions()"
       data-bs-toggle="modal"
-      data-bs-target="#requestEvidenceModel"
+      data-bs-target="#requestEvidenceModal"
       *ngIf="getEvidenceTypesForRequest().length > 0"
     >
       <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
@@ -136,15 +136,15 @@
 <!-- Modal: Cross-boder evidence request -->
 <div
   class="modal fade"
-  id="requestEvidenceModel"
+  id="requestEvidenceModal"
   tabindex="-1"
-  aria-labelledby="requestEvidenceModelLabel"
+  aria-labelledby="requestEvidenceModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="requestEvidenceModelLabel">
+        <h5 class="modal-title" id="requestEvidenceModalLabel">
           Cross-border evidence request
         </h5>
         <button
@@ -167,7 +167,7 @@
                 canonicalEvidenceCountries[evidenceType.tokenName || ""]
               )
             }}</b>
-            ({{ getProvision(evidenceType.tokenName || "") }})
+            ({{ displayProvision(evidenceType.tokenName || "") }})
           </li>
         </ul>
         <p>
@@ -187,6 +187,62 @@
         </button>
         <button type="button" class="btn btn-sm btn-secondary disabled">
           <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Request
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Select provision -->
+<div
+  class="modal fade"
+  id="selectProvisionModal"
+  tabindex="-1"
+  aria-labelledby="selectProvisionModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="selectProvisionModalLabel">
+          Select provision for
+          <b>{{ modalSelectProvisionData.canonicalEvidenceName }}</b> from
+          <b>{{ modalSelectProvisionData.country }}</b>
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div
+          class="form-check"
+          *ngFor="
+            let provision of getProvisions(
+              modalSelectProvisionData.canonicalEvidenceType
+            );
+            let i = index
+          "
+        >
+          <input
+            class="form-check-input"
+            type="radio"
+            name="provisionOption"
+            [id]="'provisionOption_' + (i + 1)"
+            (click)="
+              selectProvision(modalSelectProvisionData.canonicalEvidenceType, i)
+            "
+          />
+          <label class="form-check-label" [for]="'provisionOption_' + (i + 1)">
+            {{ provision.dataOwnerPrefLabel }}
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-light" (click)="modalSelectProvision.hide()">
+          <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Confirm provision
         </button>
       </div>
     </div>

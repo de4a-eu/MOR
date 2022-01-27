@@ -60,6 +60,19 @@
         "atuCode": "SI",
         "atuLatinName": "SLOVENIJA",
         "provisionType": "ip"
+      },
+      {
+        "dataOwnerId": "iso6523-actorid-upis::9991:SI990000106",
+        "params": [
+          {
+            "title": "SI/nuts3",
+            "paramset": ["SI/SI031", "SI/SI034"]
+          }
+        ],
+        "dataOwnerPrefLabel": "Minister za notranje zadeve (temp)",
+        "atuCode": "SI",
+        "atuLatinName": "SLOVENIJA",
+        "provisionType": "ip"
       }
     ]
   }

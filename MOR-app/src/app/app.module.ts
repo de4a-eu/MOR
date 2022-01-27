@@ -16,6 +16,7 @@ import { CountrySelectorComponent } from './components/country-selector/country-
 import { CanonicalEvidenceTypeSelectorComponent } from './components/canonical-evidence-type-selector/canonical-evidence-type-selector.component';
 import { SourceCodeMorErIncludeComponent } from './components/source-code-mor-er-include/source-code-mor-er-include.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PreviewXmlComponent } from './components/preview-xml/preview-xml.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputParametersMorErSelectorComponent,
     CountrySelectorComponent,
     CanonicalEvidenceTypeSelectorComponent,
-    SourceCodeMorErIncludeComponent
+    SourceCodeMorErIncludeComponent,
+    PreviewXmlComponent
   ],
   imports: [
     BrowserModule,
