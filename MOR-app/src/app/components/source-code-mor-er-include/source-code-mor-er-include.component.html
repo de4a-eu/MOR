@@ -13,13 +13,16 @@
     </div>
   </div>
   <div class="card-body" *ngIf="isDisplayed">
+    <h5>Include component</h5>
     <pre><code>&lt;<b>script</b> src="..."&gt;&lt;<b>/script</b>&gt;
 &lt;<b>app-mor</b>
-  defaultLang="<b>{{ defaultLanguage }}</b>"
-  requesterCountryCode="<b>{{ requesterCountryCode }}</b>"
-  canonicalEvidenceTypes="<b>{{ selectedCanonicalEvidenceTypes }}</b>"
-  outputJSArrayId="<b>{{ outputJSArrayId }}</b>"
+  defaultLang = "<b class="bg-light text-primary">{{ defaultLanguage }}</b>"
+  requesterCountryCode = "<b class="bg-light text-primary">{{ requesterCountryCode }}</b>"
+  canonicalEvidenceTypes = "<b class="bg-light text-primary">{{ selectedCanonicalEvidenceTypes }}</b>"
+  outputJSArrayId = "<b class="bg-light text-primary">{{ outputJSArrayId }}</b>"
 &gt;&lt;<b>/app-mor</b>&gt;</code></pre>
+    <h5>Output parameter</h5>
+    <pre><code><b>{{ outputJSArrayId }}</b> = <b class="bg-light text-primary">[]</b></code></pre>
   </div>
   <div class="card-footer text-muted" *ngIf="isDisplayed">
     <small

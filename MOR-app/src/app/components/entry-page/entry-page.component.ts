@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-entry-page',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entry-page.component.css'],
 })
 export class EntryPageComponent implements OnInit {
+  faIdCard = faIdCard;
+
   public defaultLanguage: string = 'en';
   public requesterCountryCode: string = 'ES';
   public canonicalEvidenceTypes: string =
