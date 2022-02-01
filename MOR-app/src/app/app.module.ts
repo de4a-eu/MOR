@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { EntryPageComponent } from './components/entry-page/entry-page.component';
-import { MORComponent } from './components/mor/mor.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
@@ -21,7 +20,6 @@ import { PreviewXmlComponent } from './components/preview-xml/preview-xml.compon
 @NgModule({
   declarations: [
     EntryPageComponent,
-    MORComponent,
     MORERComponent,
     MorPComponent,
     LanguageSelectorComponent,
