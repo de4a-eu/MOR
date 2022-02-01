@@ -1,11 +1,35 @@
 <div class="position-relative">
   <div class="position-absolute top-0 end-0">
-    <app-language-selector
-      [(selectedLanguage)]="selectedLanguage"
-    ></app-language-selector>
+    <div class="d-flex">
+      <div
+        class="form-check-reverse me-3"
+        data-bs-toggle="tooltip"
+        data-bs-html="true"
+        data-bs-placement="top"
+        title="<b>Show</b> / <b>hide</b><br>additional<br>description"
+      >
+        <label class="form-check-label small me-2" for="checkDescriptions">
+          Toggle descriptions
+        </label>
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="checkDescriptions"
+          [checked]="showDescription"
+          (change)="showDescription = !showDescription"
+        />
+      </div>
+      <app-language-selector
+        data-bs-toggle="tooltip"
+        data-bs-html="true"
+        data-bs-placement="top"
+        title="<b>Change language</b><br>of displayed content"
+        [(selectedLanguage)]="selectedLanguage"
+      ></app-language-selector>
+    </div>
   </div>
 </div>
-<p><b>Input</b>:</p>
+<!--<p><b>Input</b>:</p>
 <ul>
   <li>
     Default language &rarr; <b>{{ defaultLanguage }}</b>
@@ -14,11 +38,17 @@
 </ul>
 <p><b>Interactions</b>:</p>
 <ul>
-  <li>Selected language &rarr; <b>{{ selectedLanguage }}</b></li>
+  <li>
+    Selected language &rarr; <b>{{ selectedLanguage }}</b>
+  </li>
 </ul>
 <p><b>Output</b>:</p>
 <ul>
   <li>List of IDs (token names) of confirmed canonical types.</li>
-</ul>
+</ul>-->
 
-<app-preview-xml [lang]="selectedLanguage"></app-preview-xml>
+<app-preview-xml
+  [lang]="selectedLanguage"
+  [showDescriptions]="showDescription"
+  [xmlInput]="BirthCertificateExample"
+></app-preview-xml>

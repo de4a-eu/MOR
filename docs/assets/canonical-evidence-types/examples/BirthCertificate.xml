@@ -1,0 +1,22 @@
+<BirthEvidence>
+  <Identifier>123456789</Identifier>
+  <IssueDate>01/01/1990</IssueDate>
+  <IssuingAuthority>Don't know</IssuingAuthority>
+  <IssuingPlace>Pluton</IssuingPlace>
+  <CertifiesBirth>
+    <Child>
+      <GivenName>Lisa</GivenName>
+      <FamilyName>Simpson</FamilyName>
+      <Gender>Female</Gender>
+      <BirthDate>20/02/2002</BirthDate>
+      <PlaceOfBirth>
+        <geographicIdentifier></geographicIdentifier>
+        <geographicName>Springfield, Earth</geographicName>
+      </PlaceOfBirth>
+    </Child>
+    <Parent>
+      <GivenName>Homer</GivenName>
+      <FamilyName>Simpson</FamilyName>
+    </Parent>
+  </CertifiesBirth>
+</BirthEvidence>

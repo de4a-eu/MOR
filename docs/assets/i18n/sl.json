@@ -1,20 +1,40 @@
 {
-  "title": {
-    "component": "Komponenta MOR",
-    "evidenceRelates": "potrdilo se nanaša na"
-  },
   "term": {
-    "Person": {
-      "label": "Oseba",
-      "GivenName": {
-        "label": "Ime"
-      },
-      "FamilyName": {
-        "label": "Priimek"
-      },
-      "BirthDate": {
-        "label": "Datum rojstva"
-      }
+    "BirthEvidence": {
+      "label": "Dokazilo o rojstvu",
+      "description": "Uradni dokument ali podatek, ki dokazuje rojstvo otroka."
+    },
+    "BirthEvidence/Identifier": {
+      "label": "Identifikator",
+      "description": "Nedvoumno sklicevanje na dokaze o rojstvu."
+    },
+    "BirthEvidence/IssueDate": {
+      "label": "Datum izdaje",
+      "description": "Zadnji datum izdaje dokazila o rojstvu."
+    },
+    "BirthEvidence/IssuingAuthority": {
+      "label": "Organ za izdajo",
+      "description": "Javna organizacija z uradnim pooblastilom, ki je zadolžena za izdajo dokazila o rojstvu."
+    },
+    "BirthEvidence/IssuingPlace": {
+      "label": "Mesto izdaje",
+      "description": "Kraj, kjer so bili izdani rojstni dokazi."
+    },
+    "BirthEvidence/CertifiesBirth": {
+      "label": "Potrdilo o rojstvu",
+      "description": "Uradno potrjuje, da je rojstvo resnično."
+    },
+    "BirthEvidence/CertifiesBirth/Child": {
+      "label": "Otrok",
+      "description": "Oseba, ki je rojena ob rojstvu. Oseba katere koli starosti, ki je sin ali hči."
+    },
+    "BirthEvidence/CertifiesBirth/Child/Gender": {
+      "label": "Spol",
+      "description": "Spol rojene osebe"
+    },
+    "BirthEvidence/CertifiesBirth/Parent": {
+      "label": "Starš",
+      "description": "Starš otroka. Ena od dveh oseb, ki sta skupaj vzrok za rojstvo otroka, torej naravni starš."
     }
   }
 }

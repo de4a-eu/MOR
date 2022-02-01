@@ -1,24 +1,40 @@
 {
-  "title": {
-    "component": "MOR component",
-    "evidenceRelates": "evidence relates to"
-  },
   "term": {
-    "Person": {
-      "label": "Person",
-      "description": "Data of a natural person",
-      "GivenName": {
-        "label": "Given name",
-        "descritpion": "Current given name or forename"
-      },
-      "FamilyName": {
-        "label": "Family name",
-        "description": "Current family name or surname"
-      },
-      "BirthDate": {
-        "label": "Birth date",
-        "description": "Date of the birth (year, month, day)"
-      }
+    "BirthEvidence": {
+      "label": "Birth evidence",
+      "description": "Official document or data proving the Birth of a Child."
+    },
+    "BirthEvidence/Identifier": {
+      "label": "Identifier",
+      "description": "An unambiguous reference to the Birth Evidence."
+    },
+    "BirthEvidence/IssueDate": {
+      "label": "Issue date",
+      "description": "The most recent date on which the Birth Evidence instance was issued."
+    },
+    "BirthEvidence/IssuingAuthority": {
+      "label": "Issuing authority",
+      "description": "A Public Organisation with official authority in charge of issuing the Birth Evidence."
+    },
+    "BirthEvidence/IssuingPlace": {
+      "label": "Issuing place",
+      "description": "The Location where the Birth Evidence was issued."
+    },
+    "BirthEvidence/CertifiesBirth": {
+      "label": "Certifies birth",
+      "description": "Attesting in a formal way that the Birth is true."
+    },
+    "BirthEvidence/CertifiesBirth/Child": {
+      "label": "Child",
+      "description": "The Person who is born at the Birth. A Person of any age, who is a son or daughter."
+    },
+    "BirthEvidence/CertifiesBirth/Child/Gender": {
+      "label": "Gender",
+      "description": "Gender of the born person"
+    },
+    "BirthEvidence/CertifiesBirth/Parent": {
+      "label": "Parent",
+      "description": "The Parent of the Child. One of the two Persons who are jointly the cause of the Child's Birth, i.e. natural parent."
     }
   }
 }

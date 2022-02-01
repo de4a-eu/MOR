@@ -1,16 +1,1 @@
-<p>
-  <fa-icon [icon]="faSearch" class="me-1"></fa-icon>Load XML file and convert to
-  JSON, then visualize.
-</p>
-<p>{{ 'title.component' | translate }}</p>
-<div class="row">
-  <div class="col-6">
-    <h6>XML</h6>
-    <code>{{ xmlInput }}</code>
-  </div>
-  <div class="col-6">
-    <h6 class="mt-2">JSON in language <b>{{ lang }}</b></h6>
-    <pre>{{ jsOutputString }}</pre>
-  </div>
-</div>
-
+<p [innerHTML]="jsOutputTranslated"></p>

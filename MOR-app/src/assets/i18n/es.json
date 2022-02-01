@@ -1,20 +1,40 @@
 {
-  "title": {
-    "component": "Componente MOR",
-    "evidenceRelates": "la evidencia se relaciona con"
-  },
   "term": {
-    "Person": {
-      "label": "Persona",
-      "GivenName": {
-        "label": "Nombre"
-      },
-      "FamilyName": {
-        "label": "Apellido"
-      },
-      "BirthDate": {
-        "label": "Fecha de nacimiento"
-      }
+    "BirthEvidence": {
+      "label": "Evidencia de nacimiento",
+      "description": "Documento o dato oficial que acredite el Nacimiento de un Hijo."
+    },
+    "BirthEvidence/Identifier": {
+      "label": "Identificador",
+      "description": "Una referencia inequívoca a la Evidencia de Nacimiento."
+    },
+    "BirthEvidence/IssueDate": {
+      "label": "Fecha de asunto",
+      "description": "La fecha más reciente en la que se emitió la instancia de Evidencia de nacimiento."
+    },
+    "BirthEvidence/IssuingAuthority": {
+      "label": "La autoridad emisora",
+      "description": "Un Organismo Público con autoridad oficial encargada de emitir la Constancia de Nacimiento."
+    },
+    "BirthEvidence/IssuingPlace": {
+      "label": "Lugar de emisión",
+      "description": "El Lugar donde se emitió la Constancia de Nacimiento."
+    },
+    "BirthEvidence/CertifiesBirth": {
+      "label": "Certifica el nacimiento",
+      "description": "Atestiguando de manera formal que el Nacimiento es verdadero."
+    },
+    "BirthEvidence/CertifiesBirth/Child": {
+      "label": "Niño",
+      "description": "La Persona que nace en el Nacimiento. Persona de cualquier edad, que sea hijo o hija."
+    },
+    "BirthEvidence/CertifiesBirth/Child/Gender": {
+      "label": "Género",
+      "description": "Sexo de la persona nacida"
+    },
+    "BirthEvidence/CertifiesBirth/Parent": {
+      "label": "Madre",
+      "description": "Una madre del niño. Una de las dos Personas que son conjuntamente la causa del Nacimiento del Niño, es decir, el padre natural."
     }
   }
 }
