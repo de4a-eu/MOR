@@ -21,8 +21,8 @@
   canonicalEvidenceTypes = "<b class="bg-light text-primary">{{ selectedCanonicalEvidenceTypes }}</b>"
   outputJSArrayId = "<b class="bg-light text-primary">{{ outputJSArrayId }}</b>"
 &gt;&lt;<b>/app-mor</b>&gt;</code></pre>
-    <h5>Output parameter</h5>
-    <pre><code><b>{{ outputJSArrayId }}</b> = <b class="bg-light text-primary">[]</b></code></pre>
+    <h5>Output parameter <small>(session storage)</small></h5>
+    <pre><code><b>{{ outputJSArrayId }}</b> = <b class="bg-light text-primary">{{ getOutput() }}</b></code></pre>
   </div>
   <div class="card-footer text-muted" *ngIf="isDisplayed">
     <small

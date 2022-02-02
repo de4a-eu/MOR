@@ -10,6 +10,7 @@ import {
   faSyncAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
+import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
 
 declare var bootstrap: any;
 
@@ -34,7 +35,8 @@ export class MORERComponent implements OnInit {
   constructor(
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
     public dataLoaderCountries: DataLoaderCountriesService,
-    private dataLoaderIal: DataLoaderIalService
+    private dataLoaderIal: DataLoaderIalService,
+    private dataLoaderStorage: DataLoaderStorageService
   ) {}
 
   public canonicalEvidenceCountries: any = {};
@@ -49,19 +51,91 @@ export class MORERComponent implements OnInit {
     country: '',
   };
 
-  public canonicalEvidenceCountriesSelected(): boolean {
-    return (
-      this.getEvidenceTypes().length ==
-      Object.keys(this.canonicalEvidenceCountries).length
-    );
+  public complete: boolean = false; // ER is complete
+
+  /**
+   * When all countries of canonical evidences are selected,
+   * including the provisions or upload is selected
+   *
+   * @returns true if use can proceed with explicit request
+   */
+  public canProceedWithExplicitRequest(): boolean {
+    let nAll = Object.keys(this.retrievalType).length;
+    let nOK = 0;
+    Object.keys(this.retrievalType).map((type) => {
+      if (this.retrievalType[type] == 'upload') {
+        if (this.uploads[type]) nOK++;
+      } else if (this.retrievalType[type] == 'request') {
+        if (this.provisions[type]) {
+          let ps = this.provisions[type].provisions;
+          if (ps) {
+            if (ps.length == 1) nOK++;
+            else if (ps.length > 1) {
+              ps.map((p: any) => {
+                if (p.selected) nOK++;
+              });
+            }
+          }
+        }
+      }
+    });
+    return nOK == nAll;
   }
 
+  /**
+   * Create output of explicit request
+   */
+  public finishExplicitRequest() {
+    let result: any[] = [];
+    Object.keys(this.retrievalType).map((type) => {
+      if (this.retrievalType[type] == 'upload') {
+        result.push({
+          canonicalEvidenceType: type,
+          uploadedDocument: this.uploads[type],
+        });
+      } else if (this.retrievalType[type] == 'request') {
+        if (this.provisions[type].provisions.length == 1) {
+          result.push({
+            canonicalEvidenceType: type,
+            provision: this.provisions[type].provisions[0],
+          });
+        } else if (this.provisions[type].provisions.length > 1) {
+          result.push({
+            canonicalEvidenceType: type,
+            provision: this.provisions[type].provisions.find(
+              (x: any) => x.selected
+            ),
+          });
+        }
+      }
+    });
+
+    this.dataLoaderStorage.addArray(this.outputJSArrayId, result);
+
+    console.log(this.dataLoaderStorage.get(this.outputJSArrayId));
+
+    this.complete = true;
+  }
+
+  /**
+   * Get all canonical evidence types
+   *
+   * @returns array of canonical evidence types with `name`, `code` and
+   *          `tokenName`
+   */
   public getEvidenceTypes(): CanonicalEvidenceType[] {
     return this.dataLoaderCanonicalEvidenceTypes.getSelectedCanonicalEvidenceTypes(
       this.canonicalEvidenceTypes
     );
   }
 
+  /**
+   * Get evidence types that are included in explicit request
+   * (user has selected country and provision)
+   *
+   * @returns array of canonical evidence types with `name`, `code` and
+   *          `tokenName` that are included in the explicit request
+   */
   public getEvidenceTypesForRequest(): CanonicalEvidenceType[] {
     return this.getEvidenceTypes().filter((evidenceType) => {
       let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
@@ -70,6 +144,27 @@ export class MORERComponent implements OnInit {
     });
   }
 
+  /**
+   * Get evidence types that are uploaded by the user
+   *
+   * @returns array of canonical evidence types with `name`, `code` and
+   *          `tokenName` that are uploaded
+   */
+  public getEvidenceTypesForUpload(): CanonicalEvidenceType[] {
+    return this.getEvidenceTypes().filter((evidenceType) => {
+      let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
+      let upload = this.uploads[evidenceType.tokenName || ''];
+      return retrievalType == 'upload' && typeof upload == 'string';
+    });
+  }
+
+  /**
+   * Get IAL provisions (Intermediation Pattern (IP))
+   *
+   * @param canonicalEvidenceTypeId `tokenName` of canonical evidence type
+   * @param countryCode country code (e.g. `SI`)
+   * @returns array with provision details
+   */
   public getIalIP(canonicalEvidenceTypeId: string, countryCode: string): any {
     let result = this.dataLoaderIal.getIal(
       canonicalEvidenceTypeId,
@@ -79,6 +174,13 @@ export class MORERComponent implements OnInit {
     return result;
   }
 
+  /**
+   * Request provisions for given canonical evidence type and optionaly display
+   * modal window for user selection of specific provision if multiple exist.
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   * @param showModal show modal window for specific provision selection
+   */
   public requestProvision(
     canonicalEvidenceType: string,
     showModal: boolean = true
@@ -98,17 +200,26 @@ export class MORERComponent implements OnInit {
         : '';
       this.modalSelectProvisionData.country =
         this.dataLoaderCountries.getName(country);
-      if (showModal)
-        this.modalSelectProvision.show();
+      if (showModal) this.modalSelectProvision.show();
     }
   }
 
+  /**
+   * Request all provision, where country is selected, but don't display modal
+   * window to user for selection of provision if multiple exist
+   */
   public requestProvisions(): void {
     for (let canonicalEvidenceType in this.canonicalEvidenceCountries) {
       this.requestProvision(canonicalEvidenceType, false);
     }
   }
 
+  /**
+   * When multiple provisions are returned, user selects 1
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   * @param iProvision sequence number of selected provision
+   */
   public selectProvision(
     canonicalEvidenceType: string,
     iProvision: number
@@ -122,6 +233,13 @@ export class MORERComponent implements OnInit {
         i == iProvision;
   }
 
+  /**
+   * Get a list of possible provision per selected canonical evidence type
+   * (displayed to a user in a modal window)
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   * @returns array of provisions
+   */
   public getProvisions(canonicalEvidenceType: string): any[] {
     let provision = this.provisions[canonicalEvidenceType];
     if (!provision) {
@@ -135,6 +253,12 @@ export class MORERComponent implements OnInit {
     }
   }
 
+  /**
+   * Display (selected) provision next to selected country
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   * @returns label of selected provision or message to select 1 provision
+   */
   public displayProvision(canonicalEvidenceType: string): any {
     let provision = this.provisions[canonicalEvidenceType];
     if (!provision) {
@@ -154,15 +278,42 @@ export class MORERComponent implements OnInit {
     }
   }
 
+  /**
+   * Toggle retrieval type for given canonical evidence type
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   * @param type retrieval type (`request` or `upload`)
+   */
   public toggleRetrievalType(
     canonicalEvidenceType: string,
     type: string
   ): void {
     this.retrievalType[canonicalEvidenceType] = type;
+    delete this.canonicalEvidenceCountries[canonicalEvidenceType];
+    delete this.provisions[canonicalEvidenceType];
+    delete this.uploads[canonicalEvidenceType];
+  }
+
+  /**
+   * Upload text document with canonical evidence
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence
+   * @param input file upload content
+   */
+  public handleUpload(canonicalEvidenceType: string, input: any) {
+    if (canonicalEvidenceType && input.files && input.files.length > 0) {
+      let reader = new FileReader();
+      reader.addEventListener('load', (result) => {
+        if (result.target)
+          this.uploads[canonicalEvidenceType] = result.target.result;
+      });
+      reader.readAsText(input.files[0]);
+    }
   }
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
+    this.dataLoaderStorage.remove(this.outputJSArrayId);
   }
 
   ngOnChanges(): void {

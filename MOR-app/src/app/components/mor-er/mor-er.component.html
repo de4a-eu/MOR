@@ -1,249 +1,298 @@
-<!-- Language selector-->
-<div class="position-relative" style="z-index: 1040">
-  <div class="position-absolute top-0 end-0">
-    <app-language-selector
-      data-bs-toggle="tooltip"
-      data-bs-html="true"
-      data-bs-placement="left"
-      title="<b>Change language</b><br>of displayed content"
-      [(selectedLanguage)]="selectedLanguage"
-    ></app-language-selector>
+<div class="d-flex justify-content-center" *ngIf="complete">
+  <div class="row">
+    <div class="text-center text-primary">
+      <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>
+    </div>
+    <div class="text-center text-primary">Complete</div>
   </div>
 </div>
 
-<!-- List of evidence types with corresponding actions -->
-<div
-  class="row d-flex justify-content-center align-items-center"
-  *ngFor="let evidenceType of getEvidenceTypes()"
->
-  <!-- Evidence -->
-  <div class="col-6 text-end p-2">
-    <button type="button" class="btn btn-sm btn-secondary normal">
-      <fa-icon
-        class="me-2 help"
-        [icon]="faFileCode"
+<div *ngIf="!complete">
+  <!-- Language selector-->
+  <div class="position-relative" style="z-index: 1040">
+    <div class="position-absolute top-0 end-0">
+      <app-language-selector
         data-bs-toggle="tooltip"
         data-bs-html="true"
-        [title]="
-          '<b>TO-DO</b>: View schema of <b>' +
-          evidenceType.name +
-          '</b> canonical evidence type.'
-        "
-      ></fa-icon
-      >{{ evidenceType.name }}
-    </button>
-  </div>
-  <!-- Actions -->
-  <div class="col-6 p-2">
-    <div class="small">
-      Select
-      <div class="form-check form-check-inline me-0 ms-1">
-        <input
-          class="form-check-input"
-          type="radio"
-          [name]="'radio_' + evidenceType.tokenName"
-          [id]="'radio_' + evidenceType.tokenName + '_country'"
-          (click)="toggleRetrievalType(evidenceType.tokenName || '', 'request')"
-          checked
-        />
-        <label
-          class="form-check-label pointer"
-          [for]="'radio_' + evidenceType.tokenName + '_country'"
-        >
-          <b>provider country</b>
-        </label>
-      </div>
-      or
-      <div class="form-check form-check-inline me-0 ms-1">
-        <input
-          class="form-check-input"
-          type="radio"
-          [name]="'radio_' + evidenceType.tokenName"
-          [id]="'radio_' + evidenceType.tokenName + '_upload'"
-          (click)="toggleRetrievalType(evidenceType.tokenName || '', 'upload')"
-        />
-        <label
-          class="form-check-label pointer"
-          [for]="'radio_' + evidenceType.tokenName + '_upload'"
-        >
-          <b>upload evidence</b>
-        </label>
-      </div>
+        data-bs-placement="left"
+        title="<b>Change language</b><br>of displayed content"
+        [(selectedLanguage)]="selectedLanguage"
+      ></app-language-selector>
     </div>
+  </div>
 
-    <!-- Provisions -->
-    <div class="d-flex justify-content-start align-items-center">
-      <!-- Provider country selection -->
-      <div
-        *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'request'"
-      >
-        <app-country-selector
-          (click)="provisions[evidenceType.tokenName || ''] = undefined"
-          [(countryCode)]="
-            canonicalEvidenceCountries[evidenceType.tokenName || '']
+  <!-- List of evidence types with corresponding actions -->
+  <div
+    class="row d-flex justify-content-center align-items-center"
+    *ngFor="let evidenceType of getEvidenceTypes()"
+  >
+    <!-- Evidence -->
+    <div class="col-6 text-end p-2">
+      <button type="button" class="btn btn-sm btn-secondary normal">
+        <fa-icon
+          class="me-2 help"
+          [icon]="faFileCode"
+          data-bs-toggle="tooltip"
+          data-bs-html="true"
+          [title]="
+            '<b>TO-DO</b>: View schema of <b>' +
+            evidenceType.name +
+            '</b> canonical evidence type.'
           "
-        ></app-country-selector>
-      </div>
-      <div
-        *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'request'"
-      >
-        <!-- Button for provision selection -->
-        <div
-          *ngIf="this.canonicalEvidenceCountries[evidenceType.tokenName || '']"
-        >
-          <button
-            type="button"
-            class="btn btn-sm btn-light ms-2"
-            (click)="requestProvision(evidenceType.tokenName || '')"
-            *ngIf="!provisions[evidenceType.tokenName || '']"
-          >
-            <fa-icon [icon]="faSyncAlt" class="me-1"></fa-icon>Select provision
-          </button>
-        </div>
-        <div
-          class="small ms-2"
-          *ngIf="displayProvision(evidenceType.tokenName || '')"
-        >
-          {{ displayProvision(evidenceType.tokenName || "") }}
-        </div>
-      </div>
+        ></fa-icon
+        >{{ evidenceType.name }}
+      </button>
     </div>
-
-    <!-- Upload -->
-    <div *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'upload'">
-      <input class="form-control form-control-sm" type="file" />
-    </div>
-  </div>
-</div>
-
-<!-- Button: Request cross-border evidence -->
-<div class="row p-2 mt-2" *ngIf="canonicalEvidenceCountriesSelected()">
-  <div class="col-12 text-center">
-    <button
-      type="button"
-      class="btn btn-sm btn-light"
-      (click)="requestProvisions()"
-      data-bs-toggle="modal"
-      data-bs-target="#requestEvidenceModal"
-      *ngIf="getEvidenceTypesForRequest().length > 0"
-    >
-      <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
-      ><b>Request</b> cross-border evidence
-    </button>
-  </div>
-</div>
-
-<!-- Modal: Cross-boder evidence request -->
-<div
-  class="modal fade"
-  id="requestEvidenceModal"
-  tabindex="-1"
-  aria-labelledby="requestEvidenceModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="requestEvidenceModalLabel">
-          Cross-border evidence request
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <p>
-          The <b>DE4A Technical System</b> will be used to request the following
-          cross-border evidence:
-        </p>
-        <ul>
-          <li *ngFor="let evidenceType of getEvidenceTypesForRequest()">
-            <b>{{ evidenceType.name }}</b> from
-            <b>{{
-              dataLoaderCountries.getName(
-                canonicalEvidenceCountries[evidenceType.tokenName || ""]
-              )
-            }}</b>
-            ({{ displayProvision(evidenceType.tokenName || "") }})
-          </li>
-        </ul>
-        <p>
-          You will be able to inspect the received evidence and choose if you
-          want to proceed.
-        </p>
-        <p><b>Are you sure that you want use the DE4A Technical System?</b></p>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-sm btn-light"
-          data-bs-dismiss="modal"
-        >
-          <fa-icon class="me-1" [icon]="faTimesCircle"></fa-icon>
-          Cancel
-        </button>
-        <button type="button" class="btn btn-sm btn-secondary disabled">
-          <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Request
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal: Select provision -->
-<div
-  class="modal fade"
-  id="selectProvisionModal"
-  tabindex="-1"
-  aria-labelledby="selectProvisionModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="selectProvisionModalLabel">
-          Select provision for
-          <b>{{ modalSelectProvisionData.canonicalEvidenceName }}</b> from
-          <b>{{ modalSelectProvisionData.country }}</b>
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <div
-          class="form-check"
-          *ngFor="
-            let provision of getProvisions(
-              modalSelectProvisionData.canonicalEvidenceType
-            );
-            let i = index
-          "
-        >
+    <!-- Actions -->
+    <div class="col-6 p-2">
+      <div class="small">
+        Select
+        <div class="form-check form-check-inline me-0 ms-1">
           <input
             class="form-check-input"
             type="radio"
-            name="provisionOption"
-            [id]="'provisionOption_' + (i + 1)"
+            [name]="'radio_' + evidenceType.tokenName"
+            [id]="'radio_' + evidenceType.tokenName + '_country'"
             (click)="
-              selectProvision(modalSelectProvisionData.canonicalEvidenceType, i)
+              toggleRetrievalType(evidenceType.tokenName || '', 'request')
+            "
+            checked
+          />
+          <label
+            class="form-check-label pointer"
+            [for]="'radio_' + evidenceType.tokenName + '_country'"
+          >
+            <b>provider country</b>
+          </label>
+        </div>
+        or
+        <div class="form-check form-check-inline me-0 ms-1">
+          <input
+            class="form-check-input"
+            type="radio"
+            [name]="'radio_' + evidenceType.tokenName"
+            [id]="'radio_' + evidenceType.tokenName + '_upload'"
+            (click)="
+              toggleRetrievalType(evidenceType.tokenName || '', 'upload')
             "
           />
-          <label class="form-check-label" [for]="'provisionOption_' + (i + 1)">
-            {{ provision.dataOwnerPrefLabel }}
+          <label
+            class="form-check-label pointer"
+            [for]="'radio_' + evidenceType.tokenName + '_upload'"
+          >
+            <b>upload evidence</b>
           </label>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-light" (click)="modalSelectProvision.hide()">
-          <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Confirm provision
-        </button>
+
+      <!-- Provisions -->
+      <div class="d-flex justify-content-start align-items-center">
+        <!-- Provider country selection -->
+        <div
+          *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'request'"
+        >
+          <app-country-selector
+            (click)="provisions[evidenceType.tokenName || ''] = undefined"
+            [(countryCode)]="
+              canonicalEvidenceCountries[evidenceType.tokenName || '']
+            "
+          ></app-country-selector>
+        </div>
+        <div
+          *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'request'"
+        >
+          <!-- Button for provision selection -->
+          <div
+            *ngIf="
+              this.canonicalEvidenceCountries[evidenceType.tokenName || '']
+            "
+          >
+            <button
+              type="button"
+              class="btn btn-sm btn-light ms-2"
+              (click)="requestProvision(evidenceType.tokenName || '')"
+              *ngIf="!provisions[evidenceType.tokenName || '']"
+            >
+              <fa-icon [icon]="faSyncAlt" class="me-1"></fa-icon>Select
+              provision
+            </button>
+          </div>
+          <div
+            class="small ms-2"
+            *ngIf="displayProvision(evidenceType.tokenName || '')"
+          >
+            {{ displayProvision(evidenceType.tokenName || "") }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload -->
+      <div *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'upload'">
+        <input
+          class="form-control form-control-sm"
+          type="file"
+          accept=".xml"
+          (change)="handleUpload(evidenceType.tokenName || '', $event.target)"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Button: Request cross-border evidence -->
+  <div class="row p-2 mt-2" *ngIf="canProceedWithExplicitRequest()">
+    <div class="col-12 text-center">
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary"
+        (click)="requestProvisions()"
+        data-bs-toggle="modal"
+        data-bs-target="#requestEvidenceModal"
+      >
+        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon><b>Proceed</b>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal: Explicit request -->
+  <div
+    class="modal fade"
+    id="requestEvidenceModal"
+    tabindex="-1"
+    aria-labelledby="requestEvidenceModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="requestEvidenceModalLabel">
+            Cross-border evidence request
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          The <b>DE4A Technical System</b> will be used to:
+          <ul>
+            <li>
+              request the following cross-border evidence:
+              <ul>
+                <li *ngFor="let evidenceType of getEvidenceTypesForRequest()">
+                  <b>{{ evidenceType.name }}</b> from
+                  <b>{{
+                    dataLoaderCountries.getName(
+                      canonicalEvidenceCountries[evidenceType.tokenName || ""]
+                    )
+                  }}</b>
+                  ({{ displayProvision(evidenceType.tokenName || "") }})
+                </li>
+              </ul>
+            </li>
+            <li *ngIf="getEvidenceTypesForUpload().length > 0">
+              upload the following evidence:
+              <ul>
+                <li *ngFor="let evidenceType of getEvidenceTypesForUpload()">
+                  <b>{{ evidenceType.name }}</b>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            You will be able to inspect the evidence and choose if you want to
+            proceed.
+          </p>
+          <p>
+            <b>Are you sure that you want use the DE4A Technical System?</b>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-sm btn-light"
+            data-bs-dismiss="modal"
+          >
+            <fa-icon class="me-1" [icon]="faTimesCircle"></fa-icon>
+            Cancel
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-secondary"
+            data-bs-dismiss="modal"
+            (click)="finishExplicitRequest()"
+          >
+            <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Request
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Select provision -->
+  <div
+    class="modal fade"
+    id="selectProvisionModal"
+    tabindex="-1"
+    aria-labelledby="selectProvisionModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="selectProvisionModalLabel">
+            Select provision for
+            <b>{{ modalSelectProvisionData.canonicalEvidenceName }}</b> from
+            <b>{{ modalSelectProvisionData.country }}</b>
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div
+            class="form-check"
+            *ngFor="
+              let provision of getProvisions(
+                modalSelectProvisionData.canonicalEvidenceType
+              );
+              let i = index
+            "
+          >
+            <input
+              class="form-check-input"
+              type="radio"
+              name="provisionOption"
+              [id]="'provisionOption_' + (i + 1)"
+              (click)="
+                selectProvision(
+                  modalSelectProvisionData.canonicalEvidenceType,
+                  i
+                )
+              "
+            />
+            <label
+              class="form-check-label"
+              [for]="'provisionOption_' + (i + 1)"
+            >
+              {{ provision.dataOwnerPrefLabel }}
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-sm btn-light"
+            (click)="modalSelectProvision.hide()"
+          >
+            <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Confirm
+            provision
+          </button>
+        </div>
       </div>
     </div>
   </div>

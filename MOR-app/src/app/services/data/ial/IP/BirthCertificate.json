@@ -56,7 +56,7 @@
             "paramset": ["SI/SI031", "SI/SI034"]
           }
         ],
-        "dataOwnerPrefLabel": "Minister za notranje zadeve",
+        "dataOwnerPrefLabel": "Ministrstvo za notranje zadeve",
         "atuCode": "SI",
         "atuLatinName": "SLOVENIJA",
         "provisionType": "ip"
@@ -69,7 +69,7 @@
             "paramset": ["SI/SI031", "SI/SI034"]
           }
         ],
-        "dataOwnerPrefLabel": "Minister za notranje zadeve (temp)",
+        "dataOwnerPrefLabel": "Ministrstvo za obrambo",
         "atuCode": "SI",
         "atuLatinName": "SLOVENIJA",
         "provisionType": "ip"

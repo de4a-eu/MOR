@@ -9,6 +9,7 @@ import {
   faEye,
   faEyeSlash
 } from '@fortawesome/free-solid-svg-icons';
+import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
 
 @Component({
   selector: 'app-source-code-mor-er-include',
@@ -32,7 +33,13 @@ export class SourceCodeMorErIncludeComponent implements OnInit {
 
   public isDisplayed: boolean = true;
 
-  constructor() {}
+  constructor(private dataLoaderStorage: DataLoaderStorageService) {}
+
+  public getOutput(): string {
+    let output = this.dataLoaderStorage.get(this.outputJSArrayId);
+    output = output.length == 0 ? "[]" : output.replace(/\n/g, "");
+    return output;
+  }
 
   ngOnInit(): void {}
 }
