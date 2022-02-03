@@ -25,7 +25,7 @@ export class InputParametersMorErSelectorComponent implements OnInit {
     this.defaultLanguageChange.emit(this.defaultLanguage);
   }
 
-  @Input() requesterCountry: string = 'ES';
+  @Input() requesterCountry: string = 'BE';
   @Output() requesterCountryChange = new EventEmitter<string>();
   updateRequesterCountry() {
     this.requesterCountryChange.emit(this.requesterCountry);

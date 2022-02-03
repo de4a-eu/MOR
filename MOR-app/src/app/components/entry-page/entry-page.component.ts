@@ -10,7 +10,7 @@ export class EntryPageComponent implements OnInit {
   faIdCard = faIdCard;
 
   public defaultLanguage: string = 'en';
-  public requesterCountryCode: string = 'ES';
+  public requesterCountryCode: string = 'BE';
   public canonicalEvidenceTypes: string =
     'BirthCertificate,MarriageCertificate';
   public outputJSArrayId: string = 'outputJSArrayIdMorEr';

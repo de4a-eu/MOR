@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
@@ -89,9 +89,10 @@ export class MORERComponent implements OnInit {
     let result: any[] = [];
     Object.keys(this.retrievalType).map((type) => {
       if (this.retrievalType[type] == 'upload') {
+        let uploadClean = this.uploads[type].replace(/\n\s*/g, "");
         result.push({
           canonicalEvidenceType: type,
-          uploadedDocument: this.uploads[type],
+          uploadedDocument: uploadClean,
         });
       } else if (this.retrievalType[type] == 'request') {
         if (this.provisions[type].provisions.length == 1) {
@@ -109,11 +110,7 @@ export class MORERComponent implements OnInit {
         }
       }
     });
-
     this.dataLoaderStorage.addArray(this.outputJSArrayId, result);
-
-    console.log(this.dataLoaderStorage.get(this.outputJSArrayId));
-
     this.complete = true;
   }
 
@@ -307,7 +304,7 @@ export class MORERComponent implements OnInit {
         if (result.target)
           this.uploads[canonicalEvidenceType] = result.target.result;
       });
-      reader.readAsText(input.files[0]);
+      reader.readAsText(input.files[0], "UTF-8");
     }
   }
 
@@ -316,10 +313,12 @@ export class MORERComponent implements OnInit {
     this.dataLoaderStorage.remove(this.outputJSArrayId);
   }
 
-  ngOnChanges(): void {
+  ngOnChanges(changes: SimpleChanges): void {
     this.getEvidenceTypes().map((x) => {
       this.retrievalType[x.tokenName || ''] = 'request';
     });
+    if (changes['defaultLanguage'])
+      this.selectedLanguage = this.defaultLanguage;
   }
 
   ngAfterViewInit(): void {
