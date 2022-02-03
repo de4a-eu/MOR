@@ -1,48 +1,110 @@
-<div class="position-relative">
-  <div class="position-absolute top-0 end-0">
-    <div class="d-flex">
-      <div
-        class="form-check-reverse me-3"
-        data-bs-toggle="tooltip"
-        data-bs-html="true"
-        data-bs-placement="top"
-        title="<b>Show</b> / <b>hide</b><br>additional<br>description"
-      >
-        <label class="form-check-label small me-2" for="checkDescriptions">
-          Toggle descriptions
-        </label>
-        <input
-          class="form-check-input"
-          type="checkbox"
-          id="checkDescriptions"
-          [checked]="showDescription"
-          (change)="showDescription = !showDescription"
-        />
+<!-- List of canonical evidences -->
+<div class="mb-2">
+  <div
+    class="row d-flex justify-content-center align-items-center"
+    *ngFor="let evidenceType of getEvidenceTypes()"
+  >
+    <div class="col-6 text-end p-2">
+      <button type="button" class="btn btn-sm btn-secondary normal">
+        <fa-icon
+          class="me-2 help"
+          [icon]="
+            isEvidenceAvailable(evidenceType.tokenName) ? faEye : faEyeSlash
+          "
+          data-bs-toggle="tooltip"
+          data-bs-html="true"
+          (click)="
+            isEvidenceAvailable(evidenceType.tokenName)
+              ? previewEvidence(evidenceType.tokenName)
+              : undefined
+          "
+          [title]="
+            isEvidenceAvailable(evidenceType.tokenName)
+              ? 'View <b>' + evidenceType.name + '</b> canonical evidence.'
+              : '<b>' +
+                evidenceType.name +
+                '</b> canonical evidence is not available.'
+          "
+        ></fa-icon
+        >{{ evidenceType.name }}
+      </button>
+    </div>
+    <div class="col-6 p-2">
+      <div class="d-flex">
+        <div class="form-check me-3">
+          <label
+            class="form-check-label small me-2"
+            [for]="'include_' + evidenceType.tokenName"
+          >
+            Include
+          </label>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            [id]="'include_' + evidenceType.tokenName"
+            checked
+          />
+        </div>
       </div>
-      <app-language-selector
-        data-bs-toggle="tooltip"
-        data-bs-html="true"
-        data-bs-placement="top"
-        title="<b>Change language</b><br>of displayed content"
-        [(selectedLanguage)]="selectedLanguage"
-      ></app-language-selector>
     </div>
   </div>
 </div>
-<!--<p><b>Input</b>:</p>
-<ul>
-  <li>
-    Default language &rarr; <b class="bg-light text-primary">{{ defaultLanguage }}</b>
-  </li>
-  <li>Post action value &rarr; <code><pre><b class="bg-light text-primary">{{ postActionValue }}</b></pre></code></li>
-</ul>
-<p><b>Output</b>:</p>
-<ul>
-  <li>List of IDs (token names) of confirmed canonical types.</li>
-</ul>-->
 
-<app-preview-xml
-  [lang]="selectedLanguage"
-  [showDescriptions]="showDescription"
-  [xmlInput]="BirthCertificateExample"
-></app-preview-xml>
+<!-- Modal: Preview -->
+<div
+  class="modal fade"
+  id="previewEvidenceModal"
+  tabindex="-1"
+  aria-labelledby="previewEvidenceModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" [ngClass]="showDescription ? 'modal-xl' : 'modal-lg'">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex">
+          <div>
+            <h5 class="modal-title" id="previewEvidenceModalLabel">
+              Preview <b>{{ getEvidenceTypeNameForPreview() }}</b> in
+            </h5>
+          </div>
+          <div>
+            <app-language-selector
+              [(selectedLanguage)]="selectedLanguage"
+            ></app-language-selector>
+          </div>
+          <div class="ms-1">
+            <h5 class="pointer ms-1" (click)="showDescription = !showDescription">
+              <span *ngIf="showDescription"
+                >with<small
+                  ><fa-icon
+                    class="ms-2 me-1"
+                    [icon]="faEye"
+                  ></fa-icon></small></span
+              ><span *ngIf="!showDescription"
+                >without<small
+                  ><fa-icon
+                    class="ms-2 me-1"
+                    [icon]="faEyeSlash"
+                  ></fa-icon></small
+              ></span>
+              descriptions
+            </h5>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <app-preview-xml
+          [lang]="selectedLanguage"
+          [showDescriptions]="showDescription"
+          [xmlInput]="BirthCertificateExample"
+        ></app-preview-xml>
+      </div>
+    </div>
+  </div>
+</div>
