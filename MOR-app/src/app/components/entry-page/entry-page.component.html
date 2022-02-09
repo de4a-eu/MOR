@@ -74,13 +74,30 @@
     <!-- MOR Preview -->
     <details open class="mt-4">
       <summary class="mb-3">MOR <b>Preview</b> (P)</summary>
-      <div class="col-12">
-        <div class="card border-secondary">
-          <div class="card-header bg-secondary text-white">
-            <div><b>MOR Preview (P)</b></div>
-          </div>
-          <div class="card-body pb-0">
-            <app-mor-p [defaultLang]="defaultLanguage"></app-mor-p>
+      <div class="row">
+        <div class="col-6">
+          <app-input-parameters-mor-p-selector
+            (defaultLanguageChange)="defaultLanguagePreview = $event"
+            (postActionValueChange)="postActionValue = $event"
+          ></app-input-parameters-mor-p-selector>
+        </div>
+        <div class="col-6">
+          <app-source-code-mor-p-include
+            [defaultLanguage]="defaultLanguagePreview"
+            [postActionValue]="postActionValue"
+          ></app-source-code-mor-p-include>
+        </div>
+        <div class="col-12 mt-3">
+          <div class="card border-secondary">
+            <div class="card-header bg-secondary text-white">
+              <div><b>MOR Preview (P)</b></div>
+            </div>
+            <div class="card-body pb-0">
+              <app-mor-p
+                [defaultLang]="defaultLanguagePreview"
+                [postActionValue]="postActionValue"
+              ></app-mor-p>
+            </div>
           </div>
         </div>
       </div>

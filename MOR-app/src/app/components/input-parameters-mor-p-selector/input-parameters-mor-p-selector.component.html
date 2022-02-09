@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between">
       <div>
         <fa-icon [icon]="faSignInAlt"></fa-icon><b>Input parameters</b> of the
-        <b>MOR-ER</b> component
+        <b>MOR-P</b> component
       </div>
       <div class="link" (click)="isDisplayed = !isDisplayed">
         <small class="text-muted"
@@ -20,29 +20,13 @@
         (click)="updateDefaultLanguage()"
       ></app-language-selector>
     </div>
-    <h5 class="card-title">Requester country</h5>
-    <div class="dropdown mb-3">
-      <app-country-selector
-        [(countryCode)]="requesterCountry"
-        (click)="updateRequesterCountry()"
-      ></app-country-selector>
-    </div>
-    <h5 class="card-title">Canonical evidence types</h5>
-    <div class="dropdown mb-3">
-      <app-canonical-evidence-type-selector
-        [(selectedTypes)]="canonicalEvidenceTypes"
-        (click)="updateCanonicalEvidenceTypes()"
-      ></app-canonical-evidence-type-selector>
-    </div>
-    <h5 class="card-title">JavaScript output array ID</h5>
-    <div class="form-group">
-      <input
-        type="text"
-        class="form-control form-control-sm"
-        [(ngModel)]="outputJSArrayId"
-        (input)="updateOutputJSArrayId()"
-      />
-    </div>
+    <h5 class="card-title">Post action value</h5>
+    <textarea
+      class="form-control"
+      rows="5"
+      [(ngModel)]="postActionValue"
+      (input)="updatepostActionValue()"
+    ></textarea>
   </div>
   <div class="card-footer text-muted" *ngIf="isDisplayed">
     <small
