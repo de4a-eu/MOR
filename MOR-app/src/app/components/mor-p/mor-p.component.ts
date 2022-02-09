@@ -2,7 +2,12 @@ import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
-import { faEye, faEyeSlash, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEye,
+  faEyeSlash,
+  faSignInAlt,
+  faExclamationTriangle,
+} from '@fortawesome/free-solid-svg-icons';
 
 declare var bootstrap: any;
 
@@ -15,6 +20,7 @@ export class MorPComponent implements OnInit {
   faEye = faEye;
   faEyeSlash = faEyeSlash;
   faSignInAlt = faSignInAlt;
+  faExclamationTriangle = faExclamationTriangle;
 
   public modalPreview: any;
 
@@ -32,6 +38,12 @@ export class MorPComponent implements OnInit {
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService
   ) {}
 
+  public inputParametersOK(): boolean {
+    if (this.defaultLanguage && this.postActionValueObject.length > 0)
+      return true;
+    else return false;
+  }
+
   /**
    * Get evidence types for preview
    *
@@ -48,9 +60,11 @@ export class MorPComponent implements OnInit {
   }
 
   public getEvidenceTypeNameForPreview(): string {
-    let selectedEvidence = this.getEvidenceTypes().find(x => x.tokenName == this.selectedEvidenceType);
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
     if (selectedEvidence) return selectedEvidence.name;
-    else return "";
+    else return '';
   }
 
   /**
@@ -72,7 +86,7 @@ export class MorPComponent implements OnInit {
 
   /**
    * Get content of canonical evidence
-   * 
+   *
    * @param tokenName canonical evidence type
    * @returns content of canonical evidence
    */
@@ -97,7 +111,7 @@ export class MorPComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
-    
+
     this.dataLoaderXml
       .loadXml('BirthCertificate.xml', 'examples')
       .then((result) => (this.BirthCertificateExample = result));

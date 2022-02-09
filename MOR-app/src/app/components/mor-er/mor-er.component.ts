@@ -8,6 +8,7 @@ import {
   faCheckCircle,
   faTimesCircle,
   faSyncAlt,
+  faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
 import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
@@ -25,6 +26,7 @@ export class MORERComponent implements OnInit {
   faCheckCircle = faCheckCircle;
   faTimesCircle = faTimesCircle;
   faSyncAlt = faSyncAlt;
+  faExclamationTriangle = faExclamationTriangle;
 
   @Input('defaultLang') defaultLanguage!: string;
   public selectedLanguage!: string;
@@ -52,6 +54,17 @@ export class MORERComponent implements OnInit {
   };
 
   public complete: boolean = false; // ER is complete
+
+  public inputParametersOK(): boolean {
+    if (
+      this.defaultLanguage &&
+      this.requesterCountry &&
+      this.canonicalEvidenceTypes &&
+      this.outputJSArrayId
+    )
+      return true;
+    else return false;
+  }
 
   /**
    * When all countries of canonical evidences are selected,
@@ -89,7 +102,7 @@ export class MORERComponent implements OnInit {
     let result: any[] = [];
     Object.keys(this.retrievalType).map((type) => {
       if (this.retrievalType[type] == 'upload') {
-        let uploadClean = this.uploads[type].replace(/\n\s*/g, "");
+        let uploadClean = this.uploads[type].replace(/\n\s*/g, '');
         result.push({
           canonicalEvidenceType: type,
           uploadedDocument: uploadClean,
@@ -304,7 +317,7 @@ export class MORERComponent implements OnInit {
         if (result.target)
           this.uploads[canonicalEvidenceType] = result.target.result;
       });
-      reader.readAsText(input.files[0], "UTF-8");
+      reader.readAsText(input.files[0], 'UTF-8');
     }
   }
 
