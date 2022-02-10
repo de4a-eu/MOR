@@ -1,11 +1,22 @@
+<div class="d-flex justify-content-center mb-2" *ngIf="complete">
+  <div class="row">
+    <div class="text-center text-primary">
+      <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>
+    </div>
+    <div class="text-center text-primary">Complete</div>
+  </div>
+</div>
+
 <!-- List of canonical evidences -->
-<div class="mb-2">
+<div class="mb-2" *ngIf="!complete">
   <div class="d-flex justify-content-center mb-3" *ngIf="!inputParametersOK()">
     <div class="row">
       <div class="text-center text-primary">
         <fa-icon class="me-1" [icon]="faExclamationTriangle"></fa-icon>
       </div>
-      <div class="text-center text-primary">Please provide input parameters to <b>MOR Preview</b>!</div>
+      <div class="text-center text-primary">
+        Please provide input parameters to <b>MOR Preview</b>!
+      </div>
     </div>
   </div>
   <div
@@ -50,10 +61,25 @@
             class="form-check-input"
             type="checkbox"
             [id]="'include_' + evidenceType.tokenName"
-            checked
+            [checked]="confirmSendStatus[evidenceType.tokenName || '']"
+            (change)="
+              confirmSendStatus[evidenceType.tokenName || ''] =
+                !confirmSendStatus[evidenceType.tokenName || '']
+            "
           />
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row p-2 mt-2" *ngIf="inputParametersOK()">
+    <div class="col-12 text-center">
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary"
+        (click)="finishPreview()"
+      >
+        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon><b>Proceed</b>
+      </button>
     </div>
   </div>
 </div>
@@ -66,7 +92,10 @@
   aria-labelledby="previewEvidenceModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-dialog-centered" [ngClass]="showDescription ? 'modal-xl' : 'modal-lg'">
+  <div
+    class="modal-dialog modal-dialog-centered"
+    [ngClass]="showDescription ? 'modal-xl' : 'modal-lg'"
+  >
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex">
@@ -81,7 +110,10 @@
             ></app-language-selector>
           </div>
           <div class="ms-1">
-            <h5 class="pointer ms-1" (click)="showDescription = !showDescription">
+            <h5
+              class="pointer ms-1"
+              (click)="showDescription = !showDescription"
+            >
               <span *ngIf="showDescription"
                 >with<small
                   ><fa-icon

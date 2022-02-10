@@ -350,6 +350,7 @@ export class MORERComponent implements OnInit {
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
     this.dataLoaderStorage.remove(this.outputJSArrayId);
+    this.dataLoaderStorage.remove('inputPreview');
   }
 
   ngOnChanges(changes: SimpleChanges): void {

@@ -1,11 +1,13 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
+import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
 import {
   faEye,
   faEyeSlash,
   faSignInAlt,
   faExclamationTriangle,
+  faCheckCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 declare var bootstrap: any;
@@ -20,10 +22,9 @@ export class MorPComponent implements OnInit {
   faEyeSlash = faEyeSlash;
   faSignInAlt = faSignInAlt;
   faExclamationTriangle = faExclamationTriangle;
+  faCheckCircle = faCheckCircle;
 
   public modalPreview: any;
-
-  public BirthCertificateExample: string = '';
 
   @Input('defaultLang') defaultLanguage!: string;
   @Input('postActionValue') postActionValue!: string;
@@ -32,8 +33,12 @@ export class MorPComponent implements OnInit {
   public selectedEvidenceType!: string;
   public showDescription: boolean = true;
 
+  public confirmSendStatus: any = {};
+  public complete: boolean = false; // P is complete
+
   constructor(
-    private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService
+    private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
+    private dataLoaderStorage: DataLoaderStorageService
   ) {}
 
   public inputParametersOK(): boolean {
@@ -115,15 +120,28 @@ export class MorPComponent implements OnInit {
     }
   }
 
+  public finishPreview() {
+    this.dataLoaderStorage.addArray(
+      'confirmedCanonicalEvidenceTypes',
+      this.confirmSendStatus
+    );
+    this.complete = true;
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['defaultLanguage'])
       this.selectedLanguage = this.defaultLanguage;
-    if (changes['postActionValue'])
+    if (changes['postActionValue']) {
       this.postActionValueObject = JSON.parse(this.postActionValue);
+      this.postActionValueObject.map(
+        (x) => (this.confirmSendStatus[x.canonicalEvidenceType] = false)
+      );
+    }
   }
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
+    this.dataLoaderStorage.remove('confirmedCanonicalEvidenceTypes');
 
     // Bootstrap modals
     this.modalPreview = new bootstrap.Modal(

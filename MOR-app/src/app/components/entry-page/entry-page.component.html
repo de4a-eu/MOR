@@ -35,6 +35,8 @@
     <!-- MOR Explicit Request (ER) -->
     <details open>
       <summary class="mb-3">MOR <b>Explicit Request</b> (ER)</summary>
+      <details>
+        <summary class="mb-2"><small>Implementation details</small></summary>
       <div class="row">
         <div class="col-6">
           <app-input-parameters-mor-er-selector
@@ -52,6 +54,9 @@
             [outputJSArrayId]="outputJSArrayId"
           ></app-source-code-mor-er-include>
         </div>
+      </div>
+      </details>
+      <div class="row">
         <div class="col-12 mt-3">
           <div class="card border-secondary">
             <div class="card-header bg-secondary text-white">
@@ -74,20 +79,25 @@
     <!-- MOR Preview -->
     <details open class="mt-4">
       <summary class="mb-3">MOR <b>Preview</b> (P)</summary>
+      <details>
+        <summary class="mb-2"><small>Implementation details</small></summary>
+        <div class="row">
+          <div class="col-6">
+            <app-input-parameters-mor-p-selector
+              (defaultLanguageChange)="defaultLanguagePreview = $event"
+              (postActionValueChange)="postActionValue = $event"
+              [postActionValue]="postActionValue"
+            ></app-input-parameters-mor-p-selector>
+          </div>
+          <div class="col-6">
+            <app-source-code-mor-p-include
+              [defaultLanguage]="defaultLanguagePreview"
+              [postActionValue]="postActionValue"
+            ></app-source-code-mor-p-include>
+          </div>
+        </div>
+      </details>
       <div class="row">
-        <div class="col-6">
-          <app-input-parameters-mor-p-selector
-            (defaultLanguageChange)="defaultLanguagePreview = $event"
-            (postActionValueChange)="postActionValue = $event"
-            [postActionValue]="postActionValue"
-          ></app-input-parameters-mor-p-selector>
-        </div>
-        <div class="col-6">
-          <app-source-code-mor-p-include
-            [defaultLanguage]="defaultLanguagePreview"
-            [postActionValue]="postActionValue"
-          ></app-source-code-mor-p-include>
-        </div>
         <div class="col-12 mt-3">
           <div class="card border-secondary">
             <div class="card-header bg-secondary text-white">
