@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
-import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
 import {
   faEye,
   faEyeSlash,
@@ -34,7 +33,6 @@ export class MorPComponent implements OnInit {
   public showDescription: boolean = true;
 
   constructor(
-    private dataLoaderXml: DataLoaderXmlService,
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService
   ) {}
 
@@ -67,6 +65,16 @@ export class MorPComponent implements OnInit {
     else return '';
   }
 
+  public getEvidenceTypeContentForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    let content = '';
+    if (selectedEvidence)
+      content = this.getEvidenceByType(selectedEvidence.tokenName || '') || '';
+    return content;
+  }
+
   /**
    * Checks if content of evidence is available
    *
@@ -79,7 +87,7 @@ export class MorPComponent implements OnInit {
       let input = this.postActionValueObject.find(
         (x) => x.canonicalEvidenceType == tokenName
       );
-      if (input && input.uploadedDocument) result = true;
+      if (input && (input.uploadedDocument || input.payload)) result = true;
     }
     return result;
   }
@@ -92,9 +100,12 @@ export class MorPComponent implements OnInit {
    */
   public getEvidenceByType(tokenName: string): string | null {
     if (!this.isEvidenceAvailable(tokenName)) return null;
-    return this.postActionValueObject.find(
+    let postActionValue = this.postActionValueObject.find(
       (x) => x.canonicalEvidenceType == tokenName
-    ).uploadedDocument;
+    );
+    return postActionValue.uploadedDocument
+      ? postActionValue.uploadedDocument
+      : postActionValue.payload;
   }
 
   public previewEvidence(tokenName: string | undefined) {
@@ -107,18 +118,12 @@ export class MorPComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['defaultLanguage'])
       this.selectedLanguage = this.defaultLanguage;
+    if (changes['postActionValue'])
+      this.postActionValueObject = JSON.parse(this.postActionValue);
   }
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
-
-    this.dataLoaderXml
-      .loadXml('BirthCertificate.xml', 'examples')
-      .then((result) => (this.BirthCertificateExample = result));
-
-    this.postActionValue =
-      '[{"canonicalEvidenceType":"BirthCertificate","uploadedDocument":"<BirthEvidence><Identifier>123456789</Identifier><IssueDate>01/01/1990</IssueDate><IssuingAuthority>Don\'t know</IssuingAuthority><IssuingPlace>Pluton</IssuingPlace><CertifiesBirth><Child><GivenName>Lisa</GivenName><FamilyName>Simpson</FamilyName><Gender>Female</Gender><BirthDate>20/02/2002</BirthDate><PlaceOfBirth><geographicIdentifier></geographicIdentifier><geographicName>Springfield, Earth</geographicName></PlaceOfBirth></Child><Parent><GivenName>Homer</GivenName><FamilyName>Simpson</FamilyName></Parent></CertifiesBirth></BirthEvidence>"},{"canonicalEvidenceType":"MarriageCertificate","provision":{"dataOwnerId":"iso6523-actorid-upis::9991:SI990000105","dataOwnerPrefLabel":"Minister za notranje zadeve","atuCode":"SI","atuLatinName":"SLOVENIJA","provisionType":"ip"}}]';
-    this.postActionValueObject = JSON.parse(this.postActionValue);
 
     // Bootstrap modals
     this.modalPreview = new bootstrap.Modal(

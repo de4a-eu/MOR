@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-input-parameters-mor-p-selector',
   templateUrl: './input-parameters-mor-p-selector.component.html',
-  styleUrls: ['./input-parameters-mor-p-selector.component.css']
+  styleUrls: ['./input-parameters-mor-p-selector.component.css'],
 })
 export class InputParametersMorPSelectorComponent implements OnInit {
   faSignInAlt = faSignInAlt;
@@ -20,20 +20,16 @@ export class InputParametersMorPSelectorComponent implements OnInit {
   public isDisplayed: boolean = true;
 
   @Input() defaultLanguage: string = 'sl';
+  @Input() postActionValue!: string;
   @Output() defaultLanguageChange = new EventEmitter<string>();
   updateDefaultLanguage() {
     this.defaultLanguageChange.emit(this.defaultLanguage);
   }
-  
-  public postActionValue: string = '[]';
+
   @Output() postActionValueChange = new EventEmitter<string>();
-  updatepostActionValue() {
+  updatePostActionValue() {
     this.postActionValueChange.emit(this.postActionValue);
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

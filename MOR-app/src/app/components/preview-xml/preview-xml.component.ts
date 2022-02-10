@@ -90,7 +90,12 @@ export class PreviewXmlComponent implements OnInit {
     function traverse(o: any, level: number, path = '') {
       for (let k in o) {
         let fullKey = (path.length > 0 ? path + '/' : '') + k;
-        if (typeof o[k] == 'object') {
+        if (typeof o[k] == 'object' && o[k].length > 0) {
+          for (let i = 0; i < o[k].length; i++) {
+            result.push({ key: k, fullKey: fullKey, level: level });
+            traverse(o[k][i], level + 1, fullKey);
+          }
+        } else if (typeof o[k] == 'object') {
           result.push({ key: k, fullKey: fullKey, level: level });
           traverse(o[k], level + 1, fullKey);
         } else if (o[k] != null && o[k] != '') {
@@ -99,6 +104,7 @@ export class PreviewXmlComponent implements OnInit {
       }
     }
     traverse(obj, 1);
+
     return result;
   };
 

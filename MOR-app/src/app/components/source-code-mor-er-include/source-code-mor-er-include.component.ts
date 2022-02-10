@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import {
   faGlobeEurope,
   faSignInAlt,
@@ -42,4 +42,5 @@ export class SourceCodeMorErIncludeComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
 }

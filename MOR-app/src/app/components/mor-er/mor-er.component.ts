@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
@@ -12,6 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
 import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
+import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
 
 declare var bootstrap: any;
 
@@ -38,7 +39,8 @@ export class MORERComponent implements OnInit {
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
     public dataLoaderCountries: DataLoaderCountriesService,
     private dataLoaderIal: DataLoaderIalService,
-    private dataLoaderStorage: DataLoaderStorageService
+    private dataLoaderStorage: DataLoaderStorageService,
+    private dataLoaderXml: DataLoaderXmlService
   ) {}
 
   public canonicalEvidenceCountries: any = {};
@@ -125,6 +127,30 @@ export class MORERComponent implements OnInit {
     });
     this.dataLoaderStorage.addArray(this.outputJSArrayId, result);
     this.complete = true;
+
+    this.setInputParameterToPreview();
+  }
+
+  /**
+   * Set input parameter to preview (for demo purposes).
+   * Content of uploaded evidence is simply forwarded, while payload is
+   * retrieved from provision data. Currently only 1 sample evidence is
+   * returned (TO-DO API mock-up).
+   */
+  public async setInputParameterToPreview() {
+    let outputER = JSON.parse(this.dataLoaderStorage.get(this.outputJSArrayId));
+    for (let i = 0; i < outputER.length; i++) {
+      let x = outputER[i];
+      if (Object.keys(x).includes('provision')) {
+        x.payload = await this.dataLoaderXml.loadXml(
+          x.canonicalEvidenceType + '.xml',
+          'examples'
+        );
+        x.payload = x.payload.replace(/\n\s*/g, '');
+        delete x.provision;
+      }
+    }
+    this.dataLoaderStorage.addArray('inputPreview', outputER);
   }
 
   /**

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { filter, Observable, pluck } from 'rxjs';
+import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
 
 @Component({
   selector: 'app-entry-page',
@@ -15,9 +17,16 @@ export class EntryPageComponent implements OnInit {
   public canonicalEvidenceTypes: string =
     'BirthCertificate,MarriageCertificate';
   public outputJSArrayId: string = 'outputJSArrayIdMorEr';
-  public postActionValue: string = '[]';
+  @Input() postActionValue: string = '[]';
 
-  constructor() {}
+  constructor(private dataLoaderStorage: DataLoaderStorageService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dataLoaderStorage.storageChange$.subscribe((result) => {
+      if (result.key === 'inputPreview') this.postActionValue = result.value;
+    });
+
+    /*this.postActionValue =
+      '[{"canonicalEvidenceType":"MarriageCertificate","uploadedDocument":"<MarriageCertificate><MarriageDate>01/01/1990</MarriageDate><PlaceOfMarriage><geographicIdentifier/><geographicName>Springfield, Earth</geographicName></PlaceOfMarriage><Spouse><GivenName>Homer</GivenName><FamilyName>Simpson</FamilyName><Gender>Male</Gender><BirthDate>01/05/1970</BirthDate><Identifier><IdType>SS Number</IdType><Number>9984430223</Number></Identifier></Spouse><Spouse><GivenName>Marge</GivenName><FamilyName>Singleton</FamilyName><Gender>Female</Gender><BirthDate>11/01/1970</BirthDate><Identifier><IdType>SS Number</IdType><Number>3300987734</Number></Identifier></Spouse></MarriageCertificate>"}]';*/
+  }
 }
