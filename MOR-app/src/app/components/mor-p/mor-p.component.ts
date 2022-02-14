@@ -185,7 +185,12 @@ export class MorPComponent implements OnInit {
     if (changes['defaultLanguage'])
       this.selectedLanguage = this.defaultLanguage;
     if (changes['postActionValue']) {
-      this.postActionValueObject = JSON.parse(this.postActionValue);
+      try {
+        this.postActionValueObject = JSON.parse(this.postActionValue);
+      } catch (e) {
+        this.postActionValue = "[]";
+        this.postActionValueObject = JSON.parse(this.postActionValue);
+      }
       this.postActionValueObject.map((x) => {
         this.confirmSendStatus[x.canonicalEvidenceType] = { include: true };
       });
