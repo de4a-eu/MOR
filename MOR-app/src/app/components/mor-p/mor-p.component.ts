@@ -33,7 +33,8 @@ export class MorPComponent implements OnInit {
   public selectedEvidenceType!: string;
   public showDescription: boolean = true;
 
-  public confirmSendStatus: any = {};
+  public confirmSendStatus: any = {}; // Status of preview
+  public uploads: any = {}; // Content of uploaded files
   public complete: boolean = false; // P is complete
 
   constructor(
@@ -41,10 +42,53 @@ export class MorPComponent implements OnInit {
     private dataLoaderStorage: DataLoaderStorageService
   ) {}
 
+  /**
+   * Toggle confirm send status for given canonical evidence type
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   */
+  public toggleConfirmSendStatus(canonicalEvidenceType: string): void {
+    if (!this.confirmSendStatus[canonicalEvidenceType]) {
+      this.confirmSendStatus[canonicalEvidenceType] = { include: true };
+    } else {
+      if (!this.confirmSendStatus[canonicalEvidenceType].include)
+        delete this.uploads[canonicalEvidenceType];
+      this.confirmSendStatus[canonicalEvidenceType].include =
+        !this.confirmSendStatus[canonicalEvidenceType].include;
+    }
+  }
+
+  /**
+   * Upload text document with canonical evidence
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence
+   * @param input file upload content
+   */
+  public handleUpload(canonicalEvidenceType: string, input: any) {
+    if (canonicalEvidenceType && input.files && input.files.length > 0) {
+      let file = input.files[0];
+      let reader = new FileReader();
+      reader.addEventListener('load', (result) => {
+        if (result.target)
+          this.uploads[canonicalEvidenceType] = result.target.result;
+      });
+      reader.readAsBinaryString(file);
+    }
+  }
+
   public inputParametersOK(): boolean {
     if (this.defaultLanguage && this.postActionValueObject.length > 0)
       return true;
     else return false;
+  }
+
+  public previewConfirmed(): boolean {
+    let confirmed = true;
+    Object.keys(this.confirmSendStatus).map((x) => {
+      if (!this.confirmSendStatus[x].include && !this.uploads[x])
+        confirmed = false;
+    });
+    return confirmed;
   }
 
   /**
@@ -92,7 +136,12 @@ export class MorPComponent implements OnInit {
       let input = this.postActionValueObject.find(
         (x) => x.canonicalEvidenceType == tokenName
       );
-      if (input && (input.uploadedDocument || input.payload)) result = true;
+      if (
+        input &&
+        (input.uploadedDocument || input.payload) &&
+        this.confirmSendStatus[tokenName].include
+      )
+        result = true;
     }
     return result;
   }
@@ -121,10 +170,14 @@ export class MorPComponent implements OnInit {
   }
 
   public finishPreview() {
-    this.dataLoaderStorage.addArray(
-      'confirmedCanonicalEvidenceTypes',
-      this.confirmSendStatus
-    );
+    let result: any = {};
+    Object.keys(this.confirmSendStatus).map((x: any) => {
+      result[x] = {};
+      result[x].include = this.confirmSendStatus[x].include;
+      if (this.confirmSendStatus[x]) result[x].binaryText = this.uploads[x];
+    });
+
+    this.dataLoaderStorage.addArray('confirmedCanonicalEvidenceTypes', result);
     this.complete = true;
   }
 
@@ -133,9 +186,9 @@ export class MorPComponent implements OnInit {
       this.selectedLanguage = this.defaultLanguage;
     if (changes['postActionValue']) {
       this.postActionValueObject = JSON.parse(this.postActionValue);
-      this.postActionValueObject.map(
-        (x) => (this.confirmSendStatus[x.canonicalEvidenceType] = false)
-      );
+      this.postActionValueObject.map((x) => {
+        this.confirmSendStatus[x.canonicalEvidenceType] = { include: true };
+      });
     }
   }
 

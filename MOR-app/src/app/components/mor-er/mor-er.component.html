@@ -12,7 +12,9 @@
     <div class="text-center text-primary">
       <fa-icon class="me-1" [icon]="faExclamationTriangle"></fa-icon>
     </div>
-    <div class="text-center text-primary">Please provide required input to <b>MOR Explicit Request</b>!</div>
+    <div class="text-center text-primary">
+      Please provide required input to <b>MOR Explicit Request</b>!
+    </div>
   </div>
 </div>
 
@@ -89,7 +91,7 @@
             class="form-check-label pointer"
             [for]="'radio_' + evidenceType.tokenName + '_upload'"
           >
-            <b>upload evidence</b>
+            <b>upload canonical evidence</b>
           </label>
         </div>
       </div>
@@ -136,6 +138,7 @@
       </div>
 
       <!-- Upload -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
       <div *ngIf="this.retrievalType[evidenceType.tokenName || ''] == 'upload'">
         <input
           class="form-control form-control-sm"
