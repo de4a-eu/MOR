@@ -3768,6 +3768,105 @@
 		"example" : "2021-05-24",
 		"verified" : "false"
 	}
+},
+"UDT/Name" : { 
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Name",
+		"description" : "A character string that constitutes the distinctive designation of a person, place, thing or concept.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier" : { 
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Identifier",
+		"description" : "A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeID" : { 
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme ID",
+		"description" : "The identification of the identification scheme.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeName" : { 
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme Name",
+		"description" : "The name of the identification scheme.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeAgencyID" : { 
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme Agency ID",
+		"description" : "The identification of the agency that maintains the identification scheme.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeAgencyName" : { 
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme Agency Name",
+		"description" : "The name of the agency that maintains the identification scheme.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeVersionID" : { 
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme Version ID",
+		"description" : "The version of the identification scheme.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeDataURI" : { 
+	"type" : "xsd:anyURI",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme Data URI",
+		"description" : "The Uniform Resource Identifier that identifies where the identification scheme data is located.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"UDT/Identifier/@schemeURI" : { 
+	"type" : "xsd:anyURI",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Scheme URI",
+		"description" : "The Uniform Resource Identifier that identifies where the identification scheme is located.",
+		"example" : "",
+		"verified" : "false"
+	}
 }
 , 
 "LangEnum" : { 
@@ -4143,6 +4242,305 @@
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
+	}
+}
+, 
+"PersonMaritalStatusEnum" : { 
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Person Marital Status",
+		"description" : "List of Person Marital Status.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/Cohabitation" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Cohabitation",
+		"description" : " A person marital status : cohabitation",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/DivorcedPerson" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Divorced person",
+		"description" : " A person marital status : divorced person",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/MarriedPerson" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Married person",
+		"description" : " A person marital status :married person",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/Polygamy" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Polygamy",
+		"description" : " A person marital status: polygamy",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/SeparatedPerson" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Separated person",
+		"description" : " A person marital status: separated person",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/SingleParent" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Single parent",
+		"description" : " A person marital status: single parent",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/UnmarriedPerson" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Unmarried person",
+		"description" : " A person marital status: unmarried person",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"PersonMaritalStatusEnum/WidowedPerson" : { 
+	"type" : "xs:token",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Widowed person",
+		"description" : " A person marital status:widowed person",
+		"example" : "",
+		"verified" : "false"
+	}
+}
+, 
+"MarriageEvidence" : { 
+	"type" : "",
+	"cardinality" : "",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Marriage evidence",
+		"description" : "Official document or data proving the Marriage of two Persons.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/Identifier" : { 
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)"
+	, "en" : { 
+		"label" : "Identifier",
+		"description" : "An unambiguous reference to the Marriage Evidence.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/IssueDate" : { 
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3."
+	, "en" : { 
+		"label" : "Issue date",
+		"description" : "The most recent date on which the MarriageEvidence instance was issued.",
+		"example" : "2021-05-20",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/IssuingAuthority" : { 
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Issuing authority",
+		"description" : "A Public Organisation with official authority in charge of issuing the Marriage Evidence.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/IssuingPlace" : { 
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Issuing place",
+		"description" : "The Location where the Marriage Evidence was issued.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/IssuingPlace/AdminUnitL2" : { 
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/IssuingPlace/AdminUnitL1" : { 
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage" : { 
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Certifies marriage",
+		"description" : "Attesting in a formal way that the Marriage is true.",
+		"example" : "2021-04-20",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/DateOfMarriage" : { 
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Date of marriage",
+		"description" : "The date on which the Marriage took place.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/PlaceOfMarriage" : { 
+	"type" : "LocationAddress",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Place of marriage",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/Spouse" : { 
+	"type" : "Person",
+	"cardinality" : "11",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Spouse",
+		"description" : "The Person who was married.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/Spouse/Gender" : { 
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "",
+		"description" : "The gender of an individual should be recorded using a controlled vocabulary that is appropriate for the specific context. In some cases the chromosomal or physical state of an individual will be more important than the gender that they express, in others the reverse will be true. What is always important is that the controlled vocabulary used to describe an individual's gender is stated explicitly.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage" : { 
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Family name after marriage",
+		"description" : "This property contains the family name after the Marriage of the Person.",
+		"example" : "Maria",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage" : { 
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Family name before marriage",
+		"description" : "This property contains the family name before the Marriage of the Person.",
+		"example" : "Maria Khan",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage" : { 
+	"type" : "PersonMaritalStatusEnum",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Marital status before marriage",
+		"description" : "Situation with regard to whether a Person was single, married, separated, divorced or widowed.",
+		"example" : "",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesEndOfMarriage" : { 
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : ""
+	, "en" : { 
+		"label" : "End of marriage",
+		"description" : "In case of divorce, this property includes information on the end of marriage",
+		"example" : "2022-01-05",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage" : { 
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Date of end of marriage",
+		"description" : "Date of the end of marriage",
+		"example" : "lack of communication",
+		"verified" : "false"
+	}
+},
+"MarriageEvidence/CertifiesEndOfMarriage/Cause" : { 
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : ""
+	, "en" : { 
+		"label" : "Cause",
+		"description" : "Cause of the end of marriage.",
+		"example" : "",
+		"verified" : "false"
 	}
 }
 }
