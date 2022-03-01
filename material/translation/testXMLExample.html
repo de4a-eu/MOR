@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>MOR Test XML example of canonical evidence</title>
+<script type="text/javascript" src="BirthEvidence-en-test-outcome_files/mor.js"></script>
+<style>
+.label {color: darkblue; font-style: italic; font-weight: 750}
+span {cursor: help}
+</style>
+</head>
+<body>
+<form name="f">
+<select name="element" id="element" onchange="location.reload()">
+<option value="https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/birth-evidence-1.7-generated-example.xml">BirthEvidence Example</option>
+<option value="https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/marriage-evidence-1.7-generated-example.xml">MarriageEvidence Example</option>
+</select>
+<select name="lang"><option value="en" selected="selected">en</option></select>
+<input type="button" value="Process" onclick="init()"><br>
+</form>
+<div id="output" style="width:100%;border-color:1px solid red"></div>
+<script>
+var morJSON;
+const xmlhttp = new XMLHttpRequest();
+const urlJson = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/mor_en.json"
+//const url='http://localhost:8080/DE4A-MOR/js/mor_en.json';
+parser = new DOMParser();
+
+	xmlhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {     
+	        morJSON = JSON.parse(this.responseText)
+	        if (debug) console.log("MORJSON DEBUG: ", this.responseText)
+	    }
+	}
+
+	xmlhttp.open("GET", urlJson, true);
+	xmlhttp.send();
+
+
+const debug = true
+
+function printXMLele(path, type) {
+	var lang = document.f.lang.value
+	var detail = getTermDetail(path, type) 
+	if (detail == null) {
+		outcome.innerHTML += ("<br><div style='color:orange'>"+path+"</div>")
+		return
+	}
+	outcome.innerHTML += ("<div style='color:black'>"+path+"</div>")
+	outcome.innerHTML += "<ul>"
+			+"<li><i>Type:</i> "+detail.type+"</li>"
+			+"<li><i>Cardinality:</i> "+detail.cardinality+"</li>"
+			+"<li><i>Label:</i> "+detail[lang].label+"</li>"
+			+"<li><i>Description:</i> "+detail[lang].description+"</li>"
+			+"<li><i>Example:</i> "+detail[lang].example+"</li>"
+			+"</ul>"
+}
+function getTermDetail(path, type) {
+	var apath = path.split("/")
+	if (debug) console.log("<printXMLele> DEBUG", path, type, apath.length)
+	var detail = (morJSON.hasOwnProperty(path)?morJSON[path]:null)
+	var parentDetail = null
+	if (detail != null && morJSON[path].type != "") {
+		parentDetail = morJSON[type]
+	} else if (type != "") {
+		var x = ""
+		var i = apath.length - 1;
+		while (parentDetail == null && i>=0) {
+			x = apath[i] + (x!=""?"/":"") + x
+			var parentPath = type+"/"+x
+			if (morJSON.hasOwnProperty(parentPath)) {
+				parentDetail = morJSON[parentPath]
+			}
+			if (debug) console.log("<printXMLele> DEBUG Looking parent path ",parentPath, " de ", path, (parentDetail==null))
+			i--
+		} 
+	} 
+	if (parentDetail != null && detail == null)
+		detail = parentDetail
+	else if (parentDetail != null) {
+			if (detail.cardinality == "") {
+				detail.cardinality = parentDetail.cardinality
+			}
+			if (detail[document.f.lang.value].label == "") {
+				detail[document.f.lang.value].label = parentDetail[document.f.lang.value].label
+			}
+			if (detail[document.f.lang.value].description == "") {
+				detail[document.f.lang.value].description = parentDetail[document.f.lang.value].description
+			}
+			if (detail[document.f.lang.value].example == "") {
+				detail[document.f.lang.value].example = parentDetail[document.f.lang.value].example
+			}
+	}
+	return detail
+}
+var exElements = new Map()
+
+function getTermType(parentPath) {
+	var termType = ""
+	if (debug) console.log("<getTermType> DEBUG: ",parentPath)
+	if (morJSON.hasOwnProperty(parentPath) && morJSON[parentPath].type != "") {
+		if (debug) console.log("<getTermType> DEBUG return parentPath type: ",morJSON[parentPath].type)
+		return morJSON[parentPath].type
+	}
+	var p = parentPath.split("/")
+	var len = p.length
+	
+	var elePath = ""
+	for (var i=0; i<len; i++) {
+		elePath = elePath + "/" + p[i]
+		if (elePath.charAt(0)=="/") elePath = elePath.substr(1)
+		if (morJSON.hasOwnProperty(elePath) && morJSON[elePath].type != "") {
+			if (debug) console.log("<getTermType> DEGUG: ", elePath, " >< ", morJSON[elePath].type)
+			elePath = morJSON[elePath].type
+		} else
+			if (debug) console.log("<getTermType> DEBUG: return "+elePath)
+	}
+	return elePath
+}
+function addExElements(node, parentPath) {
+	if (debug) console.log("<addExElements> DEBUG: ", parentPath, " / ", node.localName, node.nodeType )
+	var termPath = ""
+	if (node.nodeType == 2) {
+		termPath = parentPath + "/@" + node.localName
+		var termType = (morJSON.hasOwnProperty(termPath)?morJSON[termPath].type:getTermType(parentPath))
+		exElements.set(termPath, termType)
+		if (debug) console.log("<addExElements> DEBUG SET : ", termPath, termType)
+	} else 
+	if (node.nodeType == 1) {
+		termPath = parentPath + (parentPath==""?"":"/") + node.localName
+		var termType = (morJSON.hasOwnProperty(termPath)?morJSON[termPath].type:getTermType(parentPath))
+		exElements.set(termPath, termType)
+		if (debug) console.log("<addExElements> DEBUG SET : ", termPath , "> ", termType, ">> ", (morJSON.hasOwnProperty(termPath)?morJSON[termPath].type:""))
+		if (parentPath != "")
+			for (var i=0; i<node.attributes.length; i++) {
+				if (debug) console.log("<addExElements> DEBUGATTR ",node.attributes[i].nodeType, node.attributes[i].localName)
+				addExElements(node.attributes[i], termPath)
+			}
+		for (var i=0; i<node.childNodes.length; i++) {
+			if (debug) console.log("<addExElements> DEBUG", node.childNodes[i].nodeType, node.childNodes[i].localName)
+			addExElements(node.childNodes[i], termPath)
+		}
+	}
+}
+function reqListener () {
+ 	xmlDoc = this.responseXML
+ 	if (debug) console.log(xmlDoc)
+ 	addExElements(xmlDoc.documentElement, "")
+ 
+ 	for (var [key, value] of exElements) {
+ 		var detail = getTermDetail(key, value);
+ 		if (detail == null) {
+ 			outcome.innerHTML += ("<br><div style='color:orange'>"+key+"</div>")
+ 		} else {
+ 			outcome.innerHTML += ( "<div style='color:black'>"+key+"</div>")
+ 			outcome.innerHTML += "<ul>"
+ 				+"<li><i>Type:</i> "+detail.type+"</li>"
+ 				+"<li><i>Cardinality:</i> "+detail.cardinality+"</li>"
+ 				+"<li><i>Label:</i> "+detail[document.f.lang.value].label+"</li>"
+ 				+"<li><i>Description:</i> "+detail[document.f.lang.value].description+"</li>"
+ 				+"<li><i>Example:</i> "+detail[document.f.lang.value].example+"</li>"
+ 				+"</ul>"
+ 		}
+	}
+}
+function describeXMLExample(url, lang) {
+	var oReq = new XMLHttpRequest();
+	oReq.overrideMimeType("text/xml")
+	oReq.addEventListener("load", reqListener);
+	oReq.open("GET", url, true);
+	oReq.send();
+}
+
+function init() {
+	outcome.innerHTML=''
+	elements = new Map()
+	element = document.getElementById("element").value
+	describeXMLExample(element, document.f.lang)
+}
+var outcome = document.getElementById("output")
+var element = document.getElementById("element").value
+</script>
+
+
+</body></html>
