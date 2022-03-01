@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Test MOR JSON Storage</title>
 <script type="text/javascript" src="js/mor.js"></script>
 <style>
 .label {color: darkblue; font-style: italic; font-weight: 750}
@@ -19,7 +19,7 @@ span {cursor: help}
 <script>
 var morJSON;
 const xmlhttp = new XMLHttpRequest();
-const url = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/mor_en.json"
+const urlJSON = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/mor_en.json"
 //const url='http://localhost:8080/DE4A-MOR/js/mor_en.json';
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -27,7 +27,7 @@ xmlhttp.onreadystatechange = function() {
         morJSON = JSON.parse(this.responseText)
     }
 };
-xmlhttp.open("GET", url, true);
+xmlhttp.open("GET", urlJSON, true);
 xmlhttp.send();
 function hasChildren(termName) {
 	var r = true
