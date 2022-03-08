@@ -8,6 +8,7 @@ import { DataLoaderCountriesService } from 'src/app/services/data-loader-countri
 })
 export class CountrySelectorComponent implements OnInit {
   @Input('countryCode') countryCode!: string;
+  @Input('disabledCountryCode') disabledCountryCode!: string;
   @Output() countryCodeChange = new EventEmitter();
 
   constructor(public countries: DataLoaderCountriesService) {}
@@ -24,6 +25,11 @@ export class CountrySelectorComponent implements OnInit {
         ? country.flagCode
         : country.code
       : null;
+  }
+
+  public isCountryDisabled(code: string) {
+    if (code == this.disabledCountryCode) return true;
+    else return false;
   }
 
   public setCountry(code: string) {
