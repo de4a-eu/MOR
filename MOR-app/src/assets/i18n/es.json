@@ -5,8 +5,27 @@
     "or": "o",
     "uploadCanonicalEvidence": "subir evidencia canónica",
     "birth": "Certificado de nacimiento",
+    "BirthCertificate": "Certificado de nacimiento",
     "marriage": "Certificado de matrimonio",
-    "selectCountry": "Selecciona país"
+    "MarriageCertificate": "Certificado de matrimonio",
+    "selectCountry": "Selecciona país",
+    "selectProvision": "Selecciona provisión",
+    "provisionNotAvailable": "Provisión no disponible, subir evidencia canónica.",
+    "select1Provision": "seleccione 1 provisión",
+    "for": "por",
+    "from": "desde",
+    "confirmProvision": "Confirmar provisión",
+    "proceed": "Continuar",
+    "crossBorderEvidenceRequest": "Solicitud de prueba transfronteriza",
+    "de4aUsedTo": "El Sistema Técnico DE4A se utilizará para:",
+    "requestCrossBorderEvidence": "solicitar las evidencia pruebas transfronteriza:",
+    "uploadCrossBorderEvidence": "suba la siguiente evidencia:",
+    "inpectEvidence": "Podrá inspeccionar la evidencia y elegir si desea continuar.",
+    "dea4aAreYouSure": "¿Estás seguro de que quieres utilizar el Sistema Técnico DE4A?",
+    "cancel": "Cancelar",
+    "request": "Solicitar",
+    "complete": "Completo",
+    "provideInputER": "¡Proporcione la información necesaria para la solicitud explícita de MOR!"
   },
   "term": {
     "BirthEvidence": {

@@ -37,24 +37,24 @@
       <summary class="mb-3">MOR <b>Explicit Request</b> (ER)</summary>
       <details>
         <summary class="mb-2"><small>Implementation details</small></summary>
-      <div class="row">
-        <div class="col-6">
-          <app-input-parameters-mor-er-selector
-            (defaultLanguageChange)="defaultLanguage = $event"
-            (requesterCountryChange)="requesterCountryCode = $event"
-            (canonicalEvidenceTypesChange)="canonicalEvidenceTypes = $event"
-            (outputJSArrayIdChange)="outputJSArrayId = $event"
-          ></app-input-parameters-mor-er-selector>
+        <div class="row">
+          <div class="col-6">
+            <app-input-parameters-mor-er-selector
+              (defaultLanguageChange)="defaultLanguage = $event"
+              (requesterCountryChange)="requesterCountryCode = $event"
+              (canonicalEvidenceTypesChange)="canonicalEvidenceTypes = $event"
+              (outputJSArrayIdChange)="outputJSArrayId = $event"
+            ></app-input-parameters-mor-er-selector>
+          </div>
+          <div class="col-6">
+            <app-source-code-mor-er-include
+              [defaultLanguage]="defaultLanguage"
+              [requesterCountryCode]="requesterCountryCode"
+              [selectedCanonicalEvidenceTypes]="canonicalEvidenceTypes"
+              [outputJSArrayId]="outputJSArrayId"
+            ></app-source-code-mor-er-include>
+          </div>
         </div>
-        <div class="col-6">
-          <app-source-code-mor-er-include
-            [defaultLanguage]="defaultLanguage"
-            [requesterCountryCode]="requesterCountryCode"
-            [selectedCanonicalEvidenceTypes]="canonicalEvidenceTypes"
-            [outputJSArrayId]="outputJSArrayId"
-          ></app-source-code-mor-er-include>
-        </div>
-      </div>
       </details>
       <div class="row">
         <div class="col-12 mt-3">

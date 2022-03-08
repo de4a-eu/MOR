@@ -5,8 +5,27 @@
     "or": "ali",
     "uploadCanonicalEvidence": "naložite kanonično dokazilo",
     "birth": "Rojstni list",
+    "BirthCertificate": "Rojstni list",
     "marriage": "Poročni list",
-    "selectCountry": "Izberi državo"
+    "MarriageCertificate": "Poročni list",
+    "selectCountry": "Izberi državo",
+    "selectProvision": "Izberi ponudnika",
+    "provisionNotAvailable": "Ponudnika ni na voljo, prosim naložite kanonično dokazilo.",
+    "select1Provision": "izberite 1 ponudnika",
+    "for": "za",
+    "from": "iz",
+    "confirmProvision": "Potrdite ponudnika",
+    "proceed": "Nadaljujte",
+    "crossBorderEvidenceRequest": "Zahteva za čezmejno pridobivanje dokazil",
+    "de4aUsedTo": "Tehnični sistem DE4A se bo uporabil za:",
+    "requestCrossBorderEvidence": "pridobitev naslednjih čezmejnih dokazil:",
+    "uploadCrossBorderEvidence": "nalaganje naslednjih dokazil:",
+    "inpectEvidence": "Dokazila si boste lahko ogledali in se odločili, ali želite nadaljevati.",
+    "dea4aAreYouSure": "Ali ste prepričani, da želite uporabiti tehnični sistem DE4A?",
+    "cancel": "Prekliči",
+    "request": "Zahtevaj",
+    "complete": "Zaključeno",
+    "provideInputER": "Prosim, zagotovite zahtevane podatke za izrecno zahtevo MOR!"
   },
   "term": {
     "BirthEvidence": {

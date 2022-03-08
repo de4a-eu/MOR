@@ -306,14 +306,14 @@ export class MORERComponent implements OnInit {
     if (!provision) {
       return null;
     } else if (typeof provision == 'string' && provision == 'not available') {
-      return 'Provision not available, please upload the evidence.';
+      return this.translate.instant('gui.provisionNotAvailable');
     } else if (typeof provision == 'object') {
       if (provision.provisions.length > 1) {
         for (let i = 0; i < provision.provisions.length; i++) {
           if (provision.provisions[i].selected)
             return provision.provisions[i].dataOwnerPrefLabel;
         }
-        return 'please select 1 provision';
+        return this.translate.instant('gui.select1Provision');
       } else {
         return provision.provisions[0].dataOwnerPrefLabel;
       }

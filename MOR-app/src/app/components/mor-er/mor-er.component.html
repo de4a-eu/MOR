@@ -3,7 +3,7 @@
     <div class="text-center text-primary">
       <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>
     </div>
-    <div class="text-center text-primary">Complete</div>
+    <div class="text-center text-primary" translate="gui.complete"></div>
   </div>
 </div>
 
@@ -12,9 +12,7 @@
     <div class="text-center text-primary">
       <fa-icon class="me-1" [icon]="faExclamationTriangle"></fa-icon>
     </div>
-    <div class="text-center text-primary">
-      Please provide required input to <b>MOR Explicit Request</b>!
-    </div>
+    <div class="text-center text-primary" translate="gui.provideInputER"></div>
   </div>
 </div>
 
@@ -47,7 +45,7 @@
             '</b> canonical evidence type.'
           "
         ></fa-icon
-        >{{ 'gui.' + evidenceType.code | translate }}
+        >{{ "gui." + evidenceType.code | translate }}
       </button>
     </div>
     <!-- Actions -->
@@ -122,8 +120,8 @@
               (click)="requestProvision(evidenceType.tokenName || '')"
               *ngIf="!provisions[evidenceType.tokenName || '']"
             >
-              <fa-icon [icon]="faSyncAlt" class="me-1"></fa-icon>Select
-              provision
+              <fa-icon [icon]="faSyncAlt" class="me-1"></fa-icon
+              ><span translate="gui.selectProvision"></span>
             </button>
           </div>
           <div
@@ -158,7 +156,8 @@
         data-bs-toggle="modal"
         data-bs-target="#requestEvidenceModal"
       >
-        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon><b>Proceed</b>
+        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
+        ><b translate="gui.proceed"></b>
       </button>
     </div>
   </div>
@@ -174,9 +173,11 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="requestEvidenceModalLabel">
-            Cross-border evidence request
-          </h5>
+          <h5
+            class="modal-title"
+            id="requestEvidenceModalLabel"
+            translate="gui.crossBorderEvidenceRequest"
+          ></h5>
           <button
             type="button"
             class="btn-close"
@@ -185,13 +186,14 @@
           ></button>
         </div>
         <div class="modal-body">
-          The <b>DE4A Technical System</b> will be used to:
+          <span translate="gui.de4aUsedTo"></span>
           <ul>
             <li>
-              request the following cross-border evidence:
+              <span translate="gui.requestCrossBorderEvidence"></span>
               <ul>
                 <li *ngFor="let evidenceType of getEvidenceTypesForRequest()">
-                  <b>{{ evidenceType.name }}</b> from
+                  <b>{{ "gui." + evidenceType.tokenName | translate }}</b>
+                  <span class="ps-1 pe-1" translate="gui.from"></span>
                   <b>{{
                     dataLoaderCountries.getName(
                       canonicalEvidenceCountries[evidenceType.tokenName || ""]
@@ -202,21 +204,16 @@
               </ul>
             </li>
             <li *ngIf="getEvidenceTypesForUpload().length > 0">
-              upload the following evidence:
+              <span translate="gui.uploadCrossBorderEvidence"></span>
               <ul>
                 <li *ngFor="let evidenceType of getEvidenceTypesForUpload()">
-                  <b>{{ evidenceType.name }}</b>
+                  <b>{{ "gui." + evidenceType.tokenName | translate }}</b>
                 </li>
               </ul>
             </li>
           </ul>
-          <p>
-            You will be able to inspect the evidence and choose if you want to
-            proceed.
-          </p>
-          <p>
-            <b>Are you sure that you want use the DE4A Technical System?</b>
-          </p>
+          <p translate="gui.inpectEvidence"></p>
+          <p><b translate="gui.dea4aAreYouSure"></b></p>
         </div>
         <div class="modal-footer">
           <button
@@ -225,7 +222,7 @@
             data-bs-dismiss="modal"
           >
             <fa-icon class="me-1" [icon]="faTimesCircle"></fa-icon>
-            Cancel
+            <span translate="gui.cancel"></span>
           </button>
           <button
             type="button"
@@ -233,7 +230,8 @@
             data-bs-dismiss="modal"
             (click)="finishExplicitRequest()"
           >
-            <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Request
+            <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon
+            ><span translate="gui.request"></span>
           </button>
         </div>
       </div>
@@ -252,8 +250,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="selectProvisionModalLabel">
-            Select provision for
-            <b>{{ modalSelectProvisionData.canonicalEvidenceName }}</b> from
+            <span translate="gui.selectProvision"></span>
+            <span translate="gui.for" class="ps-1 pe-1"></span>
+            <b>{{
+              "gui." + modalSelectProvisionData.canonicalEvidenceType
+                | translate
+            }}</b>
+            <span translate="gui.from" class="ps-1 pe-1"></span>
             <b>{{ modalSelectProvisionData.country }}</b>
           </h5>
           <button
@@ -299,8 +302,8 @@
             class="btn btn-sm btn-light"
             (click)="modalSelectProvision.hide()"
           >
-            <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>Confirm
-            provision
+            <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon
+            ><span translate="gui.confirmProvision"></span>
           </button>
         </div>
       </div>
