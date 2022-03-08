@@ -1,4 +1,13 @@
 {
+  "gui": {
+    "select": "Selecciona",
+    "providerCountry": "país proveedor",
+    "or": "o",
+    "uploadCanonicalEvidence": "subir evidencia canónica",
+    "birth": "Certificado de nacimiento",
+    "marriage": "Certificado de matrimonio",
+    "selectCountry": "Selecciona país"
+  },
   "term": {
     "BirthEvidence": {
       "label": "Evidencia de nacimiento",

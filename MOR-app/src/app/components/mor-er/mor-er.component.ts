@@ -13,6 +13,7 @@ import {
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
 import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
 import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
+import { TranslateService } from '@ngx-translate/core';
 
 declare var bootstrap: any;
 
@@ -40,8 +41,13 @@ export class MORERComponent implements OnInit {
     public dataLoaderCountries: DataLoaderCountriesService,
     private dataLoaderIal: DataLoaderIalService,
     private dataLoaderStorage: DataLoaderStorageService,
-    private dataLoaderXml: DataLoaderXmlService
-  ) {}
+    private dataLoaderXml: DataLoaderXmlService,
+    public translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'sl', 'es']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
   public canonicalEvidenceCountries: any = {};
   public retrievalType: any = {}; // By request (provision) or upload
@@ -357,8 +363,12 @@ export class MORERComponent implements OnInit {
     this.getEvidenceTypes().map((x) => {
       this.retrievalType[x.tokenName || ''] = 'request';
     });
-    if (changes['defaultLanguage'])
+    if (changes['defaultLanguage']) {
       this.selectedLanguage = this.defaultLanguage;
+      this.translate.use(this.selectedLanguage);
+    }
+
+    //if (changes['lang']) this.translate.use(this.lang);
   }
 
   ngAfterViewInit(): void {

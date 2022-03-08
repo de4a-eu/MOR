@@ -23,10 +23,6 @@
   <!--<div class="position-relative" style="z-index: 1040">
     <div class="position-absolute top-0 end-0">
       <app-language-selector
-        data-bs-toggle="tooltip"
-        data-bs-html="true"
-        data-bs-placement="left"
-        title="<b>Change language</b><br>of displayed content"
         [(selectedLanguage)]="selectedLanguage"
       ></app-language-selector>
     </div>
@@ -51,13 +47,13 @@
             '</b> canonical evidence type.'
           "
         ></fa-icon
-        >{{ evidenceType.name }}
+        >{{ 'gui.' + evidenceType.code | translate }}
       </button>
     </div>
     <!-- Actions -->
     <div class="col-6 p-2">
       <div class="small">
-        Select
+        <span class="pe-1" translate="gui.select"></span>
         <div class="form-check form-check-inline me-0 ms-1">
           <input
             class="form-check-input"
@@ -73,10 +69,10 @@
             class="form-check-label pointer"
             [for]="'radio_' + evidenceType.tokenName + '_country'"
           >
-            <b>provider country</b>
+            <b translate="gui.providerCountry"></b>
           </label>
         </div>
-        or
+        <span class="ps-1 pe-1" translate="gui.or"></span>
         <div class="form-check form-check-inline me-0 ms-1">
           <input
             class="form-check-input"
@@ -91,7 +87,7 @@
             class="form-check-label pointer"
             [for]="'radio_' + evidenceType.tokenName + '_upload'"
           >
-            <b>upload canonical evidence</b>
+            <b translate="gui.uploadCanonicalEvidence"></b>
           </label>
         </div>
       </div>
@@ -108,6 +104,7 @@
               canonicalEvidenceCountries[evidenceType.tokenName || '']
             "
             [disabledCountryCode]="requesterCountry"
+            [defaultLanguage]="selectedLanguage"
           ></app-country-selector>
         </div>
         <div

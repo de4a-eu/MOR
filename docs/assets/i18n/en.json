@@ -1,4 +1,13 @@
 {
+  "gui": {
+    "select": "Select",
+    "providerCountry": "provider country",
+    "or": "or",
+    "uploadCanonicalEvidence": "upload canonical evidence",
+    "birth": "Birth certificate",
+    "marriage": "Marriage certificate",
+    "selectCountry": "Select country"
+  },
   "term": {
     "BirthEvidence": {
       "label": "Birth evidence",

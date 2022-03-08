@@ -1,4 +1,13 @@
 {
+  "gui": {
+    "select": "Izberi",
+    "providerCountry": "državo ponudnika",
+    "or": "ali",
+    "uploadCanonicalEvidence": "naložite kanonično dokazilo",
+    "birth": "Rojstni list",
+    "marriage": "Poročni list",
+    "selectCountry": "Izberi državo"
+  },
   "term": {
     "BirthEvidence": {
       "label": "Dokazilo o rojstvu",

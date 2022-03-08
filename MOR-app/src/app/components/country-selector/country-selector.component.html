@@ -12,11 +12,14 @@
         }}"
       ></span
       >{{ getCountryName(countryCode) }} <b>({{ countryCode }})</b></span
-    ><span *ngIf="!countryCode">Select country</span></a
-  >
+    ><span *ngIf="!countryCode" translate="gui.selectCountry"></span
+  ></a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequesterCountry">
     <li *ngFor="let country of countries.getCountries()">
-      <a class="dropdown-item pointer" [ngClass]="isCountryDisabled(country.code) ? 'disabled' : ''" (click)="setCountry(country.code)"
+      <a
+        class="dropdown-item pointer"
+        [ngClass]="isCountryDisabled(country.code) ? 'disabled' : ''"
+        (click)="setCountry(country.code)"
         ><span
           class="me-2 flag-icon flag-icon-{{
             getCountryFlagCode(country.code) | lowercase

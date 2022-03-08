@@ -11,7 +11,7 @@ export class EntryPageComponent implements OnInit {
   faIdCard = faIdCard;
 
   public defaultLanguage: string = 'en';
-  public defaultLanguagePreview: string = 'sl';
+  public defaultLanguagePreview: string = 'en';
   public requesterCountryCode: string = 'BE';
   public canonicalEvidenceTypes: string =
     'BirthCertificate,MarriageCertificate';
