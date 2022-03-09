@@ -367,8 +367,6 @@ export class MORERComponent implements OnInit {
       this.selectedLanguage = this.defaultLanguage;
       this.translate.use(this.selectedLanguage);
     }
-
-    //if (changes['lang']) this.translate.use(this.lang);
   }
 
   ngAfterViewInit(): void {
