@@ -16,7 +16,7 @@
 
 Existing pages for **Selection of evidence** and **Preview** that are already available in an existing implementation in Slovenia (part of DE4A) could be the starting point for the explicit request and preview GUIs respectively.
 
-- There is some demo material available: 
+- There is some demo material available:
   - presentational videos available:
     - [Slovenia as a Data Provider](./material/SI-preview-app/final_es-de_si-do_compressed.mp4),
     - [Spain as a Data Provider](./material/SI-preview-app/SI-DE_ES-DO-2021-11-05.mp4),
@@ -25,6 +25,10 @@ Existing pages for **Selection of evidence** and **Preview** that are already av
 ## Demo
 
 - https://de4a-wp3.github.io/MOR/
+
+## Video presentation
+
+[![MOR demo](https://img.youtube.com/vi/gAwOs-M0_D0/0.jpg)](https://www.youtube.com/watch?v=gAwOs-M0_D0)
 
 ## Materials
 
