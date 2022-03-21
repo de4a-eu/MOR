@@ -28,6 +28,102 @@
     "provideInputER": "¡Proporcione la información necesaria para la solicitud explícita de MOR!"
   },
   "term": {
+    "LangEnum/en": {
+      "label": "Inglés"
+    },
+    "LangEnum/es": {
+      "label": "Español"
+    },
+    "LangEnum/pt": {
+      "label": "Portugués"
+    },
+    "LangEnum/fr": {
+      "label": "Francés"
+    },
+    "LangEnum/sl": {
+      "label": "Esloveno"
+    },
+    "NUTS0Enum/AT": {
+      "label": "Austria"
+    },
+    "NUTS0Enum/BE": {
+      "label": "Bélgica"
+    },
+    "NUTS0Enum/BG": {
+      "label": "Bulgaria"
+    },
+    "NUTS0Enum/CY": {
+      "label": "Chipre"
+    },
+    "NUTS0Enum/CZ": {
+      "label": "Chequia"
+    },
+    "NUTS0Enum/DE": {
+      "label": "Alemania"
+    },
+    "NUTS0Enum/DK": {
+      "label": "Dinamarca"
+    },
+    "NUTS0Enum/EE": {
+      "label": "Estonia"
+    },
+    "NUTS0Enum/EL": {
+      "label": "Grecia"
+    },
+    "NUTS0Enum/ES": {
+      "label": "España"
+    },
+    "NUTS0Enum/FI": {
+      "label": "Finlandia"
+    },
+    "NUTS0Enum/FR": {
+      "label": "Francia"
+    },
+    "NUTS0Enum/HR": {
+      "label": "Croacia"
+    },
+    "NUTS0Enum/HU": {
+      "label": "Hungría"
+    },
+    "NUTS0Enum/IE": {
+      "label": "Irlanda"
+    },
+    "NUTS0Enum/IT": {
+      "label": "Italia"
+    },
+    "NUTS0Enum/LT": {
+      "label": "Lituania"
+    },
+    "NUTS0Enum/LU": {
+      "label": "Luxemburgo"
+    },
+    "NUTS0Enum/LV": {
+      "label": "Letonia"
+    },
+    "NUTS0Enum/MT": {
+      "label": "Malta"
+    },
+    "NUTS0Enum/NL": {
+      "label": "Países Bajos"
+    },
+    "NUTS0Enum/PL": {
+      "label": "Polonia"
+    },
+    "NUTS0Enum/PT": {
+      "label": "Portugal"
+    },
+    "NUTS0Enum/RO": {
+      "label": "Rumania"
+    },
+    "NUTS0Enum/SE": {
+      "label": "Suecia"
+    },
+    "NUTS0Enum/SI": {
+      "label": "Eslovenia"
+    },
+    "NUTS0Enum/SK": {
+      "label": "Eslovaquia"
+    },
     "BirthEvidence": {
       "label": "Evidencia de nacimiento",
       "description": "Documento o dato oficial que acredite el Nacimiento de un Hijo."

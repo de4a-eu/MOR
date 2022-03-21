@@ -15,7 +15,7 @@
     ><span *ngIf="!countryCode" translate="gui.selectCountry"></span
   ></a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequesterCountry">
-    <li *ngFor="let country of countries.getCountries()">
+    <li *ngFor="let country of getCountries()">
       <a
         class="dropdown-item pointer"
         [ngClass]="isCountryDisabled(country.code) ? 'disabled' : ''"

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Country } from 'src/app/classes/country';
 
 @Component({
   selector: 'app-country-selector',
@@ -24,7 +25,10 @@ export class CountrySelectorComponent implements OnInit {
 
   public getCountryName(code: string): string | null {
     let country = this.countries.getCountries().find((x) => code == x.code);
-    return country ? country.name : null;
+    let name: string | null = null;;
+    if (country)
+      name = this.translate.instant('term.NUTS0Enum/' + country.code).label;
+    return name;
   }
 
   public getCountryFlagCode(code: string): string | null {
@@ -34,6 +38,14 @@ export class CountrySelectorComponent implements OnInit {
         ? country.flagCode
         : country.code
       : null;
+  }
+
+  public getCountries(): Country[] {
+    let countries = this.countries.getCountries();
+    countries.map(
+      (x) => (x.name = this.translate.instant('term.NUTS0Enum/' + x.code).label)
+    );
+    return countries;
   }
 
   public isCountryDisabled(code: string) {

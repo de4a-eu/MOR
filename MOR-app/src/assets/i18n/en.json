@@ -26,9 +26,104 @@
     "request": "Request",
     "complete": "Complete",
     "provideInputER": "Please provide required input to MOR Explicit Request!"
-
   },
   "term": {
+    "LangEnum/en": {
+      "label": "English"
+    },
+    "LangEnum/es": {
+      "label": "Spanish"
+    },
+    "LangEnum/pt": {
+      "label": "Portuguese"
+    },
+    "LangEnum/fr": {
+      "label": "French"
+    },
+    "LangEnum/sl": {
+      "label": "Slovenian"
+    },
+    "NUTS0Enum/AT": {
+      "label": "Austria"
+    },
+    "NUTS0Enum/BE": {
+      "label": "Belgium"
+    },
+    "NUTS0Enum/BG": {
+      "label": "Bulgaria"
+    },
+    "NUTS0Enum/CY": {
+      "label": "Cyprus"
+    },
+    "NUTS0Enum/CZ": {
+      "label": "Czechia"
+    },
+    "NUTS0Enum/DE": {
+      "label": "Germany"
+    },
+    "NUTS0Enum/DK": {
+      "label": "Denmark"
+    },
+    "NUTS0Enum/EE": {
+      "label": "Estonia"
+    },
+    "NUTS0Enum/EL": {
+      "label": "Greece"
+    },
+    "NUTS0Enum/ES": {
+      "label": "Spain"
+    },
+    "NUTS0Enum/FI": {
+      "label": "Finland"
+    },
+    "NUTS0Enum/FR": {
+      "label": "France"
+    },
+    "NUTS0Enum/HR": {
+      "label": "Croatia"
+    },
+    "NUTS0Enum/HU": {
+      "label": "Hungary"
+    },
+    "NUTS0Enum/IE": {
+      "label": "Ireland"
+    },
+    "NUTS0Enum/IT": {
+      "label": "Italy"
+    },
+    "NUTS0Enum/LT": {
+      "label": "Lithuania"
+    },
+    "NUTS0Enum/LU": {
+      "label": "Luxembourg"
+    },
+    "NUTS0Enum/LV": {
+      "label": "Latvia"
+    },
+    "NUTS0Enum/MT": {
+      "label": "Malta"
+    },
+    "NUTS0Enum/NL": {
+      "label": "Netherlands"
+    },
+    "NUTS0Enum/PL": {
+      "label": "Poland"
+    },
+    "NUTS0Enum/PT": {
+      "label": "Portugal"
+    },
+    "NUTS0Enum/RO": {
+      "label": "Romania"
+    },
+    "NUTS0Enum/SE": {
+      "label": "Sweden"
+    },
+    "NUTS0Enum/SI": {
+      "label": "Slovenia"
+    },
+    "NUTS0Enum/SK": {
+      "label": "Slovakia"
+    },
     "BirthEvidence": {
       "label": "Birth evidence",
       "description": "Official document or data proving the Birth of a Child."

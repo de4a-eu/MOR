@@ -1,0 +1,164 @@
+{
+  "gui": {
+    "select": "Selecione",
+    "providerCountry": "país provedor",
+    "or": "ou",
+    "uploadCanonicalEvidence": "carregar evidências canônicas",
+    "birth": "Certidão de nascimento",
+    "BirthCertificate": "Certidão de nascimento",
+    "marriage": "Certidão de casamento",
+    "MarriageCertificate": "Certidão de casamento",
+    "selectCountry": "Selecione o pais",
+    "selectProvision": "Selecione Provisão",
+    "provisionNotAvailable": "Disposição não disponível, envie as provas.",
+    "select1Provision": "Por favor selecione 1 provisão",
+    "for": "para",
+    "from": "a partir de",
+    "confirmProvision": "Confirme a provisão",
+    "proceed": "Continuar",
+    "crossBorderEvidenceRequest": "Solicitação de evidências transfronteiriças",
+    "de4aUsedTo": "O sistema técnico DE4A será usado para:",
+    "requestCrossBorderEvidence": "Solicite as seguintes evidências transfronteiriças:",
+    "uploadCrossBorderEvidence": "Carregue as seguintes evidências:",
+    "inpectEvidence": "Você será capaz de inspecionar as evidências e escolher se quiser prosseguir.",
+    "dea4aAreYouSure": "Tem certeza de que quer usar o sistema técnico DE4A?",
+    "cancel": "Cancelar",
+    "request": "Solicitação",
+    "complete": "Completo",
+    "provideInputER": "Por favor, forneça a entrada obrigatória para o pedido explícito de Mor!"
+  },
+  "term": {
+    "LangEnum/en": {
+      "label": "Inglês"
+    },
+    "LangEnum/es": {
+      "label": "Espanhol"
+    },
+    "LangEnum/pt": {
+      "label": "Português"
+    },
+    "LangEnum/fr": {
+      "label": "Francês"
+    },
+    "LangEnum/sl": {
+      "label": "Esloveno"
+    },
+    "NUTS0Enum/AT": {
+      "label": "Áustria"
+    },
+    "NUTS0Enum/BE": {
+      "label": "Bélgica"
+    },
+    "NUTS0Enum/BG": {
+      "label": "Bulgária"
+    },
+    "NUTS0Enum/CY": {
+      "label": "Chipre"
+    },
+    "NUTS0Enum/CZ": {
+      "label": "Czechia"
+    },
+    "NUTS0Enum/DE": {
+      "label": "Alemanha"
+    },
+    "NUTS0Enum/DK": {
+      "label": "Dinamarca"
+    },
+    "NUTS0Enum/EE": {
+      "label": "Estônia"
+    },
+    "NUTS0Enum/EL": {
+      "label": "Grécia"
+    },
+    "NUTS0Enum/ES": {
+      "label": "Espanha"
+    },
+    "NUTS0Enum/FI": {
+      "label": "Finlândia"
+    },
+    "NUTS0Enum/FR": {
+      "label": "França"
+    },
+    "NUTS0Enum/HR": {
+      "label": "Croácia"
+    },
+    "NUTS0Enum/HU": {
+      "label": "Hungria"
+    },
+    "NUTS0Enum/IE": {
+      "label": "Irlanda"
+    },
+    "NUTS0Enum/IT": {
+      "label": "Itália"
+    },
+    "NUTS0Enum/LT": {
+      "label": "Lituânia"
+    },
+    "NUTS0Enum/LU": {
+      "label": "Luxemburgo"
+    },
+    "NUTS0Enum/LV": {
+      "label": "Letônia"
+    },
+    "NUTS0Enum/MT": {
+      "label": "Malta"
+    },
+    "NUTS0Enum/NL": {
+      "label": "Holanda"
+    },
+    "NUTS0Enum/PL": {
+      "label": "Polônia"
+    },
+    "NUTS0Enum/PT": {
+      "label": "Portugal"
+    },
+    "NUTS0Enum/RO": {
+      "label": "Romênia"
+    },
+    "NUTS0Enum/SE": {
+      "label": "Suécia"
+    },
+    "NUTS0Enum/SI": {
+      "label": "Eslovênia"
+    },
+    "NUTS0Enum/SK": {
+      "label": "Eslováquia"
+    },
+    "BirthEvidence": {
+      "label": "Evidência de nascimento",
+      "description": "Documento oficial ou dados provando o nascimento de uma criança."
+    },
+    "BirthEvidence/Identifier": {
+      "label": "Identificador",
+      "description": "Uma referência inequívoca às evidências de nascimento."
+    },
+    "BirthEvidence/IssueDate": {
+      "label": "Data de emissão",
+      "description": "A data mais recente em que a instância de evidência de nascimento foi emitida."
+    },
+    "BirthEvidence/IssuingAuthority": {
+      "label": "Autoridade emissora",
+      "description": "Uma organização pública com autoridade oficial encarregada de emitir a evidência de nascimento."
+    },
+    "BirthEvidence/IssuingPlace": {
+      "label": "Lugar emissor",
+      "description": "O local onde a evidência de nascimento foi emitida."
+    },
+    "BirthEvidence/CertifiesBirth": {
+      "label": "Certifica o nascimento",
+      "description": "Atestando de forma formal que o nascimento é verdadeiro."
+    },
+    "BirthEvidence/CertifiesBirth/Child": {
+      "label": "Criança",
+      "description": "A pessoa que nasce no nascimento. Uma pessoa de qualquer idade, que é filho ou filha."
+    },
+    "BirthEvidence/CertifiesBirth/Child/Gender": {
+      "label": "Gênero",
+      "description": "Gênero da pessoa nascida"
+    },
+    "BirthEvidence/CertifiesBirth/Parent": {
+      "label": "Pai",
+      "description": "O pai da criança. Uma das duas pessoas que são conjuntamente a causa do nascimento da criança, isto é, pai natural."
+    }
+  }
+}
