@@ -28,6 +28,102 @@
     "provideInputER": "Prosim, zagotovite zahtevane podatke za izrecno zahtevo MOR!"
   },
   "term": {
+    "LangEnum/en": {
+      "label": "Angleščina"
+    },
+    "LangEnum/es": {
+      "label": "Španščina"
+    },
+    "LangEnum/pt": {
+      "label": "Portugalščina"
+    },
+    "LangEnum/fr": {
+      "label": "Francoščina"
+    },
+    "LangEnum/sl": {
+      "label": "Slovenščina"
+    },
+    "NUTS0Enum/AT": {
+      "label": "Avstrija"
+    },
+    "NUTS0Enum/BE": {
+      "label": "Belgija"
+    },
+    "NUTS0Enum/BG": {
+      "label": "Bolgarija"
+    },
+    "NUTS0Enum/CY": {
+      "label": "Ciper"
+    },
+    "NUTS0Enum/CZ": {
+      "label": "Češka"
+    },
+    "NUTS0Enum/DE": {
+      "label": "Germany"
+    },
+    "NUTS0Enum/DK": {
+      "label": "Danska"
+    },
+    "NUTS0Enum/EE": {
+      "label": "Estonija"
+    },
+    "NUTS0Enum/EL": {
+      "label": "Greece"
+    },
+    "NUTS0Enum/ES": {
+      "label": "Spain"
+    },
+    "NUTS0Enum/FI": {
+      "label": "Finska"
+    },
+    "NUTS0Enum/FR": {
+      "label": "Francija"
+    },
+    "NUTS0Enum/HR": {
+      "label": "Hrvaška"
+    },
+    "NUTS0Enum/HU": {
+      "label": "Madžarska"
+    },
+    "NUTS0Enum/IE": {
+      "label": "Irska"
+    },
+    "NUTS0Enum/IT": {
+      "label": "Italija"
+    },
+    "NUTS0Enum/LT": {
+      "label": "Litva"
+    },
+    "NUTS0Enum/LU": {
+      "label": "Luksemburg"
+    },
+    "NUTS0Enum/LV": {
+      "label": "Latvija"
+    },
+    "NUTS0Enum/MT": {
+      "label": "Malta"
+    },
+    "NUTS0Enum/NL": {
+      "label": "Nizozemska"
+    },
+    "NUTS0Enum/PL": {
+      "label": "Poljska"
+    },
+    "NUTS0Enum/PT": {
+      "label": "Portugalska"
+    },
+    "NUTS0Enum/RO": {
+      "label": "Romunija"
+    },
+    "NUTS0Enum/SE": {
+      "label": "Švedska"
+    },
+    "NUTS0Enum/SI": {
+      "label": "Slovenija"
+    },
+    "NUTS0Enum/SK": {
+      "label": "Slovaška"
+    },
     "BirthEvidence": {
       "label": "Dokazilo o rojstvu",
       "description": "Uradni dokument ali podatek, ki dokazuje rojstvo otroka."
