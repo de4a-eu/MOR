@@ -26,6 +26,7 @@
     "request": "Request",
     "complete": "Complete",
     "provideInputER": "Please provide required input to MOR Explicit Request!",
+    "provideInputP": "Please provide required input to MOR Preview!",
     "include": "include",
     "uploadEvidence": "upload evidence",
     "Preview": "Preview",
