@@ -9,6 +9,7 @@ import {
   faExclamationTriangle,
   faCheckCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
 
 declare var bootstrap: any;
 
@@ -39,8 +40,13 @@ export class MorPComponent implements OnInit {
 
   constructor(
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
-    private dataLoaderStorage: DataLoaderStorageService
-  ) {}
+    private dataLoaderStorage: DataLoaderStorageService,
+    public translate: TranslateService
+  ) {
+    translate.addLangs(['en', 'sl', 'es']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
   /**
    * Toggle confirm send status for given canonical evidence type
@@ -84,10 +90,10 @@ export class MorPComponent implements OnInit {
 
   public previewConfirmed(): boolean {
     let confirmed = true;
-    Object.keys(this.confirmSendStatus).map((x) => {
+    /*Object.keys(this.confirmSendStatus).map((x) => {
       if (!this.confirmSendStatus[x].include && !this.uploads[x])
         confirmed = false;
-    });
+    });*/
     return confirmed;
   }
 
@@ -184,6 +190,7 @@ export class MorPComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['defaultLanguage'])
       this.selectedLanguage = this.defaultLanguage;
+      this.translate.use(this.selectedLanguage);
     if (changes['postActionValue']) {
       try {
         this.postActionValueObject = JSON.parse(this.postActionValue);

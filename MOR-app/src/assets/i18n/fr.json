@@ -25,7 +25,15 @@
     "cancel": "Annuler",
     "request": "Demande",
     "complete": "Compléter",
-    "provideInputER": "Veuillez fournir la saisie requise pour une demande explicite de Mor!"
+    "provideInputER": "Veuillez fournir la saisie requise pour une demande explicite de Mor!",
+    "include": "incluir",
+    "uploadEvidence": "télécharger des preuves",
+    "Preview": "Aperçu",
+    "with": "avec",
+    "descriptions": "descriptions",
+    "in": "dans",
+    "without": "sans pour autant",
+    "exclude": "exclure"
   },
   "term": {
     "LangEnum/en": {

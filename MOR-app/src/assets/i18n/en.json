@@ -25,7 +25,15 @@
     "cancel": "Cancel",
     "request": "Request",
     "complete": "Complete",
-    "provideInputER": "Please provide required input to MOR Explicit Request!"
+    "provideInputER": "Please provide required input to MOR Explicit Request!",
+    "include": "include",
+    "uploadEvidence": "upload evidence",
+    "Preview": "Preview",
+    "with": "with",
+    "descriptions": "descriptions",
+    "in": "in",
+    "without": "without",
+    "exclude": "exclude"
   },
   "term": {
     "LangEnum/en": {

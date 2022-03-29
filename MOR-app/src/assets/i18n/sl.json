@@ -25,7 +25,15 @@
     "cancel": "Prekliči",
     "request": "Zahtevaj",
     "complete": "Zaključeno",
-    "provideInputER": "Prosim, zagotovite zahtevane podatke za izrecno zahtevo MOR!"
+    "provideInputER": "Prosim, zagotovite zahtevane podatke za izrecno zahtevo MOR!",
+    "include": "vključi",
+    "uploadEvidence": "naloži dokazilo",
+    "Preview": "Predogled",
+    "with": "z",
+    "descriptions": "opisi",
+    "in": "v",
+    "without": "brez",
+    "exclude": "izključi"
   },
   "term": {
     "LangEnum/en": {

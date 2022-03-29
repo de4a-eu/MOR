@@ -25,7 +25,15 @@
     "cancel": "Cancelar",
     "request": "Solicitar",
     "complete": "Completo",
-    "provideInputER": "¡Proporcione la información necesaria para la solicitud explícita de MOR!"
+    "provideInputER": "¡Proporcione la información necesaria para la solicitud explícita de MOR!",
+    "include": "incluir",
+    "uploadEvidence": "cargar evidencia",
+    "Preview": "Avance",
+    "with": "con",
+    "descriptions": "descripciones",
+    "in": "en",
+    "without": "sin",
+    "exclude": "excluir"
   },
   "term": {
     "LangEnum/en": {
