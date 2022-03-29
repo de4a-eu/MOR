@@ -37,20 +37,1122 @@
     "exclude": "excluir"
   },
   "term": {
+    "BirthEvidence": {
+      "label": "Evidencia",
+      "description": "Documento oficial o datos que demuestran el nacimiento de un niño."
+    },
+    "BirthEvidence/Identifier": {
+      "label": "Identificador",
+      "description": "Una referencia inequívoca a las pruebas de nacimiento."
+    },
+    "BirthEvidence/IssueDate": {
+      "label": "Fecha de asunto",
+      "description": "La fecha más reciente sobre la que se emitió el caso de evidencia de nacimiento."
+    },
+    "BirthEvidence/IssuingAuthority": {
+      "label": "La autoridad emisora",
+      "description": "Una organización pública con la autoridad oficial encargada de emitir la evidencia del nacimiento."
+    },
+    "BirthEvidence/IssuingPlace": {
+      "label": "Lugar de emisión",
+      "description": "La ubicación donde se emitió la evidencia de nacimiento."
+    },
+    "BirthEvidence/CertifiesBirth": {
+      "label": "Certifica el nacimiento",
+      "description": "Firstando de una manera formal que el nacimiento es cierto."
+    },
+    "BirthEvidence/CertifiesBirth/Child": {
+      "label": "Niño",
+      "description": "La persona que nace en el nacimiento. Una persona de cualquier edad, que es un hijo o hija."
+    },
+    "BirthEvidence/CertifiesBirth/Child/Gender": {
+      "description": "Género de la persona nacida"
+    },
+    "BirthEvidence/CertifiesBirth/Parent": {
+      "label": "Padre",
+      "description": "El padre del niño. Una de las dos personas que son conjuntamente la causa del nacimiento del niño, es decir, padre natural."
+    },
+    "LocationAddress": {
+      "label": "Habla a"
+    },
+    "LocationAddress/AdminUnitL2": {
+      "label": "Nivel de unidad de administración 2",
+      "description": "La región de la dirección, generalmente un condado, estado u otro área de este tipo que generalmente abarca varias localidades."
+    },
+    "LocationAddress/AdminUnitL1": {
+      "label": "Nivel de unidad de administración 1",
+      "description": "La unidad administrativa superior para la dirección, casi siempre un país. La mejor práctica es utilizar el código ISO 3166-1."
+    },
+    "LocationAddress/PoBox": {
+      "label": "Pobox",
+      "description": "El número de la caja de la oficina de correos. El nombre de Inspire para esto es 'postaldeliveryidentifier' para el cual usa la propiedad del designador del localizador con un atributo de tipo de ese nombre. Este vocabulario separa el cuadro de correos para una mayor independencia de la tecnología."
+    },
+    "LocationAddress/Thoroughfare": {
+      "label": "Vaso",
+      "description": "Citando las directrices de inspiración, una vía pública es: 'un componente de dirección que representa el nombre de un pasaje o camino a través de un lugar a otro. Una vía no es necesariamente un camino, podría ser una vía fluvial o alguna otra característica."
+    },
+    "LocationAddress/LocatorDesignator": {
+      "label": "Designador de localizador",
+      "description": "\"El designador del localizador está definido por las directrices INSPIRE como \"\"un número o una secuencia de caracteres que identifican de forma única el localizador dentro del alcance (s) relevante (s). La identificación completa del localizador podría incluir uno o más designadores de localizador '. En términos más simples, este es el número de edificio, el número de apartamento, etc. para una dirección como 'Flat 3, 17 Bridge Street', el localizador es 'Flat 3, 17'.\""
+    },
+    "LocationAddress/LocatorName": {
+      "label": "Nombre del localizador",
+      "description": "Sobre la base de las directrices INSPIRE, el nombre del localizador se define como: 'sustantivos adecuados (s) aplicados a la entidad del mundo real identificado por el localizador. El nombre del localizador podría ser el nombre de la propiedad o complejo, del edificio o parte del edificio, o podría ser el nombre de una habitación dentro de un edificio. La diferencia clave entre un localizador y un nombre de localizador es que este último es un nombre adecuado y es poco probable que incluya dígitos. Por ejemplo, 'Shumann, Berlaymont' es una sala de reuniones dentro de la sede de la Comisión Europea, por lo que el nombre del localizador es más apropiado que el localizador."
+    },
+    "LocationAddress/AddressArea": {
+      "label": "Área de direcciones",
+      "description": "\"Tomando la definición de inspirar, el área de direcciones es: el nombre o los nombres de un área geográfica o localidad que agrupan una serie de objetos direccionables para fines de direccionamiento, sin ser una unidad administrativa \"\". Esto normalmente sería parte de una ciudad, un barrio o pueblo.\""
+    },
+    "LocationAddress/PostName": {
+      "label": "Nombre del puesto",
+      "description": "\"La división postal clave de la dirección, generalmente la ciudad. (La definición de Inspire es \"\"uno o más nombres creados y mantenidos con fines postales para identificar una subdivisión de direcciones y puntos de entrega postal).\""
+    },
+    "LocationAddress/PostCode": {
+      "label": "Código postal",
+      "description": "El código postal (A.K.A código postal, código postal, etc.). Los códigos POST son elementos comunes en los sistemas de direcciones postales de muchos países."
+    },
+    "CountryEnum": {
+      "description": "ISO 3166-1 Los códigos alfa-3 son códigos de país de tres letras definidos en la norma ISO 3166-1, parte de la norma ISO 3166 publicada por la Organización Internacional de Normalización, para representar a países, territorios dependientes y áreas especiales de interés geográfico."
+    },
+    "CountryEnum/1A0": {
+      "label": "Kosovo"
+    },
+    "CountryEnum/ABW": {
+      "label": "Aruba"
+    },
+    "CountryEnum/AFG": {
+      "label": "Afganistán"
+    },
+    "CountryEnum/AFI": {
+      "label": "Francés lejos y issas"
+    },
+    "CountryEnum/AGO": {
+      "label": "Angola"
+    },
+    "CountryEnum/AIA": {
+      "label": "Anguila"
+    },
+    "CountryEnum/ALA": {
+      "label": "Islas Aland"
+    },
+    "CountryEnum/ALB": {
+      "label": "Albania"
+    },
+    "CountryEnum/AND": {
+      "label": "Andorra"
+    },
+    "CountryEnum/ANT": {
+      "label": "Antillas Holandesas"
+    },
+    "CountryEnum/ARE": {
+      "label": "Emiratos Árabes Unidos"
+    },
+    "CountryEnum/ARG": {
+      "label": "Argentina"
+    },
+    "CountryEnum/ARM": {
+      "label": "Armenia"
+    },
+    "CountryEnum/ASM": {
+      "label": "Samoa Americana"
+    },
+    "CountryEnum/ATA": {
+      "label": "Antártida"
+    },
+    "CountryEnum/ATB": {
+      "label": "Territorio antártico británico"
+    },
+    "CountryEnum/ATF": {
+      "label": "Tierras del sur franceses"
+    },
+    "CountryEnum/ATG": {
+      "label": "Antigua y Barbuda"
+    },
+    "CountryEnum/ATN": {
+      "label": "Donning Maud Land"
+    },
+    "CountryEnum/AUS": {
+      "label": "Australia"
+    },
+    "CountryEnum/AUT": {
+      "label": "Austria"
+    },
+    "CountryEnum/AZE": {
+      "label": "Azerbaiyán"
+    },
+    "CountryEnum/BDI": {
+      "label": "Burundi"
+    },
+    "CountryEnum/BEL": {
+      "label": "Bélgica"
+    },
+    "CountryEnum/BEN": {
+      "label": "Benin"
+    },
+    "CountryEnum/BES": {
+      "label": "Bonaire, Sint Eustatius y Saba."
+    },
+    "CountryEnum/BFA": {
+      "label": "Burkina Faso"
+    },
+    "CountryEnum/BGD": {
+      "label": "Bangladesh"
+    },
+    "CountryEnum/BGR": {
+      "label": "Bulgaria"
+    },
+    "CountryEnum/BHR": {
+      "label": "Bahrein"
+    },
+    "CountryEnum/BHS": {
+      "label": "Bahamas"
+    },
+    "CountryEnum/BIH": {
+      "label": "Bosnia y Herzegovina"
+    },
+    "CountryEnum/BLM": {
+      "label": "San Barthélemy"
+    },
+    "CountryEnum/BLR": {
+      "label": "Bielorrusia"
+    },
+    "CountryEnum/BLZ": {
+      "label": "Belice"
+    },
+    "CountryEnum/BMU": {
+      "label": "islas Bermudas"
+    },
+    "CountryEnum/BOL": {
+      "label": "Bolivia"
+    },
+    "CountryEnum/BRA": {
+      "label": "Brasil"
+    },
+    "CountryEnum/BRB": {
+      "label": "Barbados"
+    },
+    "CountryEnum/BRN": {
+      "label": "Brunei"
+    },
+    "CountryEnum/BTN": {
+      "label": "Bután"
+    },
+    "CountryEnum/BUR": {
+      "label": "Birmania"
+    },
+    "CountryEnum/BVT": {
+      "label": "Isla de bouvet"
+    },
+    "CountryEnum/BWA": {
+      "label": "Botsuana"
+    },
+    "CountryEnum/BYS": {
+      "label": "Bielorrusia"
+    },
+    "CountryEnum/CAF": {
+      "label": "República Centroafricana"
+    },
+    "CountryEnum/CAN": {
+      "label": "Canadá"
+    },
+    "CountryEnum/CCK": {
+      "label": "Islas Cocos (Keeling)"
+    },
+    "CountryEnum/CHE": {
+      "label": "Suiza"
+    },
+    "CountryEnum/CHL": {
+      "label": "Chile"
+    },
+    "CountryEnum/CHN": {
+      "label": "China"
+    },
+    "CountryEnum/CIV": {
+      "label": "Côte d'Ivoire"
+    },
+    "CountryEnum/CMR": {
+      "label": "Camerún"
+    },
+    "CountryEnum/COD": {
+      "label": "República Democrática del Congo"
+    },
+    "CountryEnum/COG": {
+      "label": "Congo"
+    },
+    "CountryEnum/COK": {
+      "label": "Islas Cook"
+    },
+    "CountryEnum/COL": {
+      "label": "Colombia"
+    },
+    "CountryEnum/COM": {
+      "label": "Comoras"
+    },
+    "CountryEnum/CPT": {
+      "label": "Clipperton"
+    },
+    "CountryEnum/CPV": {
+      "label": "Cabo Verde"
+    },
+    "CountryEnum/CRI": {
+      "label": "Costa Rica"
+    },
+    "CountryEnum/CSK": {
+      "label": "Checoslovaquia"
+    },
+    "CountryEnum/CTE": {
+      "label": "Islas Cantón y Enderbury"
+    },
+    "CountryEnum/CUB": {
+      "label": "Cuba"
+    },
+    "CountryEnum/CUW": {
+      "label": "Curazao"
+    },
+    "CountryEnum/CXR": {
+      "label": "Isla de Navidad"
+    },
+    "CountryEnum/CYM": {
+      "label": "Islas Caimán"
+    },
+    "CountryEnum/CYP": {
+      "label": "Chipre"
+    },
+    "CountryEnum/CZE": {
+      "label": "Chequia"
+    },
+    "CountryEnum/DDR": {
+      "label": "Alemania del Este"
+    },
+    "CountryEnum/DEU": {
+      "label": "Alemania"
+    },
+    "CountryEnum/DHY": {
+      "label": "Dahomey"
+    },
+    "CountryEnum/DJI": {
+      "label": "Djibouti"
+    },
+    "CountryEnum/DMA": {
+      "label": "Dominica"
+    },
+    "CountryEnum/DNK": {
+      "label": "Dinamarca"
+    },
+    "CountryEnum/DOM": {
+      "label": "República Dominicana"
+    },
+    "CountryEnum/DZA": {
+      "label": "Argelia"
+    },
+    "CountryEnum/ECU": {
+      "label": "Ecuador"
+    },
+    "CountryEnum/EGY": {
+      "label": "Egipto"
+    },
+    "CountryEnum/ERI": {
+      "label": "Eritrea"
+    },
+    "CountryEnum/ESH": {
+      "label": "Sahara Occidental"
+    },
+    "CountryEnum/ESP": {
+      "label": "España"
+    },
+    "CountryEnum/EST": {
+      "label": "Estonia"
+    },
+    "CountryEnum/ETH": {
+      "label": "Etiopía"
+    },
+    "CountryEnum/EUR": {
+      "label": "unión Europea"
+    },
+    "CountryEnum/FIN": {
+      "label": "Finlandia"
+    },
+    "CountryEnum/FJI": {
+      "label": "Fiji"
+    },
+    "CountryEnum/FLK": {
+      "label": "Islas Malvinas"
+    },
+    "CountryEnum/FQ0": {
+      "label": "Tierras francesas del sur y antártico"
+    },
+    "CountryEnum/FRA": {
+      "label": "Francia"
+    },
+    "CountryEnum/FRO": {
+      "label": "Feroes"
+    },
+    "CountryEnum/FSM": {
+      "label": "Micronesia"
+    },
+    "CountryEnum/FXX": {
+      "label": "Metropolitano francia"
+    },
+    "CountryEnum/GAB": {
+      "label": "Gabón"
+    },
+    "CountryEnum/GBR": {
+      "label": "Reino Unido"
+    },
+    "CountryEnum/GEL": {
+      "label": "Gilbert y Islas Elice"
+    },
+    "CountryEnum/GEO": {
+      "label": "Georgia"
+    },
+    "CountryEnum/GGY": {
+      "label": "Guerna"
+    },
+    "CountryEnum/GHA": {
+      "label": "Ghana"
+    },
+    "CountryEnum/GIB": {
+      "label": "Gibraltar"
+    },
+    "CountryEnum/GIN": {
+      "label": "Guinea"
+    },
+    "CountryEnum/GLP": {
+      "label": "Guadalupe"
+    },
+    "CountryEnum/GMB": {
+      "label": "La gambia"
+    },
+    "CountryEnum/GNB": {
+      "label": "Guinea-Bissau"
+    },
+    "CountryEnum/GNQ": {
+      "label": "Guinea Ecuatorial"
+    },
+    "CountryEnum/GRC": {
+      "label": "Grecia"
+    },
+    "CountryEnum/GRD": {
+      "label": "Granada"
+    },
+    "CountryEnum/GRL": {
+      "label": "Groenlandia"
+    },
+    "CountryEnum/GTM": {
+      "label": "Guatemala"
+    },
+    "CountryEnum/GUF": {
+      "label": "Guayana francesa"
+    },
+    "CountryEnum/GUM": {
+      "label": "Guam"
+    },
+    "CountryEnum/GUY": {
+      "label": "Guayana"
+    },
+    "CountryEnum/HKG": {
+      "label": "Hong Kong"
+    },
+    "CountryEnum/HMD": {
+      "label": "Escuchada isla y islas McDonald"
+    },
+    "CountryEnum/HND": {
+      "label": "Honduras"
+    },
+    "CountryEnum/HRV": {
+      "label": "Croacia"
+    },
+    "CountryEnum/HTI": {
+      "label": "Haití"
+    },
+    "CountryEnum/HUN": {
+      "label": "Hungría"
+    },
+    "CountryEnum/HVO": {
+      "label": "Alto volta"
+    },
+    "CountryEnum/IDN": {
+      "label": "Indonesia"
+    },
+    "CountryEnum/IMN": {
+      "label": "Isla del hombre"
+    },
+    "CountryEnum/IND": {
+      "label": "India"
+    },
+    "CountryEnum/IOT": {
+      "label": "Territorio Británico del Océano Índico"
+    },
+    "CountryEnum/IRL": {
+      "label": "Irlanda"
+    },
+    "CountryEnum/IRN": {
+      "label": "Irán"
+    },
+    "CountryEnum/IRQ": {
+      "label": "Irak"
+    },
+    "CountryEnum/ISL": {
+      "label": "Islandia"
+    },
+    "CountryEnum/ISR": {
+      "label": "Israel"
+    },
+    "CountryEnum/ITA": {
+      "label": "Italia"
+    },
+    "CountryEnum/JAM": {
+      "label": "Jamaica"
+    },
+    "CountryEnum/JEY": {
+      "label": "Jersey"
+    },
+    "CountryEnum/JOR": {
+      "label": "Jordán"
+    },
+    "CountryEnum/JPN": {
+      "label": "Japón"
+    },
+    "CountryEnum/JTN": {
+      "label": "Isla de Johnston"
+    },
+    "CountryEnum/KAZ": {
+      "label": "Kazajstán"
+    },
+    "CountryEnum/KEN": {
+      "label": "Kenia"
+    },
+    "CountryEnum/KGZ": {
+      "label": "Kirguistán"
+    },
+    "CountryEnum/KHM": {
+      "label": "Camboya"
+    },
+    "CountryEnum/KIR": {
+      "label": "Kiribati"
+    },
+    "CountryEnum/KNA": {
+      "label": "Saint Kitts y Nevis"
+    },
+    "CountryEnum/KOR": {
+      "label": "Corea del Sur"
+    },
+    "CountryEnum/KWT": {
+      "label": "Kuwait"
+    },
+    "CountryEnum/LAO": {
+      "label": "Laos"
+    },
+    "CountryEnum/LBN": {
+      "label": "Líbano"
+    },
+    "CountryEnum/LBR": {
+      "label": "Liberia"
+    },
+    "CountryEnum/LBY": {
+      "label": "Libia"
+    },
+    "CountryEnum/LCA": {
+      "label": "Santa Lucía"
+    },
+    "CountryEnum/LIE": {
+      "label": "Liechtenstein"
+    },
+    "CountryEnum/LKA": {
+      "label": "Sri Lanka"
+    },
+    "CountryEnum/LSO": {
+      "label": "Lesoto"
+    },
+    "CountryEnum/LTU": {
+      "label": "Lituania"
+    },
+    "CountryEnum/LUX": {
+      "label": "Luxemburgo"
+    },
+    "CountryEnum/LVA": {
+      "label": "Letonia"
+    },
+    "CountryEnum/MAC": {
+      "label": "Macao"
+    },
+    "CountryEnum/MAF": {
+      "label": "San Martín"
+    },
+    "CountryEnum/MAR": {
+      "label": "Marruecos"
+    },
+    "CountryEnum/MCO": {
+      "label": "Mónaco"
+    },
+    "CountryEnum/MDA": {
+      "label": "Moldavia"
+    },
+    "CountryEnum/MDG": {
+      "label": "Madagascar"
+    },
+    "CountryEnum/MDV": {
+      "label": "Maldivas"
+    },
+    "CountryEnum/MEX": {
+      "label": "México"
+    },
+    "CountryEnum/MHL": {
+      "label": "Islas Marshall"
+    },
+    "CountryEnum/MID": {
+      "label": "Islas Midway"
+    },
+    "CountryEnum/MKD": {
+      "label": "Macedonia del Norte"
+    },
+    "CountryEnum/MLI": {
+      "label": "Mali"
+    },
+    "CountryEnum/MLT": {
+      "label": "Malta"
+    },
+    "CountryEnum/MMR": {
+      "label": "Myanmar / Birmania"
+    },
+    "CountryEnum/MNE": {
+      "label": "Montenegro"
+    },
+    "CountryEnum/MNG": {
+      "label": "Mongolia"
+    },
+    "CountryEnum/MNP": {
+      "label": "Islas Marianas del Norte"
+    },
+    "CountryEnum/MOZ": {
+      "label": "Mozambique"
+    },
+    "CountryEnum/MRT": {
+      "label": "Mauritania"
+    },
+    "CountryEnum/MSR": {
+      "label": "Montserrat"
+    },
+    "CountryEnum/MTQ": {
+      "label": "Martinica"
+    },
+    "CountryEnum/MUS": {
+      "label": "Mauricio"
+    },
+    "CountryEnum/MWI": {
+      "label": "Malawi"
+    },
+    "CountryEnum/MYS": {
+      "label": "Malasia"
+    },
+    "CountryEnum/MYT": {
+      "label": "Macho"
+    },
+    "CountryEnum/NAM": {
+      "label": "Namibia"
+    },
+    "CountryEnum/NCL": {
+      "label": "Nueva Caledonia"
+    },
+    "CountryEnum/NER": {
+      "label": "Níger"
+    },
+    "CountryEnum/NFK": {
+      "label": "Isla Norfolk"
+    },
+    "CountryEnum/NGA": {
+      "label": "Nigeria"
+    },
+    "CountryEnum/NHB": {
+      "label": "Nuevas Hébridas"
+    },
+    "CountryEnum/NIC": {
+      "label": "Nicaragua"
+    },
+    "CountryEnum/NIU": {
+      "label": "Niue"
+    },
+    "CountryEnum/NLD": {
+      "label": "Países Bajos"
+    },
+    "CountryEnum/NOR": {
+      "label": "Noruega"
+    },
+    "CountryEnum/NPL": {
+      "label": "Nepal"
+    },
+    "CountryEnum/NRU": {
+      "label": "Nauru"
+    },
+    "CountryEnum/NTZ": {
+      "label": "Zona neutral"
+    },
+    "CountryEnum/NZL": {
+      "label": "Nueva Zelanda"
+    },
+    "CountryEnum/OMN": {
+      "label": "Omán"
+    },
+    "CountryEnum/PAK": {
+      "label": "Pakistán"
+    },
+    "CountryEnum/PAN": {
+      "label": "Panamá"
+    },
+    "CountryEnum/PCI": {
+      "label": "Territorio de confianza de las Islas del Pacífico"
+    },
+    "CountryEnum/PCN": {
+      "label": "Islas Pitcairn"
+    },
+    "CountryEnum/PCZ": {
+      "label": "Zona del Canal de Panamá"
+    },
+    "CountryEnum/PER": {
+      "label": "Perú"
+    },
+    "CountryEnum/PHL": {
+      "label": "Filipinas"
+    },
+    "CountryEnum/PLW": {
+      "label": "Palau"
+    },
+    "CountryEnum/PNG": {
+      "label": "Papúa Nueva Guinea"
+    },
+    "CountryEnum/POL": {
+      "label": "Polonia"
+    },
+    "CountryEnum/PRI": {
+      "label": "Puerto Rico"
+    },
+    "CountryEnum/PRK": {
+      "label": "Corea del Norte"
+    },
+    "CountryEnum/PRT": {
+      "label": "Portugal"
+    },
+    "CountryEnum/PRY": {
+      "label": "Paraguay"
+    },
+    "CountryEnum/PSE": {
+      "label": "Palestina"
+    },
+    "CountryEnum/PUS": {
+      "label": "Islas Pacífico misceláneas de los Estados Unidos"
+    },
+    "CountryEnum/PYF": {
+      "label": "Polinesia francés"
+    },
+    "CountryEnum/QAT": {
+      "label": "Katar"
+    },
+    "CountryEnum/REU": {
+      "label": "Reunión"
+    },
+    "CountryEnum/RHO": {
+      "label": "Rhodesia del sur"
+    },
+    "CountryEnum/ROU": {
+      "label": "Rumania"
+    },
+    "CountryEnum/RUS": {
+      "label": "Rusia"
+    },
+    "CountryEnum/RWA": {
+      "label": "Ruanda"
+    },
+    "CountryEnum/SAU": {
+      "label": "Arabia Saudita"
+    },
+    "CountryEnum/SCG": {
+      "label": "Serbia y Montenegro"
+    },
+    "CountryEnum/SDN": {
+      "label": "Sudán"
+    },
+    "CountryEnum/SEN": {
+      "label": "Senegal"
+    },
+    "CountryEnum/SGP": {
+      "label": "Singapur"
+    },
+    "CountryEnum/SGS": {
+      "label": "Georgia del sur y las islas Sandwich del sur"
+    },
+    "CountryEnum/SHN": {
+      "label": "San Helena, Ascensión y Tristan da Cunha"
+    },
+    "CountryEnum/SJM": {
+      "label": "Svalbard y Jan Mayen"
+    },
+    "CountryEnum/SKM": {
+      "label": "Sikkim"
+    },
+    "CountryEnum/SLB": {
+      "label": "Islas Salomón"
+    },
+    "CountryEnum/SLE": {
+      "label": "Sierra Leona"
+    },
+    "CountryEnum/SLV": {
+      "label": "El Salvador"
+    },
+    "CountryEnum/SMR": {
+      "label": "San Marino"
+    },
+    "CountryEnum/SOM": {
+      "label": "Somalia"
+    },
+    "CountryEnum/SPM": {
+      "label": "Saint Pierre y Miquelon"
+    },
+    "CountryEnum/SRB": {
+      "label": "Serbia"
+    },
+    "CountryEnum/SSD": {
+      "label": "Sudán del Sur"
+    },
+    "CountryEnum/STP": {
+      "label": "Santo Tomé y Príncipe"
+    },
+    "CountryEnum/SUN": {
+      "label": "Unión Soviética"
+    },
+    "CountryEnum/SUR": {
+      "label": "Suriname"
+    },
+    "CountryEnum/SVK": {
+      "label": "Eslovaquia"
+    },
+    "CountryEnum/SVN": {
+      "label": "Eslovenia"
+    },
+    "CountryEnum/SWE": {
+      "label": "Suecia"
+    },
+    "CountryEnum/SWZ": {
+      "label": "Eswatini"
+    },
+    "CountryEnum/SXM": {
+      "label": "Sint maarten"
+    },
+    "CountryEnum/SYC": {
+      "label": "Seychelles"
+    },
+    "CountryEnum/SYR": {
+      "label": "Siria"
+    },
+    "CountryEnum/TCA": {
+      "label": "Islas Turcas y Caicos"
+    },
+    "CountryEnum/TCD": {
+      "label": "Chad"
+    },
+    "CountryEnum/TGO": {
+      "label": "Ir"
+    },
+    "CountryEnum/THA": {
+      "label": "Tailandia"
+    },
+    "CountryEnum/TJK": {
+      "label": "Tayikistán"
+    },
+    "CountryEnum/TKL": {
+      "label": "Tokelau"
+    },
+    "CountryEnum/TKM": {
+      "label": "Turkmenistán"
+    },
+    "CountryEnum/TLS": {
+      "label": "Timor-Leste"
+    },
+    "CountryEnum/TMP": {
+      "label": "Timor Oriental"
+    },
+    "CountryEnum/TON": {
+      "label": "Tonga"
+    },
+    "CountryEnum/TTO": {
+      "label": "Trinidad y Tobago"
+    },
+    "CountryEnum/TUN": {
+      "label": "Túnez"
+    },
+    "CountryEnum/TUR": {
+      "label": "pavo"
+    },
+    "CountryEnum/TUV": {
+      "label": "Tuvalu"
+    },
+    "CountryEnum/TWN": {
+      "label": "Taiwán"
+    },
+    "CountryEnum/TZA": {
+      "label": "Tanzania"
+    },
+    "CountryEnum/UGA": {
+      "label": "Uganda"
+    },
+    "CountryEnum/UKR": {
+      "label": "Ucrania"
+    },
+    "CountryEnum/UMI": {
+      "label": "Islas periféricas menores de los Estados Unidos"
+    },
+    "CountryEnum/URY": {
+      "label": "Uruguay"
+    },
+    "CountryEnum/USA": {
+      "label": "Estados Unidos"
+    },
+    "CountryEnum/UZB": {
+      "label": "Uzbekistán"
+    },
+    "CountryEnum/VAT": {
+      "label": "Estado de la ciudad del Vaticano"
+    },
+    "CountryEnum/VCT": {
+      "label": "San Vicente y las Granadinas"
+    },
+    "CountryEnum/VDR": {
+      "label": "República Democrática de Vietnam"
+    },
+    "CountryEnum/VEN": {
+      "label": "Venezuela"
+    },
+    "CountryEnum/VGB": {
+      "label": "Islas Vírgenes Británicas"
+    },
+    "CountryEnum/VIR": {
+      "label": "Islas Vírgenes de EE.UU"
+    },
+    "CountryEnum/VNM": {
+      "label": "Vietnam"
+    },
+    "CountryEnum/VUT": {
+      "label": "Vanuatu"
+    },
+    "CountryEnum/WAK": {
+      "label": "Wake Islands"
+    },
+    "CountryEnum/WLF": {
+      "label": "Wallis y Futuna"
+    },
+    "CountryEnum/WSM": {
+      "label": "Samoa"
+    },
+    "CountryEnum/YEM": {
+      "label": "Yemen"
+    },
+    "CountryEnum/YMD": {
+      "label": "North Yemen"
+    },
+    "CountryEnum/YUG": {
+      "label": "Yugoslavia"
+    },
+    "CountryEnum/ZAF": {
+      "label": "Sudáfrica"
+    },
+    "CountryEnum/ZMB": {
+      "label": "Zambia"
+    },
+    "CountryEnum/ZR0": {
+      "label": "Zaire"
+    },
+    "CountryEnum/ZWE": {
+      "label": "República de Zimbabue"
+    },
+    "Identifier": {
+      "label": "Identificador",
+      "description": "La clase de identificador permite que se le proporcione un identificador, así como información sobre qué autoridad lo emitió y, si es necesario, cuándo."
+    },
+    "Identifier/Identifier": {
+      "label": "Contenido",
+      "description": "Contenido - cadena alfanumérica"
+    },
+    "Identifier/IdentifierType": {
+      "label": "Tipo de identificador",
+      "description": "El tipo de identificador emitido (si la autoridad emite más de un tipo de identificador)."
+    },
+    "Identifier/IssueDate": {
+      "label": "Fecha de asunto",
+      "description": "La fecha en que se emitió."
+    },
+    "Identifier/IssuingAuthority": {
+      "label": "La autoridad emisora",
+      "description": "El nombre de la agencia emisora."
+    },
+    "Identifier/IssuingAuthorityID": {
+      "label": "ID de autoridad emisora",
+      "description": "La ID de la agencia emisora"
+    },
+    "Jurisdiction": {
+      "label": "Jurisdicción"
+    },
+    "Jurisdiction/Identifier": {
+      "label": "Identificador",
+      "description": "El valor para la propiedad de identificación es un URI para esa jurisdicción."
+    },
+    "Jurisdiction/Name": {
+      "label": "Nombre",
+      "description": "El nombre es simplemente una cadena que identifica la jurisdicción, típicamente un país, con o sin una etiqueta de idioma."
+    },
+    "Person": {
+      "label": "Persona",
+      "description": "Una persona física individual que puede estar muerta o viva, pero no imaginaria."
+    },
+    "Person/DateOfBirth": {
+      "label": "Fecha de nacimiento",
+      "description": "El día en que nació la persona."
+    },
+    "Person/DateOfBirth/Year": {
+      "label": "Año",
+      "description": "Un año calendario gregoriano. El espacio de valor del año es el conjunto de años calendario gregorianos, tal como se define en el § 5.2.1 de la ISO 8601. Específicamente, es un conjunto de instancias no periódicas de un año, no periódicas, por ejemplo. Léxico 1999 para representar todo el año 1999, independiente de cuántos meses y días tiene este año."
+    },
+    "Person/DateOfBirth/Month": {
+      "label": "Mes",
+      "description": "Un mes gregoriano que se repite cada año. El espacio de valores del mes es el espacio de un conjunto de meses calendario, tal como se define en el § 3 de ISO 8601. Específicamente, es un conjunto de instancias periódicas anuales de un mes de un mes."
+    },
+    "Person/DateOfBirth/Day": {
+      "label": "Día",
+      "description": "Un día gregoriano que recurre, específicamente un día del mes, como el 5 de al mes. El espacio de calidad del día es el espacio de un conjunto de fechas de calendario como se define en el § 3 de ISO 8601. Específicamente, es un conjunto de instancias periódicas mensuales de un día de un día."
+    },
+    "Person/Gender": {
+      "label": "Género",
+      "description": "El estado cromosómico, y los órganos y estructuras reproductivas de una persona que les permite distinguirlas como hembra o masculinas o indeterminadas."
+    },
+    "Person/PlaceOfBirth": {
+      "label": "Lugar de nacimiento",
+      "description": "La ubicación donde nació la persona."
+    },
+    "Person/PersonName": {
+      "label": "Nombre de la persona",
+      "description": "El nombre de la familia y el nombre dado de una persona. Al menos uno de los dos debe existir."
+    },
+    "Person/PersonName/FamilyName": {
+      "label": "Apellido",
+      "description": "Un nombre de familia suele ser compartido por miembros de una familia. Este atributo también lleva prefijos o sufijos que forman parte del nombre de la familia, por ejemplo. 'De Boer', 'Van de Putte', 'von und zu orlow'. Los nombres de las familias múltiples, tales como se encuentran comúnmente en los países hispanos, se registran en el campo de apellidos para que, por ejemplo, el nombre de la familia de Saavedra de Miguel de Cervantes se registrará como 'de Cervantes Saavedra'."
+    },
+    "Person/PersonName/GivenName": {
+      "label": "Nombre de pila",
+      "description": "\"Un nombre dado, o múltiples nombres dados, son los denominadores que identifican a un individuo dentro de una familia. Estos se le dan a una persona por parte de sus padres al nacer o pueden ser legalmente reconocidos como \"\"nombres dados\"\" a través de un proceso formal. Todos los nombres dados se ordenan en un campo para que, por ejemplo, el nombre dado para Johann Sebastian Bach es 'Johann Sebastian'.\""
+    },
+    "Person/Identifier": {
+      "label": "Identificador",
+      "description": "La relación del identificador se utiliza para vincular a una persona a cualquier identificador emitido formalmente para esa persona."
+    },
+    "Person/Citizenship": {
+      "label": "Ciudadanía",
+      "description": "La relación de ciudadanía vincula a una persona a una jurisdicción que ha conferido los derechos de ciudadanía sobre el individuo, como el derecho a votar, para recibir cierta protección de la comunidad o la emisión de un pasaporte."
+    },
+    "PersonGenderEnum": {
+      "label": "Género",
+      "description": "Lista de géneros humanos."
+    },
+    "PersonGenderEnum/Female": {
+      "label": "Mujer",
+      "description": "La hembra conceptual se usa para representar a los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales."
+    },
+    "PersonGenderEnum/Male": {
+      "label": "Masculino",
+      "description": "El concepto de hombre se usa para representar a los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales."
+    },
+    "PersonGenderEnum/NAP": {
+      "label": "No aplica",
+      "description": "El concepto no aplicable se utiliza en el contexto del intercambio de información en el dominio de las ciencias sociales cuando no se pueden representar ninguno de los sexos."
+    },
+    "PersonGenderEnum/NKN": {
+      "label": "No conocida",
+      "description": "El concepto que no se conoce se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano es un desconocido."
+    },
+    "PersonGenderEnum/NST": {
+      "label": "No se indica",
+      "description": "El concepto no declarado se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano no está afirmado."
+    },
+    "PublicOrganisation": {
+      "label": "Organización publicoránica"
+    },
+    "PublicOrganisation/Identifier": {
+      "label": "Identificador",
+      "description": "Muchas organizaciones son referidas por un acrónimo o algún otro identificador. Por ejemplo, entre las instituciones de la UE, el BCE es el identificador del Banco Central Europeo, OLAF para la Oficina Europea de Antin / Afraud, y así sucesivamente. Estos son formalmente reconocidos por la Comisión Europea que proporciona una lista de tales acrónimos. Las listas análogas deben usarse en otros contextos."
+    },
+    "PublicOrganisation/PrefLabel": {
+      "label": "Etiqueta preferida",
+      "description": "Como se define en la ontología org, se utiliza una etiqueta preferida para proporcionar el nombre primario y legalmente reconocido de la organización. Una organización solo puede tener un nombre de este tipo en cualquier idioma determinado. Los nombres primarios se pueden proporcionar en varios idiomas con múltiples instancias de la propiedad de la etiqueta preferida."
+    },
+    "UDT/Text": {
+      "label": "Texto",
+      "description": "Una cadena de caracteres (es decir, un conjunto finito de caracteres), generalmente en forma de palabras de un idioma."
+    },
+    "UDT/Text/@LanguageID": {
+      "label": "ID de idioma",
+      "description": "El identificador del lenguaje utilizado en el componente de contenido."
+    },
+    "UDT/Text/@LanguageLocaleID": {
+      "label": "ID de idioma local",
+      "description": "La identificación de la localidad del idioma."
+    },
+    "UDT/Date": {
+      "label": "Fecha",
+      "description": "Un día calendario según el calendario gregoriano."
+    },
+    "UDT/Name": {
+      "label": "Nombre",
+      "description": "Una cadena de caracteres que constituye la designación distintiva de una persona, lugar, cosa o concepto."
+    },
+    "UDT/Identifier": {
+      "label": "Identificador",
+      "description": "Una cadena de caracteres para identificar y distinguir únicamente, una instancia de un objeto en un esquema de identificación de todos los demás objetos en el mismo esquema junto con información complementaria relevante."
+    },
+    "UDT/Identifier/@schemeID": {
+      "label": "ID de esquema",
+      "description": "La identificación del esquema de identificación."
+    },
+    "UDT/Identifier/@schemeName": {
+      "label": "Nombre del esquema",
+      "description": "El nombre del esquema de identificación."
+    },
+    "UDT/Identifier/@schemeAgencyID": {
+      "label": "ID de la agencia del esquema",
+      "description": "La identificación de la agencia que mantiene el esquema de identificación."
+    },
+    "UDT/Identifier/@schemeAgencyName": {
+      "label": "Nombre de la agencia del esquema",
+      "description": "El nombre de la agencia que mantiene el esquema de identificación."
+    },
+    "UDT/Identifier/@schemeVersionID": {
+      "label": "ID de versión de esquema",
+      "description": "La versión del esquema de identificación."
+    },
+    "UDT/Identifier/@schemeDataURI": {
+      "label": "URI de datos de esquema",
+      "description": "El identificador de recursos uniforme que identifica dónde se encuentra los datos del esquema de identificación."
+    },
+    "UDT/Identifier/@schemeURI": {
+      "label": "URI de esquema",
+      "description": "El identificador de recursos uniformes que identifica dónde se encuentra el esquema de identificación."
+    },
+    "LangEnum": {
+      "label": "Idioma"
+    },
     "LangEnum/en": {
-      "label": "Inglés"
+      "label": "inglés"
     },
     "LangEnum/es": {
-      "label": "Español"
+      "label": "español"
     },
     "LangEnum/pt": {
-      "label": "Portugués"
+      "label": "portugués"
     },
     "LangEnum/fr": {
-      "label": "Francés"
+      "label": "francés"
     },
     "LangEnum/sl": {
-      "label": "Esloveno"
+      "label": "esloveno"
+    },
+    "NUTS0Enum": {
+      "label": "Estados miembros"
     },
     "NUTS0Enum/AT": {
       "label": "Austria"
@@ -133,41 +1235,103 @@
     "NUTS0Enum/SK": {
       "label": "Eslovaquia"
     },
-    "BirthEvidence": {
-      "label": "Evidencia de nacimiento",
-      "description": "Documento o dato oficial que acredite el Nacimiento de un Hijo."
+    "PersonMaritalStatusEnum": {
+      "label": "Estado civil de persona",
+      "description": "Lista de estado civil de persona."
     },
-    "BirthEvidence/Identifier": {
+    "PersonMaritalStatusEnum/Cohabitation": {
+      "label": "Cohabitación",
+      "description": "Un estado civil de persona: cohabitación"
+    },
+    "PersonMaritalStatusEnum/DivorcedPerson": {
+      "label": "Persona divorciada",
+      "description": "Un estado civil de persona: persona divorciada"
+    },
+    "PersonMaritalStatusEnum/MarriedPerson": {
+      "label": "Persona casada",
+      "description": "Un estado civil de persona: persona casada"
+    },
+    "PersonMaritalStatusEnum/Polygamy": {
+      "label": "Poligamia",
+      "description": "Un estado civil de persona: Polygamy"
+    },
+    "PersonMaritalStatusEnum/SeparatedPerson": {
+      "label": "Persona separada",
+      "description": "Un estado civil de persona: persona separada"
+    },
+    "PersonMaritalStatusEnum/SingleParent": {
+      "label": "Monoparental",
+      "description": "Un estado civil de persona: padre soltero"
+    },
+    "PersonMaritalStatusEnum/UnmarriedPerson": {
+      "label": "Persona soltera",
+      "description": "Un estado civil de persona: persona soltera"
+    },
+    "PersonMaritalStatusEnum/WidowedPerson": {
+      "label": "Persona viuda",
+      "description": "Un estado civil de persona: persona viuda"
+    },
+    "MarriageEvidence": {
+      "label": "Evidencia de matrimonio",
+      "description": "Documento oficial o datos que demuestran el matrimonio de dos personas."
+    },
+    "MarriageEvidence/Identifier": {
       "label": "Identificador",
-      "description": "Una referencia inequívoca a la Evidencia de Nacimiento."
+      "description": "Una referencia inequívoca a la evidencia matrimonial."
     },
-    "BirthEvidence/IssueDate": {
+    "MarriageEvidence/IssueDate": {
       "label": "Fecha de asunto",
-      "description": "La fecha más reciente en la que se emitió la instancia de Evidencia de nacimiento."
+      "description": "La fecha más reciente sobre la que se emitió la instancia de matrimonio."
     },
-    "BirthEvidence/IssuingAuthority": {
+    "MarriageEvidence/IssuingAuthority": {
       "label": "La autoridad emisora",
-      "description": "Un Organismo Público con autoridad oficial encargada de emitir la Constancia de Nacimiento."
+      "description": "Una organización pública con la autoridad oficial encargada de emitir la evidencia matrimonial."
     },
-    "BirthEvidence/IssuingPlace": {
+    "MarriageEvidence/IssuingPlace": {
       "label": "Lugar de emisión",
-      "description": "El Lugar donde se emitió la Constancia de Nacimiento."
+      "description": "La ubicación donde se emitió la evidencia matrimonial."
     },
-    "BirthEvidence/CertifiesBirth": {
-      "label": "Certifica el nacimiento",
-      "description": "Atestiguando de manera formal que el Nacimiento es verdadero."
+    "MarriageEvidence/CertifiesMarriage": {
+      "label": "Certifica el matrimonio",
+      "description": "Firstando de una manera formal que el matrimonio es cierto."
     },
-    "BirthEvidence/CertifiesBirth/Child": {
-      "label": "Niño",
-      "description": "La Persona que nace en el Nacimiento. Persona de cualquier edad, que sea hijo o hija."
+    "MarriageEvidence/CertifiesMarriage/DateOfMarriage": {
+      "label": "Fecha de casamiento",
+      "description": "La fecha en que tuvo lugar el matrimonio."
     },
-    "BirthEvidence/CertifiesBirth/Child/Gender": {
-      "label": "Género",
-      "description": "Sexo de la persona nacida"
+    "MarriageEvidence/CertifiesMarriage/PlaceOfMarriage": {
+      "label": "Lugar de la boda"
     },
-    "BirthEvidence/CertifiesBirth/Parent": {
-      "label": "Progenitor",
-      "description": "Un progenitor del niño. Una de las dos Personas que son conjuntamente la causa del Nacimiento del Niño, es decir, el padre natural."
+    "MarriageEvidence/CertifiesMarriage/Spouse": {
+      "label": "Cónyuge",
+      "description": "La persona que estaba casada."
+    },
+    "MarriageEvidence/CertifiesMarriage/Spouse/Gender": {
+      "description": "El género de un individuo debe registrarse utilizando un vocabulario controlado que sea apropiado para el contexto específico. En algunos casos, el estado cromosómico o físico de un individuo será más importante que el género que expresan, en otros, el reverso será cierto. Lo que siempre es importante es que el vocabulario controlado utilizado para describir el género de un individuo se indique explícitamente."
+    },
+    "MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage": {
+      "label": "Nombre de la familia después del matrimonio",
+      "description": "Esta propiedad contiene el nombre de la familia después del matrimonio de la persona."
+    },
+    "MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage": {
+      "label": "Nombre de la familia antes del matrimonio",
+      "description": "Esta propiedad contiene el nombre de la familia antes del matrimonio de la persona."
+    },
+    "MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage": {
+      "label": "Estado civil antes del matrimonio.",
+      "description": "Situación con respecto a si una persona era soltera, casada, separada, divorciada o viuda."
+    },
+    "MarriageEvidence/CertifiesEndOfMarriage": {
+      "label": "Fin del matrimonio",
+      "description": "En caso de divorcio, esta propiedad incluye información sobre el final del matrimonio."
+    },
+    "MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage": {
+      "label": "Fecha del final del matrimonio.",
+      "description": "Fecha del final del matrimonio."
+    },
+    "MarriageEvidence/CertifiesEndOfMarriage/Cause": {
+      "label": "Porque",
+      "description": "Causa del fin del matrimonio."
     }
   }
 }

@@ -39,6 +39,15 @@ export class PreviewXmlComponent implements OnInit {
 
   private translateDocument(): void {
     this.jsOutputDetails = this.getAllKeysAndValues();
+
+    // All available translations in case full match is not found
+    let transCurrentLanguage = Object.keys(
+      this.translate.store.translations
+    )[0];
+    let transKeys = Object.keys(
+      this.translate.store.translations[transCurrentLanguage]['term']
+    );
+
     let fullKeys = this.jsOutputDetails.map((x) => 'term.' + x.fullKey);
     this.translate.get(fullKeys).subscribe((translations) => {
       fullKeys.map((fullKey) => {
@@ -54,6 +63,21 @@ export class PreviewXmlComponent implements OnInit {
           if (translations[fullKey].description) {
             foundKey.keyDescriptionTranslation =
               translations[fullKey].description;
+          }
+        } else {
+          let potencial = transKeys.filter((x) => fullKey.endsWith(x));
+          if (potencial.length > 0) {
+            let potencialLength = potencial.map((x) => x.length);
+            let fullKeyNew =
+              potencial[potencialLength.indexOf(Math.max(...potencialLength))];
+            let foundKey = this.jsOutputDetails.find(
+              (x) => x.fullKey == fullKey.replace('term.', '')
+            );
+            let potentialTranslation = this.translate.instant("term." + fullKeyNew);
+            foundKey.keyLabelTranslation = potentialTranslation.label;
+            foundKey.keyDescriptionTranslation = potentialTranslation.description;
+          } else {
+            //console.log("Missing translation for " + fullKey.replace("term.", ""));
           }
         }
       });
@@ -90,7 +114,7 @@ export class PreviewXmlComponent implements OnInit {
     let result: any[] = [];
     function traverse(o: any, level: number, path = '') {
       for (let k in o) {
-        let shortKey = k.replace(/(n3|cvb):/g, '');
+        let shortKey = k.replace(/(n3|cvb|cbc):/g, '');
         let fullKey = (path.length > 0 ? path + '/' : '') + shortKey;
         if (typeof o[k] == 'object' && o[k].length > 0) {
           for (let i = 0; i < o[k].length; i++) {

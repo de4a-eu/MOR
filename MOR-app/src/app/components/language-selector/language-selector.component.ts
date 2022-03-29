@@ -31,9 +31,9 @@ export class LanguageSelectorComponent implements OnInit {
 
   public getLanguages(): Language[] {
     let languages = this.languages.getLanguages();
-    languages.map(
-      (x) => (x.name = this.translate.instant('term.LangEnum/' + x.code).label)
-    );
+    languages.map((x) => {
+      x.name = this.translate.instant('term.LangEnum/' + x.code).label;
+    });
     return languages;
   }
 
