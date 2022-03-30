@@ -60,14 +60,11 @@
   
   <!-- Request IAL stuff -->
 
-  <xs:complexType name="RequestLookupRoutingInformationType">
-    <xs:sequence>
-      <xs:element name="AtuCode" type="AtuCodeType" minOccurs="0"/>
-      <xs:element name="CanonicalObjectTypeId" type="IdType" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
 
-	<xs:element name="RequestLookupRoutingInformation" type="RequestLookupRoutingInformationType"/>
+
+	<xs:element name="RequestLookupRoutingInformation" >
+	<!-- request is an HTTP POST to {server}/{country} or {server} and a mandatory POST parameter with the list of canonical evidence type URIs separated by coma. -->
+	</xs:element>
   
   <!-- Response IAL stuff -->
   
