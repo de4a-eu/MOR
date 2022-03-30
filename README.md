@@ -30,6 +30,12 @@ Existing pages for **Selection of evidence** and **Preview** that are already av
 
 [![MOR demo](https://img.youtube.com/vi/gAwOs-M0_D0/0.jpg)](https://www.youtube.com/watch?v=gAwOs-M0_D0)
 
+## Technical documentation
+
+### Component diagram
+
+![MOR component diagram](https://teaching.lavbic.net/plantuml/svg/dLPDR-8m4BtxLrZjOKyzLgfM29L5LAf45mHTQG-HAfDCmAfZPnq7YbRyznqxNmu90Us59CypRyPlPcoUCyEqoHD1tnOh6geaLHAaeH5dMyqIGh9FBbE6htJ3mi-jLhcCGYMKfaOpcU4IcdjM4SGi5-OTlin4yArCB5k8Fw0zgudMwZ1rD1k1lDvIayDVGZj13pjke8kFHbc-oOwPWMGyflVm53_6KPyPfWLQCe5M5waI5RKDb8v05_7l7rz-FCscvEHbpEtcOXP2RyPUCbTuf38ml6cF0AjpH2XMqdZ0YH01iQ56KSstErj73Q7XIX92cZpliDY1d7sbWeVS15B3dnmoVC5KSdouV02jiplACjiQ7xFLnoiTZMgEyVWMFfMR0SB5825TQjXpE9HPqHwEvPMS6eeYaNwEWJJM850-Y08fcDpcR0lEhuBd9NYPOAdLdcUeVqPJq84CiQf67ocJo1aogIGFcGWafXc1H0zpJ8iOdkT5zdSxWeAv14Fi19mQvzlWqm8zeo3Da3cPgihHid1-aQQqFLosGJtt5ow0vgbGB79UzlkN-qI_sWvZjhocXGo1p9oIIZlV4bsNs111fVmPGmNVGb4BZBisciFUrW7hGWj6N6ZNOLt1j3uYSDxEb2mRpkkkA_hTk97by4wQeELxawCB-5yXkp5RDB_VvZJr8kDt4xpjTseBDIkRtHuKfVAEeS9N5Khz0zjdg1fSQRi9lUSXj1fVwNM1jiNtALudS-U2ptOOqfdkXuTnbvdKfw9TheQ5T3hGhfupahwcieRDq1D__kqIvadgaVH2BaXzcbgqeo7fgbfvs-EJL2yDE2LLvpROWdIbzMMfJnhIFNi6zLds2zJJZBrsbwFPVP1lxavrLwAAkzfyfp-LknJiLHLJiyEMT5TPtISbGt6PeWbMuGOdyWmomZzL_m00 "MOR component diagram")
+
 ## Materials
 
 - [initial PoC](material/PoC/initial) provided by Ana Rosa,
