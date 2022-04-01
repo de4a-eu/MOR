@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:ResponseLookupRoutingInformation xmlns:p="http://www.de4a.eu/2020/ial/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.de4a.eu/2020/ial/v2 IAL.xsd ">
+  <p:ResponseItem CanonicalObjectTypeId="urn:de4a-eu:CanonicalEvidenceType:BirthEvidence:1.0">
+    <p:ResponsePerCountry CountryCode="ES">
+      <p:Provision>
+        <p:AtuLevel>nuts2</p:AtuLevel>
+        <p:AtuCode>ES01</p:AtuCode>
+        <p:AtuLatinName>Madrid</p:AtuLatinName>
+        <p:DataOwnerId>iso6523-actorid-upis::9991:es990000105</p:DataOwnerId>
+        <p:DataOwnerPrefLabel>Gobierno de la Comunidad de Madrid</p:DataOwnerPrefLabel>
+      </p:Provision>
+      <p:Provision>
+        <p:AtuLevel>nuts1</p:AtuLevel>
+        <p:AtuCode>ES02</p:AtuCode>
+        <p:AtuLatinName>Castilla y León</p:AtuLatinName>
+        <p:DataOwnerId>iso6523-actorid-upis::9991:es990000107</p:DataOwnerId>
+        <p:DataOwnerPrefLabel>Junta de Castilla y León</p:DataOwnerPrefLabel>
+      </p:Provision>
+    </p:ResponsePerCountry>
+  </p:ResponseItem>
+</p:ResponseLookupRoutingInformation>

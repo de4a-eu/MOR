@@ -34,18 +34,12 @@
   >
     <!-- Evidence -->
     <div class="col-6 text-end p-2">
-      <button type="button" class="btn btn-sm btn-secondary normal">
-        <fa-icon
-          class="me-2 help"
-          [icon]="faFileCode"
-          data-bs-toggle="tooltip"
-          data-bs-html="true"
-          [title]="
-            '<b>TO-DO</b>: View schema of <b>' +
-            evidenceType.name +
-            '</b> canonical evidence type.'
-          "
-        ></fa-icon
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary"
+        (click)="previewEvidence(evidenceType.tokenName)"
+      >
+        <fa-icon class="me-2" [icon]="faFileCode"></fa-icon
         >{{ "gui." + evidenceType.code | translate }}
       </button>
     </div>
@@ -306,6 +300,75 @@
             <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon
             ><span translate="gui.confirmProvision"></span>
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Preview -->
+  <div
+    class="modal fade"
+    id="previewEvidenceSchemaModal"
+    tabindex="-1"
+    aria-labelledby="previewEvidenceSchemaModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered"
+      [ngClass]="showDescription ? 'modal-xl' : 'modal-lg'"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex">
+            <div>
+              <h5 class="modal-title" id="previewEvidenceSchemaModalLabel">
+                <span translate="gui.Preview" class="me-1"></span
+                ><b class="me-1">{{ getEvidenceTypeNameForPreview() }}</b
+                ><span translate="gui.schema" class="me-1"></span><span translate="gui.in" class="me-1"></span>
+              </h5>
+            </div>
+            <div>
+              <app-language-selector
+                [(selectedLanguage)]="selectedLanguage"
+              ></app-language-selector>
+            </div>
+            <div class="ms-1">
+              <h5
+                class="pointer ms-1"
+                (click)="showDescription = !showDescription"
+              >
+                <span *ngIf="showDescription"
+                  ><span translate="gui.with"></span
+                  ><small
+                    ><fa-icon
+                      class="ms-2 me-1"
+                      [icon]="faEye"
+                    ></fa-icon></small></span
+                ><span *ngIf="!showDescription"
+                  ><span translate="gui.without"></span
+                  ><small
+                    ><fa-icon
+                      class="ms-2 me-1"
+                      [icon]="faEyeSlash"
+                    ></fa-icon></small
+                ></span>
+                <span translate="gui.descriptions" class="ms-1"></span>
+              </h5>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <app-preview-xml
+            [lang]="selectedLanguage"
+            [showDescriptions]="showDescription"
+            [xmlInput]="getEvidenceTypeContentForPreview()"
+          ></app-preview-xml>
         </div>
       </div>
     </div>
