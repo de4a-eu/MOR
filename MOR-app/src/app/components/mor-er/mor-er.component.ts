@@ -3,6 +3,8 @@ import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
 import {
+  faEye,
+  faEyeSlash,
   faFileCode,
   faSignInAlt,
   faCheckCircle,
@@ -23,6 +25,8 @@ declare var bootstrap: any;
   styleUrls: ['./mor-er.component.css'],
 })
 export class MORERComponent implements OnInit {
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
   faFileCode = faFileCode;
   faSignInAlt = faSignInAlt;
   faCheckCircle = faCheckCircle;
@@ -30,11 +34,14 @@ export class MORERComponent implements OnInit {
   faSyncAlt = faSyncAlt;
   faExclamationTriangle = faExclamationTriangle;
 
+  public modalPreview: any;
+
   @Input('defaultLang') defaultLanguage!: string;
   public selectedLanguage!: string;
   @Input('requesterCountryCode') requesterCountry!: string;
   @Input('canonicalEvidenceTypes') canonicalEvidenceTypes!: string;
   @Input('outputJSArrayId') outputJSArrayId!: string;
+  public showDescription: boolean = true;
 
   constructor(
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
@@ -53,6 +60,8 @@ export class MORERComponent implements OnInit {
   public retrievalType: any = {}; // By request (provision) or upload
   public provisions: any = {}; // Provisions
   public uploads: any = {}; // Content of uploaded files
+
+  public selectedEvidenceType!: string;
 
   public modalSelectProvision: any;
   public modalSelectProvisionData: any = {
@@ -169,6 +178,31 @@ export class MORERComponent implements OnInit {
     return this.dataLoaderCanonicalEvidenceTypes.getSelectedCanonicalEvidenceTypes(
       this.canonicalEvidenceTypes
     );
+  }
+
+  public previewEvidence(tokenName: string | undefined) {
+    if (tokenName) {
+      this.selectedEvidenceType = tokenName;
+      this.modalPreview.show();
+    }
+  }
+
+  public getEvidenceTypeNameForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    if (selectedEvidence) return selectedEvidence.name;
+    else return '';
+  }
+
+  public getEvidenceTypeContentForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    let content = '';
+    if (selectedEvidence && selectedEvidence.tokenName)
+      content = selectedEvidence.tokenName;
+    return content;
   }
 
   /**
@@ -377,6 +411,10 @@ export class MORERComponent implements OnInit {
     // Bootstrap modals
     this.modalSelectProvision = new bootstrap.Modal(
       document.getElementById('selectProvisionModal')
+    );
+    // Bootstrap modals
+    this.modalPreview = new bootstrap.Modal(
+      document.getElementById('previewEvidenceSchemaModal')
     );
   }
 }

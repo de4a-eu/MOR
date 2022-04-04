@@ -34,7 +34,8 @@
     "descriptions": "opisi",
     "in": "v",
     "without": "brez",
-    "exclude": "izključi"
+    "exclude": "izključi",
+    "schema": "shema"
   },
   "term": {
     "BirthEvidence": {

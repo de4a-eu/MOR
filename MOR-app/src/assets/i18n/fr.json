@@ -34,7 +34,8 @@
     "descriptions": "descriptions",
     "in": "dans",
     "without": "sans pour autant",
-    "exclude": "exclure"
+    "exclude": "exclure",
+    "schema": "schéma"
   },
   "term": {
     "BirthEvidence": {

@@ -2,7 +2,7 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { XMLParser } from 'fast-xml-parser';
 import { TranslateService } from '@ngx-translate/core';
-import { keyframes } from '@angular/animations';
+import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
 
 @Component({
   selector: 'app-preview-xml',
@@ -23,17 +23,34 @@ export class PreviewXmlComponent implements OnInit {
   public jsOutputTranslated?: string;
 
   public output: any;
+  private examples: any = {};
+  private schemaOnly: boolean = false;
 
-  constructor(public translate: TranslateService) {
+  constructor(
+    public translate: TranslateService,
+    private dataLoaderXml: DataLoaderXmlService
+  ) {
     translate.addLangs(['en', 'sl', 'es']);
     translate.setDefaultLang('en');
     translate.use('en');
+
+    dataLoaderXml
+      .loadXml('birth-evidence-1.7-generated-example.xml', 'examples')
+      .then((data) => (this.examples['BirthCertificate'] = data));
+    dataLoaderXml
+      .loadXml('marriage-evidence-1.7-generated-example.xml', 'examples')
+      .then((data) => (this.examples['MarriageCertificate'] = data));
   }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['lang']) this.translate.use(this.lang);
-    if (changes['xmlInput']) this.jsOutput = this.parser.parse(this.xmlInput);
-
+    if (changes['xmlInput']) {
+      if (Object.keys(this.examples).includes(this.xmlInput)) {
+        this.schemaOnly = true;
+        this.xmlInput = this.examples[this.xmlInput];
+      }
+      this.jsOutput = this.parser.parse(this.xmlInput);
+    }
     if (Object.keys(this.jsOutput).length > 0) this.translateDocument();
   }
 
@@ -73,9 +90,12 @@ export class PreviewXmlComponent implements OnInit {
             let foundKey = this.jsOutputDetails.find(
               (x) => x.fullKey == fullKey.replace('term.', '')
             );
-            let potentialTranslation = this.translate.instant("term." + fullKeyNew);
+            let potentialTranslation = this.translate.instant(
+              'term.' + fullKeyNew
+            );
             foundKey.keyLabelTranslation = potentialTranslation.label;
-            foundKey.keyDescriptionTranslation = potentialTranslation.description;
+            foundKey.keyDescriptionTranslation =
+              potentialTranslation.description;
           } else {
             //console.log("Missing translation for " + fullKey.replace("term.", ""));
           }
@@ -95,8 +115,10 @@ export class PreviewXmlComponent implements OnInit {
         '<div><b>' +
         (v.keyLabelTranslation ? v.keyLabelTranslation : v.key) +
         '</b>' +
-        (v.value
-          ? ': <code class="text-primary fw-bold">' + v.value + '</code>'
+        (!this.schemaOnly
+          ? v.value
+            ? ': <code class="text-primary fw-bold">' + v.value + '</code>'
+            : ''
           : '') +
         (v.keyDescriptionTranslation
           ? "</div><i><small class='text-muted " +
