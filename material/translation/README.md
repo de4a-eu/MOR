@@ -36,16 +36,16 @@ The fields of a MOR CSV file are separated by "|" and their sequence is:
 The first version of CSV files has been generated from **scripts/MOR_en_es_si_pr_fr.xlsm**, which contains a macro that generate a csv from each sheet in "D:\tmp". 
 
 The **script/mor.awk** script converts a MOR csv file into the MOR json format. The resulting _"xx.json"_ files are stored under "MOR-app/src/assets/i18n".
->The **MOR json format** has the next syntax:
-	     [URI_term] : object
-	     	type : string
-	     	cardinality : string
-	     	comment : string
-	     	[lang] : object
-	     		"label" :  string
-	     		"description" : string
-	     		"example" : string
-	     		"verified" : boolean
+The **MOR json format** has the next syntax:
+>	     [URI_term] : object
+>	     	type : string
+>	     	cardinality : string
+>	     	comment : string
+>	     	[lang] : object
+>	     		"label" :  string
+>	     		"description" : string
+>	     		"example" : string
+>	     		"verified" : boolean
 
 In the MVP of MOR, the whole MOR in a language is downloaded, so there is only one "[lang]" object. However, the syntax is ready to obtain a list of terms in several languages at once, which would be the future funtionality of the MOR API.
 
