@@ -52,7 +52,8 @@ In the MVP of MOR, the whole MOR in a language is downloaded, so there is only o
 The directory **validation** contains some HTML files to validate the MOR json files correctness:
 * _"testMORJsonStorage.html"_  a Mcontains a form to verify the correctness ofOR JSON file (xx.json) when describing a concept 
  
-* _"testXMLExample.html"_ contains a form to verify the correctness ofOR JSON file (xx.json) when describing an evidence type
+* _"testXMLExample.html"_ contains a form to verify the correctness of MOR JSON file (xx.json) when describing an evidence type
+	
 	In the upper level, there are two canonical evidence samples in the XML format of the corresponding canonical evidence types: 
 	- birth-evidence-1.7-generated-example.xml
 	- marriage-evidence-1.7-generated-example.xml
