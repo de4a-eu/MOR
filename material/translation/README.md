@@ -53,7 +53,5 @@ The directory **validation** contains some HTML files to validate the MOR json f
 * _"testMORJsonStorage.html"_  a Mcontains a form to verify the correctness ofOR JSON file (xx.json) when describing a concept 
  
 * _"testXMLExample.html"_ contains a form to verify the correctness ofOR JSON file (xx.json) when describing an evidence type
-	<p>In the upper level, there are two canonical evidence samples in the XML format of the corresponding canonical evidence types:
-		>* birth-evidence-1.7-generated-example.xml
-		>* marriage-evidence-1.7-generated-example.xml</p>
+	<p>In the upper level, there are two canonical evidence samples in the XML format of the corresponding canonical evidence types: _"birth-evidence-1.7-generated-example.xml"_   and   _"marriage-evidence-1.7-generated-example.xml"_ </p>
 
