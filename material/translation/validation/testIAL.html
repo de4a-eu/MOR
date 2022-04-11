@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test IAL</title>
+
+</head>
+<body>
+
+<form name="f">
+<!-- Sample XML for the canonical evidence types of the use cases that are using the MOR components -->
+<select name="element" id="element" onchange="process(this.value)">
+<option value="">--Select one--</option>
+<option value="ial-es-birth1-marriage1.xml" selected>1 Birth & 1 Marriage from ES</option>
+<option value="ial-es-birth2.xml">2 Birth from ES</option>
+<option value="ial-es-marriage1.xml">1 Marriage from ES</option>
+<option value="ial-ie-birth0.xml">0 Birth from IE</option>
+<option value="ial-ie-marriage0.xml">0 Marriage from IE</option>
+<option value="ial-si-birth1-marriage1.xml">1 Birth & 1 Marriage from SI</option>
+<option value="ial-si-birth1.xml">1 Birth from SI</option>
+<option value="ial-si-marriage1.xml">1 Marriage from SI</option>
+</select>
+<!-- List of languages for the MOR storage -->
+<select name="lang"><option value="en" selected="selected">en</option></select>
+</form>
+<div id="output" style="width:100%;height:200px;border:1px solid red"></div>
+
+<script>
+const dirXML = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/ial/"
+const debug = true //to enable(true) or disable(false) the console.log traces
+const xmlhttp = new XMLHttpRequest()
+const xslhttp = new XMLHttpRequest()
+/*
+ * urlJson: URL of the MOR storage with all the terms in the selected language 
+ */
+const urlJson = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/mor/mor_en.json"
+const urlXsl = dirXML + "ial-json.xsl"
+var morJSON //contains all the MOR terms in the selected language (en) that are obtained from "urlJson"
+var processor = new XSLTProcessor();
+/*
+ * initalization of "morJson" from the response of "urlJson"
+ */
+	xmlhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {     
+	        morJSON = JSON.parse(this.responseText)
+	        if (debug) console.log("MORJSON DEBUG: ", this.responseText)
+	    }
+	}
+	
+	xmlhttp.open("GET", urlJson, true)
+	xmlhttp.send()
+/*
+ * initalization of "xsl" from the response of "urlXsl"
+ */	
+	xslhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) { 
+	    	if (debug) console.log("XSL response type: ", this.responseType)
+	    	if (debug) console.log("XSL response: ", this.response)
+	    	processor.importStylesheet(new DOMParser().parseFromString(this.response, "text/xml"))
+	    }
+	}
+	xslhttp.open("GET", urlXsl, true)
+	xslhttp.send()	
+
+	function process(xml) {
+		if (xml=="") return
+		const http = new XMLHttpRequest()
+		http.onreadystatechange = function(){
+            console.log("readystate change: " + this.readyState + " , " + this.status)
+            if(this.readyState == 4 && this.status == 200){
+                if (debug) console.log("Process response: " + this.response + ", " + this.responseType)
+                resultDocument = processor.transformToDocument(new DOMParser().parseFromString(this.response, "text/xml"), document)
+                if (debug) console.log("Process result: " + resultDocument) 
+                document.getElementById('output').innerText = resultDocument
+            }
+        }
+		http.open("GET", dirXML+xml, true)
+		console.log("GET "+(dirXML+xml))
+		http.send()
+	}
+</script>
+</body>
+</html>
