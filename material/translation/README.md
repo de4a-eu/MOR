@@ -7,31 +7,31 @@ This directory contains the full definition of MOR terms. There is a CSV file pe
 * and the rest are **reusable concepts** such as the ISA2 core vocabularies.
 
 The fields of a MOR CSV file are separated by "|" and their sequence is:
-	* Term URI
-	* Origin
-	* Type
-	* Cardinality (two binary digits: first if the term is optional and second if the term can have more than one value)
-	* Comments
-	* Label_en
-	* Description_en
-	* Example_en
-	* Verified_en
-	* Label_es
-	* Description_es
-	* Example_es
-	* Verified_es
-	* Label_sl
-	* Description_sl
-	* Example_sl
-	* Verified_sl
-	* Label_pt
-	* Description_pt
-	* Example_pt
-	* Verified_pt
-	* Label_fr
-	* Description_fr
-	* Example_fr
-	* Verified_fr
+>	* Term URI
+>	* Origin
+>	* Type
+>	* Cardinality (two binary digits:  if the term is optional and  if the term can have several values)
+>	* Comments
+>	* Label_en
+>	* Description_en
+>	* Example_en
+>	* Verified_en
+>	* Label_es
+>	* Description_es
+>	* Example_es
+>	* Verified_es
+>	* Label_sl
+>	* Description_sl
+>	* Example_sl
+>	* Verified_sl
+>	* Label_pt
+>	* Description_pt
+>	* Example_pt
+>	* Verified_pt
+>	* Label_fr
+>	* Description_fr
+>	* Example_fr
+>	* Verified_fr
 
 The first version of CSV files has been generated from **scripts/MOR_en_es_si_pr_fr.xlsm**, which contains a macro that generate a csv from each sheet in "D:\tmp". 
 
