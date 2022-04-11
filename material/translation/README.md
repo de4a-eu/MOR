@@ -5,6 +5,7 @@ This directory contains the full definition of MOR terms. There is a CSV file pe
 * **code lists** are named "Enum" as suffix, 
 * **gui** elements named as GUI,
 * and the rest are **reusable concepts** such as the ISA2 core vocabularies.
+
 The fields of a MOR CSV file are separated by "|" and their sequence is:
 	* Term URI
 	* Origin
