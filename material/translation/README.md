@@ -1,4 +1,4 @@
-## Translation assets
+## MOR assets
 
 This directory contains the full definition of MOR terms. There is a CSV file per complex MOR Term, so:
 * **canonical evidence types** are named "Evidence" as suffix, 
