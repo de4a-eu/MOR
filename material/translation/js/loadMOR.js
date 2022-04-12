@@ -113,7 +113,10 @@ function fillInheritanceMORjson() {
 		} //GUI and Enum terms have not inheritance 
 	}
 } 
-
+/**
+ * @param {string} lang 
+ * This function implements the MVP MOR API call and load the response in the morJSON variable after applying the inheritance between MOR terms
+ */
 function loadMOR(lang) {
 	callMORMVPapi(lang)
 	langMOR = lang
