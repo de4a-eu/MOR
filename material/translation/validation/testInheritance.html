@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Test MOR inheritance</title>
+<script type="text/javascript" src="../js/loadMOR.js"></script>
+<script type="text/javascript" src="../js/printMOR.js"></script>
+<script>
+function print(lang) {
+	if (lang=='') return
+	document.getElementById("loading").style.display="block"
+	loadMOR(lang)
+	printMORjson(document.getElementById("area"))
+	document.getElementById("loading").style.display="none"
+}
+</script>
+</head>
+<body>
+<form name="f">
+<select id="lang" name="lang" onchange="print(this.value)">
+	<option value="" selected>Select language</option>
+	<option value="en">English</option>
+	<option value="es">Spanish</option>
+	<option value="sl">Slovenian</option>
+	<option value="pt">Portuguese</option>
+	<option value="fr">French</option>
+</select> <img src="loading.gif" width="30" heigh="30" id="loading" style="display:none">
+</form>
+<div id="area" style="width:100%; height:90%">
+</div>
+</body>
+</html>

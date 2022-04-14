@@ -50,11 +50,14 @@ The **MOR json format** has the next syntax:
 In the MVP of MOR, the whole MOR in a language is downloaded, so there is only one "[lang]" object. However, the syntax is ready to obtain a list of terms in several languages at once, which would be the future funtionality of the MOR API.
 
 The directory **validation** contains some HTML files to validate the MOR json files correctness:
-* _"testMORJsonStorage.html"_  a Mcontains a form to verify the correctness ofOR JSON file (xx.json) when describing a concept 
+* _"testInheritance.html"_  shows the main entries of a MOR API response ({lang}.json) and then their details marking with red the old value before inheritance
+
+	- **js/loadMOR.js** contains the functions to call the MOR API, load the result in a JSON variable and overload it with the inherited values
+
+* _"testMORJsonStorage.html"_  a Mcontains a form to verify the correctness of a MOR API response ({lang}.json) with the MOR terms describing a concept 
  
-* _"testXMLExample.html"_ contains a form to verify the correctness of MOR JSON file (xx.json) when describing an evidence type
+* _"testXMLExample.html"_ contains a form to verify the correctness of MOR API response ({lang}.json) with the MOR terms describing an evidence type
 	
 	In the upper level, there are two canonical evidence samples in the XML format of the corresponding canonical evidence types: 
 	- birth-evidence-1.7-generated-example.xml
 	- marriage-evidence-1.7-generated-example.xml
-
