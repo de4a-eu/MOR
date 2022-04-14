@@ -2,12 +2,14 @@
   {
     "name": "Birth certificate",
     "code": "birth",
-    "tokenName": "BirthCertificate"
+    "tokenName": "BirthCertificate",
+    "morID": "BirthEvidence"
   },
   {
     "name": "Marriage certificate",
     "code": "marriage",
-    "tokenName": "MarriageCertificate"
+    "tokenName": "MarriageCertificate",
+    "morID": "MarriageEvidence"
   },
   {
     "name": "Residency proof",

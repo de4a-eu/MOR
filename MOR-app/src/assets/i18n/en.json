@@ -3761,7 +3761,7 @@
 		"verified" : "true"
 	}
 } ,
-"LangEnum/si" : {
+"LangEnum/sl" : {
 	"type" : "xs:token",
 	"cardinatlity" : "",
 	"comment" : "",

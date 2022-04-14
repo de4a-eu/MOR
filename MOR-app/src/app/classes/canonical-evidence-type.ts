@@ -5,4 +5,5 @@ export class CanonicalEvidenceType {
   'name': string;
   'code': string;
   'tokenName'?: string;
+  'morID'?: string;
 }

@@ -51,7 +51,7 @@ export class MORERComponent implements OnInit {
     private dataLoaderXml: DataLoaderXmlService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es']);
+    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
   }
@@ -66,6 +66,7 @@ export class MORERComponent implements OnInit {
   public modalSelectProvision: any;
   public modalSelectProvisionData: any = {
     canonicalEvidenceType: '',
+    morId: '',
     canonicalEvidenceTypeName: '',
     country: '',
   };
@@ -271,6 +272,7 @@ export class MORERComponent implements OnInit {
       );
       this.modalSelectProvisionData.canonicalEvidenceType =
         canonicalEvidenceType;
+      this.modalSelectProvisionData.morId = type ? type.morID : '';
       this.modalSelectProvisionData.canonicalEvidenceName = type
         ? type.name
         : '';
@@ -340,14 +342,18 @@ export class MORERComponent implements OnInit {
     if (!provision) {
       return null;
     } else if (typeof provision == 'string' && provision == 'not available') {
-      return this.translate.instant('gui.provisionNotAvailable');
+      return this.translate.instant(
+        'GUI/provisionNotAvailable.' + this.selectedLanguage + '.label'
+      );
     } else if (typeof provision == 'object') {
       if (provision.provisions.length > 1) {
         for (let i = 0; i < provision.provisions.length; i++) {
           if (provision.provisions[i].selected)
             return provision.provisions[i].dataOwnerPrefLabel;
         }
-        return this.translate.instant('gui.select1Provision');
+        return this.translate.instant(
+          'GUI/select1Provision.' + this.selectedLanguage + '.label'
+        );
       } else {
         return provision.provisions[0].dataOwnerPrefLabel;
       }

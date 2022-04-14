@@ -3761,7 +3761,7 @@
 		"verified" : "true"
 	}
 } ,
-"LangEnum/si" : {
+"LangEnum/sl" : {
 	"type" : "xs:token",
 	"cardinatlity" : "",
 	"comment" : "",
@@ -3811,7 +3811,7 @@
 	"comment" : "PoBox",
 	"sl" : {
 		"label" : "Poštni predal",
-		"description" : "\Številko poštnega polja. IME INSPIRE za to je \\PostDelaryidentifier\\ za katerega uporablja lastnost lokatorja ki ima lastnost tipa tista imena. Ta besednjak ločuje poštno polje za večjo neodvisnost tehnologije.\",
+		"description" : "Številko poštnega polja. IME INSPIRE za to je PostDelaryidentifier za katerega uporablja lastnost lokatorja ki ima lastnost tipa tista imena. Ta besednjak ločuje poštno polje za večjo neodvisnost tehnologije.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3822,7 +3822,7 @@
 	"comment" : "Thoroughface",
 	"sl" : {
 		"label" : "Thoroughface.",
-		"description" : "\Citiranje iz smernic INSPIRE je čisto mesto",
+		"description" : "Citiranje iz smernic INSPIRE je čisto mesto",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3833,7 +3833,7 @@
 	"comment" : "Locator designator",
 	"sl" : {
 		"label" : "Oznaka lokatorja.",
-		"description" : "\Opocenik lokatorja je definiran s smernicami INSPIRE kot \\številka ali zaporedje znakov ki enolično identificirajo lokator v ustreznih področjih (-ih). Celotna identifikacija lokatorja lahko vključuje enega ali več lokatorjev. V enostavnejših pogojih je to številka stavbe številka stanovanja itd. Za naslov kot je \\Stanovanje 3 17 Bridge Street\\ je lokator \\stanovanje 3 17.\\\",
+		"description" : "Opocenik lokatorja je definiran s smernicami INSPIRE kot številka ali zaporedje znakov ki enolično identificirajo lokator v ustreznih področjih (-ih). Celotna identifikacija lokatorja lahko vključuje enega ali več lokatorjev. V enostavnejših pogojih je to številka stavbe številka stanovanja itd. Za naslov kot je Stanovanje 3 17 Bridge Street je lokator stanovanje 3 17.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3844,7 +3844,7 @@
 	"comment" : "Locator name",
 	"sl" : {
 		"label" : "Ime lokatorja",
-		"description" : "\Na podlagi smernic INSPIRE je ime lokatorja opredeljeno kot",
+		"description" : "Na podlagi smernic INSPIRE je ime lokatorja opredeljeno kot",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3855,7 +3855,7 @@
 	"comment" : "Address area",
 	"sl" : {
 		"label" : "Območje naslova",
-		"description" : "\Ob upoštevanju opredelitve ZVANIRE je področje naslova",
+		"description" : "Ob upoštevanju opredelitve ZVANIRE je področje naslova",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4482,7 +4482,7 @@
 	"comment" : "Family name",
 	"sl" : {
 		"label" : "Priimek",
-		"description" : "\Družinsko ime običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone ki so del družinskega imena npr. 'de Boer' 'van de Putte' 'von und zu orlow'. Več družinskih imen na primer običajno najdemo v hispanskih državah se evidentirajo v polju posameznega zasebnega imena tako da bi se na primer Miguel de Cervantes Saavedra imeno ime zabeležila kot \\de Cervantes Saavedra\\.\",
+		"description" : "Družinsko ime običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone ki so del družinskega imena npr. 'de Boer' 'van de Putte' 'von und zu orlow'. Več družinskih imen na primer običajno najdemo v hispanskih državah se evidentirajo v polju posameznega zasebnega imena tako da bi se na primer Miguel de Cervantes Saavedra imeno ime zabeležila kot de Cervantes Saavedra.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4493,7 +4493,7 @@
 	"comment" : "Given name",
 	"sl" : {
 		"label" : "Ime",
-		"description" : "\Ime ali več imenih imen so imenovalci ki identificirajo posameznika znotraj družine. Ti so dana osebam njegovim staršem ob rojstvu ali pa je lahko zakonito priznan kot \\dana imena\\ s formalnim postopkom. Vsa določena imena so naročena na enem polju tako da je na primer dano ime za Johann Sebastian Bacha \\Johann Sebastian\\.\",
+		"description" : "Ime ali več imenih imen so imenovalci ki identificirajo posameznika znotraj družine. Ti so dana osebam njegovim staršem ob rojstvu ali pa je lahko zakonito priznan kot dana imena s formalnim postopkom. Vsa določena imena so naročena na enem polju tako da je na primer dano ime za Johann Sebastian Bacha Johann Sebastian.",
 		"example" : "",
 		"verified" : "true"
 	}

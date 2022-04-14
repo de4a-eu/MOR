@@ -3,7 +3,10 @@
     <div class="text-center text-primary">
       <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>
     </div>
-    <div class="text-center text-primary" translate="gui.complete"></div>
+    <div
+      class="text-center text-primary"
+      translate="GUI/complete.{{ selectedLanguage }}.label"
+    ></div>
   </div>
 </div>
 
@@ -12,7 +15,10 @@
     <div class="text-center text-primary">
       <fa-icon class="me-1" [icon]="faExclamationTriangle"></fa-icon>
     </div>
-    <div class="text-center text-primary" translate="gui.provideInputER"></div>
+    <div
+      class="text-center text-primary"
+      translate="GUI/provideInputER.{{ selectedLanguage }}.label"
+    ></div>
   </div>
 </div>
 
@@ -40,13 +46,18 @@
         (click)="previewEvidence(evidenceType.tokenName)"
       >
         <fa-icon class="me-2" [icon]="faFileCode"></fa-icon
-        >{{ "gui." + evidenceType.code | translate }}
+        >{{
+          evidenceType.morID + "." + selectedLanguage + ".label" | translate
+        }}
       </button>
     </div>
     <!-- Actions -->
     <div class="col-6 p-2">
       <div class="small">
-        <span class="pe-1" translate="gui.select"></span>
+        <span
+          class="pe-1"
+          translate="GUI/select.{{ selectedLanguage }}.label"
+        ></span>
         <div class="form-check form-check-inline me-0 ms-1">
           <input
             class="form-check-input"
@@ -62,10 +73,13 @@
             class="form-check-label pointer"
             [for]="'radio_' + evidenceType.tokenName + '_country'"
           >
-            <b translate="gui.providerCountry"></b>
+            <b translate="GUI/providerCountry.{{ selectedLanguage }}.label"></b>
           </label>
         </div>
-        <span class="ps-1 pe-1" translate="gui.or"></span>
+        <span
+          class="ps-1 pe-1"
+          translate="GUI/or.{{ selectedLanguage }}.label"
+        ></span>
         <div class="form-check form-check-inline me-0 ms-1">
           <input
             class="form-check-input"
@@ -80,7 +94,7 @@
             class="form-check-label pointer"
             [for]="'radio_' + evidenceType.tokenName + '_upload'"
           >
-            <b translate="gui.uploadCanonicalEvidence"></b>
+            <b translate="GUI/uploadEvidence.{{ selectedLanguage }}.label"></b>
           </label>
         </div>
       </div>
@@ -116,7 +130,9 @@
               *ngIf="!provisions[evidenceType.tokenName || '']"
             >
               <fa-icon [icon]="faSyncAlt" class="me-1"></fa-icon
-              ><span translate="gui.selectProvision"></span>
+              ><span
+                translate="GUI/selectProvision.{{ selectedLanguage }}.label"
+              ></span>
             </button>
           </div>
           <div
@@ -152,7 +168,7 @@
         data-bs-target="#requestEvidenceModal"
       >
         <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
-        ><b translate="gui.proceed"></b>
+        ><b translate="GUI/proceed.{{ selectedLanguage }}.label"></b>
       </button>
     </div>
   </div>
@@ -171,7 +187,9 @@
           <h5
             class="modal-title"
             id="requestEvidenceModalLabel"
-            translate="gui.crossBorderEvidenceRequest"
+            translate="GUI/crossBorderEvidenceRequest.{{
+              selectedLanguage
+            }}.label"
           ></h5>
           <button
             type="button"
@@ -181,14 +199,24 @@
           ></button>
         </div>
         <div class="modal-body">
-          <span translate="gui.de4aUsedTo"></span>
+          <span translate="GUI/de4aUsedTo.{{ selectedLanguage }}.label"></span>
           <ul>
             <li>
-              <span translate="gui.requestCrossBorderEvidence"></span>
+              <span
+                translate="GUI/requestCrossBorderEvidence.{{
+                  selectedLanguage
+                }}.label"
+              ></span>
               <ul>
                 <li *ngFor="let evidenceType of getEvidenceTypesForRequest()">
-                  <b>{{ "gui." + evidenceType.tokenName | translate }}</b>
-                  <span class="ps-1 pe-1" translate="gui.from"></span>
+                  <b
+                    >{{ evidenceType.morID + "." + selectedLanguage + ".label" |
+                    translate }}</b
+                  >
+                  <span
+                    class="ps-1 pe-1"
+                    translate="GUI/from.{{ selectedLanguage }}.label"
+                  ></span>
                   <b>{{
                     dataLoaderCountries.getName(
                       canonicalEvidenceCountries[evidenceType.tokenName || ""]
@@ -199,16 +227,25 @@
               </ul>
             </li>
             <li *ngIf="getEvidenceTypesForUpload().length > 0">
-              <span translate="gui.uploadCrossBorderEvidence"></span>
+              <span
+                translate="GUI/uploadCrossBorderEvidence.{{
+                  selectedLanguage
+                }}.label"
+              ></span>
               <ul>
                 <li *ngFor="let evidenceType of getEvidenceTypesForUpload()">
-                  <b>{{ "gui." + evidenceType.tokenName | translate }}</b>
+                  <b>{{
+                    evidenceType.morID + "." + selectedLanguage + ".label"
+                      | translate
+                  }}</b>
                 </li>
               </ul>
             </li>
           </ul>
-          <p translate="gui.inpectEvidence"></p>
-          <p><b translate="gui.dea4aAreYouSure"></b></p>
+          <p translate="GUI/inpectEvidence.{{ selectedLanguage }}.label"></p>
+          <p>
+            <b translate="GUI/dea4aAreYouSure.{{ selectedLanguage }}.label"></b>
+          </p>
         </div>
         <div class="modal-footer">
           <button
@@ -217,7 +254,7 @@
             data-bs-dismiss="modal"
           >
             <fa-icon class="me-1" [icon]="faTimesCircle"></fa-icon>
-            <span translate="gui.cancel"></span>
+            <span translate="GUI/cancel.{{ selectedLanguage }}.label"></span>
           </button>
           <button
             type="button"
@@ -226,7 +263,7 @@
             (click)="finishExplicitRequest()"
           >
             <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon
-            ><span translate="gui.request"></span>
+            ><span translate="GUI/request.{{ selectedLanguage }}.label"></span>
           </button>
         </div>
       </div>
@@ -245,13 +282,21 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="selectProvisionModalLabel">
-            <span translate="gui.selectProvision"></span>
-            <span translate="gui.for" class="ps-1 pe-1"></span>
+            <span
+              translate="GUI/selectProvision.{{ selectedLanguage }}.label"
+            ></span>
+            <span
+              translate="GUI/for.{{ selectedLanguage }}.label"
+              class="ps-1 pe-1"
+            ></span>
             <b>{{
-              "gui." + modalSelectProvisionData.canonicalEvidenceType
+              modalSelectProvisionData.morId + "." + selectedLanguage + ".label"
                 | translate
             }}</b>
-            <span translate="gui.from" class="ps-1 pe-1"></span>
+            <span
+              translate="GUI/from.{{ selectedLanguage }}.label"
+              class="ps-1 pe-1"
+            ></span>
             <b>{{ modalSelectProvisionData.country }}</b>
           </h5>
           <button
@@ -298,7 +343,9 @@
             (click)="modalSelectProvision.hide()"
           >
             <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon
-            ><span translate="gui.confirmProvision"></span>
+            ><span
+              translate="GUI/confirmProvision.{{ selectedLanguage }}.label"
+            ></span>
           </button>
         </div>
       </div>
@@ -322,9 +369,19 @@
           <div class="d-flex">
             <div>
               <h5 class="modal-title" id="previewEvidenceSchemaModalLabel">
-                <span translate="gui.Preview" class="me-1"></span
+                <span
+                  translate="GUI/Preview.{{ selectedLanguage }}.label"
+                  class="me-1"
+                ></span
                 ><b class="me-1">{{ getEvidenceTypeNameForPreview() }}</b
-                ><span translate="gui.schema" class="me-1"></span><span translate="gui.in" class="me-1"></span>
+                ><span
+                  translate="GUI/schema.{{ selectedLanguage }}.label"
+                  class="me-1"
+                ></span
+                ><span
+                  translate="GUI/in.{{ selectedLanguage }}.label"
+                  class="me-1"
+                ></span>
               </h5>
             </div>
             <div>
@@ -338,21 +395,28 @@
                 (click)="showDescription = !showDescription"
               >
                 <span *ngIf="showDescription"
-                  ><span translate="gui.with"></span
+                  ><span
+                    translate="GUI/with.{{ selectedLanguage }}.label"
+                  ></span
                   ><small
                     ><fa-icon
                       class="ms-2 me-1"
                       [icon]="faEye"
                     ></fa-icon></small></span
                 ><span *ngIf="!showDescription"
-                  ><span translate="gui.without"></span
+                  ><span
+                    translate="GUI/without.{{ selectedLanguage }}.label"
+                  ></span
                   ><small
                     ><fa-icon
                       class="ms-2 me-1"
                       [icon]="faEyeSlash"
                     ></fa-icon></small
                 ></span>
-                <span translate="gui.descriptions" class="ms-1"></span>
+                <span
+                  translate="GUI/descriptions.{{ selectedLanguage }}.label"
+                  class="ms-1"
+                ></span>
               </h5>
             </div>
           </div>

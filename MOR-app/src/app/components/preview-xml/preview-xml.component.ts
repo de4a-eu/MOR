@@ -30,7 +30,7 @@ export class PreviewXmlComponent implements OnInit {
     public translate: TranslateService,
     private dataLoaderXml: DataLoaderXmlService
   ) {
-    translate.addLangs(['en', 'sl', 'es']);
+    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
 
@@ -43,66 +43,91 @@ export class PreviewXmlComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['lang']) this.translate.use(this.lang);
     if (changes['xmlInput']) {
       if (Object.keys(this.examples).includes(this.xmlInput)) {
         this.schemaOnly = true;
         this.xmlInput = this.examples[this.xmlInput];
       }
       this.jsOutput = this.parser.parse(this.xmlInput);
+      if (Object.keys(this.jsOutput).length > 0) this.translateDocument();
     }
-    if (Object.keys(this.jsOutput).length > 0) this.translateDocument();
+    if (changes['lang']) {
+      this.translate.use(this.lang).subscribe(() => {
+        if (this.jsOutput && Object.keys(this.jsOutput).length > 0)
+          this.translateDocument();
+      });
+    }
+    if (changes['showDescription']) {
+      if (this.jsOutput && Object.keys(this.jsOutput).length > 0)
+          this.translateDocument();
+    }
   }
+
+  private findAndTranslateKey = (
+    inKey: string,
+    allKeys: any,
+    allTranslations: any
+  ): any => {
+    let outKey: any = {};
+    // Try to find exact match of key in translations
+    let translation = allTranslations[inKey];
+    if (translation) {
+      outKey = {
+        key: inKey,
+        label: translation[this.lang]['label'],
+        description: translation[this.lang]['description'],
+        verified: translation[this.lang]['verified'] == 'true',
+      };
+    } else {
+      let complete = true;
+      do {
+        // Split path into parts
+        let parts = inKey.split('/');
+        // Search for longest match (excluding last part)
+        for (let i = parts.length - 2; i >= 0; i--) {
+          let newPart = parts.slice(0, i + 1).join('/');
+          if (allTranslations[newPart] && allTranslations[newPart].type) {
+            // Replace path with type
+            inKey = inKey.replace(newPart, allTranslations[newPart].type);
+            complete = false;
+            break;
+          } else {
+            complete = true;
+          }
+        }
+        // Try again to find the translation
+        translation = allTranslations[inKey];
+        if (translation) {
+          outKey = {
+            key: inKey,
+            label: translation[this.lang]['label'],
+            description: translation[this.lang]['description'],
+            verified: translation[this.lang]['verified'] == 'true',
+          };
+        }
+      } while (!complete);
+    }
+    return outKey;
+  };
 
   private translateDocument(): void {
     this.jsOutputDetails = this.getAllKeysAndValues();
 
-    // All available translations in case full match is not found
-    let transCurrentLanguage = Object.keys(
-      this.translate.store.translations
-    )[0];
-    let transKeys = Object.keys(
-      this.translate.store.translations[transCurrentLanguage]['term']
-    );
+    /*this.findAndTranslateKey(
+      'BirthEvidence/IssuingAuthority/Identifier/Identifier',
+      this.jsOutputDetails,
+      this.translate.store.translations[this.lang]
+    );*/
 
-    let fullKeys = this.jsOutputDetails.map((x) => 'term.' + x.fullKey);
-    this.translate.get(fullKeys).subscribe((translations) => {
-      fullKeys.map((fullKey) => {
-        if (
-          typeof translations[fullKey] == 'object' &&
-          translations[fullKey].label
-        ) {
-          let foundKey = this.jsOutputDetails.find(
-            (x) => x.fullKey == fullKey.replace('term.', '')
-          );
-          if (translations[fullKey].label)
-            foundKey.keyLabelTranslation = translations[fullKey].label;
-          if (translations[fullKey].description) {
-            foundKey.keyDescriptionTranslation =
-              translations[fullKey].description;
-          }
-        } else {
-          let potencial = transKeys.filter((x) => fullKey.endsWith(x));
-          if (potencial.length > 0) {
-            let potencialLength = potencial.map((x) => x.length);
-            let fullKeyNew =
-              potencial[potencialLength.indexOf(Math.max(...potencialLength))];
-            let foundKey = this.jsOutputDetails.find(
-              (x) => x.fullKey == fullKey.replace('term.', '')
-            );
-            let potentialTranslation = this.translate.instant(
-              'term.' + fullKeyNew
-            );
-            foundKey.keyLabelTranslation = potentialTranslation.label;
-            foundKey.keyDescriptionTranslation =
-              potentialTranslation.description;
-          } else {
-            //console.log("Missing translation for " + fullKey.replace("term.", ""));
-          }
-        }
-      });
-      this.prettyPrint();
+    this.jsOutputDetails.map((x) => {
+      x.translate = this.findAndTranslateKey(
+        x.fullKey,
+        this.jsOutputDetails,
+        this.translate.store.translations[this.lang]
+      );
     });
+
+    this.prettyPrint();
   }
 
   private prettyPrint = () => {
@@ -113,20 +138,20 @@ export class PreviewXmlComponent implements OnInit {
         "<div class='d-flex flex-row'>" +
         ('<div>' + '&nbsp;'.repeat(tab * (v.level - 1)) + '</div>') +
         '<div><b>' +
-        (v.keyLabelTranslation ? v.keyLabelTranslation : v.key) +
+        (v.translate && v.translate.label ? v.translate.label : v.key) +
         '</b>' +
+
         (!this.schemaOnly
           ? v.value
             ? ': <code class="text-primary fw-bold">' + v.value + '</code>'
             : ''
           : '') +
-        (v.keyDescriptionTranslation
-          ? "</div><i><small class='text-muted " +
-            (!this.showDescription ? 'd-none' : '') +
-            "'><span class='ms-2 me-2'>&larr;</span>" +
-            v.keyDescriptionTranslation +
+        (v.translate && v.translate.description && this.showDescription
+          ? "<i><small class='text-muted'><span class='ms-2 me-2'>&larr;</span>" +
+            v.translate.description +
             '</small></i>'
           : '') +
+
         '</div>' +
         '</div>';
     });

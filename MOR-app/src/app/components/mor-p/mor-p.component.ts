@@ -188,9 +188,10 @@ export class MorPComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['defaultLanguage'])
+    if (changes['defaultLanguage']) {
       this.selectedLanguage = this.defaultLanguage;
       this.translate.use(this.selectedLanguage);
+    }
     if (changes['postActionValue']) {
       try {
         this.postActionValueObject = JSON.parse(this.postActionValue);
