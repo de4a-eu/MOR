@@ -1,4 +1,11 @@
-import { Component, Input, OnInit, Output, EventEmitter, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit,
+  Output,
+  EventEmitter,
+  SimpleChanges,
+} from '@angular/core';
 import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Country } from 'src/app/classes/country';
@@ -18,16 +25,18 @@ export class CountrySelectorComponent implements OnInit {
     public countries: DataLoaderCountriesService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es']);
+    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
   }
 
   public getCountryName(code: string): string | null {
     let country = this.countries.getCountries().find((x) => code == x.code);
-    let name: string | null = null;;
+    let name: string | null = null;
     if (country)
-      name = this.translate.instant('term.NUTS0Enum/' + country.code).label;
+      name = this.translate.instant(
+        'NUTS0Enum/' + country.code + '.' + this.defaultLanguage + '.label'
+      );
     return name;
   }
 
@@ -43,7 +52,10 @@ export class CountrySelectorComponent implements OnInit {
   public getCountries(): Country[] {
     let countries = this.countries.getCountries();
     countries.map(
-      (x) => (x.name = this.translate.instant('term.NUTS0Enum/' + x.code).label)
+      (x) =>
+        (x.name = this.translate.instant(
+          'NUTS0Enum/' + x.code + '.' + this.defaultLanguage + '.label'
+        ))
     );
     return countries;
   }
@@ -59,8 +71,7 @@ export class CountrySelectorComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['defaultLanguage'])
-      this.translate.use(this.defaultLanguage);
+    if (changes['defaultLanguage']) this.translate.use(this.defaultLanguage);
   }
 
   ngOnInit(): void {}

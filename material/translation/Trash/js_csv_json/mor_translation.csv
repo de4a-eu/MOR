@@ -1,0 +1,826 @@
+﻿;English;Spanish;Portuguese;French;Slovene
+label;value_en;value_es;value_pt;value_fr;value_sl
+BirthEvidence_en_label;Birth evidence;Evidencia;Evidência de nascimento;Preuve de naissance;Rojstvo
+BirthEvidence_en_description;Official document or data proving the Birth of a Child.;Documento oficial o datos que demuestran el nacimiento de un niño.;Documento oficial ou dados provando o nascimento de uma criança.;Document officiel ou données prouvant la naissance d'un enfant.;Uradni dokument ali podatki, ki dokazujejo rojstvo otroka.
+BirthEvidence/Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+BirthEvidence/Identifier_en_description;An unambiguous reference to the Birth Evidence.;Una referencia inequívoca a las pruebas de nacimiento.;Uma referência inequívoca às evidências de nascimento.;Une référence sans ambiguïté aux preuves de naissance.;Nedvoumno sklicevanje na rojstni dokaz.
+BirthEvidence/IssueDate_en_label;Issue date;Fecha de asunto;Data de emissão;Date d'émission;Datum izdaje
+BirthEvidence/IssueDate_en_description;The most recent date on which the Birth Evidence instance was issued.;La fecha más reciente sobre la que se emitió el caso de evidencia de nacimiento.;A data mais recente em que a instância de evidência de nascimento foi emitida.;La date la plus récente sur laquelle l'instance de preuve de naissance a été émise.;Najnovejši datum, na katerega je bil izdan primer rojstva dokazov.
+BirthEvidence/IssuingAuthority_en_label;Issuing authority;La autoridad emisora;Autoridade emissora;Autorité de délivrance;Organ izdaje
+BirthEvidence/IssuingAuthority_en_description;A Public Organisation with official authority in charge of issuing the Birth Evidence.;Una organización pública con la autoridad oficial encargada de emitir la evidencia del nacimiento.;Uma organização pública com autoridade oficial encarregada de emitir a evidência de nascimento.;Une organisation publique avec autorité officielle chargée de la délivrance des preuves de naissance.;Javna organizacija z uradnim organom, ki je zadolžena za izdajo rojstnih dokazov.
+BirthEvidence/IssuingPlace_en_label;Issuing place;Lugar de emisión;Lugar emissor;Lieu de délivrance;Izdajanje kraja
+BirthEvidence/IssuingPlace_en_description;The Location where the Birth Evidence was issued.;La ubicación donde se emitió la evidencia de nacimiento.;O local onde a evidência de nascimento foi emitida.;L'emplacement où les preuves de naissance ont été émises.;Lokacijo, kjer so bili izdani rojstni dokaz.
+BirthEvidence/IssuingPlace/AdminUnitL2_en_label;;;;;
+BirthEvidence/IssuingPlace/AdminUnitL2_en_description;;;;;
+BirthEvidence/IssuingPlace/AdminUnitL1_en_label;;;;;
+BirthEvidence/IssuingPlace/AdminUnitL1_en_description;;;;;
+BirthEvidence/CertifiesBirth_en_label;Certifies birth;Certifica el nacimiento;Certifica o nascimento;Certifie la naissance;Potrjuje rojstvo
+BirthEvidence/CertifiesBirth_en_description;Attesting in a formal way that the Birth is true.;Firstando de una manera formal que el nacimiento es cierto.;Atestando de forma formal que o nascimento é verdadeiro.;Attester de manière formelle que la naissance est vraie.;Uradno potrjevanje, da je rojstvo res.
+BirthEvidence/CertifiesBirth/Child_en_label;Child;Niño;Criança;Enfant;Otrok
+BirthEvidence/CertifiesBirth/Child_en_description;The Person who is born at the Birth. A Person of any age, who is a son or daughter.;La persona que nace en el nacimiento. Una persona de cualquier edad, que es un hijo o hija.;A pessoa que nasce no nascimento. Uma pessoa de qualquer idade, que é filho ou filha.;La personne née à la naissance. Une personne de tout âge, qui est un fils ou une fille.;Oseba, ki se je rodila ob rojstvu. Oseba katere koli starosti, ki je sin ali hči.
+BirthEvidence/CertifiesBirth/Child/DateOfBirth_en_label;;;;;
+BirthEvidence/CertifiesBirth/Child/DateOfBirth_en_description;;;;;
+BirthEvidence/CertifiesBirth/Child/Gender_en_label;;;;;
+BirthEvidence/CertifiesBirth/Child/Gender_en_description;Gender of the born person;Género de la persona nacida;Gênero da pessoa nascida;Sexe de la personne née;SPOLO OSEBENE OSEBE
+BirthEvidence/CertifiesBirth/Child/PlaceOfBirth_en_label;;;;;
+BirthEvidence/CertifiesBirth/Child/PlaceOfBirth_en_description;;;;;
+BirthEvidence/CertifiesBirth/Parent_en_label;Parent;Padre;Pai;Parent;Starš
+BirthEvidence/CertifiesBirth/Parent_en_description;The Parent of the Child. One of the two Persons who are jointly the cause of the Child's Birth, i.e. natural parent.;El padre del niño. Una de las dos personas que son conjuntamente la causa del nacimiento del niño, es decir, padre natural.;O pai da criança. Uma das duas pessoas que são conjuntamente a causa do nascimento da criança, isto é, pai natural.;Le parent de l'enfant. Une des deux personnes qui sont conjointement la cause de la naissance de l'enfant, c'est-à-dire un parent naturel.;Starš otroka. Ena od obeh oseb, ki so skupaj vzrok otrokovega rojstva, tj. Naravni staršev.
+LocationAddress_en_label;Address;Habla a;Endereço;Adresse;Naslov.
+LocationAddress_en_description;;;;;
+LocationAddress/AdminUnitL2_en_label;Admin unit level 2;Nivel de unidad de administración 2;Unidade de administração Nível 2;Unité d'administration Niveau 2;Admin Enota Nivo 2
+LocationAddress/AdminUnitL2_en_description;The region of the address, usually a county, state or other such area that typically encompasses several localities.;La región de la dirección, generalmente un condado, estado u otro área de este tipo que generalmente abarca varias localidades.;A região do endereço, geralmente um condado, estado ou outra área que tipicamente abrange várias localidades.;La région de l'adresse, généralement un comté, un État ou un autre domaine de ce type qui englobe généralement plusieurs localités.;Regija naslova, ponavadi okrožje, državo ali drugo takšno področje, ki običajno obsega več krajev.
+LocationAddress/AdminUnitL1_en_label;Admin unit level 1;Nivel de unidad de administración 1;Unidade de administração Nível 1;Unité d'administration Niveau 1;Admin Enota Nivo 1
+LocationAddress/AdminUnitL1_en_description;The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.;La unidad administrativa superior para la dirección, casi siempre un país. La mejor práctica es utilizar el código ISO 3166-1.;A unidade administrativa superior para o endereço, quase sempre um país. A melhor prática é usar o código ISO 3166-1.;L'unité administrative la plus haute pour l'adresse, presque toujours un pays. La meilleure pratique consiste à utiliser le code ISO 3166-1.;Najvišja upravna enota za naslov, skoraj vedno državo. Najboljša praksa je uporaba kode ISO 3166-1.
+LocationAddress/PoBox_en_label;PoBox;Pobox;Caixa postal;Boîte postale;Poštni predal
+LocationAddress/PoBox_en_description;The Post Office Box number. INSPIRE's name for this is 'postalDeliveryIdentifier' for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology.;El número de la caja de la oficina de correos. El nombre de Inspire para esto es 'postaldeliveryidentifier' para el cual usa la propiedad del designador del localizador con un atributo de tipo de ese nombre. Este vocabulario separa el cuadro de correos para una mayor independencia de la tecnología.;O número da caixa de correios. O nome do Inspire para isso é 'PostalLiveryInIdientifier' para o qual ele usa a propriedade do designador localizador com um atributo de tipo desse nome. Este vocabulário separa a caixa postal para maior independência de tecnologia.;"Le numéro de la boîte postale. L'INSPIRE NAME POUR Ceci est ""PostalDelIdentifier"" pour lequel il utilise la propriété de localisateur concepteur avec un attribut de type de ce nom. Ce vocabulaire sépare la boîte de poste pour une plus grande indépendance de la technologie.";"Številko poštnega polja. IME INSPIRE za to je ""PostDelaryidentifier"", za katerega uporablja lastnost lokatorja, ki ima lastnost tipa tista imena. Ta besednjak ločuje poštno polje za večjo neodvisnost tehnologije."
+LocationAddress/Thoroughfare_en_label;Thoroughface;Vaso;Perface;Rétrécissement;Thoroughface.
+LocationAddress/Thoroughfare_en_description;Quoting from the INSPIRE guidelines, a thoroughfare is: 'an address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.;Citando las directrices de inspiración, una vía pública es: 'un componente de dirección que representa el nombre de un pasaje o camino a través de un lugar a otro. Una vía no es necesariamente un camino, podría ser una vía fluvial o alguna otra característica.;Citando das diretrizes inspiradas, uma tráfego é: 'Um componente de endereço que representa o nome de uma passagem ou passagem de um local para outro. Uma passagem não é necessariamente uma estrada, pode ser uma hidrovia ou algum outro recurso.;Citation des lignes directrices INSPIRE, une voie de calcul est la suivante: «Un composant d'adresse qui représente le nom d'un passage ou d'une manière à travers un endroit à un autre. Une voie de circulation n'est pas nécessairement une route, elle pourrait être une voie navigable ou une autre caractéristique.;"Citiranje iz smernic INSPIRE, je čisto mesto: ""naslovna komponenta, ki predstavlja ime prehoda ali poti skozi eno lokacijo na drugo. Trajnostna uporaba ni nujno cesta, lahko pa je vodna pot ali druga druga funkcija."
+LocationAddress/LocatorDesignator_en_label;Locator designator;Designador de localizador;Designador localizador.;Concepteur de localisateur;Oznaka lokatorja.
+LocationAddress/LocatorDesignator_en_description;The locator designator is defined by the INSPIRE guidelines as 'a number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.' In simpler terms, this is the building number, apartment number, etc. For an address such as 'Flat 3, 17 Bridge Street', the locator is 'flat 3, 17.';"El designador del localizador está definido por las directrices INSPIRE como ""un número o una secuencia de caracteres que identifican de forma única el localizador dentro del alcance (s) relevante (s). La identificación completa del localizador podría incluir uno o más designadores de localizador '. En términos más simples, este es el número de edificio, el número de apartamento, etc. para una dirección como 'Flat 3, 17 Bridge Street', el localizador es 'Flat 3, 17'.";"O designador do localizador é definido pelas diretrizes inspirando como ""um número ou uma sequência de caracteres que identifica exclusivamente o localizador dentro do (s) escopo (s) relevante (s). A identificação completa do localizador pode incluir um ou mais designadores localizadores. Em termos mais simples, este é o número do edifício, o número do apartamento, etc. para um endereço como 'Flat 3, 17 Bridge Street', o localizador é 'Flat 3, 17.'";Le concepteur de localisateur est défini par les directives Inspire comme «un nombre ou une séquence de caractères identifiant de manière unique le localisateur dans les champs (s) pertinents (s). L'identification complète du localisateur pourrait inclure un ou plusieurs designateurs de localisation. ' En termes simples, il s'agit du numéro de bâtiment, du numéro d'appartement, etc. pour une adresse telle que «Appartement 3, 17 pont Street», le localisateur est 'plat 3, 17.';"Opocenik lokatorja je definiran s smernicami INSPIRE kot ""številka ali zaporedje znakov, ki enolično identificirajo lokator v ustreznih področjih (-ih). Celotna identifikacija lokatorja lahko vključuje enega ali več lokatorjev. V enostavnejših pogojih je to številka stavbe, številka stanovanja itd. Za naslov, kot je ""Stanovanje 3, 17 Bridge Street"", je lokator ""stanovanje 3, 17."""
+LocationAddress/LocatorName_en_label;Locator name;Nombre del localizador;Nome do localizador.;Nom du localisateur;Ime lokatorja
+LocationAddress/LocatorName_en_description;Based on the INSPIRE guidelines, locator name is defined as: 'Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, 'Shumann, Berlaymont' is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.;Sobre la base de las directrices INSPIRE, el nombre del localizador se define como: 'sustantivos adecuados (s) aplicados a la entidad del mundo real identificado por el localizador. El nombre del localizador podría ser el nombre de la propiedad o complejo, del edificio o parte del edificio, o podría ser el nombre de una habitación dentro de un edificio. La diferencia clave entre un localizador y un nombre de localizador es que este último es un nombre adecuado y es poco probable que incluya dígitos. Por ejemplo, 'Shumann, Berlaymont' es una sala de reuniones dentro de la sede de la Comisión Europea, por lo que el nombre del localizador es más apropiado que el localizador.;Com base nas diretrizes inspiradas, o nome do localizador é definido como: 'substantivo (s) adequado (s) aplicado à entidade do mundo real identificado pelo localizador. O nome do localizador pode ser o nome da propriedade ou complexo, do edifício ou parte do edifício, ou pode ser o nome de uma sala dentro de um edifício. A diferença chave entre um localizador e um nome do localizador é que este último é um nome próprio e é improvável que inclua dígitos. Por exemplo, 'Shumann, Berlaymont' é uma sala de reunião dentro da sede da Comissão Europeia para a qual o nome do localizador é mais apropriado do que o localizador.;Sur la base des directives d'inspiration, le nom du localisateur est défini comme suit: «Noun (s) approprié (s) appliqué à l'entité du monde réel identifiée par le localisateur. Le nom du localisateur pourrait être le nom de la propriété ou du complexe, du bâtiment ou de la partie du bâtiment, ou peut être le nom d'une pièce à l'intérieur d'un bâtiment. La différence de clé entre un localisateur et un nom de localisation est que celle-ci est un nom propre et qu'il est peu probable d'inclure des chiffres. Par exemple, 'Shumann, Berlaymont' est une salle de réunion au sein du siège de la Commission européenne pour laquelle le nom de localisation est plus approprié que le localisateur.;"Na podlagi smernic INSPIRE je ime lokatorja opredeljeno kot: ""Ustrezni samostalnik (-e), ki se uporabljajo za realnega svetovnega subjekta, ki ga je identificiral lokator. Ime lokatorja bi lahko bilo ime nepremičnine ali kompleksa, iz stavbe ali dela stavbe, ali pa je lahko ime sobe znotraj stavbe. Ključna razlika med lokatorjem in imenom lokatorja je, da je slednje pravilno ime in verjetno ne vključuje številk. Na primer, ""Shumann, Berlaymont"" je sejna soba znotraj sedeža Evropske komisije, za katero je ime lokatorja bolj primerno kot lokator."
+LocationAddress/AddressArea_en_label;Address area;Área de direcciones;Área de endereço;Domaine d'adressage;Območje naslova
+LocationAddress/AddressArea_en_description;Taking the definition from INSPIRE, the address area is: the name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.' This would typically be part of a city, a neighbourhood or village.;"Tomando la definición de inspirar, el área de direcciones es: el nombre o los nombres de un área geográfica o localidad que agrupan una serie de objetos direccionables para fines de direccionamiento, sin ser una unidad administrativa "". Esto normalmente sería parte de una ciudad, un barrio o pueblo.";Tomando a definição da Inspire, a área de endereço é: o nome ou nomes de uma área geográfica ou localidade que agrupa um número de objetos endereçáveis ​​para fins de endereçamento, sem ser uma unidade administrativa. Isso normalmente seria parte de uma cidade, um bairro ou aldeia.;"Prenant la définition d'Inspire, la zone d'adresses est la suivante: nom ou noms d'une zone géographique ou localité qui regroupe un certain nombre d'objets adressables à des fins d'adressage, sans être une unité administrative. "" Cela ferait généralement partie d'une ville, d'un quartier ou d'un village.";"Ob upoštevanju opredelitve ZVANIRE je področje naslova: ime ali imena geografskega območja ali kraja, ki združuje številne pomembnih predmetov za namene obravnavanja, ne da bi bila upravna enota. "" To bi običajno del mesta, soseske ali vasi."
+LocationAddress/PostName_en_label;Post name;Nombre del puesto;Nome do post;Après le nom;Ime objave
+LocationAddress/PostName_en_description;The key postal division of the address, usually the city. (INSPIRE's definition is 'One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.);"La división postal clave de la dirección, generalmente la ciudad. (La definición de Inspire es ""uno o más nombres creados y mantenidos con fines postales para identificar una subdivisión de direcciones y puntos de entrega postal).";A chave postal da divisão do endereço, geralmente a cidade. (A definição do Inspire é um ou mais nomes criados e mantidos para fins postais para identificar uma subdivisão de endereços e pontos de entrega postal.);La principale division postale de l'adresse, généralement la ville. (La définition de Inspire est 'Un ou plusieurs noms créés et maintenus à des fins postales pour identifier une subdivision d'adresses et de points de livraison postale.);Ključna poštna razdelitev naslova, običajno mesto. (Opredelitev INSPIRE je 'Eno ali več imen, ustvarjenih in vzdrževanih za poštne namene, da bi ugotovili pododdelstvo naslovov in poštnih točk.)
+LocationAddress/PostCode_en_label;Post code;Código postal;Código postal;Code postal;Post Code.
+LocationAddress/PostCode_en_description;The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems.;El código postal (A.K.A código postal, código postal, etc.). Los códigos POST son elementos comunes en los sistemas de direcciones postales de muchos países.;O código postal (A.K.A Código Postal, Código ZIP etc.). Os códigos postais são elementos comuns nos sistemas de endereço postal de muitos países.;Le code postal (code postal A.k.a, code postal, etc.). Les codes postaux sont des éléments courants dans les systèmes d'adresses postaux de nombreux pays.;Poštna številka po pošti (A.K.A Poštna številka, Poštna številka itd.). Post kode so skupni elementi v poštnih naslovnih sistemih mnogih držav.
+CountryEnum_en_label;;;;;
+CountryEnum_en_description;ISO 3166-1 alpha-3 codes are three-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization, to represent countries, dependent territories, and special areas of geographical interest.;ISO 3166-1 Los códigos alfa-3 son códigos de país de tres letras definidos en la norma ISO 3166-1, parte de la norma ISO 3166 publicada por la Organización Internacional de Normalización, para representar a países, territorios dependientes y áreas especiales de interés geográfico.;Os códigos alfa-3 ISO 3166-1 são códigos de três letras definidos na ISO 3166-1, parte do padrão ISO 3166 publicado pela Organização Internacional de Padronização, para representar países, territórios dependentes e áreas especiais de interesse geográfico.;Les codes de pays ISO 3166-1 sont des codes de pays de trois lettres définis dans l'ISO 3166-1, une partie de la norme ISO 3166 publiée par l'Organisation internationale de normalisation, de représenter des pays, des territoires dépendants et des zones spéciales d'intérêt géographique.;ISO 3166-1 Kode alfa-3 so tričrkovne kode države, opredeljene v standardu ISO 3166, ki jo je objavila Mednarodna organizacija za standardizacijo, za zastopanje držav, odvisnih ozemelj in posebnih področij geografskega interesa.
+CountryEnum/1A0_en_label;Kosovo;Kosovo;Kosovo;Kosovo;Kosovo
+CountryEnum/1A0_en_description;;;;;
+CountryEnum/ABW_en_label;Aruba;Aruba;Aruba.;Arubie;Aruba.
+CountryEnum/ABW_en_description;;;;;
+CountryEnum/AFG_en_label;Afghanistan;Afganistán;Afeganistão;Afghanistan;Afganistan
+CountryEnum/AFG_en_description;;;;;
+CountryEnum/AFI_en_label;French Afar and Issas;Francés lejos y issas;Francês Afar e Issa;Afar français et Issas;Francoski Afar in Issas
+CountryEnum/AFI_en_description;;;;;
+CountryEnum/AGO_en_label;Angola;Angola;Angola;Angola;Angola
+CountryEnum/AGO_en_description;;;;;
+CountryEnum/AIA_en_label;Anguilla;Anguila;Anguilla.;Anguilla;Anguilla.
+CountryEnum/AIA_en_description;;;;;
+CountryEnum/ALA_en_label;Åland Islands;Islas Aland;Ilhas Aland;Iles Aland;Ålandski otoki.
+CountryEnum/ALA_en_description;;;;;
+CountryEnum/ALB_en_label;Albania;Albania;Albânia;Albanie;Albanija
+CountryEnum/ALB_en_description;;;;;
+CountryEnum/AND_en_label;Andorra;Andorra;Andorra;Andorre;Andora
+CountryEnum/AND_en_description;;;;;
+CountryEnum/ANT_en_label;Netherlands Antilles;Antillas Holandesas;Antilhas Holandesas;Antilles néerlandaises;Nizozemski Antili
+CountryEnum/ANT_en_description;;;;;
+CountryEnum/ARE_en_label;United Arab Emirates;Emiratos Árabes Unidos;Emirados Árabes Unidos;Emirats Arabes Unis;Združeni Arabski Emirati
+CountryEnum/ARE_en_description;;;;;
+CountryEnum/ARG_en_label;Argentina;Argentina;Argentina;Argentine;Argentina
+CountryEnum/ARG_en_description;;;;;
+CountryEnum/ARM_en_label;Armenia;Armenia;Armênia;Arménie;Armenija
+CountryEnum/ARM_en_description;;;;;
+CountryEnum/ASM_en_label;American Samoa;Samoa Americana;Samoa Americana;Samoa américain;Ameriška Samoa
+CountryEnum/ASM_en_description;;;;;
+CountryEnum/ATA_en_label;Antarctica;Antártida;Antártica;Antarctique;Antarktika
+CountryEnum/ATA_en_description;;;;;
+CountryEnum/ATB_en_label;British Antarctic Territory;Territorio antártico británico;Território Antártico Britânico;Territoire antarctique britannique;Britansko antarktično ozemlje
+CountryEnum/ATB_en_description;;;;;
+CountryEnum/ATF_en_label;French Southern Lands;Tierras del sur franceses;Lands do sul francês;Terres du sud français;Francoske južne dežele
+CountryEnum/ATF_en_description;;;;;
+CountryEnum/ATG_en_label;Antigua and Barbuda;Antigua y Barbuda;Antigua e Barbuda.;Antigua-et-Barbuda;Antigva in Barbuda.
+CountryEnum/ATG_en_description;;;;;
+CountryEnum/ATN_en_label;Dronning Maud Land;Donning Maud Land;Terreno de Dronning Maud;DRONNING MAUD TERRAIN;Dronning Maud Land.
+CountryEnum/ATN_en_description;;;;;
+CountryEnum/AUS_en_label;Australia;Australia;Austrália;Australie;Avstralija
+CountryEnum/AUS_en_description;;;;;
+CountryEnum/AUT_en_label;Austria;Austria;Áustria;L'Autriche;Avstrija
+CountryEnum/AUT_en_description;;;;;
+CountryEnum/AZE_en_label;Azerbaijan;Azerbaiyán;Azerbaijão;Azerbaïdjan;Azerbajdžan
+CountryEnum/AZE_en_description;;;;;
+CountryEnum/BDI_en_label;Burundi;Burundi;Burundi;Burundi;Burundi.
+CountryEnum/BDI_en_description;;;;;
+CountryEnum/BEL_en_label;Belgium;Bélgica;Bélgica;la Belgique;Belgija
+CountryEnum/BEL_en_description;;;;;
+CountryEnum/BEN_en_label;Benin;Benin;Benin;Bénin;Benin.
+CountryEnum/BEN_en_description;;;;;
+CountryEnum/BES_en_label;Bonaire, Sint Eustatius and Saba;Bonaire, Sint Eustatius y Saba.;Bonaire, Sint Eustatius e Saba;Bonaire, Sint Eustadius et Saba;Bonaire, Sint Eustatius in Saba
+CountryEnum/BES_en_description;;;;;
+CountryEnum/BFA_en_label;Burkina Faso;Burkina Faso;Burkina Faso;Burkina Faso;Burkina Faso.
+CountryEnum/BFA_en_description;;;;;
+CountryEnum/BGD_en_label;Bangladesh;Bangladesh;Bangladesh;Bangladesh;Bangladeš
+CountryEnum/BGD_en_description;;;;;
+CountryEnum/BGR_en_label;Bulgaria;Bulgaria;Bulgária;Bulgarie;Bolgarija
+CountryEnum/BGR_en_description;;;;;
+CountryEnum/BHR_en_label;Bahrain;Bahrein;Bahrein;Bahreïn;Bahrajn.
+CountryEnum/BHR_en_description;;;;;
+CountryEnum/BHS_en_label;Bahamas;Bahamas;Bahamas.;Bahamas;Bahamas.
+CountryEnum/BHS_en_description;;;;;
+CountryEnum/BIH_en_label;Bosnia and Herzegovina;Bosnia y Herzegovina;Bósnia e Herzegovina;Bosnie Herzégovine;Bosna in Hercegovina
+CountryEnum/BIH_en_description;;;;;
+CountryEnum/BLM_en_label;Saint Barthélemy;San Barthélemy;São Barthélemy.;Saint Barthélemy;Saint Barthélemy.
+CountryEnum/BLM_en_description;;;;;
+CountryEnum/BLR_en_label;Belarus;Bielorrusia;Bielorrússia;Biélorussie;Belorusija
+CountryEnum/BLR_en_description;;;;;
+CountryEnum/BLZ_en_label;Belize;Belice;Belize;Belize;Belize
+CountryEnum/BLZ_en_description;;;;;
+CountryEnum/BMU_en_label;Bermuda;islas Bermudas;Bermudas;Bermudes;Bermuda.
+CountryEnum/BMU_en_description;;;;;
+CountryEnum/BOL_en_label;Bolivia;Bolivia;Bolívia;Bolivie;Bolivija.
+CountryEnum/BOL_en_description;;;;;
+CountryEnum/BRA_en_label;Brazil;Brasil;Brasil;Brésil;Brazil
+CountryEnum/BRA_en_description;;;;;
+CountryEnum/BRB_en_label;Barbados;Barbados;Barbados.;Barbados;Barbados.
+CountryEnum/BRB_en_description;;;;;
+CountryEnum/BRN_en_label;Brunei;Brunei;Brunei;Brunei;Brunej
+CountryEnum/BRN_en_description;;;;;
+CountryEnum/BTN_en_label;Bhutan;Bután;Butão;Bhoutan;Bhutan.
+CountryEnum/BTN_en_description;;;;;
+CountryEnum/BUR_en_label;Burma;Birmania;Burma;Birmanie;Burma
+CountryEnum/BUR_en_description;;;;;
+CountryEnum/BVT_en_label;Bouvet Island;Isla de bouvet;Ilha Bouvet.;Île Bouvet;Bouvet Island.
+CountryEnum/BVT_en_description;;;;;
+CountryEnum/BWA_en_label;Botswana;Botsuana;Botsuana.;Botswana;Bocvana.
+CountryEnum/BWA_en_description;;;;;
+CountryEnum/BYS_en_label;Belarus;Bielorrusia;Bielorrússia;Biélorussie;Belorusija
+CountryEnum/BYS_en_description;;;;;
+CountryEnum/CAF_en_label;Central African Republic;República Centroafricana;República Centro-Africana.;République centrafricaine;centralna afriška republika
+CountryEnum/CAF_en_description;;;;;
+CountryEnum/CAN_en_label;Canada;Canadá;Canadá;Canada;Kanada.
+CountryEnum/CAN_en_description;;;;;
+CountryEnum/CCK_en_label;Cocos (Keeling) Islands;Islas Cocos (Keeling);Ilhas Cocos (Keeling);Îles Cocos (Keeling);Kokosovi otoki
+CountryEnum/CCK_en_description;;;;;
+CountryEnum/CHE_en_label;Switzerland;Suiza;Suíça;la Suisse;Švica
+CountryEnum/CHE_en_description;;;;;
+CountryEnum/CHL_en_label;Chile;Chile;Chile;Chili;Čile
+CountryEnum/CHL_en_description;;;;;
+CountryEnum/CHN_en_label;China;China;China;Chine;Kitajska
+CountryEnum/CHN_en_description;;;;;
+CountryEnum/CIV_en_label;Côte dIvoire;Côte d'Ivoire;Costa do Marfim;Côte d'Ivoire;Côte d'ivoire.
+CountryEnum/CIV_en_description;;;;;
+CountryEnum/CMR_en_label;Cameroon;Camerún;Camarões;Cameroun;Kamerun
+CountryEnum/CMR_en_description;;;;;
+CountryEnum/COD_en_label;Democratic Republic of the Congo;República Democrática del Congo;República Democrática do Congo;République Démocratique du Congo;Demokratična republika Kongo
+CountryEnum/COD_en_description;;;;;
+CountryEnum/COG_en_label;Congo;Congo;Congo;Congo;Kongo.
+CountryEnum/COG_en_description;;;;;
+CountryEnum/COK_en_label;Cook Islands;Islas Cook;Ilhas Cook;les Îles Cook;Cook Islands.
+CountryEnum/COK_en_description;;;;;
+CountryEnum/COL_en_label;Colombia;Colombia;Colômbia;Colombie;Kolumbija
+CountryEnum/COL_en_description;;;;;
+CountryEnum/COM_en_label;Comoros;Comoras;Comores.;Comores;Komorov
+CountryEnum/COM_en_description;;;;;
+CountryEnum/CPT_en_label;Clipperton;Clipperton;Clipperton;Clipart;Clipperton.
+CountryEnum/CPT_en_description;;;;;
+CountryEnum/CPV_en_label;Cabo Verde;Cabo Verde;Cabo Verde.;Cabo Verde;Cabo Verde.
+CountryEnum/CPV_en_description;;;;;
+CountryEnum/CRI_en_label;Costa Rica;Costa Rica;Costa Rica;Costa Rica;Kostarika
+CountryEnum/CRI_en_description;;;;;
+CountryEnum/CSK_en_label;Czechoslovakia;Checoslovaquia;Checoslováquia;Tchécoslovaquie;Češkoslovaška
+CountryEnum/CSK_en_description;;;;;
+CountryEnum/CTE_en_label;Canton and Enderbury Islands;Islas Cantón y Enderbury;Ilhas Cantão e Enderbury;Îles Canton et Enderbury;Kanton in Enderbury Islands
+CountryEnum/CTE_en_description;;;;;
+CountryEnum/CUB_en_label;Cuba;Cuba;Cuba;Cuba;Kuba
+CountryEnum/CUB_en_description;;;;;
+CountryEnum/CUW_en_label;Curaçao;Curazao;Curaçao.;Curacao;Curaçao.
+CountryEnum/CUW_en_description;;;;;
+CountryEnum/CXR_en_label;Christmas Island;Isla de Navidad;Ilha do Natal;L'île de noël;Božični otok
+CountryEnum/CXR_en_description;;;;;
+CountryEnum/CYM_en_label;Cayman Islands;Islas Caimán;Ilhas Cayman;Îles Caïmans;Cayman Islands.
+CountryEnum/CYM_en_description;;;;;
+CountryEnum/CYP_en_label;Cyprus;Chipre;Chipre;Chypre;Ciper.
+CountryEnum/CYP_en_description;;;;;
+CountryEnum/CZE_en_label;Czechia;Chequia;Czechia.;Tchechie;Čechia.
+CountryEnum/CZE_en_description;;;;;
+CountryEnum/DDR_en_label;East Germany;Alemania del Este;Alemanha Oriental;Allemagne de l'est;Vzhodna Nemčija
+CountryEnum/DDR_en_description;;;;;
+CountryEnum/DEU_en_label;Germany;Alemania;Alemanha;Allemagne;Nemčija
+CountryEnum/DEU_en_description;;;;;
+CountryEnum/DHY_en_label;Dahomey;Dahomey;Daomé;Dahomey;Dahomey.
+CountryEnum/DHY_en_description;;;;;
+CountryEnum/DJI_en_label;Djibouti;Djibouti;Djibuti.;Djibouti;Džibouti.
+CountryEnum/DJI_en_description;;;;;
+CountryEnum/DMA_en_label;Dominica;Dominica;Dominica.;Dominique;Dominica.
+CountryEnum/DMA_en_description;;;;;
+CountryEnum/DNK_en_label;Denmark;Dinamarca;Dinamarca;Danemark;Danska
+CountryEnum/DNK_en_description;;;;;
+CountryEnum/DOM_en_label;Dominican Republic;República Dominicana;República Dominicana;République dominicaine;Dominikanska republika
+CountryEnum/DOM_en_description;;;;;
+CountryEnum/DZA_en_label;Algeria;Argelia;Argélia;Algérie;Alžirija
+CountryEnum/DZA_en_description;;;;;
+CountryEnum/ECU_en_label;Ecuador;Ecuador;Equador;Équateur;Ekvador.
+CountryEnum/ECU_en_description;;;;;
+CountryEnum/EGY_en_label;Egypt;Egipto;Egito;Egypte;Egipt.
+CountryEnum/EGY_en_description;;;;;
+CountryEnum/ERI_en_label;Eritrea;Eritrea;Eritreia;Érythrée;Eritreja
+CountryEnum/ERI_en_description;;;;;
+CountryEnum/ESH_en_label;Western Sahara;Sahara Occidental;Saara Ocidental;Sahara occidental;Western Sahara.
+CountryEnum/ESH_en_description;;;;;
+CountryEnum/ESP_en_label;Spain;España;Espanha;Espagne;Španija
+CountryEnum/ESP_en_description;;;;;
+CountryEnum/EST_en_label;Estonia;Estonia;Estônia;Estonie;Estonija
+CountryEnum/EST_en_description;;;;;
+CountryEnum/ETH_en_label;Ethiopia;Etiopía;Etiópia;Ethiopie;Etiopija
+CountryEnum/ETH_en_description;;;;;
+CountryEnum/EUR_en_label;European Union;unión Europea;União Européia;Union européenne;Evropska unija
+CountryEnum/EUR_en_description;;;;;
+CountryEnum/FIN_en_label;Finland;Finlandia;Finlândia;Finlande;Finska
+CountryEnum/FIN_en_description;;;;;
+CountryEnum/FJI_en_label;Fiji;Fiji;Fiji.;Fidji;Fidži
+CountryEnum/FJI_en_description;;;;;
+CountryEnum/FLK_en_label;Falkland Islands;Islas Malvinas;Ilhas Falkland;les îles Falkland;Falklandski otoki.
+CountryEnum/FLK_en_description;;;;;
+CountryEnum/FQ0_en_label;French Southern and Antarctic Lands;Tierras francesas del sur y antártico;Terras francesas do sul e antártica;Terres françaises du sud et de l'Antarctique;Francoska južna in Antarktična zemljišča
+CountryEnum/FQ0_en_description;;;;;
+CountryEnum/FRA_en_label;France;Francia;França;La France;Francija
+CountryEnum/FRA_en_description;;;;;
+CountryEnum/FRO_en_label;Faroes;Feroes;Faroes.;Farouche;Faroes.
+CountryEnum/FRO_en_description;;;;;
+CountryEnum/FSM_en_label;Micronesia;Micronesia;Micronésia.;Micronésie;Mikronezija
+CountryEnum/FSM_en_description;;;;;
+CountryEnum/FXX_en_label;Metropolitan France;Metropolitano francia;França metropolitana.;France métropolitaine;Metropolitan FRANCIJA
+CountryEnum/FXX_en_description;;;;;
+CountryEnum/GAB_en_label;Gabon;Gabón;Gabão;Gabon;Gabon
+CountryEnum/GAB_en_description;;;;;
+CountryEnum/GBR_en_label;United Kingdom;Reino Unido;Reino Unido;Royaume-Uni;Združeno kraljestvo
+CountryEnum/GBR_en_description;;;;;
+CountryEnum/GEL_en_label;Gilbert and Ellice Islands;Gilbert y Islas Elice;Ilhas Gilbert e Ellice;Îles Gilbert et Ellice;Gilbert in Ellice Islands
+CountryEnum/GEL_en_description;;;;;
+CountryEnum/GEO_en_label;Georgia;Georgia;Geórgia;Géorgie;Georgia.
+CountryEnum/GEO_en_description;;;;;
+CountryEnum/GGY_en_label;Guernsey;Guerna;Guernsey.;Guernesey;Guernsey.
+CountryEnum/GGY_en_description;;;;;
+CountryEnum/GHA_en_label;Ghana;Ghana;Gana;Ghana;Gana.
+CountryEnum/GHA_en_description;;;;;
+CountryEnum/GIB_en_label;Gibraltar;Gibraltar;Gibraltar;Gibraltar;Gibraltar.
+CountryEnum/GIB_en_description;;;;;
+CountryEnum/GIN_en_label;Guinea;Guinea;Guiné;Guinée;Gvineja
+CountryEnum/GIN_en_description;;;;;
+CountryEnum/GLP_en_label;Guadeloupe;Guadalupe;Guadalupe.;Guadeloupe;Guadeloupe.
+CountryEnum/GLP_en_description;;;;;
+CountryEnum/GMB_en_label;The Gambia;La gambia;A Gâmbia.;La Gambie;Gambia.
+CountryEnum/GMB_en_description;;;;;
+CountryEnum/GNB_en_label;Guinea-Bissau;Guinea-Bissau;Guiné-Bissau.;Guinée-Bissau;Gvineja Bissau.
+CountryEnum/GNB_en_description;;;;;
+CountryEnum/GNQ_en_label;Equatorial Guinea;Guinea Ecuatorial;Guiné Equatorial;Guinée Équatoriale;Ekvatorialna Gvineja
+CountryEnum/GNQ_en_description;;;;;
+CountryEnum/GRC_en_label;Greece;Grecia;Grécia;Grèce;Grčija.
+CountryEnum/GRC_en_description;;;;;
+CountryEnum/GRD_en_label;Grenada;Granada;Granada;Grenade;Grenada.
+CountryEnum/GRD_en_description;;;;;
+CountryEnum/GRL_en_label;Greenland;Groenlandia;Groenlândia;Groenland;Grenlandija
+CountryEnum/GRL_en_description;;;;;
+CountryEnum/GTM_en_label;Guatemala;Guatemala;Guatemala;Guatemala;Gvatemala.
+CountryEnum/GTM_en_description;;;;;
+CountryEnum/GUF_en_label;French Guiana;Guayana francesa;Guiana Francesa;Guyane Française;Francoska Gvajana
+CountryEnum/GUF_en_description;;;;;
+CountryEnum/GUM_en_label;Guam;Guam;Guam;Guam;Guam.
+CountryEnum/GUM_en_description;;;;;
+CountryEnum/GUY_en_label;Guyana;Guayana;Guiana;Guyane;Gvajana
+CountryEnum/GUY_en_description;;;;;
+CountryEnum/HKG_en_label;Hong Kong;Hong Kong;Hong Kong;Hong Kong;Hong Kong.
+CountryEnum/HKG_en_description;;;;;
+CountryEnum/HMD_en_label;Heard Island and McDonald Islands;Escuchada isla y islas McDonald;Heard Island e McDonald Islands;Île entendu et îles McDonald;Slišal otok in McDonald Islands
+CountryEnum/HMD_en_description;;;;;
+CountryEnum/HND_en_label;Honduras;Honduras;Honduras;Honduras;Honduras.
+CountryEnum/HND_en_description;;;;;
+CountryEnum/HRV_en_label;Croatia;Croacia;Croácia;Croatie;Hrvaška
+CountryEnum/HRV_en_description;;;;;
+CountryEnum/HTI_en_label;Haiti;Haití;Haiti;Haïti;Haiti.
+CountryEnum/HTI_en_description;;;;;
+CountryEnum/HUN_en_label;Hungary;Hungría;Hungria;Hongrie;Madžarska
+CountryEnum/HUN_en_description;;;;;
+CountryEnum/HVO_en_label;Upper Volta;Alto volta;Volta superior;Upper Volta;Zgornja volta
+CountryEnum/HVO_en_description;;;;;
+CountryEnum/IDN_en_label;Indonesia;Indonesia;Indonésia;Indonésie;Indonezija
+CountryEnum/IDN_en_description;;;;;
+CountryEnum/IMN_en_label;Isle of Man;Isla del hombre;Ilha do homem;île de Man;otok Man
+CountryEnum/IMN_en_description;;;;;
+CountryEnum/IND_en_label;India;India;Índia;Inde;Indija
+CountryEnum/IND_en_description;;;;;
+CountryEnum/IOT_en_label;British Indian Ocean Territory;Territorio Británico del Océano Índico;Território do Oceano Índico Britânico;Territoire britannique de l'océan Indien;Britansko ozemlje Indijskega oceana
+CountryEnum/IOT_en_description;;;;;
+CountryEnum/IRL_en_label;Ireland;Irlanda;Irlanda;Irlande;Irska
+CountryEnum/IRL_en_description;;;;;
+CountryEnum/IRN_en_label;Iran;Irán;Irã;L'Iran;Iran
+CountryEnum/IRN_en_description;;;;;
+CountryEnum/IRQ_en_label;Iraq;Irak;Iraque;Irak;Irak
+CountryEnum/IRQ_en_description;;;;;
+CountryEnum/ISL_en_label;Iceland;Islandia;Islândia;Islande;Islandija
+CountryEnum/ISL_en_description;;;;;
+CountryEnum/ISR_en_label;Israel;Israel;Israel;Israël;Izrael.
+CountryEnum/ISR_en_description;;;;;
+CountryEnum/ITA_en_label;Italy;Italia;Itália;Italie;Italija
+CountryEnum/ITA_en_description;;;;;
+CountryEnum/JAM_en_label;Jamaica;Jamaica;Jamaica;Jamaïque;Jamajka.
+CountryEnum/JAM_en_description;;;;;
+CountryEnum/JEY_en_label;Jersey;Jersey;Jersey.;Jersey;Jersey.
+CountryEnum/JEY_en_description;;;;;
+CountryEnum/JOR_en_label;Jordan;Jordán;Jordânia;Jordan;Jordan
+CountryEnum/JOR_en_description;;;;;
+CountryEnum/JPN_en_label;Japan;Japón;Japão;Japon;Japonska
+CountryEnum/JPN_en_description;;;;;
+CountryEnum/JTN_en_label;Johnston Island;Isla de Johnston;Johnston Island.;Île de Johnston;Johnston Island.
+CountryEnum/JTN_en_description;;;;;
+CountryEnum/KAZ_en_label;Kazakhstan;Kazajstán;Cazaquistão;Kazakhstan;Kazahstan
+CountryEnum/KAZ_en_description;;;;;
+CountryEnum/KEN_en_label;Kenya;Kenia;Quênia;Kenya;Kenija
+CountryEnum/KEN_en_description;;;;;
+CountryEnum/KGZ_en_label;Kyrgyzstan;Kirguistán;Quirguistão.;Kirghizistan;Kirgizistan
+CountryEnum/KGZ_en_description;;;;;
+CountryEnum/KHM_en_label;Cambodia;Camboya;Camboja;Cambodge;Kambodža
+CountryEnum/KHM_en_description;;;;;
+CountryEnum/KIR_en_label;Kiribati;Kiribati;Kiribati.;Kiribati;Kiribati.
+CountryEnum/KIR_en_description;;;;;
+CountryEnum/KNA_en_label;Saint Kitts and Nevis;Saint Kitts y Nevis;São Cristóvão e Nevis;Saint-Christophe-et-Niévès;Saint Kitts in Nevis
+CountryEnum/KNA_en_description;;;;;
+CountryEnum/KOR_en_label;South Korea;Corea del Sur;Coreia do Sul;Corée du Sud;Južna Koreja
+CountryEnum/KOR_en_description;;;;;
+CountryEnum/KWT_en_label;Kuwait;Kuwait;Kuwait;Koweit;Kuvajt
+CountryEnum/KWT_en_description;;;;;
+CountryEnum/LAO_en_label;Laos;Laos;Laos;Laos;Laos.
+CountryEnum/LAO_en_description;;;;;
+CountryEnum/LBN_en_label;Lebanon;Líbano;Líbano;Liban;Libanon
+CountryEnum/LBN_en_description;;;;;
+CountryEnum/LBR_en_label;Liberia;Liberia;Libéria;Libéria;Liberija
+CountryEnum/LBR_en_description;;;;;
+CountryEnum/LBY_en_label;Libya;Libia;Líbia;Libye;Libija
+CountryEnum/LBY_en_description;;;;;
+CountryEnum/LCA_en_label;Saint Lucia;Santa Lucía;Santa Lúcia;Sainte-Lucie;Saint Lucia.
+CountryEnum/LCA_en_description;;;;;
+CountryEnum/LIE_en_label;Liechtenstein;Liechtenstein;Liechtenstein.;Liechtenstein;Lihtenštajn.
+CountryEnum/LIE_en_description;;;;;
+CountryEnum/LKA_en_label;Sri Lanka;Sri Lanka;Sri Lanka;Sri Lanka;Šrilanka
+CountryEnum/LKA_en_description;;;;;
+CountryEnum/LSO_en_label;Lesotho;Lesoto;Lesoto;Lesotho;Lesotho.
+CountryEnum/LSO_en_description;;;;;
+CountryEnum/LTU_en_label;Lithuania;Lituania;Lituânia;Lituanie;Litva
+CountryEnum/LTU_en_description;;;;;
+CountryEnum/LUX_en_label;Luxembourg;Luxemburgo;Luxemburgo;Luxembourg;Luksemburg.
+CountryEnum/LUX_en_description;;;;;
+CountryEnum/LVA_en_label;Latvia;Letonia;Letônia;Lettonie;Latvija
+CountryEnum/LVA_en_description;;;;;
+CountryEnum/MAC_en_label;Macau;Macao;Macau.;Macau;Macau.
+CountryEnum/MAC_en_description;;;;;
+CountryEnum/MAF_en_label;Saint Martin;San Martín;são Martinho;Saint Martin;Saint Martin.
+CountryEnum/MAF_en_description;;;;;
+CountryEnum/MAR_en_label;Morocco;Marruecos;Marrocos;Maroc;Maroko.
+CountryEnum/MAR_en_description;;;;;
+CountryEnum/MCO_en_label;Monaco;Mónaco;Mônaco;Monaco;Monako.
+CountryEnum/MCO_en_description;;;;;
+CountryEnum/MDA_en_label;Moldova;Moldavia;Moldova;Moldavie;Moldavija
+CountryEnum/MDA_en_description;;;;;
+CountryEnum/MDG_en_label;Madagascar;Madagascar;Madagáscar;Madagascar;Madagaskar
+CountryEnum/MDG_en_description;;;;;
+CountryEnum/MDV_en_label;Maldives;Maldivas;Maldivas;Maldives;Maldivi
+CountryEnum/MDV_en_description;;;;;
+CountryEnum/MEX_en_label;Mexico;México;México;Mexique;Mehika
+CountryEnum/MEX_en_description;;;;;
+CountryEnum/MHL_en_label;Marshall Islands;Islas Marshall;Ilhas Marshall;Iles Marshall;Marshallovi otoki.
+CountryEnum/MHL_en_description;;;;;
+CountryEnum/MID_en_label;Midway Islands;Islas Midway;Ilhas Midway.;Îles de Midway;Midway Islands.
+CountryEnum/MID_en_description;;;;;
+CountryEnum/MKD_en_label;North Macedonia;Macedonia del Norte;Macedônia do Norte;Macédoine du Nord;Severna Makedonija
+CountryEnum/MKD_en_description;;;;;
+CountryEnum/MLI_en_label;Mali;Mali;Mali.;Mali;Mali
+CountryEnum/MLI_en_description;;;;;
+CountryEnum/MLT_en_label;Malta;Malta;Malta;Malte;Malta
+CountryEnum/MLT_en_description;;;;;
+CountryEnum/MMR_en_label;Myanmar/Burma;Myanmar / Birmania;Myanmar / Birmânia.;Myanmar / Birmanie;Mjanmar / Burma.
+CountryEnum/MMR_en_description;;;;;
+CountryEnum/MNE_en_label;Montenegro;Montenegro;Montenegro;Monténégro;Črna gora
+CountryEnum/MNE_en_description;;;;;
+CountryEnum/MNG_en_label;Mongolia;Mongolia;Mongólia;Mongolie;Mongolija
+CountryEnum/MNG_en_description;;;;;
+CountryEnum/MNP_en_label;Northern Mariana Islands;Islas Marianas del Norte;Ilhas Marianas do Norte;Îles Mariannes du Nord;Severni Marianski otoki
+CountryEnum/MNP_en_description;;;;;
+CountryEnum/MOZ_en_label;Mozambique;Mozambique;Moçambique;Mozambique;Mozambik
+CountryEnum/MOZ_en_description;;;;;
+CountryEnum/MRT_en_label;Mauritania;Mauritania;Mauritânia;Mauritanie;Mavretanija
+CountryEnum/MRT_en_description;;;;;
+CountryEnum/MSR_en_label;Montserrat;Montserrat;Montserrat.;Montserrat;Montserrat.
+CountryEnum/MSR_en_description;;;;;
+CountryEnum/MTQ_en_label;Martinique;Martinica;Martinica.;Martinique;Martinique.
+CountryEnum/MTQ_en_description;;;;;
+CountryEnum/MUS_en_label;Mauritius;Mauricio;Maurício;Maurice;Mavricij
+CountryEnum/MUS_en_description;;;;;
+CountryEnum/MWI_en_label;Malawi;Malawi;Malawi.;Malawi;Malavi
+CountryEnum/MWI_en_description;;;;;
+CountryEnum/MYS_en_label;Malaysia;Malasia;Malásia;Malaisie;Malezija
+CountryEnum/MYS_en_description;;;;;
+CountryEnum/MYT_en_label;Mayotte;Macho;Mayotte.;Mayotte;Mayotte.
+CountryEnum/MYT_en_description;;;;;
+CountryEnum/NAM_en_label;Namibia;Namibia;Namíbia.;Namibie;Namibija
+CountryEnum/NAM_en_description;;;;;
+CountryEnum/NCL_en_label;New Caledonia;Nueva Caledonia;Nova Caledônia;Nouvelle Calédonie;Nova Kaledonija
+CountryEnum/NCL_en_description;;;;;
+CountryEnum/NER_en_label;Niger;Níger;Níger;Niger;Niger.
+CountryEnum/NER_en_description;;;;;
+CountryEnum/NFK_en_label;Norfolk Island;Isla Norfolk;Ilha de Norfolk.;l'ile de Norfolk;Otok Norfolk.
+CountryEnum/NFK_en_description;;;;;
+CountryEnum/NGA_en_label;Nigeria;Nigeria;Nigéria;Nigeria;Nigerija
+CountryEnum/NGA_en_description;;;;;
+CountryEnum/NHB_en_label;New Hebrides;Nuevas Hébridas;Novos Hebrides;Nouveaux Hebrides;Novi hebridi.
+CountryEnum/NHB_en_description;;;;;
+CountryEnum/NIC_en_label;Nicaragua;Nicaragua;Nicarágua;Nicaragua;Nikaragva.
+CountryEnum/NIC_en_description;;;;;
+CountryEnum/NIU_en_label;Niue;Niue;Niue.;Nœud;Niue.
+CountryEnum/NIU_en_description;;;;;
+CountryEnum/NLD_en_label;Netherlands;Países Bajos;Holanda;Pays-Bas;Nizozemska
+CountryEnum/NLD_en_description;;;;;
+CountryEnum/NOR_en_label;Norway;Noruega;Noruega;Norvège;Norveška
+CountryEnum/NOR_en_description;;;;;
+CountryEnum/NPL_en_label;Nepal;Nepal;Nepal;Népal;Nepal.
+CountryEnum/NPL_en_description;;;;;
+CountryEnum/NRU_en_label;Nauru;Nauru;Nauru.;Nauru;Nauru.
+CountryEnum/NRU_en_description;;;;;
+CountryEnum/NTZ_en_label;Neutral Zone;Zona neutral;Zona neutra;Zone neutre;Nevtralna cona
+CountryEnum/NTZ_en_description;;;;;
+CountryEnum/NZL_en_label;New Zealand;Nueva Zelanda;Nova Zelândia;Nouvelle-Zélande;Nova Zelandija
+CountryEnum/NZL_en_description;;;;;
+CountryEnum/OMN_en_label;Oman;Omán;Omã;Oman;Oman.
+CountryEnum/OMN_en_description;;;;;
+CountryEnum/PAK_en_label;Pakistan;Pakistán;Paquistão;Pakistan;Pakistan
+CountryEnum/PAK_en_description;;;;;
+CountryEnum/PAN_en_label;Panama;Panamá;Panamá;Panama;Panama.
+CountryEnum/PAN_en_description;;;;;
+CountryEnum/PCI_en_label;Trust Territory of the Pacific Islands;Territorio de confianza de las Islas del Pacífico;Território de confiança das ilhas do Pacífico;Trust Territoire des îles du Pacifique;Trust ozemlje pacifiških otokov
+CountryEnum/PCI_en_description;;;;;
+CountryEnum/PCN_en_label;Pitcairn Islands;Islas Pitcairn;Ilhas de Pitcairn.;Îles Pitcairn;Pitcairn Islands.
+CountryEnum/PCN_en_description;;;;;
+CountryEnum/PCZ_en_label;Panama Canal Zone;Zona del Canal de Panamá;Zona do Canal do Panamá.;Zone du canal de Panama;Panama Canal cona.
+CountryEnum/PCZ_en_description;;;;;
+CountryEnum/PER_en_label;Peru;Perú;Peru;Pérou;Peru.
+CountryEnum/PER_en_description;;;;;
+CountryEnum/PHL_en_label;Philippines;Filipinas;Filipinas;Philippines;Filipini
+CountryEnum/PHL_en_description;;;;;
+CountryEnum/PLW_en_label;Palau;Palau;Palau.;Palau;PALAU.
+CountryEnum/PLW_en_description;;;;;
+CountryEnum/PNG_en_label;Papua New Guinea;Papúa Nueva Guinea;Papua Nova Guiné;Papouasie Nouvelle Guinée;Papua Nova Gvineja
+CountryEnum/PNG_en_description;;;;;
+CountryEnum/POL_en_label;Poland;Polonia;Polônia;Pologne;Poljska
+CountryEnum/POL_en_description;;;;;
+CountryEnum/PRI_en_label;Puerto Rico;Puerto Rico;Porto Rico;Porto Rico;Portoriko
+CountryEnum/PRI_en_description;;;;;
+CountryEnum/PRK_en_label;North Korea;Corea del Norte;Coreia do Norte;Corée du Nord;Severna Koreja
+CountryEnum/PRK_en_description;;;;;
+CountryEnum/PRT_en_label;Portugal;Portugal;Portugal;le Portugal;Portugalska
+CountryEnum/PRT_en_description;;;;;
+CountryEnum/PRY_en_label;Paraguay;Paraguay;Paraguai;Paraguay;Paragvaj.
+CountryEnum/PRY_en_description;;;;;
+CountryEnum/PSE_en_label;Palestine;Palestina;Palestina;Palestine;Palestina
+CountryEnum/PSE_en_description;;;;;
+CountryEnum/PUS_en_label;US Miscellaneous Pacific Islands;Islas Pacífico misceláneas de los Estados Unidos;EUA Diversas Ilhas do Pacífico;États-Unis diverses îles du Pacifique;Razni pacifiški otoki
+CountryEnum/PUS_en_description;;;;;
+CountryEnum/PYF_en_label;French Polynesia;Polinesia francés;Polinésia Francesa;Polynésie française;Francoska Polinezija
+CountryEnum/PYF_en_description;;;;;
+CountryEnum/QAT_en_label;Qatar;Katar;Catar;Qatar;Katar
+CountryEnum/QAT_en_description;;;;;
+CountryEnum/REU_en_label;Réunion;Reunión;Reunião;Réunion;Réunion.
+CountryEnum/REU_en_description;;;;;
+CountryEnum/RHO_en_label;Southern Rhodesia;Rhodesia del sur;Rhodesia do sul;Rhodésie du Sud;Južna Rhodesia.
+CountryEnum/RHO_en_description;;;;;
+CountryEnum/ROU_en_label;Romania;Rumania;Romênia.;Roumanie;Romunija
+CountryEnum/ROU_en_description;;;;;
+CountryEnum/RUS_en_label;Russia;Rusia;Rússia;Russie;Rusija
+CountryEnum/RUS_en_description;;;;;
+CountryEnum/RWA_en_label;Rwanda;Ruanda;Ruanda;Rwanda;Randa.
+CountryEnum/RWA_en_description;;;;;
+CountryEnum/SAU_en_label;Saudi Arabia;Arabia Saudita;Arábia Saudita;Arabie Saoudite;Savdska Arabija
+CountryEnum/SAU_en_description;;;;;
+CountryEnum/SCG_en_label;Serbia and Montenegro;Serbia y Montenegro;Sérvia e Montenegro;Serbie et Monténégro;Srbija in Črna gora.
+CountryEnum/SCG_en_description;;;;;
+CountryEnum/SDN_en_label;Sudan;Sudán;Sudão;Soudan;Sudan
+CountryEnum/SDN_en_description;;;;;
+CountryEnum/SEN_en_label;Senegal;Senegal;Senegal;Sénégal;Senegal.
+CountryEnum/SEN_en_description;;;;;
+CountryEnum/SGP_en_label;Singapore;Singapur;Cingapura;Singapour;Singapur
+CountryEnum/SGP_en_description;;;;;
+CountryEnum/SGS_en_label;South Georgia and the South Sandwich Islands;Georgia del sur y las islas Sandwich del sur;Geórgia do Sul e Ilhas Sandwich Sul;Géorgie du Sud et les îles Sandwich South;Južna Gruzija in Južni sendvič otoč
+CountryEnum/SGS_en_description;;;;;
+CountryEnum/SHN_en_label;Saint Helena, Ascension and Tristan da Cunha;San Helena, Ascensión y Tristan da Cunha;Santa Helena, Ascensão e Tristan da Cunha;Sainte-Hélène, Ascension et Tristan da Cunha;Sveti Helena, Vzpon in Tristan DA CUNHA
+CountryEnum/SHN_en_description;;;;;
+CountryEnum/SJM_en_label;Svalbard and Jan Mayen;Svalbard y Jan Mayen;Svalbard e jan mayen;Svalbard et Jan Mayen;Svalbard in Jan Mayen
+CountryEnum/SJM_en_description;;;;;
+CountryEnum/SKM_en_label;Sikkim;Sikkim;Sikkim.;Sikkim;Sikkim.
+CountryEnum/SKM_en_description;;;;;
+CountryEnum/SLB_en_label;Solomon Islands;Islas Salomón;Ilhas Salomão;Les îles Salomon;Salomonovi otoki.
+CountryEnum/SLB_en_description;;;;;
+CountryEnum/SLE_en_label;Sierra Leone;Sierra Leona;Serra Leoa;Sierra Leone;Sierra Leone
+CountryEnum/SLE_en_description;;;;;
+CountryEnum/SLV_en_label;El Salvador;El Salvador;El Salvador;Le Salvador;El Salvador
+CountryEnum/SLV_en_description;;;;;
+CountryEnum/SMR_en_label;San Marino;San Marino;San Marino.;Saint Marin;San Marino.
+CountryEnum/SMR_en_description;;;;;
+CountryEnum/SOM_en_label;Somalia;Somalia;Somália;Somalie;Somalija
+CountryEnum/SOM_en_description;;;;;
+CountryEnum/SPM_en_label;Saint Pierre and Miquelon;Saint Pierre y Miquelon;Saint Pierre e Miquelon;Saint-Pierre-et-Miquelon;Saint Pierre in Miquelon
+CountryEnum/SPM_en_description;;;;;
+CountryEnum/SRB_en_label;Serbia;Serbia;Sérvia;Serbie;Srbija
+CountryEnum/SRB_en_description;;;;;
+CountryEnum/SSD_en_label;South Sudan;Sudán del Sur;Sudão do Sul;Soudan du sud;Južni Sudan
+CountryEnum/SSD_en_description;;;;;
+CountryEnum/STP_en_label;São Tomé and Príncipe;Santo Tomé y Príncipe;São Tomé e Príncipe;São Tomé et Príncipe;São Tomé in Príncipe
+CountryEnum/STP_en_description;;;;;
+CountryEnum/SUN_en_label;Soviet Union;Unión Soviética;União Soviética;Union soviétique;Sovjetska zveza
+CountryEnum/SUN_en_description;;;;;
+CountryEnum/SUR_en_label;Suriname;Suriname;Suriname;Suriname;Surinam.
+CountryEnum/SUR_en_description;;;;;
+CountryEnum/SVK_en_label;Slovakia;Eslovaquia;Eslováquia;Slovaquie;Slovaška
+CountryEnum/SVK_en_description;;;;;
+CountryEnum/SVN_en_label;Slovenia;Eslovenia;Eslovênia;Slovénie;Slovenija
+CountryEnum/SVN_en_description;;;;;
+CountryEnum/SWE_en_label;Sweden;Suecia;Suécia;la Suède;Švedska
+CountryEnum/SWE_en_description;;;;;
+CountryEnum/SWZ_en_label;Eswatini;Eswatini;Eswatini;Eswatini;Eswatini.
+CountryEnum/SWZ_en_description;;;;;
+CountryEnum/SXM_en_label;Sint Maarten;Sint maarten;Sint Maarten.;Sint Maarten;Sint Maarten.
+CountryEnum/SXM_en_description;;;;;
+CountryEnum/SYC_en_label;Seychelles;Seychelles;Seychelles.;les Seychelles;Sejšeli
+CountryEnum/SYC_en_description;;;;;
+CountryEnum/SYR_en_label;Syria;Siria;Síria;Syrie;Sirija
+CountryEnum/SYR_en_description;;;;;
+CountryEnum/TCA_en_label;Turks and Caicos Islands;Islas Turcas y Caicos;Ilhas Turcas e Caicos;îles Turques-et-Caïques;Turki in otoki Caicos
+CountryEnum/TCA_en_description;;;;;
+CountryEnum/TCD_en_label;Chad;Chad;Chade;Chadre;Chad.
+CountryEnum/TCD_en_description;;;;;
+CountryEnum/TGO_en_label;Togo;Ir;Ir;Aller;Iti
+CountryEnum/TGO_en_description;;;;;
+CountryEnum/THA_en_label;Thailand;Tailandia;Tailândia;Thaïlande;Tajska
+CountryEnum/THA_en_description;;;;;
+CountryEnum/TJK_en_label;Tajikistan;Tayikistán;Tajiquistão.;Tadjikistan;Tadžikistan
+CountryEnum/TJK_en_description;;;;;
+CountryEnum/TKL_en_label;Tokelau;Tokelau;Tokelau.;Tokelau;Tokelau.
+CountryEnum/TKL_en_description;;;;;
+CountryEnum/TKM_en_label;Turkmenistan;Turkmenistán;Turquemenistão.;Turkménistan;Turkmenistan
+CountryEnum/TKM_en_description;;;;;
+CountryEnum/TLS_en_label;Timor-Leste;Timor-Leste;Timor-Leste;Timor-late;Timor-Leste.
+CountryEnum/TLS_en_description;;;;;
+CountryEnum/TMP_en_label;East Timor;Timor Oriental;Timor Leste;Timor oriental;Vzhodni Timor.
+CountryEnum/TMP_en_description;;;;;
+CountryEnum/TON_en_label;Tonga;Tonga;Tonga;Tonga;Tonga
+CountryEnum/TON_en_description;;;;;
+CountryEnum/TTO_en_label;Trinidad and Tobago;Trinidad y Tobago;Trinidad e Tobago;Trinité-et-Tobago;Trinidad in Tobago
+CountryEnum/TTO_en_description;;;;;
+CountryEnum/TUN_en_label;Tunisia;Túnez;Tunísia;Tunisie;Tunizija
+CountryEnum/TUN_en_description;;;;;
+CountryEnum/TUR_en_label;Turkey;pavo;Peru;Turquie;puran
+CountryEnum/TUR_en_description;;;;;
+CountryEnum/TUV_en_label;Tuvalu;Tuvalu;Tuvalu.;Tuvalu;TUVALU.
+CountryEnum/TUV_en_description;;;;;
+CountryEnum/TWN_en_label;Taiwan;Taiwán;Taiwan;Taïwan;Tajvan
+CountryEnum/TWN_en_description;;;;;
+CountryEnum/TZA_en_label;Tanzania;Tanzania;Tanzânia;Tanzanie;Tanzanija.
+CountryEnum/TZA_en_description;;;;;
+CountryEnum/UGA_en_label;Uganda;Uganda;Uganda;Ouganda;Uganda.
+CountryEnum/UGA_en_description;;;;;
+CountryEnum/UKR_en_label;Ukraine;Ucrania;Ucrânia;Ukraine;Ukrajina.
+CountryEnum/UKR_en_description;;;;;
+CountryEnum/UMI_en_label;United States Minor Outlying Islands;Islas periféricas menores de los Estados Unidos;Ilhas Menores dos Estados Unidos;Îles mineures éloignées des États-Unis;Ministrski otoki Združenih držav Amerike
+CountryEnum/UMI_en_description;;;;;
+CountryEnum/URY_en_label;Uruguay;Uruguay;Uruguai;Uruguay;Urugvaj
+CountryEnum/URY_en_description;;;;;
+CountryEnum/USA_en_label;United States;Estados Unidos;Estados Unidos;États-Unis;Združene države
+CountryEnum/USA_en_description;;;;;
+CountryEnum/UZB_en_label;Uzbekistan;Uzbekistán;Uzbequistão;Ouzbékistan;Uzbekistan
+CountryEnum/UZB_en_description;;;;;
+CountryEnum/VAT_en_label;Vatican City State;Estado de la ciudad del Vaticano;Estado da cidade do Vaticano;État de Vatican City;Vatikanska mestna država
+CountryEnum/VAT_en_description;;;;;
+CountryEnum/VCT_en_label;Saint Vincent and the Grenadines;San Vicente y las Granadinas;São Vicente e Granadinas;Saint-Vincent-et-les-Grenadines;Saint Vincent in Grenadine
+CountryEnum/VCT_en_description;;;;;
+CountryEnum/VDR_en_label;Democratic Republic of Vietnam;República Democrática de Vietnam;República Democrática do Vietnã;République démocratique du Vietnam;Demokratična republika Vietnam
+CountryEnum/VDR_en_description;;;;;
+CountryEnum/VEN_en_label;Venezuela;Venezuela;Venezuela;Venezuela;Venezuela
+CountryEnum/VEN_en_description;;;;;
+CountryEnum/VGB_en_label;British Virgin Islands;Islas Vírgenes Británicas;Ilhas Virgens Britânicas;Îles Vierges britanniques;britanski Deviški otoki
+CountryEnum/VGB_en_description;;;;;
+CountryEnum/VIR_en_label;US Virgin Islands;Islas Vírgenes de EE.UU;Ilhas Virgens dos EUA.;Îles Vierges américaines;Mi Deviški otoki
+CountryEnum/VIR_en_description;;;;;
+CountryEnum/VNM_en_label;Vietnam;Vietnam;Vietnã;Vietnam;Vietnam.
+CountryEnum/VNM_en_description;;;;;
+CountryEnum/VUT_en_label;Vanuatu;Vanuatu;Vanuatu;Vanuatu;Vanuatu.
+CountryEnum/VUT_en_description;;;;;
+CountryEnum/WAK_en_label;Wake Islands;Wake Islands;Ilhas Wake.;Île de réveil;Wake Islands.
+CountryEnum/WAK_en_description;;;;;
+CountryEnum/WLF_en_label;Wallis and Futuna;Wallis y Futuna;Wallis e Futuna;Wallis et Futuna;Wallis in Futuna.
+CountryEnum/WLF_en_description;;;;;
+CountryEnum/WSM_en_label;Samoa;Samoa;Samoa.;Samoa;Samoa.
+CountryEnum/WSM_en_description;;;;;
+CountryEnum/YEM_en_label;Yemen;Yemen;Iémen;Yémen;Jemen
+CountryEnum/YEM_en_description;;;;;
+CountryEnum/YMD_en_label;North Yemen;North Yemen;Iêmen norte;Yémen nord;Severni Jemen
+CountryEnum/YMD_en_description;;;;;
+CountryEnum/YUG_en_label;Yugoslavia;Yugoslavia;Iugoslávia.;Yougoslavie;Jugoslavija
+CountryEnum/YUG_en_description;;;;;
+CountryEnum/ZAF_en_label;South Africa;Sudáfrica;África do Sul;Afrique du Sud;Južna Afrika
+CountryEnum/ZAF_en_description;;;;;
+CountryEnum/ZMB_en_label;Zambia;Zambia;Zâmbia;Zambie;Zambija
+CountryEnum/ZMB_en_description;;;;;
+CountryEnum/ZR0_en_label;Zaire;Zaire;Zaire;Zaïre;Zaire.
+CountryEnum/ZR0_en_description;;;;;
+CountryEnum/ZWE_en_label;Republic of Zimbabwe;República de Zimbabue;República do Zimbábue;République du Zimbabwe;Republika Zimbabveja
+CountryEnum/ZWE_en_description;;;;;
+Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+Identifier_en_description;The Identifier class allows an identifier to be given as well as information about which authority issued it and, if needed, when.;La clase de identificador permite que se le proporcione un identificador, así como información sobre qué autoridad lo emitió y, si es necesario, cuándo.;A classe Identifier permite que um identificador seja dado, bem como informações sobre qual autoridade emitiu e, se necessário, quando.;La classe d'identifiant permet d'administrer un identifiant ainsi que des informations sur lesquelles l'autorité l'a délivrée et, si nécessaire, quand.;Razred identifikatorja omogoča, da se identifikator daje kot tudi informacije o tem, kateri organ je izdal in, če je potrebno, kdaj.
+Identifier/Identifier_en_label;Content;Contenido;Contente;Contenu;Vsebina
+Identifier/Identifier_en_description;Content - alpha-numeric string;Contenido - cadena alfanumérica;Conteúdo - String Alfa-numérica;Contenu - Chaîne alpha-numérique;Vsebina - alfanumerični niz
+Identifier/IdentifierType_en_label;Identifier Type;Tipo de identificador;Tipo de identificador;Type d'identifiant;Identifikator Tip.
+Identifier/IdentifierType_en_description;The type of identifier issued (if the authority issues more than one type of identifier).;El tipo de identificador emitido (si la autoridad emite más de un tipo de identificador).;O tipo de identificador emitido (se a autoridade emitir mais de um tipo de identificador).;Le type d'identifiant émis (si l'autorité émet plus d'un type d'identifiant).;Vrsta identifikatorja je izdala (če organ izda več kot eno vrsto identifikatorja).
+Identifier/IssueDate_en_label;Issue Date;Fecha de asunto;Data de emissão;Date d'émission;Datum izdaje
+Identifier/IssueDate_en_description;The date on which it was issued;La fecha en que se emitió.;A data em que foi emitida;La date à laquelle il a été émis;Datum, na katerega je bil izdan
+Identifier/IssuingAuthority_en_label;Issuing Authority;La autoridad emisora;Autoridade emissora;Autorité de délivrance;Organ izdaje
+Identifier/IssuingAuthority_en_description;The name of the issuing agency;El nombre de la agencia emisora.;O nome da agência emissora;Le nom de l'agence émettrice;Ime agencije izdajateljice
+Identifier/IssuingAuthorityID_en_label;Issuing Authority ID;ID de autoridad emisora;ID de autoridade emissora;ID d'autorité émettrice;Organ izdaje ID.
+Identifier/IssuingAuthorityID_en_description;The issuing agency ID;La ID de la agencia emisora;O ID da agência emissora;L'ID d'agence émettrice;ID izdajatelja
+Jurisdiction_en_label;Jurisdiction;Jurisdicción;Jurisdição;Juridiction;Pristojnost
+Jurisdiction_en_description;;;;;
+Jurisdiction/Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+Jurisdiction/Identifier_en_description;The value for the id property is a URI for that Jurisdiction.;El valor para la propiedad de identificación es un URI para esa jurisdicción.;O valor para a propriedade ID é um URI para essa jurisdição.;La valeur de la propriété ID est une URI pour cette juridiction.;Vrednost za identifikacijsko lastnost je URI za to jurisdikcijo.
+Jurisdiction/Name_en_label;Name;Nombre;Nome;Nom;Ime
+Jurisdiction/Name_en_description;The name is simply a string that identifies the Jurisdiction, typically a country, with or without a language tag.;El nombre es simplemente una cadena que identifica la jurisdicción, típicamente un país, con o sin una etiqueta de idioma.;O nome é simplesmente uma string que identifica a jurisdição, normalmente um país, com ou sem uma tag de idioma.;Le nom est simplement une chaîne qui identifie la juridiction, typiquement un pays, avec ou sans étiquette de langue.;Ime je preprosto niz, ki identificira jurisdikcijo, običajno državo, z ali brez jezikovne oznake.
+Person_en_label;Person;Persona;Pessoa;La personne;Oseba
+Person_en_description;An individual natural person who may be dead or alive, but not imaginary.;Una persona física individual que puede estar muerta o viva, pero no imaginaria.;Uma pessoa natural individual que pode estar morta ou viva, mas não imaginária.;Une personne physique individuelle qui peut être morte ou vivante, mais pas imaginaire.;Posamezna fizična oseba, ki je lahko mrtva ali živa, vendar ne namišljena.
+Person/DateOfBirth_en_label;Date of birth;Fecha de nacimiento;Data de nascimento;Date de naissance;Datum rojstva
+Person/DateOfBirth_en_description;The day on which the person was born.;El día en que nació la persona.;O dia em que a pessoa nasceu.;Le jour où la personne est née.;Dan, ko se je rodila oseba.
+Person/DateOfBirth/Year_en_label;Year;Año;Ano;An;Leto
+Person/DateOfBirth/Year_en_description;A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.;Un año calendario gregoriano. El espacio de valor del año es el conjunto de años calendario gregorianos, tal como se define en el § 5.2.1 de la ISO 8601. Específicamente, es un conjunto de instancias no periódicas de un año, no periódicas, por ejemplo. Léxico 1999 para representar todo el año 1999, independiente de cuántos meses y días tiene este año.;Um ano civil gregoriano. O espaço de valor do ano é o conjunto de anos de calendário gregoriano, conforme definido no § 5.2.1 da ISO 8601. Especificamente, é um conjunto de instâncias não periódicas de um ano, e. Lexical 1999 representar o ano inteiro de 1999, independente de quantos meses e dias este ano tem.;Une année civile grégorienne. L'espace de valeur de l'année est l'ensemble des années civiles grégoriennes telles que définies au § 5.2.1 de la norme ISO 8601. Plus précisément, il s'agit d'un ensemble d'instances non périodiques d'un an, par exemple. Lexical 1999 Pour représenter toute l'année 1999, indépendamment du nombre de mois et de jours de cette année.;Gregorijansko koledarsko leto. Vrednostni prostor leta je niz gregorijanskih koledarskih let, kot je opredeljeno v § 5.2.1 ISO 8601. Natančneje, je niz enoletnih, ne-periodičnih primerov, npr. Lexicy 1999 predstavlja celo leto 1999, neodvisno od števila mesecev in dni letos.
+Person/DateOfBirth/Month_en_label;Month;Mes;Mês;Mois;Mesec
+Person/DateOfBirth/Month_en_description;A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.;Un mes gregoriano que se repite cada año. El espacio de valores del mes es el espacio de un conjunto de meses calendario, tal como se define en el § 3 de ISO 8601. Específicamente, es un conjunto de instancias periódicas anuales de un mes de un mes.;Um mês gregoriano que se repete a cada ano. O espaço do valor do mês é o espaço de um conjunto de meses de calendário como definido no § 3 da ISO 8601. Especificamente, é um conjunto de instâncias periódicas anuais de um mês.;Un mois grégorien qui se reproduit chaque année. L'espace de valeur du mois est l'espace d'un ensemble de mois de calendrier tels que définis au § 3 de la norme ISO 8601. Il s'agit notamment d'un ensemble d'instances périodiques annuelles d'un mois.;Gregoriški mesec, ki se vsako leto ponovi. Vrednost v mesecu je prostor nabora koledarskih mesecev, kot je opredeljeno v § 3 ISO 8601. Natančneje, je niz enomesečnih dolgoletnih, letnih občasnih primerov.
+Person/DateOfBirth/Day_en_label;Day;Día;Dia;Jour;Dan
+Person/DateOfBirth/Day_en_description;A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.;Un día gregoriano que recurre, específicamente un día del mes, como el 5 de al mes. El espacio de calidad del día es el espacio de un conjunto de fechas de calendario como se define en el § 3 de ISO 8601. Específicamente, es un conjunto de instancias periódicas mensuales de un día de un día.;Um dia gregoriano que se repita, especificamente um dia do mês, como o 5º do mês. O espaço do valor do dia é o espaço de um conjunto de datas de calendário como definido no § 3 da ISO 8601. Especificamente, é um conjunto de instâncias periódicas mensais de um dia.;Une journée grégorienne qui se reproduit, plus particulièrement une journée du mois tel que le 5 du mois. L'espace de valeur de la journée est l'espace d'un ensemble de dates de calendrier tels que définis au § 3 de l'ISO 8601. Il s'agit notamment d'un ensemble d'instances périodiques mensuelles d'une journée et d'une journée.;Gregoriški dan, ki se ponavlja, posebej na dan meseca, kot je 5. meseca. Vrednostni prostor dneva je prostor nabora koledarskih datumov, kot je opredeljeno v § 3 ISO 8601. Natančneje, je niz enodnevnih, mesečnih periodičnih primerov.
+Person/Gender_en_label;Gender;Género;Gênero;Le sexe;Spol
+Person/Gender_en_description;The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.;El estado cromosómico, y los órganos y estructuras reproductivas de una persona que les permite distinguirlas como hembra o masculinas o indeterminadas.;O estado cromossômico e os órgãos reprodutivos e estruturas de uma pessoa que lhes permite ser distinguidos como mulheres ou machos ou indeterminados.;L'état chromosomique, les organes de reproduction et les structures d'une personne qui leur permettent de se distinguer comme une femme ou un homme ou indéterminé.;Kromosomno stanje in reproduktivni organi in struktur osebe, ki jim omogoča, da se razlikujejo kot ženske ali moške ali nedoločene.
+Person/PlaceOfBirth_en_label;Place of birth;Lugar de nacimiento;Local de nascimento;Lieu de naissance;Kraj rojstva
+Person/PlaceOfBirth_en_description;The Location where the person was born.;La ubicación donde nació la persona.;O local onde a pessoa nasceu.;L'emplacement où la personne est née.;Lokacijo, kjer se je rodila oseba.
+Person/PersonName_en_label;Person name;Nombre de la persona;Nome da pessoa;Nom d'une personne;Ime osebe
+Person/PersonName_en_description;The family name and given name of a Person. At least one of the two must exist.;El nombre de la familia y el nombre dado de una persona. Al menos uno de los dos debe existir.;O nome da família e nomeado nome de uma pessoa. Pelo menos um dos dois deve existir.;Le nom de famille et le nom donné d'une personne. Au moins l'un des deux doit exister.;Ime in ime osebe. Vsaj eno od obeh mora obstajati.
+Person/PersonName/FamilyName_en_label;Family name;Apellido;Sobrenome;Nom de famille;Priimek
+Person/PersonName/FamilyName_en_description;A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. 'de Boer', 'van de Putte', 'von und zu Orlow'. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's Family Name would be recorded as 'de Cervantes Saavedra'.;Un nombre de familia suele ser compartido por miembros de una familia. Este atributo también lleva prefijos o sufijos que forman parte del nombre de la familia, por ejemplo. 'De Boer', 'Van de Putte', 'von und zu orlow'. Los nombres de las familias múltiples, tales como se encuentran comúnmente en los países hispanos, se registran en el campo de apellidos para que, por ejemplo, el nombre de la familia de Saavedra de Miguel de Cervantes se registrará como 'de Cervantes Saavedra'.;Um nome de família é geralmente compartilhado por membros de uma família. Este atributo também carrega prefixos ou sufixos que fazem parte do nome da família, e. 'De Boer', 'Van de Putte', 'von und zu orlow'. Múltiplos nomes familiares, como são comumente encontrados em países hispânicos, são registrados no campo de nome único de família, de modo que, por exemplo, o nome da família Miguel de Cervantes seria registrado como 'de Cervantes Saavedra'.;"Un nom de famille est généralement partagé par des membres d'une famille. Cet attribut porte également des préfixes ou des suffixes qui font partie du nom de famille, par exemple 'De Boer', ""Van de Putte"", ""von und zu orlow"". Des noms de famille multiples, tels que ceux que l'on se trouve couramment dans les pays hispaniques, sont consignés dans le domaine du nom de famille unique afin que, par exemple, le nom de famille de Miguel de Cervantes Saavedra serait enregistré comme «de Cervantes Saavedra».";"Družinsko ime običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. Več družinskih imen, na primer, običajno najdemo v hispanskih državah, se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer Miguel de Cervantes Saavedra imeno ime zabeležila kot ""de Cervantes Saavedra""."
+Person/PersonName/GivenName_en_label;Given name;Nombre de pila;Nome dado;Prénom;Ime
+Person/PersonName/GivenName_en_description;A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is 'Johann Sebastian'.;"Un nombre dado, o múltiples nombres dados, son los denominadores que identifican a un individuo dentro de una familia. Estos se le dan a una persona por parte de sus padres al nacer o pueden ser legalmente reconocidos como ""nombres dados"" a través de un proceso formal. Todos los nombres dados se ordenan en un campo para que, por ejemplo, el nombre dado para Johann Sebastian Bach es 'Johann Sebastian'.";"Um dado nome, ou vários nomes dados, são o (s) denominador (s) que identificam um indivíduo dentro de uma família. Estes são dados a uma pessoa por seus pais ao nascimento ou podem ser legalmente reconhecidos como ""dadas nomes"" através de um processo formal. Todos os nomes dados são encomendados em um campo para que, por exemplo, o nome dado para Johann Sebastian Bach é 'Johann Sebastian'.";Un nom donné, ou plusieurs noms donnés, sont les dénominateurs qui identifient une personne au sein d'une famille. Celles-ci sont données à une personne par ses parents à la naissance ou peuvent être légalement reconnues comme «noms donnés» à travers un processus formel. Tous les noms donnés sont commandés dans un seul champ afin que, par exemple, le nom donné pour Johann Sebastian Bach est 'Johann Sebastian'.;"Ime ali več imenih imen, so imenovalci, ki identificirajo posameznika znotraj družine. Ti so dana osebam njegovim staršem ob rojstvu ali pa je lahko zakonito priznan kot ""dana imena"" s formalnim postopkom. Vsa določena imena so naročena na enem polju, tako da je na primer dano ime za Johann Sebastian Bacha ""Johann Sebastian""."
+Person/Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+Person/Identifier_en_description;The identifier relation is used to link a Person to any formally issued Identifier for that Person.;La relación del identificador se utiliza para vincular a una persona a cualquier identificador emitido formalmente para esa persona.;A relação identificador é usada para vincular uma pessoa a qualquer identificador formalmente emitido para essa pessoa.;La relation d'identifiant est utilisée pour relier une personne à n'importe quel identifiant officiellement émis pour cette personne.;Oporednotenje identifikatorja se uporablja za povezovanje osebe na kateri koli formalno izdani identifikator za to osebo.
+Person/Citizenship_en_label;Citizenship;Ciudadanía;Cidadania;Citoyenneté;Državljanstvo
+Person/Citizenship_en_description;The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.;La relación de ciudadanía vincula a una persona a una jurisdicción que ha conferido los derechos de ciudadanía sobre el individuo, como el derecho a votar, para recibir cierta protección de la comunidad o la emisión de un pasaporte.;O relacionamento de cidadania ligue uma pessoa a uma jurisdição que lhe conferiu direitos de cidadania sobre o indivíduo, como o direito de votar, para receber determinada proteção da comunidade ou a emissão de um passaporte.;La relation de citoyenneté relie une personne à une juridiction qui a conféré des droits de citoyenneté sur l'individu, tels que le droit de vote, de recevoir une certaine protection de la Communauté ou de la délivrance d'un passeport.;Odnos državljanstva povezuje osebo v pristojnost, ki je podelila pravice državljanstva na posameznika, kot je pravica do glasovanja, da bi prejela določeno zaščito pred Skupnostjo ali izdajo potnega lista.
+PersonGenderEnum_en_label;Person gender;Género;Gênero de pessoa;Sexe personne;Oseba spola
+PersonGenderEnum_en_description;List of human genders.;Lista de géneros humanos.;Lista de gêneros humanos.;Liste des tenues humaines.;Seznam človeških spolov.
+PersonGenderEnum/Female_en_label;Female;Mujer;Fêmea;Femme;Ženska
+PersonGenderEnum/Female_en_description;The concept FEMALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.;La hembra conceptual se usa para representar a los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales.;A fêmea do conceito é usada para representar os sexos humanos no contexto do intercâmbio de informações no domínio de ciências sociais.;Le concept femelle est utilisé pour représenter les sexes humains dans le contexte de l'échange d'informations dans le domaine des sciences sociales.;Koncept Ženska se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede.
+PersonGenderEnum/Male_en_label;Male;Masculino;Macho;Homme;Moški
+PersonGenderEnum/Male_en_description;The concept MALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.;El concepto de hombre se usa para representar a los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales.;O conceito do sexo masculino é usado para representar os sexos humanos no contexto do intercâmbio de informações no domínio de ciências sociais.;Le concept mâle est utilisé pour représenter les sexes humains dans le contexte de l'échange d'informations dans le domaine des sciences sociales.;Koncept moški se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede.
+PersonGenderEnum/NAP_en_label;Not applicable;No aplica;Não aplicável;N'est pas applicable;Se ne uporablja
+PersonGenderEnum/NAP_en_description;The concept NOT APPLICABLE is used in the context of interchange of information in the social sciences domain when none of the sexes can be represented.;El concepto no aplicable se utiliza en el contexto del intercambio de información en el dominio de las ciencias sociales cuando no se pueden representar ninguno de los sexos.;O conceito não aplicável é usado no contexto de intercâmbio de informações no domínio de ciências sociais quando nenhum dos sexos pode ser representado.;Le concept non applicable est utilisé dans le contexte de l'échange d'informations dans le domaine des sciences sociales lorsque aucune des sexes ne peut être représentée.;Koncept se ne uporablja, se uporablja v okviru izmenjave informacij na področju socialnih ved, kadar nobeden od spolov ni mogoče zastopati.
+PersonGenderEnum/NKN_en_label;Not known;No conocida;Não conhecido;Pas connu;Ne poznano
+PersonGenderEnum/NKN_en_description;The concept NOT KNOWN is used in the context of interchange of information in the social sciences domain when the human sex is unkown.;El concepto que no se conoce se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano es un desconocido.;O conceito não é conhecido é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano é unlown.;Le concept non connu est utilisé dans le contexte de l'échange d'informations dans le domaine des sciences sociales lorsque le sexe humain est incomparable.;Koncept, ki ni znan, se uporablja v okviru izmenjave informacij na področju socialne vede, ko je človeški seks unkown.
+PersonGenderEnum/NST_en_label;Not stated;No se indica;Não declarado;Non indiqué;Ni navedeno
+PersonGenderEnum/NST_en_description;The concept NOT STATED is used in the context of interchange of information in the social sciences domain when the human sex is not stated.;El concepto no declarado se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano no está afirmado.;O conceito não declarado é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano não é declarado.;Le concept non indiqué est utilisé dans le contexte de l'échange d'informations dans le domaine des sciences sociales lorsque le sexe humain n'est pas indiqué.;Koncept, ki ni navedena, se uporablja v okviru izmenjave informacij na področju socialnih ved, ko človeški seks ni naveden.
+PublicOrganisation_en_label;PublicOrganisation;Organización publicoránica;Publicanização;Publicité;Pubranganizacija
+PublicOrganisation_en_description;;;;;
+PublicOrganisation/Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+PublicOrganisation/Identifier_en_description;Many organisations are referred to by an acronym or some other identifier. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European AntiN/AFraud Office, and so on. These are formally recognised by the European Commission which provides a list of such acronyms. Analogous lists should be used in other contexts.;Muchas organizaciones son referidas por un acrónimo o algún otro identificador. Por ejemplo, entre las instituciones de la UE, el BCE es el identificador del Banco Central Europeo, OLAF para la Oficina Europea de Antin / Afraud, y así sucesivamente. Estos son formalmente reconocidos por la Comisión Europea que proporciona una lista de tales acrónimos. Las listas análogas deben usarse en otros contextos.;Muitas organizações são referidas por um acrônimo ou algum outro identificador. Por exemplo, entre as instituições da UE, o BCE é o identificador do Banco Central Europeu, OLAF para o Escritório Europeu de Antina / Afraud, e assim por diante. Estes são formalmente reconhecidos pela Comissão Europeia, que fornece uma lista de tais acrônimos. Listas análogas devem ser usadas em outros contextos.;De nombreuses organisations sont mentionnées par un acronyme ou un autre identifiant. Par exemple, parmi les institutions de l'UE, la BCE est l'identifiant de la Banque centrale européenne, OLAF pour le bureau européen Antin / Afrauud, etc. Celles-ci sont officiellement reconnues par la Commission européenne qui fournit une liste de tels acronymes. Les listes analogues doivent être utilisées dans d'autres contextes.;Številne organizacije se sklicujejo na kratico ali drug identifikator. Na primer, med institucijami EU, ECB je identifikator za Evropsko centralno banko, OLAF za Evropski ANTIN / AFRAUd Office, in tako naprej. Evropske komisije formalno priznava, ki zagotavlja seznam takih kratic. V drugih kontekstih je treba uporabiti analogne sezname.
+PublicOrganisation/PrefLabel_en_label;Preferred label;Etiqueta preferida;Etiqueta preferida.;Étiquette préférée;Prednostna nalepka
+PublicOrganisation/PrefLabel_en_description;As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property. ;Como se define en la ontología org, se utiliza una etiqueta preferida para proporcionar el nombre primario y legalmente reconocido de la organización. Una organización solo puede tener un nombre de este tipo en cualquier idioma determinado. Los nombres primarios se pueden proporcionar en varios idiomas con múltiples instancias de la propiedad de la etiqueta preferida.;Conforme definido na ontologia Org, um rótulo preferido é usado para fornecer o nome primário e legalmente reconhecido da organização. Uma organização só pode ter um desses nome em qualquer idioma. Os nomes primários podem ser fornecidos em vários idiomas com várias instâncias da propriedade de etiqueta preferida.;Tel que défini dans l'ORG ontology, une étiquette préférée est utilisée pour fournir le nom principal de l'organisation légalement reconnu. Une organisation ne peut avoir qu'un tel nom dans une langue donnée. Les noms principaux peuvent être fournis dans plusieurs langues avec plusieurs instances de la propriété d'étiquette préférée.;Kot je opredeljeno v ontologiji ORG, se za zagotovitev primarnega, pravno priznanega imena organizacije uporablja prednostna nalepka. Organizacija ima lahko samo eno takšno ime v katerem koli jeziku. Primarna imena se lahko zagotovijo v več jezikih z večkratnimi primerki prednostne lastnosti nalepk.
+UDT_en_label;;;;;
+UDT_en_description;;;;;
+UDT/Text_en_label;Text;Texto;Texto;Texte;Besedilo
+UDT/Text_en_description;A character string (i.e. a finite set of characters), generally in the form of words of a language.;Una cadena de caracteres (es decir, un conjunto finito de caracteres), generalmente en forma de palabras de un idioma.;Uma cadeia de caracteres (isto é, um conjunto finito de caracteres), geralmente na forma de palavras de um idioma.;Une chaîne de caractères (c'est-à-dire un ensemble fini de caractères), généralement sous la forme de mots d'une langue.;Niz znakov (tj. Končni niz znakov), na splošno v obliki besed jezika.
+UDT/Text/@LanguageID_en_label;Language ID;ID de idioma;ID da linguagem;ID de langue;Jezik ID.
+UDT/Text/@LanguageID_en_description;The identifier of the language used in the content component.;El identificador del lenguaje utilizado en el componente de contenido.;O identificador do idioma usado no componente de conteúdo.;L'identifiant de la langue utilisée dans le composant de contenu.;Identifikator jezika, ki se uporablja v komponenti vsebine.
+UDT/Text/@LanguageLocaleID_en_label;Language Locale ID;ID de idioma local;Idioma ideal id.;Langue Locale ID;Jezik Locale ID.
+UDT/Text/@LanguageLocaleID_en_description;The identification of the locale of the language.;La identificación de la localidad del idioma.;A identificação da localidade da linguagem.;L'identification des paramètres régionaux de la langue.;Identifikacijo jezika jezika.
+UDT/Date_en_label;Date;Fecha;Encontro: Data;Date;Datum.
+UDT/Date_en_description;One calendar day according the Gregorian calendar.;Un día calendario según el calendario gregoriano.;Um dia de calendário de acordo com o calendário gregoriano.;Une journée de calendrier selon le calendrier grégorien.;En koledarski dan po Gregorian koledarju.
+UDT/Name_en_label;Name;Nombre;Nome;Nom;Ime
+UDT/Name_en_description;A character string that constitutes the distinctive designation of a person, place, thing or concept.;Una cadena de caracteres que constituye la designación distintiva de una persona, lugar, cosa o concepto.;Uma cadeia de caracteres que constitui a designação distinta de uma pessoa, lugar, coisa ou conceito.;Une chaîne de caractères qui constitue la désignation distinctive d'une personne, d'un lieu, d'une chose ou d'un concept.;Niz znakov, ki predstavlja razlikovalno oznako osebe, kraj, stvar ali koncept.
+UDT/Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+UDT/Identifier_en_description;A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.;Una cadena de caracteres para identificar y distinguir únicamente, una instancia de un objeto en un esquema de identificación de todos los demás objetos en el mismo esquema junto con información complementaria relevante.;Uma cadeia de caracteres para identificar e distinguir exclusivamente, uma instância de um objeto em um esquema de identificação de todos os outros objetos no mesmo esquema juntamente com informações suplementares relevantes.;Une chaîne de caractères pour identifier et distinguer de manière unique, une instance d'un objet dans un schéma d'identification de tous les autres objets du même système ainsi que des informations complémentaires pertinentes.;Niz znakov za identifikacijo in razlikovanje v edinstveno, en primer predmeta v identifikacijski shemi iz vseh drugih predmetov v isti shemi skupaj z ustreznimi dopolnilnimi informacijami.
+UDT/Identifier/@schemeID_en_label;Scheme ID;ID de esquema;ID do esquema;Schéma;ID sheme
+UDT/Identifier/@schemeID_en_description;The identification of the identification scheme.;La identificación del esquema de identificación.;A identificação do esquema de identificação.;L'identification du schéma d'identification.;Identifikacijo sheme identifikacije.
+UDT/Identifier/@schemeName_en_label;Scheme Name;Nombre del esquema;Nome do esquema.;Nom du schéma;Ime sheme.
+UDT/Identifier/@schemeName_en_description;The name of the identification scheme.;El nombre del esquema de identificación.;O nome do esquema de identificação.;Le nom du schéma d'identification.;Ime identifikacijske sheme.
+UDT/Identifier/@schemeAgencyID_en_label;Scheme Agency ID;ID de la agencia del esquema;ID da agência do esquema.;ID d'agence de programme;Agencija sheme ID.
+UDT/Identifier/@schemeAgencyID_en_description;The identification of the agency that maintains the identification scheme.;La identificación de la agencia que mantiene el esquema de identificación.;A identificação da Agência que mantém o esquema de identificação.;L'identification de l'agence qui maintient le système d'identification.;Identifikacija Agencije, ki ohranja shemo identifikacije.
+UDT/Identifier/@schemeAgencyName_en_label;Scheme Agency Name;Nombre de la agencia del esquema;Nome da agência do esquema.;Nom de l'organisme de régime;Ime agencije sheme..
+UDT/Identifier/@schemeAgencyName_en_description;The name of the agency that maintains the identification scheme.;El nombre de la agencia que mantiene el esquema de identificación.;O nome da agência que mantém o esquema de identificação.;Le nom de l'agence qui maintient le système d'identification.;Ime agencije, ki ohranja shemo identifikacije.
+UDT/Identifier/@schemeVersionID_en_label;Scheme Version ID;ID de versión de esquema;ID de versão do esquema.;ID de version du schéma;ID izvedbe sheme ID.
+UDT/Identifier/@schemeVersionID_en_description;The version of the identification scheme.;La versión del esquema de identificación.;A versão do esquema de identificação.;La version du schéma d'identification.;Različico sheme identifikacije.
+UDT/Identifier/@schemeDataURI_en_label;Scheme Data URI;URI de datos de esquema;Regime Data Uri.;Schéma de données URI;Podatki sheme URI.
+UDT/Identifier/@schemeDataURI_en_description;The Uniform Resource Identifier that identifies where the identification scheme data is located.;El identificador de recursos uniforme que identifica dónde se encuentra los datos del esquema de identificación.;O identificador de recursos uniformes que identifica onde os dados do esquema de identificação estão localizados.;L'identifiant de ressource uniforme qui identifie les données du schéma d'identification.;Identifikator enotnega vira, ki identificira, kje se nahajajo podatki o shemi identifikacije.
+UDT/Identifier/@schemeURI_en_label;Scheme URI;URI de esquema;Regime Uri.;URI du régime;Shema Uri.
+UDT/Identifier/@schemeURI_en_description;The Uniform Resource Identifier that identifies where the identification scheme is located.;El identificador de recursos uniformes que identifica dónde se encuentra el esquema de identificación.;O identificador de recursos uniformes que identifica onde o esquema de identificação está localizado.;L'identifiant de ressource uniforme qui identifie l'emplacement du schéma d'identification.;Enotni identifikator virov, ki identificira, kje se nahaja identifikacijska shema.
+LangEnum_en_label;Language;Idioma;Linguagem;Langue;Jezik
+LangEnum_en_description;;;;;
+LangEnum/en_en_label;English;inglés;inglês;Anglais;angleščina
+LangEnum/en_en_description;;;;;
+LangEnum/es_en_label;Spanish;español;espanhol;Espagnol;španski
+LangEnum/es_en_description;;;;;
+LangEnum/pt_en_label;Portuguese;portugués;português;Portugais;Portugalščina
+LangEnum/pt_en_description;;;;;
+LangEnum/fr_en_label;French;francés;francês;français;Francozi
+LangEnum/fr_en_description;;;;;
+LangEnum/sl_en_label;Slovenian;esloveno;esloveno;slovène;Slovenščina
+LangEnum/sl_en_description;;;;;
+NUTS0Enum_en_label;Member States;Estados miembros;Estados-Membros;États membres;Države članice
+NUTS0Enum_en_description;;;;;
+NUTS0Enum/AT_en_label;Austria;Austria;Áustria;L'Autriche;Avstrija
+NUTS0Enum/AT_en_description;;;;;
+NUTS0Enum/BE_en_label;Belgium;Bélgica;Bélgica;la Belgique;Belgija
+NUTS0Enum/BE_en_description;;;;;
+NUTS0Enum/BG_en_label;Bulgaria;Bulgaria;Bulgária;Bulgarie;Bolgarija
+NUTS0Enum/BG_en_description;;;;;
+NUTS0Enum/CY_en_label;Cyprus;Chipre;Chipre;Chypre;Ciper.
+NUTS0Enum/CY_en_description;;;;;
+NUTS0Enum/CZ_en_label;Czechia;Chequia;Czechia.;Tchechie;Čechia.
+NUTS0Enum/CZ_en_description;;;;;
+NUTS0Enum/DE_en_label;Germany;Alemania;Alemanha;Allemagne;Nemčija
+NUTS0Enum/DE_en_description;;;;;
+NUTS0Enum/DK_en_label;Denmark;Dinamarca;Dinamarca;Danemark;Danska
+NUTS0Enum/DK_en_description;;;;;
+NUTS0Enum/EE_en_label;Estonia;Estonia;Estônia;Estonie;Estonija
+NUTS0Enum/EE_en_description;;;;;
+NUTS0Enum/EL_en_label;Greece;Grecia;Grécia;Grèce;Grčija.
+NUTS0Enum/EL_en_description;;;;;
+NUTS0Enum/ES_en_label;Spain;España;Espanha;Espagne;Španija
+NUTS0Enum/ES_en_description;;;;;
+NUTS0Enum/FI_en_label;Finland;Finlandia;Finlândia;Finlande;Finska
+NUTS0Enum/FI_en_description;;;;;
+NUTS0Enum/FR_en_label;France;Francia;França;La France;Francija
+NUTS0Enum/FR_en_description;;;;;
+NUTS0Enum/HR_en_label;Croatia;Croacia;Croácia;Croatie;Hrvaška
+NUTS0Enum/HR_en_description;;;;;
+NUTS0Enum/HU_en_label;Hungary;Hungría;Hungria;Hongrie;Madžarska
+NUTS0Enum/HU_en_description;;;;;
+NUTS0Enum/IE_en_label;Ireland;Irlanda;Irlanda;Irlande;Irska
+NUTS0Enum/IE_en_description;;;;;
+NUTS0Enum/IT_en_label;Italy;Italia;Itália;Italie;Italija
+NUTS0Enum/IT_en_description;;;;;
+NUTS0Enum/LT_en_label;Lithuania;Lituania;Lituânia;Lituanie;Litva
+NUTS0Enum/LT_en_description;;;;;
+NUTS0Enum/LU_en_label;Luxembourg;Luxemburgo;Luxemburgo;Luxembourg;Luksemburg.
+NUTS0Enum/LU_en_description;;;;;
+NUTS0Enum/LV_en_label;Latvia;Letonia;Letônia;Lettonie;Latvija
+NUTS0Enum/LV_en_description;;;;;
+NUTS0Enum/MT_en_label;Malta;Malta;Malta;Malte;Malta
+NUTS0Enum/MT_en_description;;;;;
+NUTS0Enum/NL_en_label;Netherlands;Países Bajos;Holanda;Pays-Bas;Nizozemska
+NUTS0Enum/NL_en_description;;;;;
+NUTS0Enum/PL_en_label;Poland;Polonia;Polônia;Pologne;Poljska
+NUTS0Enum/PL_en_description;;;;;
+NUTS0Enum/PT_en_label;Portugal;Portugal;Portugal;le Portugal;Portugalska
+NUTS0Enum/PT_en_description;;;;;
+NUTS0Enum/RO_en_label;Romania;Rumania;Romênia.;Roumanie;Romunija
+NUTS0Enum/RO_en_description;;;;;
+NUTS0Enum/SE_en_label;Sweden;Suecia;Suécia;la Suède;Švedska
+NUTS0Enum/SE_en_description;;;;;
+NUTS0Enum/SI_en_label;Slovenia;Eslovenia;Eslovênia;Slovénie;Slovenija
+NUTS0Enum/SI_en_description;;;;;
+NUTS0Enum/SK_en_label;Slovakia;Eslovaquia;Eslováquia;Slovaquie;Slovaška
+NUTS0Enum/SK_en_description;;;;;
+PersonMaritalStatusEnum_en_label;Person Marital Status;Estado civil de persona;Pessoa Estado civil;État matrimonial;Osebni zakonski stan.
+PersonMaritalStatusEnum_en_description;List of Person Marital Status.;Lista de estado civil de persona.;Lista de Pessoa Estado Civil.;Liste des statuts matrimoniaux.;Seznam osebnega statusa.
+PersonMaritalStatusEnum/Cohabitation_en_label;Cohabitation;Cohabitación;Coabitação;Cohabitation;Cohabitation.
+PersonMaritalStatusEnum/Cohabitation_en_description;A person marital status : cohabitation;Un estado civil de persona: cohabitación;Uma pessoa Estado civil: Coabitação;Statut matrimonial de personne: cohabitation;Oseba Zakonski stan: Cohabation
+PersonMaritalStatusEnum/DivorcedPerson_en_label;Divorced person;Persona divorciada;Pessoa divorciada;Personne divorcée;Razvezana oseba
+PersonMaritalStatusEnum/DivorcedPerson_en_description;A person marital status : divorced person;Un estado civil de persona: persona divorciada;Uma pessoa estado civil: pessoa divorciada;Un état matrimonial de personne: personne divorcée;Oseba zakonski stan: ločena oseba
+PersonMaritalStatusEnum/MarriedPerson_en_label;Married person;Persona casada;Pessoa casada;Personne mariée;Poročena oseba
+PersonMaritalStatusEnum/MarriedPerson_en_description;A person marital status :married person;Un estado civil de persona: persona casada;Um estado civil da pessoa: pessoa casada;Un état matrimonial de personne: personne mariée;Oseba zakonski stan: poročena oseba
+PersonMaritalStatusEnum/Polygamy_en_label;Polygamy;Poligamia;Poligamia;La polygamie;Polygamy.
+PersonMaritalStatusEnum/Polygamy_en_description;A person marital status: polygamy;Un estado civil de persona: Polygamy;Uma pessoa estado civil: poligamia;Un état matrimonial de personne: polygamie;Oseba Zakonski stan: Polygamy
+PersonMaritalStatusEnum/SeparatedPerson_en_label;Separated person;Persona separada;Pessoa separada;Personne séparée;Ločena oseba
+PersonMaritalStatusEnum/SeparatedPerson_en_description;A person marital status: separated person;Un estado civil de persona: persona separada;Uma pessoa estado civil: pessoa separada;Une personne État matrimonial: personne séparée;Oseba Zakonski stan: ločena oseba
+PersonMaritalStatusEnum/SingleParent_en_label;Single parent;Monoparental;Pai solteiro;Parent célibataire;Samohranilec
+PersonMaritalStatusEnum/SingleParent_en_description;A person marital status: single parent;Un estado civil de persona: padre soltero;Uma pessoa estado civil: pai solteiro;Statut matrimonial de personne: parent célibataire;Oseba zakonski stan: samski starš
+PersonMaritalStatusEnum/UnmarriedPerson_en_label;Unmarried person;Persona soltera;Pessoa solteira;Personne non mariée;Neporočena oseba
+PersonMaritalStatusEnum/UnmarriedPerson_en_description;A person marital status: unmarried person;Un estado civil de persona: persona soltera;Um estado civil da pessoa: pessoa solteira;Un état matrimonial de personne: personne non mariée;Oseba zakonski stan: neporočena oseba
+PersonMaritalStatusEnum/WidowedPerson_en_label;Widowed person;Persona viuda;Pessoa viúva;Personne veuve;Vdova oseba
+PersonMaritalStatusEnum/WidowedPerson_en_description;A person marital status:widowed person;Un estado civil de persona: persona viuda;Uma pessoa estado civil: pessoa viúva;Statut matrimonial de personne: personne veuve;Oseba Zakonski stan: Vdova oseba
+MarriageEvidence_en_label;Marriage evidence;Evidencia de matrimonio;Evidência de casamento;Preuve de mariage;Poročni dokaz
+MarriageEvidence_en_description;Official document or data proving the Marriage of two Persons.;Documento oficial o datos que demuestran el matrimonio de dos personas.;Documento oficial ou dados provando o casamento de duas pessoas.;Document officiel ou données prouvant le mariage de deux personnes.;Uradni dokument ali podatki, ki dokazujejo zakonsko zvezo dveh oseb.
+MarriageEvidence/Identifier_en_label;Identifier;Identificador;Identificador;Identifiant;Identifikator
+MarriageEvidence/Identifier_en_description;An unambiguous reference to the Marriage Evidence.;Una referencia inequívoca a la evidencia matrimonial.;Uma referência inequívoca para a evidência do casamento.;Une référence sans ambiguïté à la preuve du mariage.;Nedvoumno sklicevanje na zakonske dokaze.
+MarriageEvidence/IssueDate_en_label;Issue date;Fecha de asunto;Data de emissão;Date d'émission;Datum izdaje
+MarriageEvidence/IssueDate_en_description;The most recent date on which the MarriageEvidence instance was issued.;La fecha más reciente sobre la que se emitió la instancia de matrimonio.;A data mais recente sobre a qual a instância de MarriageEvidence foi emitida.;La date la plus récente sur laquelle l'instance de mariage a été émise.;Najnovejši datum, na katerem je bil izdan primer Marriageedidence.
+MarriageEvidence/IssuingAuthority_en_label;Issuing authority;La autoridad emisora;Autoridade emissora;Autorité de délivrance;Organ izdaje
+MarriageEvidence/IssuingAuthority_en_description;A Public Organisation with official authority in charge of issuing the Marriage Evidence.;Una organización pública con la autoridad oficial encargada de emitir la evidencia matrimonial.;Uma organização pública com autoridade oficial encarregada de emitir a evidência do casamento.;Une organisation publique avec autorité officielle chargée de la délivrance des preuves du mariage.;Javna organizacija z uradnim organom, ki je zadolžena za izdajo zakonskih zakonov.
+MarriageEvidence/IssuingPlace_en_label;Issuing place;Lugar de emisión;Lugar emissor;Lieu de délivrance;Izdajanje kraja
+MarriageEvidence/IssuingPlace_en_description;The Location where the Marriage Evidence was issued.;La ubicación donde se emitió la evidencia matrimonial.;A localização onde a evidência do casamento foi emitida.;L'emplacement où la preuve du mariage a été émise.;Lokacijo, kjer je bil izdan zakonski dokaz.
+MarriageEvidence/IssuingPlace/AdminUnitL2_en_label;;;;;
+MarriageEvidence/IssuingPlace/AdminUnitL2_en_description;;;;;
+MarriageEvidence/IssuingPlace/AdminUnitL1_en_label;;;;;
+MarriageEvidence/IssuingPlace/AdminUnitL1_en_description;;;;;
+MarriageEvidence/CertifiesMarriage_en_label;Certifies marriage;Certifica el matrimonio;Certifica o casamento;Certifie le mariage;Potrjuje poroko
+MarriageEvidence/CertifiesMarriage_en_description;Attesting in a formal way that the Marriage is true.;Firstando de una manera formal que el matrimonio es cierto.;Atestando de uma forma formal que o casamento é verdadeiro.;Attestant de manière formelle que le mariage est vrai.;Uradni način, da je zakonska zveza resnična.
+MarriageEvidence/CertifiesMarriage/DateOfMarriage_en_label;Date of marriage;Fecha de casamiento;Data do casamento;Date du mariage;Datum poroke
+MarriageEvidence/CertifiesMarriage/DateOfMarriage_en_description;The date on which the Marriage took place.;La fecha en que tuvo lugar el matrimonio.;A data em que ocorreu o casamento.;La date à laquelle le mariage a eu lieu.;Datum, ko je potekala zakonska zveza.
+MarriageEvidence/CertifiesMarriage/PlaceOfMarriage_en_label;Place of marriage;Lugar de la boda;Lugar do casamento;Lieu de mariage;Kraj poroke
+MarriageEvidence/CertifiesMarriage/PlaceOfMarriage_en_description;;;;;
+MarriageEvidence/CertifiesMarriage/Spouse_en_label;Spouse;Cónyuge;Cônjuge;Conjoint;Zakonec
+MarriageEvidence/CertifiesMarriage/Spouse_en_description;The Person who was married.;La persona que estaba casada.;A pessoa que era casada.;La personne qui était mariée.;Oseba, ki je bila poročena.
+MarriageEvidence/CertifiesMarriage/Spouse/Gender_en_label;;;;;
+MarriageEvidence/CertifiesMarriage/Spouse/Gender_en_description;The gender of an individual should be recorded using a controlled vocabulary that is appropriate for the specific context. In some cases the chromosomal or physical state of an individual will be more important than the gender that they express, in others the reverse will be true. What is always important is that the controlled vocabulary used to describe an individual's gender is stated explicitly.;El género de un individuo debe registrarse utilizando un vocabulario controlado que sea apropiado para el contexto específico. En algunos casos, el estado cromosómico o físico de un individuo será más importante que el género que expresan, en otros, el reverso será cierto. Lo que siempre es importante es que el vocabulario controlado utilizado para describir el género de un individuo se indique explícitamente.;O gênero de um indivíduo deve ser registrado usando um vocabulário controlado que é apropriado para o contexto específico. Em alguns casos, o estado cromossômico ou físico de um indivíduo será mais importante do que o gênero que eles expressam, em outros, o inverso será verdadeiro. O que é sempre importante é que o vocabulário controlado usado para descrever o gênero de um indivíduo é declarado explicitamente.;Le sexe d'une personne doit être enregistré en utilisant un vocabulaire contrôlé approprié pour le contexte spécifique. Dans certains cas, l'état chromosomique ou physique d'une personne sera plus important que le sexe qu'ils expriment, dans d'autres l'inverse seront vrais. Ce qui est toujours important, c'est que le vocabulaire contrôlé utilisé pour décrire le genre d'un individu est indiqué explicitement.;Spol posameznika je treba zabeležiti z uporabo nadzorovanega besedišča, ki je primeren za poseben kontekst. V nekaterih primerih bo kromosomsko ali fizično stanje posameznika pomembnejše od spola, ki ga izražajo, v drugih pa bo vzvratno res. Vedno je pomembno, da je nadzorovani besednjak, ki se uporablja za opis spola posameznika, izrecno navedeno.
+MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage_en_label;Family name after marriage;Nombre de la familia después del matrimonio;Nome da família após o casamento;Nom de famille après le mariage;Družinsko ime po poroki
+MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage_en_description;This property contains the family name after the Marriage of the Person.;Esta propiedad contiene el nombre de la familia después del matrimonio de la persona.;Esta propriedade contém o nome da família após o casamento da pessoa.;Cette propriété contient le nom de famille après le mariage de la personne.;Ta lastnost vsebuje družinsko ime po zakonu osebe.
+MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage_en_label;Family name before marriage;Nombre de la familia antes del matrimonio;Nome da família antes do casamento;Nom de famille avant le mariage;Družinsko ime pred poroko
+MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage_en_description;This property contains the family name before the Marriage of the Person.;Esta propiedad contiene el nombre de la familia antes del matrimonio de la persona.;Esta propriedade contém o nome da família antes do casamento da pessoa.;Cette propriété contient le nom de famille avant le mariage de la personne.;Ta lastnost vsebuje družinsko ime pred poroko osebe.
+MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage_en_label;Marital status before marriage;Estado civil antes del matrimonio.;Estado civil antes do casamento;État matrimonial avant le mariage;Zakonski stan pred poroko
+MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage_en_description;Situation with regard to whether a Person was single, married, separated, divorced or widowed.;Situación con respecto a si una persona era soltera, casada, separada, divorciada o viuda.;Situação em relação a se uma pessoa era solteira, casada, separada, divorciada ou viúva.;Situation en ce qui concerne si une personne était célibataire, mariée, séparée, divorcée ou veuve.;Razmere glede tega, ali je bila oseba samska, poročena, ločena, razvezana ali vdova.
+MarriageEvidence/CertifiesEndOfMarriage_en_label;End of marriage;Fin del matrimonio;Fim do casamento;Fin du mariage;Konec zakonske zveze
+MarriageEvidence/CertifiesEndOfMarriage_en_description;In case of divorce, this property includes information on the end of marriage;En caso de divorcio, esta propiedad incluye información sobre el final del matrimonio.;Em caso de divórcio, esta propriedade inclui informações sobre o final do casamento;En cas de divorce, cette propriété inclut des informations sur la fin du mariage.;V primeru razveze, ta lastnost vključuje informacije na koncu poroke
+MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage_en_label;Date of end of marriage;Fecha del final del matrimonio.;Data do fim do casamento;Date de fin du mariage;Datum konca zakonske zveze
+MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage_en_description;Date of the end of marriage;Fecha del final del matrimonio.;Data do fim do casamento;Date de la fin du mariage;Datum konca zakonske zveze
+MarriageEvidence/CertifiesEndOfMarriage/Cause_en_label;Cause;Porque;Causa;Causer;Vzrok
+MarriageEvidence/CertifiesEndOfMarriage/Cause_en_description;Cause of the end of marriage.;Causa del fin del matrimonio.;Causa do fim do casamento.;Cause de la fin du mariage.;Vzrok za konec zakonske zveze.

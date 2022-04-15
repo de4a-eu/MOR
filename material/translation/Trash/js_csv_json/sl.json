@@ -1,0 +1,1298 @@
+{
+  "BirthEvidence": {
+    "label": "Rojstvo",
+    "description": "Uradni dokument ali podatki, ki dokazujejo rojstvo otroka."
+  },
+  "BirthEvidence/Identifier": {
+    "label": "Identifikator",
+    "description": "Nedvoumno sklicevanje na rojstni dokaz."
+  },
+  "BirthEvidence/IssueDate": {
+    "label": "Datum izdaje",
+    "description": "Najnovejši datum, na katerega je bil izdan primer rojstva dokazov."
+  },
+  "BirthEvidence/IssuingAuthority": {
+    "label": "Organ izdaje",
+    "description": "Javna organizacija z uradnim organom, ki je zadolžena za izdajo rojstnih dokazov."
+  },
+  "BirthEvidence/IssuingPlace": {
+    "label": "Izdajanje kraja",
+    "description": "Lokacijo, kjer so bili izdani rojstni dokaz."
+  },
+  "BirthEvidence/CertifiesBirth": {
+    "label": "Potrjuje rojstvo",
+    "description": "Uradno potrjevanje, da je rojstvo res."
+  },
+  "BirthEvidence/CertifiesBirth/Child": {
+    "label": "Otrok",
+    "description": "Oseba, ki se je rodila ob rojstvu. Oseba katere koli starosti, ki je sin ali hči."
+  },
+  "BirthEvidence/CertifiesBirth/Child/Gender": {
+    "description": "SPOLO OSEBENE OSEBE"
+  },
+  "BirthEvidence/CertifiesBirth/Parent": {
+    "label": "Starš",
+    "description": "Starš otroka. Ena od obeh oseb, ki so skupaj vzrok otrokovega rojstva, tj. Naravni staršev."
+  },
+  "LocationAddress": {
+    "label": "Naslov."
+  },
+  "LocationAddress/AdminUnitL2": {
+    "label": "Admin Enota Nivo 2",
+    "description": "Regija naslova, ponavadi okrožje, državo ali drugo takšno področje, ki običajno obsega več krajev."
+  },
+  "LocationAddress/AdminUnitL1": {
+    "label": "Admin Enota Nivo 1",
+    "description": "Najvišja upravna enota za naslov, skoraj vedno državo. Najboljša praksa je uporaba kode ISO 3166-1."
+  },
+  "LocationAddress/PoBox": {
+    "label": "Poštni predal",
+    "description": "\"Številko poštnega polja. IME INSPIRE za to je \"\"PostDelaryidentifier\"\", za katerega uporablja lastnost lokatorja, ki ima lastnost tipa tista imena. Ta besednjak ločuje poštno polje za večjo neodvisnost tehnologije.\""
+  },
+  "LocationAddress/Thoroughfare": {
+    "label": "Thoroughface.",
+    "description": "\"Citiranje iz smernic INSPIRE, je čisto mesto: \"\"naslovna komponenta, ki predstavlja ime prehoda ali poti skozi eno lokacijo na drugo. Trajnostna uporaba ni nujno cesta, lahko pa je vodna pot ali druga druga funkcija.\""
+  },
+  "LocationAddress/LocatorDesignator": {
+    "label": "Oznaka lokatorja.",
+    "description": "\"Opocenik lokatorja je definiran s smernicami INSPIRE kot \"\"številka ali zaporedje znakov, ki enolično identificirajo lokator v ustreznih področjih (-ih). Celotna identifikacija lokatorja lahko vključuje enega ali več lokatorjev. V enostavnejših pogojih je to številka stavbe, številka stanovanja itd. Za naslov, kot je \"\"Stanovanje 3, 17 Bridge Street\"\", je lokator \"\"stanovanje 3, 17.\"\"\""
+  },
+  "LocationAddress/LocatorName": {
+    "label": "Ime lokatorja",
+    "description": "\"Na podlagi smernic INSPIRE je ime lokatorja opredeljeno kot: \"\"Ustrezni samostalnik (-e), ki se uporabljajo za realnega svetovnega subjekta, ki ga je identificiral lokator. Ime lokatorja bi lahko bilo ime nepremičnine ali kompleksa, iz stavbe ali dela stavbe, ali pa je lahko ime sobe znotraj stavbe. Ključna razlika med lokatorjem in imenom lokatorja je, da je slednje pravilno ime in verjetno ne vključuje številk. Na primer, \"\"Shumann, Berlaymont\"\" je sejna soba znotraj sedeža Evropske komisije, za katero je ime lokatorja bolj primerno kot lokator.\""
+  },
+  "LocationAddress/AddressArea": {
+    "label": "Območje naslova",
+    "description": "\"Ob upoštevanju opredelitve ZVANIRE je področje naslova: ime ali imena geografskega območja ali kraja, ki združuje številne pomembnih predmetov za namene obravnavanja, ne da bi bila upravna enota. \"\" To bi običajno del mesta, soseske ali vasi.\""
+  },
+  "LocationAddress/PostName": {
+    "label": "Ime objave",
+    "description": "Ključna poštna razdelitev naslova, običajno mesto. (Opredelitev INSPIRE je 'Eno ali več imen, ustvarjenih in vzdrževanih za poštne namene, da bi ugotovili pododdelstvo naslovov in poštnih točk.)"
+  },
+  "LocationAddress/PostCode": {
+    "label": "Post Code.",
+    "description": "Poštna številka po pošti (A.K.A Poštna številka, Poštna številka itd.). Post kode so skupni elementi v poštnih naslovnih sistemih mnogih držav."
+  },
+  "CountryEnum": {
+    "description": "ISO 3166-1 Kode alfa-3 so tričrkovne kode države, opredeljene v standardu ISO 3166, ki jo je objavila Mednarodna organizacija za standardizacijo, za zastopanje držav, odvisnih ozemelj in posebnih področij geografskega interesa."
+  },
+  "CountryEnum/1A0": {
+    "label": "Kosovo"
+  },
+  "CountryEnum/ABW": {
+    "label": "Aruba."
+  },
+  "CountryEnum/AFG": {
+    "label": "Afganistan"
+  },
+  "CountryEnum/AFI": {
+    "label": "Francoski Afar in Issas"
+  },
+  "CountryEnum/AGO": {
+    "label": "Angola"
+  },
+  "CountryEnum/AIA": {
+    "label": "Anguilla."
+  },
+  "CountryEnum/ALA": {
+    "label": "Ålandski otoki."
+  },
+  "CountryEnum/ALB": {
+    "label": "Albanija"
+  },
+  "CountryEnum/AND": {
+    "label": "Andora"
+  },
+  "CountryEnum/ANT": {
+    "label": "Nizozemski Antili"
+  },
+  "CountryEnum/ARE": {
+    "label": "Združeni Arabski Emirati"
+  },
+  "CountryEnum/ARG": {
+    "label": "Argentina"
+  },
+  "CountryEnum/ARM": {
+    "label": "Armenija"
+  },
+  "CountryEnum/ASM": {
+    "label": "Ameriška Samoa"
+  },
+  "CountryEnum/ATA": {
+    "label": "Antarktika"
+  },
+  "CountryEnum/ATB": {
+    "label": "Britansko antarktično ozemlje"
+  },
+  "CountryEnum/ATF": {
+    "label": "Francoske južne dežele"
+  },
+  "CountryEnum/ATG": {
+    "label": "Antigva in Barbuda."
+  },
+  "CountryEnum/ATN": {
+    "label": "Dronning Maud Land."
+  },
+  "CountryEnum/AUS": {
+    "label": "Avstralija"
+  },
+  "CountryEnum/AUT": {
+    "label": "Avstrija"
+  },
+  "CountryEnum/AZE": {
+    "label": "Azerbajdžan"
+  },
+  "CountryEnum/BDI": {
+    "label": "Burundi."
+  },
+  "CountryEnum/BEL": {
+    "label": "Belgija"
+  },
+  "CountryEnum/BEN": {
+    "label": "Benin."
+  },
+  "CountryEnum/BES": {
+    "label": "Bonaire, Sint Eustatius in Saba"
+  },
+  "CountryEnum/BFA": {
+    "label": "Burkina Faso."
+  },
+  "CountryEnum/BGD": {
+    "label": "Bangladeš"
+  },
+  "CountryEnum/BGR": {
+    "label": "Bolgarija"
+  },
+  "CountryEnum/BHR": {
+    "label": "Bahrajn."
+  },
+  "CountryEnum/BHS": {
+    "label": "Bahamas."
+  },
+  "CountryEnum/BIH": {
+    "label": "Bosna in Hercegovina"
+  },
+  "CountryEnum/BLM": {
+    "label": "Saint Barthélemy."
+  },
+  "CountryEnum/BLR": {
+    "label": "Belorusija"
+  },
+  "CountryEnum/BLZ": {
+    "label": "Belize"
+  },
+  "CountryEnum/BMU": {
+    "label": "Bermuda."
+  },
+  "CountryEnum/BOL": {
+    "label": "Bolivija."
+  },
+  "CountryEnum/BRA": {
+    "label": "Brazil"
+  },
+  "CountryEnum/BRB": {
+    "label": "Barbados."
+  },
+  "CountryEnum/BRN": {
+    "label": "Brunej"
+  },
+  "CountryEnum/BTN": {
+    "label": "Bhutan."
+  },
+  "CountryEnum/BUR": {
+    "label": "Burma"
+  },
+  "CountryEnum/BVT": {
+    "label": "Bouvet Island."
+  },
+  "CountryEnum/BWA": {
+    "label": "Bocvana."
+  },
+  "CountryEnum/BYS": {
+    "label": "Belorusija"
+  },
+  "CountryEnum/CAF": {
+    "label": "centralna afriška republika"
+  },
+  "CountryEnum/CAN": {
+    "label": "Kanada."
+  },
+  "CountryEnum/CCK": {
+    "label": "Kokosovi otoki"
+  },
+  "CountryEnum/CHE": {
+    "label": "Švica"
+  },
+  "CountryEnum/CHL": {
+    "label": "Čile"
+  },
+  "CountryEnum/CHN": {
+    "label": "Kitajska"
+  },
+  "CountryEnum/CIV": {
+    "label": "Côte d'ivoire."
+  },
+  "CountryEnum/CMR": {
+    "label": "Kamerun"
+  },
+  "CountryEnum/COD": {
+    "label": "Demokratična republika Kongo"
+  },
+  "CountryEnum/COG": {
+    "label": "Kongo."
+  },
+  "CountryEnum/COK": {
+    "label": "Cook Islands."
+  },
+  "CountryEnum/COL": {
+    "label": "Kolumbija"
+  },
+  "CountryEnum/COM": {
+    "label": "Komorov"
+  },
+  "CountryEnum/CPT": {
+    "label": "Clipperton."
+  },
+  "CountryEnum/CPV": {
+    "label": "Cabo Verde."
+  },
+  "CountryEnum/CRI": {
+    "label": "Kostarika"
+  },
+  "CountryEnum/CSK": {
+    "label": "Češkoslovaška"
+  },
+  "CountryEnum/CTE": {
+    "label": "Kanton in Enderbury Islands"
+  },
+  "CountryEnum/CUB": {
+    "label": "Kuba"
+  },
+  "CountryEnum/CUW": {
+    "label": "Curaçao."
+  },
+  "CountryEnum/CXR": {
+    "label": "Božični otok"
+  },
+  "CountryEnum/CYM": {
+    "label": "Cayman Islands."
+  },
+  "CountryEnum/CYP": {
+    "label": "Ciper."
+  },
+  "CountryEnum/CZE": {
+    "label": "Čechia."
+  },
+  "CountryEnum/DDR": {
+    "label": "Vzhodna Nemčija"
+  },
+  "CountryEnum/DEU": {
+    "label": "Nemčija"
+  },
+  "CountryEnum/DHY": {
+    "label": "Dahomey."
+  },
+  "CountryEnum/DJI": {
+    "label": "Džibouti."
+  },
+  "CountryEnum/DMA": {
+    "label": "Dominica."
+  },
+  "CountryEnum/DNK": {
+    "label": "Danska"
+  },
+  "CountryEnum/DOM": {
+    "label": "Dominikanska republika"
+  },
+  "CountryEnum/DZA": {
+    "label": "Alžirija"
+  },
+  "CountryEnum/ECU": {
+    "label": "Ekvador."
+  },
+  "CountryEnum/EGY": {
+    "label": "Egipt."
+  },
+  "CountryEnum/ERI": {
+    "label": "Eritreja"
+  },
+  "CountryEnum/ESH": {
+    "label": "Western Sahara."
+  },
+  "CountryEnum/ESP": {
+    "label": "Španija"
+  },
+  "CountryEnum/EST": {
+    "label": "Estonija"
+  },
+  "CountryEnum/ETH": {
+    "label": "Etiopija"
+  },
+  "CountryEnum/EUR": {
+    "label": "Evropska unija"
+  },
+  "CountryEnum/FIN": {
+    "label": "Finska"
+  },
+  "CountryEnum/FJI": {
+    "label": "Fidži"
+  },
+  "CountryEnum/FLK": {
+    "label": "Falklandski otoki."
+  },
+  "CountryEnum/FQ0": {
+    "label": "Francoska južna in Antarktična zemljišča"
+  },
+  "CountryEnum/FRA": {
+    "label": "Francija"
+  },
+  "CountryEnum/FRO": {
+    "label": "Faroes."
+  },
+  "CountryEnum/FSM": {
+    "label": "Mikronezija"
+  },
+  "CountryEnum/FXX": {
+    "label": "Metropolitan FRANCIJA"
+  },
+  "CountryEnum/GAB": {
+    "label": "Gabon"
+  },
+  "CountryEnum/GBR": {
+    "label": "Združeno kraljestvo"
+  },
+  "CountryEnum/GEL": {
+    "label": "Gilbert in Ellice Islands"
+  },
+  "CountryEnum/GEO": {
+    "label": "Georgia."
+  },
+  "CountryEnum/GGY": {
+    "label": "Guernsey."
+  },
+  "CountryEnum/GHA": {
+    "label": "Gana."
+  },
+  "CountryEnum/GIB": {
+    "label": "Gibraltar."
+  },
+  "CountryEnum/GIN": {
+    "label": "Gvineja"
+  },
+  "CountryEnum/GLP": {
+    "label": "Guadeloupe."
+  },
+  "CountryEnum/GMB": {
+    "label": "Gambia."
+  },
+  "CountryEnum/GNB": {
+    "label": "Gvineja Bissau."
+  },
+  "CountryEnum/GNQ": {
+    "label": "Ekvatorialna Gvineja"
+  },
+  "CountryEnum/GRC": {
+    "label": "Grčija."
+  },
+  "CountryEnum/GRD": {
+    "label": "Grenada."
+  },
+  "CountryEnum/GRL": {
+    "label": "Grenlandija"
+  },
+  "CountryEnum/GTM": {
+    "label": "Gvatemala."
+  },
+  "CountryEnum/GUF": {
+    "label": "Francoska Gvajana"
+  },
+  "CountryEnum/GUM": {
+    "label": "Guam."
+  },
+  "CountryEnum/GUY": {
+    "label": "Gvajana"
+  },
+  "CountryEnum/HKG": {
+    "label": "Hong Kong."
+  },
+  "CountryEnum/HMD": {
+    "label": "Slišal otok in McDonald Islands"
+  },
+  "CountryEnum/HND": {
+    "label": "Honduras."
+  },
+  "CountryEnum/HRV": {
+    "label": "Hrvaška"
+  },
+  "CountryEnum/HTI": {
+    "label": "Haiti."
+  },
+  "CountryEnum/HUN": {
+    "label": "Madžarska"
+  },
+  "CountryEnum/HVO": {
+    "label": "Zgornja volta"
+  },
+  "CountryEnum/IDN": {
+    "label": "Indonezija"
+  },
+  "CountryEnum/IMN": {
+    "label": "otok Man"
+  },
+  "CountryEnum/IND": {
+    "label": "Indija"
+  },
+  "CountryEnum/IOT": {
+    "label": "Britansko ozemlje Indijskega oceana"
+  },
+  "CountryEnum/IRL": {
+    "label": "Irska"
+  },
+  "CountryEnum/IRN": {
+    "label": "Iran"
+  },
+  "CountryEnum/IRQ": {
+    "label": "Irak"
+  },
+  "CountryEnum/ISL": {
+    "label": "Islandija"
+  },
+  "CountryEnum/ISR": {
+    "label": "Izrael."
+  },
+  "CountryEnum/ITA": {
+    "label": "Italija"
+  },
+  "CountryEnum/JAM": {
+    "label": "Jamajka."
+  },
+  "CountryEnum/JEY": {
+    "label": "Jersey."
+  },
+  "CountryEnum/JOR": {
+    "label": "Jordan"
+  },
+  "CountryEnum/JPN": {
+    "label": "Japonska"
+  },
+  "CountryEnum/JTN": {
+    "label": "Johnston Island."
+  },
+  "CountryEnum/KAZ": {
+    "label": "Kazahstan"
+  },
+  "CountryEnum/KEN": {
+    "label": "Kenija"
+  },
+  "CountryEnum/KGZ": {
+    "label": "Kirgizistan"
+  },
+  "CountryEnum/KHM": {
+    "label": "Kambodža"
+  },
+  "CountryEnum/KIR": {
+    "label": "Kiribati."
+  },
+  "CountryEnum/KNA": {
+    "label": "Saint Kitts in Nevis"
+  },
+  "CountryEnum/KOR": {
+    "label": "Južna Koreja"
+  },
+  "CountryEnum/KWT": {
+    "label": "Kuvajt"
+  },
+  "CountryEnum/LAO": {
+    "label": "Laos."
+  },
+  "CountryEnum/LBN": {
+    "label": "Libanon"
+  },
+  "CountryEnum/LBR": {
+    "label": "Liberija"
+  },
+  "CountryEnum/LBY": {
+    "label": "Libija"
+  },
+  "CountryEnum/LCA": {
+    "label": "Saint Lucia."
+  },
+  "CountryEnum/LIE": {
+    "label": "Lihtenštajn."
+  },
+  "CountryEnum/LKA": {
+    "label": "Šrilanka"
+  },
+  "CountryEnum/LSO": {
+    "label": "Lesotho."
+  },
+  "CountryEnum/LTU": {
+    "label": "Litva"
+  },
+  "CountryEnum/LUX": {
+    "label": "Luksemburg."
+  },
+  "CountryEnum/LVA": {
+    "label": "Latvija"
+  },
+  "CountryEnum/MAC": {
+    "label": "Macau."
+  },
+  "CountryEnum/MAF": {
+    "label": "Saint Martin."
+  },
+  "CountryEnum/MAR": {
+    "label": "Maroko."
+  },
+  "CountryEnum/MCO": {
+    "label": "Monako."
+  },
+  "CountryEnum/MDA": {
+    "label": "Moldavija"
+  },
+  "CountryEnum/MDG": {
+    "label": "Madagaskar"
+  },
+  "CountryEnum/MDV": {
+    "label": "Maldivi"
+  },
+  "CountryEnum/MEX": {
+    "label": "Mehika"
+  },
+  "CountryEnum/MHL": {
+    "label": "Marshallovi otoki."
+  },
+  "CountryEnum/MID": {
+    "label": "Midway Islands."
+  },
+  "CountryEnum/MKD": {
+    "label": "Severna Makedonija"
+  },
+  "CountryEnum/MLI": {
+    "label": "Mali"
+  },
+  "CountryEnum/MLT": {
+    "label": "Malta"
+  },
+  "CountryEnum/MMR": {
+    "label": "Mjanmar / Burma."
+  },
+  "CountryEnum/MNE": {
+    "label": "Črna gora"
+  },
+  "CountryEnum/MNG": {
+    "label": "Mongolija"
+  },
+  "CountryEnum/MNP": {
+    "label": "Severni Marianski otoki"
+  },
+  "CountryEnum/MOZ": {
+    "label": "Mozambik"
+  },
+  "CountryEnum/MRT": {
+    "label": "Mavretanija"
+  },
+  "CountryEnum/MSR": {
+    "label": "Montserrat."
+  },
+  "CountryEnum/MTQ": {
+    "label": "Martinique."
+  },
+  "CountryEnum/MUS": {
+    "label": "Mavricij"
+  },
+  "CountryEnum/MWI": {
+    "label": "Malavi"
+  },
+  "CountryEnum/MYS": {
+    "label": "Malezija"
+  },
+  "CountryEnum/MYT": {
+    "label": "Mayotte."
+  },
+  "CountryEnum/NAM": {
+    "label": "Namibija"
+  },
+  "CountryEnum/NCL": {
+    "label": "Nova Kaledonija"
+  },
+  "CountryEnum/NER": {
+    "label": "Niger."
+  },
+  "CountryEnum/NFK": {
+    "label": "Otok Norfolk."
+  },
+  "CountryEnum/NGA": {
+    "label": "Nigerija"
+  },
+  "CountryEnum/NHB": {
+    "label": "Novi hebridi."
+  },
+  "CountryEnum/NIC": {
+    "label": "Nikaragva."
+  },
+  "CountryEnum/NIU": {
+    "label": "Niue."
+  },
+  "CountryEnum/NLD": {
+    "label": "Nizozemska"
+  },
+  "CountryEnum/NOR": {
+    "label": "Norveška"
+  },
+  "CountryEnum/NPL": {
+    "label": "Nepal."
+  },
+  "CountryEnum/NRU": {
+    "label": "Nauru."
+  },
+  "CountryEnum/NTZ": {
+    "label": "Nevtralna cona"
+  },
+  "CountryEnum/NZL": {
+    "label": "Nova Zelandija"
+  },
+  "CountryEnum/OMN": {
+    "label": "Oman."
+  },
+  "CountryEnum/PAK": {
+    "label": "Pakistan"
+  },
+  "CountryEnum/PAN": {
+    "label": "Panama."
+  },
+  "CountryEnum/PCI": {
+    "label": "Trust ozemlje pacifiških otokov"
+  },
+  "CountryEnum/PCN": {
+    "label": "Pitcairn Islands."
+  },
+  "CountryEnum/PCZ": {
+    "label": "Panama Canal cona."
+  },
+  "CountryEnum/PER": {
+    "label": "Peru."
+  },
+  "CountryEnum/PHL": {
+    "label": "Filipini"
+  },
+  "CountryEnum/PLW": {
+    "label": "PALAU."
+  },
+  "CountryEnum/PNG": {
+    "label": "Papua Nova Gvineja"
+  },
+  "CountryEnum/POL": {
+    "label": "Poljska"
+  },
+  "CountryEnum/PRI": {
+    "label": "Portoriko"
+  },
+  "CountryEnum/PRK": {
+    "label": "Severna Koreja"
+  },
+  "CountryEnum/PRT": {
+    "label": "Portugalska"
+  },
+  "CountryEnum/PRY": {
+    "label": "Paragvaj."
+  },
+  "CountryEnum/PSE": {
+    "label": "Palestina"
+  },
+  "CountryEnum/PUS": {
+    "label": "Razni pacifiški otoki"
+  },
+  "CountryEnum/PYF": {
+    "label": "Francoska Polinezija"
+  },
+  "CountryEnum/QAT": {
+    "label": "Katar"
+  },
+  "CountryEnum/REU": {
+    "label": "Réunion."
+  },
+  "CountryEnum/RHO": {
+    "label": "Južna Rhodesia."
+  },
+  "CountryEnum/ROU": {
+    "label": "Romunija"
+  },
+  "CountryEnum/RUS": {
+    "label": "Rusija"
+  },
+  "CountryEnum/RWA": {
+    "label": "Randa."
+  },
+  "CountryEnum/SAU": {
+    "label": "Savdska Arabija"
+  },
+  "CountryEnum/SCG": {
+    "label": "Srbija in Črna gora."
+  },
+  "CountryEnum/SDN": {
+    "label": "Sudan"
+  },
+  "CountryEnum/SEN": {
+    "label": "Senegal."
+  },
+  "CountryEnum/SGP": {
+    "label": "Singapur"
+  },
+  "CountryEnum/SGS": {
+    "label": "Južna Gruzija in Južni sendvič otoč"
+  },
+  "CountryEnum/SHN": {
+    "label": "Sveti Helena, Vzpon in Tristan DA CUNHA"
+  },
+  "CountryEnum/SJM": {
+    "label": "Svalbard in Jan Mayen"
+  },
+  "CountryEnum/SKM": {
+    "label": "Sikkim."
+  },
+  "CountryEnum/SLB": {
+    "label": "Salomonovi otoki."
+  },
+  "CountryEnum/SLE": {
+    "label": "Sierra Leone"
+  },
+  "CountryEnum/SLV": {
+    "label": "El Salvador"
+  },
+  "CountryEnum/SMR": {
+    "label": "San Marino."
+  },
+  "CountryEnum/SOM": {
+    "label": "Somalija"
+  },
+  "CountryEnum/SPM": {
+    "label": "Saint Pierre in Miquelon"
+  },
+  "CountryEnum/SRB": {
+    "label": "Srbija"
+  },
+  "CountryEnum/SSD": {
+    "label": "Južni Sudan"
+  },
+  "CountryEnum/STP": {
+    "label": "São Tomé in Príncipe"
+  },
+  "CountryEnum/SUN": {
+    "label": "Sovjetska zveza"
+  },
+  "CountryEnum/SUR": {
+    "label": "Surinam."
+  },
+  "CountryEnum/SVK": {
+    "label": "Slovaška"
+  },
+  "CountryEnum/SVN": {
+    "label": "Slovenija"
+  },
+  "CountryEnum/SWE": {
+    "label": "Švedska"
+  },
+  "CountryEnum/SWZ": {
+    "label": "Eswatini."
+  },
+  "CountryEnum/SXM": {
+    "label": "Sint Maarten."
+  },
+  "CountryEnum/SYC": {
+    "label": "Sejšeli"
+  },
+  "CountryEnum/SYR": {
+    "label": "Sirija"
+  },
+  "CountryEnum/TCA": {
+    "label": "Turki in otoki Caicos"
+  },
+  "CountryEnum/TCD": {
+    "label": "Chad."
+  },
+  "CountryEnum/TGO": {
+    "label": "Iti"
+  },
+  "CountryEnum/THA": {
+    "label": "Tajska"
+  },
+  "CountryEnum/TJK": {
+    "label": "Tadžikistan"
+  },
+  "CountryEnum/TKL": {
+    "label": "Tokelau."
+  },
+  "CountryEnum/TKM": {
+    "label": "Turkmenistan"
+  },
+  "CountryEnum/TLS": {
+    "label": "Timor-Leste."
+  },
+  "CountryEnum/TMP": {
+    "label": "Vzhodni Timor."
+  },
+  "CountryEnum/TON": {
+    "label": "Tonga"
+  },
+  "CountryEnum/TTO": {
+    "label": "Trinidad in Tobago"
+  },
+  "CountryEnum/TUN": {
+    "label": "Tunizija"
+  },
+  "CountryEnum/TUR": {
+    "label": "puran"
+  },
+  "CountryEnum/TUV": {
+    "label": "TUVALU."
+  },
+  "CountryEnum/TWN": {
+    "label": "Tajvan"
+  },
+  "CountryEnum/TZA": {
+    "label": "Tanzanija."
+  },
+  "CountryEnum/UGA": {
+    "label": "Uganda."
+  },
+  "CountryEnum/UKR": {
+    "label": "Ukrajina."
+  },
+  "CountryEnum/UMI": {
+    "label": "Ministrski otoki Združenih držav Amerike"
+  },
+  "CountryEnum/URY": {
+    "label": "Urugvaj"
+  },
+  "CountryEnum/USA": {
+    "label": "Združene države"
+  },
+  "CountryEnum/UZB": {
+    "label": "Uzbekistan"
+  },
+  "CountryEnum/VAT": {
+    "label": "Vatikanska mestna država"
+  },
+  "CountryEnum/VCT": {
+    "label": "Saint Vincent in Grenadine"
+  },
+  "CountryEnum/VDR": {
+    "label": "Demokratična republika Vietnam"
+  },
+  "CountryEnum/VEN": {
+    "label": "Venezuela"
+  },
+  "CountryEnum/VGB": {
+    "label": "britanski Deviški otoki"
+  },
+  "CountryEnum/VIR": {
+    "label": "Mi Deviški otoki"
+  },
+  "CountryEnum/VNM": {
+    "label": "Vietnam."
+  },
+  "CountryEnum/VUT": {
+    "label": "Vanuatu."
+  },
+  "CountryEnum/WAK": {
+    "label": "Wake Islands."
+  },
+  "CountryEnum/WLF": {
+    "label": "Wallis in Futuna."
+  },
+  "CountryEnum/WSM": {
+    "label": "Samoa."
+  },
+  "CountryEnum/YEM": {
+    "label": "Jemen"
+  },
+  "CountryEnum/YMD": {
+    "label": "Severni Jemen"
+  },
+  "CountryEnum/YUG": {
+    "label": "Jugoslavija"
+  },
+  "CountryEnum/ZAF": {
+    "label": "Južna Afrika"
+  },
+  "CountryEnum/ZMB": {
+    "label": "Zambija"
+  },
+  "CountryEnum/ZR0": {
+    "label": "Zaire."
+  },
+  "CountryEnum/ZWE": {
+    "label": "Republika Zimbabveja"
+  },
+  "Identifier": {
+    "label": "Identifikator",
+    "description": "Razred identifikatorja omogoča, da se identifikator daje kot tudi informacije o tem, kateri organ je izdal in, če je potrebno, kdaj."
+  },
+  "Identifier/Identifier": {
+    "label": "Vsebina",
+    "description": "Vsebina - alfanumerični niz"
+  },
+  "Identifier/IdentifierType": {
+    "label": "Identifikator Tip.",
+    "description": "Vrsta identifikatorja je izdala (če organ izda več kot eno vrsto identifikatorja)."
+  },
+  "Identifier/IssueDate": {
+    "label": "Datum izdaje",
+    "description": "Datum, na katerega je bil izdan"
+  },
+  "Identifier/IssuingAuthority": {
+    "label": "Organ izdaje",
+    "description": "Ime agencije izdajateljice"
+  },
+  "Identifier/IssuingAuthorityID": {
+    "label": "Organ izdaje ID.",
+    "description": "ID izdajatelja"
+  },
+  "Jurisdiction": {
+    "label": "Pristojnost"
+  },
+  "Jurisdiction/Identifier": {
+    "label": "Identifikator",
+    "description": "Vrednost za identifikacijsko lastnost je URI za to jurisdikcijo."
+  },
+  "Jurisdiction/Name": {
+    "label": "Ime",
+    "description": "Ime je preprosto niz, ki identificira jurisdikcijo, običajno državo, z ali brez jezikovne oznake."
+  },
+  "Person": {
+    "label": "Oseba",
+    "description": "Posamezna fizična oseba, ki je lahko mrtva ali živa, vendar ne namišljena."
+  },
+  "Person/DateOfBirth": {
+    "label": "Datum rojstva",
+    "description": "Dan, ko se je rodila oseba."
+  },
+  "Person/DateOfBirth/Year": {
+    "label": "Leto",
+    "description": "Gregorijansko koledarsko leto. Vrednostni prostor leta je niz gregorijanskih koledarskih let, kot je opredeljeno v § 5.2.1 ISO 8601. Natančneje, je niz enoletnih, ne-periodičnih primerov, npr. Lexicy 1999 predstavlja celo leto 1999, neodvisno od števila mesecev in dni letos."
+  },
+  "Person/DateOfBirth/Month": {
+    "label": "Mesec",
+    "description": "Gregoriški mesec, ki se vsako leto ponovi. Vrednost v mesecu je prostor nabora koledarskih mesecev, kot je opredeljeno v § 3 ISO 8601. Natančneje, je niz enomesečnih dolgoletnih, letnih občasnih primerov."
+  },
+  "Person/DateOfBirth/Day": {
+    "label": "Dan",
+    "description": "Gregoriški dan, ki se ponavlja, posebej na dan meseca, kot je 5. meseca. Vrednostni prostor dneva je prostor nabora koledarskih datumov, kot je opredeljeno v § 3 ISO 8601. Natančneje, je niz enodnevnih, mesečnih periodičnih primerov."
+  },
+  "Person/Gender": {
+    "label": "Spol",
+    "description": "Kromosomno stanje in reproduktivni organi in struktur osebe, ki jim omogoča, da se razlikujejo kot ženske ali moške ali nedoločene."
+  },
+  "Person/PlaceOfBirth": {
+    "label": "Kraj rojstva",
+    "description": "Lokacijo, kjer se je rodila oseba."
+  },
+  "Person/PersonName": {
+    "label": "Ime osebe",
+    "description": "Ime in ime osebe. Vsaj eno od obeh mora obstajati."
+  },
+  "Person/PersonName/FamilyName": {
+    "label": "Priimek",
+    "description": "\"Družinsko ime običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. Več družinskih imen, na primer, običajno najdemo v hispanskih državah, se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer Miguel de Cervantes Saavedra imeno ime zabeležila kot \"\"de Cervantes Saavedra\"\".\""
+  },
+  "Person/PersonName/GivenName": {
+    "label": "Ime",
+    "description": "\"Ime ali več imenih imen, so imenovalci, ki identificirajo posameznika znotraj družine. Ti so dana osebam njegovim staršem ob rojstvu ali pa je lahko zakonito priznan kot \"\"dana imena\"\" s formalnim postopkom. Vsa določena imena so naročena na enem polju, tako da je na primer dano ime za Johann Sebastian Bacha \"\"Johann Sebastian\"\".\""
+  },
+  "Person/Identifier": {
+    "label": "Identifikator",
+    "description": "Oporednotenje identifikatorja se uporablja za povezovanje osebe na kateri koli formalno izdani identifikator za to osebo."
+  },
+  "Person/Citizenship": {
+    "label": "Državljanstvo",
+    "description": "Odnos državljanstva povezuje osebo v pristojnost, ki je podelila pravice državljanstva na posameznika, kot je pravica do glasovanja, da bi prejela določeno zaščito pred Skupnostjo ali izdajo potnega lista."
+  },
+  "PersonGenderEnum": {
+    "label": "Oseba spola",
+    "description": "Seznam človeških spolov."
+  },
+  "PersonGenderEnum/Female": {
+    "label": "Ženska",
+    "description": "Koncept Ženska se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede."
+  },
+  "PersonGenderEnum/Male": {
+    "label": "Moški",
+    "description": "Koncept moški se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede."
+  },
+  "PersonGenderEnum/NAP": {
+    "label": "Se ne uporablja",
+    "description": "Koncept se ne uporablja, se uporablja v okviru izmenjave informacij na področju socialnih ved, kadar nobeden od spolov ni mogoče zastopati."
+  },
+  "PersonGenderEnum/NKN": {
+    "label": "Ne poznano",
+    "description": "Koncept, ki ni znan, se uporablja v okviru izmenjave informacij na področju socialne vede, ko je človeški seks unkown."
+  },
+  "PersonGenderEnum/NST": {
+    "label": "Ni navedeno",
+    "description": "Koncept, ki ni navedena, se uporablja v okviru izmenjave informacij na področju socialnih ved, ko človeški seks ni naveden."
+  },
+  "PublicOrganisation": {
+    "label": "Pubranganizacija"
+  },
+  "PublicOrganisation/Identifier": {
+    "label": "Identifikator",
+    "description": "Številne organizacije se sklicujejo na kratico ali drug identifikator. Na primer, med institucijami EU, ECB je identifikator za Evropsko centralno banko, OLAF za Evropski ANTIN / AFRAUd Office, in tako naprej. Evropske komisije formalno priznava, ki zagotavlja seznam takih kratic. V drugih kontekstih je treba uporabiti analogne sezname."
+  },
+  "PublicOrganisation/PrefLabel": {
+    "label": "Prednostna nalepka",
+    "description": "Kot je opredeljeno v ontologiji ORG, se za zagotovitev primarnega, pravno priznanega imena organizacije uporablja prednostna nalepka. Organizacija ima lahko samo eno takšno ime v katerem koli jeziku. Primarna imena se lahko zagotovijo v več jezikih z večkratnimi primerki prednostne lastnosti nalepk."
+  },
+  "UDT/Text": {
+    "label": "Besedilo",
+    "description": "Niz znakov (tj. Končni niz znakov), na splošno v obliki besed jezika."
+  },
+  "UDT/Text/@LanguageID": {
+    "label": "Jezik ID.",
+    "description": "Identifikator jezika, ki se uporablja v komponenti vsebine."
+  },
+  "UDT/Text/@LanguageLocaleID": {
+    "label": "Jezik Locale ID.",
+    "description": "Identifikacijo jezika jezika."
+  },
+  "UDT/Date": {
+    "label": "Datum.",
+    "description": "En koledarski dan po Gregorian koledarju."
+  },
+  "UDT/Name": {
+    "label": "Ime",
+    "description": "Niz znakov, ki predstavlja razlikovalno oznako osebe, kraj, stvar ali koncept."
+  },
+  "UDT/Identifier": {
+    "label": "Identifikator",
+    "description": "Niz znakov za identifikacijo in razlikovanje v edinstveno, en primer predmeta v identifikacijski shemi iz vseh drugih predmetov v isti shemi skupaj z ustreznimi dopolnilnimi informacijami."
+  },
+  "UDT/Identifier/@schemeID": {
+    "label": "ID sheme",
+    "description": "Identifikacijo sheme identifikacije."
+  },
+  "UDT/Identifier/@schemeName": {
+    "label": "Ime sheme.",
+    "description": "Ime identifikacijske sheme."
+  },
+  "UDT/Identifier/@schemeAgencyID": {
+    "label": "Agencija sheme ID.",
+    "description": "Identifikacija Agencije, ki ohranja shemo identifikacije."
+  },
+  "UDT/Identifier/@schemeAgencyName": {
+    "label": "Ime agencije sheme..",
+    "description": "Ime agencije, ki ohranja shemo identifikacije."
+  },
+  "UDT/Identifier/@schemeVersionID": {
+    "label": "ID izvedbe sheme ID.",
+    "description": "Različico sheme identifikacije."
+  },
+  "UDT/Identifier/@schemeDataURI": {
+    "label": "Podatki sheme URI.",
+    "description": "Identifikator enotnega vira, ki identificira, kje se nahajajo podatki o shemi identifikacije."
+  },
+  "UDT/Identifier/@schemeURI": {
+    "label": "Shema Uri.",
+    "description": "Enotni identifikator virov, ki identificira, kje se nahaja identifikacijska shema."
+  },
+  "LangEnum": {
+    "label": "Jezik"
+  },
+  "LangEnum/en": {
+    "label": "angleščina"
+  },
+  "LangEnum/es": {
+    "label": "španski"
+  },
+  "LangEnum/pt": {
+    "label": "Portugalščina"
+  },
+  "LangEnum/fr": {
+    "label": "Francozi"
+  },
+  "LangEnum/sl": {
+    "label": "Slovenščina"
+  },
+  "NUTS0Enum": {
+    "label": "Države članice"
+  },
+  "NUTS0Enum/AT": {
+    "label": "Avstrija"
+  },
+  "NUTS0Enum/BE": {
+    "label": "Belgija"
+  },
+  "NUTS0Enum/BG": {
+    "label": "Bolgarija"
+  },
+  "NUTS0Enum/CY": {
+    "label": "Ciper."
+  },
+  "NUTS0Enum/CZ": {
+    "label": "Čechia."
+  },
+  "NUTS0Enum/DE": {
+    "label": "Nemčija"
+  },
+  "NUTS0Enum/DK": {
+    "label": "Danska"
+  },
+  "NUTS0Enum/EE": {
+    "label": "Estonija"
+  },
+  "NUTS0Enum/EL": {
+    "label": "Grčija."
+  },
+  "NUTS0Enum/ES": {
+    "label": "Španija"
+  },
+  "NUTS0Enum/FI": {
+    "label": "Finska"
+  },
+  "NUTS0Enum/FR": {
+    "label": "Francija"
+  },
+  "NUTS0Enum/HR": {
+    "label": "Hrvaška"
+  },
+  "NUTS0Enum/HU": {
+    "label": "Madžarska"
+  },
+  "NUTS0Enum/IE": {
+    "label": "Irska"
+  },
+  "NUTS0Enum/IT": {
+    "label": "Italija"
+  },
+  "NUTS0Enum/LT": {
+    "label": "Litva"
+  },
+  "NUTS0Enum/LU": {
+    "label": "Luksemburg."
+  },
+  "NUTS0Enum/LV": {
+    "label": "Latvija"
+  },
+  "NUTS0Enum/MT": {
+    "label": "Malta"
+  },
+  "NUTS0Enum/NL": {
+    "label": "Nizozemska"
+  },
+  "NUTS0Enum/PL": {
+    "label": "Poljska"
+  },
+  "NUTS0Enum/PT": {
+    "label": "Portugalska"
+  },
+  "NUTS0Enum/RO": {
+    "label": "Romunija"
+  },
+  "NUTS0Enum/SE": {
+    "label": "Švedska"
+  },
+  "NUTS0Enum/SI": {
+    "label": "Slovenija"
+  },
+  "NUTS0Enum/SK": {
+    "label": "Slovaška"
+  },
+  "PersonMaritalStatusEnum": {
+    "label": "Osebni zakonski stan.",
+    "description": "Seznam osebnega statusa."
+  },
+  "PersonMaritalStatusEnum/Cohabitation": {
+    "label": "Cohabitation.",
+    "description": "Oseba Zakonski stan: Cohabation"
+  },
+  "PersonMaritalStatusEnum/DivorcedPerson": {
+    "label": "Razvezana oseba",
+    "description": "Oseba zakonski stan: ločena oseba"
+  },
+  "PersonMaritalStatusEnum/MarriedPerson": {
+    "label": "Poročena oseba",
+    "description": "Oseba zakonski stan: poročena oseba"
+  },
+  "PersonMaritalStatusEnum/Polygamy": {
+    "label": "Polygamy.",
+    "description": "Oseba Zakonski stan: Polygamy"
+  },
+  "PersonMaritalStatusEnum/SeparatedPerson": {
+    "label": "Ločena oseba",
+    "description": "Oseba Zakonski stan: ločena oseba"
+  },
+  "PersonMaritalStatusEnum/SingleParent": {
+    "label": "Samohranilec",
+    "description": "Oseba zakonski stan: samski starš"
+  },
+  "PersonMaritalStatusEnum/UnmarriedPerson": {
+    "label": "Neporočena oseba",
+    "description": "Oseba zakonski stan: neporočena oseba"
+  },
+  "PersonMaritalStatusEnum/WidowedPerson": {
+    "label": "Vdova oseba",
+    "description": "Oseba Zakonski stan: Vdova oseba"
+  },
+  "MarriageEvidence": {
+    "label": "Poročni dokaz",
+    "description": "Uradni dokument ali podatki, ki dokazujejo zakonsko zvezo dveh oseb."
+  },
+  "MarriageEvidence/Identifier": {
+    "label": "Identifikator",
+    "description": "Nedvoumno sklicevanje na zakonske dokaze."
+  },
+  "MarriageEvidence/IssueDate": {
+    "label": "Datum izdaje",
+    "description": "Najnovejši datum, na katerem je bil izdan primer Marriageedidence."
+  },
+  "MarriageEvidence/IssuingAuthority": {
+    "label": "Organ izdaje",
+    "description": "Javna organizacija z uradnim organom, ki je zadolžena za izdajo zakonskih zakonov."
+  },
+  "MarriageEvidence/IssuingPlace": {
+    "label": "Izdajanje kraja",
+    "description": "Lokacijo, kjer je bil izdan zakonski dokaz."
+  },
+  "MarriageEvidence/CertifiesMarriage": {
+    "label": "Potrjuje poroko",
+    "description": "Uradni način, da je zakonska zveza resnična."
+  },
+  "MarriageEvidence/CertifiesMarriage/DateOfMarriage": {
+    "label": "Datum poroke",
+    "description": "Datum, ko je potekala zakonska zveza."
+  },
+  "MarriageEvidence/CertifiesMarriage/PlaceOfMarriage": {
+    "label": "Kraj poroke"
+  },
+  "MarriageEvidence/CertifiesMarriage/Spouse": {
+    "label": "Zakonec",
+    "description": "Oseba, ki je bila poročena."
+  },
+  "MarriageEvidence/CertifiesMarriage/Spouse/Gender": {
+    "description": "Spol posameznika je treba zabeležiti z uporabo nadzorovanega besedišča, ki je primeren za poseben kontekst. V nekaterih primerih bo kromosomsko ali fizično stanje posameznika pomembnejše od spola, ki ga izražajo, v drugih pa bo vzvratno res. Vedno je pomembno, da je nadzorovani besednjak, ki se uporablja za opis spola posameznika, izrecno navedeno."
+  },
+  "MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage": {
+    "label": "Družinsko ime po poroki",
+    "description": "Ta lastnost vsebuje družinsko ime po zakonu osebe."
+  },
+  "MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage": {
+    "label": "Družinsko ime pred poroko",
+    "description": "Ta lastnost vsebuje družinsko ime pred poroko osebe."
+  },
+  "MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage": {
+    "label": "Zakonski stan pred poroko",
+    "description": "Razmere glede tega, ali je bila oseba samska, poročena, ločena, razvezana ali vdova."
+  },
+  "MarriageEvidence/CertifiesEndOfMarriage": {
+    "label": "Konec zakonske zveze",
+    "description": "V primeru razveze, ta lastnost vključuje informacije na koncu poroke"
+  },
+  "MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage": {
+    "label": "Datum konca zakonske zveze",
+    "description": "Datum konca zakonske zveze"
+  },
+  "MarriageEvidence/CertifiesEndOfMarriage/Cause": {
+    "label": "Vzrok",
+    "description": "Vzrok za konec zakonske zveze."
+  }
+}

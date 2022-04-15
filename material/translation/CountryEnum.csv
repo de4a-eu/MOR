@@ -1,0 +1,285 @@
+﻿Term URI|Origin|Type|Cardinality|Comments|Label_en|Description_en|Example_en|Verified_en|Label_es|Description_es|Example_es|Verified_es|Label_sl|Description_sl|Example_sl|Verified_sl|Label_pt|Description_pt|Example_pt|Verified_pt|Label_fr|Description_fr|Example_fr|Verified_fr
+CountryEnum|http://publications.europa.eu/resource/authority/country/|xs:enumeration|00|||ISO 3166-1 alpha-3 codes are three-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization, to represent countries, dependent territories, and special areas of geographical interest.||1||Códigos ISO 3166-1 alfa-3 codifican cada país con tres letras, definidos por la norma ISO 3166 publicada por la Organización Internacional de Normalización, para representar a países, territorios dependientes y áreas especiales de interés geográfico.||1||ISO 3166-1 Kode alfa-3 so tričrkovne kode države opredeljene v standardu ISO 3166 ki jo je objavila Mednarodna organizacija za standardizacijo za zastopanje držav odvisnih ozemelj in posebnih področij geografskega interesa.||0||Os códigos alfa-3 ISO 3166-1 são códigos de três letras definidos na ISO 3166-1, parte do padrão ISO 3166 publicado pela International Organization for Standardization, para representar países, territórios dependentes e áreas especiais de interesse geográfico.||1||Les codes de pays ISO 3166-1 sont des codes de pays de trois lettres définis dans l'ISO 3166-1, une partie de la norme ISO 3166 publiée par l'Organisation internationale de normalisation, de représenter des pays, des territoires dépendants et des zones spéciales d'intérêt géographique.||0
+CountryEnum/1A0|http://publications.europa.eu/resource/authority/country/1A0|xs:token|||Kosovo|||1|Kosovo|||1|Kosovo|||0|Kosovo|||1|Kosovo|||0
+CountryEnum/ABW|http://publications.europa.eu/resource/authority/country/ABW|xs:token|||Aruba|||1|Aruba|||1|Aruba|||0|Aruba|||1|Arubie|||0
+CountryEnum/AFG|http://publications.europa.eu/resource/authority/country/AFG|xs:token|||Afghanistan|||1|Afganistán|||1|Afganistan|||0|Afeganistão|||1|Afghanistan|||0
+CountryEnum/AFI|http://publications.europa.eu/resource/authority/country/AFI|xs:token|||French Afar and Issas|||1|Territorio Francés de los Afars y de los Issas|||1|Francoski Afar in Issas|||0|Território Francês dos Afares e Issas|||1|Afar français et Issas|||0
+CountryEnum/AGO|http://publications.europa.eu/resource/authority/country/AGO|xs:token|||Angola|||1|Angola|||1|Angola|||0|Angola|||1|Angola|||0
+CountryEnum/AIA|http://publications.europa.eu/resource/authority/country/AIA|xs:token|||Anguilla|||1|Anguila|||1|Angvila|||0|Anguila|||1|Anguilla|||0
+CountryEnum/ALA|http://publications.europa.eu/resource/authority/country/ALA|xs:token|||Åland Islands|||1|Islas Aland|||1|Ålandski otoki|||0|Ilhas Aland|||1|Iles Aland|||0
+CountryEnum/ALB|http://publications.europa.eu/resource/authority/country/ALB|xs:token|||Albania|||1|Albania|||1|Albanija|||0|Albânia|||1|Albanie|||0
+CountryEnum/AND|http://publications.europa.eu/resource/authority/country/AND|xs:token|||Andorra|||1|Andorra|||1|Andora|||0|Andorra|||1|Andorre|||0
+CountryEnum/ANT|http://publications.europa.eu/resource/authority/country/ANT|xs:token|||Netherlands Antilles|||1|Antillas Holandesas|||1|Nizozemski Antili|||0|Antilhas Holandesas|||1|Antilles néerlandaises|||0
+CountryEnum/ARE|http://publications.europa.eu/resource/authority/country/ARE|xs:token|||United Arab Emirates|||1|Emiratos Árabes Unidos|||1|Združeni Arabski Emirati|||0|Emirados Árabes Unidos|||1|Emirats Arabes Unis|||0
+CountryEnum/ARG|http://publications.europa.eu/resource/authority/country/ARG|xs:token|||Argentina|||1|Argentina|||1|Argentina|||0|Argentina|||1|Argentine|||0
+CountryEnum/ARM|http://publications.europa.eu/resource/authority/country/ARM|xs:token|||Armenia|||1|Armenia|||1|Armenija|||0|Arménia|||1|Arménie|||0
+CountryEnum/ASM|http://publications.europa.eu/resource/authority/country/ASM|xs:token|||American Samoa|||1|Samoa Americana|||1|Ameriška Samoa|||0|Samoa Americana|||1|Samoa américain|||0
+CountryEnum/ATA|http://publications.europa.eu/resource/authority/country/ATA|xs:token|||Antarctica|||1|Antártida|||1|Antarktika|||0|Antártida|||1|Antarctique|||0
+CountryEnum/ATB|http://publications.europa.eu/resource/authority/country/ATB|xs:token|||British Antarctic Territory|||1|Territorio antártico británico|||1|Britansko antarktično ozemlje|||0|Território Antártido Britânico|||1|Territoire antarctique britannique|||0
+CountryEnum/ATF|http://publications.europa.eu/resource/authority/country/ATF|xs:token|||French Southern Lands|||1|Tierras del sur francesa|||1|Francoske južne dežele|||0|Terras Austrais e Antárticas Francesas|||1|Terres du sud français|||0
+CountryEnum/ATG|http://publications.europa.eu/resource/authority/country/ATG|xs:token|||Antigua and Barbuda|||1|Antigua y Barbuda|||1|Antigva in Barbuda|||0|Antígua e Barbuda|||1|Antigua-et-Barbuda|||0
+CountryEnum/ATN|http://publications.europa.eu/resource/authority/country/ATN|xs:token|||Dronning Maud Land|||1|Tierra de la Reina Maud|||1|Dežela Dronning Maud|||0|Terra da Rainha Maud|||1|DRONNING MAUD TERRAIN|||0
+CountryEnum/AUS|http://publications.europa.eu/resource/authority/country/AUS|xs:token|||Australia|||1|Australia|||1|Avstralija|||0|Austrália|||1|Australie|||0
+CountryEnum/AUT|http://publications.europa.eu/resource/authority/country/AUT|xs:token|||Austria|||1|Austria|||1|Avstrija|||0|Áustria|||1|L'Autriche|||0
+CountryEnum/AZE|http://publications.europa.eu/resource/authority/country/AZE|xs:token|||Azerbaijan|||1|Azerbaiyán|||1|Azerbajdžan|||0|Azerbaijão|||1|Azerbaïdjan|||0
+CountryEnum/BDI|http://publications.europa.eu/resource/authority/country/BDI|xs:token|||Burundi|||1|Burundi|||1|Burundi|||0|Burundi|||1|Burundi|||0
+CountryEnum/BEL|http://publications.europa.eu/resource/authority/country/BEL|xs:token|||Belgium|||1|Bélgica|||1|Belgija|||0|Bélgica|||1|la Belgique|||0
+CountryEnum/BEN|http://publications.europa.eu/resource/authority/country/BEN|xs:token|||Benin|||1|Benin|||1|Benin|||0|Benin|||1|Bénin|||0
+CountryEnum/BES|http://publications.europa.eu/resource/authority/country/BES|xs:token|||Bonaire, Sint Eustatius and Saba|||1|Bonaire, Sint Eustatius y Saba.|||1|Bonaire, Sint Eustatius in Saba|||0|Bonaire, Sint Eustatius e Saba|||1|Bonaire, Sint Eustadius et Saba|||0
+CountryEnum/BFA|http://publications.europa.eu/resource/authority/country/BFA|xs:token|||Burkina Faso|||1|Burkina Faso|||1|Burkina Faso|||0|Burkina Faso|||1|Burkina Faso|||0
+CountryEnum/BGD|http://publications.europa.eu/resource/authority/country/BGD|xs:token|||Bangladesh|||1|Bangladesh|||1|Bangladeš|||0|Bangladesh|||1|Bangladesh|||0
+CountryEnum/BGR|http://publications.europa.eu/resource/authority/country/BGR|xs:token|||Bulgaria|||1|Bulgaria|||1|Bolgarija|||0|Bulgária|||1|Bulgarie|||0
+CountryEnum/BHR|http://publications.europa.eu/resource/authority/country/BHR|xs:token|||Bahrain|||1|Bahrein|||1|Bahrajn|||0|Bahrein|||1|Bahreïn|||0
+CountryEnum/BHS|http://publications.europa.eu/resource/authority/country/BHS|xs:token|||Bahamas|||1|Bahamas|||1|Bahami|||0|Bahamas.|||1|Bahamas|||0
+CountryEnum/BIH|http://publications.europa.eu/resource/authority/country/BIH|xs:token|||Bosnia and Herzegovina|||1|Bosnia y Herzegovina|||1|Bosna in Hercegovina|||0|Bósnia e Herzegovina|||1|Bosnie Herzégovine|||0
+CountryEnum/BLM|http://publications.europa.eu/resource/authority/country/BLM|xs:token|||Saint Barthélemy|||1|San Barthélemy|||1|Saint Barthélemy|||0|São Barthélemy.|||1|Saint Barthélemy|||0
+CountryEnum/BLR|http://publications.europa.eu/resource/authority/country/BLR|xs:token|||Belarus|||1|Bielorrusia|||1|Belorusija|||0|Bielorrússia|||1|Biélorussie|||0
+CountryEnum/BLZ|http://publications.europa.eu/resource/authority/country/BLZ|xs:token|||Belize|||1|Belice|||1|Belize|||0|Belize|||1|Belize|||0
+CountryEnum/BMU|http://publications.europa.eu/resource/authority/country/BMU|xs:token|||Bermuda|||1|Islas Bermudas|||1|Bermuda|||0|Bermudas|||1|Bermudes|||0
+CountryEnum/BOL|http://publications.europa.eu/resource/authority/country/BOL|xs:token|||Bolivia|||1|Bolivia|||1|Bolivija|||0|Bolívia|||1|Bolivie|||0
+CountryEnum/BRA|http://publications.europa.eu/resource/authority/country/BRA|xs:token|||Brazil|||1|Brasil|||1|Brazilija|||0|Brasil|||1|Brésil|||0
+CountryEnum/BRB|http://publications.europa.eu/resource/authority/country/BRB|xs:token|||Barbados|||1|Barbados|||1|Barbados|||0|Barbados|||1|Barbados|||0
+CountryEnum/BRN|http://publications.europa.eu/resource/authority/country/BRN|xs:token|||Brunei|||1|Brunei|||1|Brunej|||0|Brunei|||1|Brunei|||0
+CountryEnum/BTN|http://publications.europa.eu/resource/authority/country/BTN|xs:token|||Bhutan|||1|Bután|||1|Butan|||0|Butão|||1|Bhoutan|||0
+CountryEnum/BUR|http://publications.europa.eu/resource/authority/country/BUR|xs:token|||Burma|||1|Birmania|||1|Burma|||0|Burma|||1|Birmanie|||0
+CountryEnum/BVT|http://publications.europa.eu/resource/authority/country/BVT|xs:token|||Bouvet Island|||1|Isla de bouvet|||1|Otok Bouvet|||0|Ilha Bouvet|||1|Île Bouvet|||0
+CountryEnum/BWA|http://publications.europa.eu/resource/authority/country/BWA|xs:token|||Botswana|||1|Botsuana|||1|Bocvana|||0|Botsuana|||1|Botswana|||0
+CountryEnum/BYS|http://publications.europa.eu/resource/authority/country/BYS|xs:token|||Belarus|||1|Bielorrusia|||1|Belorusija|||0|Bielorrússia|||1|Biélorussie|||0
+CountryEnum/CAF|http://publications.europa.eu/resource/authority/country/CAF|xs:token|||Central African Republic|||1|República Centroafricana|||1|centralna afriška republika|||0|República Centro-Africana|||1|République centrafricaine|||0
+CountryEnum/CAN|http://publications.europa.eu/resource/authority/country/CAN|xs:token|||Canada|||1|Canadá|||1|Kanada|||0|Canadá|||1|Canada|||0
+CountryEnum/CCK|http://publications.europa.eu/resource/authority/country/CCK|xs:token|||Cocos (Keeling) Islands|||1|Islas Cocos (Keeling)|||1|Kokosovi (Keelingovi) otoki|||0|Ilhas Cocos (Keeling)|||1|Îles Cocos (Keeling)|||0
+CountryEnum/CHE|http://publications.europa.eu/resource/authority/country/CHE|xs:token|||Switzerland|||1|Suiza|||1|Švica|||0|Suíça|||1|la Suisse|||0
+CountryEnum/CHL|http://publications.europa.eu/resource/authority/country/CHL|xs:token|||Chile|||1|Chile|||1|Čile|||0|Chile|||1|Chili|||0
+CountryEnum/CHN|http://publications.europa.eu/resource/authority/country/CHN|xs:token|||China|||1|China|||1|Kitajska|||0|China|||1|Chine|||0
+CountryEnum/CIV|http://publications.europa.eu/resource/authority/country/CIV|xs:token|||Côte d’Ivoire|||1|Côte d'Ivoire|||1|Slonokoščena obala|||0|Costa do Marfim|||1|Côte d'Ivoire|||0
+CountryEnum/CMR|http://publications.europa.eu/resource/authority/country/CMR|xs:token|||Cameroon|||1|Camerún|||1|Kamerun|||0|Camarões|||1|Cameroun|||0
+CountryEnum/COD|http://publications.europa.eu/resource/authority/country/COD|xs:token|||Democratic Republic of the Congo|||1|República Democrática del Congo|||1|Demokratična republika Kongo|||0|República Democrática do Congo|||1|République Démocratique du Congo|||0
+CountryEnum/COG|http://publications.europa.eu/resource/authority/country/COG|xs:token|||Congo|||1|Congo|||1|Kongo|||0|Congo|||1|Congo|||0
+CountryEnum/COK|http://publications.europa.eu/resource/authority/country/COK|xs:token|||Cook Islands|||1|Islas Cook|||1|Cookovi otoki|||0|Ilhas Cook|||1|les Îles Cook|||0
+CountryEnum/COL|http://publications.europa.eu/resource/authority/country/COL|xs:token|||Colombia|||1|Colombia|||1|Kolumbija|||0|Colômbia|||1|Colombie|||0
+CountryEnum/COM|http://publications.europa.eu/resource/authority/country/COM|xs:token|||Comoros|||1|Comoras|||1|Komori|||0|Comores|||1|Comores|||0
+CountryEnum/CPT|http://publications.europa.eu/resource/authority/country/CPT|xs:token|||Clipperton|||1|Clipperton|||1|Clipperton|||0|Clipperton|||1|Clipart|||0
+CountryEnum/CPV|http://publications.europa.eu/resource/authority/country/CPV|xs:token|||Cabo Verde|||1|Cabo Verde|||1|Cabo Verde|||0|Cabo Verde|||1|Cabo Verde|||0
+CountryEnum/CRI|http://publications.europa.eu/resource/authority/country/CRI|xs:token|||Costa Rica|||1|Costa Rica|||1|Kostarika|||0|Costa Rica|||1|Costa Rica|||0
+CountryEnum/CSK|http://publications.europa.eu/resource/authority/country/CSK|xs:token|||Czechoslovakia|||1|Checoslovaquia|||1|Češkoslovaška|||0|Checoslováquia|||1|Tchécoslovaquie|||0
+CountryEnum/CTE|http://publications.europa.eu/resource/authority/country/CTE|xs:token|||Canton and Enderbury Islands|||1|Islas Cantón y Enderbury|||1|Kanton in otoki Enderbury|||0|Ilhas Cantão e Enderbury|||1|Îles Canton et Enderbury|||0
+CountryEnum/CUB|http://publications.europa.eu/resource/authority/country/CUB|xs:token|||Cuba|||1|Cuba|||1|Kuba|||0|Cuba|||1|Cuba|||0
+CountryEnum/CUW|http://publications.europa.eu/resource/authority/country/CUW|xs:token|||Curaçao|||1|Curazao|||1|Curaçao|||0|Curaçao|||1|Curacao|||0
+CountryEnum/CXR|http://publications.europa.eu/resource/authority/country/CXR|xs:token|||Christmas Island|||1|Isla de Navidad|||1|Božični otok|||0|Ilha do Natal|||1|L'île de noël|||0
+CountryEnum/CYM|http://publications.europa.eu/resource/authority/country/CYM|xs:token|||Cayman Islands|||1|Islas Caimán|||1|Kajmanski otoki|||0|Ilhas Caimão|||1|Îles Caïmans|||0
+CountryEnum/CYP|http://publications.europa.eu/resource/authority/country/CYP|xs:token|||Cyprus|||1|Chipre|||1|Ciper|||0|Chipre|||1|Chypre|||0
+CountryEnum/CZE|http://publications.europa.eu/resource/authority/country/CZE|xs:token|||Czechia|||1|Chequia|||1|Češka|||0|República Checa|||1|Tchechie|||0
+CountryEnum/DDR|http://publications.europa.eu/resource/authority/country/DDR|xs:token|||East Germany|||1|Alemania del Este|||1|Vzhodna Nemčija|||0|Alemanha Oriental|||1|Allemagne de l'est|||0
+CountryEnum/DEU|http://publications.europa.eu/resource/authority/country/DEU|xs:token|||Germany|||1|Alemania|||1|Nemčija|||0|Alemanha|||1|Allemagne|||0
+CountryEnum/DHY|http://publications.europa.eu/resource/authority/country/DHY|xs:token|||Dahomey|||1|Dahomey|||1|Dahomey|||0|Reino do Daomé|||1|Dahomey|||0
+CountryEnum/DJI|http://publications.europa.eu/resource/authority/country/DJI|xs:token|||Djibouti|||1|Djibouti|||1|Džibuti|||0|Djibuti|||1|Djibouti|||0
+CountryEnum/DMA|http://publications.europa.eu/resource/authority/country/DMA|xs:token|||Dominica|||1|Dominica|||1|Dominika|||0|Dominica|||1|Dominique|||0
+CountryEnum/DNK|http://publications.europa.eu/resource/authority/country/DNK|xs:token|||Denmark|||1|Dinamarca|||1|Danska|||0|Dinamarca|||1|Danemark|||0
+CountryEnum/DOM|http://publications.europa.eu/resource/authority/country/DOM|xs:token|||Dominican Republic|||1|República Dominicana|||1|Dominikanska republika|||0|República Dominicana|||1|République dominicaine|||0
+CountryEnum/DZA|http://publications.europa.eu/resource/authority/country/DZA|xs:token|||Algeria|||1|Argelia|||1|Alžirija|||0|Argélia|||1|Algérie|||0
+CountryEnum/ECU|http://publications.europa.eu/resource/authority/country/ECU|xs:token|||Ecuador|||1|Ecuador|||1|Ekvador|||0|Equador|||1|Équateur|||0
+CountryEnum/EGY|http://publications.europa.eu/resource/authority/country/EGY|xs:token|||Egypt|||1|Egipto|||1|Egipt|||0|Egito|||1|Egypte|||0
+CountryEnum/ERI|http://publications.europa.eu/resource/authority/country/ERI|xs:token|||Eritrea|||1|Eritrea|||1|Eritreja|||0|Eritreia|||1|Érythrée|||0
+CountryEnum/ESH|http://publications.europa.eu/resource/authority/country/ESH|xs:token|||Western Sahara|||1|Sahara Occidental|||1|Zahodna Sahara|||0|Saara Ocidental|||1|Sahara occidental|||0
+CountryEnum/ESP|http://publications.europa.eu/resource/authority/country/ESP|xs:token|||Spain|||1|España|||1|Španija|||0|Espanha|||1|Espagne|||0
+CountryEnum/EST|http://publications.europa.eu/resource/authority/country/EST|xs:token|||Estonia|||1|Estonia|||1|Estonija|||0|Estónia|||1|Estonie|||0
+CountryEnum/ETH|http://publications.europa.eu/resource/authority/country/ETH|xs:token|||Ethiopia|||1|Etiopía|||1|Etiopija|||0|Etiópia|||1|Ethiopie|||0
+CountryEnum/EUR|http://publications.europa.eu/resource/authority/country/EUR|xs:token|||European Union|||1|Unión Europea|||1|Evropska unija|||0|União Europeia|||1|Union européenne|||0
+CountryEnum/FIN|http://publications.europa.eu/resource/authority/country/FIN|xs:token|||Finland|||1|Finlandia|||1|Finska|||0|Finlândia|||1|Finlande|||0
+CountryEnum/FJI|http://publications.europa.eu/resource/authority/country/FJI|xs:token|||Fiji|||1|Fiji|||1|Fidži|||0|Fiji|||1|Fidji|||0
+CountryEnum/FLK|http://publications.europa.eu/resource/authority/country/FLK|xs:token|||Falkland Islands|||1|Islas Malvinas|||1|Falklandski otoki|||0|Malvinas|||1|les îles Falkland|||0
+CountryEnum/FQ0|http://publications.europa.eu/resource/authority/country/FQ0|xs:token|||French Southern and Antarctic Lands|||1|Tierras Australes y Antárticas Francesas|||1|Francoske južne in antarktične dežele|||0|Terras Austrais e Antárticas Francesas|||1|Terres françaises du sud et de l'Antarctique|||0
+CountryEnum/FRA|http://publications.europa.eu/resource/authority/country/FRA|xs:token|||France|||1|Francia|||1|Francija|||0|França|||1|La France|||0
+CountryEnum/FRO|http://publications.europa.eu/resource/authority/country/FRO|xs:token|||Faroes|||1|Feroes|||1|Ferski otoki|||0|Ilhas Faroe|||1|Farouche|||0
+CountryEnum/FSM|http://publications.europa.eu/resource/authority/country/FSM|xs:token|||Micronesia|||1|Micronesia|||1|Mikronezija|||0|Micronésia|||1|Micronésie|||0
+CountryEnum/FXX|http://publications.europa.eu/resource/authority/country/FXX|xs:token|||Metropolitan France|||1|Metropolitano francia|||1|Metropolitanska Francija|||0|França Metropolitana|||1|France métropolitaine|||0
+CountryEnum/GAB|http://publications.europa.eu/resource/authority/country/GAB|xs:token|||Gabon|||1|Gabón|||1|Gabon|||0|Gabão|||1|Gabon|||0
+CountryEnum/GBR|http://publications.europa.eu/resource/authority/country/GBR|xs:token|||United Kingdom|||1|Reino Unido|||1|Združeno kraljestvo|||0|Reino Unido|||1|Royaume-Uni|||0
+CountryEnum/GEL|http://publications.europa.eu/resource/authority/country/GEL|xs:token|||Gilbert and Ellice Islands|||1|Gilbert y Islas Elice|||1|Otoki Gilbert in Ellice|||0|Ilhas Gilbert e Ellice|||1|Îles Gilbert et Ellice|||0
+CountryEnum/GEO|http://publications.europa.eu/resource/authority/country/GEO|xs:token|||Georgia|||1|Georgia|||1|Gruzija|||0|Geórgia|||1|Géorgie|||0
+CountryEnum/GGY|http://publications.europa.eu/resource/authority/country/GGY|xs:token|||Guernsey|||1|Guerna|||1|Guernsey|||0|Guernsey|||1|Guernesey|||0
+CountryEnum/GHA|http://publications.europa.eu/resource/authority/country/GHA|xs:token|||Ghana|||1|Ghana|||1|Gana|||0|Gana|||1|Ghana|||0
+CountryEnum/GIB|http://publications.europa.eu/resource/authority/country/GIB|xs:token|||Gibraltar|||1|Gibraltar|||1|Gibraltar|||0|Gibraltar|||1|Gibraltar|||0
+CountryEnum/GIN|http://publications.europa.eu/resource/authority/country/GIN|xs:token|||Guinea|||1|Guinea|||1|Gvineja|||0|Guiné|||1|Guinée|||0
+CountryEnum/GLP|http://publications.europa.eu/resource/authority/country/GLP|xs:token|||Guadeloupe|||1|Guadalupe|||1|Guadeloupe|||0|Guadalupe|||1|Guadeloupe|||0
+CountryEnum/GMB|http://publications.europa.eu/resource/authority/country/GMB|xs:token|||The Gambia|||1|La Gambia|||1|Gambija|||0|Gâmbia|||1|La Gambie|||0
+CountryEnum/GNB|http://publications.europa.eu/resource/authority/country/GNB|xs:token|||Guinea-Bissau|||1|Guinea-Bissau|||1|Gvineja Bissau|||0|Guiné-Bissau|||1|Guinée-Bissau|||0
+CountryEnum/GNQ|http://publications.europa.eu/resource/authority/country/GNQ|xs:token|||Equatorial Guinea|||1|Guinea Ecuatorial|||1|Ekvatorialna Gvineja|||0|Guiné Equatorial|||1|Guinée Équatoriale|||0
+CountryEnum/GRC|http://publications.europa.eu/resource/authority/country/GRC|xs:token|||Greece|||1|Grecia|||1|Grčija|||0|Grécia|||1|Grèce|||0
+CountryEnum/GRD|http://publications.europa.eu/resource/authority/country/GRD|xs:token|||Grenada|||1|Granada|||1|Grenada|||0|Granada|||1|Grenade|||0
+CountryEnum/GRL|http://publications.europa.eu/resource/authority/country/GRL|xs:token|||Greenland|||1|Groenlandia|||1|Grenlandija|||0|Gronelândia|||1|Groenland|||0
+CountryEnum/GTM|http://publications.europa.eu/resource/authority/country/GTM|xs:token|||Guatemala|||1|Guatemala|||1|Gvatemala|||0|Guatemala|||1|Guatemala|||0
+CountryEnum/GUF|http://publications.europa.eu/resource/authority/country/GUF|xs:token|||French Guiana|||1|Guayana francesa|||1|Francoska Gvajana|||0|Guiana Francesa|||1|Guyane Française|||0
+CountryEnum/GUM|http://publications.europa.eu/resource/authority/country/GUM|xs:token|||Guam|||1|Guam|||1|Guam|||0|Guam|||1|Guam|||0
+CountryEnum/GUY|http://publications.europa.eu/resource/authority/country/GUY|xs:token|||Guyana|||1|Guayana|||1|Gvajana|||0|Guiana|||1|Guyane|||0
+CountryEnum/HKG|http://publications.europa.eu/resource/authority/country/HKG|xs:token|||Hong Kong|||1|Hong Kong|||1|Hong Kong|||0|Hong Kong|||1|Hong Kong|||0
+CountryEnum/HMD|http://publications.europa.eu/resource/authority/country/HMD|xs:token|||Heard Island and McDonald Islands|||1|Isla Heard e islas McDonald|||1|Otok Heard in otok McDonald|||0|Ilhas Heard e McDonald|||1|Île entendu et îles McDonald|||0
+CountryEnum/HND|http://publications.europa.eu/resource/authority/country/HND|xs:token|||Honduras|||1|Honduras|||1|Honduras|||0|Honduras|||1|Honduras|||0
+CountryEnum/HRV|http://publications.europa.eu/resource/authority/country/HRV|xs:token|||Croatia|||1|Croacia|||1|Hrvaška|||0|Croácia|||1|Croatie|||0
+CountryEnum/HTI|http://publications.europa.eu/resource/authority/country/HTI|xs:token|||Haiti|||1|Haití|||1|Haiti|||0|Haiti|||1|Haïti|||0
+CountryEnum/HUN|http://publications.europa.eu/resource/authority/country/HUN|xs:token|||Hungary|||1|Hungría|||1|Madžarska|||0|Hungria|||1|Hongrie|||0
+CountryEnum/HVO|http://publications.europa.eu/resource/authority/country/HVO|xs:token|||Upper Volta|||1|Alto volta|||1|Zgornja Volta|||0|Volta superior|||1|Upper Volta|||0
+CountryEnum/IDN|http://publications.europa.eu/resource/authority/country/IDN|xs:token|||Indonesia|||1|Indonesia|||1|Indonezija|||0|Indonésia|||1|Indonésie|||0
+CountryEnum/IMN|http://publications.europa.eu/resource/authority/country/IMN|xs:token|||Isle of Man|||1|Isla de Man|||1|otok Man|||0|Ilha de Man|||1|île de Man|||0
+CountryEnum/IND|http://publications.europa.eu/resource/authority/country/IND|xs:token|||India|||1|India|||1|Indija|||0|Índia|||1|Inde|||0
+CountryEnum/IOT|http://publications.europa.eu/resource/authority/country/IOT|xs:token|||British Indian Ocean Territory|||1|Territorio Británico del Océano Índico|||1|Britansko ozemlje Indijskega oceana|||0|Território do Oceano Índico Britânico|||1|Territoire britannique de l'océan Indien|||0
+CountryEnum/IRL|http://publications.europa.eu/resource/authority/country/IRL|xs:token|||Ireland|||1|Irlanda|||1|Irska|||0|Irlanda|||1|Irlande|||0
+CountryEnum/IRN|http://publications.europa.eu/resource/authority/country/IRN|xs:token|||Iran|||1|Irán|||1|Iran|||0|Irão|||1|L'Iran|||0
+CountryEnum/IRQ|http://publications.europa.eu/resource/authority/country/IRQ|xs:token|||Iraq|||1|Irak|||1|Irak|||0|Iraque|||1|Irak|||0
+CountryEnum/ISL|http://publications.europa.eu/resource/authority/country/ISL|xs:token|||Iceland|||1|Islandia|||1|Islandija|||0|Islândia|||1|Islande|||0
+CountryEnum/ISR|http://publications.europa.eu/resource/authority/country/ISR|xs:token|||Israel|||1|Israel|||1|Izrael|||0|Israel|||1|Israël|||0
+CountryEnum/ITA|http://publications.europa.eu/resource/authority/country/ITA|xs:token|||Italy|||1|Italia|||1|Italija|||0|Itália|||1|Italie|||0
+CountryEnum/JAM|http://publications.europa.eu/resource/authority/country/JAM|xs:token|||Jamaica|||1|Jamaica|||1|Jamajka|||0|Jamaica|||1|Jamaïque|||0
+CountryEnum/JEY|http://publications.europa.eu/resource/authority/country/JEY|xs:token|||Jersey|||1|Jersey|||1|Jersey|||0|Jersey|||1|Jersey|||0
+CountryEnum/JOR|http://publications.europa.eu/resource/authority/country/JOR|xs:token|||Jordan|||1|Jordán|||1|Jordan|||0|Jordânia|||1|Jordan|||0
+CountryEnum/JPN|http://publications.europa.eu/resource/authority/country/JPN|xs:token|||Japan|||1|Japón|||1|Japonska|||0|Japão|||1|Japon|||0
+CountryEnum/JTN|http://publications.europa.eu/resource/authority/country/JTN|xs:token|||Johnston Island|||1|Isla de Johnston|||1|Otok Johnston|||0|Ilha de Johnston|||1|Île de Johnston|||0
+CountryEnum/KAZ|http://publications.europa.eu/resource/authority/country/KAZ|xs:token|||Kazakhstan|||1|Kazajstán|||1|Kazahstan|||0|Cazaquistão|||1|Kazakhstan|||0
+CountryEnum/KEN|http://publications.europa.eu/resource/authority/country/KEN|xs:token|||Kenya|||1|Kenia|||1|Kenija|||0|Quénia|||1|Kenya|||0
+CountryEnum/KGZ|http://publications.europa.eu/resource/authority/country/KGZ|xs:token|||Kyrgyzstan|||1|Kirguistán|||1|Kirgizistan|||0|Quirguistão|||1|Kirghizistan|||0
+CountryEnum/KHM|http://publications.europa.eu/resource/authority/country/KHM|xs:token|||Cambodia|||1|Camboya|||1|Kambodža|||0|Camboja|||1|Cambodge|||0
+CountryEnum/KIR|http://publications.europa.eu/resource/authority/country/KIR|xs:token|||Kiribati|||1|Kiribati|||1|Kiribati|||0|Kiribati|||1|Kiribati|||0
+CountryEnum/KNA|http://publications.europa.eu/resource/authority/country/KNA|xs:token|||Saint Kitts and Nevis|||1|Saint Kitts y Nevis|||1|Saint Kitts in Nevis|||0|São Cristóvão e Neves|||1|Saint-Christophe-et-Niévès|||0
+CountryEnum/KOR|http://publications.europa.eu/resource/authority/country/KOR|xs:token|||South Korea|||1|Corea del Sur|||1|Južna Koreja|||0|Coreia do Sul|||1|Corée du Sud|||0
+CountryEnum/KWT|http://publications.europa.eu/resource/authority/country/KWT|xs:token|||Kuwait|||1|Kuwait|||1|Kuvajt|||0|Kuwait|||1|Koweit|||0
+CountryEnum/LAO|http://publications.europa.eu/resource/authority/country/LAO|xs:token|||Laos|||1|Laos|||1|Laos|||0|Laos|||1|Laos|||0
+CountryEnum/LBN|http://publications.europa.eu/resource/authority/country/LBN|xs:token|||Lebanon|||1|Líbano|||1|Libanon|||0|Líbano|||1|Liban|||0
+CountryEnum/LBR|http://publications.europa.eu/resource/authority/country/LBR|xs:token|||Liberia|||1|Liberia|||1|Liberija|||0|Libéria|||1|Libéria|||0
+CountryEnum/LBY|http://publications.europa.eu/resource/authority/country/LBY|xs:token|||Libya|||1|Libia|||1|Libija|||0|Líbia|||1|Libye|||0
+CountryEnum/LCA|http://publications.europa.eu/resource/authority/country/LCA|xs:token|||Saint Lucia|||1|Santa Lucía|||1|Sveta Lucija|||0|Santa Lúcia|||1|Sainte-Lucie|||0
+CountryEnum/LIE|http://publications.europa.eu/resource/authority/country/LIE|xs:token|||Liechtenstein|||1|Liechtenstein|||1|Liechtenstein|||0|Liechtenstein|||1|Liechtenstein|||0
+CountryEnum/LKA|http://publications.europa.eu/resource/authority/country/LKA|xs:token|||Sri Lanka|||1|Sri Lanka|||1|Šrilanka|||0|Sri Lanka|||1|Sri Lanka|||0
+CountryEnum/LSO|http://publications.europa.eu/resource/authority/country/LSO|xs:token|||Lesotho|||1|Lesoto|||1|Lesoto|||0|Lesoto|||1|Lesotho|||0
+CountryEnum/LTU|http://publications.europa.eu/resource/authority/country/LTU|xs:token|||Lithuania|||1|Lituania|||1|Litva|||0|Lituânia|||1|Lituanie|||0
+CountryEnum/LUX|http://publications.europa.eu/resource/authority/country/LUX|xs:token|||Luxembourg|||1|Luxemburgo|||1|Luksemburg|||0|Luxemburgo|||1|Luxembourg|||0
+CountryEnum/LVA|http://publications.europa.eu/resource/authority/country/LVA|xs:token|||Latvia|||1|Letonia|||1|Latvija|||0|Letónia|||1|Lettonie|||0
+CountryEnum/MAC|http://publications.europa.eu/resource/authority/country/MAC|xs:token|||Macau|||1|Macao|||1|Macau|||0|Macau|||1|Macau|||0
+CountryEnum/MAF|http://publications.europa.eu/resource/authority/country/MAF|xs:token|||Saint Martin|||1|San Martín|||1|Sveti Martin|||0|Ilha de São Martinho|||1|Saint Martin|||0
+CountryEnum/MAR|http://publications.europa.eu/resource/authority/country/MAR|xs:token|||Morocco|||1|Marruecos|||1|Maroko|||0|Marrocos|||1|Maroc|||0
+CountryEnum/MCO|http://publications.europa.eu/resource/authority/country/MCO|xs:token|||Monaco|||1|Mónaco|||1|Monako|||0|Mónaco|||1|Monaco|||0
+CountryEnum/MDA|http://publications.europa.eu/resource/authority/country/MDA|xs:token|||Moldova|||1|Moldavia|||1|Moldavija|||0|Moldávia|||1|Moldavie|||0
+CountryEnum/MDG|http://publications.europa.eu/resource/authority/country/MDG|xs:token|||Madagascar|||1|Madagascar|||1|Madagaskar|||0|Madagáscar|||1|Madagascar|||0
+CountryEnum/MDV|http://publications.europa.eu/resource/authority/country/MDV|xs:token|||Maldives|||1|Maldivas|||1|Maldivi|||0|Maldivas|||1|Maldives|||0
+CountryEnum/MEX|http://publications.europa.eu/resource/authority/country/MEX|xs:token|||Mexico|||1|México|||1|Mehika|||0|México|||1|Mexique|||0
+CountryEnum/MHL|http://publications.europa.eu/resource/authority/country/MHL|xs:token|||Marshall Islands|||1|Islas Marshall|||1|Marshallovi otoki|||0|Ilhas Marshall|||1|Iles Marshall|||0
+CountryEnum/MID|http://publications.europa.eu/resource/authority/country/MID|xs:token|||Midway Islands|||1|Islas Midway|||1|Midwayski otoki|||0|Ilhas Midway|||1|Îles de Midway|||0
+CountryEnum/MKD|http://publications.europa.eu/resource/authority/country/MKD|xs:token|||North Macedonia|||1|Macedonia del Norte|||1|Severna Makedonija|||0|Macedónia do Norte|||1|Macédoine du Nord|||0
+CountryEnum/MLI|http://publications.europa.eu/resource/authority/country/MLI|xs:token|||Mali|||1|Mali|||1|Mali|||0|Mali|||1|Mali|||0
+CountryEnum/MLT|http://publications.europa.eu/resource/authority/country/MLT|xs:token|||Malta|||1|Malta|||1|Malta|||0|Malta|||1|Malte|||0
+CountryEnum/MMR|http://publications.europa.eu/resource/authority/country/MMR|xs:token|||Myanmar/Burma|||1|Myanmar / Birmania|||1|Mjanmar/Burma|||0|Myanmar / Birmânia|||1|Myanmar / Birmanie|||0
+CountryEnum/MNE|http://publications.europa.eu/resource/authority/country/MNE|xs:token|||Montenegro|||1|Montenegro|||1|Črna gora|||0|Montenegro|||1|Monténégro|||0
+CountryEnum/MNG|http://publications.europa.eu/resource/authority/country/MNG|xs:token|||Mongolia|||1|Mongolia|||1|Mongolija|||0|Mongólia|||1|Mongolie|||0
+CountryEnum/MNP|http://publications.europa.eu/resource/authority/country/MNP|xs:token|||Northern Mariana Islands|||1|Islas Marianas del Norte|||1|Severni Marianski otoki|||0|Ilhas Marianas do Norte|||1|Îles Mariannes du Nord|||0
+CountryEnum/MOZ|http://publications.europa.eu/resource/authority/country/MOZ|xs:token|||Mozambique|||1|Mozambique|||1|Mozambik|||0|Moçambique|||1|Mozambique|||0
+CountryEnum/MRT|http://publications.europa.eu/resource/authority/country/MRT|xs:token|||Mauritania|||1|Mauritania|||1|Mavretanija|||0|Mauritânia|||1|Mauritanie|||0
+CountryEnum/MSR|http://publications.europa.eu/resource/authority/country/MSR|xs:token|||Montserrat|||1|Montserrat|||1|Montserrat|||0|Montserrat|||1|Montserrat|||0
+CountryEnum/MTQ|http://publications.europa.eu/resource/authority/country/MTQ|xs:token|||Martinique|||1|Martinica|||1|Martinik|||0|Martinica|||1|Martinique|||0
+CountryEnum/MUS|http://publications.europa.eu/resource/authority/country/MUS|xs:token|||Mauritius|||1|Mauricio|||1|Mavricij|||0|Ilhas Maurício|||1|Maurice|||0
+CountryEnum/MWI|http://publications.europa.eu/resource/authority/country/MWI|xs:token|||Malawi|||1|Malawi|||1|Malavi|||0|Malawi|||1|Malawi|||0
+CountryEnum/MYS|http://publications.europa.eu/resource/authority/country/MYS|xs:token|||Malaysia|||1|Malasia|||1|Malezija|||0|Malásia|||1|Malaisie|||0
+CountryEnum/MYT|http://publications.europa.eu/resource/authority/country/MYT|xs:token|||Mayotte|||1|Mayotte|||1|Mayotte|||0|Mayotte|||1|Mayotte|||0
+CountryEnum/NAM|http://publications.europa.eu/resource/authority/country/NAM|xs:token|||Namibia|||1|Namibia|||1|Namibija|||0|Namíbia|||1|Namibie|||0
+CountryEnum/NCL|http://publications.europa.eu/resource/authority/country/NCL|xs:token|||New Caledonia|||1|Nueva Caledonia|||1|Nova Kaledonija|||0|Nova Caledónia|||1|Nouvelle Calédonie|||0
+CountryEnum/NER|http://publications.europa.eu/resource/authority/country/NER|xs:token|||Niger|||1|El Níger|||1|Niger|||0|Níger|||1|Niger|||0
+CountryEnum/NFK|http://publications.europa.eu/resource/authority/country/NFK|xs:token|||Norfolk Island|||1|Isla Norfolk|||1|Otok Norfolk|||0|Ilha de Norfolk|||1|l'ile de Norfolk|||0
+CountryEnum/NGA|http://publications.europa.eu/resource/authority/country/NGA|xs:token|||Nigeria|||1|Nigeria|||1|Nigerija|||0|Nigéria|||1|Nigeria|||0
+CountryEnum/NHB|http://publications.europa.eu/resource/authority/country/NHB|xs:token|||New Hebrides|||1|Nuevas Hébridas|||1|Novi Hebridi|||0|Novas Hébridas|||1|Nouveaux Hebrides|||0
+CountryEnum/NIC|http://publications.europa.eu/resource/authority/country/NIC|xs:token|||Nicaragua|||1|Nicaragua|||1|Nikaragva|||0|Nicarágua|||1|Nicaragua|||0
+CountryEnum/NIU|http://publications.europa.eu/resource/authority/country/NIU|xs:token|||Niue|||1|Niue|||1|Niue|||0|Niue|||1|Nœud|||0
+CountryEnum/NLD|http://publications.europa.eu/resource/authority/country/NLD|xs:token|||Netherlands|||1|Países Bajos|||1|Nizozemska|||0|Países Baixos|||1|Pays-Bas|||0
+CountryEnum/NOR|http://publications.europa.eu/resource/authority/country/NOR|xs:token|||Norway|||1|Noruega|||1|Norveška|||0|Noruega|||1|Norvège|||0
+CountryEnum/NPL|http://publications.europa.eu/resource/authority/country/NPL|xs:token|||Nepal|||1|Nepal|||1|Nepal|||0|Nepal|||1|Népal|||0
+CountryEnum/NRU|http://publications.europa.eu/resource/authority/country/NRU|xs:token|||Nauru|||1|Nauru|||1|Nauru|||0|Nauru|||1|Nauru|||0
+CountryEnum/NTZ|http://publications.europa.eu/resource/authority/country/NTZ|xs:token|||Neutral Zone|||1|Zona neutral|||1|Nevtralna cona|||0|Zona neutra|||1|Zone neutre|||0
+CountryEnum/NZL|http://publications.europa.eu/resource/authority/country/NZL|xs:token|||New Zealand|||1|Nueva Zelanda|||1|Nova Zelandija|||0|Nova Zelândia|||1|Nouvelle-Zélande|||0
+CountryEnum/OMN|http://publications.europa.eu/resource/authority/country/OMN|xs:token|||Oman|||1|Omán|||1|Oman|||0|Omã|||1|Oman|||0
+CountryEnum/PAK|http://publications.europa.eu/resource/authority/country/PAK|xs:token|||Pakistan|||1|Pakistán|||1|Pakistan|||0|Paquistão|||1|Pakistan|||0
+CountryEnum/PAN|http://publications.europa.eu/resource/authority/country/PAN|xs:token|||Panama|||1|Panamá|||1|Panama|||0|Panamá|||1|Panama|||0
+CountryEnum/PCI|http://publications.europa.eu/resource/authority/country/PCI|xs:token|||Trust Territory of the Pacific Islands|||1|Territorio en Fideicomiso de las Islas del Pacífico|||1|Zaupniško ozemlje pacifiških otokov|||0|Protetorado das Ilhas do Pacífico das Nações Unidas|||1|Trust Territoire des îles du Pacifique|||0
+CountryEnum/PCN|http://publications.europa.eu/resource/authority/country/PCN|xs:token|||Pitcairn Islands|||1|Islas Pitcairn|||1|Otoki Pitcairn|||0|Ilhas de Pitcairn|||1|Îles Pitcairn|||0
+CountryEnum/PCZ|http://publications.europa.eu/resource/authority/country/PCZ|xs:token|||Panama Canal Zone|||1|Zona del Canal de Panamá|||1|Območje Panamskega prekopa|||0|Zona do Canal do Panamá|||1|Zone du canal de Panama|||0
+CountryEnum/PER|http://publications.europa.eu/resource/authority/country/PER|xs:token|||Peru|||1|Perú|||1|Peru|||0|Peru|||1|Pérou|||0
+CountryEnum/PHL|http://publications.europa.eu/resource/authority/country/PHL|xs:token|||Philippines|||1|Filipinas|||1|Filipini|||0|Filipinas|||1|Philippines|||0
+CountryEnum/PLW|http://publications.europa.eu/resource/authority/country/PLW|xs:token|||Palau|||1|Palau|||1|Palau|||0|Palau|||1|Palau|||0
+CountryEnum/PNG|http://publications.europa.eu/resource/authority/country/PNG|xs:token|||Papua New Guinea|||1|Papúa Nueva Guinea|||1|Papua Nova Gvineja|||0|Papua Nova Guiné|||1|Papouasie Nouvelle Guinée|||0
+CountryEnum/POL|http://publications.europa.eu/resource/authority/country/POL|xs:token|||Poland|||1|Polonia|||1|Poljska|||0|Polónia|||1|Pologne|||0
+CountryEnum/PRI|http://publications.europa.eu/resource/authority/country/PRI|xs:token|||Puerto Rico|||1|Puerto Rico|||1|Portoriko|||0|Porto Rico|||1|Porto Rico|||0
+CountryEnum/PRK|http://publications.europa.eu/resource/authority/country/PRK|xs:token|||North Korea|||1|Corea del Norte|||1|Severna Koreja|||0|Coreia do Norte|||1|Corée du Nord|||0
+CountryEnum/PRT|http://publications.europa.eu/resource/authority/country/PRT|xs:token|||Portugal|||1|Portugal|||1|Portugalska|||0|Portugal|||1|le Portugal|||0
+CountryEnum/PRY|http://publications.europa.eu/resource/authority/country/PRY|xs:token|||Paraguay|||1|Paraguay|||1|Paragvaj|||0|Paraguai|||1|Paraguay|||0
+CountryEnum/PSE|http://publications.europa.eu/resource/authority/country/PSE|xs:token|||Palestine|||1|Palestina|||1|Palestina|||0|Palestina|||1|Palestine|||0
+CountryEnum/PUS|http://publications.europa.eu/resource/authority/country/PUS|xs:token|||US Miscellaneous Pacific Islands|||1|Diversas islas del Pacífico de los Estados Unidos|||1|Razni pacifiški otoki ZDA|||0|Diversas Ilhas do Pacífico dos Estados Unidos da América|||1|États-Unis diverses îles du Pacifique|||0
+CountryEnum/PYF|http://publications.europa.eu/resource/authority/country/PYF|xs:token|||French Polynesia|||1|Polinesia francesa|||1|Francoska Polinezija|||0|Polinésia Francesa|||1|Polynésie française|||0
+CountryEnum/QAT|http://publications.europa.eu/resource/authority/country/QAT|xs:token|||Qatar|||1|Katar|||1|Katar|||0|Catar|||1|Qatar|||0
+CountryEnum/REU|http://publications.europa.eu/resource/authority/country/REU|xs:token|||Réunion|||1|Reunión|||1|Reunion|||0|Reunião|||1|Réunion|||0
+CountryEnum/RHO|http://publications.europa.eu/resource/authority/country/RHO|xs:token|||Southern Rhodesia|||1|Rhodesia del sur|||1|Južna Rodezija|||0|Rodésia do sul|||1|Rhodésie du Sud|||0
+CountryEnum/ROU|http://publications.europa.eu/resource/authority/country/ROU|xs:token|||Romania|||1|Rumania|||1|Romunija|||0|Roménia|||1|Roumanie|||0
+CountryEnum/RUS|http://publications.europa.eu/resource/authority/country/RUS|xs:token|||Russia|||1|Rusia|||1|Rusija|||0|Rússia|||1|Russie|||0
+CountryEnum/RWA|http://publications.europa.eu/resource/authority/country/RWA|xs:token|||Rwanda|||1|Ruanda|||1|Ruanda|||0|Ruanda|||1|Rwanda|||0
+CountryEnum/SAU|http://publications.europa.eu/resource/authority/country/SAU|xs:token|||Saudi Arabia|||1|Arabia Saudita|||1|Savdska Arabija|||0|Arábia Saudita|||1|Arabie Saoudite|||0
+CountryEnum/SCG|http://publications.europa.eu/resource/authority/country/SCG|xs:token|||Serbia and Montenegro|||1|Serbia y Montenegro|||1|Srbija in Črna gora|||0|Sérvia e Montenegro|||1|Serbie et Monténégro|||0
+CountryEnum/SDN|http://publications.europa.eu/resource/authority/country/SDN|xs:token|||Sudan|||1|Sudán|||1|Sudan|||0|Sudão|||1|Soudan|||0
+CountryEnum/SEN|http://publications.europa.eu/resource/authority/country/SEN|xs:token|||Senegal|||1|Senegal|||1|Senegal|||0|Senegal|||1|Sénégal|||0
+CountryEnum/SGP|http://publications.europa.eu/resource/authority/country/SGP|xs:token|||Singapore|||1|Singapur|||1|Singapur|||0|Singapura|||1|Singapour|||0
+CountryEnum/SGS|http://publications.europa.eu/resource/authority/country/SGS|xs:token|||South Georgia and the South Sandwich Islands|||1|Georgia del sur y las islas Sandwich del sur|||1|Južna Georgia in Južni Sendvičevi otoki|||0|Geórgia do Sul e Ilhas Sandwich Sul|||1|Géorgie du Sud et les îles Sandwich South|||0
+CountryEnum/SHN|http://publications.europa.eu/resource/authority/country/SHN|xs:token|||Saint Helena, Ascension and Tristan da Cunha|||1|San Helena, Ascensión y Tristan da Cunha|||1|Sveta Helena, Vnebovzetje in Tristan da Cunha|||0|Santa Helena, Ascensão e Tristão da Cunha|||1|Sainte-Hélène, Ascension et Tristan da Cunha|||0
+CountryEnum/SJM|http://publications.europa.eu/resource/authority/country/SJM|xs:token|||Svalbard and Jan Mayen|||1|Svalbard y Jan Mayen|||1|Svalbard in Jan Mayen|||0|Svalbard e Jan Mayen|||1|Svalbard et Jan Mayen|||0
+CountryEnum/SKM|http://publications.europa.eu/resource/authority/country/SKM|xs:token|||Sikkim|||1|Sikkim|||1|Sikkim|||0|Sikkim|||1|Sikkim|||0
+CountryEnum/SLB|http://publications.europa.eu/resource/authority/country/SLB|xs:token|||Solomon Islands|||1|Islas Salomón|||1|Salomonovi otoki|||0|Ilhas Salomão|||1|Les îles Salomon|||0
+CountryEnum/SLE|http://publications.europa.eu/resource/authority/country/SLE|xs:token|||Sierra Leone|||1|Sierra Leona|||1|Sierra Leone|||0|Serra Leoa|||1|Sierra Leone|||0
+CountryEnum/SLV|http://publications.europa.eu/resource/authority/country/SLV|xs:token|||El Salvador|||1|El Salvador|||1|El Salvador|||0|El Salvador|||1|Le Salvador|||0
+CountryEnum/SMR|http://publications.europa.eu/resource/authority/country/SMR|xs:token|||San Marino|||1|San Marino|||1|San Marino|||0|São Marino|||1|Saint Marin|||0
+CountryEnum/SOM|http://publications.europa.eu/resource/authority/country/SOM|xs:token|||Somalia|||1|Somalia|||1|Somalija|||0|Somália|||1|Somalie|||0
+CountryEnum/SPM|http://publications.europa.eu/resource/authority/country/SPM|xs:token|||Saint Pierre and Miquelon|||1|Saint Pierre y Miquelon|||1|Saint Pierre in Miquelon|||0|São Pedro e Miquelão|||1|Saint-Pierre-et-Miquelon|||0
+CountryEnum/SRB|http://publications.europa.eu/resource/authority/country/SRB|xs:token|||Serbia|||1|Serbia|||1|Srbija|||0|Sérvia|||1|Serbie|||0
+CountryEnum/SSD|http://publications.europa.eu/resource/authority/country/SSD|xs:token|||South Sudan|||1|Sudán del Sur|||1|Južni Sudan|||0|Sudão do Sul|||1|Soudan du sud|||0
+CountryEnum/STP|http://publications.europa.eu/resource/authority/country/STP|xs:token|||São Tomé and Príncipe|||1|Santo Tomé y Príncipe|||1|São Tome in Principe|||0|São Tomé e Príncipe|||1|São Tomé et Príncipe|||0
+CountryEnum/SUN|http://publications.europa.eu/resource/authority/country/SUN|xs:token|||Soviet Union|||1|Unión Soviética|||1|Sovjetska zveza|||0|União Soviética|||1|Union soviétique|||0
+CountryEnum/SUR|http://publications.europa.eu/resource/authority/country/SUR|xs:token|||Suriname|||1|Surinam|||1|Surinam|||0|Suriname|||1|Suriname|||0
+CountryEnum/SVK|http://publications.europa.eu/resource/authority/country/SVK|xs:token|||Slovakia|||1|Eslovaquia|||1|Slovaška|||0|Eslováquia|||1|Slovaquie|||0
+CountryEnum/SVN|http://publications.europa.eu/resource/authority/country/SVN|xs:token|||Slovenia|||1|Eslovenia|||1|Slovenija|||0|Eslovénia|||1|Slovénie|||0
+CountryEnum/SWE|http://publications.europa.eu/resource/authority/country/SWE|xs:token|||Sweden|||1|Suecia|||1|Švedska|||0|Suécia|||1|la Suède|||0
+CountryEnum/SWZ|http://publications.europa.eu/resource/authority/country/SWZ|xs:token|||Eswatini|||1|Eswatini|||1|Eswatini|||0|Eswatini|||1|Eswatini|||0
+CountryEnum/SXM|http://publications.europa.eu/resource/authority/country/SXM|xs:token|||Sint Maarten|||1|San Martín|||1|Sint Maarten|||0|São Martinho|||1|Sint Maarten|||0
+CountryEnum/SYC|http://publications.europa.eu/resource/authority/country/SYC|xs:token|||Seychelles|||1|Seychelles|||1|Sejšeli|||0|Seicheles|||1|les Seychelles|||0
+CountryEnum/SYR|http://publications.europa.eu/resource/authority/country/SYR|xs:token|||Syria|||1|Siria|||1|Sirija|||0|Síria|||1|Syrie|||0
+CountryEnum/TCA|http://publications.europa.eu/resource/authority/country/TCA|xs:token|||Turks and Caicos Islands|||1|Islas Turcas y Caicos|||1|Otoki Turks in Caicos|||0|Ilhas Turcas e Caicos|||1|îles Turques-et-Caïques|||0
+CountryEnum/TCD|http://publications.europa.eu/resource/authority/country/TCD|xs:token|||Chad|||1|Chad|||1|Čad|||0|Chade|||1|Chadre|||0
+CountryEnum/TGO|http://publications.europa.eu/resource/authority/country/TGO|xs:token|||Togo|||1|Togo|||1|Iti|||0|Togo|||1|Aller|||0
+CountryEnum/THA|http://publications.europa.eu/resource/authority/country/THA|xs:token|||Thailand|||1|Tailandia|||1|Tajska|||0|Tailândia|||1|Thaïlande|||0
+CountryEnum/TJK|http://publications.europa.eu/resource/authority/country/TJK|xs:token|||Tajikistan|||1|Tayikistán|||1|Tadžikistan|||0|Tajiquistão|||1|Tadjikistan|||0
+CountryEnum/TKL|http://publications.europa.eu/resource/authority/country/TKL|xs:token|||Tokelau|||1|Tokelau|||1|Tokelau|||0|Tokelau|||1|Tokelau|||0
+CountryEnum/TKM|http://publications.europa.eu/resource/authority/country/TKM|xs:token|||Turkmenistan|||1|Turkmenistán|||1|Turkmenistan|||0|Turquemenistão|||1|Turkménistan|||0
+CountryEnum/TLS|http://publications.europa.eu/resource/authority/country/TLS|xs:token|||Timor-Leste|||1|Timor Oriental|||1|Vzhodni Timor|||0|Timor-Leste|||1|Timor-late|||0
+CountryEnum/TMP|http://publications.europa.eu/resource/authority/country/TMP|xs:token|||East Timor|||1|Timor Portugués|||1|Vzhodni Timor|||0|Timor Leste|||1|Timor oriental|||0
+CountryEnum/TON|http://publications.europa.eu/resource/authority/country/TON|xs:token|||Tonga|||1|Tonga|||1|Tonga|||0|Tonga|||1|Tonga|||0
+CountryEnum/TTO|http://publications.europa.eu/resource/authority/country/TTO|xs:token|||Trinidad and Tobago|||1|Trinidad y Tobago|||1|Trinidad in Tobago|||0|Trinidad e Tobago|||1|Trinité-et-Tobago|||0
+CountryEnum/TUN|http://publications.europa.eu/resource/authority/country/TUN|xs:token|||Tunisia|||1|Túnez|||1|Tunizija|||0|Tunísia|||1|Tunisie|||0
+CountryEnum/TUR|http://publications.europa.eu/resource/authority/country/TUR|xs:token|||Turkey|||1|Turquía|||1|puran|||0|Turquia|||1|Turquie|||0
+CountryEnum/TUV|http://publications.europa.eu/resource/authority/country/TUV|xs:token|||Tuvalu|||1|Tuvalu|||1|Tuvalu|||0|Tuvalu|||1|Tuvalu|||0
+CountryEnum/TWN|http://publications.europa.eu/resource/authority/country/TWN|xs:token|||Taiwan|||1|Taiwán|||1|Tajvan|||0|Taiwan|||1|Taïwan|||0
+CountryEnum/TZA|http://publications.europa.eu/resource/authority/country/TZA|xs:token|||Tanzania|||1|Tanzania|||1|Tanzanija|||0|Tanzânia|||1|Tanzanie|||0
+CountryEnum/UGA|http://publications.europa.eu/resource/authority/country/UGA|xs:token|||Uganda|||1|Uganda|||1|Uganda|||0|Uganda|||1|Ouganda|||0
+CountryEnum/UKR|http://publications.europa.eu/resource/authority/country/UKR|xs:token|||Ukraine|||1|Ucrania|||1|Ukrajina|||0|Ucrânia|||1|Ukraine|||0
+CountryEnum/UMI|http://publications.europa.eu/resource/authority/country/UMI|xs:token|||United States Minor Outlying Islands|||1|Islas Ultramarinas Menores de los Estados Unidos|||1|Manjši zunanji otoki Združenih držav Amerike|||0|Ilhas Menores dos Estados Unidos|||1|Îles mineures éloignées des États-Unis|||0
+CountryEnum/URY|http://publications.europa.eu/resource/authority/country/URY|xs:token|||Uruguay|||1|Uruguay|||1|Urugvaj|||0|Uruguai|||1|Uruguay|||0
+CountryEnum/USA|http://publications.europa.eu/resource/authority/country/USA|xs:token|||United States|||1|Estados Unidos|||1|Združene države|||0|Estados Unidos|||1|États-Unis|||0
+CountryEnum/UZB|http://publications.europa.eu/resource/authority/country/UZB|xs:token|||Uzbekistan|||1|Uzbekistán|||1|Uzbekistan|||0|Uzbequistão|||1|Ouzbékistan|||0
+CountryEnum/VAT|http://publications.europa.eu/resource/authority/country/VAT|xs:token|||Vatican City State|||1|Estado de la Ciudad del Vaticano|||1|Vatikanska mestna država|||0|Estado da cidade do Vaticano|||1|État de Vatican City|||0
+CountryEnum/VCT|http://publications.europa.eu/resource/authority/country/VCT|xs:token|||Saint Vincent and the Grenadines|||1|San Vicente y las Granadinas|||1|Sveti Vincent in Grenadine|||0|São Vicente e Granadinas|||1|Saint-Vincent-et-les-Grenadines|||0
+CountryEnum/VDR|http://publications.europa.eu/resource/authority/country/VDR|xs:token|||Democratic Republic of Vietnam|||1|República Democrática de Vietnam|||1|Demokratična republika Vietnam|||0|República Democrática do Vietname|||1|République démocratique du Vietnam|||0
+CountryEnum/VEN|http://publications.europa.eu/resource/authority/country/VEN|xs:token|||Venezuela|||1|Venezuela|||1|Venezuela|||0|Venezuela|||1|Venezuela|||0
+CountryEnum/VGB|http://publications.europa.eu/resource/authority/country/VGB|xs:token|||British Virgin Islands|||1|Islas Vírgenes Británicas|||1|britanski Deviški otoki|||0|Ilhas Virgens Britânicas|||1|Îles Vierges britanniques|||0
+CountryEnum/VIR|http://publications.europa.eu/resource/authority/country/VIR|xs:token|||US Virgin Islands|||1|Islas Vírgenes de EE.UU|||1|Ameriški Deviški otoki|||0|Ilhas Virgens dos EUA|||1|Îles Vierges américaines|||0
+CountryEnum/VNM|http://publications.europa.eu/resource/authority/country/VNM|xs:token|||Vietnam|||1|Vietnam|||1|Vietnam|||0|Vietname|||1|Vietnam|||0
+CountryEnum/VUT|http://publications.europa.eu/resource/authority/country/VUT|xs:token|||Vanuatu|||1|Vanuatu|||1|Vanuatu|||0|Vanuatu|||1|Vanuatu|||0
+CountryEnum/WAK|http://publications.europa.eu/resource/authority/country/WAK|xs:token|||Wake Islands|||1|Islas Wake|||1|Wake Islands|||0|Ilhas Wake|||1|Île de réveil|||0
+CountryEnum/WLF|http://publications.europa.eu/resource/authority/country/WLF|xs:token|||Wallis and Futuna|||1|Wallis y Futuna|||1|Wallis in Futuna|||0|Wallis e Futuna|||1|Wallis et Futuna|||0
+CountryEnum/WSM|http://publications.europa.eu/resource/authority/country/WSM|xs:token|||Samoa|||1|Samoa|||1|Samoa|||0|Samoa|||1|Samoa|||0
+CountryEnum/YEM|http://publications.europa.eu/resource/authority/country/YEM|xs:token|||Yemen|||1|Yemen|||1|Jemen|||0|Iémen|||1|Yémen|||0
+CountryEnum/YMD|http://publications.europa.eu/resource/authority/country/YMD|xs:token|||North Yemen|||1|Yemen de Norte|||1|Severni Jemen|||0|Iêmen do norte|||1|Yémen nord|||0
+CountryEnum/YUG|http://publications.europa.eu/resource/authority/country/YUG|xs:token|||Yugoslavia|||1|Yugoslavia|||1|Jugoslavija|||0|Jugoslávia|||1|Yougoslavie|||0
+CountryEnum/ZAF|http://publications.europa.eu/resource/authority/country/ZAF|xs:token|||South Africa|||1|Sudáfrica|||1|Južna Afrika|||0|África do Sul|||1|Afrique du Sud|||0
+CountryEnum/ZMB|http://publications.europa.eu/resource/authority/country/ZMB|xs:token|||Zambia|||1|Zambia|||1|Zambija|||0|Zâmbia|||1|Zambie|||0
+CountryEnum/ZR0|http://publications.europa.eu/resource/authority/country/ZR0|xs:token|||Zaire|||1|Zaire|||1|Zair|||0|Zaire|||1|Zaïre|||0
+CountryEnum/ZWE|http://publications.europa.eu/resource/authority/country/ZWE|xs:token|||Republic of Zimbabwe|||1|República de Zimbabue|||1|Republika Zimbabve|||0|República do Zimbábue|||1|République du Zimbabwe|||0

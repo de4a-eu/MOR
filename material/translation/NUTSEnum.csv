@@ -1,0 +1,29 @@
+﻿Term URI|Origin|Type|Cardinality|Comments|Label_en|Description_en|Example_en|Verified_en|Label_es|Description_es|Example_es|Verified_es|Label_sl|Description_sl|Example_sl|Verified_sl|Label_pt|Description_pt|Example_pt|Verified_pt|Label_fr|Description_fr|Example_fr|Verified_fr
+NUTS0Enum|https://data.europa.eu/data/datasets/estat-nuts-classification|xs:enumeration|00||Member States|||1|Austria|||1|Držav Clanic|||1|Estados Membros|Estados-Membros||1|États membres|||0
+NUTS0Enum/AT|https://data.europa.eu/data/datasets/estat-nuts-classification1A0|xs:token|||Austria|||1|Bélgica|||1|Avstrija|||1|Áustria|Áustria||1|L'Autriche|||0
+NUTS0Enum/BE|https://data.europa.eu/data/datasets/estat-nuts-classificationABW|xs:token|||Belgium|||1|Bulgaria|||1|Belgija|||1|Bélgica|Bélgica||1|la Belgique|||0
+NUTS0Enum/BG|https://data.europa.eu/data/datasets/estat-nuts-classificationAFG|xs:token|||Bulgaria|||1|Chipre|||1|Bolgarija|||1|Bulgária|Bulgária||1|Bulgarie|||0
+NUTS0Enum/CY|https://data.europa.eu/data/datasets/estat-nuts-classificationAFI|xs:token|||Cyprus|||1|Chequia|||1|Ciper|||1|Chipre|Chipre||1|Chypre|||0
+NUTS0Enum/CZ|https://data.europa.eu/data/datasets/estat-nuts-classificationAGO|xs:token|||Czechia|||1|Alemania|||1|Ceška|||1|Czechia|República Checa||1|Tchechie|||0
+NUTS0Enum/DE|https://data.europa.eu/data/datasets/estat-nuts-classificationAIA|xs:token|||Germany|||1|Dinamarca|||1|Nemcija|||1|Alemanha|Alemanha||1|Allemagne|||0
+NUTS0Enum/DK|https://data.europa.eu/data/datasets/estat-nuts-classificationALA|xs:token|||Denmark|||1|Estonia|||1|Danska|||1|Dinamarca|Dinamarca||1|Danemark|||0
+NUTS0Enum/EE|https://data.europa.eu/data/datasets/estat-nuts-classificationALB|xs:token|||Estonia|||1|Grecia|||1|Estonija|||1|Estônia|Estónia||1|Estonie|||0
+NUTS0Enum/EL|https://data.europa.eu/data/datasets/estat-nuts-classificationAND|xs:token|||Greece|||1|España|||1|Grcija|||1|Grécia|Grécia||1|Grèce|||0
+NUTS0Enum/ES|https://data.europa.eu/data/datasets/estat-nuts-classificationANT|xs:token|||Spain|||1|Finlandia|||1|Španija|||1|Espanha|Espanha||1|Espagne|||0
+NUTS0Enum/FI|https://data.europa.eu/data/datasets/estat-nuts-classificationARE|xs:token|||Finland|||1|Francia|||1|Finska|||1|Finlândia|Finlândia||1|Finlande|||0
+NUTS0Enum/FR|https://data.europa.eu/data/datasets/estat-nuts-classificationARG|xs:token|||France|||1|Croacia|||1|Francija|||1|França|França||1|La France|||0
+NUTS0Enum/HR|https://data.europa.eu/data/datasets/estat-nuts-classificationARM|xs:token|||Croatia|||1|Hungría|||1|Hrvaška|||1|Croácia|Croácia||1|Croatie|||0
+NUTS0Enum/HU|https://data.europa.eu/data/datasets/estat-nuts-classificationASM|xs:token|||Hungary|||1|Irlanda|||1|Madžarska|||1|Hungria|Hungria||1|Hongrie|||0
+NUTS0Enum/IE|https://data.europa.eu/data/datasets/estat-nuts-classificationATA|xs:token|||Ireland|||1|Italia|||1|Irska|||1|Irlanda|Irlanda||1|Irlande|||0
+NUTS0Enum/IT|https://data.europa.eu/data/datasets/estat-nuts-classificationATB|xs:token|||Italy|||1|Lituania|||1|Italija|||1|Itália|Itália||1|Italie|||0
+NUTS0Enum/LT|https://data.europa.eu/data/datasets/estat-nuts-classificationATF|xs:token|||Lithuania|||1|Luxemburgo|||1|Litva|||1|Lituânia|Lituânia||1|Lituanie|||0
+NUTS0Enum/LU|https://data.europa.eu/data/datasets/estat-nuts-classificationATG|xs:token|||Luxembourg|||1|Letonia|||1|Luksemburg|||1|Luxemburgo|Luxemburgo||1|Luxembourg|||0
+NUTS0Enum/LV|https://data.europa.eu/data/datasets/estat-nuts-classificationATN|xs:token|||Latvia|||1|Malta|||1|Latvija|||1|Letônia|Letónia||1|Lettonie|||0
+NUTS0Enum/MT|https://data.europa.eu/data/datasets/estat-nuts-classificationAUS|xs:token|||Malta|||1|Países Bajos|||1|Malta|||1|Malta|Malta||1|Malte|||0
+NUTS0Enum/NL|https://data.europa.eu/data/datasets/estat-nuts-classificationAUT|xs:token|||Netherlands|||1|Polonia|||1|Nizozemska|||1|Países Baixos|Países Baixos||1|Pays-Bas|||0
+NUTS0Enum/PL|https://data.europa.eu/data/datasets/estat-nuts-classificationAZE|xs:token|||Poland|||1|Portugal|||1|Poljska|||1|Polônia|Polónia||1|Pologne|||0
+NUTS0Enum/PT|https://data.europa.eu/data/datasets/estat-nuts-classificationBDI|xs:token|||Portugal|||1|Rumania|||1|Portugalska|||1|Portugal|Portugal||1|le Portugal|||0
+NUTS0Enum/RO|https://data.europa.eu/data/datasets/estat-nuts-classificationBEL|xs:token|||Romania|||1|Suecia|||1|Romunija|||1|Romênia|Roménia||1|Roumanie|||0
+NUTS0Enum/SE|https://data.europa.eu/data/datasets/estat-nuts-classificationBEN|xs:token|||Sweden|||1|Eslovenia|||1|Švedska|||1|Suécia|Suécia||1|la Suède|||0
+NUTS0Enum/SI|https://data.europa.eu/data/datasets/estat-nuts-classificationBES|xs:token|||Slovenia|||1|Eslovaquia|||1|Slovenija|||1|Eslovênia|Eslovénia||1|Slovénie|||0
+NUTS0Enum/SK|https://data.europa.eu/data/datasets/estat-nuts-classificationBFA|xs:token|||Slovakia|||1|Eslovaquia|||1|Slovaška |||1|Eslováquia|Eslováquia||1|Slovaquie|||0

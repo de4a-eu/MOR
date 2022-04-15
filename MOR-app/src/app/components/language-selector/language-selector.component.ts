@@ -16,7 +16,7 @@ export class LanguageSelectorComponent implements OnInit {
     public languages: DataLoaderLanguagesService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es']);
+    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
   }
@@ -25,15 +25,19 @@ export class LanguageSelectorComponent implements OnInit {
     let language = this.languages.getLanguages().find((x) => code == x.code);
     let name: string | null = null;
     if (language)
-      name = this.translate.instant('term.LangEnum/' + language.code).label;
+      name = this.translate.instant(
+        'LangEnum/' + language.code + '.' + this.selectedLanguage + '.label'
+      );
     return name;
   }
 
   public getLanguages(): Language[] {
     let languages = this.languages.getLanguages();
-    languages.map(
-      (x) => (x.name = this.translate.instant('term.LangEnum/' + x.code).label)
-    );
+    languages.map((x) => {
+      x.name = this.translate.instant(
+        'LangEnum/' + x.code + '.' + this.selectedLanguage + '.label'
+      );
+    });
     return languages;
   }
 

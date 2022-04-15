@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
 <title>MOR Test XML example of canonical evidence</title>
-<script type="text/javascript" src="BirthEvidence-en-test-outcome_files/mor.js"></script>
+<script type="text/javascript" src="../js/mor.js"></script>
 <style>
 .label {color: darkblue; font-style: italic; font-weight: 750}
 span {cursor: help}
@@ -23,12 +23,14 @@ span {cursor: help}
 </form>
 <div id="output" style="width:100%;border-color:1px solid red"></div>
 <script>
+const dirXML = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/ial"
 const debug = true //to enable(true) or disable(false) the console.log traces
 const xmlhttp = new XMLHttpRequest()
 /*
  * urlJson: URL of the MOR storage with all the terms in the selected language 
  */
-const urlJson = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/mor_en.json" 
+const urlJson = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/en.json"
+
 var morJSON; //contains all the MOR terms in the selected language (en) that are obtained from "urlJson"
 
 /*

@@ -19,7 +19,7 @@ export class InputParametersMorPSelectorComponent implements OnInit {
 
   public isDisplayed: boolean = true;
 
-  @Input() defaultLanguage: string = 'sl';
+  @Input() defaultLanguage: string = 'en';
   @Input() postActionValue!: string;
   @Output() defaultLanguageChange = new EventEmitter<string>();
   updateDefaultLanguage() {

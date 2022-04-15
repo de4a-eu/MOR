@@ -3,6 +3,8 @@ import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
 import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
 import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
 import {
+  faEye,
+  faEyeSlash,
   faFileCode,
   faSignInAlt,
   faCheckCircle,
@@ -23,6 +25,8 @@ declare var bootstrap: any;
   styleUrls: ['./mor-er.component.css'],
 })
 export class MORERComponent implements OnInit {
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
   faFileCode = faFileCode;
   faSignInAlt = faSignInAlt;
   faCheckCircle = faCheckCircle;
@@ -30,11 +34,14 @@ export class MORERComponent implements OnInit {
   faSyncAlt = faSyncAlt;
   faExclamationTriangle = faExclamationTriangle;
 
+  public modalPreview: any;
+
   @Input('defaultLang') defaultLanguage!: string;
   public selectedLanguage!: string;
   @Input('requesterCountryCode') requesterCountry!: string;
   @Input('canonicalEvidenceTypes') canonicalEvidenceTypes!: string;
   @Input('outputJSArrayId') outputJSArrayId!: string;
+  public showDescription: boolean = true;
 
   constructor(
     private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
@@ -44,7 +51,7 @@ export class MORERComponent implements OnInit {
     private dataLoaderXml: DataLoaderXmlService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es']);
+    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
     translate.setDefaultLang('en');
     translate.use('en');
   }
@@ -54,9 +61,12 @@ export class MORERComponent implements OnInit {
   public provisions: any = {}; // Provisions
   public uploads: any = {}; // Content of uploaded files
 
+  public selectedEvidenceType!: string;
+
   public modalSelectProvision: any;
   public modalSelectProvisionData: any = {
     canonicalEvidenceType: '',
+    morId: '',
     canonicalEvidenceTypeName: '',
     country: '',
   };
@@ -171,6 +181,31 @@ export class MORERComponent implements OnInit {
     );
   }
 
+  public previewEvidence(tokenName: string | undefined) {
+    if (tokenName) {
+      this.selectedEvidenceType = tokenName;
+      this.modalPreview.show();
+    }
+  }
+
+  public getEvidenceTypeNameForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    if (selectedEvidence) return selectedEvidence.name;
+    else return '';
+  }
+
+  public getEvidenceTypeContentForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    let content = '';
+    if (selectedEvidence && selectedEvidence.tokenName)
+      content = selectedEvidence.tokenName;
+    return content;
+  }
+
   /**
    * Get evidence types that are included in explicit request
    * (user has selected country and provision)
@@ -237,6 +272,7 @@ export class MORERComponent implements OnInit {
       );
       this.modalSelectProvisionData.canonicalEvidenceType =
         canonicalEvidenceType;
+      this.modalSelectProvisionData.morId = type ? type.morID : '';
       this.modalSelectProvisionData.canonicalEvidenceName = type
         ? type.name
         : '';
@@ -306,14 +342,18 @@ export class MORERComponent implements OnInit {
     if (!provision) {
       return null;
     } else if (typeof provision == 'string' && provision == 'not available') {
-      return this.translate.instant('gui.provisionNotAvailable');
+      return this.translate.instant(
+        'GUI/provisionNotAvailable.' + this.selectedLanguage + '.label'
+      );
     } else if (typeof provision == 'object') {
       if (provision.provisions.length > 1) {
         for (let i = 0; i < provision.provisions.length; i++) {
           if (provision.provisions[i].selected)
             return provision.provisions[i].dataOwnerPrefLabel;
         }
-        return this.translate.instant('gui.select1Provision');
+        return this.translate.instant(
+          'GUI/select1Provision.' + this.selectedLanguage + '.label'
+        );
       } else {
         return provision.provisions[0].dataOwnerPrefLabel;
       }
@@ -377,6 +417,10 @@ export class MORERComponent implements OnInit {
     // Bootstrap modals
     this.modalSelectProvision = new bootstrap.Modal(
       document.getElementById('selectProvisionModal')
+    );
+    // Bootstrap modals
+    this.modalPreview = new bootstrap.Modal(
+      document.getElementById('previewEvidenceSchemaModal')
     );
   }
 }

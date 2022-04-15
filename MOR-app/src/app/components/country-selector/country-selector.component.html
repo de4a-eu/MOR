@@ -12,7 +12,7 @@
         }}"
       ></span
       >{{ getCountryName(countryCode) }} <b>({{ countryCode }})</b></span
-    ><span *ngIf="!countryCode" translate="gui.selectCountry"></span
+    ><span *ngIf="!countryCode" translate="GUI/selectCountry.{{ defaultLanguage }}.label"></span
   ></a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuRequesterCountry">
     <li *ngFor="let country of getCountries()">

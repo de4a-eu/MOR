@@ -1,17 +1,18 @@
-<!--<div class="position-relative">
-  <div class="position-absolute top-0 end-0">
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0">
     <app-language-selector
       [(selectedLanguage)]="selectedLanguage"
+      (click)="translate.use(selectedLanguage)"
     ></app-language-selector>
   </div>
-</div>-->
+</div>
 
 <div class="d-flex justify-content-center mb-2" *ngIf="complete">
   <div class="row">
     <div class="text-center text-primary">
       <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>
     </div>
-    <div class="text-center text-primary">Complete</div>
+    <div class="text-center text-primary" translate="GUI/complete.{{ selectedLanguage }}.label"></div>
   </div>
 </div>
 
@@ -22,9 +23,7 @@
       <div class="text-center text-primary">
         <fa-icon class="me-1" [icon]="faExclamationTriangle"></fa-icon>
       </div>
-      <div class="text-center text-primary">
-        Please provide input parameters to <b>MOR Preview</b>!
-      </div>
+      <div class="text-center text-primary" translate="GUI/provideInputP.{{ selectedLanguage }}.label"></div>
     </div>
   </div>
   <div
@@ -32,7 +31,15 @@
     *ngFor="let evidenceType of getEvidenceTypes()"
   >
     <div class="col-6 text-end p-2">
-      <button type="button" class="btn btn-sm btn-secondary normal">
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary normal"
+        (click)="
+          isEvidenceAvailable(evidenceType.tokenName)
+            ? previewEvidence(evidenceType.tokenName)
+            : undefined
+        "
+      >
         <fa-icon
           class="me-2 help"
           [icon]="
@@ -40,20 +47,8 @@
           "
           data-bs-toggle="tooltip"
           data-bs-html="true"
-          (click)="
-            isEvidenceAvailable(evidenceType.tokenName)
-              ? previewEvidence(evidenceType.tokenName)
-              : undefined
-          "
-          [title]="
-            isEvidenceAvailable(evidenceType.tokenName)
-              ? 'View <b>' + evidenceType.name + '</b> canonical evidence.'
-              : '<b>' +
-                evidenceType.name +
-                '</b> canonical evidence is not available.'
-          "
         ></fa-icon
-        >{{ evidenceType.name }}
+        >{{ evidenceType.morID + "." + selectedLanguage + ".label" | translate }}
       </button>
     </div>
     <div class="col-6 p-2">
@@ -78,16 +73,16 @@
                   class="form-check-label pointer"
                   [for]="'mor_p_radio_' + evidenceType.tokenName + '_country'"
                 >
-                  <b>include</b>
+                  <b translate="GUI/include.{{ selectedLanguage }}.label"></b>
                 </label>
               </div>
-              <span class="mx-2">or</span>
+              <span class="mx-2" translate="GUI/or.{{ selectedLanguage }}.label"></span>
               <div class="form-check form-check-inline me-0 ms-1">
                 <input
                   class="form-check-input"
                   type="radio"
                   [name]="'mor_p_radio_' + evidenceType.tokenName"
-                  [id]="'mor_p_radio_' + evidenceType.tokenName + '_upload'"
+                  [id]="'mor_p_radio_' + evidenceType.tokenName + '_upload_exclude'"
                   [checked]="
                     !confirmSendStatus[evidenceType.tokenName || ''].include
                   "
@@ -97,9 +92,9 @@
                 />
                 <label
                   class="form-check-label pointer"
-                  [for]="'mor_p_radio_' + evidenceType.tokenName + '_upload'"
+                  [for]="'mor_p_radio_' + evidenceType.tokenName + '_country'"
                 >
-                  <b>upload evidence</b>
+                  <b translate="GUI/exclude.{{ selectedLanguage }}.label"></b>
                 </label>
               </div>
             </div>
@@ -107,7 +102,7 @@
               class="col-12"
               *ngIf="!confirmSendStatus[evidenceType.tokenName || ''].include"
             >
-              <div>
+              <!--<div>
                 <input
                   class="form-control form-control-sm"
                   type="file"
@@ -116,7 +111,7 @@
                     handleUpload(evidenceType.tokenName || '', $event.target)
                   "
                 />
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
@@ -130,7 +125,8 @@
         class="btn btn-sm btn-secondary"
         (click)="finishPreview()"
       >
-        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon><b>Proceed</b>
+        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
+        ><b translate="GUI/proceed.{{ selectedLanguage }}.label"></b>
       </button>
     </div>
   </div>
@@ -153,7 +149,9 @@
         <div class="d-flex">
           <div>
             <h5 class="modal-title" id="previewEvidenceModalLabel">
-              Preview <b>{{ getEvidenceTypeNameForPreview() }}</b> in
+              <span translate="GUI/Preview.{{ selectedLanguage }}.label" class="me-1"></span
+              ><b class="me-1">{{ getEvidenceTypeNameForPreview() }}</b
+              ><span translate="GUI/in.{{ selectedLanguage }}.label" class="me-1"></span>
             </h5>
           </div>
           <div>
@@ -167,19 +165,20 @@
               (click)="showDescription = !showDescription"
             >
               <span *ngIf="showDescription"
-                >with<small
+                ><span translate="GUI/with.{{ selectedLanguage }}.label"></span
+                ><small
                   ><fa-icon
                     class="ms-2 me-1"
                     [icon]="faEye"
                   ></fa-icon></small></span
               ><span *ngIf="!showDescription"
-                >without<small
+                ><span translate="GUI/without.{{ selectedLanguage }}.label"></span><small
                   ><fa-icon
                     class="ms-2 me-1"
                     [icon]="faEyeSlash"
                   ></fa-icon></small
               ></span>
-              descriptions
+              <span translate="GUI/descriptions.{{ selectedLanguage }}.label" class="ms-1"></span>
             </h5>
           </div>
         </div>
