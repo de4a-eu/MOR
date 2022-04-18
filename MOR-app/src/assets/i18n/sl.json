@@ -3811,7 +3811,7 @@
 	"comment" : "PoBox",
 	"sl" : {
 		"label" : "Poštni predal",
-		"description" : "Številko poštnega polja. IME INSPIRE za to je PostDelaryidentifier za katerega uporablja lastnost lokatorja ki ima lastnost tipa tista imena. Ta besednjak ločuje poštno polje za večjo neodvisnost tehnologije.",
+		"description" : "Številka poštnega predala. INSPIRE-jev naziv za to polje je'postalDeliveryIdentifier', za katerega se uporablja lokacijsko ime. Ta tezaver ločuje poštni predal za večjo neodvisnost od tehnologije.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3821,8 +3821,8 @@
 	"cardinality" : "00",
 	"comment" : "Thoroughface",
 	"sl" : {
-		"label" : "Thoroughface.",
-		"description" : "Citiranje iz smernic INSPIRE je čisto mesto",
+		"label" : "Prometna pot",
+		"description" : "Glede na smernice INSPIRE je prometna pot definirana kot komponenta naslova, ki predstavlja ime prehoda ali poti od ene lokacije na drugo. Prometna pot ni nujno cesta, vendar je lahko tudi povezava preko vodnih poti ali drugih možnosti.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3832,8 +3832,8 @@
 	"cardinality" : "00",
 	"comment" : "Locator designator",
 	"sl" : {
-		"label" : "Oznaka lokatorja.",
-		"description" : "Opocenik lokatorja je definiran s smernicami INSPIRE kot številka ali zaporedje znakov ki enolično identificirajo lokator v ustreznih področjih (-ih). Celotna identifikacija lokatorja lahko vključuje enega ali več lokatorjev. V enostavnejših pogojih je to številka stavbe številka stanovanja itd. Za naslov kot je Stanovanje 3 17 Bridge Street je lokator stanovanje 3 17.",
+		"label" : "Oznaka lokatorja",
+		"description" : "Lokacijski opis je v okviru smernic INSPIRE definiran ko 'število ali zaporedje znakov, ki enolično določajo lokacijo znotraj relevantnih okvirov. Polna identifikacija lokacije lahko vključuje enega ali več lokacijskih opisov.' Poenostavljeno, to je lahko številka stavbe, stanovanja in podobno. Na primer, za naslov 'Stanovanje 13, Ulica na mostu 17,' je lokacijski opis 'Stanovanje 13, 17.'",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3843,8 +3843,8 @@
 	"cardinality" : "00",
 	"comment" : "Locator name",
 	"sl" : {
-		"label" : "Ime lokatorja",
-		"description" : "Na podlagi smernic INSPIRE je ime lokatorja opredeljeno kot",
+		"label" : "Naziv lokacije",
+		"description" : "Glede na smernice INSPIRE je naziv lokacije definiran kot 'Samostalnik(i), ki so vezani na fizično entiteto na lokaciji. Naziv lokacije je lahko naziv posestva ali kompleksa, stavba ali del stavbe, ali pa celo ime sobe v stavbi. Ključna razlika med lokacijo in nazivom lokacije je, da naziv lokacije redko vsebuje številke. Na primer, 'Shumann, Berlaymont' je ime sejne sobe na sedežu Evropske komisije, kjer je naziv bolj primeren kot sama lokacija.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3855,7 +3855,7 @@
 	"comment" : "Address area",
 	"sl" : {
 		"label" : "Območje naslova",
-		"description" : "Ob upoštevanju opredelitve ZVANIRE je področje naslova",
+		"description" : "Glede na definicijo INSPIRE je območje naslova 'ime ali imena geografskega področja ali lokalnosti, ki združuje skupino naslovov z namenom naslavljanja brez navezave na administrativno enoto.' Tipično je to del mesta, okrožje ali vas.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3865,7 +3865,7 @@
 	"cardinality" : "00",
 	"comment" : "Post name",
 	"sl" : {
-		"label" : "Ime objave",
+		"label" : "Naziv pošte",
 		"description" : "Ključna poštna razdelitev naslova običajno mesto. (Opredelitev INSPIRE je 'Eno ali več imen ustvarjenih in vzdrževanih za poštne namene da bi ugotovili pododdelstvo naslovov in poštnih točk.)",
 		"example" : "",
 		"verified" : "true"
@@ -3876,7 +3876,7 @@
 	"cardinality" : "00",
 	"comment" : "Post code",
 	"sl" : {
-		"label" : "Post Code.",
+		"label" : "Poštna številka",
 		"description" : "Poštna številka po pošti (A.K.A Poštna številka Poštna številka itd.). Post kode so skupni elementi v poštnih naslovnih sistemih mnogih držav.",
 		"example" : "",
 		"verified" : "true"
@@ -4482,7 +4482,11 @@
 	"comment" : "Family name",
 	"sl" : {
 		"label" : "Priimek",
+<<<<<<< HEAD
 		"description" : "Družinsko ime običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone ki so del družinskega imena npr. 'de Boer' 'van de Putte' 'von und zu orlow'. Več družinskih imen na primer običajno najdemo v hispanskih državah se evidentirajo v polju posameznega zasebnega imena tako da bi se na primer Miguel de Cervantes Saavedra imeno ime zabeležila kot de Cervantes Saavedra.",
+=======
+		"description" : "Družinsko ime, ki ga običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. V polju se lahko zabeleži tudi več družinskih imen, kot je to običajno v hispanskih državah in se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer ime Miguel de Cervantes Saavedra zabeležilo kot 'de Cervantes Saavedra'.",
+>>>>>>> 4bbc4b0babb898d40c3f69ab8aa26d0db1a21a44
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4493,7 +4497,11 @@
 	"comment" : "Given name",
 	"sl" : {
 		"label" : "Ime",
+<<<<<<< HEAD
 		"description" : "Ime ali več imenih imen so imenovalci ki identificirajo posameznika znotraj družine. Ti so dana osebam njegovim staršem ob rojstvu ali pa je lahko zakonito priznan kot dana imena s formalnim postopkom. Vsa določena imena so naročena na enem polju tako da je na primer dano ime za Johann Sebastian Bacha Johann Sebastian.",
+=======
+		"description" : "Ime ali več imenih imen, ki identificirajo posameznika znotraj družine. Ta določijo njihovi starši ob rojstvu ali pa so lahko zakonito določeno s formalnim postopkom. Vsa določena imena so urejena v enem polju, tako da je na primer dano ime za Johanna Sebastiana Bacha 'Johann Sebastian'.",
+>>>>>>> 4bbc4b0babb898d40c3f69ab8aa26d0db1a21a44
 		"example" : "",
 		"verified" : "true"
 	}
