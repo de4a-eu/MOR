@@ -4482,11 +4482,7 @@
 	"comment" : "Family name",
 	"sl" : {
 		"label" : "Priimek",
-<<<<<<< HEAD
-		"description" : "Družinsko ime običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone ki so del družinskega imena npr. 'de Boer' 'van de Putte' 'von und zu orlow'. Več družinskih imen na primer običajno najdemo v hispanskih državah se evidentirajo v polju posameznega zasebnega imena tako da bi se na primer Miguel de Cervantes Saavedra imeno ime zabeležila kot de Cervantes Saavedra.",
-=======
 		"description" : "Družinsko ime, ki ga običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. V polju se lahko zabeleži tudi več družinskih imen, kot je to običajno v hispanskih državah in se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer ime Miguel de Cervantes Saavedra zabeležilo kot 'de Cervantes Saavedra'.",
->>>>>>> 4bbc4b0babb898d40c3f69ab8aa26d0db1a21a44
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4497,11 +4493,7 @@
 	"comment" : "Given name",
 	"sl" : {
 		"label" : "Ime",
-<<<<<<< HEAD
-		"description" : "Ime ali več imenih imen so imenovalci ki identificirajo posameznika znotraj družine. Ti so dana osebam njegovim staršem ob rojstvu ali pa je lahko zakonito priznan kot dana imena s formalnim postopkom. Vsa določena imena so naročena na enem polju tako da je na primer dano ime za Johann Sebastian Bacha Johann Sebastian.",
-=======
 		"description" : "Ime ali več imenih imen, ki identificirajo posameznika znotraj družine. Ta določijo njihovi starši ob rojstvu ali pa so lahko zakonito določeno s formalnim postopkom. Vsa določena imena so urejena v enem polju, tako da je na primer dano ime za Johanna Sebastiana Bacha 'Johann Sebastian'.",
->>>>>>> 4bbc4b0babb898d40c3f69ab8aa26d0db1a21a44
 		"example" : "",
 		"verified" : "true"
 	}

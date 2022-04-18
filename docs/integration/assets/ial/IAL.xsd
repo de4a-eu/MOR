@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	         xmlns="http://www.de4a.eu/2020/ial/v2"
+	         xmlns:ct="http://www.de4a.eu/2020/commons/type/v2"
+           targetNamespace="http://www.de4a.eu/2020/ial/v2" 
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Simple types -->
+  
+  <!-- Simple types that need to be in sync with common-types -->
+
+  <xs:simpleType name="CountryType">
+    <xs:restriction base="xs:token">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="IdType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+      <xs:pattern value="[^\s+][^\s]+[^\s+]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Simple types specific to IAL -->
+  
+  <xs:simpleType name="AtuCodeType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AtuLatinNameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="AtuLevelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="nuts0"/>
+      <xs:enumeration value="nuts1"/>
+      <xs:enumeration value="nuts2"/>
+      <xs:enumeration value="nuts3"/>
+      <xs:enumeration value="lau"/>
+      <xs:enumeration value="edu"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DataOwnerPrefLabelType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="500"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Request IAL stuff -->
+
+
+
+	<xs:element name="RequestLookupRoutingInformation" >
+	<!-- request is an HTTP POST to {server}/{country} or {server} and a mandatory POST parameter with the list of canonical evidence type URIs separated by coma. -->
+	</xs:element>
+  
+  <!-- Response IAL stuff -->
+  
+  <xs:complexType name="ParameterType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="Optional" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ParameterSetType">
+    <xs:sequence>
+      <xs:element name="Title" type="xs:string" />
+      <xs:element name="Parameter" type="ParameterType" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>  
+  </xs:complexType>
+
+  <xs:complexType name="ProvisionType">
+    <xs:sequence>
+      <xs:element name="AtuLevel" type="AtuLevelType" />
+      <xs:element name="AtuCode" type="AtuCodeType" />
+      <xs:element name="AtuLatinName" type="AtuLatinNameType" />
+      <xs:element name="DataOwnerId" type="IdType" />
+      <xs:element name="DataOwnerPrefLabel" type="DataOwnerPrefLabelType" />
+      <xs:element name="ParameterSet" type="ParameterSetType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ResponsePerCountryType">
+    <xs:sequence>
+      <xs:element name="Provision" type="ProvisionType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="CountryCode" type="CountryType" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="ResponseItemType">
+    <xs:sequence>
+      <xs:element name="ResponsePerCountry" type="ResponsePerCountryType" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="CanonicalObjectTypeId" type="IdType" use="required" />
+  </xs:complexType>
+
+  <!-- Response IAL error -->
+  <xs:simpleType name="CodeErrorType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TextErrorType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="4000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ErrorType">
+    <xs:sequence>
+      <xs:element name="Code" type="CodeErrorType"/>
+      <xs:element name="Text" type="TextErrorType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Response IAL generic -->
+
+  <xs:complexType name="ResponseLookupRoutingInformationType">
+    <xs:choice>
+      <xs:element name="ResponseItem" type="ResponseItemType" maxOccurs="unbounded"/>
+      <xs:element name="Error" type="ErrorType" maxOccurs="unbounded"/>
+    </xs:choice>
+  </xs:complexType>
+
+	<xs:element name="ResponseLookupRoutingInformation" type="ResponseLookupRoutingInformationType"/>
+</xs:schema>

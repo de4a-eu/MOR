@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===== Schema Header ================================= -->
+<!--	
+	Domicile Residence Evidence based on SDG Model and ISA2 Core Vocabularies
+	version 1.6
+	Notes: Use of the xsd:restriction method for reusing the Core Vocabularies. Added the EndOfMarriageType class
+	See also the table specification with design decisions: https://ihuedu-my.sharepoint.com/:x:/g/personal/i_konstantinidis_ihu_edu_gr/ES1FBLrtoqBNuINmmwklN4YB3-nlFyK8leA11HFEemE_EQ?e=fVIp5l
+-->
+<!-- ===================================================== -->
+<xsd:schema xmlns="urn:eu-de4a:xsd:CanonicalEvidenceType::DomicileRegistrationEvidence:v1.6" xmlns:udt="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:person="http://www.w3.org/ns/corevocabulary/person" xmlns:location="http://www.w3.org/ns/corevocabulary/location" xmlns:cvb="http://www.w3.org/ns/corevocabulary/BasicComponents" xmlns:cva="http://www.w3.org/ns/corevocabulary/AggregateComponents" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" targetNamespace="urn:eu-de4a:xsd:CanonicalEvidenceType::DomicileRegistrationEvidence:v1.6" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!-- ===== Imports======================================== -->
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:bdndr:schema:xsd:UnqualifiedDataTypes-1" schemaLocation="../_external/UBL-2.3/xsd/common/BDNDR-UnqualifiedDataTypes-1.1.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/corevocabulary/person" schemaLocation="../_external/Core_Vocabularies_XML_Schema_v1.00/xsd/CorePerson-v1.00.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/corevocabulary/location" schemaLocation="../_external/Core_Vocabularies_XML_Schema_v1.00/xsd/CoreLocation-v1.00.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/corevocabulary/BasicComponents" schemaLocation="../_external/Core_Vocabularies_XML_Schema_v1.00/xsd/CoreVocabularyBasicComponents-v1.00.xsd"/>
+	<xsd:import namespace="http://www.w3.org/ns/corevocabulary/AggregateComponents" schemaLocation="../_external/Core_Vocabularies_XML_Schema_v1.00/xsd/CoreVocabularyAggregateComponents-v1.00.xsd"/>
+	<xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../_external/UBL-2.3/xsd/common/UBL-CommonBasicComponents-2.3.xsd"/>
+	<!-- ===================================================== -->
+	<xsd:element name="DomicileRegistrationEvidence" type="DomicileRegistrationEvidenceType"/>
+	<xsd:complexType name="DomicileRegistrationEvidenceType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This class contains elements related to the Domicile Registration Evidence.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Identifier" type="cva:CvidentifierType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						An unambiguous reference to the Domicile Registration Evidence.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IssueDate" type="udt:DateType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The most recent date on which the  Domicile Registration Evidence instance was issued.	
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IssuingAuthority" type="PublicOrganisationType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A Public Organisation with official authority in charge of issuing the Residence Proof.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="IssuingPlace" type="ConstrainedLocationAddressType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The Location where the Residence Proof was issued.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="CertifiesDomicile" type="DomicileType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Attesting in a formal way that the Domicile is true.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="PublicOrganisationType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Any organisation that is defined as being part of the public sector by a legal framework at any level.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Identifier" type="cva:CvidentifierType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Many organisations are referred to by an acronym or some other identifier. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European Anti-Fraud Office, and so on. These are formally recognised by the European Commission which provides a list of such acronyms. Analogous lists should be used in other contexts.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PrefLabel" type="udt:TextType" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="DomicileType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This class contains elements related to the domicile.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Inhabitant" type="PersonType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Person, living in the domicile.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Domicile" type="ConstrainedLocationAddressType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Current domicile inhabited by person.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="PersonType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				This class contains elements related to the person
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="PersonName" type="NameType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. “de Boer”, “van de Putte”, “von und zu Orlow”. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's family name would be recorded as "de Cervantes Saavedra".
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Identifier" type="cva:CvidentifierType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The identifier relation is used to link a Person to any formally issued Identifier for that Person.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="DateOfBirth" type="DateObjectType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The day on which the Person was born.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Gender" type="udt:CodeType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+					The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or not applicable, not known or not stated.
+				</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="MaritalStatus" type="udt:CodeType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						Situation with regard to whether a Person was single, married, separated, divorced or widowed.
+						To be based on Eurovoc marital status as a codelist: https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://eurovoc.europa.eu/4184&amp;lang=en
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PlaceOfBirth" type="LocationAddressType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The Location where the Person was born.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Citizenship" type="JurisdictionType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="JurisdictionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+					The authority that an official organisation has, to make legal decisions about somebody/something.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="RestrictedJurisdictionType">
+				<xsd:sequence>
+					<xsd:element name="Identifier" type="cvb:JurisdictionIDType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The value for the id property is a URI for that Jurisdiction.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="RestrictedJurisdictionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+					The authority that an official organisation has, to make legal decisions about somebody/something.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="cva:JurisdictionType">
+				<xsd:sequence>
+					<xsd:element ref="cbc:Name" minOccurs="1" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The name is simply a string that identifies the Jurisdiction, typically a country, with or without a language tag.	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="ConstrainedLocationAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+					The Address of a location based on the INSPIRE Address representation. It is subclass of the class Address.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AddressType">
+				<xsd:sequence>
+					<xsd:element name="AdminUnitL2" type="cvb:AdminunitSecondlineType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The region of the address, usually a county, state or other such area that typically encompasses several localities.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AdminUnitL1" type="cvb:AdminunitFirstlineType" minOccurs="1" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="LocationAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+					The Address of a location based on the INSPIRE Address representation. It is subclass of the class Address.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="AddressType">
+				<xsd:sequence>
+					<xsd:element name="AdminUnitL2" type="cvb:AdminunitSecondlineType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The region of the address, usually a county, state or other such area that typically encompasses several localities.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="AdminUnitL1" type="cvb:AdminunitFirstlineType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="AddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+					Representation of address based on the INSPIRE Address Representation.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="RestrictedAddressType">
+				<xsd:sequence>
+					<xsd:element name="AddressArea" type="cvb:CvaddressAreaType" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Taking the definition from INSPIRE, the address area is: the name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit." This would typically be part of a city, a neighbourhood or village.	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="RestrictedAddressType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+					Representation of address based on the INSPIRE Address Representation.
+				</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:restriction base="cva:CvaddressType">
+				<xsd:sequence>
+					<xsd:element ref="cvb:PoBox" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The Post Office Box number. INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cvb:LocatorDesignator" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The locator designator is defined by the INSPIRE guidelines as "a number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators." In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17."	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cvb:LocatorName" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								Based on the INSPIRE guidelines, locator name is defined as: "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cvb:Thoroughfare" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.	
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cvb:PostName" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The key postal division of the address, usually the city. (INSPIRE's definition is "One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="cvb:PostCode" minOccurs="0" maxOccurs="1">
+						<xsd:annotation>
+							<xsd:documentation xml:lang="en">
+								The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="DateObjectType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				Structured representation of date with year, month and day of the month.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="Year" type="xsd:gYear" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.	
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Month" type="xsd:gMonth" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Day" type="xsd:gDay" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+	<xsd:complexType name="NameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				A name of a person that includes the family and given name.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FamilyName" type="cbc:FamilyNameType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. “de Boer”, “van de Putte”, “von und zu Orlow”. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's family name would be recorded as "de Cervantes Saavedra".
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="GivenName" type="cvb:GivenNameType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation xml:lang="en">
+						A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is “Johann Sebastian”.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--=====================================================================================-->
+</xsd:schema>

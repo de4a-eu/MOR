@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MOR ER</title>
+    <link rel="stylesheet" href="mor-elements.css" />
+    <script src="mor-elements.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-4">MOR-ER <small>(integration demo)</small></h1>
+          <p>
+            The integration of <strong>MOR-ER component</strong> is possible via
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+              target="_blank"
+              >Web Components</a
+            >, where
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
+              target="_blank"
+              >custom element</a
+            >
+            <b><code>de4a-mor-er</code></b> is available.
+          </p>
+          <p>The following <strong>minimal example</strong> depicts that developer needs to include the following files (available in <a href="https://github.com/de4a-wp3/MOR/tree/main/docs/integration" target="_blank">project's Github</a>):
+            <ul>
+              <li>CSS file <b><code>mor-elements.css</code></b>,</li> 
+              <li>JS file <b><code>mor-elements.js</code></b></li>
+            </ul>
+            and custom element <b><code>de4a-mor-er</code></b> with the following attributes:
+            <ul>
+              <li><b><code>default-lang</code></b>,<ul><li><small>single value from &rarr; </small><code>en</code>, <code>sl</code>, <code>es</code>, <code>pt</code>, <code>fr</code>,</li></ul></li>
+              <li><b><code>requester-country-code</code></b>,<ul><li><small>single value from &rarr; </small><code>AT</code>, <code>BE</code>, <code>BG</code>, <code>HR</code>, <code>CY</code>, <code>CZ</code>, <code>DK</code>, <code>EE</code>, <code>FI</code>, <code>FR</code>, <code>DE</code>, <code>EL</code>, <code>HU</code>, <code>IE</code>, <code>IT</code>, <code>LV</code>, <code>LT</code>, <code>LU</code>, <code>MT</code>, <code>NL</code>, <code>PL</code>, <code>PT</code>, <code>RO</code>, <code>SK</code>, <code>SI</code>, <code>ES</code>, <code>SE</code>,</li></ul></li>
+              <li><b><code>canonical-evidence-types</code></b>,<ul><li><small>multiple (comma separated values) from &rarr; </small><code>BirthCertificate</code>, <code>MarriageCertificate</code>,</li></ul></li>
+              <li><b><code>output-j-s-array-id</code></b>,<ul><li><small>name of output variable, stored in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">Local Storage</a> </small>(e.g. <code>outputJSArrayIdMorEr</code>)</li></ul></li>
+            </ul>
+          </p>
+          </div>
+          <div class="col-12 mt-4 mb-2"><h2>Source code <small>(example)</small></h2></div>
+          <div class="col-12">
+          <code>
+            <pre class="text-muted">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;MOR ER&lt;/title&gt;
+    <span style="color:#d63384;">&lt;link rel="stylesheet" href="<b>mor-elements.css</b>" /&gt;
+    &lt;script src="<b>mor-elements.js</b>"&gt;&lt;/script&gt;</span>
+  &lt;/head&gt;
+  &lt;body&gt;
+    <span style="color:#d63384;">&lt;<b>de4a-mor-er</b>
+      <b>default-lang</b>="en"
+      <b>requester-country-code</b>="BE"
+      <b>canonical-evidence-types</b>="BirthCertificate,MarriageCertificate"
+      <b>output-j-s-array-id</b>="outputJSArrayIdMorEr"
+    &gt;&lt;<b>/de4a-mor-er</b>&gt;</span>
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+          </code>
+        </div>
+        <div class="col-12 mt-4 mb-2"><h2>Demo <small>(example)</small></h2></div>
+        <div class="col-12 mb-4">
+          <de4a-mor-er
+            default-lang="en"
+            requester-country-code="BE"
+            canonical-evidence-types="BirthCertificate,MarriageCertificate"
+            output-j-s-array-id="outputJSArrayIdMorEr"
+          ></de4a-mor-er>
+        </div>
+        <div class="col-12 mt-4 mb-2"><h2>Building from source <small>(technical details)</small></h2></div>
+        <div class="col-12">
+          <p>Source code of Angular application is availale in <code>MOR-app</code> folder and MOR-ER Web Component can be regenerated with the following command <code>npm run build:elements</code>.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

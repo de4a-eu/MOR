@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build --output-path ../docs/ --base-href /MOR/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:elements": "ng build --project elements --output-hashing none && npm run pack:elements && cp dist/elements/mor-elements.js projects/elements/src/integration/ && cp dist/elements/styles.css projects/elements/src/integration/mor-elements.css && cp dist/elements/{es,at,be,gb,bg,hr,cy,cz,hu,de,fr,dk,ie,lt,mt,fi,gr,it,ee,lu,lv,pt,sk,nl,pl,ro,si,se}.svg projects/elements/src/integration/",
+    "pack:elements": "cat ./dist/elements/{runtime,polyfills,main,scripts}.js > dist/elements/mor-elements.js && ls -lah dist/elements/mor-elements.js && ls -lah dist/elements/styles.css",
+    "serve:elements": "http-server projects/elements/src/integration",
+    "build-serve:elements": "npm run build:elements && npm run serve:elements",
+    "build:gh-pages": "ng build --output-path ../docs/ --base-href /MOR/ && npm run build:elements && cp -r ./projects/elements/src/integration ../docs/integration"
   },
   "private": true,
   "dependencies": {
@@ -14,6 +19,7 @@
     "@angular/common": "~13.1.3",
     "@angular/compiler": "~13.1.3",
     "@angular/core": "~13.1.3",
+    "@angular/elements": "^13.1.3",
     "@angular/forms": "~13.1.3",
     "@angular/platform-browser": "~13.1.3",
     "@angular/platform-browser-dynamic": "~13.1.3",

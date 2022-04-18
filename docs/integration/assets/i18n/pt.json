@@ -3,9 +3,9 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Rojstvo",
-		"description" : "Uradni dokument ali podatki ki dokazujejo rojstvo otroka.",
+	"pt" : {
+		"label" : "Evidência de nascimento",
+		"description" : "Documento oficial ou dados provando o nascimento de uma criança.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -14,9 +14,9 @@
 	"type" : "Identifier",
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Nedvoumno sklicevanje na rojstni dokaz.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "Uma referência inequívoca às evidências de nascimento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -25,9 +25,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
-	"sl" : {
-		"label" : "Datum izdaje",
-		"description" : "Najnovejši datum na katerega je bil izdan primer rojstva dokazov.",
+	"pt" : {
+		"label" : "Data de emissão",
+		"description" : "A data mais recente em que a instância da evidência de nascimento foi emitida.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -36,9 +36,9 @@
 	"type" : "PublicOrganisation",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Organ izdaje",
-		"description" : "Javna organizacija z uradnim organom ki je zadolžena za izdajo rojstnih dokazov.",
+	"pt" : {
+		"label" : "Autoridade emissora",
+		"description" : "Uma entidade pública com autoridade oficial encarregada de emitir a evidência de nascimento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -47,9 +47,9 @@
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izdajanje kraja",
-		"description" : "Lokacijo kjer so bili izdani rojstni dokaz.",
+	"pt" : {
+		"label" : "Local de emissão",
+		"description" : "O local onde a evidência de nascimento foi emitida.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -58,7 +58,7 @@
 	"type" : "LocationAddress/AdminUnitL2",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -69,7 +69,7 @@
 	"type" : "LocationAddress/AdminUnitL1",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -80,9 +80,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Potrjuje rojstvo",
-		"description" : "Uradno potrjevanje da je rojstvo res.",
+	"pt" : {
+		"label" : "Certifica o nascimento",
+		"description" : "Atestando de forma formal que o nascimento é verdadeiro.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -91,9 +91,9 @@
 	"type" : "Person",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otrok",
-		"description" : "Oseba ki se je rodila ob rojstvu. Oseba katere koli starosti ki je sin ali hči.",
+	"pt" : {
+		"label" : "Criança",
+		"description" : "A pessoa que nasce no nascimento. Uma pessoa de qualquer idade, que é filho ou filha.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -102,7 +102,7 @@
 	"type" : "Person/DateOfBirth",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -113,9 +113,9 @@
 	"type" : "PersonGenderEnum",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
-		"description" : "",
+		"description" : "Género da pessoa nascida",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -124,7 +124,7 @@
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -135,9 +135,9 @@
 	"type" : "Person",
 	"cardinality" : "01",
 	"comment" : "",
-	"sl" : {
-		"label" : "Starš",
-		"description" : "SPOLO OSEBENE OSEBE",
+	"pt" : {
+		"label" : "Dados do progenitor",
+		"description" : "O progenitor da criança. Dados de um dos dois pais que constam na certidão de nascimento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -146,3132 +146,3132 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
-		"description" : "ISO 3166-1 Kode alfa-3 so tričrkovne kode države opredeljene v standardu ISO 3166 ki jo je objavila Mednarodna organizacija za standardizacijo za zastopanje držav odvisnih ozemelj in posebnih področij geografskega interesa.",
+		"description" : "Os códigos alfa-3 ISO 3166-1 são códigos de três letras definidos na ISO 3166-1, parte do padrão ISO 3166 publicado pela International Organization for Standardization, para representar países, territórios dependentes e áreas especiais de interesse geográfico.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/1A0" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Kosovo",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ABW" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Aruba",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AFG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Afganistan",
+	"pt" : {
+		"label" : "Afeganistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AFI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francoski Afar in Issas",
+	"pt" : {
+		"label" : "Território Francês dos Afares e Issas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AGO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Angola",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AIA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Angvila",
+	"pt" : {
+		"label" : "Anguila",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ALA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ålandski otoki",
+	"pt" : {
+		"label" : "Ilhas Aland",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ALB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Albanija",
+	"pt" : {
+		"label" : "Albânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AND" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Andora",
+	"pt" : {
+		"label" : "Andorra",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ANT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nizozemski Antili",
+	"pt" : {
+		"label" : "Antilhas Holandesas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ARE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Združeni Arabski Emirati",
+	"pt" : {
+		"label" : "Emirados Árabes Unidos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ARG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Argentina",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ARM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Armenija",
+	"pt" : {
+		"label" : "Arménia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ASM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ameriška Samoa",
+	"pt" : {
+		"label" : "Samoa Americana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ATA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Antarktika",
+	"pt" : {
+		"label" : "Antártida",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ATB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Britansko antarktično ozemlje",
+	"pt" : {
+		"label" : "Território Antártido Britânico",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ATF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francoske južne dežele",
+	"pt" : {
+		"label" : "Terras Austrais e Antárticas Francesas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ATG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Antigva in Barbuda",
+	"pt" : {
+		"label" : "Antígua e Barbuda",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ATN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Dežela Dronning Maud",
+	"pt" : {
+		"label" : "Terra da Rainha Maud",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AUS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Avstralija",
+	"pt" : {
+		"label" : "Austrália",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AUT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Avstrija",
+	"pt" : {
+		"label" : "Áustria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/AZE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Azerbajdžan",
+	"pt" : {
+		"label" : "Azerbaijão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BDI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Burundi",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BEL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Belgija",
+	"pt" : {
+		"label" : "Bélgica",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BEN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Benin",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BES" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bonaire, Sint Eustatius in Saba",
+	"pt" : {
+		"label" : "Bonaire, Sint Eustatius e Saba",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BFA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Burkina Faso",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BGD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bangladeš",
+	"pt" : {
+		"label" : "Bangladesh",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BGR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bolgarija",
+	"pt" : {
+		"label" : "Bulgária",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BHR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bahrajn",
+	"pt" : {
+		"label" : "Bahrein",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BHS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bahami",
+	"pt" : {
+		"label" : "Bahamas.",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BIH" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bosna in Hercegovina",
+	"pt" : {
+		"label" : "Bósnia e Herzegovina",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BLM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Saint Barthélemy",
+	"pt" : {
+		"label" : "São Barthélemy.",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BLR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Belorusija",
+	"pt" : {
+		"label" : "Bielorrússia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BLZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Belize",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BMU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bermuda",
+	"pt" : {
+		"label" : "Bermudas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BOL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bolivija",
+	"pt" : {
+		"label" : "Bolívia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BRA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Brazilija",
+	"pt" : {
+		"label" : "Brasil",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BRB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Barbados",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BRN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Brunej",
+	"pt" : {
+		"label" : "Brunei",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BTN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Butan",
+	"pt" : {
+		"label" : "Butão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BUR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Burma",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BVT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otok Bouvet",
+	"pt" : {
+		"label" : "Ilha Bouvet",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BWA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bocvana",
+	"pt" : {
+		"label" : "Botsuana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/BYS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Belorusija",
+	"pt" : {
+		"label" : "Bielorrússia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CAF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "centralna afriška republika",
+	"pt" : {
+		"label" : "República Centro-Africana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CAN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kanada",
+	"pt" : {
+		"label" : "Canadá",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CCK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kokosovi (Keelingovi) otoki",
+	"pt" : {
+		"label" : "Ilhas Cocos (Keeling)",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CHE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Švica",
+	"pt" : {
+		"label" : "Suíça",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CHL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Čile",
+	"pt" : {
+		"label" : "Chile",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CHN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kitajska",
+	"pt" : {
+		"label" : "China",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CIV" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Slonokoščena obala",
+	"pt" : {
+		"label" : "Costa do Marfim",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CMR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kamerun",
+	"pt" : {
+		"label" : "Camarões",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/COD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Demokratična republika Kongo",
+	"pt" : {
+		"label" : "República Democrática do Congo",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/COG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kongo",
+	"pt" : {
+		"label" : "Congo",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/COK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Cookovi otoki",
+	"pt" : {
+		"label" : "Ilhas Cook",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/COL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kolumbija",
+	"pt" : {
+		"label" : "Colômbia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/COM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Komori",
+	"pt" : {
+		"label" : "Comores",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CPT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Clipperton",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CPV" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Cabo Verde",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CRI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kostarika",
+	"pt" : {
+		"label" : "Costa Rica",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CSK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Češkoslovaška",
+	"pt" : {
+		"label" : "Checoslováquia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CTE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kanton in otoki Enderbury",
+	"pt" : {
+		"label" : "Ilhas Cantão e Enderbury",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CUB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kuba",
+	"pt" : {
+		"label" : "Cuba",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CUW" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Curaçao",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CXR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Božični otok",
+	"pt" : {
+		"label" : "Ilha do Natal",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CYM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kajmanski otoki",
+	"pt" : {
+		"label" : "Ilhas Caimão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CYP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ciper",
+	"pt" : {
+		"label" : "Chipre",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/CZE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Češka",
+	"pt" : {
+		"label" : "República Checa",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DDR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vzhodna Nemčija",
+	"pt" : {
+		"label" : "Alemanha Oriental",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DEU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nemčija",
+	"pt" : {
+		"label" : "Alemanha",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DHY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Dahomey",
+	"pt" : {
+		"label" : "Reino do Daomé",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DJI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Džibuti",
+	"pt" : {
+		"label" : "Djibuti",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DMA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Dominika",
+	"pt" : {
+		"label" : "Dominica",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DNK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Danska",
+	"pt" : {
+		"label" : "Dinamarca",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DOM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Dominikanska republika",
+	"pt" : {
+		"label" : "República Dominicana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/DZA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Alžirija",
+	"pt" : {
+		"label" : "Argélia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ECU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ekvador",
+	"pt" : {
+		"label" : "Equador",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/EGY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Egipt",
+	"pt" : {
+		"label" : "Egito",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ERI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Eritreja",
+	"pt" : {
+		"label" : "Eritreia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ESH" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zahodna Sahara",
+	"pt" : {
+		"label" : "Saara Ocidental",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ESP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Španija",
+	"pt" : {
+		"label" : "Espanha",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/EST" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Estonija",
+	"pt" : {
+		"label" : "Estónia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ETH" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Etiopija",
+	"pt" : {
+		"label" : "Etiópia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/EUR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Evropska unija",
+	"pt" : {
+		"label" : "União Europeia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FIN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Finska",
+	"pt" : {
+		"label" : "Finlândia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FJI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Fidži",
+	"pt" : {
+		"label" : "Fiji",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FLK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Falklandski otoki",
+	"pt" : {
+		"label" : "Malvinas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FQ0" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francoske južne in antarktične dežele",
+	"pt" : {
+		"label" : "Terras Austrais e Antárticas Francesas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FRA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francija",
+	"pt" : {
+		"label" : "França",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FRO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ferski otoki",
+	"pt" : {
+		"label" : "Ilhas Faroe",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FSM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mikronezija",
+	"pt" : {
+		"label" : "Micronésia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/FXX" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Metropolitanska Francija",
+	"pt" : {
+		"label" : "França Metropolitana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GAB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gabon",
+	"pt" : {
+		"label" : "Gabão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GBR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Združeno kraljestvo",
+	"pt" : {
+		"label" : "Reino Unido",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GEL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otoki Gilbert in Ellice",
+	"pt" : {
+		"label" : "Ilhas Gilbert e Ellice",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GEO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gruzija",
+	"pt" : {
+		"label" : "Geórgia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GGY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Guernsey",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GHA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Gana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GIB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Gibraltar",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GIN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gvineja",
+	"pt" : {
+		"label" : "Guiné",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GLP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Guadeloupe",
+	"pt" : {
+		"label" : "Guadalupe",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GMB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gambija",
+	"pt" : {
+		"label" : "Gâmbia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GNB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gvineja Bissau",
+	"pt" : {
+		"label" : "Guiné-Bissau",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GNQ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ekvatorialna Gvineja",
+	"pt" : {
+		"label" : "Guiné Equatorial",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GRC" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Grčija",
+	"pt" : {
+		"label" : "Grécia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GRD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Grenada",
+	"pt" : {
+		"label" : "Granada",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GRL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Grenlandija",
+	"pt" : {
+		"label" : "Gronelândia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GTM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gvatemala",
+	"pt" : {
+		"label" : "Guatemala",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GUF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francoska Gvajana",
+	"pt" : {
+		"label" : "Guiana Francesa",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GUM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Guam",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/GUY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Gvajana",
+	"pt" : {
+		"label" : "Guiana",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HKG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Hong Kong",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HMD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otok Heard in otok McDonald",
+	"pt" : {
+		"label" : "Ilhas Heard e McDonald",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HND" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Honduras",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HRV" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Hrvaška",
+	"pt" : {
+		"label" : "Croácia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HTI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Haiti",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HUN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Madžarska",
+	"pt" : {
+		"label" : "Hungria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/HVO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zgornja Volta",
+	"pt" : {
+		"label" : "Volta superior",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IDN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Indonezija",
+	"pt" : {
+		"label" : "Indonésia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IMN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "otok Man",
+	"pt" : {
+		"label" : "Ilha de Man",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IND" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Indija",
+	"pt" : {
+		"label" : "Índia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IOT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Britansko ozemlje Indijskega oceana",
+	"pt" : {
+		"label" : "Território do Oceano Índico Britânico",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IRL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Irska",
+	"pt" : {
+		"label" : "Irlanda",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IRN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Iran",
+	"pt" : {
+		"label" : "Irão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/IRQ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Irak",
+	"pt" : {
+		"label" : "Iraque",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ISL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Islandija",
+	"pt" : {
+		"label" : "Islândia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ISR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izrael",
+	"pt" : {
+		"label" : "Israel",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ITA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Italija",
+	"pt" : {
+		"label" : "Itália",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/JAM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Jamajka",
+	"pt" : {
+		"label" : "Jamaica",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/JEY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Jersey",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/JOR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Jordan",
+	"pt" : {
+		"label" : "Jordânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/JPN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Japonska",
+	"pt" : {
+		"label" : "Japão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/JTN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otok Johnston",
+	"pt" : {
+		"label" : "Ilha de Johnston",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KAZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kazahstan",
+	"pt" : {
+		"label" : "Cazaquistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KEN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kenija",
+	"pt" : {
+		"label" : "Quénia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KGZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kirgizistan",
+	"pt" : {
+		"label" : "Quirguistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KHM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kambodža",
+	"pt" : {
+		"label" : "Camboja",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KIR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Kiribati",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KNA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Saint Kitts in Nevis",
+	"pt" : {
+		"label" : "São Cristóvão e Neves",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KOR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Južna Koreja",
+	"pt" : {
+		"label" : "Coreia do Sul",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/KWT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Kuvajt",
+	"pt" : {
+		"label" : "Kuwait",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LAO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Laos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LBN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Libanon",
+	"pt" : {
+		"label" : "Líbano",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LBR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Liberija",
+	"pt" : {
+		"label" : "Libéria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LBY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Libija",
+	"pt" : {
+		"label" : "Líbia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LCA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sveta Lucija",
+	"pt" : {
+		"label" : "Santa Lúcia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LIE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Liechtenstein",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LKA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Šrilanka",
+	"pt" : {
+		"label" : "Sri Lanka",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LSO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Lesoto",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LTU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Litva",
+	"pt" : {
+		"label" : "Lituânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LUX" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Luksemburg",
+	"pt" : {
+		"label" : "Luxemburgo",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/LVA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Latvija",
+	"pt" : {
+		"label" : "Letónia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MAC" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Macau",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MAF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sveti Martin",
+	"pt" : {
+		"label" : "Ilha de São Martinho",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MAR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Maroko",
+	"pt" : {
+		"label" : "Marrocos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MCO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Monako",
+	"pt" : {
+		"label" : "Mónaco",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MDA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Moldavija",
+	"pt" : {
+		"label" : "Moldávia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MDG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Madagaskar",
+	"pt" : {
+		"label" : "Madagáscar",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MDV" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Maldivi",
+	"pt" : {
+		"label" : "Maldivas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MEX" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mehika",
+	"pt" : {
+		"label" : "México",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MHL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Marshallovi otoki",
+	"pt" : {
+		"label" : "Ilhas Marshall",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MID" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Midwayski otoki",
+	"pt" : {
+		"label" : "Ilhas Midway",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MKD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Severna Makedonija",
+	"pt" : {
+		"label" : "Macedónia do Norte",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MLI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Mali",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MLT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Malta",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MMR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mjanmar/Burma",
+	"pt" : {
+		"label" : "Myanmar / Birmânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MNE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Črna gora",
+	"pt" : {
+		"label" : "Montenegro",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MNG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mongolija",
+	"pt" : {
+		"label" : "Mongólia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MNP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Severni Marianski otoki",
+	"pt" : {
+		"label" : "Ilhas Marianas do Norte",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MOZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mozambik",
+	"pt" : {
+		"label" : "Moçambique",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MRT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mavretanija",
+	"pt" : {
+		"label" : "Mauritânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MSR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Montserrat",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MTQ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Martinik",
+	"pt" : {
+		"label" : "Martinica",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MUS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Mavricij",
+	"pt" : {
+		"label" : "Ilhas Maurício",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MWI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Malavi",
+	"pt" : {
+		"label" : "Malawi",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MYS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Malezija",
+	"pt" : {
+		"label" : "Malásia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/MYT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Mayotte",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NAM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Namibija",
+	"pt" : {
+		"label" : "Namíbia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NCL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nova Kaledonija",
+	"pt" : {
+		"label" : "Nova Caledónia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NER" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Niger",
+	"pt" : {
+		"label" : "Níger",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NFK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otok Norfolk",
+	"pt" : {
+		"label" : "Ilha de Norfolk",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NGA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nigerija",
+	"pt" : {
+		"label" : "Nigéria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NHB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Novi Hebridi",
+	"pt" : {
+		"label" : "Novas Hébridas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NIC" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nikaragva",
+	"pt" : {
+		"label" : "Nicarágua",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NIU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Niue",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NLD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nizozemska",
+	"pt" : {
+		"label" : "Países Baixos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NOR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Norveška",
+	"pt" : {
+		"label" : "Noruega",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NPL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Nepal",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NRU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Nauru",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NTZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nevtralna cona",
+	"pt" : {
+		"label" : "Zona neutra",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/NZL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nova Zelandija",
+	"pt" : {
+		"label" : "Nova Zelândia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/OMN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Oman",
+	"pt" : {
+		"label" : "Omã",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PAK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Pakistan",
+	"pt" : {
+		"label" : "Paquistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PAN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Panama",
+	"pt" : {
+		"label" : "Panamá",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PCI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zaupniško ozemlje pacifiških otokov",
+	"pt" : {
+		"label" : "Protetorado das Ilhas do Pacífico das Nações Unidas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PCN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otoki Pitcairn",
+	"pt" : {
+		"label" : "Ilhas de Pitcairn",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PCZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Območje Panamskega prekopa",
+	"pt" : {
+		"label" : "Zona do Canal do Panamá",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PER" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Peru",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PHL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Filipini",
+	"pt" : {
+		"label" : "Filipinas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PLW" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Palau",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PNG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Papua Nova Gvineja",
+	"pt" : {
+		"label" : "Papua Nova Guiné",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/POL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Poljska",
+	"pt" : {
+		"label" : "Polónia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PRI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Portoriko",
+	"pt" : {
+		"label" : "Porto Rico",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PRK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Severna Koreja",
+	"pt" : {
+		"label" : "Coreia do Norte",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PRT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Portugalska",
+	"pt" : {
+		"label" : "Portugal",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PRY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Paragvaj",
+	"pt" : {
+		"label" : "Paraguai",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PSE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Palestina",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PUS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Razni pacifiški otoki ZDA",
+	"pt" : {
+		"label" : "Diversas Ilhas do Pacífico dos Estados Unidos da América",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/PYF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francoska Polinezija",
+	"pt" : {
+		"label" : "Polinésia Francesa",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/QAT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Katar",
+	"pt" : {
+		"label" : "Catar",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/REU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Reunion",
+	"pt" : {
+		"label" : "Reunião",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/RHO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Južna Rodezija",
+	"pt" : {
+		"label" : "Rodésia do sul",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ROU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Romunija",
+	"pt" : {
+		"label" : "Roménia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/RUS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Rusija",
+	"pt" : {
+		"label" : "Rússia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/RWA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Ruanda",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SAU" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Savdska Arabija",
+	"pt" : {
+		"label" : "Arábia Saudita",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SCG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Srbija in Črna gora",
+	"pt" : {
+		"label" : "Sérvia e Montenegro",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SDN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sudan",
+	"pt" : {
+		"label" : "Sudão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SEN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Senegal",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SGP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Singapur",
+	"pt" : {
+		"label" : "Singapura",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SGS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Južna Georgia in Južni Sendvičevi otoki",
+	"pt" : {
+		"label" : "Geórgia do Sul e Ilhas Sandwich Sul",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SHN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sveta Helena, Vnebovzetje in Tristan da Cunha",
+	"pt" : {
+		"label" : "Santa Helena, Ascensão e Tristão da Cunha",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SJM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Svalbard in Jan Mayen",
+	"pt" : {
+		"label" : "Svalbard e Jan Mayen",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SKM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Sikkim",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SLB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Salomonovi otoki",
+	"pt" : {
+		"label" : "Ilhas Salomão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SLE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sierra Leone",
+	"pt" : {
+		"label" : "Serra Leoa",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SLV" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "El Salvador",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SMR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "San Marino",
+	"pt" : {
+		"label" : "São Marino",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SOM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Somalija",
+	"pt" : {
+		"label" : "Somália",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SPM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Saint Pierre in Miquelon",
+	"pt" : {
+		"label" : "São Pedro e Miquelão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SRB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Srbija",
+	"pt" : {
+		"label" : "Sérvia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SSD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Južni Sudan",
+	"pt" : {
+		"label" : "Sudão do Sul",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/STP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "São Tome in Principe",
+	"pt" : {
+		"label" : "São Tomé e Príncipe",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SUN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sovjetska zveza",
+	"pt" : {
+		"label" : "União Soviética",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SUR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Surinam",
+	"pt" : {
+		"label" : "Suriname",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SVK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Slovaška",
+	"pt" : {
+		"label" : "Eslováquia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SVN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Slovenija",
+	"pt" : {
+		"label" : "Eslovénia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SWE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Švedska",
+	"pt" : {
+		"label" : "Suécia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SWZ" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Eswatini",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SXM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sint Maarten",
+	"pt" : {
+		"label" : "São Martinho",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SYC" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sejšeli",
+	"pt" : {
+		"label" : "Seicheles",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/SYR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sirija",
+	"pt" : {
+		"label" : "Síria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TCA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Otoki Turks in Caicos",
+	"pt" : {
+		"label" : "Ilhas Turcas e Caicos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TCD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Čad",
+	"pt" : {
+		"label" : "Chade",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TGO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Iti",
+	"pt" : {
+		"label" : "Togo",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/THA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Tajska",
+	"pt" : {
+		"label" : "Tailândia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TJK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Tadžikistan",
+	"pt" : {
+		"label" : "Tajiquistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TKL" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Tokelau",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TKM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Turkmenistan",
+	"pt" : {
+		"label" : "Turquemenistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TLS" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vzhodni Timor",
+	"pt" : {
+		"label" : "Timor-Leste",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TMP" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vzhodni Timor",
+	"pt" : {
+		"label" : "Timor Leste",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TON" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Tonga",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TTO" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Trinidad in Tobago",
+	"pt" : {
+		"label" : "Trinidad e Tobago",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TUN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Tunizija",
+	"pt" : {
+		"label" : "Tunísia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TUR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "puran",
+	"pt" : {
+		"label" : "Turquia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TUV" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Tuvalu",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TWN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Tajvan",
+	"pt" : {
+		"label" : "Taiwan",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/TZA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Tanzanija",
+	"pt" : {
+		"label" : "Tanzânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/UGA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Uganda",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/UKR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ukrajina",
+	"pt" : {
+		"label" : "Ucrânia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/UMI" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Manjši zunanji otoki Združenih držav Amerike",
+	"pt" : {
+		"label" : "Ilhas Menores dos Estados Unidos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/URY" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Urugvaj",
+	"pt" : {
+		"label" : "Uruguai",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/USA" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Združene države",
+	"pt" : {
+		"label" : "Estados Unidos",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/UZB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Uzbekistan",
+	"pt" : {
+		"label" : "Uzbequistão",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VAT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vatikanska mestna država",
+	"pt" : {
+		"label" : "Estado da cidade do Vaticano",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VCT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Sveti Vincent in Grenadine",
+	"pt" : {
+		"label" : "São Vicente e Granadinas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VDR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Demokratična republika Vietnam",
+	"pt" : {
+		"label" : "República Democrática do Vietname",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VEN" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Venezuela",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VGB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "britanski Deviški otoki",
+	"pt" : {
+		"label" : "Ilhas Virgens Britânicas",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VIR" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ameriški Deviški otoki",
+	"pt" : {
+		"label" : "Ilhas Virgens dos EUA",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VNM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vietnam",
+	"pt" : {
+		"label" : "Vietname",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/VUT" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Vanuatu",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/WAK" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Wake Islands",
+	"pt" : {
+		"label" : "Ilhas Wake",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/WLF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Wallis in Futuna",
+	"pt" : {
+		"label" : "Wallis e Futuna",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/WSM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Samoa",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/YEM" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Jemen",
+	"pt" : {
+		"label" : "Iémen",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/YMD" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Severni Jemen",
+	"pt" : {
+		"label" : "Iêmen do norte",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/YUG" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Jugoslavija",
+	"pt" : {
+		"label" : "Jugoslávia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ZAF" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Južna Afrika",
+	"pt" : {
+		"label" : "África do Sul",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ZMB" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zambija",
+	"pt" : {
+		"label" : "Zâmbia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ZR0" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zair",
+	"pt" : {
+		"label" : "Zaire",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "CountryEnum/ZWE" : {
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Republika Zimbabve",
+	"pt" : {
+		"label" : "República do Zimbábue",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "GUI/select" : {
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izberi",
+	"pt" : {
+		"label" : "Selecionar",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3281,8 +3281,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "državo ponudnika",
+	"pt" : {
+		"label" : "país emissor",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3292,8 +3292,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "ali",
+	"pt" : {
+		"label" : "ou",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3303,8 +3303,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izberi državo",
+	"pt" : {
+		"label" : "Selecione o pais",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3314,8 +3314,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izberi pošiljatelja",
+	"pt" : {
+		"label" : "selecione a opção",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3325,8 +3325,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izdajatelj ni na voljo, naložite dokazila",
+	"pt" : {
+		"label" : "Opção não disponível, faça upload do arquivo de evidência",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3336,8 +3336,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "izberite 1 ponudnika",
+	"pt" : {
+		"label" : "selecione 1 opção",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3347,8 +3347,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "za",
+	"pt" : {
+		"label" : "por",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3358,8 +3358,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "iz",
+	"pt" : {
+		"label" : "a partir de",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3369,8 +3369,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Potrdite ponudnika",
+	"pt" : {
+		"label" : "opção de confirmação",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3380,8 +3380,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nadaljujte",
+	"pt" : {
+		"label" : "Continuar",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3391,8 +3391,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zahteva za cezmejno pridobivanje dokazil",
+	"pt" : {
+		"label" : "Solicitação de Provas Transfronteiriças",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3402,8 +3402,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Tehnicni sistem DE4A se bo uporabil za:",
+	"pt" : {
+		"label" : "O Sistema Técnico DE4A será usado para:",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3413,8 +3413,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "pridobitev naslednjih cezmejnih dokazil:",
+	"pt" : {
+		"label" : "solicitar provas transfronteiriças:",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3424,8 +3424,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "nalaganje naslednjih dokazil:",
+	"pt" : {
+		"label" : "carregue as seguintes provas:",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3435,8 +3435,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Dokazila si boste lahko ogledali in se odlocili, ali želite nadaljevati.",
+	"pt" : {
+		"label" : "Você poderá inspecionar as evidências e escolher se quer continuar.",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3446,8 +3446,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ali ste prepricani, da želite uporabiti tehnicni sistem DE4A?",
+	"pt" : {
+		"label" : "Tem certeza de que deseja usar o Sistema Técnico DE4A?",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3457,8 +3457,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Preklici",
+	"pt" : {
+		"label" : "Cancelar",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3468,8 +3468,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zahtevaj",
+	"pt" : {
+		"label" : "Candidatar-se a",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3479,8 +3479,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zakljuceno",
+	"pt" : {
+		"label" : "Completo",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3490,8 +3490,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Prosim, zagotovite zahtevane podatke za izrecno zahtevo!",
+	"pt" : {
+		"label" : "Por favor, forneça as informações necessárias para o pedido explícito!",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3501,8 +3501,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Prosim, zagotovitev zahtevane podatke za predogled!",
+	"pt" : {
+		"label" : "Forneça as informações necessárias para a visualização das provas!",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3512,8 +3512,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "vkljuci",
+	"pt" : {
+		"label" : "incluir",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3523,8 +3523,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "naloži dokazilo",
+	"pt" : {
+		"label" : "carregar provas",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3534,8 +3534,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Predogled",
+	"pt" : {
+		"label" : "Visualizar",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3545,8 +3545,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "z",
+	"pt" : {
+		"label" : "com",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3556,8 +3556,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "opisi",
+	"pt" : {
+		"label" : "descrições",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3567,8 +3567,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "v",
+	"pt" : {
+		"label" : "dentro",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3578,8 +3578,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "brez",
+	"pt" : {
+		"label" : "sem",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3589,8 +3589,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "izkljuci",
+	"pt" : {
+		"label" : "Excluir",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3600,8 +3600,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "shema",
+	"pt" : {
+		"label" : "esquema",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3611,9 +3611,9 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "Identifier",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Razred identifikatorja omogoča da se identifikator daje kot tudi informacije o tem kateri organ je izdal in če je potrebno kdaj.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "A classe que representa um identificador, com informações sobre qual autoridade o emitiu e, se necessário, quando.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3622,9 +3622,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Content",
-	"sl" : {
-		"label" : "Vsebina",
-		"description" : "Vsebina - alfanumerični niz",
+	"pt" : {
+		"label" : "Conteúdo",
+		"description" : "Conteúdo - String Alfa-numérica",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3633,9 +3633,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Identifier Type",
-	"sl" : {
-		"label" : "Identifikator Tip.",
-		"description" : "Vrsta identifikatorja je izdala (če organ izda več kot eno vrsto identifikatorja).",
+	"pt" : {
+		"label" : "Tipo de identificador",
+		"description" : "O tipo de identificador emitido (se a autoridade emitir mais de um tipo de identificador).",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3644,9 +3644,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "00",
 	"comment" : "Issue Date",
-	"sl" : {
-		"label" : "Datum izdaje",
-		"description" : "Datum na katerega je bil izdan",
+	"pt" : {
+		"label" : "Data de emissão",
+		"description" : "A data em que foi emitida",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3655,9 +3655,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Issuing Authority",
-	"sl" : {
-		"label" : "Organ izdaje",
-		"description" : "Ime agencije izdajateljice",
+	"pt" : {
+		"label" : "Autoridade emissora",
+		"description" : "O nome da agência emissora",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3666,9 +3666,9 @@
 	"type" : "UDT/Identifier",
 	"cardinality" : "00",
 	"comment" : "Issuing Authority ID",
-	"sl" : {
-		"label" : "Organ izdaje ID.",
-		"description" : "ID izdajatelja",
+	"pt" : {
+		"label" : "ID da autoridade emissora",
+		"description" : "O ID da agência emissora",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3677,9 +3677,9 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "Jurisdiction",
-	"sl" : {
-		"label" : "",
-		"description" : "",
+	"pt" : {
+		"label" : "Jurisdição",
+		"description" : "Âmbito territorial de competências",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3688,9 +3688,9 @@
 	"type" : "Identifier",
 	"cardinality" : "00",
 	"comment" : "Identifier",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Vrednost za identifikacijsko lastnost je URI za to jurisdikcijo.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "O valor para a propriedade de identificação é um URI para essa jurisdição.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3699,9 +3699,9 @@
 	"type" : "CountryEnum",
 	"cardinality" : "11",
 	"comment" : "Name",
-	"sl" : {
-		"label" : "Ime",
-		"description" : "Ime je preprosto niz ki identificira jurisdikcijo običajno državo z ali brez jezikovne oznake.",
+	"pt" : {
+		"label" : "Nome",
+		"description" : "O nome é simplesmente uma string que identifica a jurisdição, normalmente um país, com ou sem uma tag de idioma.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3710,8 +3710,8 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Idiom",
+	"pt" : {
+		"label" : "Idioma",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3721,8 +3721,8 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Wngleščina",
+	"pt" : {
+		"label" : "inglês",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3732,8 +3732,8 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Španski",
+	"pt" : {
+		"label" : "espanhol",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3743,8 +3743,8 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Portugalski",
+	"pt" : {
+		"label" : "português",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3754,8 +3754,8 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francoski",
+	"pt" : {
+		"label" : "francês",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3765,8 +3765,8 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Slovenščina",
+	"pt" : {
+		"label" : "esloveno",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3776,9 +3776,9 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "Address",
-	"sl" : {
-		"label" : "Naslov.",
-		"description" : "Starš otroka. Ena od obeh oseb ki so skupaj vzrok otrokovega rojstva tj. Naravni staršev.",
+	"pt" : {
+		"label" : "Endereço",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3787,9 +3787,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Admin unit level 2",
-	"sl" : {
-		"label" : "Admin Enota Nivo 2",
-		"description" : "Regija naslova ponavadi okrožje državo ali drugo takšno področje ki običajno obsega več krajev.",
+	"pt" : {
+		"label" : "Segundo nível territorial do país",
+		"description" : "A região do endereço, geralmente um distrito, concelho ou outra área que tipicamente abrange várias freguesias.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3798,9 +3798,9 @@
 	"type" : "CountryEnum",
 	"cardinality" : "00",
 	"comment" : "Admin unit level 1",
-	"sl" : {
-		"label" : "Admin Enota Nivo 1",
-		"description" : "Najvišja upravna enota za naslov skoraj vedno državo. Najboljša praksa je uporaba kode ISO 3166-1.",
+	"pt" : {
+		"label" : "Primeiro nível territorial do país",
+		"description" : "A unidade administrativa superior para o endereço, quase sempre um país representado pelo código ISO 3166-1.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3809,9 +3809,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "PoBox",
-	"sl" : {
-		"label" : "Poštni predal",
-		"description" : "Številka poštnega predala. INSPIRE-jev naziv za to polje je'postalDeliveryIdentifier', za katerega se uporablja lokacijsko ime. Ta tezaver ločuje poštni predal za večjo neodvisnost od tehnologije.",
+	"pt" : {
+		"label" : "Caixa postal",
+		"description" : "O número de um caixa postal",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3820,9 +3820,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Thoroughface",
-	"sl" : {
-		"label" : "Prometna pot",
-		"description" : "Glede na smernice INSPIRE je prometna pot definirana kot komponenta naslova, ki predstavlja ime prehoda ali poti od ene lokacije na drugo. Prometna pot ni nujno cesta, vendar je lahko tudi povezava preko vodnih poti ali drugih možnosti.",
+	"pt" : {
+		"label" : "Via pública",
+		"description" : "Citando as diretrizes INSPIRE, uma via é: 'Um componente de um endereço que representa o nome de uma passagem ou caminho de um local para outro. Uma via não é necessariamente uma estrada, pode ser uma hidrovia ou algum outro recurso.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3831,9 +3831,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Locator designator",
-	"sl" : {
-		"label" : "Oznaka lokatorja",
-		"description" : "Lokacijski opis je v okviru smernic INSPIRE definiran ko 'število ali zaporedje znakov, ki enolično določajo lokacijo znotraj relevantnih okvirov. Polna identifikacija lokacije lahko vključuje enega ali več lokacijskih opisov.' Poenostavljeno, to je lahko številka stavbe, stanovanja in podobno. Na primer, za naslov 'Stanovanje 13, Ulica na mostu 17,' je lokacijski opis 'Stanovanje 13, 17.'",
+	"pt" : {
+		"label" : "Número, pisco, escada, porta",
+		"description" : "O designador de localizador é definido pelas diretrizes INSPIRE como 'um número ou uma sequência de caracteres que identifica exclusivamente o localizador dentro do(s) âmbito(s) relevante(s). A identificação completa do localizador pode incluir um ou mais designadores de localizador'. Em termos mais simples, este é o edifício número, número do apartamento, etc. Para um endereço como 'Flat 3, 17 Bridge Street', o localizador é 'Flat 3, 17'.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3842,9 +3842,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Locator name",
-	"sl" : {
-		"label" : "Naziv lokacije",
-		"description" : "Glede na smernice INSPIRE je naziv lokacije definiran kot 'Samostalnik(i), ki so vezani na fizično entiteto na lokaciji. Naziv lokacije je lahko naziv posestva ali kompleksa, stavba ali del stavbe, ali pa celo ime sobe v stavbi. Ključna razlika med lokacijo in nazivom lokacije je, da naziv lokacije redko vsebuje številke. Na primer, 'Shumann, Berlaymont' je ime sejne sobe na sedežu Evropske komisije, kjer je naziv bolj primeren kot sama lokacija.",
+	"pt" : {
+		"label" : "Nome do edifício ou sala",
+		"description" : "Com base nas diretrizes INSPIRE, o nome do localizador é definido como: 'nome(s) próprio(s) aplicado(s) à entidade do mundo real identificada pelo localizador. O nome do localizador pode ser o nome da propriedade ou complexo, o prédio ou parte do prédio, ou pode ser o nome de uma sala dentro de um prédio. A principal diferença entre um localizador e um nome de localizador é que o último é um nome próprio e é improvável que inclua dígitos. Por exemplo, 'Shumann, Berlaymont' é uma sala de reuniões dentro da sede da Comissão Europeia, portanto, o nome do localizador é mais apropriado do que o localizador.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3853,9 +3853,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Address area",
-	"sl" : {
-		"label" : "Območje naslova",
-		"description" : "Glede na definicijo INSPIRE je območje naslova 'ime ali imena geografskega področja ali lokalnosti, ki združuje skupino naslovov z namenom naslavljanja brez navezave na administrativno enoto.' Tipično je to del mesta, okrožje ali vas.",
+	"pt" : {
+		"label" : "Área de endereço",
+		"description" : "Tomando a definição do INSPIRE, área de endereço é: o(s) nome(s) de uma área geográfica ou localidade que agrupa um número de objetos endereçáveis ​​para fins de endereçamento, sem ser uma unidade administrativa. Normalmente, isso faria parte de uma cidade, um bairro ou cidade",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3864,9 +3864,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Post name",
-	"sl" : {
-		"label" : "Naziv pošte",
-		"description" : "Ključna poštna razdelitev naslova običajno mesto. (Opredelitev INSPIRE je 'Eno ali več imen ustvarjenih in vzdrževanih za poštne namene da bi ugotovili pododdelstvo naslovov in poštnih točk.)",
+	"pt" : {
+		"label" : "Área postal",
+		"description" : "A principal divisão postal do endereço, geralmente é a cidade. (A definição do Inspire é 'um ou mais nomes criados e mantidos para fins postais para identificar uma subdivisão de endereços e pontos de entrega postal).",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3875,9 +3875,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "Post code",
-	"sl" : {
-		"label" : "Poštna številka",
-		"description" : "Poštna številka po pošti (A.K.A Poštna številka Poštna številka itd.). Post kode so skupni elementi v poštnih naslovnih sistemih mnogih držav.",
+	"pt" : {
+		"label" : "Código postal",
+		"description" : "O código postal (A.K.A Código Postal, Código ZIP etc.). Os códigos postais são elementos comuns nos sistemas de endereço postal de muitos países.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3886,9 +3886,9 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Poročni dokaz",
-		"description" : "Uradni dokument ali podatki ki dokazujejo zakonsko zvezo dveh oseb.",
+	"pt" : {
+		"label" : "Certidão de casamento",
+		"description" : "A certidão de casamento serve como prova do registo de casamento. Inclui os dados de identificação dos membros do casal, a modalidade, o regime de bens e o local onde foi celebrado o casamento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3897,9 +3897,9 @@
 	"type" : "Identifier",
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Nedvoumno sklicevanje na zakonske dokaze.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "Uma referência inequívoca para a certidão do casamento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3908,9 +3908,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3.",
-	"sl" : {
-		"label" : "Datum izdaje",
-		"description" : "Najnovejši datum na katerem je bil izdan primer Marriageedidence.",
+	"pt" : {
+		"label" : "Data de emissão",
+		"description" : "A data mais recente em que instância de MarriageEvidence foi emitida.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3919,9 +3919,9 @@
 	"type" : "PublicOrganisation",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Organ izdaje",
-		"description" : "Javna organizacija z uradnim organom ki je zadolžena za izdajo zakonskih zakonov.",
+	"pt" : {
+		"label" : "Autoridade emissora",
+		"description" : "Uma entidade pública com autoridade oficial para emitir a certidão do casamento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3930,9 +3930,9 @@
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Izdajanje kraja",
-		"description" : "Lokacijo kjer je bil izdan zakonski dokaz.",
+	"pt" : {
+		"label" : "Local de emissão",
+		"description" : "A localização onde a certidão do casamento foi emitida.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3941,7 +3941,7 @@
 	"type" : "LocationAddress/AdminUnitL2",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -3952,7 +3952,7 @@
 	"type" : "LocationAddress/AdminUnitL1",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -3963,9 +3963,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Potrjuje poroko",
-		"description" : "Uradni način da je zakonska zveza resnična.",
+	"pt" : {
+		"label" : "Certifica o casamento",
+		"description" : "Atestando de uma forma formal que o casamento é verdadeiro.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3974,9 +3974,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Datum poroke",
-		"description" : "Datum ko je potekala zakonska zveza.",
+	"pt" : {
+		"label" : "Data do casamento",
+		"description" : "A data em que ocorreu o casamento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3985,8 +3985,8 @@
 	"type" : "LocationAddress",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "",
+	"pt" : {
+		"label" : "Local do casamento",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3996,9 +3996,9 @@
 	"type" : "Person",
 	"cardinality" : "11",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zakonec",
-		"description" : "Oseba ki je bila poročena.",
+	"pt" : {
+		"label" : "Cônjuge",
+		"description" : "A pessoa que era casada.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4007,9 +4007,9 @@
 	"type" : "PersonGenderEnum",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
-		"description" : "",
+		"description" : "O género de um indivíduo deve ser registado usando um vocabulário controlado que seja apropriado para o contexto específico. Em alguns casos, o estado cromossómico ou físico de um indivíduo será mais importante que o género que ele expressa, em outros casos o inverso poderá ser verdadeiro. O que é sempre importante é que o vocabulário controlado usado para descrever o género de um indivíduo seja declarado explicitamente.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4018,9 +4018,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "01",
 	"comment" : "",
-	"sl" : {
-		"label" : "Družinsko ime po poroki",
-		"description" : "Spol posameznika je treba zabeležiti z uporabo nadzorovanega besedišča ki je primeren za poseben kontekst. V nekaterih primerih bo kromosomsko ali fizično stanje posameznika pomembnejše od spola ki ga izražajo v drugih pa bo vzvratno res. Vedno je pomembno da je nadzorovani besednjak ki se uporablja za opis spola posameznika izrecno navedeno.",
+	"pt" : {
+		"label" : "Apelido após o casamento",
+		"description" : "Esta propriedade contém o apelido após o casamento da pessoa.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4029,9 +4029,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "01",
 	"comment" : "",
-	"sl" : {
-		"label" : "Družinsko ime pred poroko",
-		"description" : "Ta lastnost vsebuje družinsko ime po zakonu osebe.",
+	"pt" : {
+		"label" : "Apelido antes do casamento",
+		"description" : "Esta propriedade contém o apelido antes do casamento da pessoa.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4040,9 +4040,9 @@
 	"type" : "PersonMaritalStatusEnum",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Zakonski stan pred poroko",
-		"description" : "Ta lastnost vsebuje družinsko ime pred poroko osebe.",
+	"pt" : {
+		"label" : "Estado civil antes do casamento",
+		"description" : "Situação em relação a se uma pessoa era solteira, casada, separada, divorciada ou viúva.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4051,9 +4051,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "",
-	"sl" : {
-		"label" : "Konec zakonske zveze",
-		"description" : "Razmere glede tega ali je bila oseba samska poročena ločena razvezana ali vdova.",
+	"pt" : {
+		"label" : "Fim do casamento",
+		"description" : "Em caso de divórcio, esta propriedade inclui informações sobre o final do casamento",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4062,9 +4062,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Datum konca zakonske zveze",
-		"description" : "V primeru razveze ta lastnost vključuje informacije na koncu poroke",
+	"pt" : {
+		"label" : "Data de término do casamento",
+		"description" : "Data em que o casamento é formalmente dissolvido",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4073,9 +4073,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vzrok",
-		"description" : "Datum konca zakonske zveze",
+	"pt" : {
+		"label" : "Causa",
+		"description" : "Causa que constitui formalmente o motivo da dissolução do casamento.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4084,9 +4084,9 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Držav Clanic",
-		"description" : "",
+	"pt" : {
+		"label" : "Estados Membros",
+		"description" : "Estados-Membros",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4095,9 +4095,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Avstrija",
-		"description" : "",
+	"pt" : {
+		"label" : "Áustria",
+		"description" : "Áustria",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4106,9 +4106,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Belgija",
-		"description" : "",
+	"pt" : {
+		"label" : "Bélgica",
+		"description" : "Bélgica",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4117,9 +4117,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Bolgarija",
-		"description" : "",
+	"pt" : {
+		"label" : "Bulgária",
+		"description" : "Bulgária",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4128,9 +4128,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ciper",
-		"description" : "",
+	"pt" : {
+		"label" : "Chipre",
+		"description" : "Chipre",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4139,9 +4139,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ceška",
-		"description" : "",
+	"pt" : {
+		"label" : "Czechia",
+		"description" : "República Checa",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4150,9 +4150,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nemcija",
-		"description" : "",
+	"pt" : {
+		"label" : "Alemanha",
+		"description" : "Alemanha",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4161,9 +4161,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Danska",
-		"description" : "",
+	"pt" : {
+		"label" : "Dinamarca",
+		"description" : "Dinamarca",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4172,9 +4172,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Estonija",
-		"description" : "",
+	"pt" : {
+		"label" : "Estônia",
+		"description" : "Estónia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4183,9 +4183,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Grcija",
-		"description" : "",
+	"pt" : {
+		"label" : "Grécia",
+		"description" : "Grécia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4194,9 +4194,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Španija",
-		"description" : "",
+	"pt" : {
+		"label" : "Espanha",
+		"description" : "Espanha",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4205,9 +4205,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Finska",
-		"description" : "",
+	"pt" : {
+		"label" : "Finlândia",
+		"description" : "Finlândia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4216,9 +4216,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Francija",
-		"description" : "",
+	"pt" : {
+		"label" : "França",
+		"description" : "França",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4227,9 +4227,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Hrvaška",
-		"description" : "",
+	"pt" : {
+		"label" : "Croácia",
+		"description" : "Croácia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4238,9 +4238,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Madžarska",
-		"description" : "",
+	"pt" : {
+		"label" : "Hungria",
+		"description" : "Hungria",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4249,9 +4249,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Irska",
-		"description" : "",
+	"pt" : {
+		"label" : "Irlanda",
+		"description" : "Irlanda",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4260,9 +4260,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Italija",
-		"description" : "",
+	"pt" : {
+		"label" : "Itália",
+		"description" : "Itália",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4271,9 +4271,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Litva",
-		"description" : "",
+	"pt" : {
+		"label" : "Lituânia",
+		"description" : "Lituânia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4282,9 +4282,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Luksemburg",
-		"description" : "",
+	"pt" : {
+		"label" : "Luxemburgo",
+		"description" : "Luxemburgo",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4293,9 +4293,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Latvija",
-		"description" : "",
+	"pt" : {
+		"label" : "Letônia",
+		"description" : "Letónia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4304,9 +4304,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "Malta",
-		"description" : "",
+		"description" : "Malta",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4315,9 +4315,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Nizozemska",
-		"description" : "",
+	"pt" : {
+		"label" : "Países Baixos",
+		"description" : "Países Baixos",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4326,9 +4326,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Poljska",
-		"description" : "",
+	"pt" : {
+		"label" : "Polônia",
+		"description" : "Polónia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4337,9 +4337,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Portugalska",
-		"description" : "",
+	"pt" : {
+		"label" : "Portugal",
+		"description" : "Portugal",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4348,9 +4348,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Romunija",
-		"description" : "",
+	"pt" : {
+		"label" : "Romênia",
+		"description" : "Roménia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4359,9 +4359,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Švedska",
-		"description" : "",
+	"pt" : {
+		"label" : "Suécia",
+		"description" : "Suécia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4370,9 +4370,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Slovenija",
-		"description" : "",
+	"pt" : {
+		"label" : "Eslovênia",
+		"description" : "Eslovénia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4381,9 +4381,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Slovaška ",
-		"description" : "",
+	"pt" : {
+		"label" : "Eslováquia",
+		"description" : "Eslováquia",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4392,9 +4392,9 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "Person",
-	"sl" : {
-		"label" : "Oseba",
-		"description" : "Posamezna fizična oseba ki je lahko mrtva ali živa vendar ne namišljena.",
+	"pt" : {
+		"label" : "Pessoa",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4403,9 +4403,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "Date of birth",
-	"sl" : {
-		"label" : "Datum rojstva",
-		"description" : "Dan ko se je rodila oseba.",
+	"pt" : {
+		"label" : "Data de nascimento",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4414,9 +4414,9 @@
 	"type" : "xsd:gYear",
 	"cardinality" : "00",
 	"comment" : "Year",
-	"sl" : {
-		"label" : "Leto",
-		"description" : "Gregorijansko koledarsko leto. Vrednostni prostor leta je niz gregorijanskih koledarskih let kot je opredeljeno v § 5.2.1 ISO 8601. Natančneje je niz enoletnih ne-periodičnih primerov npr. Lexicy 1999 predstavlja celo leto 1999 neodvisno od števila mesecev in dni letos.",
+	"pt" : {
+		"label" : "Ano",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4425,9 +4425,9 @@
 	"type" : "xsd:gMonth",
 	"cardinality" : "00",
 	"comment" : "Month",
-	"sl" : {
-		"label" : "Mesec",
-		"description" : "Gregoriški mesec ki se vsako leto ponovi. Vrednost v mesecu je prostor nabora koledarskih mesecev kot je opredeljeno v § 3 ISO 8601. Natančneje je niz enomesečnih dolgoletnih letnih občasnih primerov.",
+	"pt" : {
+		"label" : "Mês",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4436,9 +4436,9 @@
 	"type" : "xsd:gDay",
 	"cardinality" : "00",
 	"comment" : "Day",
-	"sl" : {
-		"label" : "Dan",
-		"description" : "Gregoriški dan ki se ponavlja posebej na dan meseca kot je 5. meseca. Vrednostni prostor dneva je prostor nabora koledarskih datumov kot je opredeljeno v § 3 ISO 8601. Natančneje je niz enodnevnih mesečnih periodičnih primerov.",
+	"pt" : {
+		"label" : "Dia",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4447,9 +4447,9 @@
 	"type" : "PersonGenderEnum",
 	"cardinality" : "00",
 	"comment" : "Gender",
-	"sl" : {
-		"label" : "Spol",
-		"description" : "Kromosomno stanje in reproduktivni organi in struktur osebe ki jim omogoča da se razlikujejo kot ženske ali moške ali nedoločene.",
+	"pt" : {
+		"label" : "Género",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4458,9 +4458,9 @@
 	"type" : "LocationAddress",
 	"cardinality" : "00",
 	"comment" : "Place of birth",
-	"sl" : {
-		"label" : "Kraj rojstva",
-		"description" : "Lokacijo kjer se je rodila oseba.",
+	"pt" : {
+		"label" : "Local de nascimento",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4469,9 +4469,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "Person name",
-	"sl" : {
-		"label" : "Ime osebe",
-		"description" : "Ime in ime osebe. Vsaj eno od obeh mora obstajati.",
+	"pt" : {
+		"label" : "Nome da pessoa",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4480,9 +4480,9 @@
 	"type" : "UDT/Name",
 	"cardinality" : "01",
 	"comment" : "Family name",
-	"sl" : {
-		"label" : "Priimek",
-		"description" : "Družinsko ime, ki ga običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. V polju se lahko zabeleži tudi več družinskih imen, kot je to običajno v hispanskih državah in se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer ime Miguel de Cervantes Saavedra zabeležilo kot 'de Cervantes Saavedra'.",
+	"pt" : {
+		"label" : "Apelido",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4491,9 +4491,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "01",
 	"comment" : "Given name",
-	"sl" : {
-		"label" : "Ime",
-		"description" : "Ime ali več imenih imen, ki identificirajo posameznika znotraj družine. Ta določijo njihovi starši ob rojstvu ali pa so lahko zakonito določeno s formalnim postopkom. Vsa določena imena so urejena v enem polju, tako da je na primer dano ime za Johanna Sebastiana Bacha 'Johann Sebastian'.",
+	"pt" : {
+		"label" : "Nome próprio",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4502,9 +4502,9 @@
 	"type" : "Identifier",
 	"cardinality" : "01",
 	"comment" : "Identifier",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Oporednotenje identifikatorja se uporablja za povezovanje osebe na kateri koli formalno izdani identifikator za to osebo.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4513,9 +4513,9 @@
 	"type" : "Jurisdiction",
 	"cardinality" : "01",
 	"comment" : "Citizenship",
-	"sl" : {
-		"label" : "Državljanstvo",
-		"description" : "Odnos državljanstva povezuje osebo v pristojnost ki je podelila pravice državljanstva na posameznika kot je pravica do glasovanja da bi prejela določeno zaščito pred Skupnostjo ali izdajo potnega lista.",
+	"pt" : {
+		"label" : "Cidadania",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4524,9 +4524,9 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Oseba spola",
-		"description" : "Seznam človeških spolov.",
+	"pt" : {
+		"label" : "Género",
+		"description" : "Lista de gémeros humanos.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4535,9 +4535,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ženska",
-		"description" : "Koncept Ženska se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede.",
+	"pt" : {
+		"label" : "Feminino",
+		"description" : "O conceito FEMININO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4546,9 +4546,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Moški",
-		"description" : "Koncept moški se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede.",
+	"pt" : {
+		"label" : "Masculino",
+		"description" : "O conceito MASCULINO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4557,9 +4557,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Se ne uporablja",
-		"description" : "Koncept se ne uporablja se uporablja v okviru izmenjave informacij na področju socialnih ved kadar nobeden od spolov ni mogoče zastopati.",
+	"pt" : {
+		"label" : "Não aplicável",
+		"description" : "O conceito NÃO APLICÁVEL é usado no contexto de intercâmbio de informações no domínio das ciências sociais quando nenhum dos sexos pode ser representado.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4568,9 +4568,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ne poznano",
-		"description" : "Koncept ki ni znan se uporablja v okviru izmenjave informacij na področju socialne vede ko je človeški seks unkown.",
+	"pt" : {
+		"label" : "Não conhecido",
+		"description" : "O conceito NÃO CONHECIDO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano é desconhecido.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4579,9 +4579,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ni navedeno",
-		"description" : "Koncept ki ni navedena se uporablja v okviru izmenjave informacij na področju socialnih ved ko človeški seks ni naveden.",
+	"pt" : {
+		"label" : "Não especificado",
+		"description" : "O conceito NÃO ESPECIFICADO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano não é declarado.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4590,9 +4590,9 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "c",
-		"description" : "Seznam osebnega statusa.",
+	"pt" : {
+		"label" : "Estado civil de uma pessoa",
+		"description" : "Lista de estados civis de uma pessoa",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4601,9 +4601,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Cohabitation.",
-		"description" : "Oseba Zakonski stan",
+	"pt" : {
+		"label" : "Coabitação",
+		"description" : "Estado civil de uma pessoa: Coabitação",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4612,9 +4612,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Razvezana oseba",
-		"description" : "Oseba zakonski stan",
+	"pt" : {
+		"label" : "Divorciado/a",
+		"description" : "Pessoa que dissolveu oficialmente o seu matrimónio",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4623,9 +4623,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Poročena oseba",
-		"description" : "Oseba zakonski stan",
+	"pt" : {
+		"label" : "Casado/a",
+		"description" : "Pessoa casada com outra",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4634,9 +4634,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Polygamy.",
-		"description" : "Oseba Zakonski stan",
+	"pt" : {
+		"label" : "Polígamo/a",
+		"description" : "Pessoa casada com mais de uma pessoa",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4645,9 +4645,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ločena oseba",
-		"description" : "Oseba Zakonski stan",
+	"pt" : {
+		"label" : "Separado/a",
+		"description" : "Pessoa que dissolveu o seu matrimónio mas que não o oficializou",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4656,9 +4656,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Samohranilec",
-		"description" : "Oseba zakonski stan",
+	"pt" : {
+		"label" : "Monoparental",
+		"description" : "Família monoparental: apenas uma pessoa assume a parentalidade de outra",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4667,9 +4667,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Neporočena oseba",
-		"description" : "Oseba zakonski stan",
+	"pt" : {
+		"label" : "Solteiro/a",
+		"description" : "Pessoa que não registou a sua relação com outra",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4678,9 +4678,9 @@
 	"type" : "xs:token",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
-		"label" : "Vdova oseba",
-		"description" : "Oseba Zakonski stan",
+	"pt" : {
+		"label" : "Viúvo/a",
+		"description" : "Pessoa cujo o cônjuge faleceu",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4689,8 +4689,8 @@
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "PublicOrganisation",
-	"sl" : {
-		"label" : "",
+	"pt" : {
+		"label" : "Entidade Pública",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4700,29 +4700,18 @@
 	"type" : "Identifier",
 	"cardinality" : "01",
 	"comment" : "Identifier",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Številne organizacije se sklicujejo na kratico ali drug identifikator. Na primer med institucijami EU ECB je identifikator za Evropsko centralno banko OLAF za Evropski ANTIN / AFRAUd Office in tako naprej. Evropske komisije formalno priznava ki zagotavlja seznam takih kratic. V drugih kontekstih je treba uporabiti analogne sezname.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "Muitas organizações são referidas por um acrónimo ou algum outro identificador. Por exemplo, entre as instituições da UE, o BCE é o identificador do Banco Central Europeu, o OLAF do Organismo Europeu AntiN/AFraud e assim por diante. Estes são formalmente reconhecidos pela Comissão Europeia, que fornece uma lista dessas siglas. Listas análogas devem ser usadas em outros contextos.",
 		"example" : "",
 		"verified" : "true"
-	}
-} ,
-"Institute of Registry and Notary." : {
-	"type" : "Etiqueta preferida",
-	"cardinality" : "Nombre principal y legalmente reconocido de la organización. Una organización solo puede tener un nombre de este tipo en cualquier idioma determinado. Los nombres principales se pueden proporcionar en varios idiomas.",
-	"comment" : "",
-	"sl" : {
-		"label" : "1",
-		"description" : "Étiquette préférée",
-		"example" : "Tel que défini dans l'ORG ontology, une étiquette préférée est utilisée pour fournir le nom principal de l'organisation légalement reconnu. Une organisation ne peut avoir qu'un tel nom dans une langue donnée. Les noms principaux peuvent être fournis dans plusieurs langues avec plusieurs instances de la propriété d'étiquette préférée.",
-		"verified" : "false"
 	}
 } ,
 "UDT" : {
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "",
-	"sl" : {
+	"pt" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -4733,9 +4722,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
-	"sl" : {
-		"label" : "Besedilo",
-		"description" : "Niz znakov (tj. Končni niz znakov) na splošno v obliki besed jezika.",
+	"pt" : {
+		"label" : "Texto",
+		"description" : "Uma cadeia de caracteres (isto é, um conjunto finito de caracteres), geralmente na forma de palavras de um idioma.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4744,9 +4733,9 @@
 	"type" : "xsd:language",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Jezik ID.",
-		"description" : "Identifikator jezika ki se uporablja v komponenti vsebine.",
+	"pt" : {
+		"label" : "ID do idioma",
+		"description" : "O identificador do idioma usado no componente de conteúdo.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4755,9 +4744,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Jezik Locale ID.",
-		"description" : "Identifikacijo jezika jezika.",
+	"pt" : {
+		"label" : "ID de idioma local",
+		"description" : "A identificação da localidade do idioma",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4766,9 +4755,9 @@
 	"type" : "xsd:date",
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
-	"sl" : {
-		"label" : "Datum.",
-		"description" : "En koledarski dan po Gregorian koledarju.",
+	"pt" : {
+		"label" : "Data",
+		"description" : "Um dia de calendário de acordo com o calendário gregoriano.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4777,9 +4766,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ime",
-		"description" : "Niz znakov ki predstavlja razlikovalno oznako osebe kraj stvar ali koncept.",
+	"pt" : {
+		"label" : "Nome",
+		"description" : "Uma cadeia de caracteres que constitui a designação distinta de uma pessoa, lugar, coisa ou conceito.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4788,9 +4777,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Niz znakov za identifikacijo in razlikovanje v edinstveno en primer predmeta v identifikacijski shemi iz vseh drugih predmetov v isti shemi skupaj z ustreznimi dopolnilnimi informacijami.",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "Uma sequência de caracteres para identificar e distinguir inequivocamente uma instância de um objeto de acordo com um esquema de identificação comum a outros objetos, juntamente com informações complementares relevantes.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4799,9 +4788,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "ID sheme",
-		"description" : "Identifikacijo sheme identifikacije.",
+	"pt" : {
+		"label" : "ID do esquema",
+		"description" : "A identificação do esquema de identificação.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4810,9 +4799,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ime sheme.",
-		"description" : "Ime identifikacijske sheme.",
+	"pt" : {
+		"label" : "Nome do esquema.",
+		"description" : "O nome do esquema de identificação.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4821,9 +4810,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Agencija sheme ID.",
-		"description" : "Identifikacija Agencije ki ohranja shemo identifikacije.",
+	"pt" : {
+		"label" : "ID da agência do esquema.",
+		"description" : "A identificação da Agência que mantém o esquema de identificação.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4832,9 +4821,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Ime agencije sheme..",
-		"description" : "Ime agencije ki ohranja shemo identifikacije.",
+	"pt" : {
+		"label" : "Nome da agência do esquema.",
+		"description" : "O nome da agência que mantém o esquema de identificação.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4843,9 +4832,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "ID izvedbe sheme ID.",
-		"description" : "Različico sheme identifikacije.",
+	"pt" : {
+		"label" : "ID da versão do esquema.",
+		"description" : "A versão do esquema de identificação.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4854,9 +4843,9 @@
 	"type" : "xsd:anyURI",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Podatki sheme URI.",
-		"description" : "Identifikator enotnega vira ki identificira kje se nahajajo podatki o shemi identifikacije.",
+	"pt" : {
+		"label" : "URI de dados do esquema",
+		"description" : "O Identificador Uniforme de Recursos (URI) que identifica onde os dados do esquema de identificação estão localizados.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4865,9 +4854,9 @@
 	"type" : "xsd:anyURI",
 	"cardinality" : "00",
 	"comment" : "",
-	"sl" : {
-		"label" : "Shema Uri.",
-		"description" : "Enotni identifikator virov ki identificira kje se nahaja identifikacijska shema.",
+	"pt" : {
+		"label" : "URI do esquema",
+		"description" : "O Identificador Uniforme de Recursos (URI) que identifica onde o esquema de identificação está localizado.",
 		"example" : "",
 		"verified" : "true"
 	}
