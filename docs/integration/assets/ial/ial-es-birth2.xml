@@ -10,7 +10,7 @@
         <p:DataOwnerPrefLabel>Gobierno de la Comunidad de Madrid</p:DataOwnerPrefLabel>
       </p:Provision>
       <p:Provision>
-        <p:AtuLevel>nuts2</p:AtuLevel>
+        <p:AtuLevel>nuts1</p:AtuLevel>
         <p:AtuCode>ES02</p:AtuCode>
         <p:AtuLatinName>Castilla y León</p:AtuLatinName>
         <p:DataOwnerId>iso6523-actorid-upis::9991:es990000107</p:DataOwnerId>

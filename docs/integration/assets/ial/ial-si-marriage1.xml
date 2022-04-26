@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:ResponseLookupRoutingInformation xmlns:p="http://www.de4a.eu/2020/ial/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.de4a.eu/2020/ial/v2 IAL.xsd ">
+  <p:ResponseItem CanonicalObjectTypeId="urn:de4a-eu:CanonicalEvidenceType:MarriageEvidence:1.0">
+    <p:ResponsePerCountry CountryCode="SI">
+      <p:Provision>
+        <p:AtuLevel>nuts0</p:AtuLevel>
+        <p:AtuCode>SI</p:AtuCode>
+        <p:AtuLatinName>Slovenija</p:AtuLatinName>
+        <p:DataOwnerId>iso6523-actorid-upis::9991:si990000105</p:DataOwnerId>
+        <p:DataOwnerPrefLabel>Ministrstvo za notranje zadeve</p:DataOwnerPrefLabel>
+      </p:Provision>
+    </p:ResponsePerCountry>
+  </p:ResponseItem>
+</p:ResponseLookupRoutingInformation>
