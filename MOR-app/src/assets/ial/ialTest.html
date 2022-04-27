@@ -9,7 +9,7 @@
 <pre id="d"></pre>
 <pre id="x"></pre>
 <script>
-document.getElementById("d").innerText =  0//getIalXmlProvisions ("urn:de4a-eu:CanonicalEvidenceType:MarriageEvidence:1.0".split(","), "ES")
+document.getElementById("d").innerText =  JSON.stringify(getIalJsonProvisions (getIalXmlProvisions ("urn:de4a-eu:CanonicalEvidenceType:BirthEvidence:1.0,urn:de4a-eu:CanonicalEvidenceType:MarriageEvidence:1.0".split(","), "ES")))
 document.getElementById("x").innerText =  JSON.stringify(getIalJsonProvisions (getIalXmlProvisions ("urn:de4a-eu:CanonicalEvidenceType:MarriageEvidence:1.0".split(","), "ES")))
 </script>
 
