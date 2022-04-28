@@ -1,0 +1,117 @@
+
+#headerwrap {
+    width: 1000px;
+    float: left;
+    margin: 0 auto;
+}
+
+#header {
+    /*height: 75px;*/
+    background: #FFFFFF;
+    /*border-radius: 10px;*/
+    border: 1px solid rgb(255, 255, 255);
+    /*margin: 5px;*/
+    text-align: center;
+    display:flex; 
+    padding:20px !important; 
+    align-items: center; 
+	justify-content: space-between; 
+	margin:0 !important; 
+	width: 100%; 
+	height:100% !important; 
+	border-bottom: 0 !important; 
+	border-radius: 0 !important;
+}
+
+#contentwrap {
+    width: auto;
+    float: center;
+    margin: 0 auto;
+}
+
+#content {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px;
+}
+
+.ui-selectonemenu.form-control {
+    color: #555 !important;
+    display: block !important;
+    margin-bottom: 0 !important;
+    padding: 5px 10px !important;
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+    margin-bottom: 10px !important;
+}
+
+.radius-none {
+    border-radius: 0 !important;
+}
+
+.ui-selectonemenu.form-control .ui-selectonemenu-trigger {
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 100%;
+    padding: 0 5px;
+    cursor: pointer;
+    position: absolute;
+    margin: 0 !important;
+    border: none !important;
+    margin-top: 5px !important;
+    background: transparent !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-label {
+    width: 100%;
+    border: none;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    font-weight: normal;    
+}
+
+.ui-selectonemenu .ui-selectonemenu-label.ui-inputfield.ui-corner-all {
+    text-overflow: ellipsis;
+}
+
+.ui-inputfield {
+    margin: 0;
+    padding: 5px;
+    background: #ffffff;
+    font-weight: normal;
+    outline: medium none;
+    box-shadow: inset 0 0 0 #8f8f8f!important;
+    -webkit-box-shadow: inset 0 0 0 #8f8f8f!important;
+}
+
+.ui-fileupload-simple .ui-button {
+    color: #fff;
+    background-color: #343a40 !important;
+    border-color: #343a40;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: none !important;
+    background-image: none;
+}
+	
+.ui-fileupload-simple .ui-button-text-icon-left .ui-button-icon-left {
+    display: none;
+}
