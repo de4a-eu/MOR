@@ -3610,10 +3610,10 @@
 "Identifier" : {
 	"type" : "",
 	"cardinality" : "",
-	"comment" : "",
+	"comment" : "Identifier",
 	"en" : {
-		"label" : "Identifier",
-		"description" : "The Identifier class allows an identifier to be given as well as information about which authority issued it and, if needed, when.",
+		"label" : "The Identifier class allows an identifier to be given as well as information about which authority issued it and, if needed, when.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3621,10 +3621,10 @@
 "Identifier/Identifier" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Content",
 	"en" : {
-		"label" : "Content",
-		"description" : "Content - alpha-numeric string",
+		"label" : "Content - alpha-numeric string",
+		"description" : "",
 		"example" : "GR/GR/12345678",
 		"verified" : "true"
 	}
@@ -3632,10 +3632,10 @@
 "Identifier/IdentifierType" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Identifier Type",
 	"en" : {
-		"label" : "Identifier Type",
-		"description" : "The type of identifier issued (if the authority issues more than one type of identifier).",
+		"label" : "The type of identifier issued (if the authority issues more than one type of identifier).",
+		"description" : "",
 		"example" : "eIDAS eID",
 		"verified" : "true"
 	}
@@ -3643,10 +3643,10 @@
 "Identifier/IssueDate" : {
 	"type" : "UDT/Date",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Issue Date",
 	"en" : {
-		"label" : "Issue Date",
-		"description" : "The date on which it was issued",
+		"label" : "The date on which it was issued",
+		"description" : "",
 		"example" : "13/08/1957",
 		"verified" : "true"
 	}
@@ -3654,10 +3654,10 @@
 "Identifier/IssuingAuthority" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Issuing Authority",
 	"en" : {
-		"label" : "Issuing Authority",
-		"description" : "The name of the issuing agency",
+		"label" : "The name of the issuing agency",
+		"description" : "",
 		"example" : "Institute of Registry and Notary",
 		"verified" : "true"
 	}
@@ -3665,10 +3665,10 @@
 "Identifier/IssuingAuthorityID" : {
 	"type" : "UDT/Identifier",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Issuing Authority ID",
 	"en" : {
-		"label" : "Issuing Authority ID",
-		"description" : "The issuing agency ID",
+		"label" : "The issuing agency ID",
+		"description" : "",
 		"example" : "GR-12345678",
 		"verified" : "true"
 	}
@@ -3676,9 +3676,9 @@
 "Jurisdiction" : {
 	"type" : "",
 	"cardinality" : "",
-	"comment" : "",
+	"comment" : "Jurisdiction",
 	"en" : {
-		"label" : "Jurisdiction",
+		"label" : "",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3687,10 +3687,10 @@
 "Jurisdiction/Identifier" : {
 	"type" : "Identifier",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Identifier",
 	"en" : {
-		"label" : "Identifier",
-		"description" : " The value for the id property is a URI for that Jurisdiction.",
+		"label" : " The value for the id property is a URI for that Jurisdiction.",
+		"description" : "",
 		"example" : "Spanish ",
 		"verified" : "true"
 	}
@@ -3698,10 +3698,10 @@
 "Jurisdiction/Name" : {
 	"type" : "CountryEnum",
 	"cardinality" : "11",
-	"comment" : "",
+	"comment" : "Name",
 	"en" : {
-		"label" : "Name",
-		"description" : "The name is simply a string that identifies the Jurisdiction, typically a country, with or without a language tag.",
+		"label" : "The name is simply a string that identifies the Jurisdiction, typically a country, with or without a language tag.",
+		"description" : "",
 		"example" : "ES",
 		"verified" : "true"
 	}
@@ -3775,9 +3775,9 @@
 "LocationAddress" : {
 	"type" : "",
 	"cardinality" : "",
-	"comment" : "",
+	"comment" : "Address",
 	"en" : {
-		"label" : "Address",
+		"label" : "",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3786,10 +3786,10 @@
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Admin unit level 2",
 	"en" : {
-		"label" : "Admin unit level 2",
-		"description" : "The region of the address, usually a county, state or other such area that typically encompasses several localities.",
+		"label" : "The region of the address, usually a county, state or other such area that typically encompasses several localities.",
+		"description" : "",
 		"example" : "Barcelona",
 		"verified" : "true"
 	}
@@ -3797,10 +3797,10 @@
 "LocationAddress/AdminUnitL1" : {
 	"type" : "CountryEnum",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Admin unit level 1",
 	"en" : {
-		"label" : "Admin unit level 1",
-		"description" : "The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.",
+		"label" : "The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.",
+		"description" : "",
 		"example" : "ES",
 		"verified" : "true"
 	}
@@ -3808,10 +3808,10 @@
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "PoBox",
 	"en" : {
-		"label" : "PoBox",
-		"description" : "The Post Office Box number. INSPIRE's name for this is 'postalDeliveryIdentifier' for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology.",
+		"label" : "The Post Office Box number. INSPIRE's name for this is 'postalDeliveryIdentifier' for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology.",
+		"description" : "",
 		"example" : "1",
 		"verified" : "true"
 	}
@@ -3819,10 +3819,10 @@
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Thoroughface",
 	"en" : {
-		"label" : "Thoroughface",
-		"description" : "Quoting from the INSPIRE guidelines, a thoroughfare is: 'an address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.",
+		"label" : "Quoting from the INSPIRE guidelines, a thoroughfare is: 'an address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.",
+		"description" : "",
 		"example" : "2nd South Street",
 		"verified" : "true"
 	}
@@ -3830,10 +3830,10 @@
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Locator designator",
 	"en" : {
-		"label" : "Locator designator",
-		"description" : "The locator designator is defined by the INSPIRE guidelines as 'a number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.' In simpler terms, this is the building number, apartment number, etc. For an address such as 'Flat 3, 17 Bridge Street', the locator is 'flat 3, 17.'",
+		"label" : "The locator designator is defined by the INSPIRE guidelines as 'a number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.' In simpler terms, this is the building number, apartment number, etc. For an address such as 'Flat 3, 17 Bridge Street', the locator is 'flat 3, 17.'",
+		"description" : "",
 		"example" : "'18', 'Flat 3', 'Floor 6'",
 		"verified" : "true"
 	}
@@ -3841,10 +3841,10 @@
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Locator name",
 	"en" : {
-		"label" : "Locator name",
-		"description" : "Based on the INSPIRE guidelines, locator name is defined as: 'Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, 'Shumann, Berlaymont' is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.",
+		"label" : "Based on the INSPIRE guidelines, locator name is defined as: 'Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, 'Shumann, Berlaymont' is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.",
+		"description" : "",
 		"example" : "Town Hall",
 		"verified" : "true"
 	}
@@ -3852,10 +3852,10 @@
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Address area",
 	"en" : {
-		"label" : "Address area",
-		"description" : "Taking the definition from INSPIRE, the address area is: the name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.' This would typically be part of a city, a neighbourhood or village.",
+		"label" : "Taking the definition from INSPIRE, the address area is: the name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.' This would typically be part of a city, a neighbourhood or village.",
+		"description" : "",
 		"example" : "Madrid",
 		"verified" : "true"
 	}
@@ -3863,10 +3863,10 @@
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Post name",
 	"en" : {
-		"label" : "Post name",
-		"description" : "The key postal division of the address, usually the city. (INSPIRE's definition is 'One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)",
+		"label" : "The key postal division of the address, usually the city. (INSPIRE's definition is 'One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)",
+		"description" : "",
 		"example" : "Madrid",
 		"verified" : "true"
 	}
@@ -3874,10 +3874,10 @@
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Post code",
 	"en" : {
-		"label" : "Post code",
-		"description" : "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems.",
+		"label" : "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems.",
+		"description" : "",
 		"example" : "2804-268",
 		"verified" : "true"
 	}
@@ -4391,10 +4391,10 @@
 "Person" : {
 	"type" : "",
 	"cardinality" : "",
-	"comment" : "",
+	"comment" : "Person",
 	"en" : {
-		"label" : "Person",
-		"description" : "An individual natural person who may be dead or alive, but not imaginary.",
+		"label" : "An individual natural person who may be dead or alive, but not imaginary.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4402,10 +4402,10 @@
 "Person/DateOfBirth" : {
 	"type" : "",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Date of birth",
 	"en" : {
-		"label" : "Date of birth",
-		"description" : "The day on which the person was born.",
+		"label" : "The day on which the person was born.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4413,10 +4413,10 @@
 "Person/DateOfBirth/Year" : {
 	"type" : "xsd:gYear",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Year",
 	"en" : {
-		"label" : "Year",
-		"description" : "A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.",
+		"label" : "A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.",
+		"description" : "",
 		"example" : "1980",
 		"verified" : "true"
 	}
@@ -4424,10 +4424,10 @@
 "Person/DateOfBirth/Month" : {
 	"type" : "xsd:gMonth",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Month",
 	"en" : {
-		"label" : "Month",
-		"description" : "A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.",
+		"label" : "A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.",
+		"description" : "",
 		"example" : "6",
 		"verified" : "true"
 	}
@@ -4435,10 +4435,10 @@
 "Person/DateOfBirth/Day" : {
 	"type" : "xsd:gDay",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Day",
 	"en" : {
-		"label" : "Day",
-		"description" : "A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.",
+		"label" : "A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.",
+		"description" : "",
 		"example" : "12",
 		"verified" : "true"
 	}
@@ -4446,10 +4446,10 @@
 "Person/Gender" : {
 	"type" : "PersonGenderEnum",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Gender",
 	"en" : {
-		"label" : "Gender",
-		"description" : "The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.",
+		"label" : "The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.",
+		"description" : "",
 		"example" : "Male",
 		"verified" : "true"
 	}
@@ -4457,10 +4457,10 @@
 "Person/PlaceOfBirth" : {
 	"type" : "LocationAddress",
 	"cardinality" : "00",
-	"comment" : "",
+	"comment" : "Place of birth",
 	"en" : {
-		"label" : "Place of birth",
-		"description" : "The Location where the person was born.",
+		"label" : "The Location where the person was born.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4468,10 +4468,10 @@
 "Person/PersonName" : {
 	"type" : "",
 	"cardinality" : "10",
-	"comment" : "",
+	"comment" : "Person name",
 	"en" : {
-		"label" : "Person name",
-		"description" : "The family name and given name of a Person. At least one of the two must exist.",
+		"label" : "The family name and given name of a Person. At least one of the two must exist.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4479,10 +4479,10 @@
 "Person/PersonName/FamilyName" : {
 	"type" : "UDT/Name",
 	"cardinality" : "01",
-	"comment" : "",
+	"comment" : "Family name",
 	"en" : {
-		"label" : "Family name",
-		"description" : "A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. 'de Boer', 'van de Putte', 'von und zu Orlow'. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's Family Name would be recorded as 'de Cervantes Saavedra'.",
+		"label" : "A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. 'de Boer', 'van de Putte', 'von und zu Orlow'. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's Family Name would be recorded as 'de Cervantes Saavedra'.",
+		"description" : "",
 		"example" : "Shah",
 		"verified" : "true"
 	}
@@ -4490,10 +4490,10 @@
 "Person/PersonName/GivenName" : {
 	"type" : "UDT/Text",
 	"cardinality" : "01",
-	"comment" : "",
+	"comment" : "Given name",
 	"en" : {
-		"label" : "Given name",
-		"description" : "A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is 'Johann Sebastian'.",
+		"label" : "A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is 'Johann Sebastian'.",
+		"description" : "",
 		"example" : "Iftikhar",
 		"verified" : "true"
 	}
@@ -4501,10 +4501,10 @@
 "Person/Identifier" : {
 	"type" : "Identifier",
 	"cardinality" : "01",
-	"comment" : "",
+	"comment" : "Identifier",
 	"en" : {
-		"label" : "Identifier",
-		"description" : "The identifier relation is used to link a Person to any formally issued Identifier for that Person.",
+		"label" : "The identifier relation is used to link a Person to any formally issued Identifier for that Person.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4512,10 +4512,10 @@
 "Person/Citizenship" : {
 	"type" : "Jurisdiction",
 	"cardinality" : "01",
-	"comment" : "",
+	"comment" : "Citizenship",
 	"en" : {
-		"label" : "Citizenship",
-		"description" : "The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.",
+		"label" : "The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4688,9 +4688,9 @@
 "PublicOrganisation" : {
 	"type" : "",
 	"cardinality" : "",
-	"comment" : "",
+	"comment" : "PublicOrganisation",
 	"en" : {
-		"label" : "PublicOrganisation",
+		"label" : "",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4699,10 +4699,10 @@
 "PublicOrganisation/Identifier" : {
 	"type" : "Identifier",
 	"cardinality" : "01",
-	"comment" : "",
+	"comment" : "Identifier",
 	"en" : {
-		"label" : "Identifier",
-		"description" : "Many organisations are referred to by an acronym or some other identifier. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European AntiN/AFraud Office, and so on. These are formally recognised by the European Commission which provides a list of such acronyms. Analogous lists should be used in other contexts.",
+		"label" : "Many organisations are referred to by an acronym or some other identifier. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European AntiN/AFraud Office, and so on. These are formally recognised by the European Commission which provides a list of such acronyms. Analogous lists should be used in other contexts.",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4710,10 +4710,10 @@
 "PublicOrganisation/PrefLabel" : {
 	"type" : "UDT/Text",
 	"cardinality" : "11",
-	"comment" : "",
+	"comment" : "Preferred label",
 	"en" : {
-		"label" : "Preferred label",
-		"description" : "As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.",
+		"label" : "As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.",
+		"description" : "",
 		"example" : "IRN - ",
 		"verified" : "false"
 	}
