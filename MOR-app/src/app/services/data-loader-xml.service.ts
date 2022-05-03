@@ -11,4 +11,10 @@ export class DataLoaderXmlService {
       await fetch('assets/canonical-evidence-types/' + type + '/' + file)
     ).text();
   }
+
+  public async loadXmlIal(file: string): Promise<string> {
+    return await (
+      await fetch('assets/ial/' + file)
+    ).text();
+  }
 }
