@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
-import { DataLoaderCanonicalEvidenceTypesService } from './data-loader-canonical-evidence-types.service';
-import { DataLoaderCountriesService } from './data-loader-countries.service';
-
-import BirthCertificateIP from 'src/app/services/data/ial/IP/BirthCertificate.json';
-import BirthCertificateUSIP from 'src/app/services/data/ial/USIP/BirthCertificate.json';
-import MarriageCertificateIP from 'src/app/services/data/ial/IP/MarriageCertificate.json';
-import MarriageCertificateUSIP from 'src/app/services/data/ial/USIP/MarriageCertificate.json';
-import { DataLoaderXmlService } from './data-loader-xml.service';
 import { XMLParser } from 'fast-xml-parser';
+
+import { Country } from '../classes/country';
+import { Language } from '../classes/language';
+import { CanonicalEvidenceType } from '../classes/canonical-evidence-type';
+
+import NUTS0 from 'src/assets/NUTS0.json';
+import Langs from 'src/assets/languages.json';
+import CanonicalEvidenceTypes from 'src/assets/canonical-evidence-types.json';
+
+import BirthCertificateIP from 'src/assets/ial/deprecated/IP/BirthCertificate.json';
+import BirthCertificateUSIP from 'src/assets/ial/deprecated/USIP/BirthCertificate.json';
+import MarriageCertificateIP from 'src/assets/ial/deprecated/IP/MarriageCertificate.json';
+import MarriageCertificateUSIP from 'src/assets/ial/deprecated/USIP/MarriageCertificate.json';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataLoaderIalService {
-  constructor(
-    private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
-    private dataLoaderCountries: DataLoaderCountriesService,
-    private dataLoaderXml: DataLoaderXmlService
-  ) {
+export class DataLoaderService {
+  private countries: Country[] = NUTS0;
+  private languages: Language[] = Langs;
+  private canonicalEvidenceTypes: CanonicalEvidenceType[] =
+    CanonicalEvidenceTypes;
+
+  constructor() {
     this.loadMockedIalXml([
       'ial-es-birth2.xml',
       'ial-es-marriage1.xml',
@@ -26,9 +32,68 @@ export class DataLoaderIalService {
     ]);
   }
 
+  public parser = new XMLParser({ ignoreAttributes: false });
+
+  private mockupIalXmlResponses: any = {};
+
+  private mockupIalResponses: any = {
+    IP: {
+      BirthCertificate: BirthCertificateIP,
+      MarriageCertificate: MarriageCertificateIP,
+    },
+    USIP: {
+      BirthCertificate: BirthCertificateUSIP,
+      MarriageCertificate: MarriageCertificateUSIP,
+    },
+  };
+
+  public getTranslationLanguages = () => {
+    return ['en', 'sl', 'es', 'pt', 'fr'];
+  };
+
+  public getTranslationDefaultLanguage = () => {
+    return 'en';
+  };
+
+  public getCountries = () => {
+    return this.countries;
+  };
+
+  public getCountryName = (code: string) => {
+    let country = this.countries.find((x) => x.code == code);
+    return country ? country.name : null;
+  };
+
+  public getLanguages = (): Language[] => {
+    return this.languages;
+  };
+
+  public getAllCanonicalEvidenceTypes = () => {
+    return this.canonicalEvidenceTypes;
+  };
+
+  public getSelectedCanonicalEvidenceTypes = (
+    tokenNames: string
+  ): CanonicalEvidenceType[] => {
+    let listOfTokenNames: string[] = tokenNames.split(',');
+    return this.canonicalEvidenceTypes.filter((x) =>
+      listOfTokenNames.includes(x.tokenName || '')
+    );
+  };
+
+  public async loadXml(file: string, type: string): Promise<string> {
+    return await (
+      await fetch('assets/canonical-evidence-types/' + type + '/' + file)
+    ).text();
+  }
+
+  public async loadXmlIal(file: string): Promise<string> {
+    return await (await fetch('assets/ial/' + file)).text();
+  }
+
   private loadMockedIalXml = async (files: string[]) => {
     for (let i = 0; i < files.length; i++) {
-      let data: any = await this.dataLoaderXml.loadXmlIal(files[i]);
+      let data: any = await this.loadXmlIal(files[i]);
       //console.log(data);
       data = this.parser.parse(data);
       data = JSON.stringify(data, (_, value) => {
@@ -63,21 +128,6 @@ export class DataLoaderIalService {
     //console.log(this.mockupIalXmlResponses);
   };
 
-  public parser = new XMLParser({ ignoreAttributes: false });
-
-  private mockupIalXmlResponses: any = {};
-
-  private mockupIalResponses: any = {
-    IP: {
-      BirthCertificate: BirthCertificateIP,
-      MarriageCertificate: MarriageCertificateIP,
-    },
-    USIP: {
-      BirthCertificate: BirthCertificateUSIP,
-      MarriageCertificate: MarriageCertificateUSIP,
-    },
-  };
-
   // Mockup API method for call to:
   // /ial/{canonicalEvidenceTypeId}/{countryCode}
   public getIal(
@@ -87,18 +137,13 @@ export class DataLoaderIalService {
   ): any {
     // Check canonical evidence type id
     if (
-      !this.dataLoaderCanonicalEvidenceTypes
-        .getAllCanonicalEvidenceTypes()
-        .find((x) => x.tokenName == canonicalEvidenceTypeId)
+      !this.getAllCanonicalEvidenceTypes().find(
+        (x) => x.tokenName == canonicalEvidenceTypeId
+      )
     )
       return null;
     // Check country code
-    if (
-      !this.dataLoaderCountries
-        .getCountries()
-        .find((x) => x.code == countryCode)
-    )
-      return null;
+    if (!this.getCountries().find((x) => x.code == countryCode)) return null;
     // Check pattern
     if (!['IP', 'USIP'].includes(pattern)) return null;
 

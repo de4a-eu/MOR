@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
+import { DataLoaderService } from 'src/app/services/data-loader.service';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -14,7 +14,7 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
   @Input('selectedTypes') selectedTypes!: string;
   @Output() selectedTypesChange = new EventEmitter();
 
-  constructor(public loader: DataLoaderCanonicalEvidenceTypesService) {}
+  constructor(public dataLoader: DataLoaderService) {}
 
   public getSelectedTypes = () => {
     return !this.selectedTypes || this.selectedTypes.length == 0
@@ -23,7 +23,7 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
   };
 
   public getTypeName(code: string): string | null {
-    let type = this.loader
+    let type = this.dataLoader
       .getAllCanonicalEvidenceTypes()
       .find((x) => code == x.code);
     return type ? type.name : null;
@@ -34,7 +34,7 @@ export class CanonicalEvidenceTypeSelectorComponent implements OnInit {
   }
 
   public toggleType(tokenName: string | undefined) {
-    if (!this.selectedTypes) this.selectedTypes = "";
+    if (!this.selectedTypes) this.selectedTypes = '';
     if (this.isTypeSelected(tokenName)) {
       this.selectedTypes = this.getSelectedTypes()
         .filter((x) => x != tokenName)

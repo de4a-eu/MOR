@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
-import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
-import { DataLoaderIalService } from 'src/app/services/data-loader-ial.service';
 import {
   faEye,
   faEyeSlash,
@@ -12,9 +10,8 @@ import {
   faSyncAlt,
   faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
-import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
-import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
-import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
+import { DataLoaderService } from 'src/app/services/data-loader.service';
+import { StorageService } from 'src/app/services/storage.service';
 import { TranslateService } from '@ngx-translate/core';
 
 declare var bootstrap: any;
@@ -44,16 +41,13 @@ export class MORERComponent implements OnInit {
   public showDescription: boolean = true;
 
   constructor(
-    private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
-    public dataLoaderCountries: DataLoaderCountriesService,
-    private dataLoaderIal: DataLoaderIalService,
-    private dataLoaderStorage: DataLoaderStorageService,
-    private dataLoaderXml: DataLoaderXmlService,
+    public dataLoader: DataLoaderService,
+    private storage: StorageService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.addLangs(this.dataLoader.getTranslationLanguages());
+    translate.setDefaultLang(this.dataLoader.getTranslationDefaultLanguage());
+    translate.use(this.dataLoader.getTranslationDefaultLanguage());
   }
 
   public canonicalEvidenceCountries: any = {};
@@ -141,7 +135,7 @@ export class MORERComponent implements OnInit {
         }
       }
     });
-    this.dataLoaderStorage.addArray(this.outputJSArrayId, result);
+    this.storage.addArray(this.outputJSArrayId, result);
     this.complete = true;
 
     this.setInputParameterToPreview();
@@ -154,11 +148,11 @@ export class MORERComponent implements OnInit {
    * returned (TO-DO API mock-up).
    */
   public async setInputParameterToPreview() {
-    let outputER = JSON.parse(this.dataLoaderStorage.get(this.outputJSArrayId));
+    let outputER = JSON.parse(this.storage.get(this.outputJSArrayId));
     for (let i = 0; i < outputER.length; i++) {
       let x = outputER[i];
       if (Object.keys(x).includes('provision')) {
-        x.payload = await this.dataLoaderXml.loadXml(
+        x.payload = await this.dataLoader.loadXml(
           x.canonicalEvidenceType + '.xml',
           'examples'
         );
@@ -166,7 +160,7 @@ export class MORERComponent implements OnInit {
         delete x.provision;
       }
     }
-    this.dataLoaderStorage.addArray('inputPreview', outputER);
+    this.storage.addArray('inputPreview', outputER);
   }
 
   /**
@@ -176,7 +170,7 @@ export class MORERComponent implements OnInit {
    *          `tokenName`
    */
   public getEvidenceTypes(): CanonicalEvidenceType[] {
-    return this.dataLoaderCanonicalEvidenceTypes.getSelectedCanonicalEvidenceTypes(
+    return this.dataLoader.getSelectedCanonicalEvidenceTypes(
       this.canonicalEvidenceTypes
     );
   }
@@ -243,7 +237,7 @@ export class MORERComponent implements OnInit {
    * @returns array with provision details
    */
   public getIalIP(canonicalEvidenceTypeId: string, countryCode: string): any {
-    let result = this.dataLoaderIal.getIal(
+    let result = this.dataLoader.getIal(
       canonicalEvidenceTypeId,
       countryCode,
       'IP'
@@ -277,7 +271,7 @@ export class MORERComponent implements OnInit {
         ? type.name
         : '';
       this.modalSelectProvisionData.country =
-        this.dataLoaderCountries.getName(country);
+        this.dataLoader.getCountryName(country);
       if (showModal) this.modalSelectProvision.show();
     }
   }
@@ -395,8 +389,8 @@ export class MORERComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
-    this.dataLoaderStorage.remove(this.outputJSArrayId);
-    this.dataLoaderStorage.remove('inputPreview');
+    this.storage.remove(this.outputJSArrayId);
+    this.storage.remove('inputPreview');
   }
 
   ngOnChanges(changes: SimpleChanges): void {

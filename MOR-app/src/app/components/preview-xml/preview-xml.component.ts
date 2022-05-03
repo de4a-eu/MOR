@@ -2,7 +2,7 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { XMLParser } from 'fast-xml-parser';
 import { TranslateService } from '@ngx-translate/core';
-import { DataLoaderXmlService } from 'src/app/services/data-loader-xml.service';
+import { DataLoaderService } from 'src/app/services/data-loader.service';
 
 @Component({
   selector: 'app-preview-xml',
@@ -28,16 +28,16 @@ export class PreviewXmlComponent implements OnInit {
 
   constructor(
     public translate: TranslateService,
-    private dataLoaderXml: DataLoaderXmlService
+    private dataLoader: DataLoaderService
   ) {
-    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.addLangs(this.dataLoader.getTranslationLanguages());
+    translate.setDefaultLang(this.dataLoader.getTranslationDefaultLanguage());
+    translate.use(this.dataLoader.getTranslationDefaultLanguage());
 
-    dataLoaderXml
+    this.dataLoader
       .loadXml('birth-evidence-1.7-generated-example.xml', 'examples')
       .then((data) => (this.examples['BirthCertificate'] = data));
-    dataLoaderXml
+    this.dataLoader
       .loadXml('marriage-evidence-1.7-generated-example.xml', 'examples')
       .then((data) => (this.examples['MarriageCertificate'] = data));
   }

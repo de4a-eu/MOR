@@ -6,7 +6,7 @@ import {
   EventEmitter,
   SimpleChanges,
 } from '@angular/core';
-import { DataLoaderCountriesService } from 'src/app/services/data-loader-countries.service';
+import { DataLoaderService } from 'src/app/services/data-loader.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Country } from 'src/app/classes/country';
 
@@ -22,16 +22,16 @@ export class CountrySelectorComponent implements OnInit {
   @Output() countryCodeChange = new EventEmitter();
 
   constructor(
-    public countries: DataLoaderCountriesService,
+    public dataLoader: DataLoaderService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es', 'pt', 'fr']);
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.addLangs(this.dataLoader.getTranslationLanguages());
+    translate.setDefaultLang(this.dataLoader.getTranslationDefaultLanguage());
+    translate.use(this.dataLoader.getTranslationDefaultLanguage());
   }
 
   public getCountryName(code: string): string | null {
-    let country = this.countries.getCountries().find((x) => code == x.code);
+    let country = this.dataLoader.getCountries().find((x) => code == x.code);
     let name: string | null = null;
     if (country)
       name = this.translate.instant(
@@ -41,7 +41,7 @@ export class CountrySelectorComponent implements OnInit {
   }
 
   public getCountryFlagCode(code: string): string | null {
-    let country = this.countries.getCountries().find((x) => code == x.code);
+    let country = this.dataLoader.getCountries().find((x) => code == x.code);
     return country
       ? country.flagCode
         ? country.flagCode
@@ -50,7 +50,7 @@ export class CountrySelectorComponent implements OnInit {
   }
 
   public getCountries(): Country[] {
-    let countries = this.countries.getCountries();
+    let countries = this.dataLoader.getCountries();
     countries.map(
       (x) =>
         (x.name = this.translate.instant(

@@ -11,7 +11,7 @@ export interface StorageChange {
 @Injectable({
   providedIn: 'root',
 })
-export class DataLoaderStorageService {
+export class StorageService {
   public storageChange$: ReplaySubject<{ key: string; value: string }> =
     new ReplaySubject();
 

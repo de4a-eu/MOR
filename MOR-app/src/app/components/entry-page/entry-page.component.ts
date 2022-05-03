@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
-import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-entry-page',
@@ -18,10 +18,10 @@ export class EntryPageComponent implements OnInit {
   public outputJSArrayId: string = 'outputJSArrayIdMorEr';
   @Input() postActionValue: string = '[]';
 
-  constructor(private dataLoaderStorage: DataLoaderStorageService) {}
+  constructor(private storage: StorageService) {}
 
   ngOnInit(): void {
-    this.dataLoaderStorage.storageChange$.subscribe((result) => {
+    this.storage.storageChange$.subscribe((result) => {
       if (result.key === 'inputPreview') this.postActionValue = result.value;
     });
 

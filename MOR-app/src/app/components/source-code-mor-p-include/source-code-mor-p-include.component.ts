@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
+import { StorageService } from 'src/app/services/storage.service';
 import {
   faGlobeEurope,
   faSignInAlt,
@@ -32,10 +32,10 @@ export class SourceCodeMorPIncludeComponent implements OnInit {
 
   public isDisplayed: boolean = true;
 
-  constructor(private dataLoaderStorage: DataLoaderStorageService) {}
+  constructor(private storage: StorageService) {}
 
   ngOnInit(): void {
-    this.dataLoaderStorage.storageChange$.subscribe((result) => {
+    this.storage.storageChange$.subscribe((result) => {
       if (result.key === 'confirmedCanonicalEvidenceTypes')
         this.confirmedCanonicalEvidenceTypes = result.value;
     });

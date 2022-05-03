@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
-import { DataLoaderCanonicalEvidenceTypesService } from 'src/app/services/data-loader-canonical-evidence-types.service';
-import { DataLoaderStorageService } from 'src/app/services/data-loader-storage.service';
+import { DataLoaderService } from 'src/app/services/data-loader.service';
+import { StorageService } from 'src/app/services/storage.service';
 import {
   faEye,
   faEyeSlash,
@@ -39,13 +39,13 @@ export class MorPComponent implements OnInit {
   public complete: boolean = false; // P is complete
 
   constructor(
-    private dataLoaderCanonicalEvidenceTypes: DataLoaderCanonicalEvidenceTypesService,
-    private dataLoaderStorage: DataLoaderStorageService,
+    private dataLoader: DataLoaderService,
+    private storage: StorageService,
     public translate: TranslateService
   ) {
-    translate.addLangs(['en', 'sl', 'es']);
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.addLangs(this.dataLoader.getTranslationLanguages());
+    translate.setDefaultLang(this.dataLoader.getTranslationDefaultLanguage());
+    translate.use(this.dataLoader.getTranslationDefaultLanguage());
   }
 
   /**
@@ -106,7 +106,7 @@ export class MorPComponent implements OnInit {
     let selectedTokenNames = this.postActionValueObject.map(
       (x) => x.canonicalEvidenceType
     );
-    let types = this.dataLoaderCanonicalEvidenceTypes
+    let types = this.dataLoader
       .getAllCanonicalEvidenceTypes()
       .filter((x) => selectedTokenNames.includes(x.tokenName));
     return types;
@@ -183,7 +183,7 @@ export class MorPComponent implements OnInit {
       if (this.confirmSendStatus[x]) result[x].binaryText = this.uploads[x];
     });
 
-    this.dataLoaderStorage.addArray('confirmedCanonicalEvidenceTypes', result);
+    this.storage.addArray('confirmedCanonicalEvidenceTypes', result);
     this.complete = true;
   }
 
@@ -196,7 +196,7 @@ export class MorPComponent implements OnInit {
       try {
         this.postActionValueObject = JSON.parse(this.postActionValue);
       } catch (e) {
-        this.postActionValue = "[]";
+        this.postActionValue = '[]';
         this.postActionValueObject = JSON.parse(this.postActionValue);
       }
       this.postActionValueObject.map((x) => {
@@ -207,7 +207,7 @@ export class MorPComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedLanguage = this.defaultLanguage;
-    this.dataLoaderStorage.remove('confirmedCanonicalEvidenceTypes');
+    this.storage.remove('confirmedCanonicalEvidenceTypes');
 
     // Bootstrap modals
     this.modalPreview = new bootstrap.Modal(

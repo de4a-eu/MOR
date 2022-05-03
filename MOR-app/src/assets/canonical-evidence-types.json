@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Birth certificate",
+    "code": "birth",
+    "tokenName": "BirthCertificate",
+    "morID": "BirthEvidence"
+  },
+  {
+    "name": "Marriage certificate",
+    "code": "marriage",
+    "tokenName": "MarriageCertificate",
+    "morID": "MarriageEvidence"
+  },
+  {
+    "name": "Residency proof",
+    "code": "residency",
+    "tokenName": "ResidencyProof"
+  },
+  {
+    "name": "Company registration",
+    "code": "companyRegistration",
+    "tokenName": "CompanyRegistration"
+  },
+  {
+    "name": "Higher education certificate",
+    "code": "higherEd",
+    "tokenName": "HigherEdCertificate"
+  },
+  {
+    "name": "Secondary education certificate",
+    "code": "secondaryEd",
+    "tokenName": "SecondaryEdCertificate"
+  }
+]
