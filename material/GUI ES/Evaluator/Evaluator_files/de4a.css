@@ -1,0 +1,815 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+
+
+/**************************************************/
+/************ TEXTO Y TIPOGRAFIAS *****************/
+/**************************************************/
+
+/* Modificamos todos los elementos de primefaces que sobreescriban las propìedades */
+.ui-widget .ui-widget, .ui-button-text, .ui-widget-header, .de4a {    
+    font-family:'Source Sans Pro' !important;
+}
+
+p.de4a, label.de4a {
+    font-size: 1.2rem !important;
+    color: #170F40 !important;
+}
+
+.de4a-main-title {
+    text-align: center;
+    font: normal normal 600 32px/40px Source Sans Pro;
+    letter-spacing: 0.64px;
+    color: #170F40;
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+.de4a-section-title {
+    letter-spacing: 0.6px;
+    color: #3D9BE9;
+    opacity: 1;
+}
+
+.de4a-section-subtitle {
+    color: #36a8de;
+    font-weight: bold;
+}
+
+h1.de4a-section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+h2.de4a-section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin:inherit !important;
+}
+
+h3.de4a-section-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #3078BE;
+}
+
+h4.de4a-section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.de4a-info-text {
+    font-size: 0.85rem;
+    color: #3D9BE9;
+}
+
+.de4a-section-wrapper {
+    display: block;
+    text-align: center;
+    width: 65%;
+    min-width: 400px;
+    margin: auto;
+}
+
+.de4a-section-header{
+    width: 100%;
+    text-align: center;
+    font: normal normal 600 26px/40px Source Sans Pro;
+    letter-spacing: 0.64px;
+    color: #170F40;
+    opacity: 1;
+    float: none !important;
+    margin: auto;
+    padding: 35px 0 25px 0;
+    display: block;
+}
+
+.de4a-legalInfo-content{
+    width: 80%;
+    min-width:300px;
+    margin:auto;
+    padding: 15px;
+}
+
+.de4a-legalInfo-yellow{
+    text-align: left;
+    font: normal normal 600 17px/15px Source Sans Pro;
+    letter-spacing: 0.24px;
+    color: #FCC415;
+    opacity: 1;
+}
+
+.de4a-legalInfo-text{
+
+text-align: left;
+
+font: normal normal normal 14px/18px Source Sans Pro;
+
+letter-spacing: 0.3px;
+
+opacity: 1;
+}
+
+.de4a-block-text {
+    width: 80%;
+    min-width: 200px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.de4a-txt-instructions {
+    text-align: center;
+    font: normal normal normal 16px/20px Source Sans Pro;
+    letter-spacing: 0.4px;
+    opacity: 1;
+}
+
+.de4a-main-box{
+    width: 1366px; 
+    height: 42px; 
+    background: #FAFAFA 0% 0% no-repeat padding-box; 
+    opacity: 1; 
+}
+
+/**************************************************/
+/******************* BOTONES **********************/
+/**************************************************/
+
+/* Propiedades comunes de botones */
+.de4a-button > .ui-button-text, .ui-button-text.ui-c {
+    text-decoration: none;
+    padding: 10px 20px !important;
+    text-shadow: none;
+    font-size: 1.15rem;
+    border-radius: 4px !important;
+    transition: 0.3s;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.de4a-button {margin: 7px;}
+
+/* Boton fondo blanco y border */
+.de4a-button-additional > .ui-button-text {
+    background: white;
+    border: 1px solid #3D9BE9 !important;
+    color: #3D9BE9;    
+}
+
+/* Boton fondo azul */
+.de4a-button-primary > .ui-button-text, .ui-button-confirmation-yes, .ui-button-text .ui-c {
+    background: #3D9BE9;
+    border: 1px solid #3D9BE9 !important;
+    color: white;    
+}
+
+/* Boton fondo gris */
+.de4a-button-secondary > .ui-button-text, .ui-button-confirmation-no {
+    background: #CCCCCC;
+    border: 1px solid #CCCCCC !important;
+    color: white;    
+    
+}
+
+/* Boton fondo rojo */
+.de4a-button-red > .ui-button-text {
+    background: #f16060;
+    border: 1px solid #ed5151 !important;
+    color: white;    
+}
+
+/* Boton interrogacion */
+.fa-question-circle {
+	color: #3d9be9;
+    font-size: 20px !important;
+    margin: 5px !important;
+}
+
+/* Modificar clases propias de PrimeFaces */
+.ui-button.ui-state-focus, .ui-button.ui-state-active, .ui-button-text {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/* Estados hover, activo, focus  de los diferentes botones */
+/* --------------------------------------------------------*/
+.de4a-button > .ui-button-text:hover, .ui-button-text:active, .ui-button-text:focus {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition: 0.3s;
+}
+
+.de4a-button-primary > .ui-button-text:hover, .ui-button-text:active, .ui-button-text:focus {
+    background: #187fd5 !important; 
+    border-color: #187fd5 !important;
+    color: white !important;
+}
+
+.de4a-button-secondary > .ui-button-text:hover, .ui-button-text:active, .ui-button-text:focus {
+    background: #ababab !important;
+    border-color: #ababab !important;
+    color: white !important;
+}
+
+.de4a-button-additional > .ui-button-text:hover, .ui-button-text:active, .ui-button-text:focus {
+    background: #3D9BE9 !important;
+    color: white !important;
+}
+
+.de4a-button-red > .ui-button-text:hover, .ui-button-text:active, .ui-button-text:focus {
+    background: #c54c4c !important;
+    color: white !important;
+} 
+
+/**************************************************/
+/****************** MENSAJES **********************/
+/**************************************************/
+
+/* Mensaje informativo */
+.de4a-message {
+    max-width: 905px;
+    min-width: 450px;
+    width: 90%;
+    margin: auto;
+}
+
+.de4a-message > .ui-corner-all {
+    padding: 15px 10px !important;
+    background-color: white;
+    border-left: 8px solid;
+    box-shadow: 1px 1px 3px #e3e3e3;
+    border-color: #e3e3e3;
+    border-radius: 0 !important;
+}
+
+.ui-messages-info {
+    color: #3D9BE9 !important;    
+    border-left: 8px solid #3D9BE9;
+    border-left-color: #3D9BE9 !important;    
+}
+
+.ui-messages-success {
+    color: #8faf7f !important;
+    border-left-color: #9ecf8a !important;
+    background-color: #f9fdf8 !important;
+}
+
+.ui-messages-warn {
+    background-color: #fffdf5 !important;
+    border-left-color: #f9bf08 !important;
+}
+
+.ui-messages-error {
+    border-left-color: #f03369 !important;
+    background-color: #fff8fa !important;
+}
+
+.ui-messages-fatal {
+    
+}
+
+.de4a-message > .ui-corner-all li {
+    display:inline-grid;
+}
+
+.de4a-message li span {
+    margin-left:5px !important;
+    font-size: 16px;
+}
+
+.de4a-message .ui-icon-close {
+    background-image: url("/de4a-pid-owner/javax.faces.resource/images/delete-gray.svg.xhtml?ln=primefaces-sentinel") !important;
+}
+
+/***************************************************/
+/******************* TOOLTIPS **********************/
+/***************************************************/
+
+/* Tooltip que aparece al colocar el raton sobre un icono */
+.de4a-tooltip-contain > .ui-tooltip-text {
+    background: #E8F3FC !important;
+    color: #3078be !important;
+    font-weight: 300 !important;
+    padding: 10px 20px !important;
+    background: #e4f1ff !important;
+    color: #3078be !important;
+    font-weight: 300 !important;
+    padding: 10px 20px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.de4a-tooltip-contain > .ui-tooltip-arrow {
+    border-top-color: #E8F3FC !important;
+}
+
+.de4a-tooltip-contain {
+    opacity:1 !important;
+    background-color:inherit !important;
+    border: 0 !important;
+}
+
+/***************************************************/
+/***************** DATATABLES **********************/
+/***************************************************/
+
+.ui-datatable {
+    background:none;
+    background-color:inherit;
+    border:0;
+}
+
+.ui-datatable:hover {
+    border:0 !important;
+}
+
+.de4a .ui-datatable-header {
+    background: none;
+    border: 0;
+    background-color: inherit;
+    text-align: left !important;
+    padding: 15px 5px !important;
+    padding-bottom: 25px !important;
+    color: #FCC415 !important;
+    text-shadow: none;
+    font-size: 1.15rem;
+}
+
+.de4a .ui-column-title {
+    text-transform:uppercase;
+    color: #170F40;
+    letter-spacing: 0.35px;
+}
+
+.ui-datatable .ui-datatable-tablewrapper table thead tr th {
+    background-color:#fafafa;
+    border:0;
+    padding: 15px 5px;
+}
+
+.ui-datatable .ui-datatable-even {
+    background-color:inherit;
+}
+
+.ui-datatable table tbody tr td, 
+table tbody tr td {
+    padding: 10px 20px !important;
+    border:0 !important;
+    color: #170F40;
+    font-size: 16px;
+}
+
+.ui-datatable-tablewrapper {
+    border-bottom: 2px solid #ededed;
+    padding: 0 !important;
+}
+
+.ui-datatable .ui-datatable-tablewrapper table tbody .ui-state-hover > td {
+    background-color: #3d9be9 !important;
+}
+
+.card {
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+/***************************************************/
+/*************** DROPDOWN-LIST *********************/
+/***************************************************/
+
+.ui-selectonemenu .ui-selectonemenu-label {
+    padding: 10px 15px !important;
+}
+
+.ui-selectonemenu-trigger .ui-icon-triangle-1-s, .ui-selectcheckboxmenu-trigger .ui-icon-triangle-1-s {
+    background-image: url("../resources/images/downarrow_blue.svg") !important;
+    padding-top: 8px;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger, .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    text-shadow: none;
+    color: #3D9BE9 !important;
+}
+
+/***************************************************/
+/******************** FOOTER ***********************/
+/***************************************************/
+.footer {
+    width: 100%;
+    min-height: 15vh;
+    clear: both;
+    position: relative;
+}
+
+/***************************************************/
+/******************** DIALOG ***********************/
+/***************************************************/
+.ui-dialog .ui-dialog-titlebar {
+    background-color: white !important;
+    color: #170F40 !important;
+    border: 0 !important;
+}
+
+.ui-dialog .ui-dialog-content {
+    background-color:white !important;
+}
+
+.ui-dialog .ui-dialog-footer {
+    border-top: 0 !important;
+    background-color: white !important;
+}
+
+.ui-dialog {
+    border-radius:0 !important;
+}
+
+/***************************************************/
+/***************** IMAGENES  ***********************/
+/***************************************************/
+
+img.m_interior{
+    max-width: 90px;
+    width: 12vw;
+    height: 12vw;
+    max-height: 90px;
+    margin-left:29px;
+    -webkit-filter: drop-shadow(1px 1px 0px #D9D9D9)           drop-shadow(-1px 0px 0px #d9d9d9);
+    filter: drop-shadow(1px 1px 0px #D9D9D9)           drop-shadow(-1px 0px 0px #d9d9d9);
+}
+
+img.datos {
+    width: 12vw;
+    height: 9vw;
+    max-height: 75px;
+    max-width: 105px;
+    margin-left:29px;
+    padding-top: 5px;
+}
+
+.de4a-img-header {
+    
+display: block;
+    
+position: relative;
+    
+height: 100%;
+    
+width: 100%;
+}
+
+.de4a-img-icon {
+    width: 80%;
+    max-width: 135px;
+    margin: auto;
+    display: block;
+}
+
+img.de4a-margin-left {
+    margin-left:14px !important;
+}
+
+button.de4a-greater-margin-right {
+    margin-right:18em !important;
+}
+
+button.de4a-greater-margin-left {
+    margin-left:18em !important;
+}
+
+img.de4a-clave {
+    height: 85px; 
+    border: 0px solid #E5E0E0; 
+    border-radius: 6px; 
+    opacity: 1;
+}
+
+img.footer-img {
+    width:100%;
+    max-height: 150px;
+    position: relative;
+}
+
+img.europe{
+    position: relative;
+    left:0;
+    top: 4rem;
+    width: 60%;
+    max-width: 400px;
+}
+
+img.europepreview{
+    position:absolute; 
+    z-index:1; 
+    top:15rem;
+} 
+
+img.footerpreview {
+    width:100%; 
+    position:absolute; 
+    z-index:2;
+}
+
+.read_more_panel {
+    display: block;
+    margin: auto;
+    min-width: 450px;
+    max-width: 900px;
+    width: 90%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+p.read_more{
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+    font: normal normal 600 15px/19px Source Sans Pro;
+    letter-spacing: 0.23px;
+    color: #c5c5c5;
+    opacity: 1;
+}
+
+button.read_more{
+    margin-right: 14px !important;
+    margin-top: 0px;
+    font: normal normal 900 15px/19px Source Sans Pro;
+    letter-spacing: 0.23px;
+    color: #CCCCCC;
+}
+
+p.read_more_about_pilot {
+    font: normal normal 600 21px/31px Source Sans Pro;
+    letter-spacing: 0.36px;
+    width: 70%;
+    line-height: 19px;
+    text-align: center;
+    margin: auto;
+    color: #3078BE;
+    margin-top: 7px;
+}
+
+img_read_more {
+    float:right; 
+    border: 1px solid #F1F1F1; 
+    border-radius: 9px; 
+}
+
+span.logpid {
+    display: inline-flex;
+    float:none !important; 
+    margin:inherit !important; 
+    z-index:1001;
+}
+
+.read_more_element {
+    transition: 0.5s;
+    width: 50%;
+    min-width: 100px;
+    max-width: 180px;
+    min-height: 96px;
+    display: inline-block;
+    align-items:center;
+    float: right;
+    background-color: #f6fbff;
+    border: 1px solid #e5eff9;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.read_more_element:hover {
+    transition: 0.3s;
+    background-color: #e7f3fe;
+    border-color: #e7f3fe;
+    box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+}
+
+.read_more_element:hover > p.read_more {
+    color:#747474;
+    transition: 0.5s
+}
+
+#logode4a {
+    float: right;
+    z-index:1001;
+    width: 15vw;
+    max-width: 250px;
+    min-width: 150px;
+}
+
+span.europe{
+    position: relative;
+    left:0;
+    top: 5rem;
+} 
+
+div.header {
+    padding-top:10px;
+    height: 12vw;
+    min-height: 80px;
+    max-height: 130px;
+    text-align: center;
+}
+
+div.footerfloat {
+    bottom: -13px; 
+    left: 0; 
+    position: float;
+    width: 100%;
+    display: block;
+}
+
+div.europe {
+    bottom: 0px; 
+    left:0; 
+    position: float;
+}
+
+div.relative{
+    position:relative;
+}
+
+i.green-icon {
+    color:#98e198;
+}
+
+.ui-widget-content a {
+    color: #007bff !important;
+    text-decoration: none !important;
+}
+
+/***************************************************/
+/***************** PANEL ***********************/
+/***************************************************/
+
+ 
+ .de4a-legalInfo-box {
+    width: 100%;
+    height: auto;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin: 30px 0;
+}
+
+.de4a-accordion-panel {
+    background-color:white !important;
+    border:0 !important;
+    padding: 10px 20px 10px 4% !important;
+}
+
+.panelCenter > .ui-panel-content.ui-widget-content {
+    padding: 30px 49px !important;
+}
+
+.de4a-card {
+	background: #fdfdfd;
+    padding: 20px 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    border: 1px solid #3d9be914;
+}
+
+/***************************************************/
+/***************** ACORDEON ************************/
+/***************************************************/
+ 
+.fatTab {
+    background: #3D9BE9 0% 0% no-repeat padding-box !important;
+    font: normal normal 600 16px/25px Source Sans Pro !important;
+    letter-spacing: 1.2px;
+    text-align: left;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: 0 !important;
+    border-radius: 0 !important;
+    transition:0.3s;
+}
+
+.ui-accordion .ui-tabs-outline {
+    box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+}
+
+.ui-accordion, .ui-accordion:hover {
+    border: 0 !important;
+    padding: 0 !important;
+    outline: 0 !important;
+}
+
+.ui-accordion .ui-accordion-header .ui-state-hover, .fatTab:hover {
+    background-color: #2280cd !important;
+    transition: 0.3s;
+}
+
+.de4a-accordion-yellow {
+    text-align: left;
+    font: normal normal 600 18px/23px Source Sans Pro;
+    letter-spacing: 0.36px;
+    color: #FCC415 !important;
+    opacity: 1;
+}
+
+.de4a-accordion-padding-bold {
+    padding-top: 1%;
+}
+
+.de4a-accordion-padding {
+}
+
+.de4a-accordion-table {
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.de4a-accordion-yellow {
+    text-align: left;
+    font: normal normal 600 18px/23px Source Sans Pro;
+    letter-spacing: 0.36px;
+    color: #FCC415 !important;
+    opacity: 1;
+    padding-top: 20px;
+}
+
+.de4a-accordion-padding-bold {
+    padding-top: 1%;
+    color: #170F40;
+    font-family: 'Source Sans Pro' !important;
+}
+
+.de4a-accordion-padding {
+    font-size: 17px;
+}
+
+.de4a-accordion-table {
+    background:inherit;
+    opacity: 1;
+    margin-bottom:10px;
+    border-spacing: 0;
+    min-width: 30%;
+    border-bottom: 2px solid #ededed;
+}
+
+.de4a-accordion-table tbody {
+}
+
+.de4a-accordion-table-header {
+    background-color: #FAFAFA;
+    color: #170F40;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.de4a-table-header-rowspan {
+    background-color: #f5f5f5;
+}
+
+tr.de4a-table-content {
+    text-align: center;
+    color: #170F40;
+}
+
+div.text-aligned {
+    text-align: left; 
+    text-justify: inter-word;
+}
+
+
+/***************************************************/
+/*************** MEDIA QUERIES *********************/
+/***************************************************/
+
+@media only screen and (max-width: 500px) {
+    #panel_content {
+        padding: 0 !important;
+    }
+    
+    /*******************************/
+    /********* FONT-SIZES **********/
+    /*******************************/
+    h1.de4a-section-title {
+        font-size: 1.4rem;
+    }
+    p.de4a, label.de4a {
+        font-size: 1.07rem !important;
+    }
+    h4.de4a-section-title {
+        font-size: 1.15rem;
+    }
+    .de4a-button > .ui-button-text, .ui-button-text.ui-c {
+        font-size: 1.05rem;
+    }
+}
