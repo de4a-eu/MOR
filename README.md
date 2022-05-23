@@ -9,7 +9,7 @@
 
 ## Integration
 
-Integration files are available in folder [docs/integration](docs/integration) and instructions for [MOR-ER](https://de4a-wp3.github.io/MOR/integration/mor-er.html) and [MOR-P](https://de4a-wp3.github.io/MOR/integration/mor-p.html).
+Integration files are available in folder [docs/integration](docs/integration) and instructions for **MOR-ER** ([default example](https://de4a-wp3.github.io/MOR/integration/mor-er.html), [Spanish portal CSS example](https://de4a-wp3.github.io/MOR/integration/mor-er.ES.html)) and **MOR-P** ([default example](https://de4a-wp3.github.io/MOR/integration/mor-p.html), [Spanish portal CSS example](https://de4a-wp3.github.io/MOR/integration/mor-p.ES.html)).
 
 ## Demo
 
