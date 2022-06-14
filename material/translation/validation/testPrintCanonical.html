@@ -55,7 +55,7 @@
 <body>
 <form name="f">
 <!-- List of languages for the MOR storage -->
-<select name="lang" onchange="changeLang(this.options[this.selectedIndex]).value">
+<select name="lang" onchange="changeLang(this.options[this.selectedIndex].value)">
 	<option value="en" selected="selected">English</option>
 	<option value="es">Español</option>
 	<option value="sl">Slovensko</option>
@@ -78,6 +78,7 @@ function changeCanonical(index){
 	if (index>0) printCanonicalType (canonical.options[index].value, document.getElementById('container'), lang, 0)
 }
 function changeLang(language) {
+	console.log("change lang :: "+language)
 	 lang = language
 	 loadMOR(lang)
 	 changeCanonical(canonical.selectedIndex)
