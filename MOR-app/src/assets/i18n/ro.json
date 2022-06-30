@@ -1,5 +1,5 @@
 {
-"BirthEvidence" :  {
+"BirthEvidence" : {
 	"type" : "",
 	"cardinality" : "",
 	"comment" : "",
@@ -4268,201 +4268,201 @@
 	}
 } ,
 "PersonGenderEnum" : {
-	"type" : "Sexul persoanei",
-	"cardinality" : "Lista sexelor umane.",
+	"type" : "xs:enumeration",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Person gender",
-		"example" : "List of human genders.",
-		"verified" : "false"
+		"label" : "Sexul persoanei",
+		"description" : "Lista sexelor umane.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Female" : {
-	"type" : "Feminin",
-	"cardinality" : "Sexul FEMININ",
+	"type" : "xs:token",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Female",
-		"example" : "The concept FEMALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.",
-		"verified" : "false"
+		"label" : "Feminin",
+		"description" : "Sexul FEMININ",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Male" : {
-	"type" : "Masculin",
-	"cardinality" : "Sexul MASCULIN",
+	"type" : "xs:token",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Male",
-		"example" : "The concept MALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.",
-		"verified" : "false"
+		"label" : "Masculin",
+		"description" : "Sexul MASCULIN",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NAP" : {
-	"type" : "Nu se aplică",
-	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"type" : "xs:token",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Not applicable",
-		"example" : "The concept NOT APPLICABLE is used in the context of interchange of information in the social sciences domain when none of the sexes can be represented.",
-		"verified" : "false"
+		"label" : "Nu se aplică",
+		"description" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NKN" : {
-	"type" : "Necunoscut",
-	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"type" : "xs:token",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Not known",
-		"example" : "The concept NOT KNOWN is used in the context of interchange of information in the social sciences domain when the human sex is unkown.",
-		"verified" : "false"
+		"label" : "Necunoscut",
+		"description" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NST" : {
-	"type" : "Nedeclarat",
-	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"type" : "xs:token",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Not stated",
-		"example" : "The concept NOT STATED is used in the context of interchange of information in the social sciences domain when the human sex is not stated.",
-		"verified" : "false"
+		"label" : "Nedeclarat",
+		"description" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person" : {
-	"type" : "Persoană",
-	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Person",
-		"example" : "An individual natural person who may be dead or alive, but not imaginary.",
-		"verified" : "false"
+		"label" : "Persoană",
+		"description" : "O persoană fizică care poate fi moartă sau în viață.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "Data de nastere",
-	"cardinality" : "Ziua în care persoana s-a născut.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Date of birth",
-		"example" : "The day on which the person was born.",
-		"verified" : "false"
+		"label" : "Data de nastere",
+		"description" : "Ziua în care persoana s-a născut.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "An",
-	"cardinality" : "Un an calendaristic gregorian.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Year",
-		"example" : "A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.",
-		"verified" : "false"
+		"label" : "An",
+		"description" : "Un an calendaristic gregorian.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "Lună",
-	"cardinality" : "O lună dintr-un an calendaristic.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Month",
-		"example" : "A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.",
-		"verified" : "false"
+		"label" : "Lună",
+		"description" : "O lună dintr-un an calendaristic.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "Zi",
-	"cardinality" : "O zi dintr-un an calendaristic.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Day",
-		"example" : "A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.",
-		"verified" : "false"
+		"label" : "Zi",
+		"description" : "O zi dintr-un an calendaristic.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "Sex",
-	"cardinality" : "Sex masculin sau feminin.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Gender",
-		"example" : "The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.",
-		"verified" : "false"
+		"label" : "Sex",
+		"description" : "Sex masculin sau feminin.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "Locul nașterii",
-	"cardinality" : "Locația în care s-a născut persoana.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Place of birth",
-		"example" : "The Location where the person was born.",
-		"verified" : "false"
+		"label" : "Locul nașterii",
+		"description" : "Locația în care s-a născut persoana.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "Numele persoanei",
-	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Person name",
-		"example" : "The family name and given name of a Person. At least one of the two must exist.",
-		"verified" : "false"
+		"label" : "Numele persoanei",
+		"description" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "Nume de familie",
-	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Family name",
-		"example" : "A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. 'de Boer', 'van de Putte', 'von und zu Orlow'. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's Family Name would be recorded as 'de Cervantes Saavedra'.",
-		"verified" : "false"
+		"label" : "Nume de familie",
+		"description" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "Prenume",
-	"cardinality" : "Un nume sau mai multe nume.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Given name",
-		"example" : "A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is 'Johann Sebastian'.",
-		"verified" : "false"
+		"label" : "Prenume",
+		"description" : "Un nume sau mai multe nume.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "Identificator",
-	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Identifier",
-		"example" : "The identifier relation is used to link a Person to any formally issued Identifier for that Person.",
-		"verified" : "false"
+		"label" : "Identificator",
+		"description" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "Cetățenie",
-	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
+	"type" : "",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "1",
-		"description" : "Citizenship",
-		"example" : "The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.",
-		"verified" : "false"
+		"label" : "Cetățenie",
+		"description" : "Condiția juridică de cetățean, situația de cetățean.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum" : {
