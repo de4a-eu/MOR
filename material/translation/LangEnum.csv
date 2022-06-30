@@ -1,7 +1,0 @@
-﻿Term URI|Origin|Type|Cardinality|Comments|Label_en|Description_en|Example_en|Verified_en|Label_es|Description_es|Example_es|Verified_es|Label_sl|Description_sl|Example_sl|Verified_sl|Label_pt|Description_pt|Example_pt|Verified_pt|Label_fr|Description_fr|Example_fr|Verified_fr
-LangEnum||xs:enumeration|00||Language|||1|Idioma|||1|Idiom|||1|Idioma|||1|Langue|||0
-LangEnum/en||xs:token|||English|||1|inglés|||1|Wngleščina|||1|inglês|||1|Anglais|||0
-LangEnum/es||xs:token|||Spanish|||1|español|||1|Španski|||1|espanhol|||1|Espagnol|||0
-LangEnum/pt||xs:token|||Portuguese|||1|portugués|||1|Portugalski|||1|português|||1|Portugais|||0
-LangEnum/fr||xs:token|||French|||1|francés|||1|Francoski|||1|francês|||1|français|||0
-LangEnum/sl||xs:token|||Slovenian|||1|esloveno|||1|Slovenščina|||1|esloveno|||1|slovène|||0

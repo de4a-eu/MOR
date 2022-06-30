@@ -1,4 +1,3 @@
-const objectConstructor = ({}).constructor;
 /**
  * @param {string} termURI
  * @param {HTML DIV object} div

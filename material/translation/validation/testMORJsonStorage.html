@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Test MOR JSON Storage</title>
-<script type="text/javascript" src="js/mor.js"></script>
+<script type="text/javascript" src="../js/mor.js"></script>
 <style>
 .label {color: darkblue; font-style: italic; font-weight: 750}
 span {cursor: help}
@@ -12,14 +12,14 @@ span {cursor: help}
 <body>
 <form name="f">
 <input type="text" value="BirthEvidence" name="element" id="element">
-<select name="lang"><option value="en" selected>en</option></select>
+<select name="lang"><option value="ro" selected>ro</option></select>
 <input type="button" value="Process" onClick="init();describeElement(null,f.lang.value)">
 </form>
 <div id="output" style="width:100%;border-color:1px solid red"></div>
 <script>
 var morJSON;
 const xmlhttp = new XMLHttpRequest();
-const urlJSON = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/en.json"
+const urlJSON = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/ro.json"
 //const url='http://localhost:8080/DE4A-MOR/js/mor_en.json';
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
