@@ -1,7 +1,7 @@
 {
 "BirthEvidence" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Act de naștere",
@@ -144,7 +144,7 @@
 } ,
 "MarriageEvidence" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Act de căsătorie",
@@ -342,7 +342,7 @@
 } ,
 "CountryEnum" : {
 	"type" : "xs:enumeration",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "",
@@ -353,7 +353,7 @@
 } ,
 "CountryEnum/1A0" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Kosovo",
@@ -364,7 +364,7 @@
 } ,
 "CountryEnum/ABW" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Aruba",
@@ -375,7 +375,7 @@
 } ,
 "CountryEnum/AFG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Afganistan",
@@ -386,7 +386,7 @@
 } ,
 "CountryEnum/AFI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Afar și Issas francezi",
@@ -397,7 +397,7 @@
 } ,
 "CountryEnum/AGO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Angola",
@@ -408,7 +408,7 @@
 } ,
 "CountryEnum/AIA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Anguilla",
@@ -419,7 +419,7 @@
 } ,
 "CountryEnum/ALA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Aland",
@@ -430,7 +430,7 @@
 } ,
 "CountryEnum/ALB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Albania",
@@ -441,7 +441,7 @@
 } ,
 "CountryEnum/AND" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Andorra",
@@ -452,7 +452,7 @@
 } ,
 "CountryEnum/ANT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Antilele Olandeze",
@@ -463,7 +463,7 @@
 } ,
 "CountryEnum/ARE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Emiratele Arabe Unite",
@@ -474,7 +474,7 @@
 } ,
 "CountryEnum/ARG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Argentina",
@@ -485,7 +485,7 @@
 } ,
 "CountryEnum/ARM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Armenia",
@@ -496,7 +496,7 @@
 } ,
 "CountryEnum/ASM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Samoa Americană",
@@ -507,7 +507,7 @@
 } ,
 "CountryEnum/ATA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Antarctica",
@@ -518,7 +518,7 @@
 } ,
 "CountryEnum/ATB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Teritoriul Antarctic Britanic",
@@ -529,7 +529,7 @@
 } ,
 "CountryEnum/ATF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ținuturile Sudului Franței",
@@ -540,7 +540,7 @@
 } ,
 "CountryEnum/ATG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Antigua si Barbuda",
@@ -551,7 +551,7 @@
 } ,
 "CountryEnum/ATN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Dronning Maud Land",
@@ -562,7 +562,7 @@
 } ,
 "CountryEnum/AUS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Australia",
@@ -573,7 +573,7 @@
 } ,
 "CountryEnum/AUT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Austria",
@@ -584,7 +584,7 @@
 } ,
 "CountryEnum/AZE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Azerbaidjan",
@@ -595,7 +595,7 @@
 } ,
 "CountryEnum/BDI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Burundi",
@@ -606,7 +606,7 @@
 } ,
 "CountryEnum/BEL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Belgia",
@@ -617,7 +617,7 @@
 } ,
 "CountryEnum/BEN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Benin",
@@ -628,7 +628,7 @@
 } ,
 "CountryEnum/BES" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bonaire, Sint Eustatius și Saba",
@@ -639,7 +639,7 @@
 } ,
 "CountryEnum/BFA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Burkina Faso",
@@ -650,7 +650,7 @@
 } ,
 "CountryEnum/BGD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bangladesh",
@@ -661,7 +661,7 @@
 } ,
 "CountryEnum/BGR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bulgaria",
@@ -672,7 +672,7 @@
 } ,
 "CountryEnum/BHR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bahrain",
@@ -683,7 +683,7 @@
 } ,
 "CountryEnum/BHS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bahamas",
@@ -694,7 +694,7 @@
 } ,
 "CountryEnum/BIH" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bosnia si Hertegovina",
@@ -705,7 +705,7 @@
 } ,
 "CountryEnum/BLM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sfântul Bartolomeu",
@@ -716,7 +716,7 @@
 } ,
 "CountryEnum/BLR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bielorusia",
@@ -727,7 +727,7 @@
 } ,
 "CountryEnum/BLZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Belize",
@@ -738,7 +738,7 @@
 } ,
 "CountryEnum/BMU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bermude",
@@ -749,7 +749,7 @@
 } ,
 "CountryEnum/BOL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bolivia",
@@ -760,7 +760,7 @@
 } ,
 "CountryEnum/BRA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Brazilia",
@@ -771,7 +771,7 @@
 } ,
 "CountryEnum/BRB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Barbados",
@@ -782,7 +782,7 @@
 } ,
 "CountryEnum/BRN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Brunei",
@@ -793,7 +793,7 @@
 } ,
 "CountryEnum/BTN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bhutan",
@@ -804,7 +804,7 @@
 } ,
 "CountryEnum/BUR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Birmania",
@@ -815,7 +815,7 @@
 } ,
 "CountryEnum/BVT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insula Bouvet",
@@ -826,7 +826,7 @@
 } ,
 "CountryEnum/BWA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Botswana",
@@ -837,7 +837,7 @@
 } ,
 "CountryEnum/BYS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bielorusia",
@@ -848,7 +848,7 @@
 } ,
 "CountryEnum/CAF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Republica Centrafricană",
@@ -859,7 +859,7 @@
 } ,
 "CountryEnum/CAN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Canada",
@@ -870,7 +870,7 @@
 } ,
 "CountryEnum/CCK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Cocos (Keeling).",
@@ -881,7 +881,7 @@
 } ,
 "CountryEnum/CHE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Elveţia",
@@ -892,7 +892,7 @@
 } ,
 "CountryEnum/CHL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Chile",
@@ -903,7 +903,7 @@
 } ,
 "CountryEnum/CHN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "China",
@@ -914,7 +914,7 @@
 } ,
 "CountryEnum/CIV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Coasta de Fildeș",
@@ -925,7 +925,7 @@
 } ,
 "CountryEnum/CMR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Camerun",
@@ -936,7 +936,7 @@
 } ,
 "CountryEnum/COD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Republica Democrata din Congo",
@@ -947,7 +947,7 @@
 } ,
 "CountryEnum/COG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Congo",
@@ -958,7 +958,7 @@
 } ,
 "CountryEnum/COK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Cook",
@@ -969,7 +969,7 @@
 } ,
 "CountryEnum/COL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Columbia",
@@ -980,7 +980,7 @@
 } ,
 "CountryEnum/COM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Comore",
@@ -991,7 +991,7 @@
 } ,
 "CountryEnum/CPT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Clipperton",
@@ -1002,7 +1002,7 @@
 } ,
 "CountryEnum/CPV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cabo Verde",
@@ -1013,7 +1013,7 @@
 } ,
 "CountryEnum/CRI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Costa Rica",
@@ -1024,7 +1024,7 @@
 } ,
 "CountryEnum/CSK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cehoslovacia",
@@ -1035,7 +1035,7 @@
 } ,
 "CountryEnum/CTE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Canton și Enderbury",
@@ -1046,7 +1046,7 @@
 } ,
 "CountryEnum/CUB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cuba",
@@ -1057,7 +1057,7 @@
 } ,
 "CountryEnum/CUW" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Curaçao",
@@ -1068,7 +1068,7 @@
 } ,
 "CountryEnum/CXR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insula Craciunului",
@@ -1079,7 +1079,7 @@
 } ,
 "CountryEnum/CYM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Cayman",
@@ -1090,7 +1090,7 @@
 } ,
 "CountryEnum/CYP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cipru",
@@ -1101,7 +1101,7 @@
 } ,
 "CountryEnum/CZE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cehia",
@@ -1112,7 +1112,7 @@
 } ,
 "CountryEnum/DDR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Germania de Est",
@@ -1123,7 +1123,7 @@
 } ,
 "CountryEnum/DEU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Germania",
@@ -1134,7 +1134,7 @@
 } ,
 "CountryEnum/DHY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Dahomey",
@@ -1145,7 +1145,7 @@
 } ,
 "CountryEnum/DJI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Djibouti",
@@ -1156,7 +1156,7 @@
 } ,
 "CountryEnum/DMA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Dominica",
@@ -1167,7 +1167,7 @@
 } ,
 "CountryEnum/DNK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Danemarca",
@@ -1178,7 +1178,7 @@
 } ,
 "CountryEnum/DOM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Republica Dominicană",
@@ -1189,7 +1189,7 @@
 } ,
 "CountryEnum/DZA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Algeria",
@@ -1200,7 +1200,7 @@
 } ,
 "CountryEnum/ECU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ecuador",
@@ -1211,7 +1211,7 @@
 } ,
 "CountryEnum/EGY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Egipt",
@@ -1222,7 +1222,7 @@
 } ,
 "CountryEnum/ERI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Eritreea",
@@ -1233,7 +1233,7 @@
 } ,
 "CountryEnum/ESH" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "sahara de Vest",
@@ -1244,7 +1244,7 @@
 } ,
 "CountryEnum/ESP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Spania",
@@ -1255,7 +1255,7 @@
 } ,
 "CountryEnum/EST" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Estonia",
@@ -1266,7 +1266,7 @@
 } ,
 "CountryEnum/ETH" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Etiopia",
@@ -1277,7 +1277,7 @@
 } ,
 "CountryEnum/EUR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Uniunea Europeană",
@@ -1288,7 +1288,7 @@
 } ,
 "CountryEnum/FIN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Finlanda",
@@ -1299,7 +1299,7 @@
 } ,
 "CountryEnum/FJI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Fiji",
@@ -1310,7 +1310,7 @@
 } ,
 "CountryEnum/FLK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Falkland",
@@ -1321,7 +1321,7 @@
 } ,
 "CountryEnum/FQ0" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ținuturile sudice și antarctice franceze",
@@ -1332,7 +1332,7 @@
 } ,
 "CountryEnum/FRA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Franţa",
@@ -1343,7 +1343,7 @@
 } ,
 "CountryEnum/FRO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Feroe",
@@ -1354,7 +1354,7 @@
 } ,
 "CountryEnum/FSM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Micronezia",
@@ -1365,7 +1365,7 @@
 } ,
 "CountryEnum/FXX" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Franța metropolitană",
@@ -1376,7 +1376,7 @@
 } ,
 "CountryEnum/GAB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Gabon",
@@ -1387,7 +1387,7 @@
 } ,
 "CountryEnum/GBR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Regatul Unit",
@@ -1398,7 +1398,7 @@
 } ,
 "CountryEnum/GEL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Gilbert și Ellice",
@@ -1409,7 +1409,7 @@
 } ,
 "CountryEnum/GEO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Georgia",
@@ -1420,7 +1420,7 @@
 } ,
 "CountryEnum/GGY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guernsey",
@@ -1431,7 +1431,7 @@
 } ,
 "CountryEnum/GHA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ghana",
@@ -1442,7 +1442,7 @@
 } ,
 "CountryEnum/GIB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Gibraltar",
@@ -1453,7 +1453,7 @@
 } ,
 "CountryEnum/GIN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guineea",
@@ -1464,7 +1464,7 @@
 } ,
 "CountryEnum/GLP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guadelupa",
@@ -1475,7 +1475,7 @@
 } ,
 "CountryEnum/GMB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Gambia",
@@ -1486,7 +1486,7 @@
 } ,
 "CountryEnum/GNB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guineea-Bissau",
@@ -1497,7 +1497,7 @@
 } ,
 "CountryEnum/GNQ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guineea Ecuatorială",
@@ -1508,7 +1508,7 @@
 } ,
 "CountryEnum/GRC" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Grecia",
@@ -1519,7 +1519,7 @@
 } ,
 "CountryEnum/GRD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Grenada",
@@ -1530,7 +1530,7 @@
 } ,
 "CountryEnum/GRL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Groenlanda",
@@ -1541,7 +1541,7 @@
 } ,
 "CountryEnum/GTM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guatemala",
@@ -1552,7 +1552,7 @@
 } ,
 "CountryEnum/GUF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guyana Franceză",
@@ -1563,7 +1563,7 @@
 } ,
 "CountryEnum/GUM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guam",
@@ -1574,7 +1574,7 @@
 } ,
 "CountryEnum/GUY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Guyana",
@@ -1585,7 +1585,7 @@
 } ,
 "CountryEnum/HKG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Hong Kong",
@@ -1596,7 +1596,7 @@
 } ,
 "CountryEnum/HMD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insula Heard și Insulele McDonald",
@@ -1607,7 +1607,7 @@
 } ,
 "CountryEnum/HND" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Honduras",
@@ -1618,7 +1618,7 @@
 } ,
 "CountryEnum/HRV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Croaţia",
@@ -1629,7 +1629,7 @@
 } ,
 "CountryEnum/HTI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Haiti",
@@ -1640,7 +1640,7 @@
 } ,
 "CountryEnum/HUN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ungaria",
@@ -1651,7 +1651,7 @@
 } ,
 "CountryEnum/HVO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Volta Superioara",
@@ -1662,7 +1662,7 @@
 } ,
 "CountryEnum/IDN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Indonezia",
@@ -1673,7 +1673,7 @@
 } ,
 "CountryEnum/IMN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insula Barbatului",
@@ -1684,7 +1684,7 @@
 } ,
 "CountryEnum/IND" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "India",
@@ -1695,7 +1695,7 @@
 } ,
 "CountryEnum/IOT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Teritoriul Britanic al Oceanului Indian",
@@ -1706,7 +1706,7 @@
 } ,
 "CountryEnum/IRL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Irlanda",
@@ -1717,7 +1717,7 @@
 } ,
 "CountryEnum/IRN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Iranul",
@@ -1728,7 +1728,7 @@
 } ,
 "CountryEnum/IRQ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Irak",
@@ -1739,7 +1739,7 @@
 } ,
 "CountryEnum/ISL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Islanda",
@@ -1750,7 +1750,7 @@
 } ,
 "CountryEnum/ISR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Israel",
@@ -1761,7 +1761,7 @@
 } ,
 "CountryEnum/ITA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Italia",
@@ -1772,7 +1772,7 @@
 } ,
 "CountryEnum/JAM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Jamaica",
@@ -1783,7 +1783,7 @@
 } ,
 "CountryEnum/JEY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Jersey",
@@ -1794,7 +1794,7 @@
 } ,
 "CountryEnum/JOR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Iordania",
@@ -1805,7 +1805,7 @@
 } ,
 "CountryEnum/JPN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Japonia",
@@ -1816,7 +1816,7 @@
 } ,
 "CountryEnum/JTN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insula Johnston",
@@ -1827,7 +1827,7 @@
 } ,
 "CountryEnum/KAZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Kazahstan",
@@ -1838,7 +1838,7 @@
 } ,
 "CountryEnum/KEN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Kenya",
@@ -1849,7 +1849,7 @@
 } ,
 "CountryEnum/KGZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Kârgâzstan",
@@ -1860,7 +1860,7 @@
 } ,
 "CountryEnum/KHM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cambodgia",
@@ -1871,7 +1871,7 @@
 } ,
 "CountryEnum/KIR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Kiribati",
@@ -1882,7 +1882,7 @@
 } ,
 "CountryEnum/KNA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Saint Kitts și Nevis",
@@ -1893,7 +1893,7 @@
 } ,
 "CountryEnum/KOR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Coreea de Sud",
@@ -1904,7 +1904,7 @@
 } ,
 "CountryEnum/KWT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Kuweit",
@@ -1915,7 +1915,7 @@
 } ,
 "CountryEnum/LAO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Laos",
@@ -1926,7 +1926,7 @@
 } ,
 "CountryEnum/LBN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Liban",
@@ -1937,7 +1937,7 @@
 } ,
 "CountryEnum/LBR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Liberia",
@@ -1948,7 +1948,7 @@
 } ,
 "CountryEnum/LBY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Libia",
@@ -1959,7 +1959,7 @@
 } ,
 "CountryEnum/LCA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sfânta Lucia",
@@ -1970,7 +1970,7 @@
 } ,
 "CountryEnum/LIE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Liechtenstein",
@@ -1981,7 +1981,7 @@
 } ,
 "CountryEnum/LKA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sri Lanka",
@@ -1992,7 +1992,7 @@
 } ,
 "CountryEnum/LSO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Lesotho",
@@ -2003,7 +2003,7 @@
 } ,
 "CountryEnum/LTU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Lituania",
@@ -2014,7 +2014,7 @@
 } ,
 "CountryEnum/LUX" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Luxemburg",
@@ -2025,7 +2025,7 @@
 } ,
 "CountryEnum/LVA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Letonia",
@@ -2036,7 +2036,7 @@
 } ,
 "CountryEnum/MAC" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Macao",
@@ -2047,7 +2047,7 @@
 } ,
 "CountryEnum/MAF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sfântul Martin",
@@ -2058,7 +2058,7 @@
 } ,
 "CountryEnum/MAR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Maroc",
@@ -2069,7 +2069,7 @@
 } ,
 "CountryEnum/MCO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Monaco",
@@ -2080,7 +2080,7 @@
 } ,
 "CountryEnum/MDA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Moldova",
@@ -2091,7 +2091,7 @@
 } ,
 "CountryEnum/MDG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Madagascar",
@@ -2102,7 +2102,7 @@
 } ,
 "CountryEnum/MDV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Maldive",
@@ -2113,7 +2113,7 @@
 } ,
 "CountryEnum/MEX" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mexic",
@@ -2124,7 +2124,7 @@
 } ,
 "CountryEnum/MHL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Marshall",
@@ -2135,7 +2135,7 @@
 } ,
 "CountryEnum/MID" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Midway",
@@ -2146,7 +2146,7 @@
 } ,
 "CountryEnum/MKD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Macedonia de Nord",
@@ -2157,7 +2157,7 @@
 } ,
 "CountryEnum/MLI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mali",
@@ -2168,7 +2168,7 @@
 } ,
 "CountryEnum/MLT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Malta",
@@ -2179,7 +2179,7 @@
 } ,
 "CountryEnum/MMR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Myanmar/Birmania",
@@ -2190,7 +2190,7 @@
 } ,
 "CountryEnum/MNE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Muntenegru",
@@ -2201,7 +2201,7 @@
 } ,
 "CountryEnum/MNG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mongolia",
@@ -2212,7 +2212,7 @@
 } ,
 "CountryEnum/MNP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Mariane de Nord",
@@ -2223,7 +2223,7 @@
 } ,
 "CountryEnum/MOZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mozambic",
@@ -2234,7 +2234,7 @@
 } ,
 "CountryEnum/MRT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mauritania",
@@ -2245,7 +2245,7 @@
 } ,
 "CountryEnum/MSR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Montserrat",
@@ -2256,7 +2256,7 @@
 } ,
 "CountryEnum/MTQ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Martinica",
@@ -2267,7 +2267,7 @@
 } ,
 "CountryEnum/MUS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mauritius",
@@ -2278,7 +2278,7 @@
 } ,
 "CountryEnum/MWI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Malawi",
@@ -2289,7 +2289,7 @@
 } ,
 "CountryEnum/MYS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Malaezia",
@@ -2300,7 +2300,7 @@
 } ,
 "CountryEnum/MYT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Mayotte",
@@ -2311,7 +2311,7 @@
 } ,
 "CountryEnum/NAM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Namibia",
@@ -2322,7 +2322,7 @@
 } ,
 "CountryEnum/NCL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Noua Caledonie",
@@ -2333,7 +2333,7 @@
 } ,
 "CountryEnum/NER" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Niger",
@@ -2344,7 +2344,7 @@
 } ,
 "CountryEnum/NFK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insula Norfolk",
@@ -2355,7 +2355,7 @@
 } ,
 "CountryEnum/NGA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nigeria",
@@ -2366,7 +2366,7 @@
 } ,
 "CountryEnum/NHB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Noile Hebride",
@@ -2377,7 +2377,7 @@
 } ,
 "CountryEnum/NIC" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nicaragua",
@@ -2388,7 +2388,7 @@
 } ,
 "CountryEnum/NIU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Niue",
@@ -2399,7 +2399,7 @@
 } ,
 "CountryEnum/NLD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Olanda",
@@ -2410,7 +2410,7 @@
 } ,
 "CountryEnum/NOR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Norvegia",
@@ -2421,7 +2421,7 @@
 } ,
 "CountryEnum/NPL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nepal",
@@ -2432,7 +2432,7 @@
 } ,
 "CountryEnum/NRU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nauru",
@@ -2443,7 +2443,7 @@
 } ,
 "CountryEnum/NTZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Zona neutră",
@@ -2454,7 +2454,7 @@
 } ,
 "CountryEnum/NZL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Noua Zeelanda",
@@ -2465,7 +2465,7 @@
 } ,
 "CountryEnum/OMN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Oman",
@@ -2476,7 +2476,7 @@
 } ,
 "CountryEnum/PAK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Pakistan",
@@ -2487,7 +2487,7 @@
 } ,
 "CountryEnum/PAN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Panama",
@@ -2498,7 +2498,7 @@
 } ,
 "CountryEnum/PCI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Teritoriul Trust al Insulelor Pacificului",
@@ -2509,7 +2509,7 @@
 } ,
 "CountryEnum/PCN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Pitcairn",
@@ -2520,7 +2520,7 @@
 } ,
 "CountryEnum/PCZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Zona Canalului Panama",
@@ -2531,7 +2531,7 @@
 } ,
 "CountryEnum/PER" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Peru",
@@ -2542,7 +2542,7 @@
 } ,
 "CountryEnum/PHL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Filipine",
@@ -2553,7 +2553,7 @@
 } ,
 "CountryEnum/PLW" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Palau",
@@ -2564,7 +2564,7 @@
 } ,
 "CountryEnum/PNG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Papua Noua Guinee",
@@ -2575,7 +2575,7 @@
 } ,
 "CountryEnum/POL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Polonia",
@@ -2586,7 +2586,7 @@
 } ,
 "CountryEnum/PRI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Puerto Rico",
@@ -2597,7 +2597,7 @@
 } ,
 "CountryEnum/PRK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Coreea de Nord",
@@ -2608,7 +2608,7 @@
 } ,
 "CountryEnum/PRT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Portugalia",
@@ -2619,7 +2619,7 @@
 } ,
 "CountryEnum/PRY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Paraguay",
@@ -2630,7 +2630,7 @@
 } ,
 "CountryEnum/PSE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Palestina",
@@ -2641,7 +2641,7 @@
 } ,
 "CountryEnum/PUS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Diverse Insulele Pacificului din SUA",
@@ -2652,7 +2652,7 @@
 } ,
 "CountryEnum/PYF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Polinezia Franceză",
@@ -2663,7 +2663,7 @@
 } ,
 "CountryEnum/QAT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Qatar",
@@ -2674,7 +2674,7 @@
 } ,
 "CountryEnum/REU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Reuniune",
@@ -2685,7 +2685,7 @@
 } ,
 "CountryEnum/RHO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Rhodesia de Sud",
@@ -2696,7 +2696,7 @@
 } ,
 "CountryEnum/ROU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "România",
@@ -2707,7 +2707,7 @@
 } ,
 "CountryEnum/RUS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Rusia",
@@ -2718,7 +2718,7 @@
 } ,
 "CountryEnum/RWA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Rwanda",
@@ -2729,7 +2729,7 @@
 } ,
 "CountryEnum/SAU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Arabia Saudită",
@@ -2740,7 +2740,7 @@
 } ,
 "CountryEnum/SCG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Serbia și Muntenegru",
@@ -2751,7 +2751,7 @@
 } ,
 "CountryEnum/SDN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sudan",
@@ -2762,7 +2762,7 @@
 } ,
 "CountryEnum/SEN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Senegal",
@@ -2773,7 +2773,7 @@
 } ,
 "CountryEnum/SGP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Singapore",
@@ -2784,7 +2784,7 @@
 } ,
 "CountryEnum/SGS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Georgia de Sud și Insulele Sandwich de Sud",
@@ -2795,7 +2795,7 @@
 } ,
 "CountryEnum/SHN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sfânta Elena, Înălțarea Domnului și Tristan da Cunha",
@@ -2806,7 +2806,7 @@
 } ,
 "CountryEnum/SJM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Svalbard și Jan Mayen",
@@ -2817,7 +2817,7 @@
 } ,
 "CountryEnum/SKM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sikkim",
@@ -2828,7 +2828,7 @@
 } ,
 "CountryEnum/SLB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Solomon",
@@ -2839,7 +2839,7 @@
 } ,
 "CountryEnum/SLE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sierra Leone",
@@ -2850,7 +2850,7 @@
 } ,
 "CountryEnum/SLV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "El Salvador",
@@ -2861,7 +2861,7 @@
 } ,
 "CountryEnum/SMR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "San Marino",
@@ -2872,7 +2872,7 @@
 } ,
 "CountryEnum/SOM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Somalia",
@@ -2883,7 +2883,7 @@
 } ,
 "CountryEnum/SPM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Saint Pierre și Miquelon",
@@ -2894,7 +2894,7 @@
 } ,
 "CountryEnum/SRB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Serbia",
@@ -2905,7 +2905,7 @@
 } ,
 "CountryEnum/SSD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sudul Sudanului",
@@ -2916,7 +2916,7 @@
 } ,
 "CountryEnum/STP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sao Tome și Principe",
@@ -2927,7 +2927,7 @@
 } ,
 "CountryEnum/SUN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Uniunea Sovietică",
@@ -2938,7 +2938,7 @@
 } ,
 "CountryEnum/SUR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Surinam",
@@ -2949,7 +2949,7 @@
 } ,
 "CountryEnum/SVK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Slovacia",
@@ -2960,7 +2960,7 @@
 } ,
 "CountryEnum/SVN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Slovenia",
@@ -2971,7 +2971,7 @@
 } ,
 "CountryEnum/SWE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Suedia",
@@ -2982,7 +2982,7 @@
 } ,
 "CountryEnum/SWZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Eswatini",
@@ -2993,7 +2993,7 @@
 } ,
 "CountryEnum/SXM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sint Maarten",
@@ -3004,7 +3004,7 @@
 } ,
 "CountryEnum/SYC" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Seychelles",
@@ -3015,7 +3015,7 @@
 } ,
 "CountryEnum/SYR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Siria",
@@ -3026,7 +3026,7 @@
 } ,
 "CountryEnum/TCA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Turks și Caicos",
@@ -3037,7 +3037,7 @@
 } ,
 "CountryEnum/TCD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ciad",
@@ -3048,7 +3048,7 @@
 } ,
 "CountryEnum/TGO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "A merge",
@@ -3059,7 +3059,7 @@
 } ,
 "CountryEnum/THA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tailanda",
@@ -3070,7 +3070,7 @@
 } ,
 "CountryEnum/TJK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tadjikistan",
@@ -3081,7 +3081,7 @@
 } ,
 "CountryEnum/TKL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tokelau",
@@ -3092,7 +3092,7 @@
 } ,
 "CountryEnum/TKM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Turkmenistan",
@@ -3103,7 +3103,7 @@
 } ,
 "CountryEnum/TLS" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Timor-Leste",
@@ -3114,7 +3114,7 @@
 } ,
 "CountryEnum/TMP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Timorul de Est",
@@ -3125,7 +3125,7 @@
 } ,
 "CountryEnum/TON" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tonga",
@@ -3136,7 +3136,7 @@
 } ,
 "CountryEnum/TTO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Trinidad și Tobago",
@@ -3147,7 +3147,7 @@
 } ,
 "CountryEnum/TUN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tunisia",
@@ -3158,7 +3158,7 @@
 } ,
 "CountryEnum/TUR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Curcan",
@@ -3169,7 +3169,7 @@
 } ,
 "CountryEnum/TUV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tuvalu",
@@ -3180,7 +3180,7 @@
 } ,
 "CountryEnum/TWN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Taiwan",
@@ -3191,7 +3191,7 @@
 } ,
 "CountryEnum/TZA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tanzania",
@@ -3202,7 +3202,7 @@
 } ,
 "CountryEnum/UGA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Uganda",
@@ -3213,7 +3213,7 @@
 } ,
 "CountryEnum/UKR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ucraina",
@@ -3224,7 +3224,7 @@
 } ,
 "CountryEnum/UMI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele minore periferice ale Statelor Unite",
@@ -3235,7 +3235,7 @@
 } ,
 "CountryEnum/URY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Uruguay",
@@ -3246,7 +3246,7 @@
 } ,
 "CountryEnum/USA" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Statele Unite",
@@ -3257,7 +3257,7 @@
 } ,
 "CountryEnum/UZB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Uzbekistan",
@@ -3268,7 +3268,7 @@
 } ,
 "CountryEnum/VAT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Statul Vatican",
@@ -3279,7 +3279,7 @@
 } ,
 "CountryEnum/VCT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Saint Vincent și Grenadine",
@@ -3290,7 +3290,7 @@
 } ,
 "CountryEnum/VDR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Republica Democrată Vietnam",
@@ -3301,7 +3301,7 @@
 } ,
 "CountryEnum/VEN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Venezuela",
@@ -3312,7 +3312,7 @@
 } ,
 "CountryEnum/VGB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Virgine Britanice",
@@ -3323,7 +3323,7 @@
 } ,
 "CountryEnum/VIR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Virgine americane",
@@ -3334,7 +3334,7 @@
 } ,
 "CountryEnum/VNM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Vietnam",
@@ -3345,7 +3345,7 @@
 } ,
 "CountryEnum/VUT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Vanuatu",
@@ -3356,7 +3356,7 @@
 } ,
 "CountryEnum/WAK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Insulele Wake",
@@ -3367,7 +3367,7 @@
 } ,
 "CountryEnum/WLF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Wallis și Futuna",
@@ -3378,7 +3378,7 @@
 } ,
 "CountryEnum/WSM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Samoa",
@@ -3389,7 +3389,7 @@
 } ,
 "CountryEnum/YEM" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Yemen",
@@ -3400,7 +3400,7 @@
 } ,
 "CountryEnum/YMD" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Yemenul de Nord",
@@ -3411,7 +3411,7 @@
 } ,
 "CountryEnum/YUG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Iugoslavia",
@@ -3422,7 +3422,7 @@
 } ,
 "CountryEnum/ZAF" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Africa de Sud",
@@ -3433,7 +3433,7 @@
 } ,
 "CountryEnum/ZMB" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Zambia",
@@ -3444,7 +3444,7 @@
 } ,
 "CountryEnum/ZR0" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Zair",
@@ -3455,7 +3455,7 @@
 } ,
 "CountryEnum/ZWE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Republica Zimbabwe",
@@ -3466,7 +3466,7 @@
 } ,
 "GUI/select" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Selectați",
@@ -3477,7 +3477,7 @@
 } ,
 "GUI/providerCountry" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "țara emitentă",
@@ -3488,7 +3488,7 @@
 } ,
 "GUI/or" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "sau",
@@ -3499,7 +3499,7 @@
 } ,
 "GUI/selectCountry" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Selectează țara",
@@ -3510,7 +3510,7 @@
 } ,
 "GUI/selectProvision" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Selectați opțiunea",
@@ -3521,7 +3521,7 @@
 } ,
 "GUI/provisionNotAvailable" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Opțiunea nu este disponibilă, vă rugăm să încărcați documentele.",
@@ -3532,7 +3532,7 @@
 } ,
 "GUI/select1Provision" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "vă rugăm selectați o opțiune",
@@ -3543,7 +3543,7 @@
 } ,
 "GUI/for" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "pentru",
@@ -3554,7 +3554,7 @@
 } ,
 "GUI/from" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "din",
@@ -3565,7 +3565,7 @@
 } ,
 "GUI/confirmProvision" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Confirmați opțiunea",
@@ -3576,7 +3576,7 @@
 } ,
 "GUI/proceed" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Continuă",
@@ -3587,7 +3587,7 @@
 } ,
 "GUI/crossBorderEvidenceRequest" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cerere de documente transfrontaliere",
@@ -3598,7 +3598,7 @@
 } ,
 "GUI/de4aUsedTo" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sistemul tehnic DE4A va fi utilizat pentru:",
@@ -3609,7 +3609,7 @@
 } ,
 "GUI/requestCrossBorderEvidence" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "solicitați următoarele documente transfrontaliere:",
@@ -3620,7 +3620,7 @@
 } ,
 "GUI/uploadCrossBorderEvidence" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "încărcați următoarele documente",
@@ -3631,7 +3631,7 @@
 } ,
 "GUI/inpectEvidence" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Veți putea vizualiza documentele și alege dacă doriți să continuați.",
@@ -3642,7 +3642,7 @@
 } ,
 "GUI/dea4aAreYouSure" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sunteți sigur că doriți să utilizați sistemul tehnic DE4A?",
@@ -3653,7 +3653,7 @@
 } ,
 "GUI/cancel" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Anulare",
@@ -3664,7 +3664,7 @@
 } ,
 "GUI/request" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cerere",
@@ -3675,7 +3675,7 @@
 } ,
 "GUI/complete" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Complet",
@@ -3686,7 +3686,7 @@
 } ,
 "GUI/provideInputER" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Vă rugăm să furnizați informațiile necesare la cererea explicită!",
@@ -3697,7 +3697,7 @@
 } ,
 "GUI/provideInputP" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Vă rugăm să furnizați informațiile necesare pentru Previzualizare!",
@@ -3708,7 +3708,7 @@
 } ,
 "GUI/include" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "include",
@@ -3719,7 +3719,7 @@
 } ,
 "GUI/uploadEvidence" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "încărcați documente",
@@ -3730,7 +3730,7 @@
 } ,
 "GUI/Preview" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "previzualizare",
@@ -3741,7 +3741,7 @@
 } ,
 "GUI/with" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "cu",
@@ -3752,7 +3752,7 @@
 } ,
 "GUI/descriptions" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "descrieri",
@@ -3763,7 +3763,7 @@
 } ,
 "GUI/in" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "în",
@@ -3774,7 +3774,7 @@
 } ,
 "GUI/without" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "fără",
@@ -3785,7 +3785,7 @@
 } ,
 "GUI/exclude" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "exclude",
@@ -3796,7 +3796,7 @@
 } ,
 "GUI/schema" : {
 	"type" : "xss:string",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "schemă",
@@ -3807,7 +3807,7 @@
 } ,
 "Identifier" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Identificator",
@@ -3873,7 +3873,7 @@
 } ,
 "LangEnum" : {
 	"type" : "xs:enumeration",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Limba",
@@ -3884,7 +3884,7 @@
 } ,
 "LangEnum/en" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Engleză",
@@ -3895,7 +3895,7 @@
 } ,
 "LangEnum/es" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Spaniolă",
@@ -3906,7 +3906,7 @@
 } ,
 "LangEnum/pt" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Portugheză",
@@ -3917,7 +3917,7 @@
 } ,
 "LangEnum/fr" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Franceză",
@@ -3928,7 +3928,7 @@
 } ,
 "LangEnum/sl" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Slovenă",
@@ -3939,7 +3939,7 @@
 } ,
 "LangEnum/ro" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Română",
@@ -3950,7 +3950,7 @@
 } ,
 "Jurisdiction" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Jurisdicția",
@@ -3983,7 +3983,7 @@
 } ,
 "UDT" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "",
@@ -4137,7 +4137,7 @@
 } ,
 "PublicOrganisation" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Organizație Publică",
@@ -4170,7 +4170,7 @@
 } ,
 "PersonMaritalStatusEnum" : {
 	"type" : "xs:enumeration",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Starea civilă a persoanei",
@@ -4181,7 +4181,7 @@
 } ,
 "PersonMaritalStatusEnum/Cohabitation" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Coabitare",
@@ -4192,7 +4192,7 @@
 } ,
 "PersonMaritalStatusEnum/DivorcedPerson" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Persoană divorțată",
@@ -4203,7 +4203,7 @@
 } ,
 "PersonMaritalStatusEnum/MarriedPerson" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Persoană căsătorită",
@@ -4214,7 +4214,7 @@
 } ,
 "PersonMaritalStatusEnum/Polygamy" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Poligamie",
@@ -4225,7 +4225,7 @@
 } ,
 "PersonMaritalStatusEnum/SeparatedPerson" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Persoană desparțită",
@@ -4236,7 +4236,7 @@
 } ,
 "PersonMaritalStatusEnum/SingleParent" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Părinte singur",
@@ -4247,7 +4247,7 @@
 } ,
 "PersonMaritalStatusEnum/UnmarriedPerson" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Persoană necăsătorită",
@@ -4258,7 +4258,7 @@
 } ,
 "PersonMaritalStatusEnum/WidowedPerson" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Persoană văduvă",
@@ -4269,7 +4269,7 @@
 } ,
 "PersonGenderEnum" : {
 	"type" : "xs:enumeration",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sexul persoanei",
@@ -4280,7 +4280,7 @@
 } ,
 "PersonGenderEnum/Female" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Feminin",
@@ -4291,7 +4291,7 @@
 } ,
 "PersonGenderEnum/Male" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Masculin",
@@ -4302,7 +4302,7 @@
 } ,
 "PersonGenderEnum/NAP" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nu se aplică",
@@ -4313,7 +4313,7 @@
 } ,
 "PersonGenderEnum/NKN" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Necunoscut",
@@ -4324,7 +4324,7 @@
 } ,
 "PersonGenderEnum/NST" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nedeclarat",
@@ -4335,7 +4335,7 @@
 } ,
 "Person" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Persoană",
@@ -4346,7 +4346,7 @@
 } ,
 "Person/DateOfBirth" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Data de nastere",
@@ -4357,7 +4357,7 @@
 } ,
 "Person/DateOfBirth/Year" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "An",
@@ -4368,7 +4368,7 @@
 } ,
 "Person/DateOfBirth/Month" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Lună",
@@ -4379,7 +4379,7 @@
 } ,
 "Person/DateOfBirth/Day" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Zi",
@@ -4390,7 +4390,7 @@
 } ,
 "Person/Gender" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Sex",
@@ -4401,7 +4401,7 @@
 } ,
 "Person/PlaceOfBirth" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Locul nașterii",
@@ -4412,7 +4412,7 @@
 } ,
 "Person/PersonName" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Numele persoanei",
@@ -4423,7 +4423,7 @@
 } ,
 "Person/PersonName/FamilyName" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nume de familie",
@@ -4434,7 +4434,7 @@
 } ,
 "Person/PersonName/GivenName" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Prenume",
@@ -4445,7 +4445,7 @@
 } ,
 "Person/Identifier" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Identificator",
@@ -4456,7 +4456,7 @@
 } ,
 "Person/Citizenship" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cetățenie",
@@ -4467,7 +4467,7 @@
 } ,
 "NUTS0Enum" : {
 	"type" : "xs:enumeration",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "State membre",
@@ -4478,7 +4478,7 @@
 } ,
 "NUTS0Enum/AT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Austria",
@@ -4489,7 +4489,7 @@
 } ,
 "NUTS0Enum/BE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Belgia",
@@ -4500,7 +4500,7 @@
 } ,
 "NUTS0Enum/BG" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Bulgaria",
@@ -4511,7 +4511,7 @@
 } ,
 "NUTS0Enum/CY" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cipru",
@@ -4522,7 +4522,7 @@
 } ,
 "NUTS0Enum/CZ" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cehia",
@@ -4533,7 +4533,7 @@
 } ,
 "NUTS0Enum/DE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Germania",
@@ -4544,7 +4544,7 @@
 } ,
 "NUTS0Enum/DK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Danemarca",
@@ -4555,7 +4555,7 @@
 } ,
 "NUTS0Enum/EE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Estonia",
@@ -4566,7 +4566,7 @@
 } ,
 "NUTS0Enum/EL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Grecia",
@@ -4577,7 +4577,7 @@
 } ,
 "NUTS0Enum/ES" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Spania",
@@ -4588,7 +4588,7 @@
 } ,
 "NUTS0Enum/FI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Finlanda",
@@ -4599,7 +4599,7 @@
 } ,
 "NUTS0Enum/FR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Franţa",
@@ -4610,7 +4610,7 @@
 } ,
 "NUTS0Enum/HR" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Croaţia",
@@ -4621,7 +4621,7 @@
 } ,
 "NUTS0Enum/HU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Ungaria",
@@ -4632,7 +4632,7 @@
 } ,
 "NUTS0Enum/IE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Irlanda",
@@ -4643,7 +4643,7 @@
 } ,
 "NUTS0Enum/IT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Italia",
@@ -4654,7 +4654,7 @@
 } ,
 "NUTS0Enum/LT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Lituania",
@@ -4665,7 +4665,7 @@
 } ,
 "NUTS0Enum/LU" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Luxemburg",
@@ -4676,7 +4676,7 @@
 } ,
 "NUTS0Enum/LV" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Letonia",
@@ -4687,7 +4687,7 @@
 } ,
 "NUTS0Enum/MT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Malta",
@@ -4698,7 +4698,7 @@
 } ,
 "NUTS0Enum/NL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Olanda",
@@ -4709,7 +4709,7 @@
 } ,
 "NUTS0Enum/PL" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Polonia",
@@ -4720,7 +4720,7 @@
 } ,
 "NUTS0Enum/PT" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Portugalia",
@@ -4731,7 +4731,7 @@
 } ,
 "NUTS0Enum/RO" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "România",
@@ -4742,7 +4742,7 @@
 } ,
 "NUTS0Enum/SE" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Suedia",
@@ -4753,7 +4753,7 @@
 } ,
 "NUTS0Enum/SI" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Slovenia",
@@ -4764,7 +4764,7 @@
 } ,
 "NUTS0Enum/SK" : {
 	"type" : "xs:token",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Slovacia",
@@ -4775,7 +4775,7 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Abordare",
@@ -4786,7 +4786,7 @@
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Unitate administrativă nivel 2",
@@ -4797,7 +4797,7 @@
 } ,
 "LocationAddress/AdminUnitL1" : {
 	"type" : "CountryEnum",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Unitate administrativă nivel 1",
@@ -4808,7 +4808,7 @@
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Casuta postala",
@@ -4819,7 +4819,7 @@
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Arteră/drum principal",
@@ -4830,7 +4830,7 @@
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Identificator adresă",
@@ -4841,7 +4841,7 @@
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Numele locatorului",
@@ -4852,7 +4852,7 @@
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Zona de adrese",
@@ -4863,7 +4863,7 @@
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Numele oficiului poștal",
@@ -4874,7 +4874,7 @@
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cod poștal",
