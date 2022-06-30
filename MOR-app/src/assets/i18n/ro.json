@@ -4775,112 +4775,112 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "Abordare",
+	"cardinality" : "",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Address",
-		"verified" : "false"
+		"label" : "Abordare",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Unitate administrativă nivel 2",
-	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Admin unit level 2",
-		"verified" : "false"
+		"label" : "Unitate administrativă nivel 2",
+		"description" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
 	"type" : "CountryEnum",
-	"cardinality" : "Unitate administrativă nivel 1",
-	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Admin unit level 1",
-		"verified" : "false"
+		"label" : "Unitate administrativă nivel 1",
+		"description" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Casuta postala",
-	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "PoBox",
-		"verified" : "false"
+		"label" : "Casuta postala",
+		"description" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Arteră/drum principal",
-	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Thoroughface",
-		"verified" : "false"
+		"label" : "Arteră/drum principal",
+		"description" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Identificator adresă",
-	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Locator designator",
-		"verified" : "false"
+		"label" : "Identificator adresă",
+		"description" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele locatorului",
-	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Locator name",
-		"verified" : "false"
+		"label" : "Numele locatorului",
+		"description" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Zona de adrese",
-	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Address area",
-		"verified" : "false"
+		"label" : "Zona de adrese",
+		"description" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele oficiului poștal",
-	"comment" : "Punct de livrare poștal.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Post name",
-		"verified" : "false"
+		"label" : "Numele oficiului poștal",
+		"description" : "Punct de livrare poștal.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Cod poștal",
-	"comment" : "Codul poștal.",
+	"cardinality" : "",
+	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "01",
-		"example" : "Post code",
-		"verified" : "false"
+		"label" : "Cod poștal",
+		"description" : "Codul poștal.",
+		"example" : "",
+		"verified" : "true"
 	}
 	}
 }
