@@ -12,7 +12,7 @@
 } ,
 "BirthEvidence/Identifier" : {
 	"type" : "Identifier",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
 	"ro" : {
 		"label" : "Număr act",
@@ -133,7 +133,7 @@
 } ,
 "BirthEvidence/CertifiesBirth/Parent" : {
 	"type" : "Person",
-	"cardinality" : "1",
+	"cardinality" : "01",
 	"comment" : "",
 	"ro" : {
 		"label" : "Părinte titular",
@@ -155,7 +155,7 @@
 } ,
 "MarriageEvidence/Identifier" : {
 	"type" : "Identifier",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
 	"ro" : {
 		"label" : "Număr act",
@@ -243,7 +243,7 @@
 } ,
 "MarriageEvidence/CertifiesMarriage/PlaceOfMarriage" : {
 	"type" : "LocationAddress",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Locul căsătoriei",
@@ -276,7 +276,7 @@
 } ,
 "MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage" : {
 	"type" : "UDT/Text",
-	"cardinality" : "1",
+	"cardinality" : "01",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nume de familie după căsătorie",
@@ -287,7 +287,7 @@
 } ,
 "MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage" : {
 	"type" : "UDT/Text",
-	"cardinality" : "1",
+	"cardinality" : "01",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nume de familie înainte de căsătorie",
@@ -298,7 +298,7 @@
 } ,
 "MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage" : {
 	"type" : "PersonMaritalStatusEnum",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Starea civilă înainte de căsătorie",
@@ -320,7 +320,7 @@
 } ,
 "MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage" : {
 	"type" : "UDT/Date",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Data încheierii căsătoriei",
@@ -331,7 +331,7 @@
 } ,
 "MarriageEvidence/CertifiesEndOfMarriage/Cause" : {
 	"type" : "UDT/Text",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Cauză",
@@ -3818,7 +3818,7 @@
 } ,
 "Identifier/Identifier" : {
 	"type" : "UDT/Text",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Conţinut",
@@ -3829,7 +3829,7 @@
 } ,
 "Identifier/IdentifierType" : {
 	"type" : "UDT/Text",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Tipul de identificare",
@@ -3840,7 +3840,7 @@
 } ,
 "Identifier/IssueDate" : {
 	"type" : "UDT/Date",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Data emiterii",
@@ -3851,7 +3851,7 @@
 } ,
 "Identifier/IssuingAuthority" : {
 	"type" : "UDT/Text",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Autoritatea emitentă",
@@ -3862,7 +3862,7 @@
 } ,
 "Identifier/IssuingAuthorityID" : {
 	"type" : "UDT/Identifier",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "ID-ul autorității emitente",
@@ -3961,7 +3961,7 @@
 } ,
 "Jurisdiction/Identifier" : {
 	"type" : "Identifier",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Identificator",
@@ -3994,7 +3994,7 @@
 } ,
 "UDT/Text" : {
 	"type" : "xsd:string",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
 	"ro" : {
 		"label" : "Text",
@@ -4005,7 +4005,7 @@
 } ,
 "UDT/Text/@LanguageID" : {
 	"type" : "xsd:language",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "ID-ul limbii",
@@ -4016,7 +4016,7 @@
 } ,
 "UDT/Text/@LanguageLocaleID" : {
 	"type" : "xsd:normalizedString",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "ID-ul local al limbii",
@@ -4027,7 +4027,7 @@
 } ,
 "UDT/Date" : {
 	"type" : "xsd:date",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
 	"ro" : {
 		"label" : "Data",
@@ -4038,7 +4038,7 @@
 } ,
 "UDT/Name" : {
 	"type" : "xsd:string",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Nume",
@@ -4049,7 +4049,7 @@
 } ,
 "UDT/Identifier" : {
 	"type" : "xsd:normalizedString",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Identificator",
@@ -4060,7 +4060,7 @@
 } ,
 "UDT/Identifier/@schemeID" : {
 	"type" : "xsd:normalizedString",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "ID-ul schemei",
@@ -4071,7 +4071,7 @@
 } ,
 "UDT/Identifier/@schemeName" : {
 	"type" : "xsd:string",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Numele schemei",
@@ -4082,7 +4082,7 @@
 } ,
 "UDT/Identifier/@schemeAgencyID" : {
 	"type" : "xsd:normalizedString",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "ID-ul autorițății",
@@ -4093,7 +4093,7 @@
 } ,
 "UDT/Identifier/@schemeAgencyName" : {
 	"type" : "xsd:string",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Numele autorității",
@@ -4104,7 +4104,7 @@
 } ,
 "UDT/Identifier/@schemeVersionID" : {
 	"type" : "xsd:normalizedString",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "ID versiune schemă",
@@ -4115,7 +4115,7 @@
 } ,
 "UDT/Identifier/@schemeDataURI" : {
 	"type" : "xsd:anyURI",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Date URI schemă",
@@ -4126,7 +4126,7 @@
 } ,
 "UDT/Identifier/@schemeURI" : {
 	"type" : "xsd:anyURI",
-	"cardinality" : "0",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "URI schemă",
@@ -4148,7 +4148,7 @@
 } ,
 "PublicOrganisation/Identifier" : {
 	"type" : "Identifier",
-	"cardinality" : "1",
+	"cardinality" : "01",
 	"comment" : "",
 	"ro" : {
 		"label" : "Identificator",
@@ -4779,7 +4779,7 @@
 	"comment" : "",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Address",
 		"verified" : "false"
 	}
@@ -4790,7 +4790,7 @@
 	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Admin unit level 2",
 		"verified" : "false"
 	}
@@ -4801,7 +4801,7 @@
 	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Admin unit level 1",
 		"verified" : "false"
 	}
@@ -4812,7 +4812,7 @@
 	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "PoBox",
 		"verified" : "false"
 	}
@@ -4823,7 +4823,7 @@
 	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Thoroughface",
 		"verified" : "false"
 	}
@@ -4834,7 +4834,7 @@
 	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Locator designator",
 		"verified" : "false"
 	}
@@ -4845,7 +4845,7 @@
 	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Locator name",
 		"verified" : "false"
 	}
@@ -4856,7 +4856,7 @@
 	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Address area",
 		"verified" : "false"
 	}
@@ -4867,7 +4867,7 @@
 	"comment" : "Punct de livrare poștal.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Post name",
 		"verified" : "false"
 	}
@@ -4878,7 +4878,7 @@
 	"comment" : "Codul poștal.",
 	"ro" : {
 		"label" : "",
-		"description" : "1",
+		"description" : "01",
 		"example" : "Post code",
 		"verified" : "false"
 	}
