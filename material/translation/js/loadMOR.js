@@ -6,7 +6,8 @@ const debug = true
  * Server path to get the json as response of the MOR api
  * In the MVP of MOR, the API call returns all the MOR terms with their definition in one given language 
  */
-const serverMORapi = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/"
+//const serverMORapi = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/" /* WP3 mocked URL */
+const serverMORapi = "https://de4a.simplegob.com/ial/mor/"
 /**
  * JSON object with all the MOR terms with descriptions in some specific language
  */
