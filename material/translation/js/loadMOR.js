@@ -1,7 +1,7 @@
 /**
  * To switch on/off debugging traces in the web browser console
  */
-const debug = true
+var debug = true
 /**
  * Server path to get the json as response of the MOR api
  * In the MVP of MOR, the API call returns all the MOR terms with their definition in one given language 
