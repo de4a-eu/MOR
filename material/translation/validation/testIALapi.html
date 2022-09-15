@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test IAL</title>
+<script type="text/javascript" src="../js/ial.js"></script>
+</head>
+<body>
+
+<form name="f">
+<!-- Sample XML for the canonical evidence types of the use cases that are using the MOR components -->
+<select name="canEvidToken" id="canEvidToken" multiple>
+	<option value="BirthEvidence" selected="selected">Birth Evidence</option>
+	<option value="MarriageEvidence">Marriage Evidence</option>
+	<option value="CompanyRegistration">Company Registration Evidence</option>
+</select>
+<!-- List of languages for the MOR storage -->
+<select name=atuCode>
+	<option value="" selected="selected">All</option>
+	<option value="ES" >Spain</option>
+	<option value="RO">Rumania</option>
+	<option value="AT">Austria</option>
+</select>
+<input type="checkbox" name="json">JSON response
+<input type="button" value="Send" onclick="ialAPIrequestOptions(this.form.canEvidToken.options, this.form.atuCode.value, ! this.form.json.checked);document.getElementById('output').innerText=ialProvisions">
+</form>
+<pre id="output" style="width:100%;height:500px;border:1px solid red"></pre>
+
+</body>
+</html>

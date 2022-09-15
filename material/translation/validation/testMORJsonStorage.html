@@ -3,32 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Test MOR JSON Storage</title>
-<script type="text/javascript" src="js/mor.js"></script>
+<script type="text/javascript" src="../js/loadMOR.js"></script>
 <style>
 .label {color: darkblue; font-style: italic; font-weight: 750}
 span {cursor: help}
 </style>
 </head>
 <body>
-<form name="f">
+<form>
 <input type="text" value="BirthEvidence" name="element" id="element">
-<select name="lang"><option value="en" selected>en</option></select>
-<input type="button" value="Process" onClick="init();describeElement(null,f.lang.value)">
+<select name="lang" onchange="loadMOR(this.value)"><option value="" selected>Select language</option><option value="en">en</option><option value="ro">ro</option></select>
+<input type="button" value="Process" onClick="init();">
 </form>
 <div id="output" style="width:100%;border-color:1px solid red"></div>
 <script>
-var morJSON;
-const xmlhttp = new XMLHttpRequest();
-const urlJSON = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/en.json"
-//const url='http://localhost:8080/DE4A-MOR/js/mor_en.json';
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-    	//outcome.innerHTML = this.responseText
-        morJSON = JSON.parse(this.responseText)
-    }
-};
-xmlhttp.open("GET", urlJSON, true);
-xmlhttp.send();
+
+	
 function hasChildren(termName) {
 	var r = true
 	for (var termJSON in morJSON) {
@@ -47,11 +37,11 @@ function printError(funcName, errMsg) {
 var elements = new Map()
 var subtypes = new Set()
 var totals = new Set()
-const debug = true
 
-function describeElement(e , lang) {
+
+function describeElement(e) {
 	var ele = (e==null?element:e)
-	if (debug) console.log("<describeElement> DEBUG: call '"+ele+"', "+lang+", "+(e==null))
+	if (debug) console.log("<describeElement> DEBUG: '"+ele+"', "+langMOR+", "+(e==null))
 	if (elements.has(ele)) {
 		if (debug) console.log("<describeElement> DEBUG: elements already has '"+ele+"'")
 		return
@@ -67,18 +57,18 @@ function describeElement(e , lang) {
 			if (debug && type.indexOf(":token")<100) console.log("<describeElement> DEBUG: m.set "+ele+": '"+s+"', "+JSON.stringify(morJSON[s]))
 			m.set(s, morJSON[s])
 			if (type.indexOf("/")<0 && type.indexOf(":")<0)
-				describeElement(type, lang)
+				describeElement(type)
 		}
 	}
 	elements.set(ele, m)
 	if (e == null) {
-		printElements(ele,lang, "")
-		printSubElements(lang)
+		printElements(ele,langMOR, "")
+		printSubElements(langMOR)
 	}
 }
 var cont=0
-function printSubElements(lang) {
-	if (debug) console.log("<printSubElements> DEBUG: Call "+lang+ ": "+subtypes.size)
+function printSubElements(langMOR) {
+	if (debug) console.log("<printSubElements> DEBUG: Call "+langMOR+ ": "+subtypes.size)
 	var again = new Set()
 	if (subtypes.size > 0)outcome.innerHTML += "<hr><h2>Sub-Types</h2>"
 	var print = true
@@ -92,20 +82,20 @@ function printSubElements(lang) {
 			}
 			if (!elements.has(e) && morJSON.hasOwnProperty(e)){
 				if (debug) console.log("<printSubElements> DEBUG: add= '"+t+"'")
-				describeElement(t,lang)
+				describeElement(t,langMOR)
 			}
 			elements.get(e).forEach((value,key)=>{
 							
 				if (key.startsWith(t+"/") || (key == t && key.indexOf("/")>0)) {
 					if (value.type.indexOf(":token")<0) {
-							printItem(lang,key,value,null)
+							printItem(langMOR,key,value,null)
 						if(!totals.has(key)) {
 							again.add(key)
 						}
 					} else {
 						if (debug && print) console.log("<printSubElements> DEBUG: option= '"+key)	
 						var op = document.createElement('option');
-						op.innerHTML = key.substr(key.indexOf("/")+1) + " - " + value[lang].label
+						op.innerHTML = key.substr(key.indexOf("/")+1) + " - " + value[langMOR].label
 						var sel = document.getElementById('enum_'+key.substr(0,key.indexOf("/")))
 						if (debug && print) console.log("<printSubElements> DEBUG: enum= '"+sel.id+"'")
 						sel.appendChild(op)
@@ -113,7 +103,7 @@ function printSubElements(lang) {
 					}
 				} else if (value.type.indexOf(":enum")>0) {
 					print = true
-					outcome.innerHTML += "---"+ value[lang].label + ": " +  value[lang].description
+					outcome.innerHTML += "---"+ value[langMOR].label + ": " +  value[langMOR].description
 					outcome.innerHTML += "<p>---<select id='enum_"+e+"'></select></p>"
 					if(!totals.has(key)) {
 						again.add(key)
@@ -131,11 +121,11 @@ function printSubElements(lang) {
 			adding(t)
 		})
 		if (debug) console.log("<printSubElements> DEBUG: again= '"+subtypes.size)
-		printSubElements(lang)
+		printSubElements(langMOR)
 	}
 }
-function printElements(ele, lang, parent) {
-	if (debug) console.log("<printElements> DEBUG: Call '"+ele+"', "+lang+"', "+parent)
+function printElements(ele, langMOR, parent) {
+	if (debug) console.log("<printElements> DEBUG: Call '"+ele+"', "+langMOR+"', "+parent)
 	var skip = (ele != element && ! ele.startsWith(element+"") && ele.indexOf("/")<0)
 
 	if (elements.has(ele))
@@ -165,7 +155,7 @@ function printElements(ele, lang, parent) {
 			if (debug) console.log("<printElements> DEBUG: path print "+key+" '"+path+", "+elements.get(element).has(path))
 			if (! skip || ele != key) {
 				if (key.startsWith(element+"/") || ! isOverloaded(path)) 
-					printItem(lang, path, value, subEle)
+					printItem(langMOR, path, value, subEle)
 				else
 					skip = true
 			}
@@ -173,7 +163,7 @@ function printElements(ele, lang, parent) {
 
 			if (subEle != null && subEle.type.indexOf(":enum")<0 && subEle.type.indexOf(":token")<0) {
 				if (debug) console.log("<printElements> DEBUG: set- & down '"+type+"', "+path)
-				printElements(type, lang, path)
+				printElements(type, langMOR, path)
 			} 
 				
 	    })
@@ -201,8 +191,8 @@ function isOverloaded(path){
 	}
 	return false
 }
-function printItem(lang,path,ele,subEle){
-	if (debug) console.log("<printItem> DEBUG: Call '"+path+"', "+lang+", ele: '"+JSON.stringify(ele)+"' -- "+(ele.type.indexOf(":")<0 || ele.type.indexOf(":enum")>0))
+function printItem(langMOR,path,ele,subEle){
+	if (debug) console.log("<printItem> DEBUG: Call '"+path+"', "+langMOR+", ele: '"+JSON.stringify(ele)+"' -- "+(ele.type.indexOf(":")<0 || ele.type.indexOf(":enum")>0))
 	var type = (ele.type==""?":none:":ele.type)
 	var parts = path.split("/")
 	outcome.innerHTML += "<br>"
@@ -218,13 +208,13 @@ function printItem(lang,path,ele,subEle){
 		if (debug) console.log("<printItem> DEBUG: reference "+type)
 	}
 	outcome.innerHTML += "| <span class='label' title='" 
-			+ (ele[lang].description=="" && subEle != null
-					? subEle[lang].description
-					: ele[lang].description) 					
+			+ (ele[langMOR].description=="" && subEle != null
+					? subEle[langMOR].description
+					: ele[langMOR].description) 					
 			+ "'>" 
-			+ (ele[lang].label=="" && subEle != null
-					? subEle[lang].label
-					: ele[lang].label) 
+			+ (ele[langMOR].label=="" && subEle != null
+					? subEle[langMOR].label
+					: ele[langMOR].label) 
 			+ "</span> "
 			+ "[ <span title='"+path+"'"+(ele.type!="" && complex?"style='background-color:pink'":"")+">" 
 			+ type +" </span>; "
@@ -241,6 +231,7 @@ function init() {
 	outcome.innerHTML=''
 	elements = new Map()
 	element = document.getElementById("element").value
+	describeElement(null)
 }
 var outcome = document.getElementById("output")
 var element = document.getElementById("element").value

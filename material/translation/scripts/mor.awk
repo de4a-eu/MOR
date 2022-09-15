@@ -5,6 +5,7 @@ BEGIN {
 	file["sl"] = "sl.json"
 	file["pt"] = "pt.json"
 	file["fr"] = "fr.json"
+	file["ro"] = "ro.json"
 	for (v in file)
 		printf "{" > file[v]
 }
@@ -15,7 +16,11 @@ BEGIN {
 	} else if ($2 != "Origin") {
 	  #if csv files are concatenated, heading rows have to be ignored
 		gsub(/[\001-\007\013\016-\037\n\t\r]/,"") #remove non-printable characters
-		gen = sprintf("%s\n\"%s\" : {\n\t\"type\" : \"%s\",\n\t\"cardinality\" : \"%s\",\n\t\"comment\" : \"%s\",\n", (NR>2?"} ,":""), $1, $3, $4, $5)
+		card = $4 ""
+		if ($4 == "") card = "00"
+		else if (length($4)<2) card = sprintf ("0%s", card)
+		#print length($4) " - " card
+		gen = sprintf("%s\n\"%s\" : {\n\t\"type\" : \"%s\",\n\t\"cardinality\" : \"%s\",\n\t\"comment\" : \"%s\",\n", (NR>2?"} ,":""), $1, $3, card, $5)
 		for (i=6; i<NF; i=i+4) {
 			split(head[i], a, "_")
 			split(head[i+1], a2, "_")
