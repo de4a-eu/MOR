@@ -18,7 +18,7 @@ let ialProvisions = null
 /**
  * This function calls the IAL API with the given parameters and returns the HTTP code of the response.
  * The response text is stored in the variable "ialProvisions" or null if an error is returned
- * @value {array} canEvidTokenOptions : a mandatory array with the options of a multiple SELECT element, whose values are canonical evidence type token (e.g. BirthEvidence) and the selected ones are included in the request
+ * @value {array} canEvidTokenOptions : a mandatory array with the options of a multiple SELECT element, whose values are canonical evidence type token with the version (e.g. BirthEvidence:1.0) and the selected ones are included in the request
  * @value {string} atuCode : an optional string with the code of an administrative territorial unit to request, usually a NUTS-0 code corresponding to the issuing country
  * @value {boolean} asXml :  an optional boolean. "True" forces that the "ialProvisions" text is in XML format; otherwise, it is in JSON format   
  * @return {int} : HTTP status code of the return; "200" is representing a suscessful call. "404" when the search has not found results.
@@ -39,7 +39,7 @@ function ialAPIrequestOptions(canEvidTokenOptions,atuCode,asXml) {
 /**
  * This function calls the IAL API with the given parameters and returns the HTTP code of the response.
  * The response text is stored in the variable "ialProvisions" or null if an error is returned
- * @value {list} canEvidTokenList : a mandatory comma-separated list with the canonical evidence type tokens to request (e.g. BirthEvidence)
+ * @value {list} canEvidTokenList : a mandatory comma-separated list with the canonical evidence type tokens with the version (e.g. BirthEvidence:1.0') to request 
  * @value {string} atuCode : an optional string with the code of an administrative territorial unit to request, usually a NUTS-0 code corresponding to the issuing country
  * @value {boolean} asXml :  an optional boolean. "True" forces that the "ialProvisions" text is in XML format; otherwise, it is in JSON format   
  * @return {int} : HTTP status code of the return; "200" is representing a suscessful call. "404" when the search has not found results.
