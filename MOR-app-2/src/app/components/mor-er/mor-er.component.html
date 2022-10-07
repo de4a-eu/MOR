@@ -1,0 +1,476 @@
+<!-- Show complete message when ER is successful -->
+<div class="d-flex justify-content-center" *ngIf="complete">
+  <div class="row">
+    <div class="text-center text-primary">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div
+      class="text-center text-primary"
+      translate="GUI/complete.{{ dataLoader.selectedLanguage }}.label"
+    ></div>
+  </div>
+</div>
+
+<!-- Show error message when input parameters are not valid -->
+<div class="d-flex justify-content-center" *ngIf="!inputParamsValid">
+  <div class="row">
+    <div class="text-center text-primary">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <div
+      class="text-center text-primary"
+      translate="GUI/provideInputER.{{ dataLoader.selectedLanguage }}.label"
+    ></div>
+  </div>
+</div>
+
+<div *ngIf="!complete && inputParamsValid">
+  <!-- Language selector in top left corner -->
+  <div class="position-relative" style="z-index: 1040">
+    <div class="position-absolute top-0 start-0">
+      <de4a-language-selector></de4a-language-selector>
+    </div>
+  </div>
+
+  <!-- List of evidence types with corresponding actions -->
+  <div
+    class="row d-flex justify-content-center align-items-center"
+    *ngFor="
+      let evidenceType of dataLoader.getSelectedCanonicalEvidenceTypes(
+        ial.canonicalEvidenceTypes
+      )
+    "
+  >
+    <!-- Evidence -->
+    <div class="col-6 text-end p-2">
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary de4a-button-evidence"
+        (click)="previewEvidence(evidenceType.tokenName)"
+      >
+        <i class="fa-solid fa-file-code me-1"></i>
+        {{
+          evidenceType.morID + "." + dataLoader.selectedLanguage + ".label"
+            | translate
+        }}
+      </button>
+    </div>
+
+    <!-- Actions -->
+    <div class="col-6 p-2 text-start">
+      <div class="small">
+        <span
+          class="pe-1"
+          translate="GUI/select.{{ dataLoader.selectedLanguage }}.label"
+        ></span>
+        <div class="form-check form-check-inline me-0 ms-1">
+          <input
+            class="form-check-input"
+            type="radio"
+            [name]="'radio_' + evidenceType.tokenName"
+            [id]="'radio_' + evidenceType.tokenName + '_country'"
+            (click)="
+              ial.toggleRetrievalType(evidenceType.tokenName || '', 'request')
+            "
+            checked
+          />
+          <label
+            class="form-check-label pointer"
+            [for]="'radio_' + evidenceType.tokenName + '_country'"
+          >
+            <b
+              translate="GUI/providerCountry.{{
+                dataLoader.selectedLanguage
+              }}.label"
+            ></b>
+          </label>
+        </div>
+        <span
+          class="ps-1 pe-1"
+          translate="GUI/or.{{ dataLoader.selectedLanguage }}.label"
+        ></span>
+        <div class="form-check form-check-inline me-0 ms-1">
+          <input
+            class="form-check-input"
+            type="radio"
+            [name]="'radio_' + evidenceType.tokenName"
+            [id]="'radio_' + evidenceType.tokenName + '_upload'"
+            (click)="
+              ial.toggleRetrievalType(evidenceType.tokenName || '', 'upload')
+            "
+          />
+          <label
+            class="form-check-label pointer"
+            [for]="'radio_' + evidenceType.tokenName + '_upload'"
+          >
+            <b
+              translate="GUI/uploadEvidence.{{
+                dataLoader.selectedLanguage
+              }}.label"
+            ></b>
+          </label>
+        </div>
+      </div>
+
+      <!-- Provisions -->
+      <div class="d-flex justify-content-start align-items-center">
+        <!-- Provider country selection -->
+        <div
+          *ngIf="ial.retrievalType[evidenceType.tokenName || ''] == 'request'"
+        >
+          <de4a-country-selector
+            [canonicalEvidenceType]="evidenceType.tokenName"
+          ></de4a-country-selector>
+        </div>
+        <div
+          *ngIf="ial.retrievalType[evidenceType.tokenName || ''] == 'request'"
+        >
+          <!-- Button for provision selection -->
+          <div
+            *ngIf="ial.canonicalEvidenceCountries[evidenceType.tokenName || '']"
+          >
+            <button
+              type="button"
+              class="btn btn-sm btn-light ms-2 de4a-button-choice-light"
+              (click)="requestProvision(evidenceType.tokenName || '')"
+              *ngIf="!ial.provisions[evidenceType.tokenName || '']"
+            >
+              <i class="fa-solid fa-rotate pe-1"></i>
+              <span
+                translate="GUI/selectProvision.{{
+                  dataLoader.selectedLanguage
+                }}.label"
+              ></span>
+            </button>
+          </div>
+          <div
+            class="small ms-2"
+            *ngIf="ial.displayProvision(evidenceType.tokenName || '')"
+          >
+            {{ ial.displayProvision(evidenceType.tokenName || "") }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+      <div *ngIf="ial.retrievalType[evidenceType.tokenName || ''] == 'upload'">
+        <input
+          class="form-control form-control-sm"
+          type="file"
+          accept=".xml"
+          (change)="handleUpload(evidenceType.tokenName || '', $event.target)"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Button: Request cross-border evidence -->
+  <div class="row p-2 mt-2" *ngIf="ial.canProceedWithExplicitRequest()">
+    <div class="col-12 text-center">
+      <button
+        type="button"
+        class="btn btn-sm btn-secondary de4a-button-choice-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#requestEvidenceModal"
+      >
+        <i class="fa-solid fa-right-to-bracket pe-1"></i
+        ><b translate="GUI/proceed.{{ dataLoader.selectedLanguage }}.label"></b>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal: Explicit request -->
+  <div
+    class="modal fade"
+    id="requestEvidenceModal"
+    tabindex="-1"
+    aria-labelledby="requestEvidenceModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5
+            class="modal-title"
+            id="requestEvidenceModalLabel"
+            translate="GUI/crossBorderEvidenceRequest.{{
+              dataLoader.selectedLanguage
+            }}.label"
+          ></h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <span
+            translate="GUI/de4aUsedTo.{{ dataLoader.selectedLanguage }}.label"
+          ></span>
+          <ul>
+            <li>
+              <span
+                translate="GUI/requestCrossBorderEvidence.{{
+                  dataLoader.selectedLanguage
+                }}.label"
+              ></span>
+              <ul>
+                <li
+                  *ngFor="let evidenceType of ial.getEvidenceTypesForRequest()"
+                >
+                  <b>{{
+                    evidenceType.morID +
+                      "." +
+                      dataLoader.selectedLanguage +
+                      ".label" | translate
+                  }}</b>
+                  <span
+                    class="ps-1 pe-1"
+                    translate="GUI/from.{{ dataLoader.selectedLanguage }}.label"
+                  ></span>
+                  <b>{{
+                    dataLoader.getCountryNameByCode(
+                      ial.canonicalEvidenceCountries[evidenceType.tokenName]
+                    )
+                  }}</b>
+                  ({{ ial.displayProvision(evidenceType.tokenName || "") }})
+                </li>
+              </ul>
+            </li>
+            <!-- TO-DO -->
+            <!--
+            <li *ngIf="ial.getEvidenceTypesForUpload().length > 0">
+              <span
+                translate="GUI/uploadCrossBorderEvidence.{{
+                  dataLoader.selectedLanguage
+                }}.label"
+              ></span>
+              <ul>
+                <li
+                  *ngFor="let evidenceType of ial.getEvidenceTypesForUpload()"
+                >
+                  <b>{{
+                    evidenceType.morID +
+                      "." +
+                      dataLoader.selectedLanguage +
+                      ".label" | translate
+                  }}</b>
+                </li>
+              </ul>
+            </li>
+          --></ul>
+          <p
+            translate="GUI/inpectEvidence.{{
+              dataLoader.selectedLanguage
+            }}.label"
+          ></p>
+          <p>
+            <b
+              translate="GUI/dea4aAreYouSure.{{
+                dataLoader.selectedLanguage
+              }}.label"
+            ></b>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-sm btn-light de4a-button-choice-light"
+            data-bs-dismiss="modal"
+          >
+            <i class="fa-solid fa-circle-xmark pe-1"></i>
+            <span
+              translate="GUI/cancel.{{ dataLoader.selectedLanguage }}.label"
+            ></span>
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-secondary de4a-button-choice-dark"
+            data-bs-dismiss="modal"
+            (click)="finishExplicitRequest()"
+          >
+            <i class="fa-solid fa-circle-check pe-1"></i
+            ><span
+              translate="GUI/request.{{ dataLoader.selectedLanguage }}.label"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Select provision -->
+  <div
+    class="modal fade"
+    id="selectProvisionModal"
+    tabindex="-1"
+    aria-labelledby="selectProvisionModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="selectProvisionModalLabel">
+            <span
+              translate="GUI/selectProvision.{{
+                dataLoader.selectedLanguage
+              }}.label"
+            ></span>
+            <span
+              translate="GUI/for.{{ dataLoader.selectedLanguage }}.label"
+              class="ps-1 pe-1"
+            ></span>
+            <b>{{
+              modalSelectProvisionData.morId +
+                "." +
+                dataLoader.selectedLanguage +
+                ".label" | translate
+            }}</b>
+            <span
+              translate="GUI/from.{{ dataLoader.selectedLanguage }}.label"
+              class="ps-1 pe-1"
+            ></span>
+            <b>{{ modalSelectProvisionData.country }}</b>
+          </h5>
+        </div>
+        <div class="modal-body text-left">
+          <div
+            class="form-check"
+            *ngFor="
+              let provision of ial.getProvisions(
+                modalSelectProvisionData.canonicalEvidenceType
+              );
+              let i = index
+            "
+          >
+            <input
+              class="form-check-input"
+              type="radio"
+              name="provisionOption"
+              [id]="'provisionOption_' + (i + 1)"
+              (click)="
+                ial.selectProvision(
+                  modalSelectProvisionData.canonicalEvidenceType,
+                  i
+                )
+              "
+            />
+            <label
+              class="form-check-label"
+              [for]="'provisionOption_' + (i + 1)"
+            >
+              {{ provision.dataOwnerPrefLabel }}
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-sm btn-light de4a-button-choice-light"
+            [disabled]="!isProvisionSelected()"
+            (click)="modalSelectProvision.hide()"
+          >
+            <i class="fa-solid fa-circle-check pe-1"></i
+            ><span
+              translate="GUI/confirmProvision.{{
+                dataLoader.selectedLanguage
+              }}.label"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Preview -->
+  <div
+    class="modal fade"
+    id="previewEvidenceSchemaModal"
+    tabindex="-1"
+    aria-labelledby="previewEvidenceSchemaModalLabel"
+    aria-hidden="true"
+  >
+    <div
+      class="modal-dialog modal-dialog-centered"
+      [ngClass]="showDescription ? 'modal-xl' : 'modal-lg'"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex">
+            <div>
+              <h5 class="modal-title" id="previewEvidenceSchemaModalLabel">
+                <span
+                  translate="GUI/Preview.{{
+                    dataLoader.selectedLanguage
+                  }}.label"
+                  class="me-1"
+                ></span
+                ><b class="me-1">{{
+                  ial.getEvidenceTypeNameForPreview(selectedEvidenceType)
+                }}</b
+                ><span
+                  translate="GUI/schema.{{ dataLoader.selectedLanguage }}.label"
+                  class="me-1"
+                ></span
+                ><span
+                  translate="GUI/in.{{ dataLoader.selectedLanguage }}.label"
+                  class="me-1"
+                ></span>
+              </h5>
+            </div>
+            <div>
+              <de4a-language-selector></de4a-language-selector>
+            </div>
+            <div class="ms-1">
+              <h5
+                class="pointer ms-1"
+                (click)="showDescription = !showDescription"
+              >
+                <span *ngIf="showDescription"
+                  ><span
+                    translate="GUI/with.{{ dataLoader.selectedLanguage }}.label"
+                  ></span
+                  ><small
+                    ><i class="fa-solid fa-eye ms-2 me-1"></i></small></span
+                ><span *ngIf="!showDescription"
+                  ><span
+                    translate="GUI/without.{{
+                      dataLoader.selectedLanguage
+                    }}.label"
+                  ></span
+                  ><small><i class="fa-solid fa-eye-slash ms-2 me-1"></i></small
+                ></span>
+                <span
+                  translate="GUI/descriptions.{{
+                    dataLoader.selectedLanguage
+                  }}.label"
+                  class="ms-1"
+                ></span>
+              </h5>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <de4a-preview-xml
+            [lang]="dataLoader.selectedLanguage"
+            [showDescriptions]="showDescription"
+            [evidenceType]="selectedEvidenceType"
+          ></de4a-preview-xml>
+          <!--<app-preview-xml
+            [lang]="selectedLanguage"
+            [showDescriptions]="showDescription"
+            [xmlInput]="getEvidenceTypeContentForPreview()"
+          ></app-preview-xml>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

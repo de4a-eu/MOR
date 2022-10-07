@@ -1,0 +1,4886 @@
+{
+"BirthEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Act de naștere",
+		"description" : "Document oficial sau date care dovedesc nașterea unui copil.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"ro" : {
+		"label" : "Număr act",
+		"description" : "O referire specifică la actul nașterii.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"ro" : {
+		"label" : "Data înregistrării actului",
+		"description" : "Data la care a fost înregistrat actul nașterii.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "O organizație publică responsabilă cu eliberarea actului de naștere.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Localitate înregistrare act",
+		"description" : "Localitatea în care a fost eliberat actul nașterii (U.A.T.).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Atestare naștere",
+		"description" : "Atestarea înregistrării nașterii.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child" : {
+	"type" : "Person",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Titular",
+		"description" : "Persoană căreia i se eliberează actul de naștere.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/DateOfBirth" : {
+	"type" : "Person/DateOfBirth",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "Sexul titularului.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/PlaceOfBirth" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Parent" : {
+	"type" : "Person",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Părinte titular",
+		"description" : "Unul din părinții naturali.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Act de căsătorie",
+		"description" : "Document oficial sau date care dovedesc căsătoria a două persoane.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"ro" : {
+		"label" : "Număr act",
+		"description" : "O referire specifică la actul de căsătorie.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3.",
+	"ro" : {
+		"label" : "Data înregistrării actului",
+		"description" : "Data la care a fost înregistrată căsătoria.",
+		"example" : "20/05/2021",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "O organizație publică responsabilă cu eliberarea actului de căsătorie.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Localitate înregistrare act",
+		"description" : "Localitatea în care a fost eliberat actul de căsătorie.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Atestare căsătorie",
+		"description" : "Atestarea înregistrării căsătoriei.",
+		"example" : "20/04/2021",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/DateOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Data căsătoriei",
+		"description" : "Data la care a avut loc căsătoria.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/PlaceOfMarriage" : {
+	"type" : "LocationAddress",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Locul căsătoriei",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse" : {
+	"type" : "Person",
+	"cardinality" : "11",
+	"comment" : "",
+	"ro" : {
+		"label" : "Soțul/Soția",
+		"description" : "Una din persoanele căsătorite.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "Sexul unei persoane (Feminin sau Masculin).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume de familie după căsătorie",
+		"description" : "Numele de familie după căsătorie al soțului/soției.",
+		"example" : "Maria",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume de familie înainte de căsătorie",
+		"description" : "Numele de familie înainte de căsătoria al soțului/soției.",
+		"example" : "Maria Khan",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage" : {
+	"type" : "PersonMaritalStatusEnum",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Starea civilă înainte de căsătorie",
+		"description" : "Situația cu privire la starea civilă a persoanei. Dacă era singură, căsătorită, separată, divorțată sau văduvă.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Actul care atestă sfârșitul căsătoriei",
+		"description" : "În caz de divorț, actul de divorț care conține informații despre sfârșitul căsătoriei.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Data încheierii căsătoriei",
+		"description" : "Data încetării căsătoriei.",
+		"example" : "05/01/2022",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/Cause" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cauză",
+		"description" : "Cauza încetării căsătoriei.",
+		"example" : "Lipsa de comunicare",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "Codurile ISO 3166-1 alpha-3 sunt coduri de țară din trei litere definite în ISO 3166-1, parte a standardului ISO 3166 publicat de Organizația Internațională pentru Standardizare, pentru a reprezenta țări, teritorii dependente și zone speciale de interes geografic.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/1A0" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Kosovo",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ABW" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Aruba",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AFG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Afganistan",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AFI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Afar și Issas francezi",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AGO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Angola",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AIA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Anguilla",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ALA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Aland",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ALB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Albania",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AND" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Andorra",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ANT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Antilele Olandeze",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ARE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Emiratele Arabe Unite",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ARG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Argentina",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ARM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Armenia",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ASM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Samoa Americană",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ATA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Antarctica",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ATB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Teritoriul Antarctic Britanic",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ATF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ținuturile Sudului Franței",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ATG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Antigua si Barbuda",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/ATN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dronning Maud Land",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Australia",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AUT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Austria",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/AZE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Azerbaidjan",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BDI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Burundi",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BEL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Belgia",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Benin",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BES" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bonaire, Sint Eustatius și Saba",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BFA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Burkina Faso",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BGD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bangladesh",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BGR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bulgaria",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BHR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bahrain",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BHS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bahamas",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BIH" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bosnia si Hertegovina",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BLM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sfântul Bartolomeu",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BLR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bielorusia",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BLZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Belize",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BMU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bermude",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BOL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bolivia",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BRA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Brazilia",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"CountryEnum/BRB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Barbados",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BRN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Brunei",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BTN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bhutan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Birmania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BVT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insula Bouvet",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BWA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Botswana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BYS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bielorusia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CAF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Republica Centrafricană",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CAN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Canada",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CCK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Cocos (Keeling).",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CHE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Elveţia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CHL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Chile",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CHN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "China",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CIV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Coasta de Fildeș",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CMR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Camerun",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Republica Democrata din Congo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Congo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Cook",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Columbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Comore",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CPT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Clipperton",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CPV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cabo Verde",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CRI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Costa Rica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CSK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cehoslovacia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CTE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Canton și Enderbury",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CUB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cuba",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CUW" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Curaçao",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CXR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insula Craciunului",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CYM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Cayman",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CYP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cipru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CZE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cehia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DDR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Germania de Est",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DEU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Germania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DHY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dahomey",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DJI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Djibouti",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DMA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dominica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DNK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Danemarca",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DOM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Republica Dominicană",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DZA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Algeria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ECU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ecuador",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/EGY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Egipt",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ERI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Eritreea",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ESH" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "sahara de Vest",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ESP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Spania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/EST" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Estonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ETH" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Etiopia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/EUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Uniunea Europeană",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FIN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Finlanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FJI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Fiji",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FLK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Falkland",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FQ0" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ținuturile sudice și antarctice franceze",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FRA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Franţa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FRO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Feroe",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FSM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Micronezia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FXX" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Franța metropolitană",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GAB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Gabon",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GBR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Regatul Unit",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GEL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Gilbert și Ellice",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GEO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Georgia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GGY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guernsey",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GHA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ghana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GIB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Gibraltar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GIN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guineea",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GLP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guadelupa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GMB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Gambia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GNB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guineea-Bissau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GNQ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guineea Ecuatorială",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GRC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Grecia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GRD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Grenada",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GRL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Groenlanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GTM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guatemala",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GUF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guyana Franceză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GUM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guam",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GUY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Guyana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HKG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Hong Kong",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HMD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insula Heard și Insulele McDonald",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HND" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Honduras",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HRV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Croaţia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HTI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Haiti",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HUN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ungaria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HVO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Volta Superioara",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IDN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Indonezia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IMN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insula Barbatului",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IND" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "India",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IOT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Teritoriul Britanic al Oceanului Indian",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IRL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Irlanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IRN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Iranul",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IRQ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Irak",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ISL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Islanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ISR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Israel",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ITA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Italia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JAM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Jamaica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JEY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Jersey",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JOR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Iordania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JPN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Japonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JTN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insula Johnston",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KAZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Kazahstan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Kenya",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KGZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Kârgâzstan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KHM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cambodgia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KIR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Kiribati",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KNA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Saint Kitts și Nevis",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KOR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Coreea de Sud",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KWT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Kuweit",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LAO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Laos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LBN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Liban",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LBR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Liberia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LBY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Libia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LCA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sfânta Lucia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LIE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Liechtenstein",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LKA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sri Lanka",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LSO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Lesotho",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LTU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Lituania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LUX" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Luxemburg",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LVA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Letonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MAC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Macao",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MAF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sfântul Martin",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MAR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Maroc",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MCO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Monaco",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MDA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Moldova",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MDG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Madagascar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MDV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Maldive",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MEX" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mexic",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MHL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Marshall",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MID" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Midway",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MKD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Macedonia de Nord",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MLI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mali",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MLT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Malta",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MMR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Myanmar/Birmania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MNE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Muntenegru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MNG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mongolia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MNP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Mariane de Nord",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MOZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mozambic",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MRT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mauritania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MSR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Montserrat",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MTQ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Martinica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mauritius",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MWI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Malawi",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MYS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Malaezia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MYT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Mayotte",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NAM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Namibia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NCL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Noua Caledonie",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NER" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Niger",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NFK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insula Norfolk",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NGA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nigeria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NHB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Noile Hebride",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NIC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nicaragua",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NIU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Niue",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NLD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Olanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NOR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Norvegia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NPL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nepal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NRU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nauru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NTZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Zona neutră",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NZL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Noua Zeelanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/OMN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Oman",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PAK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Pakistan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PAN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Panama",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PCI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Teritoriul Trust al Insulelor Pacificului",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PCN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Pitcairn",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PCZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Zona Canalului Panama",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PER" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Peru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PHL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Filipine",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PLW" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Palau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PNG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Papua Noua Guinee",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/POL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Polonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Puerto Rico",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Coreea de Nord",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Portugalia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Paraguay",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PSE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Palestina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Diverse Insulele Pacificului din SUA",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PYF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Polinezia Franceză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/QAT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Qatar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/REU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Reuniune",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/RHO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Rhodesia de Sud",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ROU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "România",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/RUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Rusia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/RWA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Rwanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SAU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Arabia Saudită",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SCG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Serbia și Muntenegru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SDN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sudan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Senegal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SGP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Singapore",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SGS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Georgia de Sud și Insulele Sandwich de Sud",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SHN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sfânta Elena, Înălțarea Domnului și Tristan da Cunha",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SJM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Svalbard și Jan Mayen",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SKM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sikkim",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SLB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Solomon",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SLE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sierra Leone",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SLV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "El Salvador",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SMR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "San Marino",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SOM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Somalia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SPM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Saint Pierre și Miquelon",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SRB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Serbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SSD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sudul Sudanului",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/STP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sao Tome și Principe",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SUN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Uniunea Sovietică",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Surinam",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SVK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Slovacia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SVN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Slovenia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SWE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Suedia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SWZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Eswatini",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SXM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sint Maarten",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SYC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Seychelles",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SYR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Siria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TCA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Turks și Caicos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TCD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ciad",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TGO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "A merge",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/THA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tailanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TJK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tadjikistan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TKL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tokelau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TKM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Turkmenistan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TLS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Timor-Leste",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TMP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Timorul de Est",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TON" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tonga",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TTO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Trinidad și Tobago",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TUN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tunisia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Curcan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TUV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tuvalu",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TWN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Taiwan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TZA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tanzania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UGA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Uganda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UKR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ucraina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UMI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele minore periferice ale Statelor Unite",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/URY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Uruguay",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/USA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Statele Unite",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UZB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Uzbekistan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VAT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Statul Vatican",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VCT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Saint Vincent și Grenadine",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VDR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Republica Democrată Vietnam",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Venezuela",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VGB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Virgine Britanice",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VIR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Virgine americane",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VNM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Vietnam",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VUT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Vanuatu",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/WAK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Insulele Wake",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/WLF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Wallis și Futuna",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/WSM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Samoa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/YEM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Yemen",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/YMD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Yemenul de Nord",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/YUG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Iugoslavia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZAF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Africa de Sud",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZMB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Zambia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZR0" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Zair",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZWE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Republica Zimbabwe",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/select" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Selectați",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/providerCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "țara emitentă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/or" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "sau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/selectCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Selectează țara",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/selectProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Selectați opțiunea",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/provisionNotAvailable" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Opțiunea nu este disponibilă, vă rugăm să încărcați documentele.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/select1Provision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "vă rugăm selectați o opțiune",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/for" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "pentru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/from" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "din",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/confirmProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Confirmați opțiunea",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/proceed" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Continuă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/crossBorderEvidenceRequest" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cerere de documente transfrontaliere",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4aUsedTo" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sistemul tehnic DE4A va fi utilizat pentru:",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/requestCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "solicitați următoarele documente transfrontaliere:",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/uploadCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "încărcați următoarele documente",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/inpectEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Veți putea vizualiza documentele și alege dacă doriți să continuați.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/dea4aAreYouSure" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sunteți sigur că doriți să utilizați sistemul tehnic DE4A?",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/cancel" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Anulare",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/request" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cerere",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/complete" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Complet",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/provideInputER" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Vă rugăm să furnizați informațiile necesare la cererea explicită!",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/provideInputP" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Vă rugăm să furnizați informațiile necesare pentru Previzualizare!",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/include" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "include",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/uploadEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "încărcați documente",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Preview" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "previzualizare",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/with" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "cu",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/descriptions" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "descrieri",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/in" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "în",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/without" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "fără",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/exclude" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "exclude",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/schema" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "schemă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Clasa Identificator permite furnizarea unui identificator, precum și informații despre autoritatea care l-a emis și, dacă este necesar, când.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/Identifier" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Conţinut",
+		"description" : "Conținut - șir alfanumeric",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IdentifierType" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Tipul de identificare",
+		"description" : "Tipul de identificator emis (dacă autoritatea emite mai mult de un tip de identificator).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Data emiterii",
+		"description" : "Data la care a fost emis",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IssuingAuthority" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "Numele autorității emitente",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IssuingAuthorityID" : {
+	"type" : "UDT/Identifier",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "ID-ul autorității emitente",
+		"description" : "ID-ul autorității emitente",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Limba",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/en" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Engleză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/es" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Spaniolă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/pt" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Portugheză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/fr" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Franceză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/sl" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Slovenă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/ro" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Română",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Jurisdicția",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Valoarea atributului de identificare este un URI.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction/Name" : {
+	"type" : "CountryEnum",
+	"cardinality" : "11",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume țară",
+		"description" : "Numele care identifică țara.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Text" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"ro" : {
+		"label" : "Text",
+		"description" : "Un șir de caractere (adică un set finit de caractere).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Text/@LanguageID" : {
+	"type" : "xsd:language",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "ID-ul limbii",
+		"description" : "Identificatorul limbii utilizate în componenta de conținut.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Text/@LanguageLocaleID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "ID-ul local al limbii",
+		"description" : "Identificarea limbii aferente locației/țării.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Date" : {
+	"type" : "xsd:date",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"ro" : {
+		"label" : "Data",
+		"description" : "O zi calendaristică.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Name" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume",
+		"description" : "Un șir de caractere care constituie denumirea distinctivă a unei persoane, loc, lucru sau concept.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Un șir de caractere pentru a identifica și a distinge în mod unic, o instanță a unui obiect dintr-o schemă de identificare de toate celelalte obiecte din aceeași schemă, împreună cu informații suplimentare relevante.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "ID-ul schemei",
+		"description" : "Identificarea schemei de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeName" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Numele schemei",
+		"description" : "Denumirea schemei de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeAgencyID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "ID-ul autorițății",
+		"description" : "Identificarea autorității care deține schema de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeAgencyName" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Numele autorității",
+		"description" : "Numele autorității care deține schema de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeVersionID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "ID versiune schemă",
+		"description" : "Versiunea schemei de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeDataURI" : {
+	"type" : "xsd:anyURI",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Date URI schemă",
+		"description" : "Identificatorul uniform de resurse care identifică locul în care se află datele schemei de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeURI" : {
+	"type" : "xsd:anyURI",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "URI schemă",
+		"description" : "Identificatorul uniform de resurse care identifică locul în care se află schema de identificare.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PublicOrganisation" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Organizație Publică",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PublicOrganisation/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Multe organizații sunt menționate printr-un acronim sau un alt identificator. De exemplu, în rândul instituțiilor UE, BCE este identificatorul pentru Banca Centrală Europeană, OLAF pentru Oficiul European AntiN/AFfraud și așa mai departe. Acestea sunt recunoscute oficial de Comisia Europeană, care furnizează o listă cu astfel de acronime. Listele analoge ar trebui folosite în alte contexte.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PublicOrganisation/PrefLabel" : {
+	"type" : "UDT/Text",
+	"cardinality" : "11",
+	"comment" : "",
+	"ro" : {
+		"label" : "Etichetă preferată",
+		"description" : "„Așa cum este definit în Ontology ORG, o etichetă preferată este utilizată pentru a furniza numele primar, recunoscut legal al organizației. O organizație poate avea doar un astfel de nume într-o anumită limbă. Numele primare pot fi furnizate în mai multe limbi cu mai multe cazuri de proprietatea preferată a etichetei.”",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Starea civilă a persoanei",
+		"description" : "Stărea civilă posibilă a unei persoane.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/Cohabitation" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Coabitare",
+		"description" : "Starea civilă a unei persoane: coabitare",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/DivorcedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană divorțată",
+		"description" : "Starea civilă a unei persoane: divorțată",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/MarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană căsătorită",
+		"description" : "Starea civilă a unei persoane: căsătorită",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/Polygamy" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Poligamie",
+		"description" : "Starea civilă a unei persoane: poligamie",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/SeparatedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană desparțită",
+		"description" : "Starea civilă a unei persoane: separată",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/SingleParent" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Părinte singur",
+		"description" : "Starea civilă a unei persoane: părinte singur",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/UnmarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană necăsătorită",
+		"description" : "Starea civilă a unei persoane: necăsătorită",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/WidowedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană văduvă",
+		"description" : "Starea civilă a unei persoane: văduvă",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sexul persoanei",
+		"description" : "Lista sexelor umane.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum/Female" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Feminin",
+		"description" : "Sexul FEMININ",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum/Male" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Masculin",
+		"description" : "Sexul MASCULIN",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum/NAP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nu se aplică",
+		"description" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum/NKN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Necunoscut",
+		"description" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum/NST" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nedeclarat",
+		"description" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană",
+		"description" : "O persoană fizică care poate fi moartă sau în viață.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Data de nastere",
+		"description" : "Ziua în care persoana s-a născut.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth/Year" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "An",
+		"description" : "Un an calendaristic gregorian.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth/Month" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Lună",
+		"description" : "O lună dintr-un an calendaristic.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth/Day" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Zi",
+		"description" : "O zi dintr-un an calendaristic.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/Gender" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sex",
+		"description" : "Sex masculin sau feminin.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PlaceOfBirth" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Locul nașterii",
+		"description" : "Locația în care s-a născut persoana.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PersonName" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Numele persoanei",
+		"description" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PersonName/FamilyName" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume de familie",
+		"description" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PersonName/GivenName" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Prenume",
+		"description" : "Un nume sau mai multe nume.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/Identifier" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/Citizenship" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cetățenie",
+		"description" : "Condiția juridică de cetățean, situația de cetățean.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "State membre",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/AT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Austria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/BE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Belgia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/BG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Bulgaria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/CY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cipru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/CZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cehia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/DE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Germania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/DK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Danemarca",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/EE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Estonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/EL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Grecia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/ES" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Spania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/FI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Finlanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/FR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Franţa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/HR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Croaţia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/HU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Ungaria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/IE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Irlanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/IT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Italia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/LT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Lituania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/LU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Luxemburg",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/LV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Letonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/MT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Malta",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/NL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Olanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/PL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Polonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/PT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Portugalia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/RO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "România",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/SE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Suedia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/SI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Slovenia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/SK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Slovacia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Abordare",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/AdminUnitL2" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Unitate administrativă nivel 2",
+		"description" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/AdminUnitL1" : {
+	"type" : "CountryEnum",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Unitate administrativă nivel 1",
+		"description" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/PoBox" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Casuta postala",
+		"description" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/Thoroughfare" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Arteră/drum principal",
+		"description" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/LocatorDesignator" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator adresă",
+		"description" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/LocatorName" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Numele locatorului",
+		"description" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/AddressArea" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Zona de adrese",
+		"description" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/PostName" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Numele oficiului poștal",
+		"description" : "Punct de livrare poștal.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/PostCode" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cod poștal",
+		"description" : "Codul poștal.",
+		"example" : "",
+		"verified" : "true"
+	}
+	}
+}
