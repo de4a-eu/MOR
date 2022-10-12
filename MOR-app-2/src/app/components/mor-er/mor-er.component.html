@@ -1,11 +1,11 @@
 <!-- Show complete message when ER is successful -->
 <div class="d-flex justify-content-center" *ngIf="complete">
   <div class="row">
-    <div class="text-center text-primary">
+    <div class="text-center de4a-text">
       <i class="fa-solid fa-circle-check"></i>
     </div>
     <div
-      class="text-center text-primary"
+      class="text-center de4a-text"
       translate="GUI/complete.{{ dataLoader.selectedLanguage }}.label"
     ></div>
   </div>
@@ -14,11 +14,11 @@
 <!-- Show error message when input parameters are not valid -->
 <div class="d-flex justify-content-center" *ngIf="!inputParamsValid">
   <div class="row">
-    <div class="text-center text-primary">
+    <div class="text-center de4a-text">
       <i class="fa-solid fa-triangle-exclamation"></i>
     </div>
     <div
-      class="text-center text-primary"
+      class="text-center de4a-text"
       translate="GUI/provideInputER.{{ dataLoader.selectedLanguage }}.label"
     ></div>
   </div>
@@ -65,7 +65,7 @@
         ></span>
         <div class="form-check form-check-inline me-0 ms-1">
           <input
-            class="form-check-input"
+            class="form-check-input de4a-input-radio"
             type="radio"
             [name]="'radio_' + evidenceType.tokenName"
             [id]="'radio_' + evidenceType.tokenName + '_country'"
@@ -91,7 +91,7 @@
         ></span>
         <div class="form-check form-check-inline me-0 ms-1">
           <input
-            class="form-check-input"
+            class="form-check-input de4a-input-radio"
             type="radio"
             [name]="'radio_' + evidenceType.tokenName"
             [id]="'radio_' + evidenceType.tokenName + '_upload'"
@@ -156,7 +156,7 @@
       <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
       <div *ngIf="ial.retrievalType[evidenceType.tokenName || ''] == 'upload'">
         <input
-          class="form-control form-control-sm"
+          class="form-control form-control-sm de4a-input-file"
           type="file"
           accept=".xml"
           (change)="handleUpload(evidenceType.tokenName || '', $event.target)"
@@ -190,7 +190,7 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header de4a-title">
           <h5
             class="modal-title"
             id="requestEvidenceModalLabel"
@@ -311,7 +311,7 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header de4a-title">
           <h5 class="modal-title" id="selectProvisionModalLabel">
             <span
               translate="GUI/selectProvision.{{
@@ -346,7 +346,7 @@
             "
           >
             <input
-              class="form-check-input"
+              class="form-check-input de4a-input-radio"
               type="radio"
               name="provisionOption"
               [id]="'provisionOption_' + (i + 1)"
@@ -397,7 +397,7 @@
       [ngClass]="showDescription ? 'modal-xl' : 'modal-lg'"
     >
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header de4a-title">
           <div class="d-flex">
             <div>
               <h5 class="modal-title" id="previewEvidenceSchemaModalLabel">

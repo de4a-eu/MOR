@@ -6,11 +6,11 @@
 
 <div class="d-flex justify-content-center mb-2" *ngIf="complete">
   <div class="row">
-    <div class="text-center text-primary">
+    <div class="text-center de4a-text">
       <i class="fa-solid fa-circle-check me-1"></i>
     </div>
     <div
-      class="text-center text-primary"
+      class="text-center de4a-text"
       translate="GUI/complete.{{ dataLoader.selectedLanguage }}.label"
     ></div>
   </div>
@@ -19,11 +19,11 @@
 <!-- Show error message when input parameters are not valid -->
 <div class="d-flex justify-content-center mb-3" *ngIf="!inputParamsValid">
   <div class="row">
-    <div class="text-center text-primary">
+    <div class="text-center de4a-text">
       <i class="fa-solid fa-triangle-exclamation me-1"></i>
     </div>
     <div
-      class="text-center text-primary"
+      class="text-center de4a-text"
       translate="GUI/provideInputP.{{ dataLoader.selectedLanguage }}.label"
     ></div>
   </div>
@@ -38,7 +38,7 @@
     <div class="col-6 text-end p-2">
       <button
         type="button"
-        class="btn btn-sm btn-secondary normal"
+        class="btn btn-sm btn-secondary normal de4a-button-evidence"
         (click)="
           isEvidenceAvailable(evidenceType.tokenName)
             ? previewEvidence(evidenceType.tokenName)
@@ -67,7 +67,7 @@
             <div class="col-12">
               <div class="form-check form-check-inline me-0 ms-1">
                 <input
-                  class="form-check-input"
+                  class="form-check-input de4a-input-radio"
                   type="radio"
                   [name]="'mor_p_radio_' + evidenceType.tokenName"
                   [id]="'mor_p_radio_' + evidenceType.tokenName + '_country'"
@@ -95,7 +95,7 @@
               ></span>
               <div class="form-check form-check-inline me-0 ms-1">
                 <input
-                  class="form-check-input"
+                  class="form-check-input de4a-input-radio"
                   type="radio"
                   [name]="'mor_p_radio_' + evidenceType.tokenName"
                   [id]="
@@ -154,7 +154,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex">
-          <div>
+          <div class="de4a-title">
             <h5 class="modal-title" id="previewEvidenceModalLabel">
               <span
                 translate="GUI/Preview.{{ dataLoader.selectedLanguage }}.label"
@@ -170,7 +170,7 @@
           <div>
             <de4a-language-selector></de4a-language-selector>
           </div>
-          <div class="ms-1">
+          <div class="ms-1 de4a-title">
             <h5
               class="pointer ms-1"
               (click)="showDescription = !showDescription"
@@ -210,11 +210,6 @@
           [showDescriptions]="showDescription"
           [xmlInput]="getEvidenceTypeContentForPreview()"
         ></de4a-preview-xml>
-        <!--<app-preview-xml
-          [lang]="selectedLanguage"
-          [showDescriptions]="showDescription"
-          [xmlInput]="getEvidenceTypeContentForPreview()"
-        ></app-preview-xml>-->
       </div>
     </div>
   </div>

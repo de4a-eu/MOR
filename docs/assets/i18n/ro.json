@@ -3,9 +3,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Prueba de Nacimiento",
-		"description" : "Información registrada del nacimiento de una persona que prueba se registró formalmente.",
+	"ro" : {
+		"label" : "Act de naștere",
+		"description" : "Document oficial sau date care dovedesc nașterea unui copil.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -14,9 +14,9 @@
 	"type" : "Identifier",
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "Una referencia inequívoca a la prueba de nacimiento.",
+	"ro" : {
+		"label" : "Număr act",
+		"description" : "O referire specifică la actul nașterii.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -25,9 +25,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
-	"es" : {
-		"label" : "Fecha de emisión",
-		"description" : "Fecha más reciente en la que se emitió la prueba de nacimiento.",
+	"ro" : {
+		"label" : "Data înregistrării actului",
+		"description" : "Data la care a fost înregistrat actul nașterii.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -36,9 +36,9 @@
 	"type" : "PublicOrganisation",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Autoridad emisora",
-		"description" : "Organización pública con competencias para emitir legalmente la prueba de nacimiento.",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "O organizație publică responsabilă cu eliberarea actului de naștere.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -47,9 +47,9 @@
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Lugar de emisión",
-		"description" : "Ubicación donde se emitió la prueba de nacimiento.",
+	"ro" : {
+		"label" : "Localitate înregistrare act",
+		"description" : "Localitatea în care a fost eliberat actul nașterii (U.A.T.).",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -58,7 +58,7 @@
 	"type" : "LocationAddress/AdminUnitL2",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -69,7 +69,7 @@
 	"type" : "LocationAddress/AdminUnitL1",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -80,9 +80,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Certifica el nacimiento",
-		"description" : "Certificación del suceso del nacimiento.",
+	"ro" : {
+		"label" : "Atestare naștere",
+		"description" : "Atestarea înregistrării nașterii.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -91,9 +91,9 @@
 	"type" : "Person",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Persona nacida",
-		"description" : "Persona cuyo nacimiento se certifica.",
+	"ro" : {
+		"label" : "Titular",
+		"description" : "Persoană căreia i se eliberează actul de naștere.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -102,7 +102,7 @@
 	"type" : "Person/DateOfBirth",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -113,9 +113,9 @@
 	"type" : "PersonGenderEnum",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
-		"description" : "Sexo de la persona nacida",
+		"description" : "Sexul titularului.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -124,7 +124,7 @@
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -135,9 +135,9 @@
 	"type" : "Person",
 	"cardinality" : "01",
 	"comment" : "",
-	"es" : {
-		"label" : "Datos del progenitor",
-		"description" : "Datos de uno de los dos progenitors que figuran en el registro de nacimientos.",
+	"ro" : {
+		"label" : "Părinte titular",
+		"description" : "Unul din părinții naturali.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -146,31 +146,31 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Prueba de matrimonio",
-		"description" : "Información sobre el matrimonio de dos personas que demuestra que se registró formalmente.",
+	"ro" : {
+		"label" : "Act de căsătorie",
+		"description" : "Document oficial sau date care dovedesc căsătoria a două persoane.",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "MarriageEvidence/Identifier" : {
 	"type" : "Identifier",
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "Referencia inequívoca a la prueba de matrimonio.",
+	"ro" : {
+		"label" : "Număr act",
+		"description" : "O referire specifică la actul de căsătorie.",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "MarriageEvidence/IssueDate" : {
 	"type" : "UDT/Date",
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3.",
-	"es" : {
-		"label" : "Fecha de emisión",
-		"description" : "Fecha más reciente en que se emitió la prueba de matrimonio.",
+	"ro" : {
+		"label" : "Data înregistrării actului",
+		"description" : "Data la care a fost înregistrată căsătoria.",
 		"example" : "20/05/2021",
 		"verified" : "true"
 	}
@@ -179,9 +179,9 @@
 	"type" : "PublicOrganisation",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Autoridad emisora",
-		"description" : "Organización pública competencias para emitir legalmente la prueba de matrimonio.",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "O organizație publică responsabilă cu eliberarea actului de căsătorie.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -190,9 +190,9 @@
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Lugar de emisión",
-		"description" : "Ubicación donde se emitió la evidencia matrimonial.",
+	"ro" : {
+		"label" : "Localitate înregistrare act",
+		"description" : "Localitatea în care a fost eliberat actul de căsătorie.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -201,7 +201,7 @@
 	"type" : "LocationAddress/AdminUnitL2",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -212,7 +212,7 @@
 	"type" : "LocationAddress/AdminUnitL1",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -223,9 +223,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Certifica el matrimonio",
-		"description" : "Certificación del suceso del matrimonio.",
+	"ro" : {
+		"label" : "Atestare căsătorie",
+		"description" : "Atestarea înregistrării căsătoriei.",
 		"example" : "20/04/2021",
 		"verified" : "true"
 	}
@@ -234,9 +234,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Fecha de matrimonio",
-		"description" : "Fecha en que tuvo lugar la boda.",
+	"ro" : {
+		"label" : "Data căsătoriei",
+		"description" : "Data la care a avut loc căsătoria.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -245,8 +245,8 @@
 	"type" : "LocationAddress",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Lugar de la boda",
+	"ro" : {
+		"label" : "Locul căsătoriei",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -256,9 +256,9 @@
 	"type" : "Person",
 	"cardinality" : "11",
 	"comment" : "",
-	"es" : {
-		"label" : "Cónyuge",
-		"description" : "Una de las personas que forman el matrimonio",
+	"ro" : {
+		"label" : "Soțul/Soția",
+		"description" : "Una din persoanele căsătorite.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -267,9 +267,9 @@
 	"type" : "PersonGenderEnum",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
-		"description" : "El género de un individuo apropiado para el contexto específico. En algunos casos, el estado cromosómico o físico de un individuo será más importante que el género que expresan, en será al contrario.",
+		"description" : "Sexul unei persoane (Feminin sau Masculin).",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -278,10 +278,10 @@
 	"type" : "UDT/Text",
 	"cardinality" : "01",
 	"comment" : "",
-	"es" : {
-		"label" : "Apellidos después del matrimonio",
-		"description" : "Apellidos del cónyuge después del matrimonio, que diferirán de los de antes del matrimonio en caso de que el suceso cambie alguno.",
-		"example" : "María",
+	"ro" : {
+		"label" : "Nume de familie după căsătorie",
+		"description" : "Numele de familie după căsătorie al soțului/soției.",
+		"example" : "Maria",
 		"verified" : "true"
 	}
 } ,
@@ -289,10 +289,10 @@
 	"type" : "UDT/Text",
 	"cardinality" : "01",
 	"comment" : "",
-	"es" : {
-		"label" : "Apellidos antes del matrimonio",
-		"description" : "Apellidos del cónyuge después del matrimonio, que diferirán de los de después del matrimonio en caso de que el suceso cambie alguno.",
-		"example" : "María Gómez",
+	"ro" : {
+		"label" : "Nume de familie înainte de căsătorie",
+		"description" : "Numele de familie înainte de căsătoria al soțului/soției.",
+		"example" : "Maria Khan",
 		"verified" : "true"
 	}
 } ,
@@ -300,9 +300,9 @@
 	"type" : "PersonMaritalStatusEnum",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Estado civil antes del matrimonio.",
-		"description" : "Situación con respecto a si una persona era soltera, casada, separada, divorciada o viuda antes de contraer el matrimonio que se certifica.",
+	"ro" : {
+		"label" : "Starea civilă înainte de căsătorie",
+		"description" : "Situația cu privire la starea civilă a persoanei. Dacă era singură, căsătorită, separată, divorțată sau văduvă.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -311,9 +311,9 @@
 	"type" : "",
 	"cardinality" : "10",
 	"comment" : "",
-	"es" : {
-		"label" : "Fin del matrimonio",
-		"description" : "En caso de divorcio, esta propiedad incluye información sobre el final del matrimonio.",
+	"ro" : {
+		"label" : "Actul care atestă sfârșitul căsătoriei",
+		"description" : "În caz de divorț, actul de divorț care conține informații despre sfârșitul căsătoriei.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -322,9 +322,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Fecha de terminación del matrimonio.",
-		"description" : "Fecha en que matrimonio queda formalmente disuelto.",
+	"ro" : {
+		"label" : "Data încheierii căsătoriei",
+		"description" : "Data încetării căsătoriei.",
 		"example" : "05/01/2022",
 		"verified" : "true"
 	}
@@ -333,10 +333,10 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Causa",
-		"description" : "Causa que formalmente consituye el motivo de la disolución del matrimonio.",
-		"example" : "Falta de comunicación",
+	"ro" : {
+		"label" : "Cauză",
+		"description" : "Cauza încetării căsătoriei.",
+		"example" : "Lipsa de comunicare",
 		"verified" : "true"
 	}
 } ,
@@ -344,436 +344,436 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
-		"description" : "Códigos ISO 3166-1 alfa-3 codifican cada país con tres letras, definidos por la norma ISO 3166 publicada por la Organización Internacional de Normalización, para representar a países, territorios dependientes y áreas especiales de interés geográfico.",
+		"description" : "Codurile ISO 3166-1 alpha-3 sunt coduri de țară din trei litere definite în ISO 3166-1, parte a standardului ISO 3166 publicat de Organizația Internațională pentru Standardizare, pentru a reprezenta țări, teritorii dependente și zone speciale de interes geografic.",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/1A0" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Kosovo",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ABW" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Aruba",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AFG" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Afganistán",
+	"ro" : {
+		"label" : "Afganistan",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AFI" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Territorio Francés de los Afars y de los Issas",
+	"ro" : {
+		"label" : "Afar și Issas francezi",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AGO" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Angola",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AIA" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Anguila",
+	"ro" : {
+		"label" : "Anguilla",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ALA" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Aland",
+	"ro" : {
+		"label" : "Insulele Aland",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ALB" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Albania",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AND" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Andorra",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ANT" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Antillas Holandesas",
+	"ro" : {
+		"label" : "Antilele Olandeze",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ARE" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Emiratos Árabes Unidos",
+	"ro" : {
+		"label" : "Emiratele Arabe Unite",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ARG" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Argentina",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ARM" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Armenia",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ASM" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Samoa Americana",
+	"ro" : {
+		"label" : "Samoa Americană",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ATA" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Antártida",
+	"ro" : {
+		"label" : "Antarctica",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ATB" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Territorio antártico británico",
+	"ro" : {
+		"label" : "Teritoriul Antarctic Britanic",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ATF" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Tierras del sur francesa",
+	"ro" : {
+		"label" : "Ținuturile Sudului Franței",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ATG" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Antigua y Barbuda",
+	"ro" : {
+		"label" : "Antigua si Barbuda",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/ATN" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Tierra de la Reina Maud",
+	"ro" : {
+		"label" : "Dronning Maud Land",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AUS" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Australia",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AUT" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Austria",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/AZE" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Azerbaiyán",
+	"ro" : {
+		"label" : "Azerbaidjan",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BDI" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Burundi",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BEL" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bélgica",
+	"ro" : {
+		"label" : "Belgia",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BEN" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Benin",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BES" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bonaire, Sint Eustatius y Saba.",
+	"ro" : {
+		"label" : "Bonaire, Sint Eustatius și Saba",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BFA" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Burkina Faso",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BGD" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Bangladesh",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BGR" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Bulgaria",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BHR" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bahrein",
+	"ro" : {
+		"label" : "Bahrain",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BHS" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Bahamas",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BIH" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bosnia y Herzegovina",
+	"ro" : {
+		"label" : "Bosnia si Hertegovina",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BLM" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "San Barthélemy",
+	"ro" : {
+		"label" : "Sfântul Bartolomeu",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BLR" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bielorrusia",
+	"ro" : {
+		"label" : "Bielorusia",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BLZ" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Belice",
+	"ro" : {
+		"label" : "Belize",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BMU" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Bermudas",
+	"ro" : {
+		"label" : "Bermude",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BOL" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Bolivia",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BRA" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Brasil",
+	"ro" : {
+		"label" : "Brazilia",
 		"description" : "",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "CountryEnum/BRB" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Barbados",
 		"description" : "",
 		"example" : "",
@@ -784,7 +784,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Brunei",
 		"description" : "",
 		"example" : "",
@@ -795,8 +795,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bután",
+	"ro" : {
+		"label" : "Bhutan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -806,7 +806,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Birmania",
 		"description" : "",
 		"example" : "",
@@ -817,8 +817,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Isla de bouvet",
+	"ro" : {
+		"label" : "Insula Bouvet",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -828,8 +828,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Botsuana",
+	"ro" : {
+		"label" : "Botswana",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -839,8 +839,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bielorrusia",
+	"ro" : {
+		"label" : "Bielorusia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -850,8 +850,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "República Centroafricana",
+	"ro" : {
+		"label" : "Republica Centrafricană",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -861,8 +861,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Canadá",
+	"ro" : {
+		"label" : "Canada",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -872,8 +872,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Cocos (Keeling)",
+	"ro" : {
+		"label" : "Insulele Cocos (Keeling).",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -883,8 +883,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Suiza",
+	"ro" : {
+		"label" : "Elveţia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -894,7 +894,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Chile",
 		"description" : "",
 		"example" : "",
@@ -905,7 +905,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "China",
 		"description" : "",
 		"example" : "",
@@ -916,8 +916,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Côte d'Ivoire",
+	"ro" : {
+		"label" : "Coasta de Fildeș",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -927,8 +927,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Camerún",
+	"ro" : {
+		"label" : "Camerun",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -938,8 +938,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "República Democrática del Congo",
+	"ro" : {
+		"label" : "Republica Democrata din Congo",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -949,7 +949,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Congo",
 		"description" : "",
 		"example" : "",
@@ -960,8 +960,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Cook",
+	"ro" : {
+		"label" : "Insulele Cook",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -971,8 +971,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Colombia",
+	"ro" : {
+		"label" : "Columbia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -982,8 +982,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Comoras",
+	"ro" : {
+		"label" : "Comore",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -993,7 +993,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Clipperton",
 		"description" : "",
 		"example" : "",
@@ -1004,7 +1004,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Cabo Verde",
 		"description" : "",
 		"example" : "",
@@ -1015,7 +1015,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Costa Rica",
 		"description" : "",
 		"example" : "",
@@ -1026,8 +1026,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Checoslovaquia",
+	"ro" : {
+		"label" : "Cehoslovacia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1037,8 +1037,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Cantón y Enderbury",
+	"ro" : {
+		"label" : "Insulele Canton și Enderbury",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1048,7 +1048,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Cuba",
 		"description" : "",
 		"example" : "",
@@ -1059,8 +1059,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Curazao",
+	"ro" : {
+		"label" : "Curaçao",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1070,8 +1070,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Isla de Navidad",
+	"ro" : {
+		"label" : "Insula Craciunului",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1081,8 +1081,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Caimán",
+	"ro" : {
+		"label" : "Insulele Cayman",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1092,8 +1092,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Chipre",
+	"ro" : {
+		"label" : "Cipru",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1103,8 +1103,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Chequia",
+	"ro" : {
+		"label" : "Cehia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1114,8 +1114,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Alemania del Este",
+	"ro" : {
+		"label" : "Germania de Est",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1125,8 +1125,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Alemania",
+	"ro" : {
+		"label" : "Germania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1136,7 +1136,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Dahomey",
 		"description" : "",
 		"example" : "",
@@ -1147,7 +1147,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Djibouti",
 		"description" : "",
 		"example" : "",
@@ -1158,7 +1158,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Dominica",
 		"description" : "",
 		"example" : "",
@@ -1169,8 +1169,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Dinamarca",
+	"ro" : {
+		"label" : "Danemarca",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1180,8 +1180,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "República Dominicana",
+	"ro" : {
+		"label" : "Republica Dominicană",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1191,8 +1191,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Argelia",
+	"ro" : {
+		"label" : "Algeria",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1202,7 +1202,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Ecuador",
 		"description" : "",
 		"example" : "",
@@ -1213,8 +1213,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Egipto",
+	"ro" : {
+		"label" : "Egipt",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1224,8 +1224,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Eritrea",
+	"ro" : {
+		"label" : "Eritreea",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1235,8 +1235,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Sahara Occidental",
+	"ro" : {
+		"label" : "sahara de Vest",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1246,8 +1246,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "España",
+	"ro" : {
+		"label" : "Spania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1257,7 +1257,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Estonia",
 		"description" : "",
 		"example" : "",
@@ -1268,8 +1268,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Etiopía",
+	"ro" : {
+		"label" : "Etiopia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1279,8 +1279,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Unión Europea",
+	"ro" : {
+		"label" : "Uniunea Europeană",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1290,8 +1290,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Finlandia",
+	"ro" : {
+		"label" : "Finlanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1301,7 +1301,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Fiji",
 		"description" : "",
 		"example" : "",
@@ -1312,8 +1312,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Malvinas",
+	"ro" : {
+		"label" : "Insulele Falkland",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1323,8 +1323,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Tierras Australes y Antárticas Francesas",
+	"ro" : {
+		"label" : "Ținuturile sudice și antarctice franceze",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1334,8 +1334,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Francia",
+	"ro" : {
+		"label" : "Franţa",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1345,8 +1345,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Feroes",
+	"ro" : {
+		"label" : "Insulele Feroe",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1356,8 +1356,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Micronesia",
+	"ro" : {
+		"label" : "Micronezia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1367,8 +1367,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Metropolitano francia",
+	"ro" : {
+		"label" : "Franța metropolitană",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1378,8 +1378,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Gabón",
+	"ro" : {
+		"label" : "Gabon",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1389,8 +1389,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Reino Unido",
+	"ro" : {
+		"label" : "Regatul Unit",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1400,8 +1400,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Gilbert y Islas Elice",
+	"ro" : {
+		"label" : "Insulele Gilbert și Ellice",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1411,7 +1411,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Georgia",
 		"description" : "",
 		"example" : "",
@@ -1422,8 +1422,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guerna",
+	"ro" : {
+		"label" : "Guernsey",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1433,7 +1433,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Ghana",
 		"description" : "",
 		"example" : "",
@@ -1444,7 +1444,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Gibraltar",
 		"description" : "",
 		"example" : "",
@@ -1455,8 +1455,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guinea",
+	"ro" : {
+		"label" : "Guineea",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1466,8 +1466,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guadalupe",
+	"ro" : {
+		"label" : "Guadelupa",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1477,8 +1477,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "La Gambia",
+	"ro" : {
+		"label" : "Gambia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1488,8 +1488,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guinea-Bissau",
+	"ro" : {
+		"label" : "Guineea-Bissau",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1499,8 +1499,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guinea Ecuatorial",
+	"ro" : {
+		"label" : "Guineea Ecuatorială",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1510,7 +1510,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Grecia",
 		"description" : "",
 		"example" : "",
@@ -1521,8 +1521,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Granada",
+	"ro" : {
+		"label" : "Grenada",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1532,8 +1532,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Groenlandia",
+	"ro" : {
+		"label" : "Groenlanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1543,7 +1543,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Guatemala",
 		"description" : "",
 		"example" : "",
@@ -1554,8 +1554,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guayana francesa",
+	"ro" : {
+		"label" : "Guyana Franceză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1565,7 +1565,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Guam",
 		"description" : "",
 		"example" : "",
@@ -1576,8 +1576,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Guayana",
+	"ro" : {
+		"label" : "Guyana",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1587,7 +1587,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Hong Kong",
 		"description" : "",
 		"example" : "",
@@ -1598,8 +1598,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Isla Heard e islas McDonald",
+	"ro" : {
+		"label" : "Insula Heard și Insulele McDonald",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1609,7 +1609,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Honduras",
 		"description" : "",
 		"example" : "",
@@ -1620,8 +1620,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Croacia",
+	"ro" : {
+		"label" : "Croaţia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1631,8 +1631,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Haití",
+	"ro" : {
+		"label" : "Haiti",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1642,8 +1642,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Hungría",
+	"ro" : {
+		"label" : "Ungaria",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1653,8 +1653,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Alto volta",
+	"ro" : {
+		"label" : "Volta Superioara",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1664,8 +1664,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Indonesia",
+	"ro" : {
+		"label" : "Indonezia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1675,8 +1675,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Isla de Man",
+	"ro" : {
+		"label" : "Insula Barbatului",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1686,7 +1686,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "India",
 		"description" : "",
 		"example" : "",
@@ -1697,8 +1697,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Territorio Británico del Océano Índico",
+	"ro" : {
+		"label" : "Teritoriul Britanic al Oceanului Indian",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1708,7 +1708,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Irlanda",
 		"description" : "",
 		"example" : "",
@@ -1719,8 +1719,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Irán",
+	"ro" : {
+		"label" : "Iranul",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1730,7 +1730,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Irak",
 		"description" : "",
 		"example" : "",
@@ -1741,8 +1741,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islandia",
+	"ro" : {
+		"label" : "Islanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1752,7 +1752,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Israel",
 		"description" : "",
 		"example" : "",
@@ -1763,7 +1763,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Italia",
 		"description" : "",
 		"example" : "",
@@ -1774,7 +1774,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Jamaica",
 		"description" : "",
 		"example" : "",
@@ -1785,7 +1785,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Jersey",
 		"description" : "",
 		"example" : "",
@@ -1796,8 +1796,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Jordán",
+	"ro" : {
+		"label" : "Iordania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1807,8 +1807,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Japón",
+	"ro" : {
+		"label" : "Japonia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1818,8 +1818,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Isla de Johnston",
+	"ro" : {
+		"label" : "Insula Johnston",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1829,8 +1829,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Kazajstán",
+	"ro" : {
+		"label" : "Kazahstan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1840,8 +1840,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Kenia",
+	"ro" : {
+		"label" : "Kenya",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1851,8 +1851,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Kirguistán",
+	"ro" : {
+		"label" : "Kârgâzstan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1862,8 +1862,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Camboya",
+	"ro" : {
+		"label" : "Cambodgia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1873,7 +1873,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Kiribati",
 		"description" : "",
 		"example" : "",
@@ -1884,8 +1884,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Saint Kitts y Nevis",
+	"ro" : {
+		"label" : "Saint Kitts și Nevis",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1895,8 +1895,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Corea del Sur",
+	"ro" : {
+		"label" : "Coreea de Sud",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1906,8 +1906,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Kuwait",
+	"ro" : {
+		"label" : "Kuweit",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1917,7 +1917,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Laos",
 		"description" : "",
 		"example" : "",
@@ -1928,8 +1928,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Líbano",
+	"ro" : {
+		"label" : "Liban",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1939,7 +1939,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Liberia",
 		"description" : "",
 		"example" : "",
@@ -1950,7 +1950,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Libia",
 		"description" : "",
 		"example" : "",
@@ -1961,8 +1961,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Santa Lucía",
+	"ro" : {
+		"label" : "Sfânta Lucia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -1972,7 +1972,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Liechtenstein",
 		"description" : "",
 		"example" : "",
@@ -1983,7 +1983,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Sri Lanka",
 		"description" : "",
 		"example" : "",
@@ -1994,8 +1994,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Lesoto",
+	"ro" : {
+		"label" : "Lesotho",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2005,7 +2005,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Lituania",
 		"description" : "",
 		"example" : "",
@@ -2016,8 +2016,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Luxemburgo",
+	"ro" : {
+		"label" : "Luxemburg",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2027,7 +2027,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Letonia",
 		"description" : "",
 		"example" : "",
@@ -2038,7 +2038,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Macao",
 		"description" : "",
 		"example" : "",
@@ -2049,8 +2049,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "San Martín",
+	"ro" : {
+		"label" : "Sfântul Martin",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2060,8 +2060,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Marruecos",
+	"ro" : {
+		"label" : "Maroc",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2071,8 +2071,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Mónaco",
+	"ro" : {
+		"label" : "Monaco",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2082,8 +2082,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Moldavia",
+	"ro" : {
+		"label" : "Moldova",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2093,7 +2093,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Madagascar",
 		"description" : "",
 		"example" : "",
@@ -2104,8 +2104,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Maldivas",
+	"ro" : {
+		"label" : "Maldive",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2115,8 +2115,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "México",
+	"ro" : {
+		"label" : "Mexic",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2126,8 +2126,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Marshall",
+	"ro" : {
+		"label" : "Insulele Marshall",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2137,8 +2137,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Midway",
+	"ro" : {
+		"label" : "Insulele Midway",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2148,8 +2148,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Macedonia del Norte",
+	"ro" : {
+		"label" : "Macedonia de Nord",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2159,7 +2159,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Mali",
 		"description" : "",
 		"example" : "",
@@ -2170,7 +2170,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Malta",
 		"description" : "",
 		"example" : "",
@@ -2181,8 +2181,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Myanmar / Birmania",
+	"ro" : {
+		"label" : "Myanmar/Birmania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2192,8 +2192,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Montenegro",
+	"ro" : {
+		"label" : "Muntenegru",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2203,7 +2203,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Mongolia",
 		"description" : "",
 		"example" : "",
@@ -2214,8 +2214,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Marianas del Norte",
+	"ro" : {
+		"label" : "Insulele Mariane de Nord",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2225,8 +2225,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Mozambique",
+	"ro" : {
+		"label" : "Mozambic",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2236,7 +2236,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Mauritania",
 		"description" : "",
 		"example" : "",
@@ -2247,7 +2247,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Montserrat",
 		"description" : "",
 		"example" : "",
@@ -2258,7 +2258,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Martinica",
 		"description" : "",
 		"example" : "",
@@ -2269,8 +2269,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Mauricio",
+	"ro" : {
+		"label" : "Mauritius",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2280,7 +2280,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Malawi",
 		"description" : "",
 		"example" : "",
@@ -2291,8 +2291,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Malasia",
+	"ro" : {
+		"label" : "Malaezia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2302,7 +2302,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Mayotte",
 		"description" : "",
 		"example" : "",
@@ -2313,7 +2313,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Namibia",
 		"description" : "",
 		"example" : "",
@@ -2324,8 +2324,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nueva Caledonia",
+	"ro" : {
+		"label" : "Noua Caledonie",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2335,8 +2335,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "El Níger",
+	"ro" : {
+		"label" : "Niger",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2346,8 +2346,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Isla Norfolk",
+	"ro" : {
+		"label" : "Insula Norfolk",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2357,7 +2357,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Nigeria",
 		"description" : "",
 		"example" : "",
@@ -2368,8 +2368,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nuevas Hébridas",
+	"ro" : {
+		"label" : "Noile Hebride",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2379,7 +2379,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Nicaragua",
 		"description" : "",
 		"example" : "",
@@ -2390,7 +2390,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Niue",
 		"description" : "",
 		"example" : "",
@@ -2401,8 +2401,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Países Bajos",
+	"ro" : {
+		"label" : "Olanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2412,8 +2412,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Noruega",
+	"ro" : {
+		"label" : "Norvegia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2423,7 +2423,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Nepal",
 		"description" : "",
 		"example" : "",
@@ -2434,7 +2434,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Nauru",
 		"description" : "",
 		"example" : "",
@@ -2445,8 +2445,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Zona neutral",
+	"ro" : {
+		"label" : "Zona neutră",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2456,8 +2456,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nueva Zelanda",
+	"ro" : {
+		"label" : "Noua Zeelanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2467,8 +2467,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Omán",
+	"ro" : {
+		"label" : "Oman",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2478,8 +2478,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Pakistán",
+	"ro" : {
+		"label" : "Pakistan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2489,8 +2489,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Panamá",
+	"ro" : {
+		"label" : "Panama",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2500,8 +2500,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Territorio en Fideicomiso de las Islas del Pacífico",
+	"ro" : {
+		"label" : "Teritoriul Trust al Insulelor Pacificului",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2511,8 +2511,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Pitcairn",
+	"ro" : {
+		"label" : "Insulele Pitcairn",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2522,8 +2522,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Zona del Canal de Panamá",
+	"ro" : {
+		"label" : "Zona Canalului Panama",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2533,8 +2533,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Perú",
+	"ro" : {
+		"label" : "Peru",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2544,8 +2544,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Filipinas",
+	"ro" : {
+		"label" : "Filipine",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2555,7 +2555,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Palau",
 		"description" : "",
 		"example" : "",
@@ -2566,8 +2566,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Papúa Nueva Guinea",
+	"ro" : {
+		"label" : "Papua Noua Guinee",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2577,7 +2577,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Polonia",
 		"description" : "",
 		"example" : "",
@@ -2588,7 +2588,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Puerto Rico",
 		"description" : "",
 		"example" : "",
@@ -2599,8 +2599,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Corea del Norte",
+	"ro" : {
+		"label" : "Coreea de Nord",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2610,8 +2610,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Portugal",
+	"ro" : {
+		"label" : "Portugalia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2621,7 +2621,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Paraguay",
 		"description" : "",
 		"example" : "",
@@ -2632,7 +2632,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Palestina",
 		"description" : "",
 		"example" : "",
@@ -2643,8 +2643,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Diversas islas del Pacífico de los Estados Unidos",
+	"ro" : {
+		"label" : "Diverse Insulele Pacificului din SUA",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2654,8 +2654,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Polinesia francesa",
+	"ro" : {
+		"label" : "Polinezia Franceză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2665,8 +2665,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Katar",
+	"ro" : {
+		"label" : "Qatar",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2676,8 +2676,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Reunión",
+	"ro" : {
+		"label" : "Reuniune",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2687,8 +2687,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Rhodesia del sur",
+	"ro" : {
+		"label" : "Rhodesia de Sud",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2698,8 +2698,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Rumania",
+	"ro" : {
+		"label" : "România",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2709,7 +2709,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Rusia",
 		"description" : "",
 		"example" : "",
@@ -2720,8 +2720,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Ruanda",
+	"ro" : {
+		"label" : "Rwanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2731,8 +2731,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Arabia Saudita",
+	"ro" : {
+		"label" : "Arabia Saudită",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2742,8 +2742,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Serbia y Montenegro",
+	"ro" : {
+		"label" : "Serbia și Muntenegru",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2753,8 +2753,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Sudán",
+	"ro" : {
+		"label" : "Sudan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2764,7 +2764,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Senegal",
 		"description" : "",
 		"example" : "",
@@ -2775,8 +2775,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Singapur",
+	"ro" : {
+		"label" : "Singapore",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2786,8 +2786,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Georgia del sur y las islas Sandwich del sur",
+	"ro" : {
+		"label" : "Georgia de Sud și Insulele Sandwich de Sud",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2797,8 +2797,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "San Helena, Ascensión y Tristan da Cunha",
+	"ro" : {
+		"label" : "Sfânta Elena, Înălțarea Domnului și Tristan da Cunha",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2808,8 +2808,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Svalbard y Jan Mayen",
+	"ro" : {
+		"label" : "Svalbard și Jan Mayen",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2819,7 +2819,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Sikkim",
 		"description" : "",
 		"example" : "",
@@ -2830,8 +2830,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Salomón",
+	"ro" : {
+		"label" : "Insulele Solomon",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2841,8 +2841,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Sierra Leona",
+	"ro" : {
+		"label" : "Sierra Leone",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2852,7 +2852,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "El Salvador",
 		"description" : "",
 		"example" : "",
@@ -2863,7 +2863,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "San Marino",
 		"description" : "",
 		"example" : "",
@@ -2874,7 +2874,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Somalia",
 		"description" : "",
 		"example" : "",
@@ -2885,8 +2885,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Saint Pierre y Miquelon",
+	"ro" : {
+		"label" : "Saint Pierre și Miquelon",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2896,7 +2896,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Serbia",
 		"description" : "",
 		"example" : "",
@@ -2907,8 +2907,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Sudán del Sur",
+	"ro" : {
+		"label" : "Sudul Sudanului",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2918,8 +2918,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Santo Tomé y Príncipe",
+	"ro" : {
+		"label" : "Sao Tome și Principe",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2929,8 +2929,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Unión Soviética",
+	"ro" : {
+		"label" : "Uniunea Sovietică",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2940,7 +2940,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Surinam",
 		"description" : "",
 		"example" : "",
@@ -2951,8 +2951,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Eslovaquia",
+	"ro" : {
+		"label" : "Slovacia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2962,8 +2962,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Eslovenia",
+	"ro" : {
+		"label" : "Slovenia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2973,8 +2973,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Suecia",
+	"ro" : {
+		"label" : "Suedia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -2984,7 +2984,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Eswatini",
 		"description" : "",
 		"example" : "",
@@ -2995,8 +2995,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "San Martín",
+	"ro" : {
+		"label" : "Sint Maarten",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3006,7 +3006,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Seychelles",
 		"description" : "",
 		"example" : "",
@@ -3017,7 +3017,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Siria",
 		"description" : "",
 		"example" : "",
@@ -3028,8 +3028,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Turcas y Caicos",
+	"ro" : {
+		"label" : "Insulele Turks și Caicos",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3039,8 +3039,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Chad",
+	"ro" : {
+		"label" : "Ciad",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3050,8 +3050,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Togo",
+	"ro" : {
+		"label" : "A merge",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3061,8 +3061,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Tailandia",
+	"ro" : {
+		"label" : "Tailanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3072,8 +3072,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Tayikistán",
+	"ro" : {
+		"label" : "Tadjikistan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3083,7 +3083,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Tokelau",
 		"description" : "",
 		"example" : "",
@@ -3094,8 +3094,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Turkmenistán",
+	"ro" : {
+		"label" : "Turkmenistan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3105,8 +3105,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Timor Oriental",
+	"ro" : {
+		"label" : "Timor-Leste",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3116,8 +3116,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Timor Portugués",
+	"ro" : {
+		"label" : "Timorul de Est",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3127,7 +3127,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Tonga",
 		"description" : "",
 		"example" : "",
@@ -3138,8 +3138,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Trinidad y Tobago",
+	"ro" : {
+		"label" : "Trinidad și Tobago",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3149,8 +3149,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Túnez",
+	"ro" : {
+		"label" : "Tunisia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3160,8 +3160,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Turquía",
+	"ro" : {
+		"label" : "Curcan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3171,7 +3171,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Tuvalu",
 		"description" : "",
 		"example" : "",
@@ -3182,8 +3182,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Taiwán",
+	"ro" : {
+		"label" : "Taiwan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3193,7 +3193,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Tanzania",
 		"description" : "",
 		"example" : "",
@@ -3204,7 +3204,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Uganda",
 		"description" : "",
 		"example" : "",
@@ -3215,8 +3215,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Ucrania",
+	"ro" : {
+		"label" : "Ucraina",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3226,8 +3226,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Ultramarinas Menores de los Estados Unidos",
+	"ro" : {
+		"label" : "Insulele minore periferice ale Statelor Unite",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3237,7 +3237,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Uruguay",
 		"description" : "",
 		"example" : "",
@@ -3248,8 +3248,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Estados Unidos",
+	"ro" : {
+		"label" : "Statele Unite",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3259,8 +3259,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Uzbekistán",
+	"ro" : {
+		"label" : "Uzbekistan",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3270,8 +3270,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Estado de la Ciudad del Vaticano",
+	"ro" : {
+		"label" : "Statul Vatican",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3281,8 +3281,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "San Vicente y las Granadinas",
+	"ro" : {
+		"label" : "Saint Vincent și Grenadine",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3292,8 +3292,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "República Democrática de Vietnam",
+	"ro" : {
+		"label" : "Republica Democrată Vietnam",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3303,7 +3303,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Venezuela",
 		"description" : "",
 		"example" : "",
@@ -3314,8 +3314,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Vírgenes Británicas",
+	"ro" : {
+		"label" : "Insulele Virgine Britanice",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3325,8 +3325,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Vírgenes de EE.UU",
+	"ro" : {
+		"label" : "Insulele Virgine americane",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3336,7 +3336,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Vietnam",
 		"description" : "",
 		"example" : "",
@@ -3347,7 +3347,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Vanuatu",
 		"description" : "",
 		"example" : "",
@@ -3358,8 +3358,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Islas Wake",
+	"ro" : {
+		"label" : "Insulele Wake",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3369,8 +3369,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Wallis y Futuna",
+	"ro" : {
+		"label" : "Wallis și Futuna",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3380,7 +3380,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Samoa",
 		"description" : "",
 		"example" : "",
@@ -3391,7 +3391,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Yemen",
 		"description" : "",
 		"example" : "",
@@ -3402,8 +3402,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Yemen de Norte",
+	"ro" : {
+		"label" : "Yemenul de Nord",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3413,8 +3413,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Yugoslavia",
+	"ro" : {
+		"label" : "Iugoslavia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3424,8 +3424,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Sudáfrica",
+	"ro" : {
+		"label" : "Africa de Sud",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3435,7 +3435,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Zambia",
 		"description" : "",
 		"example" : "",
@@ -3446,8 +3446,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Zaire",
+	"ro" : {
+		"label" : "Zair",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3457,8 +3457,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "República de Zimbabue",
+	"ro" : {
+		"label" : "Republica Zimbabwe",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3468,8 +3468,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Seleccionar",
+	"ro" : {
+		"label" : "Selectați",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3479,8 +3479,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "país emisor",
+	"ro" : {
+		"label" : "țara emitentă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3490,8 +3490,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "o",
+	"ro" : {
+		"label" : "sau",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3501,8 +3501,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Seleccionar país",
+	"ro" : {
+		"label" : "Selectează țara",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3512,8 +3512,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Seleccionar opción",
+	"ro" : {
+		"label" : "Selectați opțiunea",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3523,8 +3523,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Opción no disponible, subir fichero evidencia",
+	"ro" : {
+		"label" : "Opțiunea nu este disponibilă, vă rugăm să încărcați documentele.",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3534,8 +3534,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "seleccione 1 opción",
+	"ro" : {
+		"label" : "vă rugăm selectați o opțiune",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3545,8 +3545,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "por",
+	"ro" : {
+		"label" : "pentru",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3556,8 +3556,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "desde",
+	"ro" : {
+		"label" : "din",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3567,8 +3567,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Confirmar opción",
+	"ro" : {
+		"label" : "Confirmați opțiunea",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3578,8 +3578,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Continuar",
+	"ro" : {
+		"label" : "Continuă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3589,8 +3589,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Solicitud de evidencia transfronteriza",
+	"ro" : {
+		"label" : "Cerere de documente transfrontaliere",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3600,8 +3600,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "El Sistema Técnico DE4A se utilizará para:",
+	"ro" : {
+		"label" : "Sistemul tehnic DE4A va fi utilizat pentru:",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3611,8 +3611,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "solicitar las evidencias transfronterizas:",
+	"ro" : {
+		"label" : "solicitați următoarele documente transfrontaliere:",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3622,8 +3622,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "suba la siguiente evidencia:",
+	"ro" : {
+		"label" : "încărcați următoarele documente",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3633,8 +3633,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Podrá inspeccionar la evidencia y elegir si desea continuar.",
+	"ro" : {
+		"label" : "Veți putea vizualiza documentele și alege dacă doriți să continuați.",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3644,8 +3644,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "¿Estás seguro de que quieres utilizar el Sistema Técnico DE4A?",
+	"ro" : {
+		"label" : "Sunteți sigur că doriți să utilizați sistemul tehnic DE4A?",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3655,8 +3655,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Cancelar",
+	"ro" : {
+		"label" : "Anulare",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3666,8 +3666,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Solicitar",
+	"ro" : {
+		"label" : "Cerere",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3677,8 +3677,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Completo",
+	"ro" : {
+		"label" : "Complet",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3688,8 +3688,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "¡Proporcione la información necesaria para la solicitud explícita!",
+	"ro" : {
+		"label" : "Vă rugăm să furnizați informațiile necesare la cererea explicită!",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3699,8 +3699,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "¡Proporcione la información necesaria para la previsualización de evidencias!",
+	"ro" : {
+		"label" : "Vă rugăm să furnizați informațiile necesare pentru Previzualizare!",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3710,8 +3710,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "incluir",
+	"ro" : {
+		"label" : "include",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3721,8 +3721,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "subir evidencia",
+	"ro" : {
+		"label" : "încărcați documente",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3732,8 +3732,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Previsualización",
+	"ro" : {
+		"label" : "previzualizare",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3743,8 +3743,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "con",
+	"ro" : {
+		"label" : "cu",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3754,8 +3754,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "descripciones",
+	"ro" : {
+		"label" : "descrieri",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3765,8 +3765,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "en",
+	"ro" : {
+		"label" : "în",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3776,8 +3776,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "sin",
+	"ro" : {
+		"label" : "fără",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3787,8 +3787,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "excluir",
+	"ro" : {
+		"label" : "exclude",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3798,8 +3798,8 @@
 	"type" : "xss:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "esquema",
+	"ro" : {
+		"label" : "schemă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3809,9 +3809,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "La clase que representa un identificador, con información sobre qué autoridad lo emitió y, si es necesario, cuándo.",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Clasa Identificator permite furnizarea unui identificator, precum și informații despre autoritatea care l-a emis și, dacă este necesar, când.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3820,9 +3820,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Contenido",
-		"description" : "Cadena alfanumérica del identificador",
+	"ro" : {
+		"label" : "Conţinut",
+		"description" : "Conținut - șir alfanumeric",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3831,9 +3831,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Tipo de identificador",
-		"description" : "El tipo de identificador emitido (si la autoridad emite más de un tipo de identificador).",
+	"ro" : {
+		"label" : "Tipul de identificare",
+		"description" : "Tipul de identificator emis (dacă autoritatea emite mai mult de un tip de identificator).",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3842,9 +3842,9 @@
 	"type" : "UDT/Date",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Fecha de emisión",
-		"description" : "Fecha en que se emitió el identificador.",
+	"ro" : {
+		"label" : "Data emiterii",
+		"description" : "Data la care a fost emis",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3853,9 +3853,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Autoridad emisora",
-		"description" : "Nombre de la agencia emisora.",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "Numele autorității emitente",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3864,9 +3864,9 @@
 	"type" : "UDT/Identifier",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "ID de autoridad emisora",
-		"description" : "Identificador de la agencia emisora",
+	"ro" : {
+		"label" : "ID-ul autorității emitente",
+		"description" : "ID-ul autorității emitente",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3875,8 +3875,8 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Idioma",
+	"ro" : {
+		"label" : "Limba",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3886,8 +3886,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "inglés",
+	"ro" : {
+		"label" : "Engleză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3897,8 +3897,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "español",
+	"ro" : {
+		"label" : "Spaniolă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3908,8 +3908,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "portugués",
+	"ro" : {
+		"label" : "Portugheză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3919,8 +3919,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "francés",
+	"ro" : {
+		"label" : "Franceză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3930,8 +3930,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "esloveno",
+	"ro" : {
+		"label" : "Slovenă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3941,8 +3941,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "rumano",
+	"ro" : {
+		"label" : "Română",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3952,9 +3952,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Jurisdicción",
-		"description" : "Ámbito territorial de competencias",
+	"ro" : {
+		"label" : "Jurisdicția",
+		"description" : "",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3963,9 +3963,9 @@
 	"type" : "Identifier",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "El valor para la propiedad de identificación es un URI para esa jurisdicción.",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Valoarea atributului de identificare este un URI.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3974,9 +3974,9 @@
 	"type" : "CountryEnum",
 	"cardinality" : "11",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre",
-		"description" : "El nombre es simplemente una cadena que identifica la jurisdicción, típicamente un país, con o sin una etiqueta de idioma.",
+	"ro" : {
+		"label" : "Nume țară",
+		"description" : "Numele care identifică țara.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -3985,7 +3985,7 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "",
 		"description" : "",
 		"example" : "",
@@ -3996,9 +3996,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
-	"es" : {
-		"label" : "Texto",
-		"description" : "Cadena de caracteres (conjunto finito de caracteres), que generalmente forman una palabra de un idioma.",
+	"ro" : {
+		"label" : "Text",
+		"description" : "Un șir de caractere (adică un set finit de caractere).",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4007,9 +4007,9 @@
 	"type" : "xsd:language",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "ID de idioma",
-		"description" : "Código identificativo del idioma utilizado.",
+	"ro" : {
+		"label" : "ID-ul limbii",
+		"description" : "Identificatorul limbii utilizate în componenta de conținut.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4018,9 +4018,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "ID de idioma local",
-		"description" : "Código identificativo de la localización del idioma.",
+	"ro" : {
+		"label" : "ID-ul local al limbii",
+		"description" : "Identificarea limbii aferente locației/țării.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4029,9 +4029,9 @@
 	"type" : "xsd:date",
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
-	"es" : {
-		"label" : "Fecha",
-		"description" : "Día del calendario gregoriano.",
+	"ro" : {
+		"label" : "Data",
+		"description" : "O zi calendaristică.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4040,9 +4040,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre",
-		"description" : "Una cadena de caracteres que constituye la designación distintiva de una persona, lugar, cosa o concepto.",
+	"ro" : {
+		"label" : "Nume",
+		"description" : "Un șir de caractere care constituie denumirea distinctivă a unei persoane, loc, lucru sau concept.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4051,9 +4051,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "Una cadena de caracteres para identificar y distinguir de forma inequívoca una instancia de un objeto de acuerdo a un esquema de identificación común a los demás objetos junto con información complementaria relevante.",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Un șir de caractere pentru a identifica și a distinge în mod unic, o instanță a unui obiect dintr-o schemă de identificare de toate celelalte obiecte din aceeași schemă, împreună cu informații suplimentare relevante.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4062,9 +4062,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "ID de esquema",
-		"description" : "Código identificativo del esquema de identificación.",
+	"ro" : {
+		"label" : "ID-ul schemei",
+		"description" : "Identificarea schemei de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4073,9 +4073,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre del esquema",
-		"description" : "El nombre del esquema de identificación.",
+	"ro" : {
+		"label" : "Numele schemei",
+		"description" : "Denumirea schemei de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4084,9 +4084,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "ID de la agencia del esquema",
-		"description" : "La identificación de la agencia que mantiene el esquema de identificación.",
+	"ro" : {
+		"label" : "ID-ul autorițății",
+		"description" : "Identificarea autorității care deține schema de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4095,9 +4095,9 @@
 	"type" : "xsd:string",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre de la agencia del esquema",
-		"description" : "Nombre de la agencia que mantiene el esquema de identificación.",
+	"ro" : {
+		"label" : "Numele autorității",
+		"description" : "Numele autorității care deține schema de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4106,9 +4106,9 @@
 	"type" : "xsd:normalizedString",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "ID de versión de esquema",
-		"description" : "Versión del esquema de identificación.",
+	"ro" : {
+		"label" : "ID versiune schemă",
+		"description" : "Versiunea schemei de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4117,9 +4117,9 @@
 	"type" : "xsd:anyURI",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "URI de los datos del esquema",
-		"description" : "Identificador uniforme de recursos (URI) que identifica dónde se encuentra los datos del esquema de identificación.",
+	"ro" : {
+		"label" : "Date URI schemă",
+		"description" : "Identificatorul uniform de resurse care identifică locul în care se află datele schemei de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4128,9 +4128,9 @@
 	"type" : "xsd:anyURI",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "URI del esquema",
-		"description" : "Identificador uniforme de recursos (URI) que identifica dónde se encuentra el esquema de identificación.",
+	"ro" : {
+		"label" : "URI schemă",
+		"description" : "Identificatorul uniform de resurse care identifică locul în care se află schema de identificare.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4139,8 +4139,8 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Organización publica",
+	"ro" : {
+		"label" : "Organizație Publică",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4150,9 +4150,9 @@
 	"type" : "Identifier",
 	"cardinality" : "01",
 	"comment" : "",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "Muchas organizaciones son referidas por un acrónimo o algún otro identificador. Por ejemplo, entre las instituciones de la UE, el BCE es el identificador del Banco Central Europeo, OLAF para la Oficina Europea de Antin / Afraud, y así sucesivamente. Estos son formalmente reconocidos por la Comisión Europea que proporciona una lista de tales acrónimos. Las listas análogas deben usarse en otros contextos.",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Multe organizații sunt menționate printr-un acronim sau un alt identificator. De exemplu, în rândul instituțiilor UE, BCE este identificatorul pentru Banca Centrală Europeană, OLAF pentru Oficiul European AntiN/AFfraud și așa mai departe. Acestea sunt recunoscute oficial de Comisia Europeană, care furnizează o listă cu astfel de acronime. Listele analoge ar trebui folosite în alte contexte.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4161,9 +4161,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "11",
 	"comment" : "",
-	"es" : {
-		"label" : "Etiqueta preferida",
-		"description" : "Nombre principal y legalmente reconocido de la organización. Una organización solo puede tener un nombre de este tipo en cualquier idioma determinado. Los nombres principales se pueden proporcionar en varios idiomas.",
+	"ro" : {
+		"label" : "Etichetă preferată",
+		"description" : "„Așa cum este definit în Ontology ORG, o etichetă preferată este utilizată pentru a furniza numele primar, recunoscut legal al organizației. O organizație poate avea doar un astfel de nume într-o anumită limbă. Numele primare pot fi furnizate în mai multe limbi cu mai multe cazuri de proprietatea preferată a etichetei.”",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4172,9 +4172,9 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Estado civil de una persona",
-		"description" : "Posibles estados civiles de una persona.",
+	"ro" : {
+		"label" : "Starea civilă a persoanei",
+		"description" : "Stărea civilă posibilă a unei persoane.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4183,9 +4183,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Pareja de hecho",
-		"description" : "Persona que cohabita con otra y están en una relación",
+	"ro" : {
+		"label" : "Coabitare",
+		"description" : "Starea civilă a unei persoane: coabitare",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4194,9 +4194,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Divorciado/a",
-		"description" : "Persona que ha disuelto oficialmente su matrimonio",
+	"ro" : {
+		"label" : "Persoană divorțată",
+		"description" : "Starea civilă a unei persoane: divorțată",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4205,9 +4205,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Casado/a",
-		"description" : "Persona casada con otra",
+	"ro" : {
+		"label" : "Persoană căsătorită",
+		"description" : "Starea civilă a unei persoane: căsătorită",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4216,9 +4216,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Polígamo/a",
-		"description" : "Persona casada con más de una persona",
+	"ro" : {
+		"label" : "Poligamie",
+		"description" : "Starea civilă a unei persoane: poligamie",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4227,9 +4227,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Separado/a",
-		"description" : "Persona que ha disuelto su matrimonio pero no ha oficializado el divorcio",
+	"ro" : {
+		"label" : "Persoană desparțită",
+		"description" : "Starea civilă a unei persoane: separată",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4238,9 +4238,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Monoparental",
-		"description" : "Padre o madre soltera",
+	"ro" : {
+		"label" : "Părinte singur",
+		"description" : "Starea civilă a unei persoane: părinte singur",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4249,9 +4249,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Soltero/a",
-		"description" : "Persona que no ha registrado su relación con ninguna otra",
+	"ro" : {
+		"label" : "Persoană necăsătorită",
+		"description" : "Starea civilă a unei persoane: necăsătorită",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4260,9 +4260,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Viudo",
-		"description" : "Persona cuyo cónyuge ha muerto",
+	"ro" : {
+		"label" : "Persoană văduvă",
+		"description" : "Starea civilă a unei persoane: văduvă",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4271,9 +4271,9 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Género",
-		"description" : "Lista de géneros humanos.",
+	"ro" : {
+		"label" : "Sexul persoanei",
+		"description" : "Lista sexelor umane.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4282,9 +4282,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Femenino",
-		"description" : "Uno de los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales.",
+	"ro" : {
+		"label" : "Feminin",
+		"description" : "Sexul FEMININ",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4293,9 +4293,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Masculino",
-		"description" : "Uno de los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales.",
+	"ro" : {
+		"label" : "Masculin",
+		"description" : "Sexul MASCULIN",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4304,9 +4304,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "No aplica",
-		"description" : "No aplica se utiliza en el contexto del intercambio de información en el dominio de las ciencias sociales cuando no se pueden representar ninguno de los sexos.",
+	"ro" : {
+		"label" : "Nu se aplică",
+		"description" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4315,9 +4315,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "No conocido",
-		"description" : "No conocido se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano es desconocido.",
+	"ro" : {
+		"label" : "Necunoscut",
+		"description" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4326,9 +4326,9 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "No se indica",
-		"description" : "No se indica se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano no está establecido.",
+	"ro" : {
+		"label" : "Nedeclarat",
+		"description" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4337,9 +4337,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Persona",
-		"description" : "",
+	"ro" : {
+		"label" : "Persoană",
+		"description" : "O persoană fizică care poate fi moartă sau în viață.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4348,9 +4348,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Fecha de nacimiento",
-		"description" : "",
+	"ro" : {
+		"label" : "Data de nastere",
+		"description" : "Ziua în care persoana s-a născut.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4359,9 +4359,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Año",
-		"description" : "",
+	"ro" : {
+		"label" : "An",
+		"description" : "Un an calendaristic gregorian.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4370,9 +4370,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Mes",
-		"description" : "",
+	"ro" : {
+		"label" : "Lună",
+		"description" : "O lună dintr-un an calendaristic.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4381,9 +4381,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Día",
-		"description" : "",
+	"ro" : {
+		"label" : "Zi",
+		"description" : "O zi dintr-un an calendaristic.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4392,9 +4392,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Género",
-		"description" : "",
+	"ro" : {
+		"label" : "Sex",
+		"description" : "Sex masculin sau feminin.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4403,9 +4403,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Lugar de nacimiento",
-		"description" : "",
+	"ro" : {
+		"label" : "Locul nașterii",
+		"description" : "Locația în care s-a născut persoana.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4414,9 +4414,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre de la persona",
-		"description" : "",
+	"ro" : {
+		"label" : "Numele persoanei",
+		"description" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4425,9 +4425,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Apellido",
-		"description" : "",
+	"ro" : {
+		"label" : "Nume de familie",
+		"description" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4436,9 +4436,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre de pila",
-		"description" : "",
+	"ro" : {
+		"label" : "Prenume",
+		"description" : "Un nume sau mai multe nume.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4447,9 +4447,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Identificador",
-		"description" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4458,9 +4458,9 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Ciudadanía",
-		"description" : "",
+	"ro" : {
+		"label" : "Cetățenie",
+		"description" : "Condiția juridică de cetățean, situația de cetățean.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4469,8 +4469,8 @@
 	"type" : "xs:enumeration",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Estados miembro",
+	"ro" : {
+		"label" : "State membre",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4480,7 +4480,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Austria",
 		"description" : "",
 		"example" : "",
@@ -4491,8 +4491,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Bélgica",
+	"ro" : {
+		"label" : "Belgia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4502,7 +4502,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Bulgaria",
 		"description" : "",
 		"example" : "",
@@ -4513,8 +4513,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Chipre",
+	"ro" : {
+		"label" : "Cipru",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4524,8 +4524,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Chequia",
+	"ro" : {
+		"label" : "Cehia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4535,8 +4535,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Alemania",
+	"ro" : {
+		"label" : "Germania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4546,8 +4546,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Dinamarca",
+	"ro" : {
+		"label" : "Danemarca",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4557,7 +4557,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Estonia",
 		"description" : "",
 		"example" : "",
@@ -4568,7 +4568,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Grecia",
 		"description" : "",
 		"example" : "",
@@ -4579,8 +4579,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "España",
+	"ro" : {
+		"label" : "Spania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4590,8 +4590,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Finlandia",
+	"ro" : {
+		"label" : "Finlanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4601,8 +4601,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Francia",
+	"ro" : {
+		"label" : "Franţa",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4612,8 +4612,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Croacia",
+	"ro" : {
+		"label" : "Croaţia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4623,8 +4623,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Hungría",
+	"ro" : {
+		"label" : "Ungaria",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4634,7 +4634,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Irlanda",
 		"description" : "",
 		"example" : "",
@@ -4645,7 +4645,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Italia",
 		"description" : "",
 		"example" : "",
@@ -4656,7 +4656,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Lituania",
 		"description" : "",
 		"example" : "",
@@ -4667,8 +4667,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Luxemburgo",
+	"ro" : {
+		"label" : "Luxemburg",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4678,7 +4678,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Letonia",
 		"description" : "",
 		"example" : "",
@@ -4689,7 +4689,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Malta",
 		"description" : "",
 		"example" : "",
@@ -4700,8 +4700,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Países Bajos",
+	"ro" : {
+		"label" : "Olanda",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4711,7 +4711,7 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
+	"ro" : {
 		"label" : "Polonia",
 		"description" : "",
 		"example" : "",
@@ -4722,8 +4722,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Portugal",
+	"ro" : {
+		"label" : "Portugalia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4733,8 +4733,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Rumania",
+	"ro" : {
+		"label" : "România",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4744,8 +4744,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Suecia",
+	"ro" : {
+		"label" : "Suedia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4755,8 +4755,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Eslovenia",
+	"ro" : {
+		"label" : "Slovenia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4766,8 +4766,8 @@
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Eslovaquia",
+	"ro" : {
+		"label" : "Slovacia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4777,8 +4777,8 @@
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Dirección",
+	"ro" : {
+		"label" : "Abordare",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4788,9 +4788,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Segundo nivel territorial del país",
-		"description" : "La región de la dirección, generalmente una provincia o condado, estado u otro área de este tipo que generalmente abarca varias localidades.",
+	"ro" : {
+		"label" : "Unitate administrativă nivel 2",
+		"description" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4799,9 +4799,9 @@
 	"type" : "CountryEnum",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Primer nivel territorial del país",
-		"description" : "La unidad administrativa superior para la dirección, casi siempre un país normalmente representado por su código ISO 3166-1.",
+	"ro" : {
+		"label" : "Unitate administrativă nivel 1",
+		"description" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4810,9 +4810,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Apartado de correos",
-		"description" : "El número de un apartado de correos.",
+	"ro" : {
+		"label" : "Casuta postala",
+		"description" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4821,9 +4821,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Vía pública",
-		"description" : "Citando las directrices de la directiva INSPIRE, una vía pública es: 'un componente de una dirección que representa el nombre de un pasaje o camino a través de un lugar a otro. Una vía no es necesariamente un camino, podría ser una vía fluvial o alguna otra característica.",
+	"ro" : {
+		"label" : "Arteră/drum principal",
+		"description" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4832,9 +4832,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Número, piso, escalera, puerta",
-		"description" : "El designador del localizador está definido por las directrices INSPIRE como 'un número o una secuencia de caracteres que identifican de forma única el localizador dentro del alcance (s) relevante (s). La identificación completa del localizador podría incluir uno o más designadores de localizador '. En términos más simples, este es el número de edificio, el número de apartamento, etc. para una dirección como 'Flat 3, 17 Bridge Street', el localizador es 'Flat 3, 17'.",
+	"ro" : {
+		"label" : "Identificator adresă",
+		"description" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4843,9 +4843,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Nombre del edificio o sala",
-		"description" : "Sobre la base de las directrices INSPIRE, el nombre del localizador se define como: 'sustantivos adecuados (s) aplicados a la entidad del mundo real identificado por el localizador. El nombre del localizador podría ser el nombre de la propiedad o complejo, del edificio o parte del edificio, o podría ser el nombre de una habitación dentro de un edificio. La diferencia clave entre un localizador y un nombre de localizador es que este último es un nombre adecuado y es poco probable que incluya dígitos. Por ejemplo, 'Shumann, Berlaymont' es una sala de reuniones dentro de la sede de la Comisión Europea, por lo que el nombre del localizador es más apropiado que el localizador.",
+	"ro" : {
+		"label" : "Numele locatorului",
+		"description" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4854,9 +4854,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Área poblacional",
-		"description" : "Tomando la definición de INSPIRE, el área de direcciones es: el nombre o los nombres de un área geográfica o localidad que agrupan una serie de objetos direccionables para fines de direccionamiento, sin ser una unidad administrativa '. Esto normalmente sería parte de una ciudad, un barrio o pueblo.",
+	"ro" : {
+		"label" : "Zona de adrese",
+		"description" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4865,9 +4865,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Área postal",
-		"description" : "La división postal clave de la dirección, generalmente la ciudad. (La definición de Inspire es 'uno o más nombres creados y mantenidos con fines postales para identificar una subdivisión de direcciones y puntos de entrega postal).",
+	"ro" : {
+		"label" : "Numele oficiului poștal",
+		"description" : "Punct de livrare poștal.",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4876,9 +4876,9 @@
 	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
-	"es" : {
-		"label" : "Código postal",
-		"description" : "El código postal del sistema de direcciones postales del país.",
+	"ro" : {
+		"label" : "Cod poștal",
+		"description" : "Codul poștal.",
 		"example" : "",
 		"verified" : "true"
 	}

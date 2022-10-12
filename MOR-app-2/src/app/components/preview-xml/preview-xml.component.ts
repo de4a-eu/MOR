@@ -126,7 +126,7 @@ export class PreviewXmlComponent implements OnInit {
         "</b>" +
         (!this.schemaOnly
           ? v.value
-            ? ': <code class="text-primary fw-bold de4a-schema-values">' + v.value + "</code>"
+            ? ': <code class="fw-bold de4a-schema-values">' + v.value + "</code>"
             : ""
           : "") +
         (v.translate && v.translate.description && this.showDescription

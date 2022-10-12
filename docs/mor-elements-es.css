@@ -1,0 +1,72 @@
+de4a-mor-er,
+de4a-mor-p {
+  color: rgb(23, 15, 64) !important;
+  font-family: "Source Sans Pro" !important;
+}
+.de4a-text,
+.de4a-title {
+  color: rgb(252, 196, 21) !important;
+}
+
+.de4a-button-evidence,
+.de4a-button-choice-dark,
+.de4a-button-choice-light {
+  background-color: rgb(61, 155, 233) !important;
+  border-color: rgb(61, 155, 233) !important;
+  color: white !important;
+}
+.de4a-button-evidence:hover,
+.de4a-button-choice-dark:hover,
+.de4a-button-choice-light:hover {
+  background-color: #187fd5 !important;
+  border-color: #187fd5 !important;
+  color: white !important;
+}
+
+.de4a-schema-values {
+  color: rgb(23, 15, 64) !important;
+  padding: 3px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  background-color: rgb(237, 237, 237) !important;
+  border-radius: 6px;
+}
+.de4a-schema-comment {
+  color: rgb(23, 15, 64) !important;
+}
+
+.de4a-dropdown-menu:hover {
+  background-color: rgb(61, 155, 233) !important;
+  color: white !important;
+}
+.de4a-dropdown-item:hover,
+.de4a-dropdown-item:active {
+  background-color: rgb(61, 155, 233) !important;
+  color: white !important;
+}
+
+.de4a-input-radio {
+  border-color: rgb(152, 225, 152) !important;
+  background-color: white !important;
+}
+.de4a-input-radio:checked {
+  background-color: rgb(152, 225, 152) !important;
+}
+
+de4a-mor-er label,
+de4a-mor-p label,
+de4a-mor-er span,
+de4a-mor-p span,
+de4a-mor-er,
+de4a-mor-p,
+.de4a-input-radio,
+.de4a-dropdown-item,
+.de4a-text {
+  font-size: 110% !important;
+}
+
+.de4a-button-evidence,
+.de4a-button-choice-dark,
+.de4a-button-choice-light {
+  font-size: 90% !important;
+}

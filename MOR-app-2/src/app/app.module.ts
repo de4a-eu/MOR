@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
@@ -30,6 +30,7 @@ import { MORPComponent } from "./components/mor-p/mor-p.component";
       },
     }),
   ],
+  exports: [],
   providers: [],
   bootstrap: [MORERComponent, MORPComponent],
 })

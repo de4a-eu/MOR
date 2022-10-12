@@ -96,14 +96,6 @@ de4a-mor-er, de4a-mor-p {
   .modal-header, .modal-footer {
     background-color:rgb(248,249,250);
   }
-  .de4a-schema-values {
-    color:rgb(13,110,253) !important;
-    padding: 3px !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    background-color:rgb(238, 249, 250) !important;
-    border-radius: 6px;
-  }
   .text-primary {
     color: rgb(13,110,253) !important;
   }
@@ -128,47 +120,3 @@ de4a-mor-er, de4a-mor-p {
 .modal-backdrop.show {
   opacity: var(--bs-backdrop-opacity);
 }
-
-/**
-  * Customization
-  */
-/*de4a-mor-er {
-  color:darkred;
-}
-.de4a-button-evidence, .de4a-button-choice-dark {
-  background-color: lightcoral !important;
-  border-color: lightcoral !important;
-  color:white !important;
-}
-.de4a-button-evidence:hover, .de4a-button-choice-dark:hover {
-  background-color: darkred !important;
-  border-color: darkred !important;
-  color: white !important;
-}
-.de4a-button-choice-light {
-
-}
-.de4a-button-choice-light:hover {
-  background-color: lightcoral !important;
-  border-color: lightcoral !important;
-  color:white !important;
-}
-.de4a-schema-comment {
-  color:lightcoral !important;
-}*/
-/**
- * TO-DO
- */
-/*.de4a-button-country,
-.dropdown > a {
-  background-color: lightgreen;
-}
-.dropdown > a:hover, .dropdown > a:focus-within {
-  background-color: green !important;
-}
-.dropdown ul li a {
-  background-color: lightcyan;
-}
-.dropdown ul li a:hover {
-  background-color: cyan;
-}*/

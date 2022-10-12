@@ -1,0 +1,79 @@
+de4a-mor-er,
+de4a-mor-p {
+  color: darkred /*black*/ !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif
+      /*system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/ !important;
+}
+.de4a-text {
+  color: darkred /*#007bff*/ !important;
+}
+
+.de4a-button-evidence,
+.de4a-button-choice-dark {
+  background-color: lightcoral !important;
+  border-color: lightcoral !important;
+  color: white !important;
+}
+.de4a-button-evidence:hover,
+.de4a-button-choice-dark:hover {
+  background-color: darkred !important;
+  border-color: darkred !important;
+  color: white !important;
+}
+.de4a-button-choice-light {
+  color: darkred !important;
+}
+.de4a-button-choice-light:hover {
+  background-color: lightcoral !important;
+  border-color: lightcoral !important;
+  color: white !important;
+}
+
+.de4a-schema-values {
+  color: white /*rgb(13,110,253)*/ !important;
+  padding: 3px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  background-color: lightcoral /*rgb(238, 249, 250)*/ !important;
+  border-radius: 6px;
+}
+.de4a-schema-comment {
+  color: lightcoral !important;
+}
+
+.de4a-dropdown-menu {
+  background-color: lightcoral /*rgb(248,249,250)*/ !important;
+  color: white /*black*/ !important;
+}
+.de4a-dropdown-menu:hover {
+  background-color: darkred /*rgb(211,212,213);*/ !important;
+  color: white /*black*/ !important;
+}
+.de4a-dropdown-item,
+.dropdown-menu {
+  background-color: lightcoral /*white*/ !important;
+  color: white /*black*/ !important;
+}
+.de4a-dropdown-item:hover {
+  background-color: darkred /*rgb(233,236,239)*/ !important;
+  color: white /*black*/ !important;
+}
+.de4a-dropdown-item.disabled {
+  color: darkred /*rgb(173,181,189)*/ !important;
+}
+
+.de4a-input-radio {
+  border-color: darkred !important;
+  background-color: white !important;
+}
+.de4a-input-radio:checked {
+  background-color: darkred !important;
+}
+
+.de4a-input-file {
+  border-color: darkred !important;
+  background-color: lightcoral !important;
+  color: white !important;
+}
