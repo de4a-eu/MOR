@@ -7,11 +7,7 @@
 - MOR components can interact with the web portal pages by means of HTTP GET requests and client-side javascript.
 - MOR components can access Connector’s APIs by means of Javascript HTTP requests (Ajax)
 
-## Integration
-
-Integration files are available in folder [docs/integration](docs/integration) and instructions for **MOR-ER** ([default example](https://de4a-wp3.github.io/MOR/integration/mor-er.html), [Spanish portal CSS example](https://de4a-wp3.github.io/MOR/integration/mor-er.ES.html)) and **MOR-P** ([default example](https://de4a-wp3.github.io/MOR/integration/mor-p.html), [Spanish portal CSS example](https://de4a-wp3.github.io/MOR/integration/mor-p.ES.html)).
-
-## Demo
+## Demo and integration
 
 - https://de4a-wp3.github.io/MOR/
 
