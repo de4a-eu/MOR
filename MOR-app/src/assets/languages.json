@@ -1,7 +1,0 @@
-[
-  { "code": "en", "name": "English", "flagCode": "GB" },
-  { "code": "sl", "name": "Slovenian", "flagCode": "SI" },
-  { "code": "es", "name": "Spanish", "flagCode": "ES" },
-  { "code": "pt", "name": "Portuguese", "flagCode": "PT" },
-  { "code": "fr", "name": "French", "flagCode": "FR" }
-]

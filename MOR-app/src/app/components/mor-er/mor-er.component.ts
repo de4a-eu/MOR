@@ -1,178 +1,262 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
-import {
-  faEye,
-  faEyeSlash,
-  faFileCode,
-  faSignInAlt,
-  faCheckCircle,
-  faTimesCircle,
-  faSyncAlt,
-  faExclamationTriangle,
-} from '@fortawesome/free-solid-svg-icons';
-import { DataLoaderService } from 'src/app/services/data-loader.service';
-import { StorageService } from 'src/app/services/storage.service';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit, ElementRef, SimpleChanges } from "@angular/core";
+import { DataLoaderService } from "src/app/services/data-loader.service";
+import { IalService } from "src/app/services/ial.service";
+import { StorageService } from "src/app/services/storage.service";
+import { DummyData, URL } from "../../classes/settings";
 
 declare var bootstrap: any;
 
+const generateRandomData: boolean = true;
+
 @Component({
-  selector: 'app-mor-er',
-  templateUrl: './mor-er.component.html',
-  styleUrls: ['./mor-er.component.css'],
+  selector: "de4a-mor-er",
+  templateUrl: "./mor-er.component.html",
 })
 export class MORERComponent implements OnInit {
-  faEye = faEye;
-  faEyeSlash = faEyeSlash;
-  faFileCode = faFileCode;
-  faSignInAlt = faSignInAlt;
-  faCheckCircle = faCheckCircle;
-  faTimesCircle = faTimesCircle;
-  faSyncAlt = faSyncAlt;
-  faExclamationTriangle = faExclamationTriangle;
+  /**
+   * Input parameters
+   */
+  defaultLanguage: string;
+  requesterCountry: string;
+  //canonicalEvidenceTypes: string[];
+  outputJSArrayId: string;
 
-  public modalPreview: any;
+  /**
+   * Do not show component content if input parameters are invalid
+   */
+  inputParamsValid: boolean = true;
 
-  @Input('defaultLang') defaultLanguage!: string;
-  public selectedLanguage!: string;
-  @Input('requesterCountryCode') requesterCountry!: string;
-  @Input('canonicalEvidenceTypes') canonicalEvidenceTypes!: string;
-  @Input('outputJSArrayId') outputJSArrayId!: string;
-  public showDescription: boolean = true;
+  /**
+   * MOR-ER process is complete
+   */
+  public complete: boolean = false;
 
-  constructor(
-    public dataLoader: DataLoaderService,
-    private storage: StorageService,
-    public translate: TranslateService
-  ) {
-    translate.addLangs(this.dataLoader.getTranslationLanguages());
-    translate.setDefaultLang(this.dataLoader.getTranslationDefaultLanguage());
-    translate.use(this.dataLoader.getTranslationDefaultLanguage());
-  }
-
-  public canonicalEvidenceCountries: any = {};
-  public retrievalType: any = {}; // By request (provision) or upload
-  public provisions: any = {}; // Provisions
-  public uploads: any = {}; // Content of uploaded files
-
+  /**
+   * Selected evidence type for schema preview
+   */
   public selectedEvidenceType!: string;
+
+  /**
+   * Whether to show description in canonical evidence schema preview
+   */
+  public showDescription: boolean = true;
 
   public modalSelectProvision: any;
   public modalSelectProvisionData: any = {
-    canonicalEvidenceType: '',
-    morId: '',
-    canonicalEvidenceTypeName: '',
-    country: '',
+    canonicalEvidenceType: "",
+    morId: "",
+    canonicalEvidenceTypeName: "",
+    country: "",
   };
 
-  public complete: boolean = false; // ER is complete
+  public modalPreview: any;
 
-  public inputParametersOK(): boolean {
+  constructor(
+    public elementRef: ElementRef,
+    public dataLoader: DataLoaderService,
+    public ial: IalService,
+    private storage: StorageService
+  ) {
+    /**
+     * Get (static) input parameters of MOR-ER component and
+     * check their validity
+     */
+    const native = this.elementRef.nativeElement;
+    this.defaultLanguage = native.getAttribute("default-lang");
     if (
-      this.defaultLanguage &&
-      this.requesterCountry &&
-      this.canonicalEvidenceTypes &&
-      this.outputJSArrayId
+      !this.dataLoader
+        .getLanguages()
+        .map((lang) => lang.code)
+        .includes(this.defaultLanguage)
     )
-      return true;
-    else return false;
-  }
-
-  /**
-   * When all countries of canonical evidences are selected,
-   * including the provisions or upload is selected
-   *
-   * @returns true if use can proceed with explicit request
-   */
-  public canProceedWithExplicitRequest(): boolean {
-    let nAll = Object.keys(this.retrievalType).length;
-    let nOK = 0;
-    Object.keys(this.retrievalType).map((type) => {
-      if (this.retrievalType[type] == 'upload') {
-        if (this.uploads[type]) nOK++;
-      } else if (this.retrievalType[type] == 'request') {
-        if (this.provisions[type]) {
-          let ps = this.provisions[type].provisions;
-          if (ps) {
-            if (ps.length == 1) nOK++;
-            else if (ps.length > 1) {
-              ps.map((p: any) => {
-                if (p.selected) nOK++;
-              });
-            }
-          }
-        }
-      }
-    });
-    return nOK == nAll;
-  }
-
-  /**
-   * Create output of explicit request
-   */
-  public finishExplicitRequest() {
-    let result: any[] = [];
-    Object.keys(this.retrievalType).map((type) => {
-      if (this.retrievalType[type] == 'upload') {
-        let uploadClean = this.uploads[type].replace(/\n\s*/g, '');
-        result.push({
-          canonicalEvidenceType: type,
-          uploadedDocument: uploadClean,
-        });
-      } else if (this.retrievalType[type] == 'request') {
-        if (this.provisions[type].provisions.length == 1) {
-          result.push({
-            canonicalEvidenceType: type,
-            provision: this.provisions[type].provisions[0],
-          });
-        } else if (this.provisions[type].provisions.length > 1) {
-          result.push({
-            canonicalEvidenceType: type,
-            provision: this.provisions[type].provisions.find(
-              (x: any) => x.selected
-            ),
-          });
-        }
-      }
-    });
-    this.storage.addArray(this.outputJSArrayId, result);
-    this.complete = true;
-
-    this.setInputParameterToPreview();
-  }
-
-  /**
-   * Set input parameter to preview (for demo purposes).
-   * Content of uploaded evidence is simply forwarded, while payload is
-   * retrieved from provision data. Currently only 1 sample evidence is
-   * returned (TO-DO API mock-up).
-   */
-  public async setInputParameterToPreview() {
-    let outputER = JSON.parse(this.storage.get(this.outputJSArrayId));
-    for (let i = 0; i < outputER.length; i++) {
-      let x = outputER[i];
-      if (Object.keys(x).includes('provision')) {
-        x.payload = await this.dataLoader.loadXml(
-          x.canonicalEvidenceType + '.xml',
-          'examples'
-        );
-        x.payload = x.payload.replace(/\n\s*/g, '');
-        delete x.provision;
-      }
+      this.inputParamsValid = false;
+    else {
+      dataLoader.setDefaultLanguage(this.defaultLanguage);
+      dataLoader.setLanguage(this.defaultLanguage);
     }
-    this.storage.addArray('inputPreview', outputER);
+    this.requesterCountry = native.getAttribute("requester-country-code");
+    if (
+      !this.dataLoader
+        .getCountries()
+        .map((country) => country.code)
+        .includes(this.requesterCountry)
+    )
+      this.inputParamsValid = false;
+    else dataLoader.disabledCountryCode = this.requesterCountry;
+    ial.canonicalEvidenceTypes = native
+      .getAttribute("canonical-evidence-types")
+      .split(",");
+    if (
+      !ial.canonicalEvidenceTypes.every((x) =>
+        this.dataLoader.canonicalEvidenceTypes
+          .map((evidenceType) => evidenceType.tokenName)
+          .includes(x)
+      )
+    )
+      this.inputParamsValid = false;
+    this.outputJSArrayId = native.getAttribute("output-j-s-array-id");
+    if (this.outputJSArrayId == null) this.inputParamsValid = false;
   }
 
   /**
-   * Get all canonical evidence types
-   *
-   * @returns array of canonical evidence types with `name`, `code` and
-   *          `tokenName`
+   * This function calls the IAL API with the given parameters and
+   * returns the HTTP code of the response.
+   * The response text is stored in the variable "ialProvisions" or
+   * null if an error is returned
+   * @value {list} canEvidTokenList : a mandatory comma-separated list
+   * with the canonical evidence type tokens to request (e.g. BirthEvidence)
+   * @value {string} atuCode : an optional string with the code of
+   * an administrative territorial unit to request, usually a NUTS-0 code
+   * corresponding to the issuing country
+   * @value {boolean} asXml :  an optional boolean. "True" forces that
+   * the "ialProvisions" text is in XML format; otherwise, it is in JSON format
+   * @return {int} : HTTP status code of the return; "200" is representing
+   * a suscessful call. "404" when the search has not found results.
    */
-  public getEvidenceTypes(): CanonicalEvidenceType[] {
-    return this.dataLoader.getSelectedCanonicalEvidenceTypes(
-      this.canonicalEvidenceTypes
+  public ialAPIrequestList(
+    canEvidTokenList: string,
+    atuCode: string,
+    showModal: boolean = false
+  ) {
+    let urlApi =
+      URL.serverIALapi +
+      canEvidTokenList
+        .split(",")
+        .map((x) => URL.canEvidUrn + x)
+        .join(",") +
+      (atuCode != "" ? "/" + atuCode : "");
+
+    /**
+     * Get token name from MOR ID
+     */
+    let canEvType = this.dataLoader.canonicalEvidenceTypes.find(
+      (type) => type.morID == canEvidTokenList
+    )?.tokenName;
+
+    /**
+     * Check if generate dummy data
+     */
+    let generateDummyData = DummyData.generateIalData;
+    if (
+      this.storage.get("de4a-dummy-data") &&
+      this.storage.get("de4a-dummy-data") == "true"
+    ) {
+      generateDummyData = true;
+    } else if (
+      this.storage.get("de4a-dummy-data") &&
+      this.storage.get("de4a-dummy-data") == "false"
+    ) {
+      generateDummyData = false;
+    }
+
+    if (generateDummyData) {
+      let dummyRandomData = [];
+      for (
+        let i = 1;
+        i <=
+        this.dataLoader.getRandomIntInclusive(
+          DummyData.generateIalDataRange[0],
+          DummyData.generateIalDataRange[1]
+        );
+        i++
+      ) {
+        dummyRandomData.push({
+          atuLevel: "nuts0",
+          atuCode: atuCode,
+          atuLatinName: this.dataLoader.countries.find(
+            (country) => country.code == atuCode
+          )?.name,
+          dataOwnerID:
+            "iso" +
+            (Math.random() + 1).toString(36).substring(8) +
+            "-actorid-upis::" +
+            (Math.random() + 1).toString(36).substring(2),
+          dataOwnerPrefLabel:
+            "Data owner label " + (Math.random() + 1).toString(36).substring(4),
+        });
+      }
+      this.ial.provisions[canEvType!] = dummyRandomData;
+
+      if (
+        typeof this.ial.provisions[canEvType!] == "object" &&
+        this.ial.provisions[canEvType!].length > 1
+      ) {
+        let type = this.ial
+          .getEvidenceTypesForRequest()
+          .find((x) => x.tokenName == canEvType);
+
+        this.modalSelectProvisionData.canonicalEvidenceType = canEvType;
+        this.modalSelectProvisionData.morId = type ? type.morID : "";
+        this.modalSelectProvisionData.canonicalEvidenceName = type
+          ? type.name
+          : "";
+        this.modalSelectProvisionData.country = this.dataLoader.getCountryName(
+          canEvType!
+        );
+
+        if (showModal) this.modalSelectProvision.show();
+      }
+    } else {
+      this.ial.retrieveIALProvisions(urlApi).subscribe({
+        next: (response: any) => {
+          if (response.hasOwnProperty("errors")) {
+            this.ial.provisions[canEvType!] = "not available";
+          } else if (
+            response.hasOwnProperty("items") &&
+            response.items.length == 1 &&
+            response.items[0]["canonicalObjectTypeId"].endsWith(
+              canEvidTokenList
+            ) &&
+            response.items[0].countries.length == 1 &&
+            response.items[0].countries[0].countryCode == atuCode
+          ) {
+            this.ial.provisions[canEvType!] =
+              response.items[0].countries[0].provisions;
+          }
+
+          if (
+            typeof this.ial.provisions[canEvType!] == "object" &&
+            this.ial.provisions[canEvType!].length > 1
+          ) {
+            let type = this.ial
+              .getEvidenceTypesForRequest()
+              .find((x) => x.tokenName == canEvType);
+
+            this.modalSelectProvisionData.canonicalEvidenceType = canEvType;
+            this.modalSelectProvisionData.morId = type ? type.morID : "";
+            this.modalSelectProvisionData.canonicalEvidenceName = type
+              ? type.name
+              : "";
+            this.modalSelectProvisionData.country =
+              this.dataLoader.getCountryName(canEvType!);
+
+            if (showModal) this.modalSelectProvision.show();
+          }
+        },
+        error: (error: any) => {
+          console.log("Error retrieving provisions.");
+          console.log(error);
+        },
+      });
+    }
+  }
+
+  public requestProvision(
+    canonicalEvidenceType: string,
+    showModal: boolean = true
+  ): void {
+    let canEvType = this.dataLoader.canonicalEvidenceTypes.find(
+      (type) => type.tokenName == canonicalEvidenceType
     );
+    if (canEvType) {
+      this.ialAPIrequestList(
+        canEvType.morID || "",
+        this.ial.canonicalEvidenceCountries[canonicalEvidenceType],
+        showModal
+      );
+    } else {
+      console.log("Error retrieving canonical evidence type");
+    }
   }
 
   public previewEvidence(tokenName: string | undefined) {
@@ -180,194 +264,6 @@ export class MORERComponent implements OnInit {
       this.selectedEvidenceType = tokenName;
       this.modalPreview.show();
     }
-  }
-
-  public getEvidenceTypeNameForPreview(): string {
-    let selectedEvidence = this.getEvidenceTypes().find(
-      (x) => x.tokenName == this.selectedEvidenceType
-    );
-    if (selectedEvidence) return selectedEvidence.name;
-    else return '';
-  }
-
-  public getEvidenceTypeContentForPreview(): string {
-    let selectedEvidence = this.getEvidenceTypes().find(
-      (x) => x.tokenName == this.selectedEvidenceType
-    );
-    let content = '';
-    if (selectedEvidence && selectedEvidence.tokenName)
-      content = selectedEvidence.tokenName;
-    return content;
-  }
-
-  /**
-   * Get evidence types that are included in explicit request
-   * (user has selected country and provision)
-   *
-   * @returns array of canonical evidence types with `name`, `code` and
-   *          `tokenName` that are included in the explicit request
-   */
-  public getEvidenceTypesForRequest(): CanonicalEvidenceType[] {
-    return this.getEvidenceTypes().filter((evidenceType) => {
-      let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
-      let provision = this.provisions[evidenceType.tokenName || ''];
-      return retrievalType == 'request' && typeof provision == 'object';
-    });
-  }
-
-  /**
-   * Get evidence types that are uploaded by the user
-   *
-   * @returns array of canonical evidence types with `name`, `code` and
-   *          `tokenName` that are uploaded
-   */
-  public getEvidenceTypesForUpload(): CanonicalEvidenceType[] {
-    return this.getEvidenceTypes().filter((evidenceType) => {
-      let retrievalType = this.retrievalType[evidenceType.tokenName || ''];
-      let upload = this.uploads[evidenceType.tokenName || ''];
-      return retrievalType == 'upload' && typeof upload == 'string';
-    });
-  }
-
-  /**
-   * Get IAL provisions (Intermediation Pattern (IP))
-   *
-   * @param canonicalEvidenceTypeId `tokenName` of canonical evidence type
-   * @param countryCode country code (e.g. `SI`)
-   * @returns array with provision details
-   */
-  public getIalIP(canonicalEvidenceTypeId: string, countryCode: string): any {
-    let result = this.dataLoader.getIal(
-      canonicalEvidenceTypeId,
-      countryCode,
-      'IP'
-    );
-    return result;
-  }
-
-  /**
-   * Request provisions for given canonical evidence type and optionaly display
-   * modal window for user selection of specific provision if multiple exist.
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence type
-   * @param showModal show modal window for specific provision selection
-   */
-  public requestProvision(
-    canonicalEvidenceType: string,
-    showModal: boolean = true
-  ): void {
-    let country = this.canonicalEvidenceCountries[canonicalEvidenceType];
-    let provisions = this.getIalIP(canonicalEvidenceType, country);
-    if (provisions == null) provisions = 'not available';
-    this.provisions[canonicalEvidenceType] = provisions;
-    if (typeof provisions == 'object' && provisions.provisions.length > 1) {
-      let type = this.getEvidenceTypesForRequest().find(
-        (x) => x.tokenName == canonicalEvidenceType
-      );
-      this.modalSelectProvisionData.canonicalEvidenceType =
-        canonicalEvidenceType;
-      this.modalSelectProvisionData.morId = type ? type.morID : '';
-      this.modalSelectProvisionData.canonicalEvidenceName = type
-        ? type.name
-        : '';
-      this.modalSelectProvisionData.country =
-        this.dataLoader.getCountryName(country);
-      if (showModal) this.modalSelectProvision.show();
-    }
-  }
-
-  /**
-   * Request all provision, where country is selected, but don't display modal
-   * window to user for selection of provision if multiple exist
-   */
-  public requestProvisions(): void {
-    for (let canonicalEvidenceType in this.canonicalEvidenceCountries) {
-      this.requestProvision(canonicalEvidenceType, false);
-    }
-  }
-
-  /**
-   * When multiple provisions are returned, user selects 1
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence type
-   * @param iProvision sequence number of selected provision
-   */
-  public selectProvision(
-    canonicalEvidenceType: string,
-    iProvision: number
-  ): void {
-    for (
-      let i = 0;
-      i < this.provisions[canonicalEvidenceType].provisions.length;
-      i++
-    )
-      this.provisions[canonicalEvidenceType].provisions[i].selected =
-        i == iProvision;
-  }
-
-  /**
-   * Get a list of possible provision per selected canonical evidence type
-   * (displayed to a user in a modal window)
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence type
-   * @returns array of provisions
-   */
-  public getProvisions(canonicalEvidenceType: string): any[] {
-    let provision = this.provisions[canonicalEvidenceType];
-    if (!provision) {
-      return [];
-    } else if (typeof provision == 'string' && provision == 'not available') {
-      return [];
-    } else if (typeof provision == 'object') {
-      return provision.provisions;
-    } else {
-      return [];
-    }
-  }
-
-  /**
-   * Display (selected) provision next to selected country
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence type
-   * @returns label of selected provision or message to select 1 provision
-   */
-  public displayProvision(canonicalEvidenceType: string): any {
-    let provision = this.provisions[canonicalEvidenceType];
-    if (!provision) {
-      return null;
-    } else if (typeof provision == 'string' && provision == 'not available') {
-      return this.translate.instant(
-        'GUI/provisionNotAvailable.' + this.selectedLanguage + '.label'
-      );
-    } else if (typeof provision == 'object') {
-      if (provision.provisions.length > 1) {
-        for (let i = 0; i < provision.provisions.length; i++) {
-          if (provision.provisions[i].selected)
-            return provision.provisions[i].dataOwnerPrefLabel;
-        }
-        return this.translate.instant(
-          'GUI/select1Provision.' + this.selectedLanguage + '.label'
-        );
-      } else {
-        return provision.provisions[0].dataOwnerPrefLabel;
-      }
-    }
-  }
-
-  /**
-   * Toggle retrieval type for given canonical evidence type
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence type
-   * @param type retrieval type (`request` or `upload`)
-   */
-  public toggleRetrievalType(
-    canonicalEvidenceType: string,
-    type: string
-  ): void {
-    this.retrievalType[canonicalEvidenceType] = type;
-    delete this.canonicalEvidenceCountries[canonicalEvidenceType];
-    delete this.provisions[canonicalEvidenceType];
-    delete this.uploads[canonicalEvidenceType];
   }
 
   /**
@@ -379,28 +275,70 @@ export class MORERComponent implements OnInit {
   public handleUpload(canonicalEvidenceType: string, input: any) {
     if (canonicalEvidenceType && input.files && input.files.length > 0) {
       let reader = new FileReader();
-      reader.addEventListener('load', (result) => {
+      reader.addEventListener("load", (result) => {
         if (result.target)
-          this.uploads[canonicalEvidenceType] = result.target.result;
+          this.ial.uploads[canonicalEvidenceType] = result.target.result;
       });
-      reader.readAsText(input.files[0], 'UTF-8');
+      reader.readAsText(input.files[0], "UTF-8");
     }
+  }
+
+  /**
+   * Create output of explicit request
+   */
+  public finishExplicitRequest() {
+    let result: any[] = [];
+    Object.keys(this.ial.retrievalType).map((type) => {
+      if (this.ial.retrievalType[type] == "upload") {
+        let uploadClean = this.ial.uploads[type].replace(/\n\s*/g, "");
+        result.push({
+          canonicalEvidenceType: type,
+          uploadedDocument: uploadClean,
+        });
+      } else if (this.ial.retrievalType[type] == "request") {
+        if (this.ial.provisions[type].length == 1) {
+          result.push({
+            canonicalEvidenceType: type,
+            provision: this.ial.provisions[type][0],
+          });
+        } else if (this.ial.provisions[type].length > 1) {
+          let selectedProvision = {
+            canonicalEvidenceType: type,
+            provision: this.ial.provisions[type].find((x: any) => x.selected),
+          };
+          delete selectedProvision.provision.selected;
+          result.push(selectedProvision);
+        }
+      }
+    });
+    this.storage.addArray(this.outputJSArrayId, result);
+    this.complete = true;
+  }
+
+  /**
+   * Check if one provision from provided list is selected
+   * @returns true if one provision is selected
+   */
+  public isProvisionSelected(): boolean {
+    return (
+      this.ial.provisions[
+        this.modalSelectProvisionData.canonicalEvidenceType
+      ] &&
+      this.ial.provisions[
+        this.modalSelectProvisionData.canonicalEvidenceType
+      ].find((x: any) => x.selected)
+    );
   }
 
   ngOnInit(): void {
-    this.selectedLanguage = this.defaultLanguage;
-    this.storage.remove(this.outputJSArrayId);
-    this.storage.remove('inputPreview');
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    this.getEvidenceTypes().map((x) => {
-      this.retrievalType[x.tokenName || ''] = 'request';
+    /**
+     * Default select request for all canonical evidence types
+     */
+    this.ial.canonicalEvidenceTypes.map((type) => {
+      this.ial.toggleRetrievalType(type, "request");
     });
-    if (changes['defaultLanguage']) {
-      this.selectedLanguage = this.defaultLanguage;
-      this.translate.use(this.selectedLanguage);
-    }
+
+    this.storage.remove(this.outputJSArrayId);
   }
 
   ngAfterViewInit(): void {
@@ -410,11 +348,19 @@ export class MORERComponent implements OnInit {
       .map((element) => new bootstrap.Tooltip(element));
     // Bootstrap modals
     this.modalSelectProvision = new bootstrap.Modal(
-      document.getElementById('selectProvisionModal')
+      document.getElementById("selectProvisionModal"),
+      {
+        keyboard: false,
+        backdrop: "static",
+      }
     );
     // Bootstrap modals
     this.modalPreview = new bootstrap.Modal(
-      document.getElementById('previewEvidenceSchemaModal')
+      document.getElementById("previewEvidenceSchemaModal"),
+      {
+        keyboard: false,
+        backdrop: "static",
+      }
     );
   }
 }

@@ -1,189 +1,278 @@
-import { Injectable } from '@angular/core';
-import { XMLParser } from 'fast-xml-parser';
-
-import { Country } from '../classes/country';
-import { Language } from '../classes/language';
-import { CanonicalEvidenceType } from '../classes/canonical-evidence-type';
-
-import NUTS0 from 'src/assets/NUTS0.json';
-import Langs from 'src/assets/languages.json';
-import CanonicalEvidenceTypes from 'src/assets/canonical-evidence-types.json';
-
-import BirthCertificateIP from 'src/assets/ial/deprecated/IP/BirthCertificate.json';
-import BirthCertificateUSIP from 'src/assets/ial/deprecated/USIP/BirthCertificate.json';
-import MarriageCertificateIP from 'src/assets/ial/deprecated/IP/MarriageCertificate.json';
-import MarriageCertificateUSIP from 'src/assets/ial/deprecated/USIP/MarriageCertificate.json';
+import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
+import { Language } from "src/app/classes/language";
+import { Country } from "src/app/classes/country";
+import { TranslateService } from "@ngx-translate/core";
+import { CanonicalEvidenceType } from "../classes/canonical-evidence-type";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { retry } from "rxjs/operators";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class DataLoaderService {
-  private countries: Country[] = NUTS0;
-  private languages: Language[] = Langs;
-  private canonicalEvidenceTypes: CanonicalEvidenceType[] =
-    CanonicalEvidenceTypes;
+  /**
+   * Shared parameters
+   */
+  public countryCode: any = {};
+  public defaultLanguage!: string;
+  public selectedLanguage!: string;
+  public disabledCountryCode!: string;
 
-  constructor() {
-    this.loadMockedIalXml([
-      'ial-es-birth2.xml',
-      'ial-es-marriage1.xml',
-      'ial-si-birth1-marriage1.xml',
-      'ial-si-marriage1.xml',
-    ]);
+  /**
+   * Change events
+   */
+  //selectedLanguageChange: Subject<string> = new Subject<string>();
+
+  /**
+   * Private parameters
+   */
+  public countries: Country[] = [
+    { code: "AT", name: "Austria" },
+    { code: "BE", name: "Belgium" },
+    { code: "BG", name: "Bulgaria" },
+    { code: "HR", name: "Croatia" },
+    { code: "CY", name: "Cyprus" },
+    { code: "CZ", name: "Czech Republic" },
+    { code: "DK", name: "Denmark" },
+    { code: "EE", name: "Estonia" },
+    { code: "FI", name: "Finland" },
+    { code: "FR", name: "France" },
+    { code: "DE", name: "Germany" },
+    { code: "EL", name: "Greece", flagCode: "GR" },
+    { code: "HU", name: "Hungary" },
+    { code: "IE", name: "Ireland" },
+    { code: "IT", name: "Italy" },
+    { code: "LV", name: "Latvia" },
+    { code: "LT", name: "Lithuania" },
+    { code: "LU", name: "Luxembourg" },
+    { code: "MT", name: "Malta" },
+    { code: "NL", name: "Netherlands" },
+    { code: "PL", name: "Poland" },
+    { code: "PT", name: "Portugal" },
+    { code: "RO", name: "Romania" },
+    { code: "SK", name: "Slovakia" },
+    { code: "SI", name: "Slovenia" },
+    { code: "ES", name: "Spain" },
+    { code: "SE", name: "Sweden" },
+  ];
+
+  private languages: Language[] = [
+    { code: "en", name: "English", flagCode: "GB" },
+    { code: "sl", name: "Slovenian", flagCode: "SI" },
+    { code: "es", name: "Spanish", flagCode: "ES" },
+    { code: "pt", name: "Portuguese", flagCode: "PT" },
+    { code: "fr", name: "French", flagCode: "FR" },
+  ];
+
+  public canonicalEvidenceTypes: CanonicalEvidenceType[] = [
+    {
+      name: "Birth certificate",
+      tokenName: "BirthCertificate",
+      morID: "BirthEvidence",
+    },
+    {
+      name: "Marriage certificate",
+      tokenName: "MarriageCertificate",
+      morID: "MarriageEvidence",
+    },
+    {
+      name: "Residency proof",
+      tokenName: "ResidencyProof",
+    },
+    {
+      name: "Company registration",
+      tokenName: "CompanyRegistration",
+    },
+    {
+      name: "Higher education certificate",
+      tokenName: "HigherEdCertificate",
+    },
+    {
+      name: "Secondary education certificate",
+      tokenName: "SecondaryEdCertificate",
+    },
+  ];
+
+  constructor(public translate: TranslateService, private http: HttpClient) {
+    translate.addLangs(this.languages.map((language) => language.code));
+    this.setDefaultLanguage(this.defaultLanguage);
+    this.setLanguage(this.selectedLanguage);
+
+    /*this.selectedLanguageChange.subscribe((language: string) => {
+      this.selectedLanguage = language;
+    });*/
   }
 
-  public parser = new XMLParser({ ignoreAttributes: false });
-
-  private mockupIalXmlResponses: any = {};
-
-  private mockupIalResponses: any = {
-    IP: {
-      BirthCertificate: BirthCertificateIP,
-      MarriageCertificate: MarriageCertificateIP,
-    },
-    USIP: {
-      BirthCertificate: BirthCertificateUSIP,
-      MarriageCertificate: MarriageCertificateUSIP,
-    },
-  };
-
-  public getTranslationLanguages = () => {
-    return ['en', 'sl', 'es', 'pt', 'fr'];
-  };
-
-  public getTranslationDefaultLanguage = () => {
-    return 'en';
-  };
-
-  public getCountries = () => {
-    return this.countries;
-  };
-
-  public getCountryName = (code: string) => {
-    let country = this.countries.find((x) => x.code == code);
-    return country ? country.name : null;
-  };
-
-  public getLanguages = (): Language[] => {
-    return this.languages;
-  };
-
-  public getAllCanonicalEvidenceTypes = () => {
-    return this.canonicalEvidenceTypes;
-  };
-
+  /**
+   * Get selected canonical evidence types accroding to
+   * input parameters of MOR ER
+   * @param canonicalEvidenceTypes array of canonical evidence types
+   * @returns array of selected canonical evidence types
+   */
   public getSelectedCanonicalEvidenceTypes = (
-    tokenNames: string
+    canonicalEvidenceTypes: string[]
   ): CanonicalEvidenceType[] => {
-    let listOfTokenNames: string[] = tokenNames.split(',');
-    return this.canonicalEvidenceTypes.filter((x) =>
-      listOfTokenNames.includes(x.tokenName || '')
+    return this.canonicalEvidenceTypes.filter((evidenceType) =>
+      canonicalEvidenceTypes.includes(evidenceType.tokenName || "")
     );
   };
 
-  public async loadXml(file: string, type: string): Promise<string> {
-    return await (
-      await fetch('assets/canonical-evidence-types/' + type + '/' + file)
-    ).text();
-  }
-
-  public async loadXmlIal(file: string): Promise<string> {
-    return await (await fetch('assets/ial/' + file)).text();
-  }
-
-  private loadMockedIalXml = async (files: string[]) => {
-    for (let i = 0; i < files.length; i++) {
-      let data: any = await this.loadXmlIal(files[i]);
-      //console.log(data);
-      data = this.parser.parse(data);
-      data = JSON.stringify(data, (_, value) => {
-        return value && typeof value === 'object' && !Array.isArray(value)
-          ? Object.fromEntries(
-              Object.entries(value).map(([key, value]) => [
-                key.split(':')[1] ? key.split(':')[1] : key,
-                value,
-              ])
-            )
-          : value;
-      });
-      data = JSON.parse(data);
-      data = data['ResponseLookupRoutingInformation']['ResponseItem'];
-      let evidenceType = data['@_CanonicalObjectTypeId'].split(':')[3];
-      //console.log(evidenceType);
-      data = data['ResponsePerCountry'];
-      let countryCode = data['@_CountryCode'];
-      //console.log(countryCode);
-      if (data['Provision']) {
-        data = data['Provision'];
-        if (typeof data == 'object') data = [data];
-        if (data.length > 0) {
-          if (!this.mockupIalXmlResponses[evidenceType])
-            this.mockupIalXmlResponses[evidenceType] = {};
-          if (!this.mockupIalXmlResponses[evidenceType][countryCode])
-            this.mockupIalXmlResponses[evidenceType][countryCode] = [];
-          this.mockupIalXmlResponses[evidenceType][countryCode] = data;
-        }
-      }
-    }
-    //console.log(this.mockupIalXmlResponses);
-  };
-
-  // Mockup API method for call to:
-  // /ial/{canonicalEvidenceTypeId}/{countryCode}
-  public getIal(
-    canonicalEvidenceTypeId: string,
-    countryCode: string,
-    pattern: string
-  ): any {
-    // Check canonical evidence type id
-    if (
-      !this.getAllCanonicalEvidenceTypes().find(
-        (x) => x.tokenName == canonicalEvidenceTypeId
-      )
-    )
-      return null;
-    // Check country code
-    if (!this.getCountries().find((x) => x.code == countryCode)) return null;
-    // Check pattern
-    if (!['IP', 'USIP'].includes(pattern)) return null;
-
-    // Available mockup responses
-    if (this.mockupIalResponses[pattern][canonicalEvidenceTypeId]) {
-      let result = this.mockupIalResponses[pattern][
-        canonicalEvidenceTypeId
-      ].find((x: any) => x.countryCode == countryCode);
-      //console.log(result);
-      return result ? result : null;
-    }
-
-    return null;
-
-    /*console.log('-------------------------------------');
-    canonicalEvidenceTypeId = canonicalEvidenceTypeId.replace(
-      'Certificate',
-      'Evidence'
-    );
-    console.log(canonicalEvidenceTypeId);
-    console.log(countryCode);
-    console.log(this.mockupIalXmlResponses);
-    if (
-      this.mockupIalXmlResponses[canonicalEvidenceTypeId] &&
-      this.mockupIalXmlResponses[canonicalEvidenceTypeId][countryCode]
-    ) {
-      console.log('Našel ...');
-      console.log(
-        this.mockupIalXmlResponses[canonicalEvidenceTypeId][countryCode]
+  /**
+   * Get all languages
+   * @returns { Language[] } List of languages
+   */
+  public getLanguages(): Language[] {
+    let translatedLanguages = this.languages;
+    translatedLanguages.map((language) => {
+      language.name = this.translate.instant(
+        "LangEnum/" + language.code + "." + this.selectedLanguage + ".label"
       );
-    }
-    console.log('-------------------------------------');
+    });
+    return translatedLanguages;
+  }
 
-    return this.mockupIalXmlResponses[canonicalEvidenceTypeId] &&
-      this.mockupIalXmlResponses[canonicalEvidenceTypeId][countryCode]
-      ? {
-          countryCode: countryCode,
-          provisions:
-            this.mockupIalXmlResponses[canonicalEvidenceTypeId][countryCode],
-        }
-      : null;*/
+  /**
+   * Get language name by selected language code
+   * @returns { string | null } Language name
+   */
+  public getLanguageName(): string | null {
+    let language = this.languages.find(
+      (lang) => this.selectedLanguage == lang.code
+    );
+    let name: string | null = null;
+    if (language)
+      name = this.translate.instant(
+        "LangEnum/" + language.code + "." + this.selectedLanguage + ".label"
+      );
+    return name;
+  }
+
+  /**
+   * Get language flag code by selected country code
+   * @returns { string | null } Language flag code
+   */
+  public getLanguageFlagCode(): string | null {
+    let language = this.languages.find(
+      (lang) => this.selectedLanguage == lang.code
+    );
+    return language ? language.flagCode : null;
+  }
+
+  /**
+   * Set language by country code
+   * @param code { string } Country code
+   */
+  public setLanguage(code: string) {
+    //this.selectedLanguageChange.next(code);
+    this.selectedLanguage = code;
+    this.translate.use(this.selectedLanguage);
+  }
+
+  /**
+   * Set default languageby country code
+   * @param code { string } Country code
+   */
+  public setDefaultLanguage(code: string) {
+    this.defaultLanguage = code;
+    this.translate.setDefaultLang(this.defaultLanguage);
+  }
+
+  /**
+   * Get all countries
+   * @returns { Country[] } List of countries
+   */
+  public getCountries(): Country[] {
+    let translatedCountries = this.countries;
+    translatedCountries.map(
+      (country) =>
+        (country.name = this.translate.instant(
+          "NUTS0Enum/" + country.code + "." + this.selectedLanguage + ".label"
+        ))
+    );
+    return translatedCountries;
+  }
+
+  /**
+   * Get country name by country code
+   * @param canonicalEvidenceType { string } Canonical evidence type
+   * @returns { string | null } Country name
+   */
+  public getCountryName(canonicalEvidenceType: string): string | null {
+    let country = this.countries.find(
+      (x) => this.countryCode[canonicalEvidenceType] == x.code
+    );
+    let name: string | null = null;
+    if (country)
+      name = this.translate.instant(
+        "NUTS0Enum/" + country.code + "." + this.selectedLanguage + ".label"
+      );
+    return name;
+  }
+
+  public getCountryNameByCode(code: string): string {
+    let name = "";
+    let country = this.countries.find((x) => code == x.code);
+    if (country)
+      name = this.translate.instant(
+        "NUTS0Enum/" + country.code + "." + this.selectedLanguage + ".label"
+      );
+    return name;
+  }
+
+  /**
+   * Get country flag code by country code
+   * @param canonicalEvidenceType { string } Canonical evidence type
+   * @param { string } countryCode Country code
+   * @returns { string | null } Country flag code
+   */
+  public getCountryFlagCode(
+    canonicalEvidenceType: string,
+    code?: string
+  ): string | null {
+    if (!code) code = this.countryCode[canonicalEvidenceType];
+    let country = this.countries.find((x) => code == x.code);
+    return country
+      ? country.flagCode
+        ? country.flagCode
+        : country.code
+      : null;
+  }
+
+  /**
+   * Check if country by country code is disabled
+   * @param code { string } Country code
+   * @returns { boolean } True if country is disabled
+   */
+  public isCountryDisabled(code: string) {
+    return code == this.disabledCountryCode;
+  }
+
+  /**
+   * Set selected country by country code
+   * @param canonicalEvidenceType { string } Canonical evidence type
+   * @param code { string } Country code
+   */
+  public setCountry(canonicalEvidenceType: string, code: string) {
+    this.countryCode[canonicalEvidenceType] = code;
+  }
+
+  public loadXml(url: string): Observable<any> {
+    return this.http
+      .get(url, { responseType: "text" })
+      .pipe(retry(1));
+  }
+
+  /**
+   * Random number in inclusive range
+   * @param min { number } Minimum value
+   * @param max { number } Maximum value
+   * @returns { number } Random number in inclusive range
+   */
+  public getRandomIntInclusive(min: number, max: number): number {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 }

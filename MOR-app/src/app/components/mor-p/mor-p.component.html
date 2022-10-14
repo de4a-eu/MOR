@@ -1,31 +1,36 @@
 <div class="position-relative">
   <div class="position-absolute top-0 start-0">
-    <app-language-selector
-      [(selectedLanguage)]="selectedLanguage"
-      (click)="translate.use(selectedLanguage)"
-    ></app-language-selector>
+    <de4a-language-selector></de4a-language-selector>
   </div>
 </div>
 
 <div class="d-flex justify-content-center mb-2" *ngIf="complete">
   <div class="row">
-    <div class="text-center text-primary">
-      <fa-icon class="me-1" [icon]="faCheckCircle"></fa-icon>
+    <div class="text-center de4a-text">
+      <i class="fa-solid fa-circle-check me-1"></i>
     </div>
-    <div class="text-center text-primary" translate="GUI/complete.{{ selectedLanguage }}.label"></div>
+    <div
+      class="text-center de4a-text"
+      translate="GUI/complete.{{ dataLoader.selectedLanguage }}.label"
+    ></div>
+  </div>
+</div>
+
+<!-- Show error message when input parameters are not valid -->
+<div class="d-flex justify-content-center mb-3" *ngIf="!inputParamsValid">
+  <div class="row">
+    <div class="text-center de4a-text">
+      <i class="fa-solid fa-triangle-exclamation me-1"></i>
+    </div>
+    <div
+      class="text-center de4a-text"
+      translate="GUI/provideInputP.{{ dataLoader.selectedLanguage }}.label"
+    ></div>
   </div>
 </div>
 
 <!-- List of canonical evidences -->
-<div class="mb-2" *ngIf="!complete">
-  <div class="d-flex justify-content-center mb-3" *ngIf="!inputParametersOK()">
-    <div class="row">
-      <div class="text-center text-primary">
-        <fa-icon class="me-1" [icon]="faExclamationTriangle"></fa-icon>
-      </div>
-      <div class="text-center text-primary" translate="GUI/provideInputP.{{ selectedLanguage }}.label"></div>
-    </div>
-  </div>
+<div *ngIf="!complete">
   <div
     class="row d-flex justify-content-center align-items-center"
     *ngFor="let evidenceType of getEvidenceTypes()"
@@ -33,22 +38,26 @@
     <div class="col-6 text-end p-2">
       <button
         type="button"
-        class="btn btn-sm btn-secondary normal"
+        class="btn btn-sm btn-secondary normal de4a-button-evidence"
         (click)="
           isEvidenceAvailable(evidenceType.tokenName)
             ? previewEvidence(evidenceType.tokenName)
             : undefined
         "
       >
-        <fa-icon
-          class="me-2 help"
-          [icon]="
-            isEvidenceAvailable(evidenceType.tokenName) ? faEye : faEyeSlash
+        <i
+          [class]="
+            'fa-solid fa-eye' +
+            (isEvidenceAvailable(evidenceType.tokenName) ? '' : '-slash') +
+            ' me-1 help'
           "
           data-bs-toggle="tooltip"
           data-bs-html="true"
-        ></fa-icon
-        >{{ evidenceType.morID + "." + selectedLanguage + ".label" | translate }}
+        ></i>
+        {{
+          evidenceType.morID + "." + dataLoader.selectedLanguage + ".label"
+            | translate
+        }}
       </button>
     </div>
     <div class="col-6 p-2">
@@ -58,7 +67,7 @@
             <div class="col-12">
               <div class="form-check form-check-inline me-0 ms-1">
                 <input
-                  class="form-check-input"
+                  class="form-check-input de4a-input-radio"
                   type="radio"
                   [name]="'mor_p_radio_' + evidenceType.tokenName"
                   [id]="'mor_p_radio_' + evidenceType.tokenName + '_country'"
@@ -73,16 +82,25 @@
                   class="form-check-label pointer"
                   [for]="'mor_p_radio_' + evidenceType.tokenName + '_country'"
                 >
-                  <b translate="GUI/include.{{ selectedLanguage }}.label"></b>
+                  <b
+                    translate="GUI/include.{{
+                      dataLoader.selectedLanguage
+                    }}.label"
+                  ></b>
                 </label>
               </div>
-              <span class="mx-2" translate="GUI/or.{{ selectedLanguage }}.label"></span>
+              <span
+                class="mx-2"
+                translate="GUI/or.{{ dataLoader.selectedLanguage }}.label"
+              ></span>
               <div class="form-check form-check-inline me-0 ms-1">
                 <input
-                  class="form-check-input"
+                  class="form-check-input de4a-input-radio"
                   type="radio"
                   [name]="'mor_p_radio_' + evidenceType.tokenName"
-                  [id]="'mor_p_radio_' + evidenceType.tokenName + '_upload_exclude'"
+                  [id]="
+                    'mor_p_radio_' + evidenceType.tokenName + '_upload_exclude'
+                  "
                   [checked]="
                     !confirmSendStatus[evidenceType.tokenName || ''].include
                   "
@@ -94,39 +112,28 @@
                   class="form-check-label pointer"
                   [for]="'mor_p_radio_' + evidenceType.tokenName + '_country'"
                 >
-                  <b translate="GUI/exclude.{{ selectedLanguage }}.label"></b>
+                  <b
+                    translate="GUI/exclude.{{
+                      dataLoader.selectedLanguage
+                    }}.label"
+                  ></b>
                 </label>
               </div>
-            </div>
-            <div
-              class="col-12"
-              *ngIf="!confirmSendStatus[evidenceType.tokenName || ''].include"
-            >
-              <!--<div>
-                <input
-                  class="form-control form-control-sm"
-                  type="file"
-                  accept=".pdf, .jpg, .jpeg, .png"
-                  (change)="
-                    handleUpload(evidenceType.tokenName || '', $event.target)
-                  "
-                />
-              </div>-->
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row p-2 mt-2" *ngIf="inputParametersOK() && previewConfirmed()">
+  <div class="row p-2 mt-2" *ngIf="inputParamsValid">
     <div class="col-12 text-center">
       <button
         type="button"
-        class="btn btn-sm btn-secondary"
+        class="btn btn-sm btn-secondary de4a-button-choice-dark"
         (click)="finishPreview()"
       >
-        <fa-icon [icon]="faSignInAlt" class="me-1"></fa-icon
-        ><b translate="GUI/proceed.{{ selectedLanguage }}.label"></b>
+        <i class="fa-solid fa-right-to-bracket me-1"></i>
+        <b translate="GUI/proceed.{{ dataLoader.selectedLanguage }}.label"></b>
       </button>
     </div>
   </div>
@@ -147,38 +154,46 @@
     <div class="modal-content">
       <div class="modal-header">
         <div class="d-flex">
-          <div>
+          <div class="de4a-title">
             <h5 class="modal-title" id="previewEvidenceModalLabel">
-              <span translate="GUI/Preview.{{ selectedLanguage }}.label" class="me-1"></span
+              <span
+                translate="GUI/Preview.{{ dataLoader.selectedLanguage }}.label"
+                class="me-1"
+              ></span
               ><b class="me-1">{{ getEvidenceTypeNameForPreview() }}</b
-              ><span translate="GUI/in.{{ selectedLanguage }}.label" class="me-1"></span>
+              ><span
+                translate="GUI/in.{{ dataLoader.selectedLanguage }}.label"
+                class="me-1"
+              ></span>
             </h5>
           </div>
           <div>
-            <app-language-selector
-              [(selectedLanguage)]="selectedLanguage"
-            ></app-language-selector>
+            <de4a-language-selector></de4a-language-selector>
           </div>
-          <div class="ms-1">
+          <div class="ms-1 de4a-title">
             <h5
               class="pointer ms-1"
               (click)="showDescription = !showDescription"
             >
               <span *ngIf="showDescription"
-                ><span translate="GUI/with.{{ selectedLanguage }}.label"></span
-                ><small
-                  ><fa-icon
-                    class="ms-2 me-1"
-                    [icon]="faEye"
-                  ></fa-icon></small></span
+                ><span
+                  translate="GUI/with.{{ dataLoader.selectedLanguage }}.label"
+                ></span
+                ><small><i class="fa-solid fa-eye ms-2 me-1"></i></small></span
               ><span *ngIf="!showDescription"
-                ><span translate="GUI/without.{{ selectedLanguage }}.label"></span><small
-                  ><fa-icon
-                    class="ms-2 me-1"
-                    [icon]="faEyeSlash"
-                  ></fa-icon></small
+                ><span
+                  translate="GUI/without.{{
+                    dataLoader.selectedLanguage
+                  }}.label"
+                ></span
+                ><small><i class="fa-solid fa-eye-slash ms-2 me-1"></i></small
               ></span>
-              <span translate="GUI/descriptions.{{ selectedLanguage }}.label" class="ms-1"></span>
+              <span
+                translate="GUI/descriptions.{{
+                  dataLoader.selectedLanguage
+                }}.label"
+                class="ms-1"
+              ></span>
             </h5>
           </div>
         </div>
@@ -190,11 +205,11 @@
         ></button>
       </div>
       <div class="modal-body">
-        <app-preview-xml
-          [lang]="selectedLanguage"
+        <de4a-preview-xml
+          [lang]="dataLoader.selectedLanguage"
           [showDescriptions]="showDescription"
           [xmlInput]="getEvidenceTypeContentForPreview()"
-        ></app-preview-xml>
+        ></de4a-preview-xml>
       </div>
     </div>
   </div>

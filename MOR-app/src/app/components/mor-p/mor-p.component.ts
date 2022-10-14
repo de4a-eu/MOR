@@ -1,100 +1,208 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { CanonicalEvidenceType } from 'src/app/classes/canonical-evidence-type';
-import { DataLoaderService } from 'src/app/services/data-loader.service';
-import { StorageService } from 'src/app/services/storage.service';
-import {
-  faEye,
-  faEyeSlash,
-  faSignInAlt,
-  faExclamationTriangle,
-  faCheckCircle,
-} from '@fortawesome/free-solid-svg-icons';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit, ElementRef } from "@angular/core";
+import { CanonicalEvidenceType } from "src/app/classes/canonical-evidence-type";
+import { DataLoaderService } from "src/app/services/data-loader.service";
+import { StorageService } from "src/app/services/storage.service";
 
 declare var bootstrap: any;
 
 @Component({
-  selector: 'app-mor-p',
-  templateUrl: './mor-p.component.html',
-  styleUrls: ['./mor-p.component.css'],
+  selector: "de4a-mor-p",
+  templateUrl: "./mor-p.component.html",
 })
-export class MorPComponent implements OnInit {
-  faEye = faEye;
-  faEyeSlash = faEyeSlash;
-  faSignInAlt = faSignInAlt;
-  faExclamationTriangle = faExclamationTriangle;
-  faCheckCircle = faCheckCircle;
+export class MORPComponent implements OnInit {
+  /**
+   * Input parameters
+   */
+  defaultLanguage: string;
+  postActionValue!: string;
+
+  /**
+   * Do not show component content if input parameters are invalid
+   */
+  inputParamsValid: boolean = true;
+
+  /**
+   * Show description
+   */
+  public showDescription: boolean = true;
+
+  /**
+   * Preview is complete
+   */
+  public complete: boolean = false;
+
+  private postActionValueObject: any[] = [];
 
   public modalPreview: any;
 
-  @Input('defaultLang') defaultLanguage!: string;
-  @Input('postActionValue') postActionValue!: string;
-  private postActionValueObject: any[] = [];
-  public selectedLanguage!: string;
   public selectedEvidenceType!: string;
-  public showDescription: boolean = true;
 
-  public confirmSendStatus: any = {}; // Status of preview
-  public uploads: any = {}; // Content of uploaded files
-  public complete: boolean = false; // P is complete
+  /**
+   * Status of preview
+   */
+  public confirmSendStatus: any = {};
+
+  /**
+   * Content of uploaded files
+   */
+  public uploads: any = {};
 
   constructor(
-    private dataLoader: DataLoaderService,
+    public elementRef: ElementRef,
     private storage: StorageService,
-    public translate: TranslateService
+    public dataLoader: DataLoaderService
   ) {
-    translate.addLangs(this.dataLoader.getTranslationLanguages());
-    translate.setDefaultLang(this.dataLoader.getTranslationDefaultLanguage());
-    translate.use(this.dataLoader.getTranslationDefaultLanguage());
-  }
-
-  /**
-   * Toggle confirm send status for given canonical evidence type
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence type
-   */
-  public toggleConfirmSendStatus(canonicalEvidenceType: string): void {
-    if (!this.confirmSendStatus[canonicalEvidenceType]) {
-      this.confirmSendStatus[canonicalEvidenceType] = { include: true };
-    } else {
-      if (!this.confirmSendStatus[canonicalEvidenceType].include)
-        delete this.uploads[canonicalEvidenceType];
-      this.confirmSendStatus[canonicalEvidenceType].include =
-        !this.confirmSendStatus[canonicalEvidenceType].include;
+    /**
+     * Get (static) input parameters of MOR-P component and
+     * check their validity
+     */
+    const native = this.elementRef.nativeElement;
+    this.defaultLanguage = native.getAttribute("default-lang");
+    if (
+      !this.dataLoader
+        .getLanguages()
+        .map((lang) => lang.code)
+        .includes(this.defaultLanguage)
+    )
+      this.inputParamsValid = false;
+    else {
+      dataLoader.setDefaultLanguage(this.defaultLanguage);
+      dataLoader.setLanguage(this.defaultLanguage);
     }
-  }
 
-  /**
-   * Upload text document with canonical evidence
-   *
-   * @param canonicalEvidenceType `tokenName` of canonical evidence
-   * @param input file upload content
-   */
-  public handleUpload(canonicalEvidenceType: string, input: any) {
-    if (canonicalEvidenceType && input.files && input.files.length > 0) {
-      let file = input.files[0];
-      let reader = new FileReader();
-      reader.addEventListener('load', (result) => {
-        if (result.target)
-          this.uploads[canonicalEvidenceType] = result.target.result;
+    this.postActionValue = native.getAttribute("post-action-value");
+    if (this.postActionValue) {
+      // Convert input parameters to object
+      try {
+        this.postActionValue = atob(this.postActionValue);
+        this.postActionValueObject = JSON.parse(this.postActionValue);
+      } catch (e) {
+        this.postActionValue = "[]";
+        this.postActionValueObject = JSON.parse(this.postActionValue);
+      }
+      this.postActionValueObject.map((x) => {
+        this.confirmSendStatus[x.canonicalEvidenceType] = { include: true };
       });
-      reader.readAsBinaryString(file);
+
+      if (this.postActionValueObject.length <= 0) this.inputParamsValid = false;
+    } else {
+      this.inputParamsValid = false;
     }
-  }
 
-  public inputParametersOK(): boolean {
-    if (this.defaultLanguage && this.postActionValueObject.length > 0)
-      return true;
-    else return false;
-  }
+    /*let birthSchema =
+      "<n3:BirthEvidence xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:person='http://www.w3.org/ns/corevocabulary/person' xmlns:n1='http://www.altova.com/samplexml/other-namespace' xmlns:cvb='http://www.w3.org/ns/corevocabulary/BasicComponents' xmlns:cva='http://www.w3.org/ns/corevocabulary/AggregateComponents' xmlns:n3='urn:eu-de4a:xsd:CanonicalEvidenceType::BirthEvidence:v1.7' xmlns:cbc='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2' xmlns:ext='urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2' xsi:schemaLocation='urn:eu-de4a:xsd:CanonicalEvidenceType::BirthEvidence:v1.7 birthEvidence-1.7.xsd'>" +
+      "<n3:Identifier>" +
+      "<cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier>" +
+      "<cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType>" +
+      "<cbc:IssueDate>1957-08-13</cbc:IssueDate>" +
+      "<cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority>" +
+      "<cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID>" +
+      "</n3:Identifier>" +
+      "<n3:IssueDate>1957-08-13</n3:IssueDate>" +
+      "<n3:IssuingAuthority>" +
+      "<n3:Identifier>" +
+      "<cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier>" +
+      "<cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType>" +
+      "<cbc:IssueDate>1957-08-13</cbc:IssueDate>" +
+      "<cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority>" +
+      "<cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID>" +
+      "</n3:Identifier>" +
+      "<n3:PrefLabel languageID='en-us' languageLocaleID='normalizedString'>String</n3:PrefLabel>" +
+      "</n3:IssuingAuthority>" +
+      "<n3:IssuingPlace>" +
+      "<cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox>" +
+      "<cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator>" +
+      "<cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName>" +
+      "<cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare>" +
+      "<cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName>" +
+      "<cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode>" +
+      "<n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea>" +
+      "<n3:AdminUnitL2>ITI2</n3:AdminUnitL2>" +
+      "<n3:AdminUnitL1>ISR</n3:AdminUnitL1>" +
+      "</n3:IssuingPlace>" +
+      "<n3:CertifiesBirth>" +
+      "<n3:Child>" +
+      "<n3:PersonName>" +
+      "<n3:FamilyName languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyName>" +
+      "<n3:GivenName languageID='en-us' languageLocaleID='normalizedString'>String</n3:GivenName>" +
+      "</n3:PersonName>" +
+      "<n3:Identifier>" +
+      "<cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier>" +
+      "<cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType>" +
+      "<cbc:IssueDate>1957-08-13</cbc:IssueDate>" +
+      "<cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority>" +
+      "<cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID>" +
+      "</n3:Identifier>" +
+      "<n3:Citizenship>" +
+      "<n3:Identifier schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</n3:Identifier>" +
+      "<n3:Name>MKD</n3:Name>" +
+      "</n3:Citizenship>" +
+      "<n3:DateOfBirth>" +
+      "<n3:Year>2001</n3:Year>" +
+      "<n3:Month>--12</n3:Month>" +
+      "<n3:Day>---17</n3:Day>" +
+      "</n3:DateOfBirth>" +
+      "<n3:Gender>FEMALE</n3:Gender>" +
+      "<n3:PlaceOfBirth>" +
+      "<cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox>" +
+      "<cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator>" +
+      "<cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName>" +
+      "<cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare>" +
+      "<cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName>" +
+      "<cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode>" +
+      "<n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea>" +
+      "<n3:AdminUnitL2>DEC04</n3:AdminUnitL2>" +
+      "<n3:AdminUnitL1>ATA</n3:AdminUnitL1>" +
+      "</n3:PlaceOfBirth>" +
+      "</n3:Child>" +
+      "<n3:Parent>" +
+      "<n3:PersonName>" +
+      "<n3:FamilyName languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyName>" +
+      "<n3:GivenName languageID='en-us' languageLocaleID='normalizedString'>String</n3:GivenName>" +
+      "</n3:PersonName>" +
+      "<n3:Identifier>" +
+      "<cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier>" +
+      "<cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType>" +
+      "<cbc:IssueDate>1957-08-13</cbc:IssueDate>" +
+      "<cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority>" +
+      "<cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID>" +
+      "</n3:Identifier>" +
+      "<n3:Citizenship>" +
+      "<n3:Identifier schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</n3:Identifier>" +
+      "<n3:Name>CAN</n3:Name>" +
+      "</n3:Citizenship>" +
+      "<n3:DateOfBirth>" +
+      "<n3:Year>2001</n3:Year>" +
+      "<n3:Month>--12</n3:Month>" +
+      "<n3:Day>---17</n3:Day>" +
+      "</n3:DateOfBirth>" +
+      "<n3:Gender>NST</n3:Gender>" +
+      "<n3:PlaceOfBirth>" +
+      "<cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox>" +
+      "<cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator>" +
+      "<cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName>" +
+      "<cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare>" +
+      "<cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName>" +
+      "<cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode>" +
+      "<n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea>" +
+      "<n3:AdminUnitL2>DEF0D</n3:AdminUnitL2>" +
+      "<n3:AdminUnitL1>BYS</n3:AdminUnitL1>" +
+      "</n3:PlaceOfBirth>" +
+      "</n3:Parent>" +
+      "</n3:CertifiesBirth>" +
+      "</n3:BirthEvidence>";
 
-  public previewConfirmed(): boolean {
-    let confirmed = true;
-    /*Object.keys(this.confirmSendStatus).map((x) => {
-      if (!this.confirmSendStatus[x].include && !this.uploads[x])
-        confirmed = false;
-    });*/
-    return confirmed;
+    let marriageSchema =
+      "<?xml version='1.0' encoding='UTF-8'?><!--Sample XML file generated by XMLSpy v2022 (x64) (http://www.altova.com)--><n3:MarriageEvidence xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:person='http://www.w3.org/ns/corevocabulary/person' xmlns:n1='http://www.altova.com/samplexml/other-namespace' xmlns:cvb='http://www.w3.org/ns/corevocabulary/BasicComponents' xmlns:cva='http://www.w3.org/ns/corevocabulary/AggregateComponents' xmlns:n3='urn:eu-de4a:xsd:CanonicalEvidenceType::MarriageEvidence:v1.7' xmlns:cbc='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2' xmlns:ext='urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2' xsi:schemaLocation='urn:eu-de4a:xsd:CanonicalEvidenceType::MarriageEvidence:v1.7 marriageEvidence-1.7.xsd'><n3:Identifier><cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier><cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType><cbc:IssueDate>1957-08-13</cbc:IssueDate><cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority><cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID></n3:Identifier><n3:IssueDate>1957-08-13</n3:IssueDate><n3:IssuingAuthority><n3:Identifier><cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier><cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType><cbc:IssueDate>1957-08-13</cbc:IssueDate><cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority><cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID></n3:Identifier><n3:PrefLabel languageID='en-us' languageLocaleID='normalizedString'>String</n3:PrefLabel></n3:IssuingAuthority><n3:IssuingPlace><cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox><cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator><cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName><cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare><cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName><cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode><n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea><n3:AdminUnitL2>HR032</n3:AdminUnitL2><n3:AdminUnitL1>GBR</n3:AdminUnitL1></n3:IssuingPlace><n3:CertifiesMarriage><n3:DateOfMarriage>1957-08-13</n3:DateOfMarriage><n3:Spouse><n3:DateOfBirth><n3:Year>2001</n3:Year><n3:Month>--12</n3:Month><n3:Day>---17</n3:Day></n3:DateOfBirth><n3:PersonName><n3:FamilyName languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyName><n3:GivenName languageID='en-us' languageLocaleID='normalizedString'>String</n3:GivenName></n3:PersonName><n3:Identifier><cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier><cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType><cbc:IssueDate>1957-08-13</cbc:IssueDate><cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority><cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID></n3:Identifier><n3:PlaceOfBirth><cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox><cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator><cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName><cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare><cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName><cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode><n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea><n3:AdminUnitL2>DE12C</n3:AdminUnitL2><n3:AdminUnitL1>HKG</n3:AdminUnitL1></n3:PlaceOfBirth><n3:Gender>FEMALE</n3:Gender><n3:Citizenship><n3:Identifier schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</n3:Identifier><n3:Name>FIN</n3:Name></n3:Citizenship><n3:FamilyNameAfterMarriage languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyNameAfterMarriage><n3:FamilyNameBeforeMarriage languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyNameBeforeMarriage><n3:MaritalStatusBeforeMarriage>http://eurovoc.europa.eu/5345</n3:MaritalStatusBeforeMarriage></n3:Spouse><n3:Spouse><n3:DateOfBirth><n3:Year>2001</n3:Year><n3:Month>--12</n3:Month><n3:Day>---17</n3:Day></n3:DateOfBirth><n3:PersonName><n3:FamilyName languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyName><n3:GivenName languageID='en-us' languageLocaleID='normalizedString'>String</n3:GivenName></n3:PersonName><n3:Identifier><cvb:Identifier languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Identifier><cvb:IdentifierType languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IdentifierType><cbc:IssueDate>1957-08-13</cbc:IssueDate><cvb:IssuingAuthority languageID='en-us' languageLocaleID='normalizedString'>String</cvb:IssuingAuthority><cvb:IssuingAuthorityID schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</cvb:IssuingAuthorityID></n3:Identifier><n3:PlaceOfBirth><cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox><cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator><cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName><cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare><cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName><cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode><n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea><n3:AdminUnitL2>DE269</n3:AdminUnitL2><n3:AdminUnitL1>UZB</n3:AdminUnitL1></n3:PlaceOfBirth><n3:Gender>NST</n3:Gender><n3:Citizenship><n3:Identifier schemeID='normalizedString' schemeName='String' schemeAgencyID='normalizedString' schemeAgencyName='String' schemeVersionID='normalizedString' schemeDataURI='http://www.altova.com/' schemeURI='http://www.altova.com/'>normalizedString</n3:Identifier><n3:Name>MLI</n3:Name></n3:Citizenship><n3:FamilyNameAfterMarriage languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyNameAfterMarriage><n3:FamilyNameBeforeMarriage languageID='en-us' languageLocaleID='normalizedString'>String</n3:FamilyNameBeforeMarriage><n3:MaritalStatusBeforeMarriage>http://eurovoc.europa.eu/5345</n3:MaritalStatusBeforeMarriage></n3:Spouse><n3:PlaceOfMarriage><cvb:PoBox languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PoBox><cvb:LocatorDesignator languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorDesignator><cvb:LocatorName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:LocatorName><cvb:Thoroughfare languageID='en-us' languageLocaleID='normalizedString'>String</cvb:Thoroughfare><cvb:PostName languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostName><cvb:PostCode languageID='en-us' languageLocaleID='normalizedString'>String</cvb:PostCode><n3:AddressArea languageID='en-us' languageLocaleID='normalizedString'>String</n3:AddressArea><n3:AdminUnitL2>FRE12</n3:AdminUnitL2><n3:AdminUnitL1>ERI</n3:AdminUnitL1></n3:PlaceOfMarriage></n3:CertifiesMarriage><n3:CertifiesEndOfMarriage><n3:DateOfEndOfMarriage>1957-08-13</n3:DateOfEndOfMarriage><n3:Cause languageID='en-us' languageLocaleID='normalizedString'>String</n3:Cause></n3:CertifiesEndOfMarriage></n3:MarriageEvidence>";
+
+    this.postActionValue =
+      '[{"canonicalEvidenceType":"BirthCertificate","uploadedDocument":"' +
+      birthSchema +
+      '"},{"canonicalEvidenceType":"MarriageCertificate","uploadedDocument":"' +
+      marriageSchema +
+      '"}]';
+    console.log(this.postActionValue);
+    console.log(btoa(this.postActionValue));*/
   }
 
   /**
@@ -106,28 +214,9 @@ export class MorPComponent implements OnInit {
     let selectedTokenNames = this.postActionValueObject.map(
       (x) => x.canonicalEvidenceType
     );
-    let types = this.dataLoader
-      .getAllCanonicalEvidenceTypes()
-      .filter((x) => selectedTokenNames.includes(x.tokenName));
+    let types =
+      this.dataLoader.getSelectedCanonicalEvidenceTypes(selectedTokenNames);
     return types;
-  }
-
-  public getEvidenceTypeNameForPreview(): string {
-    let selectedEvidence = this.getEvidenceTypes().find(
-      (x) => x.tokenName == this.selectedEvidenceType
-    );
-    if (selectedEvidence) return selectedEvidence.name;
-    else return '';
-  }
-
-  public getEvidenceTypeContentForPreview(): string {
-    let selectedEvidence = this.getEvidenceTypes().find(
-      (x) => x.tokenName == this.selectedEvidenceType
-    );
-    let content = '';
-    if (selectedEvidence)
-      content = this.getEvidenceByType(selectedEvidence.tokenName || '') || '';
-    return content;
   }
 
   /**
@@ -152,6 +241,59 @@ export class MorPComponent implements OnInit {
     return result;
   }
 
+  public previewEvidence(tokenName: string | undefined) {
+    if (tokenName) {
+      this.selectedEvidenceType = tokenName;
+      this.modalPreview.show();
+    }
+  }
+
+  /**
+   * Toggle confirm send status for given canonical evidence type
+   *
+   * @param canonicalEvidenceType `tokenName` of canonical evidence type
+   */
+  public toggleConfirmSendStatus(canonicalEvidenceType: string): void {
+    if (!this.confirmSendStatus[canonicalEvidenceType]) {
+      this.confirmSendStatus[canonicalEvidenceType] = { include: true };
+    } else {
+      if (!this.confirmSendStatus[canonicalEvidenceType].include)
+        delete this.uploads[canonicalEvidenceType];
+      this.confirmSendStatus[canonicalEvidenceType].include =
+        !this.confirmSendStatus[canonicalEvidenceType].include;
+    }
+  }
+
+  public finishPreview() {
+    let result: any = {};
+    Object.keys(this.confirmSendStatus).map((x: any) => {
+      result[x] = {};
+      result[x].include = this.confirmSendStatus[x].include;
+      if (this.confirmSendStatus[x]) result[x].binaryText = this.uploads[x];
+    });
+
+    this.storage.addArray("confirmedCanonicalEvidenceTypes", result);
+    this.complete = true;
+  }
+
+  public getEvidenceTypeNameForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    if (selectedEvidence) return selectedEvidence.name;
+    else return "";
+  }
+
+  public getEvidenceTypeContentForPreview(): string {
+    let selectedEvidence = this.getEvidenceTypes().find(
+      (x) => x.tokenName == this.selectedEvidenceType
+    );
+    let content = "";
+    if (selectedEvidence)
+      content = this.getEvidenceByType(selectedEvidence.tokenName || "") || "";
+    return content;
+  }
+
   /**
    * Get content of canonical evidence
    *
@@ -168,50 +310,16 @@ export class MorPComponent implements OnInit {
       : postActionValue.payload;
   }
 
-  public previewEvidence(tokenName: string | undefined) {
-    if (tokenName) {
-      this.selectedEvidenceType = tokenName;
-      this.modalPreview.show();
-    }
-  }
-
-  public finishPreview() {
-    let result: any = {};
-    Object.keys(this.confirmSendStatus).map((x: any) => {
-      result[x] = {};
-      result[x].include = this.confirmSendStatus[x].include;
-      if (this.confirmSendStatus[x]) result[x].binaryText = this.uploads[x];
-    });
-
-    this.storage.addArray('confirmedCanonicalEvidenceTypes', result);
-    this.complete = true;
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['defaultLanguage']) {
-      this.selectedLanguage = this.defaultLanguage;
-      this.translate.use(this.selectedLanguage);
-    }
-    if (changes['postActionValue']) {
-      try {
-        this.postActionValueObject = JSON.parse(this.postActionValue);
-      } catch (e) {
-        this.postActionValue = '[]';
-        this.postActionValueObject = JSON.parse(this.postActionValue);
-      }
-      this.postActionValueObject.map((x) => {
-        this.confirmSendStatus[x.canonicalEvidenceType] = { include: true };
-      });
-    }
-  }
-
   ngOnInit(): void {
-    this.selectedLanguage = this.defaultLanguage;
-    this.storage.remove('confirmedCanonicalEvidenceTypes');
+    this.storage.remove("confirmedCanonicalEvidenceTypes");
 
     // Bootstrap modals
     this.modalPreview = new bootstrap.Modal(
-      document.getElementById('previewEvidenceModal')
+      document.getElementById("previewEvidenceModal"),
+      {
+        keyboard: false,
+        backdrop: "static",
+      }
     );
   }
 }
