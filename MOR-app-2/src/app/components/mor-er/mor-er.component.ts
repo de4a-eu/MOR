@@ -133,7 +133,23 @@ export class MORERComponent implements OnInit {
       (type) => type.morID == canEvidTokenList
     )?.tokenName;
 
-    if (DummyData.generateIalData) {
+    /**
+     * Check if generate dummy data
+     */
+    let generateDummyData = DummyData.generateIalData;
+    if (
+      this.storage.get("de4a-dummy-data") &&
+      this.storage.get("de4a-dummy-data") == "true"
+    ) {
+      generateDummyData = true;
+    } else if (
+      this.storage.get("de4a-dummy-data") &&
+      this.storage.get("de4a-dummy-data") == "false"
+    ) {
+      generateDummyData = false;
+    }
+
+    if (generateDummyData) {
       let dummyRandomData = [];
       for (
         let i = 1;
@@ -223,77 +239,6 @@ export class MORERComponent implements OnInit {
         },
       });
     }
-
-    /*this.ial.retrieveIALProvisions(urlApi).subscribe({
-      next: (response: any) => {
-        if (response.hasOwnProperty("errors")) {
-          this.ial.provisions[canEvType!] = "not available";
-          if (DummyData.generateIalData) {
-            let dummyRandomData = [];
-            for (
-              let i = 1;
-              i <=
-              this.dataLoader.getRandomIntInclusive(
-                DummyData.generateIalDataRange[0],
-                DummyData.generateIalDataRange[1]
-              );
-              i++
-            ) {
-              dummyRandomData.push({
-                atuLevel: "nuts0",
-                atuCode: atuCode,
-                atuLatinName: this.dataLoader.countries.find(
-                  (country) => country.code == atuCode
-                )?.name,
-                dataOwnerID:
-                  "iso" +
-                  (Math.random() + 1).toString(36).substring(8) +
-                  "-actorid-upis::" +
-                  (Math.random() + 1).toString(36).substring(2),
-                dataOwnerPrefLabel:
-                  "Data owner label " +
-                  (Math.random() + 1).toString(36).substring(4),
-              });
-            }
-            this.ial.provisions[canEvType!] = dummyRandomData;
-          }
-        } else if (
-          response.hasOwnProperty("items") &&
-          response.items.length == 1 &&
-          response.items[0]["canonicalObjectTypeId"].endsWith(
-            canEvidTokenList
-          ) &&
-          response.items[0].countries.length == 1 &&
-          response.items[0].countries[0].countryCode == atuCode
-        ) {
-          this.ial.provisions[canEvType!] =
-            response.items[0].countries[0].provisions;
-        }
-
-        if (
-          typeof this.ial.provisions[canEvType!] == "object" &&
-          this.ial.provisions[canEvType!].length > 1
-        ) {
-          let type = this.ial
-            .getEvidenceTypesForRequest()
-            .find((x) => x.tokenName == canEvType);
-
-          this.modalSelectProvisionData.canonicalEvidenceType = canEvType;
-          this.modalSelectProvisionData.morId = type ? type.morID : "";
-          this.modalSelectProvisionData.canonicalEvidenceName = type
-            ? type.name
-            : "";
-          this.modalSelectProvisionData.country =
-            this.dataLoader.getCountryName(canEvType!);
-
-          if (showModal) this.modalSelectProvision.show();
-        }
-      },
-      error: (error: any) => {
-        console.log("Error retrieving provisions.");
-        console.log(error);
-      },
-    });*/
   }
 
   public requestProvision(
