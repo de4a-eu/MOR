@@ -125,8 +125,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "Admin unit level 2",
-		"description" : "The region of the address, usually a county, state or other such area that typically encompasses several localities.",
+		"label" : "Region",
+		"description" : "The region of the address, usually a county, province or other such area that typically encompasses several localities.",
 		"example" : "Madrid",
 		"verified" : "true"
 	}
@@ -136,8 +136,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "Admin unit level 1",
-		"description" : "The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.",
+		"label" : "Country",
+		"description" : "The uppermost administrative unit for the address, almost always a country.",
 		"example" : "ES",
 		"verified" : "true"
 	}

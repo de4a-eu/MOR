@@ -125,7 +125,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Admin Enota Nivo 2",
+		"label" : "Regija",
 		"description" : "Regija naslova ponavadi okrožje državo ali drugo takšno področje ki običajno obsega več krajev.",
 		"example" : "",
 		"verified" : "true"
@@ -136,8 +136,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Admin Enota Nivo 1",
-		"description" : "Najvišja upravna enota za naslov skoraj vedno državo. Najboljša praksa je uporaba kode ISO 3166-1.",
+		"label" : "Država",
+		"description" : "Najvišja upravna enota za naslov skoraj vedno državo.",
 		"example" : "",
 		"verified" : "true"
 	}

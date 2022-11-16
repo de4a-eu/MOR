@@ -125,7 +125,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Unité d'administration Niveau 2",
+		"label" : "Région",
 		"description" : "La région de l'adresse, généralement un comté, un État ou un autre domaine de ce type qui englobe généralement plusieurs localités.",
 		"example" : "",
 		"verified" : "false"
@@ -136,8 +136,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Unité d'administration Niveau 1",
-		"description" : "L'unité administrative la plus haute pour l'adresse, presque toujours un pays. La meilleure pratique consiste à utiliser le code ISO 3166-1.",
+		"label" : "Pays",
+		"description" : "L'unité administrative la plus haute pour l'adresse, presque toujours un pays.",
 		"example" : "",
 		"verified" : "false"
 	}

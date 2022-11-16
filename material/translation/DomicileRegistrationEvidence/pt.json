@@ -125,7 +125,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Segundo nível territorial do país",
+		"label" : "Região",
 		"description" : "A região do endereço, geralmente um distrito, concelho ou outra área que tipicamente abrange várias freguesias.",
 		"example" : "",
 		"verified" : "true"
@@ -136,8 +136,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Primeiro nível territorial do país",
-		"description" : "A unidade administrativa superior para o endereço, quase sempre um país representado pelo código ISO 3166-1.",
+		"label" : "País",
+		"description" : "A unidade administrativa superior para o endereço, quase sempre um país.",
 		"example" : "",
 		"verified" : "true"
 	}

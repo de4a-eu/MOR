@@ -125,7 +125,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"es" : {
-		"label" : "Segundo nivel territorial del país",
+		"label" : "Región",
 		"description" : "La región de la dirección, generalmente una provincia o condado, estado u otro área de este tipo que generalmente abarca varias localidades.",
 		"example" : "",
 		"verified" : "true"
@@ -136,8 +136,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"es" : {
-		"label" : "Primer nivel territorial del país",
-		"description" : "La unidad administrativa superior para la dirección, casi siempre un país normalmente representado por su código ISO 3166-1.",
+		"label" : "País",
+		"description" : "La unidad administrativa superior para la dirección, casi siempre un país.",
 		"example" : "",
 		"verified" : "true"
 	}

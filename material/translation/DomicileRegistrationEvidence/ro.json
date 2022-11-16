@@ -125,7 +125,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Unitate administrativă nivel 2",
+		"label" : "Regiune",
 		"description" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
 		"example" : "",
 		"verified" : "true"
@@ -136,8 +136,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Unitate administrativă nivel 1",
-		"description" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+		"label" : "Țară",
+		"description" : "Unitate administrativă superioară, spre exemplu o țară.",
 		"example" : "",
 		"verified" : "true"
 	}
