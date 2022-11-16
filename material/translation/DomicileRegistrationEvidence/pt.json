@@ -1,0 +1,3731 @@
+{
+"DomicileRegistrationEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/CertifiesDomicileRegistration" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/CertifiesDomicileRegistration/Inhabitant" : {
+	"type" : "Person",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"DomicileRegistrationEvidence/CertifiesDomicileRegistration/Domicile" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LocationAddress" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Endereço",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/AdminUnitL2" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Segundo nível territorial do país",
+		"description" : "A região do endereço, geralmente um distrito, concelho ou outra área que tipicamente abrange várias freguesias.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/AdminUnitL1" : {
+	"type" : "CountryEnum",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Primeiro nível territorial do país",
+		"description" : "A unidade administrativa superior para o endereço, quase sempre um país representado pelo código ISO 3166-1.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/PoBox" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Caixa postal",
+		"description" : "O número de um caixa postal",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/Thoroughfare" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Via pública",
+		"description" : "Citando as diretrizes INSPIRE, uma via é: 'Um componente de um endereço que representa o nome de uma passagem ou caminho de um local para outro. Uma via não é necessariamente uma estrada, pode ser uma hidrovia ou algum outro recurso.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/LocatorDesignator" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Número, pisco, escada, porta",
+		"description" : "O designador de localizador é definido pelas diretrizes INSPIRE como 'um número ou uma sequência de caracteres que identifica exclusivamente o localizador dentro do(s) âmbito(s) relevante(s). A identificação completa do localizador pode incluir um ou mais designadores de localizador'. Em termos mais simples, este é o edifício número, número do apartamento, etc. Para um endereço como 'Flat 3, 17 Bridge Street', o localizador é 'Flat 3, 17'.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/LocatorName" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome do edifício ou sala",
+		"description" : "Com base nas diretrizes INSPIRE, o nome do localizador é definido como: 'nome(s) próprio(s) aplicado(s) à entidade do mundo real identificada pelo localizador. O nome do localizador pode ser o nome da propriedade ou complexo, o prédio ou parte do prédio, ou pode ser o nome de uma sala dentro de um prédio. A principal diferença entre um localizador e um nome de localizador é que o último é um nome próprio e é improvável que inclua dígitos. Por exemplo, 'Shumann, Berlaymont' é uma sala de reuniões dentro da sede da Comissão Europeia, portanto, o nome do localizador é mais apropriado do que o localizador.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/AddressArea" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Área de endereço",
+		"description" : "Tomando a definição do INSPIRE, área de endereço é: o(s) nome(s) de uma área geográfica ou localidade que agrupa um número de objetos endereçáveis ​​para fins de endereçamento, sem ser uma unidade administrativa. Normalmente, isso faria parte de uma cidade, um bairro ou cidade",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/PostName" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Área postal",
+		"description" : "A principal divisão postal do endereço, geralmente é a cidade. (A definição do Inspire é 'um ou mais nomes criados e mantidos para fins postais para identificar uma subdivisão de endereços e pontos de entrega postal).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LocationAddress/PostCode" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Código postal",
+		"description" : "O código postal (A.K.A Código Postal, Código ZIP etc.). Os códigos postais são elementos comuns nos sistemas de endereço postal de muitos países.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Pessoa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Data de nascimento",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth/Year" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ano",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth/Month" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Mês",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/DateOfBirth/Day" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Dia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/Gender" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Género",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PlaceOfBirth" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Local de nascimento",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PersonName" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome da pessoa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PersonName/FamilyName" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "Apelido",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/PersonName/GivenName" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome próprio",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/Identifier" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Person/Citizenship" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Cidadania",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PublicOrganisation" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Entidade Pública",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PublicOrganisation/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "01",
+	"comment" : "",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "Muitas organizações são referidas por um acrónimo ou algum outro identificador. Por exemplo, entre as instituições da UE, o BCE é o identificador do Banco Central Europeu, o OLAF do Organismo Europeu AntiN/AFraud e assim por diante. Estes são formalmente reconhecidos pela Comissão Europeia, que fornece uma lista dessas siglas. Listas análogas devem ser usadas em outros contextos.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PublicOrganisation/PrefLabel" : {
+	"type" : "UDT/Text",
+	"cardinality" : "11",
+	"comment" : "",
+	"pt" : {
+		"label" : "Etiqueta preferida",
+		"description" : "Nome principal e legalmente reconhecido da entidade. Uma entidade só pode ter um desses nomes em qualquer idioma. Os nomes principais podem ser fornecidos em vários idiomas.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Text" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"pt" : {
+		"label" : "Texto",
+		"description" : "Uma cadeia de caracteres (isto é, um conjunto finito de caracteres), geralmente na forma de palavras de um idioma.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Text/@LanguageID" : {
+	"type" : "xsd:language",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "ID do idioma",
+		"description" : "O identificador do idioma usado no componente de conteúdo.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Text/@LanguageLocaleID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "ID de idioma local",
+		"description" : "A identificação da localidade do idioma",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Date" : {
+	"type" : "xsd:date",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"pt" : {
+		"label" : "Data",
+		"description" : "Um dia de calendário de acordo com o calendário gregoriano.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Name" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome",
+		"description" : "Uma cadeia de caracteres que constitui a designação distinta de uma pessoa, lugar, coisa ou conceito.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "Uma sequência de caracteres para identificar e distinguir inequivocamente uma instância de um objeto de acordo com um esquema de identificação comum a outros objetos, juntamente com informações complementares relevantes.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "ID do esquema",
+		"description" : "A identificação do esquema de identificação.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeName" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome do esquema.",
+		"description" : "O nome do esquema de identificação.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeAgencyID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "ID da agência do esquema.",
+		"description" : "A identificação da Agência que mantém o esquema de identificação.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeAgencyName" : {
+	"type" : "xsd:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome da agência do esquema.",
+		"description" : "O nome da agência que mantém o esquema de identificação.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeVersionID" : {
+	"type" : "xsd:normalizedString",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "ID da versão do esquema.",
+		"description" : "A versão do esquema de identificação.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeDataURI" : {
+	"type" : "xsd:anyURI",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "URI de dados do esquema",
+		"description" : "O Identificador Uniforme de Recursos (URI) que identifica onde os dados do esquema de identificação estão localizados.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"UDT/Identifier/@schemeURI" : {
+	"type" : "xsd:anyURI",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "URI do esquema",
+		"description" : "O Identificador Uniforme de Recursos (URI) que identifica onde o esquema de identificação está localizado.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Identificador",
+		"description" : "A classe que representa um identificador, com informações sobre qual autoridade o emitiu e, se necessário, quando.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/Identifier" : {
+	"type" : "UDT/Text",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "Conteúdo",
+		"description" : "Conteúdo - String Alfa-numérica",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IdentifierType" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tipo de identificador",
+		"description" : "O tipo de identificador emitido (se a autoridade emitir mais de um tipo de identificador).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Data de emissão",
+		"description" : "A data em que foi emitida",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IssuingAuthority" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Autoridade emissora",
+		"description" : "O nome da agência emissora",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Identifier/IssuingAuthorityID" : {
+	"type" : "UDT/Identifier",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "ID da autoridade emissora",
+		"description" : "O ID da agência emissora",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "",
+		"description" : "Os códigos alfa-3 ISO 3166-1 são códigos de três letras definidos na ISO 3166-1, parte do padrão ISO 3166 publicado pela International Organization for Standardization, para representar países, territórios dependentes e áreas especiais de interesse geográfico.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/1A0" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Kosovo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ABW" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Aruba",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AFG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Afeganistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AFI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Território Francês dos Afares e Issas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AGO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Angola",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AIA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Anguila",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ALA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Aland",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ALB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Albânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AND" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Andorra",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ANT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Antilhas Holandesas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ARE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Emirados Árabes Unidos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ARG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Argentina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ARM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Arménia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ASM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Samoa Americana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ATA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Antártida",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ATB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Território Antártido Britânico",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ATF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Terras Austrais e Antárticas Francesas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ATG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Antígua e Barbuda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ATN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Terra da Rainha Maud",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Austrália",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AUT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Áustria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/AZE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Azerbaijão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BDI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Burundi",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BEL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bélgica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Benin",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BES" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bonaire, Sint Eustatius e Saba",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BFA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Burkina Faso",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BGD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bangladesh",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BGR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bulgária",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BHR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bahrein",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BHS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bahamas.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BIH" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bósnia e Herzegovina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BLM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Barthélemy.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BLR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bielorrússia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BLZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Belize",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BMU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bermudas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BOL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bolívia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BRA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Brasil",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BRB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Barbados",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BRN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Brunei",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BTN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Butão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Burma",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BVT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilha Bouvet",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BWA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Botsuana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/BYS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Bielorrússia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CAF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "República Centro-Africana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CAN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Canadá",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CCK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Cocos (Keeling)",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CHE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Suíça",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CHL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Chile",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CHN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "China",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CIV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Costa do Marfim",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CMR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Camarões",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "República Democrática do Congo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Congo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Cook",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Colômbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/COM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Comores",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CPT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Clipperton",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CPV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Cabo Verde",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CRI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Costa Rica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CSK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Checoslováquia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CTE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Cantão e Enderbury",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CUB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Cuba",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CUW" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Curaçao",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CXR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilha do Natal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CYM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Caimão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CYP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Chipre",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/CZE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "República Checa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DDR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Alemanha Oriental",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DEU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Alemanha",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DHY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Reino do Daomé",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DJI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Djibuti",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DMA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Dominica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DNK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Dinamarca",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DOM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "República Dominicana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/DZA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Argélia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ECU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Equador",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/EGY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Egito",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ERI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Eritreia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ESH" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Saara Ocidental",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ESP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Espanha",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/EST" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Estónia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ETH" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Etiópia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/EUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "União Europeia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FIN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Finlândia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FJI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Fiji",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FLK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Malvinas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FQ0" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Terras Austrais e Antárticas Francesas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FRA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "França",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FRO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Faroe",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FSM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Micronésia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/FXX" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "França Metropolitana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GAB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Gabão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GBR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Reino Unido",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GEL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Gilbert e Ellice",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GEO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Geórgia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GGY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guernsey",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GHA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Gana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GIB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Gibraltar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GIN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guiné",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GLP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guadalupe",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GMB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Gâmbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GNB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guiné-Bissau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GNQ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guiné Equatorial",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GRC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Grécia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GRD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Granada",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GRL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Gronelândia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GTM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guatemala",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GUF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guiana Francesa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GUM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guam",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/GUY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Guiana",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HKG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Hong Kong",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HMD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Heard e McDonald",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HND" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Honduras",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HRV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Croácia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HTI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Haiti",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HUN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Hungria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/HVO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Volta superior",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IDN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Indonésia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IMN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilha de Man",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IND" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Índia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IOT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Território do Oceano Índico Britânico",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IRL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Irlanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IRN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Irão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/IRQ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Iraque",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ISL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Islândia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ISR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Israel",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ITA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Itália",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JAM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Jamaica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JEY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Jersey",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JOR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Jordânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JPN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Japão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/JTN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilha de Johnston",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KAZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Cazaquistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Quénia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KGZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Quirguistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KHM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Camboja",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KIR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Kiribati",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KNA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Cristóvão e Neves",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KOR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Coreia do Sul",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/KWT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Kuwait",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LAO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Laos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LBN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Líbano",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LBR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Libéria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LBY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Líbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LCA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Santa Lúcia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LIE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Liechtenstein",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LKA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Sri Lanka",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LSO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Lesoto",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LTU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Lituânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LUX" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Luxemburgo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/LVA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Letónia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MAC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Macau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MAF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilha de São Martinho",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MAR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Marrocos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MCO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Mónaco",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MDA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Moldávia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MDG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Madagáscar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MDV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Maldivas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MEX" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "México",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MHL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Marshall",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MID" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Midway",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MKD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Macedónia do Norte",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MLI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Mali",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MLT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Malta",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MMR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Myanmar / Birmânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MNE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Montenegro",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MNG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Mongólia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MNP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Marianas do Norte",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MOZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Moçambique",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MRT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Mauritânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MSR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Montserrat",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MTQ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Martinica",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Maurício",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MWI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Malawi",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MYS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Malásia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/MYT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Mayotte",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NAM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Namíbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NCL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nova Caledónia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NER" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Níger",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NFK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilha de Norfolk",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NGA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nigéria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NHB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Novas Hébridas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NIC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nicarágua",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NIU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Niue",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NLD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Países Baixos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NOR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Noruega",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NPL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nepal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NRU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nauru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NTZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Zona neutra",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/NZL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nova Zelândia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/OMN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Omã",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PAK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Paquistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PAN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Panamá",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PCI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Protetorado das Ilhas do Pacífico das Nações Unidas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PCN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas de Pitcairn",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PCZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Zona do Canal do Panamá",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PER" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Peru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PHL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Filipinas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PLW" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Palau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PNG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Papua Nova Guiné",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/POL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Polónia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Porto Rico",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Coreia do Norte",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Portugal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PRY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Paraguai",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PSE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Palestina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Diversas Ilhas do Pacífico dos Estados Unidos da América",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/PYF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Polinésia Francesa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/QAT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Catar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/REU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Reunião",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/RHO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Rodésia do sul",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ROU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Roménia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/RUS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Rússia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/RWA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ruanda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SAU" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Arábia Saudita",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SCG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Sérvia e Montenegro",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SDN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Sudão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Senegal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SGP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Singapura",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SGS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Geórgia do Sul e Ilhas Sandwich Sul",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SHN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Santa Helena, Ascensão e Tristão da Cunha",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SJM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Svalbard e Jan Mayen",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SKM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Sikkim",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SLB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Salomão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SLE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Serra Leoa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SLV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "El Salvador",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SMR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Marino",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SOM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Somália",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SPM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Pedro e Miquelão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SRB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Sérvia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SSD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Sudão do Sul",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/STP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Tomé e Príncipe",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SUN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "União Soviética",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Suriname",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SVK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Eslováquia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SVN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Eslovénia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SWE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Suécia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SWZ" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Eswatini",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SXM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Martinho",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SYC" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Seicheles",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/SYR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Síria",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TCA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Turcas e Caicos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TCD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Chade",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TGO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Togo",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/THA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tailândia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TJK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tajiquistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TKL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tokelau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TKM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Turquemenistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TLS" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Timor-Leste",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TMP" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Timor Leste",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TON" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tonga",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TTO" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Trinidad e Tobago",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TUN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tunísia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TUR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Turquia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TUV" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tuvalu",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TWN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Taiwan",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/TZA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Tanzânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UGA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Uganda",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UKR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ucrânia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UMI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Menores dos Estados Unidos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/URY" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Uruguai",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/USA" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Estados Unidos",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/UZB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Uzbequistão",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VAT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Estado da cidade do Vaticano",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VCT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "São Vicente e Granadinas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VDR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "República Democrática do Vietname",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VEN" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Venezuela",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VGB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Virgens Britânicas",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VIR" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Virgens dos EUA",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VNM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Vietname",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/VUT" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Vanuatu",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/WAK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Ilhas Wake",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/WLF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Wallis e Futuna",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/WSM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Samoa",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/YEM" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Iémen",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/YMD" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Iêmen do norte",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/YUG" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Jugoslávia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZAF" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "África do Sul",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZMB" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Zâmbia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZR0" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Zaire",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"CountryEnum/ZWE" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "República do Zimbábue",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+	}
+}
