@@ -111,241 +111,241 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "00",
+	"cardinality" : "Abordare",
 	"comment" : "",
 	"fr" : {
-		"label" : "Adresse",
-		"description" : "",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Unitate administrativă nivel 2",
+	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
 	"fr" : {
-		"label" : "Région",
-		"description" : "La région de l'adresse, généralement un comté, un État ou un autre domaine de ce type qui englobe généralement plusieurs localités.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"type" : "CountryEnum",
+	"cardinality" : "Unitate administrativă nivel 1",
+	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
 	"fr" : {
-		"label" : "Pays",
-		"description" : "L'unité administrative la plus haute pour l'adresse, presque toujours un pays.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Casuta postala",
+	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
 	"fr" : {
-		"label" : "Boîte postale",
-		"description" : "Le numéro de la boîte postale. L'INSPIRE NAME POUR Ceci est 'PostalDelIdentifier' pour lequel il utilise la propriété de localisateur concepteur avec un attribut de type de ce nom. Ce vocabulaire sépare la boîte de poste pour une plus grande indépendance de la technologie.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Arteră/drum principal",
+	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
 	"fr" : {
-		"label" : "Rétrécissement",
-		"description" : "Citation des lignes directrices INSPIRE, une voie de calcul est la suivante: «Un composant d'adresse qui représente le nom d'un passage ou d'une manière à travers un endroit à un autre. Une voie de circulation n'est pas nécessairement une route, elle pourrait être une voie navigable ou une autre caractéristique.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Identificator adresă",
+	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
 	"fr" : {
-		"label" : "Concepteur de localisateur",
-		"description" : "Le concepteur de localisateur est défini par les directives Inspire comme «un nombre ou une séquence de caractères identifiant de manière unique le localisateur dans les champs (s) pertinents (s). L'identification complète du localisateur pourrait inclure un ou plusieurs designateurs de localisation. ' En termes simples, il s'agit du numéro de bâtiment, du numéro d'appartement, etc. pour une adresse telle que «Appartement 3, 17 pont Street», le localisateur est 'plat 3, 17.'",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Numele locatorului",
+	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
 	"fr" : {
-		"label" : "Nom du localisateur",
-		"description" : "Sur la base des directives d'inspiration, le nom du localisateur est défini comme suit: «Noun (s) approprié (s) appliqué à l'entité du monde réel identifiée par le localisateur. Le nom du localisateur pourrait être le nom de la propriété ou du complexe, du bâtiment ou de la partie du bâtiment, ou peut être le nom d'une pièce à l'intérieur d'un bâtiment. La différence de clé entre un localisateur et un nom de localisation est que celle-ci est un nom propre et qu'il est peu probable d'inclure des chiffres. Par exemple, 'Shumann, Berlaymont' est une salle de réunion au sein du siège de la Commission européenne pour laquelle le nom de localisation est plus approprié que le localisateur.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Zona de adrese",
+	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
 	"fr" : {
-		"label" : "Domaine d'adressage",
-		"description" : "Prenant la définition d'Inspire, la zone d'adresses est la suivante: nom ou noms d'une zone géographique ou localité qui regroupe un certain nombre d'objets adressables à des fins d'adressage, sans être une unité administrative. ' Cela ferait généralement partie d'une ville, d'un quartier ou d'un village.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Numele oficiului poștal",
+	"comment" : "Punct de livrare poștal.",
 	"fr" : {
-		"label" : "Après le nom",
-		"description" : "La principale division postale de l'adresse, généralement la ville. (La définition de Inspire est 'Un ou plusieurs noms créés et maintenus à des fins postales pour identifier une subdivision d'adresses et de points de livraison postale.)",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Cod poștal",
+	"comment" : "Codul poștal.",
 	"fr" : {
-		"label" : "Code postal",
-		"description" : "Le code postal (code postal A.k.a, code postal, etc.). Les codes postaux sont des éléments courants dans les systèmes d'adresses postaux de nombreux pays.",
+		"label" : "",
+		"description" : "0",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Persoană",
+	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
 	"comment" : "",
 	"fr" : {
-		"label" : "La personne",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Data de nastere",
+	"cardinality" : "Ziua în care persoana s-a născut.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Date de naissance",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "An",
+	"cardinality" : "Un an calendaristic gregorian.",
 	"comment" : "",
 	"fr" : {
-		"label" : "An",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Lună",
+	"cardinality" : "O lună dintr-un an calendaristic.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Mois",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Zi",
+	"cardinality" : "O zi dintr-un an calendaristic.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Jour",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Sex",
+	"cardinality" : "Sex masculin sau feminin.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Le sexe",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Locul nașterii",
+	"cardinality" : "Locația în care s-a născut persoana.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Lieu de naissance",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Numele persoanei",
+	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Nom d'une personne",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Nume de familie",
+	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Nom de famille",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Prenume",
+	"cardinality" : "Un nume sau mai multe nume.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Prénom",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Identificator",
+	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Identifiant",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Cetățenie",
+	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
 	"comment" : "",
 	"fr" : {
-		"label" : "Citoyenneté",
+		"label" : "0",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -551,7 +551,7 @@
 } ,
 "Identifier/Identifier" : {
 	"type" : "UDT/Text",
-	"cardinality" : "10",
+	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
 		"label" : "Contenu",
@@ -3733,7 +3733,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
+		"label" : "États membres",
 		"description" : "Codes Eurostat pour les États membres de l'UE selon la Nomenclature des unités territoriales statistiques (NUTS)",
 		"example" : "",
 		"verified" : "false"
@@ -3772,7 +3772,7 @@
 		"verified" : "false"
 	}
 } ,
-"CountryEnum/CY" : {
+"NUTS0Enum/CY" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
@@ -3816,23 +3816,34 @@
 		"verified" : "false"
 	}
 } ,
-"NUTS0Enum/ES" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"fr" : {
-		"label" : "Espagne",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
 "NUTS0Enum/EE" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
 		"label" : "Estonie",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"NUTS0Enum/EL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Grèce",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"NUTS0Enum/ES" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Espagne",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3855,17 +3866,6 @@
 	"comment" : "",
 	"fr" : {
 		"label" : "La France",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"NUTS0Enum/EL" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"fr" : {
-		"label" : "Grèce",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -3970,7 +3970,7 @@
 		"verified" : "false"
 	}
 } ,
-"NUTS0Enum/PO" : {
+"NUTS0Enum/PL" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
@@ -4003,12 +4003,12 @@
 		"verified" : "false"
 	}
 } ,
-"NUTS0Enum/SK" : {
+"NUTS0Enum/SE" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Slovaquie",
+		"label" : "la Suède",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -4025,13 +4025,970 @@
 		"verified" : "false"
 	}
 } ,
-"NUTS0Enum/SE" : {
+"NUTS0Enum/SK" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "la Suède",
+		"label" : "Slovaquie",
 		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/select" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Pour sélectionner",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/providerCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "pays émetteur",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/or" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Soit",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/selectCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Choisissez le pays",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/selectProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "sélectionner l'option",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/provisionNotAvailable" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Option non disponible, télécharger le fichier de preuve",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/select1Provision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "sélectionner 1 option",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/for" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "pour",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/from" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "depuis",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/confirmProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "option de confirmation",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/proceed" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "continuer",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/crossBorderEvidenceRequest" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Demande de preuve transfrontalière",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4aUsedTo" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Le Système Technique DE4A sera utilisé pour :",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/requestCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "demander des preuves transfrontalières :",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/uploadCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "télécharger les preuves suivantes :",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/inpectEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Vous pourrez inspecter les preuves et choisir de continuer ou non.",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/dea4aAreYouSure" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Êtes-vous sûr de vouloir utiliser le système technique DE4A ?",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/cancel" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Annuler",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/request" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Demander",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/complete" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Complet",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/provideInputER" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Veuillez fournir les informations nécessaires pour la demande explicite!",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/provideInputP" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Fournissez les informations nécessaires pour l'aperçu des preuves !",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/include" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "inclure",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/uploadEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "télécharger des preuves",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Preview" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Aperçu",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/with" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "avec",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/descriptions" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "descriptifs",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/in" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "dans",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/without" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "sans pour autant",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/exclude" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Exclure",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/schema" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "schème",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum" : {
+	"type" : "Sexul persoanei",
+	"cardinality" : "Lista sexelor umane.",
+	"comment" : "",
+	"fr" : {
+		"label" : "0",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/Female" : {
+	"type" : "Feminin",
+	"cardinality" : "Sexul FEMININ",
+	"comment" : "",
+	"fr" : {
+		"label" : "0",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/Male" : {
+	"type" : "Masculin",
+	"cardinality" : "Sexul MASCULIN",
+	"comment" : "",
+	"fr" : {
+		"label" : "0",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NAP" : {
+	"type" : "Nu se aplică",
+	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"comment" : "",
+	"fr" : {
+		"label" : "0",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NKN" : {
+	"type" : "Necunoscut",
+	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"comment" : "",
+	"fr" : {
+		"label" : "0",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NST" : {
+	"type" : "Nedeclarat",
+	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"comment" : "",
+	"fr" : {
+		"label" : "0",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Langue",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum/en" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Anglais",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum/es" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Espagnol",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum/pt" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Portugais",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum/fr" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "français",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum/sl" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "slovène",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"LangEnum/ro" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"Jurisdiction" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Juridiction",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"Jurisdiction/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Identifiant",
+		"description" : "La valeur de la propriété ID est une URI pour cette juridiction.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"Jurisdiction/Name" : {
+	"type" : "CountryEnum",
+	"cardinality" : "11",
+	"comment" : "",
+	"fr" : {
+		"label" : "Nom",
+		"description" : "Le nom est simplement une chaîne qui identifie la juridiction, typiquement un pays, avec ou sans étiquette de langue.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "État matrimonial",
+		"description" : "Liste des statuts matrimoniaux.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/Cohabitation" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Cohabitation",
+		"description" : "Statut matrimonial de personne: cohabitation",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/DivorcedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Personne divorcée",
+		"description" : "Un état matrimonial de personne: personne divorcée",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/MarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Personne mariée",
+		"description" : "Un état matrimonial de personne: personne mariée",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/Polygamy" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "La polygamie",
+		"description" : "Un état matrimonial de personne: polygamie",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/SeparatedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Personne séparée",
+		"description" : "Une personne État matrimonial: personne séparée",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/SingleParent" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Parent célibataire",
+		"description" : "Statut matrimonial de personne: parent célibataire",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/UnmarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Personne non mariée",
+		"description" : "Un état matrimonial de personne: personne non mariée",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonMaritalStatusEnum/WidowedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Personne veuve",
+		"description" : "Statut matrimonial de personne: personne veuve",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Preuve de naissance",
+		"description" : "Document officiel ou données prouvant la naissance d'un enfant.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"fr" : {
+		"label" : "Identifiant",
+		"description" : "Une référence sans ambiguïté aux preuves de naissance.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"fr" : {
+		"label" : "Date d'émission",
+		"description" : "La date la plus récente sur laquelle l'instance de preuve de naissance a été émise.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Autorité de délivrance",
+		"description" : "Une organisation publique avec autorité officielle chargée de la délivrance des preuves de naissance.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Lieu de délivrance",
+		"description" : "L'emplacement où les preuves de naissance ont été émises.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/CertifiesBirth" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Certifie la naissance",
+		"description" : "Attester de manière formelle que la naissance est vraie.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child" : {
+	"type" : "Person",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Enfant",
+		"description" : "La personne née à la naissance. Une personne de tout âge, qui est un fils ou une fille.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/DateOfBirth" : {
+	"type" : "Person/DateOfBirth",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "Sexe de la personne née",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/PlaceOfBirth" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Parent" : {
+	"type" : "Person",
+	"cardinality" : "01",
+	"comment" : "",
+	"fr" : {
+		"label" : "Parent",
+		"description" : "Le parent de l'enfant. Une des deux personnes qui sont conjointement la cause de la naissance de l'enfant, c'est-à-dire un parent naturel.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Preuve de mariage",
+		"description" : "Document officiel ou données prouvant le mariage de deux personnes.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"fr" : {
+		"label" : "Identifiant",
+		"description" : "Une référence sans ambiguïté à la preuve du mariage.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3.",
+	"fr" : {
+		"label" : "Date d'émission",
+		"description" : "La date la plus récente sur laquelle l'instance de mariage a été émise.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Autorité de délivrance",
+		"description" : "Une organisation publique avec autorité officielle chargée de la délivrance des preuves du mariage.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Lieu de délivrance",
+		"description" : "L'emplacement où la preuve du mariage a été émise.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Certifie le mariage",
+		"description" : "Attestant de manière formelle que le mariage est vrai.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/DateOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Date du mariage",
+		"description" : "La date à laquelle le mariage a eu lieu.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/PlaceOfMarriage" : {
+	"type" : "LocationAddress",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Lieu de mariage",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse" : {
+	"type" : "Person",
+	"cardinality" : "11",
+	"comment" : "",
+	"fr" : {
+		"label" : "Conjoint",
+		"description" : "La personne qui était mariée.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "",
+		"description" : "Le sexe d'une personne doit être enregistré en utilisant un vocabulaire contrôlé approprié pour le contexte spécifique. Dans certains cas, l'état chromosomique ou physique d'une personne sera plus important que le sexe qu'ils expriment, dans d'autres l'inverse seront vrais. Ce qui est toujours important, c'est que le vocabulaire contrôlé utilisé pour décrire le genre d'un individu est indiqué explicitement.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"fr" : {
+		"label" : "Nom de famille après le mariage",
+		"description" : "Cette propriété contient le nom de famille après le mariage de la personne.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"fr" : {
+		"label" : "Nom de famille avant le mariage",
+		"description" : "Cette propriété contient le nom de famille avant le mariage de la personne.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage" : {
+	"type" : "PersonMaritalStatusEnum",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "État matrimonial avant le mariage",
+		"description" : "Situation en ce qui concerne si une personne était célibataire, mariée, séparée, divorcée ou veuve.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Fin du mariage",
+		"description" : "En cas de divorce, cette propriété inclut des informations sur la fin du mariage.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Date de fin du mariage",
+		"description" : "Date de la fin du mariage",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/Cause" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Causer",
+		"description" : "Cause de la fin du mariage.",
 		"example" : "",
 		"verified" : "false"
 	}

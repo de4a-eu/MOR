@@ -111,244 +111,244 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "00",
+	"cardinality" : "Abordare",
 	"comment" : "",
 	"sl" : {
-		"label" : "Naslov.",
-		"description" : "Starš otroka. Ena od obeh oseb ki so skupaj vzrok otrokovega rojstva tj. Naravni staršev.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Endereço",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Unitate administrativă nivel 2",
+	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
 	"sl" : {
-		"label" : "Regija",
-		"description" : "Regija naslova ponavadi okrožje državo ali drugo takšno področje ki običajno obsega več krajev.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Segundo nível territorial do país",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"type" : "CountryEnum",
+	"cardinality" : "Unitate administrativă nivel 1",
+	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
 	"sl" : {
-		"label" : "Država",
-		"description" : "Najvišja upravna enota za naslov skoraj vedno državo.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Primeiro nível territorial do país",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Casuta postala",
+	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
 	"sl" : {
-		"label" : "Poštni predal",
-		"description" : "Številka poštnega predala. INSPIRE-jev naziv za to polje je'postalDeliveryIdentifier', za katerega se uporablja lokacijsko ime. Ta tezaver ločuje poštni predal za večjo neodvisnost od tehnologije.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Caixa postal",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Arteră/drum principal",
+	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
 	"sl" : {
-		"label" : "Prometna pot",
-		"description" : "Glede na smernice INSPIRE je prometna pot definirana kot komponenta naslova, ki predstavlja ime prehoda ali poti od ene lokacije na drugo. Prometna pot ni nujno cesta, vendar je lahko tudi povezava preko vodnih poti ali drugih možnosti.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Via pública",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Identificator adresă",
+	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
 	"sl" : {
-		"label" : "Oznaka lokatorja",
-		"description" : "Lokacijski opis je v okviru smernic INSPIRE definiran ko 'število ali zaporedje znakov, ki enolično določajo lokacijo znotraj relevantnih okvirov. Polna identifikacija lokacije lahko vključuje enega ali več lokacijskih opisov.' Poenostavljeno, to je lahko številka stavbe, stanovanja in podobno. Na primer, za naslov 'Stanovanje 13, Ulica na mostu 17,' je lokacijski opis 'Stanovanje 13, 17.'",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Número, pisco, escada, porta",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Numele locatorului",
+	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
 	"sl" : {
-		"label" : "Naziv lokacije",
-		"description" : "Glede na smernice INSPIRE je naziv lokacije definiran kot 'Samostalnik(i), ki so vezani na fizično entiteto na lokaciji. Naziv lokacije je lahko naziv posestva ali kompleksa, stavba ali del stavbe, ali pa celo ime sobe v stavbi. Ključna razlika med lokacijo in nazivom lokacije je, da naziv lokacije redko vsebuje številke. Na primer, 'Shumann, Berlaymont' je ime sejne sobe na sedežu Evropske komisije, kjer je naziv bolj primeren kot sama lokacija.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Nome do edifício ou sala",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Zona de adrese",
+	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
 	"sl" : {
-		"label" : "Območje naslova",
-		"description" : "Glede na definicijo INSPIRE je območje naslova 'ime ali imena geografskega področja ali lokalnosti, ki združuje skupino naslovov z namenom naslavljanja brez navezave na administrativno enoto.' Tipično je to del mesta, okrožje ali vas.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Área de endereço",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Numele oficiului poștal",
+	"comment" : "Punct de livrare poștal.",
 	"sl" : {
-		"label" : "Naziv pošte",
-		"description" : "Ključna poštna razdelitev naslova običajno mesto. (Opredelitev INSPIRE je 'Eno ali več imen ustvarjenih in vzdrževanih za poštne namene da bi ugotovili pododdelstvo naslovov in poštnih točk.)",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Área postal",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Cod poștal",
+	"comment" : "Codul poștal.",
 	"sl" : {
-		"label" : "Poštna številka",
-		"description" : "Poštna številka po pošti (A.K.A Poštna številka Poštna številka itd.). Post kode so skupni elementi v poštnih naslovnih sistemih mnogih držav.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Código postal",
+		"verified" : "false"
 	}
 } ,
 "Person" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Persoană",
+	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Oseba",
-		"description" : "Posamezna fizična oseba ki je lahko mrtva ali živa vendar ne namišljena.",
+		"label" : "1",
+		"description" : "Pessoa",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Data de nastere",
+	"cardinality" : "Ziua în care persoana s-a născut.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Datum rojstva",
-		"description" : "Dan ko se je rodila oseba.",
+		"label" : "1",
+		"description" : "Data de nascimento",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "An",
+	"cardinality" : "Un an calendaristic gregorian.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Leto",
-		"description" : "Gregorijansko koledarsko leto. Vrednostni prostor leta je niz gregorijanskih koledarskih let kot je opredeljeno v § 5.2.1 ISO 8601. Natančneje je niz enoletnih ne-periodičnih primerov npr. Lexicy 1999 predstavlja celo leto 1999 neodvisno od števila mesecev in dni letos.",
+		"label" : "1",
+		"description" : "Ano",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Lună",
+	"cardinality" : "O lună dintr-un an calendaristic.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Mesec",
-		"description" : "Gregoriški mesec ki se vsako leto ponovi. Vrednost v mesecu je prostor nabora koledarskih mesecev kot je opredeljeno v § 3 ISO 8601. Natančneje je niz enomesečnih dolgoletnih letnih občasnih primerov.",
+		"label" : "1",
+		"description" : "Mês",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Zi",
+	"cardinality" : "O zi dintr-un an calendaristic.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Dan",
-		"description" : "Gregoriški dan ki se ponavlja posebej na dan meseca kot je 5. meseca. Vrednostni prostor dneva je prostor nabora koledarskih datumov kot je opredeljeno v § 3 ISO 8601. Natančneje je niz enodnevnih mesečnih periodičnih primerov.",
+		"label" : "1",
+		"description" : "Dia",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Sex",
+	"cardinality" : "Sex masculin sau feminin.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Spol",
-		"description" : "Kromosomno stanje in reproduktivni organi in struktur osebe ki jim omogoča da se razlikujejo kot ženske ali moške ali nedoločene.",
+		"label" : "1",
+		"description" : "Género",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Locul nașterii",
+	"cardinality" : "Locația în care s-a născut persoana.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Kraj rojstva",
-		"description" : "Lokacijo kjer se je rodila oseba.",
+		"label" : "1",
+		"description" : "Local de nascimento",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Numele persoanei",
+	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Ime osebe",
-		"description" : "Ime in ime osebe. Vsaj eno od obeh mora obstajati.",
+		"label" : "1",
+		"description" : "Nome da pessoa",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Nume de familie",
+	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Priimek",
-		"description" : "Družinsko ime, ki ga običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. V polju se lahko zabeleži tudi več družinskih imen, kot je to običajno v hispanskih državah in se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer ime Miguel de Cervantes Saavedra zabeležilo kot 'de Cervantes Saavedra'.",
+		"label" : "1",
+		"description" : "Apelido",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Prenume",
+	"cardinality" : "Un nume sau mai multe nume.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Ime",
-		"description" : "Ime ali več imenih imen, ki identificirajo posameznika znotraj družine. Ta določijo njihovi starši ob rojstvu ali pa so lahko zakonito določeno s formalnim postopkom. Vsa določena imena so urejena v enem polju, tako da je na primer dano ime za Johanna Sebastiana Bacha 'Johann Sebastian'.",
+		"label" : "1",
+		"description" : "Nome próprio",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Identificator",
+	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Identifikator",
-		"description" : "Oporednotenje identifikatorja se uporablja za povezovanje osebe na kateri koli formalno izdani identifikator za to osebo.",
+		"label" : "1",
+		"description" : "Identificador",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Cetățenie",
+	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
 	"comment" : "",
 	"sl" : {
-		"label" : "Državljanstvo",
-		"description" : "Odnos državljanstva povezuje osebo v pristojnost ki je podelila pravice državljanstva na posameznika kot je pravica do glasovanja da bi prejela določeno zaščito pred Skupnostjo ali izdajo potnega lista.",
+		"label" : "1",
+		"description" : "Cidadania",
 		"example" : "",
-		"verified" : "true"
+		"verified" : "false"
 	}
 } ,
 "PublicOrganisation" : {
@@ -551,7 +551,7 @@
 } ,
 "Identifier/Identifier" : {
 	"type" : "UDT/Text",
-	"cardinality" : "10",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
 		"label" : "Vsebina",
@@ -3733,10 +3733,10 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
+		"label" : "Držav Clanic",
 		"description" : "Eurostatove šifre držav članic EU po nomenklaturi statističnih teritorialnih enot (NUTS)",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/AT" : {
@@ -3747,7 +3747,7 @@
 		"label" : "Avstrija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/BE" : {
@@ -3758,7 +3758,7 @@
 		"label" : "Belgija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/BG" : {
@@ -3769,10 +3769,10 @@
 		"label" : "Bolgarija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
-"CountryEnum/CY" : {
+"NUTS0Enum/CY" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
@@ -3780,7 +3780,7 @@
 		"label" : "Ciper",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/CZ" : {
@@ -3788,10 +3788,10 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Češka",
+		"label" : "Ceška",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/DE" : {
@@ -3799,10 +3799,10 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Nemčija",
+		"label" : "Nemcija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/DK" : {
@@ -3813,18 +3813,7 @@
 		"label" : "Danska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"NUTS0Enum/ES" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"sl" : {
-		"label" : "Španija",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/EE" : {
@@ -3835,7 +3824,29 @@
 		"label" : "Estonija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/EL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Grcija",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/ES" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Španija",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/FI" : {
@@ -3846,7 +3857,7 @@
 		"label" : "Finska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/FR" : {
@@ -3857,18 +3868,7 @@
 		"label" : "Francija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"NUTS0Enum/EL" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"sl" : {
-		"label" : "Grčija",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/HR" : {
@@ -3879,7 +3879,7 @@
 		"label" : "Hrvaška",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/HU" : {
@@ -3890,7 +3890,7 @@
 		"label" : "Madžarska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/IE" : {
@@ -3901,7 +3901,7 @@
 		"label" : "Irska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/IT" : {
@@ -3912,7 +3912,7 @@
 		"label" : "Italija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/LT" : {
@@ -3923,7 +3923,7 @@
 		"label" : "Litva",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/LU" : {
@@ -3934,7 +3934,7 @@
 		"label" : "Luksemburg",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/LV" : {
@@ -3945,7 +3945,7 @@
 		"label" : "Latvija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/MT" : {
@@ -3956,7 +3956,7 @@
 		"label" : "Malta",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/NL" : {
@@ -3967,10 +3967,10 @@
 		"label" : "Nizozemska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
-"NUTS0Enum/PO" : {
+"NUTS0Enum/PL" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
@@ -3978,7 +3978,7 @@
 		"label" : "Poljska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/PT" : {
@@ -3989,7 +3989,7 @@
 		"label" : "Portugalska",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/RO" : {
@@ -4000,29 +4000,7 @@
 		"label" : "Romunija",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"NUTS0Enum/SK" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"sl" : {
-		"label" : "Slovaška",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"NUTS0Enum/SI" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"sl" : {
-		"label" : "Slovenija",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/SE" : {
@@ -4033,7 +4011,986 @@
 		"label" : "Švedska",
 		"description" : "",
 		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/SI" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Slovenija",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/SK" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Slovaška",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/select" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Izberi",
+		"description" : "",
+		"example" : "",
 		"verified" : "false"
+	}
+} ,
+"GUI/providerCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "državo ponudnika",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/or" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "ali",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/selectCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Izberi državo",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/selectProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Izberi pošiljatelja",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/provisionNotAvailable" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Izdajatelj ni na voljo, naložite dokazila",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/select1Provision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "izberite 1 ponudnika",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/for" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "za",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/from" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "iz",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/confirmProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Potrdite ponudnika",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/proceed" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Nadaljujte",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/crossBorderEvidenceRequest" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zahteva za cezmejno pridobivanje dokazil",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4aUsedTo" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Tehnicni sistem DE4A se bo uporabil za:",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/requestCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "pridobitev naslednjih cezmejnih dokazil:",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/uploadCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "nalaganje naslednjih dokazil:",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/inpectEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Dokazila si boste lahko ogledali in se odlocili, ali želite nadaljevati.",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/dea4aAreYouSure" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Ali ste prepricani, da želite uporabiti tehnicni sistem DE4A?",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/cancel" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Preklici",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/request" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zahtevaj",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/complete" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zakljuceno",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/provideInputER" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Prosim, zagotovite zahtevane podatke za izrecno zahtevo!",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/provideInputP" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Prosim, zagotovitev zahtevane podatke za predogled!",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/include" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "vkljuci",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/uploadEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "naloži dokazilo",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Preview" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Predogled",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/with" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "z",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/descriptions" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "opisi",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/in" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "v",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/without" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "brez",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/exclude" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "izkljuci",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/schema" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "shema",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum" : {
+	"type" : "Sexul persoanei",
+	"cardinality" : "Lista sexelor umane.",
+	"comment" : "",
+	"sl" : {
+		"label" : "1",
+		"description" : "Género",
+		"example" : "Lista de gémeros humanos.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/Female" : {
+	"type" : "Feminin",
+	"cardinality" : "Sexul FEMININ",
+	"comment" : "",
+	"sl" : {
+		"label" : "1",
+		"description" : "Feminino",
+		"example" : "O conceito FEMININO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/Male" : {
+	"type" : "Masculin",
+	"cardinality" : "Sexul MASCULIN",
+	"comment" : "",
+	"sl" : {
+		"label" : "1",
+		"description" : "Masculino",
+		"example" : "O conceito MASCULINO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NAP" : {
+	"type" : "Nu se aplică",
+	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"comment" : "",
+	"sl" : {
+		"label" : "1",
+		"description" : "Não aplicável",
+		"example" : "O conceito NÃO APLICÁVEL é usado no contexto de intercâmbio de informações no domínio das ciências sociais quando nenhum dos sexos pode ser representado.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NKN" : {
+	"type" : "Necunoscut",
+	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"comment" : "",
+	"sl" : {
+		"label" : "1",
+		"description" : "Não conhecido",
+		"example" : "O conceito NÃO CONHECIDO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano é desconhecido.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NST" : {
+	"type" : "Nedeclarat",
+	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"comment" : "",
+	"sl" : {
+		"label" : "1",
+		"description" : "Não especificado",
+		"example" : "O conceito NÃO ESPECIFICADO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano não é declarado.",
+		"verified" : "false"
+	}
+} ,
+"LangEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Idiom",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/en" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Wngleščina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/es" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Španski",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/pt" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Portugalski",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/fr" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Francoski",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/sl" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Slovenščina",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/ro" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"Jurisdiction" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Identifikator",
+		"description" : "Vrednost za identifikacijsko lastnost je URI za to jurisdikcijo.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction/Name" : {
+	"type" : "CountryEnum",
+	"cardinality" : "11",
+	"comment" : "",
+	"sl" : {
+		"label" : "Ime",
+		"description" : "Ime je preprosto niz ki identificira jurisdikcijo običajno državo z ali brez jezikovne oznake.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "c",
+		"description" : "Seznam osebnega statusa.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/Cohabitation" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Cohabitation.",
+		"description" : "Oseba Zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/DivorcedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Razvezana oseba",
+		"description" : "Oseba zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/MarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Poročena oseba",
+		"description" : "Oseba zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/Polygamy" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Polygamy.",
+		"description" : "Oseba Zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/SeparatedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Ločena oseba",
+		"description" : "Oseba Zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/SingleParent" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Samohranilec",
+		"description" : "Oseba zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/UnmarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Neporočena oseba",
+		"description" : "Oseba zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/WidowedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Vdova oseba",
+		"description" : "Oseba Zakonski stan",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Rojstvo",
+		"description" : "Uradni dokument ali podatki ki dokazujejo rojstvo otroka.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"sl" : {
+		"label" : "Identifikator",
+		"description" : "Nedvoumno sklicevanje na rojstni dokaz.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"sl" : {
+		"label" : "Datum izdaje",
+		"description" : "Najnovejši datum na katerega je bil izdan primer rojstva dokazov.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Organ izdaje",
+		"description" : "Javna organizacija z uradnim organom ki je zadolžena za izdajo rojstnih dokazov.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Izdajanje kraja",
+		"description" : "Lokacijo kjer so bili izdani rojstni dokaz.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Potrjuje rojstvo",
+		"description" : "Uradno potrjevanje da je rojstvo res.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child" : {
+	"type" : "Person",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Otrok",
+		"description" : "Oseba ki se je rodila ob rojstvu. Oseba katere koli starosti ki je sin ali hči.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/DateOfBirth" : {
+	"type" : "Person/DateOfBirth",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/PlaceOfBirth" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Parent" : {
+	"type" : "Person",
+	"cardinality" : "01",
+	"comment" : "",
+	"sl" : {
+		"label" : "Starš",
+		"description" : "SPOLO OSEBENE OSEBE",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Poročni dokaz",
+		"description" : "Uradni dokument ali podatki ki dokazujejo zakonsko zvezo dveh oseb.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"sl" : {
+		"label" : "Identifikator",
+		"description" : "Nedvoumno sklicevanje na zakonske dokaze.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3.",
+	"sl" : {
+		"label" : "Datum izdaje",
+		"description" : "Najnovejši datum na katerem je bil izdan primer Marriageedidence.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Organ izdaje",
+		"description" : "Javna organizacija z uradnim organom ki je zadolžena za izdajo zakonskih zakonov.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Izdajanje kraja",
+		"description" : "Lokacijo kjer je bil izdan zakonski dokaz.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Potrjuje poroko",
+		"description" : "Uradni način da je zakonska zveza resnična.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/DateOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Datum poroke",
+		"description" : "Datum ko je potekala zakonska zveza.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/PlaceOfMarriage" : {
+	"type" : "LocationAddress",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse" : {
+	"type" : "Person",
+	"cardinality" : "11",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zakonec",
+		"description" : "Oseba ki je bila poročena.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"sl" : {
+		"label" : "Družinsko ime po poroki",
+		"description" : "Spol posameznika je treba zabeležiti z uporabo nadzorovanega besedišča ki je primeren za poseben kontekst. V nekaterih primerih bo kromosomsko ali fizično stanje posameznika pomembnejše od spola ki ga izražajo v drugih pa bo vzvratno res. Vedno je pomembno da je nadzorovani besednjak ki se uporablja za opis spola posameznika izrecno navedeno.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"sl" : {
+		"label" : "Družinsko ime pred poroko",
+		"description" : "Ta lastnost vsebuje družinsko ime po zakonu osebe.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage" : {
+	"type" : "PersonMaritalStatusEnum",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zakonski stan pred poroko",
+		"description" : "Ta lastnost vsebuje družinsko ime pred poroko osebe.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Konec zakonske zveze",
+		"description" : "Razmere glede tega ali je bila oseba samska poročena ločena razvezana ali vdova.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Datum konca zakonske zveze",
+		"description" : "V primeru razveze ta lastnost vključuje informacije na koncu poroke",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/Cause" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Vzrok",
+		"description" : "Datum konca zakonske zveze",
+		"example" : "",
+		"verified" : "true"
 	}
 	}
 }

@@ -111,244 +111,244 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "00",
+	"cardinality" : "Abordare",
 	"comment" : "",
 	"ro" : {
-		"label" : "Abordare",
-		"description" : "",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Address",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Unitate administrativă nivel 2",
+	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
 	"ro" : {
-		"label" : "Regiune",
-		"description" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Admin unit level 2",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"type" : "CountryEnum",
+	"cardinality" : "Unitate administrativă nivel 1",
+	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
 	"ro" : {
-		"label" : "Țară",
-		"description" : "Unitate administrativă superioară, spre exemplu o țară.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Admin unit level 1",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Casuta postala",
+	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
 	"ro" : {
-		"label" : "Casuta postala",
-		"description" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "PoBox",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Arteră/drum principal",
+	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
 	"ro" : {
-		"label" : "Arteră/drum principal",
-		"description" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Thoroughface",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Identificator adresă",
+	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
 	"ro" : {
-		"label" : "Identificator adresă",
-		"description" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Locator designator",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Numele locatorului",
+	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
 	"ro" : {
-		"label" : "Numele locatorului",
-		"description" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Locator name",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Zona de adrese",
+	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
 	"ro" : {
-		"label" : "Zona de adrese",
-		"description" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Address area",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Numele oficiului poștal",
+	"comment" : "Punct de livrare poștal.",
 	"ro" : {
-		"label" : "Numele oficiului poștal",
-		"description" : "Punct de livrare poștal.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Post name",
+		"verified" : "false"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "00",
-	"comment" : "",
+	"cardinality" : "Cod poștal",
+	"comment" : "Codul poștal.",
 	"ro" : {
-		"label" : "Cod poștal",
-		"description" : "Codul poștal.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "",
+		"description" : "1",
+		"example" : "Post code",
+		"verified" : "false"
 	}
 } ,
 "Person" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Persoană",
+	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Persoană",
-		"description" : "O persoană fizică care poate fi moartă sau în viață.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Person",
+		"example" : "An individual natural person who may be dead or alive, but not imaginary.",
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Data de nastere",
+	"cardinality" : "Ziua în care persoana s-a născut.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Data de nastere",
-		"description" : "Ziua în care persoana s-a născut.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Date of birth",
+		"example" : "The day on which the person was born.",
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "An",
+	"cardinality" : "Un an calendaristic gregorian.",
 	"comment" : "",
 	"ro" : {
-		"label" : "An",
-		"description" : "Un an calendaristic gregorian.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Year",
+		"example" : "A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.",
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Lună",
+	"cardinality" : "O lună dintr-un an calendaristic.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Lună",
-		"description" : "O lună dintr-un an calendaristic.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Month",
+		"example" : "A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.",
+		"verified" : "false"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Zi",
+	"cardinality" : "O zi dintr-un an calendaristic.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Zi",
-		"description" : "O zi dintr-un an calendaristic.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Day",
+		"example" : "A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.",
+		"verified" : "false"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Sex",
+	"cardinality" : "Sex masculin sau feminin.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Sex",
-		"description" : "Sex masculin sau feminin.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Gender",
+		"example" : "The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.",
+		"verified" : "false"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Locul nașterii",
+	"cardinality" : "Locația în care s-a născut persoana.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Locul nașterii",
-		"description" : "Locația în care s-a născut persoana.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Place of birth",
+		"example" : "The Location where the person was born.",
+		"verified" : "false"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Numele persoanei",
+	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Numele persoanei",
-		"description" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Person name",
+		"example" : "The family name and given name of a Person. At least one of the two must exist.",
+		"verified" : "false"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Nume de familie",
+	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Nume de familie",
-		"description" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Family name",
+		"example" : "A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. 'de Boer', 'van de Putte', 'von und zu Orlow'. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's Family Name would be recorded as 'de Cervantes Saavedra'.",
+		"verified" : "false"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "",
-	"cardinality" : "10",
+	"type" : "Prenume",
+	"cardinality" : "Un nume sau mai multe nume.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Prenume",
-		"description" : "Un nume sau mai multe nume.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Given name",
+		"example" : "A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is 'Johann Sebastian'.",
+		"verified" : "false"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Identificator",
+	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Identificator",
-		"description" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Identifier",
+		"example" : "The identifier relation is used to link a Person to any formally issued Identifier for that Person.",
+		"verified" : "false"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "",
-	"cardinality" : "00",
+	"type" : "Cetățenie",
+	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
 	"comment" : "",
 	"ro" : {
-		"label" : "Cetățenie",
-		"description" : "Condiția juridică de cetățean, situația de cetățean.",
-		"example" : "",
-		"verified" : "true"
+		"label" : "1",
+		"description" : "Citizenship",
+		"example" : "The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.",
+		"verified" : "false"
 	}
 } ,
 "PublicOrganisation" : {
@@ -551,7 +551,7 @@
 } ,
 "Identifier/Identifier" : {
 	"type" : "UDT/Text",
-	"cardinality" : "10",
+	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Conţinut",
@@ -3733,10 +3733,10 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
+		"label" : "State membre",
 		"description" : "Codurile Eurostat pentru statele membre ale UE conform Nomenclatorului unităților teritoriale de statistică (NUTS)",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/AT" : {
@@ -3747,7 +3747,7 @@
 		"label" : "Austria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/BE" : {
@@ -3758,7 +3758,7 @@
 		"label" : "Belgia",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "NUTS0Enum/BG" : {
@@ -3769,10 +3769,10 @@
 		"label" : "Bulgaria",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
-"CountryEnum/CY" : {
+"NUTS0Enum/CY" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
@@ -3816,23 +3816,34 @@
 		"verified" : "true"
 	}
 } ,
-"NUTS0Enum/ES" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"ro" : {
-		"label" : "Spania",
-		"description" : "",
-		"example" : "",
-		"verified" : "true"
-	}
-} ,
 "NUTS0Enum/EE" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
 		"label" : "Estonia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/EL" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Grecia",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"NUTS0Enum/ES" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Spania",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3855,17 +3866,6 @@
 	"comment" : "",
 	"ro" : {
 		"label" : "Franţa",
-		"description" : "",
-		"example" : "",
-		"verified" : "true"
-	}
-} ,
-"NUTS0Enum/EL" : {
-	"type" : "xs:token",
-	"cardinality" : "00",
-	"comment" : "",
-	"ro" : {
-		"label" : "Grecia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -3970,7 +3970,7 @@
 		"verified" : "true"
 	}
 } ,
-"NUTS0Enum/PO" : {
+"NUTS0Enum/PL" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
@@ -4003,12 +4003,12 @@
 		"verified" : "true"
 	}
 } ,
-"NUTS0Enum/SK" : {
+"NUTS0Enum/SE" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Slovacia",
+		"label" : "Suedia",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4025,14 +4025,971 @@
 		"verified" : "true"
 	}
 } ,
-"NUTS0Enum/SE" : {
+"NUTS0Enum/SK" : {
 	"type" : "xs:token",
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Suedia",
+		"label" : "Slovacia",
 		"description" : "",
 		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/select" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Selectați",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/providerCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "țara emitentă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/or" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "sau",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/selectCountry" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Selectează țara",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/selectProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Selectați opțiunea",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/provisionNotAvailable" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Opțiunea nu este disponibilă, vă rugăm să încărcați documentele.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/select1Provision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "vă rugăm selectați o opțiune",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/for" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "pentru",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/from" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "din",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/confirmProvision" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Confirmați opțiunea",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/proceed" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Continuă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/crossBorderEvidenceRequest" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cerere de documente transfrontaliere",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4aUsedTo" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sistemul tehnic DE4A va fi utilizat pentru:",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/requestCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "solicitați următoarele documente transfrontaliere:",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/uploadCrossBorderEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "încărcați următoarele documente",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/inpectEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Veți putea vizualiza documentele și alege dacă doriți să continuați.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/dea4aAreYouSure" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Sunteți sigur că doriți să utilizați sistemul tehnic DE4A?",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/cancel" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Anulare",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/request" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cerere",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/complete" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Complet",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/provideInputER" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Vă rugăm să furnizați informațiile necesare la cererea explicită!",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/provideInputP" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Vă rugăm să furnizați informațiile necesare pentru Previzualizare!",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/include" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "include",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/uploadEvidence" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "încărcați documente",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Preview" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "previzualizare",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/with" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "cu",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/descriptions" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "descrieri",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/in" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "în",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/without" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "fără",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/exclude" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "exclude",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/schema" : {
+	"type" : "xss:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "schemă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonGenderEnum" : {
+	"type" : "Sexul persoanei",
+	"cardinality" : "Lista sexelor umane.",
+	"comment" : "",
+	"ro" : {
+		"label" : "1",
+		"description" : "Person gender",
+		"example" : "List of human genders.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/Female" : {
+	"type" : "Feminin",
+	"cardinality" : "Sexul FEMININ",
+	"comment" : "",
+	"ro" : {
+		"label" : "1",
+		"description" : "Female",
+		"example" : "The concept FEMALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/Male" : {
+	"type" : "Masculin",
+	"cardinality" : "Sexul MASCULIN",
+	"comment" : "",
+	"ro" : {
+		"label" : "1",
+		"description" : "Male",
+		"example" : "The concept MALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NAP" : {
+	"type" : "Nu se aplică",
+	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"comment" : "",
+	"ro" : {
+		"label" : "1",
+		"description" : "Not applicable",
+		"example" : "The concept NOT APPLICABLE is used in the context of interchange of information in the social sciences domain when none of the sexes can be represented.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NKN" : {
+	"type" : "Necunoscut",
+	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"comment" : "",
+	"ro" : {
+		"label" : "1",
+		"description" : "Not known",
+		"example" : "The concept NOT KNOWN is used in the context of interchange of information in the social sciences domain when the human sex is unkown.",
+		"verified" : "false"
+	}
+} ,
+"PersonGenderEnum/NST" : {
+	"type" : "Nedeclarat",
+	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"comment" : "",
+	"ro" : {
+		"label" : "1",
+		"description" : "Not stated",
+		"example" : "The concept NOT STATED is used in the context of interchange of information in the social sciences domain when the human sex is not stated.",
+		"verified" : "false"
+	}
+} ,
+"LangEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Limba",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/en" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Engleză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/es" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Spaniolă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/pt" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Portugheză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/fr" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Franceză",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/sl" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Slovenă",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"LangEnum/ro" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Română",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Jurisdicția",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Identificator",
+		"description" : "Valoarea atributului de identificare este un URI.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"Jurisdiction/Name" : {
+	"type" : "CountryEnum",
+	"cardinality" : "11",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume țară",
+		"description" : "Numele care identifică țara.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum" : {
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Starea civilă a persoanei",
+		"description" : "Stărea civilă posibilă a unei persoane.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/Cohabitation" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Coabitare",
+		"description" : "Starea civilă a unei persoane: coabitare",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/DivorcedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană divorțată",
+		"description" : "Starea civilă a unei persoane: divorțată",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/MarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană căsătorită",
+		"description" : "Starea civilă a unei persoane: căsătorită",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/Polygamy" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Poligamie",
+		"description" : "Starea civilă a unei persoane: poligamie",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/SeparatedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană desparțită",
+		"description" : "Starea civilă a unei persoane: separată",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/SingleParent" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Părinte singur",
+		"description" : "Starea civilă a unei persoane: părinte singur",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/UnmarriedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană necăsătorită",
+		"description" : "Starea civilă a unei persoane: necăsătorită",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"PersonMaritalStatusEnum/WidowedPerson" : {
+	"type" : "xs:token",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Persoană văduvă",
+		"description" : "Starea civilă a unei persoane: văduvă",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Act de naștere",
+		"description" : "Document oficial sau date care dovedesc nașterea unui copil.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"ro" : {
+		"label" : "Număr act",
+		"description" : "O referire specifică la actul nașterii.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
+	"ro" : {
+		"label" : "Data înregistrării actului",
+		"description" : "Data la care a fost înregistrat actul nașterii.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "O organizație publică responsabilă cu eliberarea actului de naștere.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Localitate înregistrare act",
+		"description" : "Localitatea în care a fost eliberat actul nașterii (U.A.T.).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Atestare naștere",
+		"description" : "Atestarea înregistrării nașterii.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child" : {
+	"type" : "Person",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Titular",
+		"description" : "Persoană căreia i se eliberează actul de naștere.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/DateOfBirth" : {
+	"type" : "Person/DateOfBirth",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "Sexul titularului.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Child/PlaceOfBirth" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"BirthEvidence/CertifiesBirth/Parent" : {
+	"type" : "Person",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Părinte titular",
+		"description" : "Unul din părinții naturali.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Act de căsătorie",
+		"description" : "Document oficial sau date care dovedesc căsătoria a două persoane.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/Identifier" : {
+	"type" : "Identifier",
+	"cardinality" : "00",
+	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
+	"ro" : {
+		"label" : "Număr act",
+		"description" : "O referire specifică la actul de căsătorie.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"MarriageEvidence/IssueDate" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "It is the DateType from unqualified data types from UBL-2.3.",
+	"ro" : {
+		"label" : "Data înregistrării actului",
+		"description" : "Data la care a fost înregistrată căsătoria.",
+		"example" : "20/05/2021",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingAuthority" : {
+	"type" : "PublicOrganisation",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Autoritatea emitentă",
+		"description" : "O organizație publică responsabilă cu eliberarea actului de căsătorie.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace" : {
+	"type" : "LocationAddress",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Localitate înregistrare act",
+		"description" : "Localitatea în care a fost eliberat actul de căsătorie.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL2" : {
+	"type" : "LocationAddress/AdminUnitL2",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/IssuingPlace/AdminUnitL1" : {
+	"type" : "LocationAddress/AdminUnitL1",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Atestare căsătorie",
+		"description" : "Atestarea înregistrării căsătoriei.",
+		"example" : "20/04/2021",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/DateOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Data căsătoriei",
+		"description" : "Data la care a avut loc căsătoria.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/PlaceOfMarriage" : {
+	"type" : "LocationAddress",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Locul căsătoriei",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse" : {
+	"type" : "Person",
+	"cardinality" : "11",
+	"comment" : "",
+	"ro" : {
+		"label" : "Soțul/Soția",
+		"description" : "Una din persoanele căsătorite.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/Gender" : {
+	"type" : "PersonGenderEnum",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "",
+		"description" : "Sexul unei persoane (Feminin sau Masculin).",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameAfterMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume de familie după căsătorie",
+		"description" : "Numele de familie după căsătorie al soțului/soției.",
+		"example" : "Maria",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/FamilyNameBeforeMarriage" : {
+	"type" : "UDT/Text",
+	"cardinality" : "01",
+	"comment" : "",
+	"ro" : {
+		"label" : "Nume de familie înainte de căsătorie",
+		"description" : "Numele de familie înainte de căsătoria al soțului/soției.",
+		"example" : "Maria Khan",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesMarriage/Spouse/MaritalStatusBeforeMarriage" : {
+	"type" : "PersonMaritalStatusEnum",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Starea civilă înainte de căsătorie",
+		"description" : "Situația cu privire la starea civilă a persoanei. Dacă era singură, căsătorită, separată, divorțată sau văduvă.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage" : {
+	"type" : "",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Actul care atestă sfârșitul căsătoriei",
+		"description" : "În caz de divorț, actul de divorț care conține informații despre sfârșitul căsătoriei.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/DateOfEndOfMarriage" : {
+	"type" : "UDT/Date",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Data încheierii căsătoriei",
+		"description" : "Data încetării căsătoriei.",
+		"example" : "05/01/2022",
+		"verified" : "true"
+	}
+} ,
+"MarriageEvidence/CertifiesEndOfMarriage/Cause" : {
+	"type" : "UDT/Text",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Cauză",
+		"description" : "Cauza încetării căsătoriei.",
+		"example" : "Lipsa de comunicare",
 		"verified" : "true"
 	}
 	}
