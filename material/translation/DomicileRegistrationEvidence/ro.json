@@ -132,7 +132,7 @@
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "CountryEnum",
+	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
