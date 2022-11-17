@@ -62,27 +62,33 @@
 	<option value="ro">Romanian</option>
 </select>
 <!-- Canonical Evidence Types to print -->
-<select name="CanonicalType" id="CanonicalType" onChange="changeCanonical(this.selectedIndex)">
-	<option value="" selected> --Select canonical type to print --</option>
+<select name="CanonicalType" id="CanonicalType" onChange="canonical=this.options[this.selectedIndex].value">
+	<option value="DomicileRegistrationEvidence" selected>DomicileRegistrationEvidence</option>
 	<option value="BirthEvidence">BirthEvidence Example</option>
 	<option value="MarriageEvidence">MarriageEvidence Example</option>
 </select>
+<select name="ssummary" id="ssummary" onChange="summary=this.selectedIndex">
+	<option value="0" selected>All attributes</option>
+	<option value="1">Only top attributes in certified section</option>
+</select>
+<input type="button" value="Proceed" onclick="proceed()">
 </form>
 <div id="container"></div>
 <script>
 var lang = "en"
-const canonical = document.getElementById("CanonicalType")
+var canonical = "DomicileRegistrationEvidence"
+var summary = 0
 
 loadMOR(lang) //local MOR in English by default
 
-function changeCanonical(index){
-	if (index>0) printCanonicalType (canonical.options[index].value, document.getElementById('container'), lang, 0)
+function proceed(){
+	printCanonicalType (canonical, document.getElementById('container'), lang, 0, summary) 
 }
+
 function changeLang(language) {
 	console.log("change lang :: "+language)
 	 lang = language
 	 loadMOR(lang)
-	 changeCanonical(canonical.selectedIndex)
  }
 
 </script>
