@@ -111,244 +111,244 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "Abordare",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Adresse",
-		"verified" : "false"
+		"label" : "Endereço",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Unitate administrativă nivel 2",
-	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Unité d'administration Niveau 2",
-		"verified" : "false"
+		"label" : "Segundo nível territorial do país",
+		"description" : "A região do endereço, geralmente um distrito, concelho ou outra área que tipicamente abrange várias freguesias.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
 	"type" : "CountryEnum",
-	"cardinality" : "Unitate administrativă nivel 1",
-	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Unité d'administration Niveau 1",
-		"verified" : "false"
+		"label" : "Primeiro nível territorial do país",
+		"description" : "A unidade administrativa superior para o endereço, quase sempre um país representado pelo código ISO 3166-1.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Casuta postala",
-	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Boîte postale",
-		"verified" : "false"
+		"label" : "Caixa postal",
+		"description" : "O número de um caixa postal",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Arteră/drum principal",
-	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Rétrécissement",
-		"verified" : "false"
+		"label" : "Via pública",
+		"description" : "Citando as diretrizes INSPIRE, uma via é: 'Um componente de um endereço que representa o nome de uma passagem ou caminho de um local para outro. Uma via não é necessariamente uma estrada, pode ser uma hidrovia ou algum outro recurso.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Identificator adresă",
-	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Concepteur de localisateur",
-		"verified" : "false"
+		"label" : "Número, pisco, escada, porta",
+		"description" : "O designador de localizador é definido pelas diretrizes INSPIRE como 'um número ou uma sequência de caracteres que identifica exclusivamente o localizador dentro do(s) âmbito(s) relevante(s). A identificação completa do localizador pode incluir um ou mais designadores de localizador'. Em termos mais simples, este é o edifício número, número do apartamento, etc. Para um endereço como 'Flat 3, 17 Bridge Street', o localizador é 'Flat 3, 17'.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele locatorului",
-	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Nom du localisateur",
-		"verified" : "false"
+		"label" : "Nome do edifício ou sala",
+		"description" : "Com base nas diretrizes INSPIRE, o nome do localizador é definido como: 'nome(s) próprio(s) aplicado(s) à entidade do mundo real identificada pelo localizador. O nome do localizador pode ser o nome da propriedade ou complexo, o prédio ou parte do prédio, ou pode ser o nome de uma sala dentro de um prédio. A principal diferença entre um localizador e um nome de localizador é que o último é um nome próprio e é improvável que inclua dígitos. Por exemplo, 'Shumann, Berlaymont' é uma sala de reuniões dentro da sede da Comissão Europeia, portanto, o nome do localizador é mais apropriado do que o localizador.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Zona de adrese",
-	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Domaine d'adressage",
-		"verified" : "false"
+		"label" : "Área de endereço",
+		"description" : "Tomando a definição do INSPIRE, área de endereço é: o(s) nome(s) de uma área geográfica ou localidade que agrupa um número de objetos endereçáveis ​​para fins de endereçamento, sem ser uma unidade administrativa. Normalmente, isso faria parte de uma cidade, um bairro ou cidade",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele oficiului poștal",
-	"comment" : "Punct de livrare poștal.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Après le nom",
-		"verified" : "false"
+		"label" : "Área postal",
+		"description" : "A principal divisão postal do endereço, geralmente é a cidade. (A definição do Inspire é 'um ou mais nomes criados e mantidos para fins postais para identificar uma subdivisão de endereços e pontos de entrega postal).",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Cod poștal",
-	"comment" : "Codul poștal.",
+	"cardinality" : "00",
+	"comment" : "",
 	"pt" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Code postal",
-		"verified" : "false"
+		"label" : "Código postal",
+		"description" : "O código postal (A.K.A Código Postal, Código ZIP etc.). Os códigos postais são elementos comuns nos sistemas de endereço postal de muitos países.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person" : {
-	"type" : "Persoană",
-	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
+	"type" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "La personne",
+		"label" : "Pessoa",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "Data de nastere",
-	"cardinality" : "Ziua în care persoana s-a născut.",
+	"type" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Date de naissance",
+		"label" : "Data de nascimento",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "An",
-	"cardinality" : "Un an calendaristic gregorian.",
+	"type" : "xsd:gYear",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "An",
+		"label" : "Ano",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "Lună",
-	"cardinality" : "O lună dintr-un an calendaristic.",
+	"type" : "xsd:gMonth",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Mois",
+		"label" : "Mês",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "Zi",
-	"cardinality" : "O zi dintr-un an calendaristic.",
+	"type" : "xsd:gDay",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Jour",
+		"label" : "Dia",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "Sex",
-	"cardinality" : "Sex masculin sau feminin.",
+	"type" : "PersonGenderEnum",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Le sexe",
+		"label" : "Género",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "Locul nașterii",
-	"cardinality" : "Locația în care s-a născut persoana.",
+	"type" : "LocationAddress",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Lieu de naissance",
+		"label" : "Local de nascimento",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "Numele persoanei",
-	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
+	"type" : "",
+	"cardinality" : "10",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Nom d'une personne",
+		"label" : "Nome da pessoa",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "Nume de familie",
-	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
+	"type" : "UDT/Name",
+	"cardinality" : "01",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Nom de famille",
+		"label" : "Apelido",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "Prenume",
-	"cardinality" : "Un nume sau mai multe nume.",
+	"type" : "UDT/Text",
+	"cardinality" : "01",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Prénom",
+		"label" : "Nome próprio",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "Identificator",
-	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
+	"type" : "Identifier",
+	"cardinality" : "01",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Identifiant",
+		"label" : "Identificador",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "Cetățenie",
-	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
+	"type" : "Jurisdiction",
+	"cardinality" : "01",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Citoyenneté",
+		"label" : "Cidadania",
+		"description" : "",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "PublicOrganisation" : {
@@ -4378,69 +4378,69 @@
 	}
 } ,
 "PersonGenderEnum" : {
-	"type" : "Sexul persoanei",
-	"cardinality" : "Lista sexelor umane.",
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Sexe personne",
-		"example" : "Liste des tenues humaines.",
-		"verified" : "false"
+		"label" : "Género",
+		"description" : "Lista de gémeros humanos.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Female" : {
-	"type" : "Feminin",
-	"cardinality" : "Sexul FEMININ",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Femme",
-		"example" : "Le concept femelle est utilisé pour représenter les sexes humains dans le contexte de l'échange d'informations dans le domaine des sciences sociales.",
-		"verified" : "false"
+		"label" : "Feminino",
+		"description" : "O conceito FEMININO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Male" : {
-	"type" : "Masculin",
-	"cardinality" : "Sexul MASCULIN",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Homme",
-		"example" : "Le concept mâle est utilisé pour représenter les sexes humains dans le contexte de l'échange d'informations dans le domaine des sciences sociales.",
-		"verified" : "false"
+		"label" : "Masculino",
+		"description" : "O conceito MASCULINO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NAP" : {
-	"type" : "Nu se aplică",
-	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "N'est pas applicable",
-		"example" : "Le concept non applicable est utilisé dans le contexte de l'échange d'informations dans le domaine des sciences sociales lorsque aucune des sexes ne peut être représentée.",
-		"verified" : "false"
+		"label" : "Não aplicável",
+		"description" : "O conceito NÃO APLICÁVEL é usado no contexto de intercâmbio de informações no domínio das ciências sociais quando nenhum dos sexos pode ser representado.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NKN" : {
-	"type" : "Necunoscut",
-	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Pas connu",
-		"example" : "Le concept non connu est utilisé dans le contexte de l'échange d'informations dans le domaine des sciences sociales lorsque le sexe humain est incomparable.",
-		"verified" : "false"
+		"label" : "Não conhecido",
+		"description" : "O conceito NÃO CONHECIDO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano é desconhecido.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NST" : {
-	"type" : "Nedeclarat",
-	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "1",
-		"description" : "Non indiqué",
-		"example" : "Le concept non indiqué est utilisé dans le contexte de l'échange d'informations dans le domaine des sciences sociales lorsque le sexe humain n'est pas indiqué.",
-		"verified" : "false"
+		"label" : "Não especificado",
+		"description" : "O conceito NÃO ESPECIFICADO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano não é declarado.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LangEnum" : {

@@ -111,244 +111,244 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "Abordare",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Endereço",
-		"verified" : "false"
+		"label" : "Naslov.",
+		"description" : "Starš otroka. Ena od obeh oseb ki so skupaj vzrok otrokovega rojstva tj. Naravni staršev.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Unitate administrativă nivel 2",
-	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Segundo nível territorial do país",
-		"verified" : "false"
+		"label" : "Admin Enota Nivo 2",
+		"description" : "Regija naslova ponavadi okrožje državo ali drugo takšno področje ki običajno obsega več krajev.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
 	"type" : "CountryEnum",
-	"cardinality" : "Unitate administrativă nivel 1",
-	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Primeiro nível territorial do país",
-		"verified" : "false"
+		"label" : "Admin Enota Nivo 1",
+		"description" : "Najvišja upravna enota za naslov skoraj vedno državo. Najboljša praksa je uporaba kode ISO 3166-1.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Casuta postala",
-	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Caixa postal",
-		"verified" : "false"
+		"label" : "Poštni predal",
+		"description" : "Številka poštnega predala. INSPIRE-jev naziv za to polje je'postalDeliveryIdentifier', za katerega se uporablja lokacijsko ime. Ta tezaver ločuje poštni predal za večjo neodvisnost od tehnologije.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Arteră/drum principal",
-	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Via pública",
-		"verified" : "false"
+		"label" : "Prometna pot",
+		"description" : "Glede na smernice INSPIRE je prometna pot definirana kot komponenta naslova, ki predstavlja ime prehoda ali poti od ene lokacije na drugo. Prometna pot ni nujno cesta, vendar je lahko tudi povezava preko vodnih poti ali drugih možnosti.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Identificator adresă",
-	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Número, pisco, escada, porta",
-		"verified" : "false"
+		"label" : "Oznaka lokatorja",
+		"description" : "Lokacijski opis je v okviru smernic INSPIRE definiran ko 'število ali zaporedje znakov, ki enolično določajo lokacijo znotraj relevantnih okvirov. Polna identifikacija lokacije lahko vključuje enega ali več lokacijskih opisov.' Poenostavljeno, to je lahko številka stavbe, stanovanja in podobno. Na primer, za naslov 'Stanovanje 13, Ulica na mostu 17,' je lokacijski opis 'Stanovanje 13, 17.'",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele locatorului",
-	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Nome do edifício ou sala",
-		"verified" : "false"
+		"label" : "Naziv lokacije",
+		"description" : "Glede na smernice INSPIRE je naziv lokacije definiran kot 'Samostalnik(i), ki so vezani na fizično entiteto na lokaciji. Naziv lokacije je lahko naziv posestva ali kompleksa, stavba ali del stavbe, ali pa celo ime sobe v stavbi. Ključna razlika med lokacijo in nazivom lokacije je, da naziv lokacije redko vsebuje številke. Na primer, 'Shumann, Berlaymont' je ime sejne sobe na sedežu Evropske komisije, kjer je naziv bolj primeren kot sama lokacija.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Zona de adrese",
-	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Área de endereço",
-		"verified" : "false"
+		"label" : "Območje naslova",
+		"description" : "Glede na definicijo INSPIRE je območje naslova 'ime ali imena geografskega področja ali lokalnosti, ki združuje skupino naslovov z namenom naslavljanja brez navezave na administrativno enoto.' Tipično je to del mesta, okrožje ali vas.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele oficiului poștal",
-	"comment" : "Punct de livrare poștal.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Área postal",
-		"verified" : "false"
+		"label" : "Naziv pošte",
+		"description" : "Ključna poštna razdelitev naslova običajno mesto. (Opredelitev INSPIRE je 'Eno ali več imen ustvarjenih in vzdrževanih za poštne namene da bi ugotovili pododdelstvo naslovov in poštnih točk.)",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Cod poștal",
-	"comment" : "Codul poștal.",
+	"cardinality" : "00",
+	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Código postal",
-		"verified" : "false"
+		"label" : "Poštna številka",
+		"description" : "Poštna številka po pošti (A.K.A Poštna številka Poštna številka itd.). Post kode so skupni elementi v poštnih naslovnih sistemih mnogih držav.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "Person" : {
-	"type" : "Persoană",
-	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
+	"type" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Pessoa",
+		"label" : "Oseba",
+		"description" : "Posamezna fizična oseba ki je lahko mrtva ali živa vendar ne namišljena.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "Data de nastere",
-	"cardinality" : "Ziua în care persoana s-a născut.",
+	"type" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Data de nascimento",
+		"label" : "Datum rojstva",
+		"description" : "Dan ko se je rodila oseba.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "An",
-	"cardinality" : "Un an calendaristic gregorian.",
+	"type" : "xsd:gYear",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Ano",
+		"label" : "Leto",
+		"description" : "Gregorijansko koledarsko leto. Vrednostni prostor leta je niz gregorijanskih koledarskih let kot je opredeljeno v § 5.2.1 ISO 8601. Natančneje je niz enoletnih ne-periodičnih primerov npr. Lexicy 1999 predstavlja celo leto 1999 neodvisno od števila mesecev in dni letos.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "Lună",
-	"cardinality" : "O lună dintr-un an calendaristic.",
+	"type" : "xsd:gMonth",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Mês",
+		"label" : "Mesec",
+		"description" : "Gregoriški mesec ki se vsako leto ponovi. Vrednost v mesecu je prostor nabora koledarskih mesecev kot je opredeljeno v § 3 ISO 8601. Natančneje je niz enomesečnih dolgoletnih letnih občasnih primerov.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "Zi",
-	"cardinality" : "O zi dintr-un an calendaristic.",
+	"type" : "xsd:gDay",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Dia",
+		"label" : "Dan",
+		"description" : "Gregoriški dan ki se ponavlja posebej na dan meseca kot je 5. meseca. Vrednostni prostor dneva je prostor nabora koledarskih datumov kot je opredeljeno v § 3 ISO 8601. Natančneje je niz enodnevnih mesečnih periodičnih primerov.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "Sex",
-	"cardinality" : "Sex masculin sau feminin.",
+	"type" : "PersonGenderEnum",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Género",
+		"label" : "Spol",
+		"description" : "Kromosomno stanje in reproduktivni organi in struktur osebe ki jim omogoča da se razlikujejo kot ženske ali moške ali nedoločene.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "Locul nașterii",
-	"cardinality" : "Locația în care s-a născut persoana.",
+	"type" : "LocationAddress",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Local de nascimento",
+		"label" : "Kraj rojstva",
+		"description" : "Lokacijo kjer se je rodila oseba.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "Numele persoanei",
-	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
+	"type" : "",
+	"cardinality" : "10",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Nome da pessoa",
+		"label" : "Ime osebe",
+		"description" : "Ime in ime osebe. Vsaj eno od obeh mora obstajati.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "Nume de familie",
-	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
+	"type" : "UDT/Name",
+	"cardinality" : "01",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Apelido",
+		"label" : "Priimek",
+		"description" : "Družinsko ime, ki ga običajno delijo člani družine. Ta atribut nosi tudi predpone ali pripone, ki so del družinskega imena, npr. 'de Boer', 'van de Putte', 'von und zu orlow'. V polju se lahko zabeleži tudi več družinskih imen, kot je to običajno v hispanskih državah in se evidentirajo v polju posameznega zasebnega imena, tako da bi se na primer ime Miguel de Cervantes Saavedra zabeležilo kot 'de Cervantes Saavedra'.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "Prenume",
-	"cardinality" : "Un nume sau mai multe nume.",
+	"type" : "UDT/Text",
+	"cardinality" : "01",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Nome próprio",
+		"label" : "Ime",
+		"description" : "Ime ali več imenih imen, ki identificirajo posameznika znotraj družine. Ta določijo njihovi starši ob rojstvu ali pa so lahko zakonito določeno s formalnim postopkom. Vsa določena imena so urejena v enem polju, tako da je na primer dano ime za Johanna Sebastiana Bacha 'Johann Sebastian'.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "Identificator",
-	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
+	"type" : "Identifier",
+	"cardinality" : "01",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Identificador",
+		"label" : "Identifikator",
+		"description" : "Oporednotenje identifikatorja se uporablja za povezovanje osebe na kateri koli formalno izdani identifikator za to osebo.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "Cetățenie",
-	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
+	"type" : "Jurisdiction",
+	"cardinality" : "01",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Cidadania",
+		"label" : "Državljanstvo",
+		"description" : "Odnos državljanstva povezuje osebo v pristojnost ki je podelila pravice državljanstva na posameznika kot je pravica do glasovanja da bi prejela določeno zaščito pred Skupnostjo ali izdajo potnega lista.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "PublicOrganisation" : {
@@ -4378,69 +4378,69 @@
 	}
 } ,
 "PersonGenderEnum" : {
-	"type" : "Sexul persoanei",
-	"cardinality" : "Lista sexelor umane.",
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Género",
-		"example" : "Lista de gémeros humanos.",
-		"verified" : "false"
+		"label" : "Oseba spola",
+		"description" : "Seznam človeških spolov.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Female" : {
-	"type" : "Feminin",
-	"cardinality" : "Sexul FEMININ",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Feminino",
-		"example" : "O conceito FEMININO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
-		"verified" : "false"
+		"label" : "Ženska",
+		"description" : "Koncept Ženska se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Male" : {
-	"type" : "Masculin",
-	"cardinality" : "Sexul MASCULIN",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Masculino",
-		"example" : "O conceito MASCULINO é utilizado para representar os sexos humanos no contexto de intercâmbio de informações no domínio das ciências sociais.",
-		"verified" : "false"
+		"label" : "Moški",
+		"description" : "Koncept moški se uporablja za zastopanje človeških spolov v okviru izmenjave informacij na področju socialne vede.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NAP" : {
-	"type" : "Nu se aplică",
-	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Não aplicável",
-		"example" : "O conceito NÃO APLICÁVEL é usado no contexto de intercâmbio de informações no domínio das ciências sociais quando nenhum dos sexos pode ser representado.",
-		"verified" : "false"
+		"label" : "Se ne uporablja",
+		"description" : "Koncept se ne uporablja se uporablja v okviru izmenjave informacij na področju socialnih ved kadar nobeden od spolov ni mogoče zastopati.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NKN" : {
-	"type" : "Necunoscut",
-	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Não conhecido",
-		"example" : "O conceito NÃO CONHECIDO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano é desconhecido.",
-		"verified" : "false"
+		"label" : "Ne poznano",
+		"description" : "Koncept ki ni znan se uporablja v okviru izmenjave informacij na področju socialne vede ko je človeški seks unkown.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NST" : {
-	"type" : "Nedeclarat",
-	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "1",
-		"description" : "Não especificado",
-		"example" : "O conceito NÃO ESPECIFICADO é usado no contexto do intercâmbio de informações no domínio de ciências sociais quando o sexo humano não é declarado.",
-		"verified" : "false"
+		"label" : "Ni navedeno",
+		"description" : "Koncept ki ni navedena se uporablja v okviru izmenjave informacij na področju socialnih ved ko človeški seks ni naveden.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LangEnum" : {

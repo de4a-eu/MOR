@@ -111,244 +111,244 @@
 } ,
 "LocationAddress" : {
 	"type" : "",
-	"cardinality" : "Abordare",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "",
-		"description" : "1",
-		"example" : "Dirección",
-		"verified" : "false"
+		"label" : "Address",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL2" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Unitate administrativă nivel 2",
-	"comment" : "Locație teritorială, de obicei un județ, un stat sau o altă zonă similară care cuprinde mai multe localități.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "Madrid",
-		"description" : "1",
-		"example" : "Segundo nivel territorial del país",
-		"verified" : "false"
+		"label" : "Admin unit level 2",
+		"description" : "The region of the address, usually a county, state or other such area that typically encompasses several localities.",
+		"example" : "Madrid",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
 	"type" : "CountryEnum",
-	"cardinality" : "Unitate administrativă nivel 1",
-	"comment" : "Unitate administrativă superioară, spre exemplu o țară. Cea mai bună practică este să utilizați codul ISO 3166-1.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "ES",
-		"description" : "1",
-		"example" : "Primer nivel territorial del país",
-		"verified" : "false"
+		"label" : "Admin unit level 1",
+		"description" : "The uppermost administrative unit for the address, almost always a country. Best practice is to use the ISO 3166-1 code.",
+		"example" : "ES",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PoBox" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Casuta postala",
-	"comment" : "Numărul cutiei poștale. Ghișeu sau compartiment special unde se repartizează și se păstrează, la poștă, scrisorile pe care le ridică personal adresantul.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "28045",
-		"description" : "1",
-		"example" : "Apartado de correos",
-		"verified" : "false"
+		"label" : "PoBox",
+		"description" : "The Post Office Box number. INSPIRE's name for this is 'postalDeliveryIdentifier' for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology.",
+		"example" : "28045",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/Thoroughfare" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Arteră/drum principal",
-	"comment" : "Arteră/pasaj/drum care leagă două sau mai multe localități. O arteră nu este neapărat un drum, ar putea fi o cale navigabilă sau o altă caracteristică.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "2nd South Street",
-		"description" : "1",
-		"example" : "Vía pública",
-		"verified" : "false"
+		"label" : "Thoroughface",
+		"description" : "Quoting from the INSPIRE guidelines, a thoroughfare is: 'an address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature.",
+		"example" : "2nd South Street",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorDesignator" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Identificator adresă",
-	"comment" : "Acesta este numărul clădirii, numărul apartamentului, etc. Pentru o adresă precum „Flat 3, 17 Bridge Street”, locatorul este „flat 3, 17”.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "18, 'Flat 3', 'Floor 6'",
-		"description" : "1",
-		"example" : "Número, piso, escalera, puerta",
-		"verified" : "false"
+		"label" : "Locator designator",
+		"description" : "The locator designator is defined by the INSPIRE guidelines as 'a number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.' In simpler terms, this is the building number, apartment number, etc. For an address such as 'Flat 3, 17 Bridge Street', the locator is 'flat 3, 17.'",
+		"example" : "18, 'Flat 3', 'Floor 6'",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/LocatorName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele locatorului",
-	"comment" : "Numele locatorului poate fi numele proprietății sau complexului, al clădirii sau al unei părți a clădirii sau ar putea fi numele unei camere din interiorul unei clădiri. Diferența cheie dintre un nume de localizator și un nume de localizator este că acesta din urmă este un nume propriu și este puțin probabil să includă cifre.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "Town Hall",
-		"description" : "1",
-		"example" : "Nombre del edificio o sala",
-		"verified" : "false"
+		"label" : "Locator name",
+		"description" : "Based on the INSPIRE guidelines, locator name is defined as: 'Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, 'Shumann, Berlaymont' is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.",
+		"example" : "Town Hall",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/AddressArea" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Zona de adrese",
-	"comment" : "Zona de adresă este: numele unei zone geografice sau a unei localități care grupează un număr de obiecte adresabile, fără a fi o unitate administrativă.” Aceasta ar fi de obicei parte dintr-un oraș, un cartier sau un sat.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "Madrid",
-		"description" : "1",
-		"example" : "Área poblacional",
-		"verified" : "false"
+		"label" : "Address area",
+		"description" : "Taking the definition from INSPIRE, the address area is: the name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit.' This would typically be part of a city, a neighbourhood or village.",
+		"example" : "Madrid",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostName" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Numele oficiului poștal",
-	"comment" : "Punct de livrare poștal.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "Madrid",
-		"description" : "1",
-		"example" : "Área postal",
-		"verified" : "false"
+		"label" : "Post name",
+		"description" : "The key postal division of the address, usually the city. (INSPIRE's definition is 'One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.)",
+		"example" : "Madrid",
+		"verified" : "true"
 	}
 } ,
 "LocationAddress/PostCode" : {
 	"type" : "UDT/Text",
-	"cardinality" : "Cod poștal",
-	"comment" : "Codul poștal.",
+	"cardinality" : "00",
+	"comment" : "",
 	"en" : {
-		"label" : "2804-268",
-		"description" : "1",
-		"example" : "Código postal",
-		"verified" : "false"
+		"label" : "Post code",
+		"description" : "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems.",
+		"example" : "2804-268",
+		"verified" : "true"
 	}
 } ,
 "Person" : {
-	"type" : "Persoană",
-	"cardinality" : "O persoană fizică care poate fi moartă sau în viață.",
+	"type" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Persona",
+		"label" : "Person",
+		"description" : "An individual natural person who may be dead or alive, but not imaginary.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth" : {
-	"type" : "Data de nastere",
-	"cardinality" : "Ziua în care persoana s-a născut.",
+	"type" : "",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Fecha de nacimiento",
+		"label" : "Date of birth",
+		"description" : "The day on which the person was born.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Year" : {
-	"type" : "An",
-	"cardinality" : "Un an calendaristic gregorian.",
+	"type" : "xsd:gYear",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Año",
-		"example" : "",
-		"verified" : "false"
+		"label" : "Year",
+		"description" : "A gregorian calendar year. The value space of Year is the set of Gregorian calendar years as defined in § 5.2.1 of ISO 8601. Specifically, it is a set of one-year long, non-periodic instances e.g. lexical 1999 to represent the whole year 1999, independent of how many months and days this year has.",
+		"example" : "1980",
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Month" : {
-	"type" : "Lună",
-	"cardinality" : "O lună dintr-un an calendaristic.",
+	"type" : "xsd:gMonth",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Mes",
-		"example" : "",
-		"verified" : "false"
+		"label" : "Month",
+		"description" : "A gregorian month that recurs every year. The value space of Month is the space of a set of calendar months as defined in § 3 of ISO 8601. Specifically, it is a set of one-month long, yearly periodic instances.",
+		"example" : "6",
+		"verified" : "true"
 	}
 } ,
 "Person/DateOfBirth/Day" : {
-	"type" : "Zi",
-	"cardinality" : "O zi dintr-un an calendaristic.",
+	"type" : "xsd:gDay",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Día",
-		"example" : "",
-		"verified" : "false"
+		"label" : "Day",
+		"description" : "A gregorian day that recurs, specifically a day of the month such as the 5th of the month. The value space of Day is the space of a set of calendar dates as defined in § 3 of ISO 8601. Specifically, it is a set of one-day long, monthly periodic instances.",
+		"example" : "12",
+		"verified" : "true"
 	}
 } ,
 "Person/Gender" : {
-	"type" : "Sex",
-	"cardinality" : "Sex masculin sau feminin.",
+	"type" : "PersonGenderEnum",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Género",
-		"example" : "",
-		"verified" : "false"
+		"label" : "Gender",
+		"description" : "The chromosomal state, and reproductive organs and structures of a Person that allows them to be distinguished as female or male or undetermined.",
+		"example" : "Male",
+		"verified" : "true"
 	}
 } ,
 "Person/PlaceOfBirth" : {
-	"type" : "Locul nașterii",
-	"cardinality" : "Locația în care s-a născut persoana.",
+	"type" : "LocationAddress",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Lugar de nacimiento",
+		"label" : "Place of birth",
+		"description" : "The Location where the person was born.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName" : {
-	"type" : "Numele persoanei",
-	"cardinality" : "Numele de familie și prenumele unei persoane. Cel puțin unul dintre cele două trebuie să existe.",
+	"type" : "",
+	"cardinality" : "10",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Nombre de la persona",
+		"label" : "Person name",
+		"description" : "The family name and given name of a Person. At least one of the two must exist.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/FamilyName" : {
-	"type" : "Nume de familie",
-	"cardinality" : "Numele de familie este de obicei același pentru toți membrii unei familii. Acest atribut poartă, de asemenea, prefixe sau sufixe care fac parte din numele de familie, de ex. „de Boer”, „van de Putte”, „von und zu Orlow”.",
+	"type" : "UDT/Name",
+	"cardinality" : "01",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Apellido",
-		"example" : "",
-		"verified" : "false"
+		"label" : "Family name",
+		"description" : "A family name is usually shared by members of a family. This attribute also carries prefixes or suffixes which are part of the family name, e.g. 'de Boer', 'van de Putte', 'von und zu Orlow'. Multiple family names, such as are commonly found in Hispanic countries, are recorded in the single family name field so that, for example, Miguel de Cervantes Saavedra's Family Name would be recorded as 'de Cervantes Saavedra'.",
+		"example" : "Shah",
+		"verified" : "true"
 	}
 } ,
 "Person/PersonName/GivenName" : {
-	"type" : "Prenume",
-	"cardinality" : "Un nume sau mai multe nume.",
+	"type" : "UDT/Text",
+	"cardinality" : "01",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Nombre de pila",
-		"example" : "",
-		"verified" : "false"
+		"label" : "Given name",
+		"description" : "A given name, or multiple given names, are the denominator(s) that identify an individual within a family. These are given to a Person by his or her parents at birth or may be legally recognised as 'given names' through a formal process. All given names are ordered in one field so that, for example, the given name for Johann Sebastian Bach is 'Johann Sebastian'.",
+		"example" : "Iftikhar",
+		"verified" : "true"
 	}
 } ,
 "Person/Identifier" : {
-	"type" : "Identificator",
-	"cardinality" : "Relația de identificare este utilizată pentru a lega o Persoană la orice Identificator emis oficial pentru acea Persoană.",
+	"type" : "Identifier",
+	"cardinality" : "01",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Identificador",
+		"label" : "Identifier",
+		"description" : "The identifier relation is used to link a Person to any formally issued Identifier for that Person.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "Person/Citizenship" : {
-	"type" : "Cetățenie",
-	"cardinality" : "Condiția juridică de cetățean, situația de cetățean.",
+	"type" : "Jurisdiction",
+	"cardinality" : "01",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Ciudadanía",
+		"label" : "Citizenship",
+		"description" : "The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport.",
 		"example" : "",
-		"verified" : "false"
+		"verified" : "true"
 	}
 } ,
 "PublicOrganisation" : {
@@ -4378,69 +4378,69 @@
 	}
 } ,
 "PersonGenderEnum" : {
-	"type" : "Sexul persoanei",
-	"cardinality" : "Lista sexelor umane.",
+	"type" : "xs:enumeration",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Género",
-		"example" : "Lista de géneros humanos.",
-		"verified" : "false"
+		"label" : "Person gender",
+		"description" : "List of human genders.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Female" : {
-	"type" : "Feminin",
-	"cardinality" : "Sexul FEMININ",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Femenino",
-		"example" : "Uno de los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales.",
-		"verified" : "false"
+		"label" : "Female",
+		"description" : "The concept FEMALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/Male" : {
-	"type" : "Masculin",
-	"cardinality" : "Sexul MASCULIN",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "Masculino",
-		"example" : "Uno de los sexos humanos en el contexto del intercambio de información en el dominio de las ciencias sociales.",
-		"verified" : "false"
+		"label" : "Male",
+		"description" : "The concept MALE is used for representing the human sexes in the context of interchange of information in the social sciences domain.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NAP" : {
-	"type" : "Nu se aplică",
-	"cardinality" : "Conceptul NU SE APLICA este utilizat în contextul schimbului de informații în domeniul științelor sociale când niciunul dintre sexe nu poate fi reprezentat.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "No aplica",
-		"example" : "No aplica se utiliza en el contexto del intercambio de información en el dominio de las ciencias sociales cuando no se pueden representar ninguno de los sexos.",
-		"verified" : "false"
+		"label" : "Not applicable",
+		"description" : "The concept NOT APPLICABLE is used in the context of interchange of information in the social sciences domain when none of the sexes can be represented.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NKN" : {
-	"type" : "Necunoscut",
-	"cardinality" : "Conceptul NECUNOSCUT este folosit în contextul schimbului de informații în domeniul științelor sociale atunci când sexul uman este necunoscut.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "No conocido",
-		"example" : "No conocido se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano es desconocido.",
-		"verified" : "false"
+		"label" : "Not known",
+		"description" : "The concept NOT KNOWN is used in the context of interchange of information in the social sciences domain when the human sex is unkown.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "PersonGenderEnum/NST" : {
-	"type" : "Nedeclarat",
-	"cardinality" : "Conceptul NEDECLARAT este utilizat în contextul schimbului de informații în domeniul științelor sociale atunci când nu este menționat sexul uman.",
+	"type" : "xs:token",
+	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "1",
-		"description" : "No se indica",
-		"example" : "No se indica se usa en el contexto del intercambio de información en el dominio de las ciencias sociales cuando el sexo humano no está establecido.",
-		"verified" : "false"
+		"label" : "Not stated",
+		"description" : "The concept NOT STATED is used in the context of interchange of information in the social sciences domain when the human sex is not stated.",
+		"example" : "",
+		"verified" : "true"
 	}
 } ,
 "LangEnum" : {
