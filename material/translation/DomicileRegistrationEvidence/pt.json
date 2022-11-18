@@ -76,7 +76,7 @@
 		"verified" : "false"
 	}
 } ,
-"DomicileRegistrationEvidence/CertifiesDomicileRegistration" : {
+"DomicileRegistrationEvidence/CertifiesDomicile" : {
 	"type" : "",
 	"cardinality" : "00",
 	"comment" : "",
@@ -87,7 +87,7 @@
 		"verified" : "false"
 	}
 } ,
-"DomicileRegistrationEvidence/CertifiesDomicileRegistration/Inhabitant" : {
+"DomicileRegistrationEvidence/CertifiesDomicile/Inhabitant" : {
 	"type" : "Person",
 	"cardinality" : "10",
 	"comment" : "",
@@ -98,7 +98,7 @@
 		"verified" : "false"
 	}
 } ,
-"DomicileRegistrationEvidence/CertifiesDomicileRegistration/Domicile" : {
+"DomicileRegistrationEvidence/CertifiesDomicile/Domicile" : {
 	"type" : "LocationAddress",
 	"cardinality" : "10",
 	"comment" : "",
@@ -132,7 +132,7 @@
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "CountryEnum",
+	"type" : "UDT/Text",
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
