@@ -43,6 +43,17 @@
 		"verified" : "true"
 	}
 } ,
+"DomicileRegistrationEvidence/IssuingAuthority/PrefLabel" : {
+	"type" : "PublicOrganisation/PrefLabel",
+	"cardinality" : "10",
+	"comment" : "",
+	"es" : {
+		"label" : "Denominación de la autoridad emisora",
+		"description" : "Nombre principal y legalmente reconocido de la organización. Una organización solo puede tener un nombre de este tipo en cualquier idioma determinado. Los nombres principales se pueden proporcionar en varios idiomas.",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
 "DomicileRegistrationEvidence/IssuingPlace" : {
 	"type" : "LocationAddress",
 	"cardinality" : "10",

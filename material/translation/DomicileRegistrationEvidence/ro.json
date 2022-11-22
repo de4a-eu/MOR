@@ -43,6 +43,17 @@
 		"verified" : "false"
 	}
 } ,
+"DomicileRegistrationEvidence/IssuingAuthority/PrefLabel" : {
+	"type" : "PublicOrganisation/PrefLabel",
+	"cardinality" : "10",
+	"comment" : "",
+	"ro" : {
+		"label" : "Numele autorității emitente",
+		"description" : "„Așa cum este definit în Ontology ORG, o etichetă preferată este utilizată pentru a furniza numele primar, recunoscut legal al organizației. O organizație poate avea doar un astfel de nume într-o anumită limbă. Numele primare pot fi furnizate în mai multe limbi cu mai multe cazuri de proprietatea preferată a etichetei.”",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "DomicileRegistrationEvidence/IssuingPlace" : {
 	"type" : "LocationAddress",
 	"cardinality" : "10",

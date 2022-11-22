@@ -43,6 +43,17 @@
 		"verified" : "false"
 	}
 } ,
+"DomicileRegistrationEvidence/IssuingAuthority/PrefLabel" : {
+	"type" : "PublicOrganisation/PrefLabel",
+	"cardinality" : "10",
+	"comment" : "",
+	"fr" : {
+		"label" : "Nom de l'autorité émettrice",
+		"description" : "Tel que défini dans l'ORG ontology, une étiquette préférée est utilisée pour fournir le nom principal de l'organisation légalement reconnu. Une organisation ne peut avoir qu'un tel nom dans une langue donnée. Les noms principaux peuvent être fournis dans plusieurs langues avec plusieurs instances de la propriété d'étiquette préférée.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "DomicileRegistrationEvidence/IssuingPlace" : {
 	"type" : "LocationAddress",
 	"cardinality" : "10",

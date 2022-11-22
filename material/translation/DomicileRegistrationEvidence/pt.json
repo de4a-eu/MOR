@@ -43,6 +43,17 @@
 		"verified" : "false"
 	}
 } ,
+"DomicileRegistrationEvidence/IssuingAuthority/PrefLabel" : {
+	"type" : "PublicOrganisation/PrefLabel",
+	"cardinality" : "10",
+	"comment" : "",
+	"pt" : {
+		"label" : "Nome da autoridade emissora",
+		"description" : "Nome principal e legalmente reconhecido da entidade. Uma entidade só pode ter um desses nomes em qualquer idioma. Os nomes principais podem ser fornecidos em vários idiomas.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "DomicileRegistrationEvidence/IssuingPlace" : {
 	"type" : "LocationAddress",
 	"cardinality" : "10",

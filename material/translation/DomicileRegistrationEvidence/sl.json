@@ -43,6 +43,17 @@
 		"verified" : "false"
 	}
 } ,
+"DomicileRegistrationEvidence/IssuingAuthority/PrefLabel" : {
+	"type" : "PublicOrganisation/PrefLabel",
+	"cardinality" : "10",
+	"comment" : "",
+	"sl" : {
+		"label" : "Ime organa izdaje",
+		"description" : "Kot je opredeljeno v ontologiji ORG se za zagotovitev primarnega pravno priznanega imena organizacije uporablja prednostna nalepka. Organizacija ima lahko samo eno takšno ime v katerem koli jeziku. Primarna imena se lahko zagotovijo v več jezikih z večkratnimi primerki prednostne lastnosti nalepk.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "DomicileRegistrationEvidence/IssuingPlace" : {
 	"type" : "LocationAddress",
 	"cardinality" : "10",
