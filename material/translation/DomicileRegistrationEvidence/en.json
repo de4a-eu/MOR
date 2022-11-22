@@ -92,8 +92,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"en" : {
-		"label" : "Inhabitant of the registered domicile",
-		"description" : "Person living in the residence or domicile",
+		"label" : "Inhabitant's details",
+		"description" : "Person living in the residence or domicile who requested the evidence",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -104,7 +104,7 @@
 	"comment" : "",
 	"en" : {
 		"label" : "Address of the registered domicile",
-		"description" : "Current domicilie inhabitated by the parson",
+		"description" : "Current domicilie inhabitated by the person",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -334,7 +334,7 @@
 	"cardinality" : "01",
 	"comment" : "",
 	"en" : {
-		"label" : "Identifier",
+		"label" : "Person Identifier",
 		"description" : "The identifier relation is used to link a Person to any formally issued Identifier for that Person.",
 		"example" : "",
 		"verified" : "true"
@@ -378,7 +378,7 @@
 	"cardinality" : "11",
 	"comment" : "",
 	"en" : {
-		"label" : "Preferred label",
+		"label" : "Denomination",
 		"description" : "As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.",
 		"example" : "IRN -   Institute of Registry and Notary.",
 		"verified" : "true"
@@ -554,7 +554,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "Content",
+		"label" : "Identifier number",
 		"description" : "Content - alpha-numeric string",
 		"example" : "GR/GR/12345678",
 		"verified" : "true"
@@ -4990,6 +4990,105 @@
 		"label" : "Cause",
 		"description" : "Cause of the end of marriage.",
 		"example" : "Lack of communication",
+		"verified" : "true"
+	}
+} ,
+"GUI/CanonicalEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Canonical Evidence",
+		"description" : "Evidence issued by the competent authority in the canonical form of the evidence type",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Legal Info",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Please read the following text before proceeding",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "By using this process, you can request relevant information directly from us, and we’ll provide you with the most current version that we have. You will be able to review the information, and can choose whether you want to use it or not. You are not required to request the information from us through this service. If you cancel, you will have the possibility of completing your procedure by searching for the information and submitting it manually. Note that this service is part of a pilot project. By selecting 'Agree', you agree to participate in the pilot on a voluntary basis. You should only use the information that we make available to you for the purposes of completing the procedure, and to monitor that the procedure was completed successfully. See <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> for further details.",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-section-header" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Evidence provided by",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-section-header/PID" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Spanish Data Intermediation Platform of the National State Administration",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-section-header/issuedBy" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "issued by",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Retrieve" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Retrieve",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Reject" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Reject",
+		"description" : "",
+		"example" : "",
 		"verified" : "true"
 	}
 	}

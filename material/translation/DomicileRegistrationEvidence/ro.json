@@ -4,8 +4,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Dovada inregistrarii domiciliului",
+		"description" : "Official document or data proving the registration of a domicile.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -15,8 +15,8 @@
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Identificator",
+		"description" : "An unambiguous reference to the Domicile Registration Evidence.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -26,8 +26,8 @@
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Data emiterii",
+		"description" : "The most recent date on which the Domicile Registration Evidence instance was issued.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -37,8 +37,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "autoritatea emitentă",
+		"description" : "A Public Organisation with official authority in charge of issuing the Domicile Registration Evidence.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -48,8 +48,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "locul emitentului",
+		"description" : "The Location where the Domicile Registration Evidence was issued.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -81,8 +81,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Certificate de înregistrare a domiciliului",
+		"description" : "Attesting in a formal way the domicile registration.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -92,8 +92,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Detalii despre locuitor",
+		"description" : "Person living in the residence or domicile who requested the evidence",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -103,8 +103,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Adresa domiciliului social",
+		"description" : "Current domicilie inhabitated by the person",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -4991,6 +4991,105 @@
 		"description" : "Cauza încetării căsătoriei.",
 		"example" : "Lipsa de comunicare",
 		"verified" : "true"
+	}
+} ,
+"GUI/CanonicalEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dovezi Canonice",
+		"description" : "Dovada emisă de autoritatea competentă în forma canonică a acelui tip de probe",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Informații legale",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Informații legale",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Utilizând acest proces, ne puteți solicita direct informații relevante și vă vom furniza ultima versiune pe care o avem. Veți putea să revizuiți informațiile și să alegeți dacă să le utilizați sau nu. Nu sunteți obligat să ne solicitați informații prin intermediul acestui serviciu. Dacă anulați acest proces, veți avea posibilitatea finalizați procesul căutând și trimițând manual informațiile. Vă rugăm să rețineți că acest serviciu face parte dintr-un proiect pilot. Selectând „Sunt de acord”, sunteți de acord să participați la programul pilot pe bază de voluntariat. Trebuie să utilizați informațiile pe care vi le punem la dispoziție numai în scopul de a completa procedura și pentru a verifica dacă procedura a fost finalizată cu succes. Consultați <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> pentru mai multe detalii.",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dovezi furnizate de",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header/PID" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Platforma de brokeraj de date a Administrației generale a statului spaniol",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header/issuedBy" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "emis de",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Retrieve" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Recupera",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Reject" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Recupera",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
 	}
 	}
 }

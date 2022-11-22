@@ -4,8 +4,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Domicile Preuve d'inscription",
+		"description" : "Official document or data proving the registration of a domicile.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -15,8 +15,8 @@
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Identifiant",
+		"description" : "An unambiguous reference to the Domicile Registration Evidence.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -26,8 +26,8 @@
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Date d'émission",
+		"description" : "The most recent date on which the Domicile Registration Evidence instance was issued.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -37,8 +37,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "autorité de délivrance",
+		"description" : "A Public Organisation with official authority in charge of issuing the Domicile Registration Evidence.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -48,8 +48,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "lieu d'émission",
+		"description" : "The Location where the Domicile Registration Evidence was issued.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -81,8 +81,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Enregistrement du domicile des certificats",
+		"description" : "Attesting in a formal way the domicile registration.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -92,8 +92,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Coordonnées de l'habitant",
+		"description" : "Person living in the residence or domicile who requested the evidence",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -103,8 +103,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Adresse du domicile enregistré",
+		"description" : "Current domicilie inhabitated by the person",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -4989,6 +4989,105 @@
 	"fr" : {
 		"label" : "Causer",
 		"description" : "Cause de la fin du mariage.",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/CanonicalEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Preuve Canonique",
+		"description" : "Preuve délivrée par l'autorité compétente sous la forme canonique de ce type de preuve",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Information légale",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Lisez le texte suivant avant de continuer",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "En utilisant ce processus, vous pouvez nous demander directement des informations pertinentes et nous vous fournirons les dernière version que nous avons. Vous pourrez consulter les informations et choisir de les utiliser ou non. Vous n'êtes pas obligé de nous demander des informations par le biais de ce service. Si vous annulez ce processus, vous aurez la possibilité de complétez votre processus en recherchant et en envoyant les informations manuellement. Veuillez noter que ce service fait partie d'un projet pilote. En sélectionnant 'J'accepte', vous acceptez de participer au programme pilote sur une base volontaire. Vous ne devez utiliser les informations que nous mettons à votre disposition que dans le but de remplir le procédure et de vérifier que la procédure s'est déroulée avec succès. Voir <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> pour plus de détails.",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Preuve fournie par",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header/PID" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "la Plate-forme de courtage de données de l'administration générale de l'État espagnol",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header/issuedBy" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "émis par",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Retrieve" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Récupérer",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Reject" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Récupérer",
+		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}

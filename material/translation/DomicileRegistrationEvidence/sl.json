@@ -4,8 +4,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Dokazilo o registraciji stalnega prebivališča",
+		"description" : "Official document or data proving the registration of a domicile.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -15,8 +15,8 @@
 	"cardinality" : "00",
 	"comment" : "It is the identifier from Core Vocabularies (Core Vocabulary Aggregated Components)",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Identifikator",
+		"description" : "An unambiguous reference to the Domicile Registration Evidence.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -26,8 +26,8 @@
 	"cardinality" : "10",
 	"comment" : "It is the DateType from unqualified data types from UBL-2.3",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Datum izdaje",
+		"description" : "The most recent date on which the Domicile Registration Evidence instance was issued.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -37,8 +37,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "izdajatelj",
+		"description" : "A Public Organisation with official authority in charge of issuing the Domicile Registration Evidence.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -48,8 +48,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "mesto izdaje",
+		"description" : "The Location where the Domicile Registration Evidence was issued.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -81,8 +81,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Potrdila o prijavi stalnega prebivališča",
+		"description" : "Attesting in a formal way the domicile registration.",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -92,8 +92,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Podatki o prebivalcu",
+		"description" : "Person living in the residence or domicile who requested the evidence",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -103,8 +103,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
-		"description" : "",
+		"label" : "Naslov prijavljenega stalnega prebivališča",
+		"description" : "Current domicilie inhabitated by the person",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -4991,6 +4991,105 @@
 		"description" : "Datum konca zakonske zveze",
 		"example" : "",
 		"verified" : "true"
+	}
+} ,
+"GUI/CanonicalEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Kanonični dokazi",
+		"description" : "Dokazilo, ki ga izda pristojni organ v kanonični obliki te vrste dokazila",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Pravne informacije",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Preden nadaljujete, preberite naslednje besedilo",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Z uporabo tega postopka lahko neposredno od nas zahtevate ustrezne informacije in posredovali vam jih bomo najnovejšo različico, ki jo imamo. Podatke boste lahko pregledali in se odločili, ali jih želite uporabiti ali ne. Ni vam treba zahtevati informacij od nas prek te storitve. Če prekličete ta postopek, boste imeli možnost, da dokončajte svoj postopek z ročnim iskanjem in pošiljanjem informacij. Upoštevajte, da je ta storitev del pilotnega projekta. Z izbiro 'Strinjam se' se strinjate s prostovoljnim sodelovanjem v pilotnem programu. Podatke, ki vam jih damo na voljo, uporabite samo za izpolnjevanje postopek in preveriti, ali je bil postopek uspešno zaključen. Za več podrobnosti glejte <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a>.",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Dokaze predložil",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header/PID" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Platforma za posredovanje podatkov generalne uprave španske države",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-section-header/issuedBy" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "ki ga oddaja",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Retrieve" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Pridobi",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Reject" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zavrni",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
 	}
 	}
 }

@@ -92,8 +92,8 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"es" : {
-		"label" : "Persona empadronada",
-		"description" : "Datos de la persona que figura empadronada",
+		"label" : "Detalles del sujeto empadronado",
+		"description" : "Datos de la persona que figura empadronada y es sujeto de la solicitud",
 		"example" : "",
 		"verified" : "true"
 	}
@@ -4990,6 +4990,105 @@
 		"label" : "Causa",
 		"description" : "Causa que formalmente consituye el motivo de la disolución del matrimonio.",
 		"example" : "Falta de comunicación",
+		"verified" : "true"
+	}
+} ,
+"GUI/CanonicalEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Evidencia Canónica",
+		"description" : "Evidencia emitida por la autoridad competente en la forma canónica de ese tipo de evidence",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Información legal",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Lea el siguiente texto antes de continuar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Al usar este proceso, puede solicitarnos información relevante directamente y le proporcionaremos la versión más actual que tenemos. Podrá revisar la información y elegir si desea usarla o no. No está obligado a solicitarnos la información a través de este servicio. Si cancela este proceso, tendrás la posibilidad de completar su trámite buscando y enviándo la información manualmente. Tenga en cuenta que este servicio es parte de un proyecto piloto. Al seleccionar 'Acepto', acepta participar en el programa piloto de forma voluntaria. Solo debe usar la información que ponemos a su disposición con el fin de completar el procedimiento y para comprobar que el procedimiento se completó con éxito. Consulte <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> para más detalles. ",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-section-header" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Evidencia proporcionada por",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-section-header/PID" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "la Plataforma de Intermediacion de Datos de la Administración General del Estado español",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/de4a-section-header/issuedBy" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "emitida por",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Retrieve" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Proceder",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Reject" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Rechazar",
+		"description" : "",
+		"example" : "",
 		"verified" : "true"
 	}
 	}
