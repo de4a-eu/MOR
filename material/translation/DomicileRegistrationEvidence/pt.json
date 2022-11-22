@@ -70,7 +70,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"pt" : {
-		"label" : "",
+		"label" : "País",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -378,7 +378,7 @@
 	"cardinality" : "11",
 	"comment" : "",
 	"pt" : {
-		"label" : "Etiqueta preferida",
+		"label" : "Dénomination",
 		"description" : "Nome principal e legalmente reconhecido da entidade. Uma entidade só pode ter um desses nomes em qualquer idioma. Os nomes principais podem ser fornecidos em vários idiomas.",
 		"example" : "",
 		"verified" : "true"
@@ -5004,6 +5004,28 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/DomesticEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Evidência doméstica",
+		"description" : "Provas emitidas pela autoridade competente no formulário original em formato estruturado",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/DomesticEvidencePDF" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Evidências domésticas em PDF",
+		"description" : "Provas emitidas pela autoridade competente em formato PDF",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-section-title" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5070,6 +5092,17 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/de4a-section-header/INE" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Instituto Nacional de Estatística (INE)",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/Retrieve" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5087,6 +5120,17 @@
 	"comment" : "",
 	"pt" : {
 		"label" : "Rejeitar",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Requester" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "As provas solicitadas serão enviadas à seguinte autoridade",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

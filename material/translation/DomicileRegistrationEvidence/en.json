@@ -70,7 +70,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"en" : {
-		"label" : "",
+		"label" : "Country",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -5004,6 +5004,28 @@
 		"verified" : "true"
 	}
 } ,
+"GUI/DomesticEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Domestic Evidence",
+		"description" : "Evidence issued by the competent authority in the origial form as an structured document",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/DomesticEvidencePDF" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "Domestic Evidence in PDF",
+		"description" : "Evidence issued by the competent authority in PDF format",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-section-title" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5070,6 +5092,17 @@
 		"verified" : "true"
 	}
 } ,
+"GUI/de4a-section-header/INE" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "National Statistical Institute (NSI)",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
 "GUI/Retrieve" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5087,6 +5120,17 @@
 	"comment" : "",
 	"en" : {
 		"label" : "Reject",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Requester" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"en" : {
+		"label" : "The requested evidence shall be submitted to the following authority",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"

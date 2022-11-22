@@ -70,7 +70,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
+		"label" : "Pays",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5004,6 +5004,28 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/DomesticEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Preuve nationale",
+		"description" : "Preuve délivrée par l'autorité compétente sous la forme originale dans un format structuré",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/DomesticEvidencePDF" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Preuve nationale en PDF",
+		"description" : "Preuve délivrée par l'autorité compétente au format PDF",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-section-title" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5070,6 +5092,17 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/de4a-section-header/INE" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "l'Institut national de la statistique (INS)",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/Retrieve" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5087,6 +5120,17 @@
 	"comment" : "",
 	"fr" : {
 		"label" : "Récupérer",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Requester" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"fr" : {
+		"label" : "Les preuves demandées seront envoyées à l'autorité suivante",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

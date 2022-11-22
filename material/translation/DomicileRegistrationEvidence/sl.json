@@ -70,7 +70,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
+		"label" : "Država",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -378,7 +378,7 @@
 	"cardinality" : "11",
 	"comment" : "",
 	"sl" : {
-		"label" : "Prednostna nalepka",
+		"label" : "Denominacija",
 		"description" : "Kot je opredeljeno v ontologiji ORG se za zagotovitev primarnega pravno priznanega imena organizacije uporablja prednostna nalepka. Organizacija ima lahko samo eno takšno ime v katerem koli jeziku. Primarna imena se lahko zagotovijo v več jezikih z večkratnimi primerki prednostne lastnosti nalepk.",
 		"example" : "",
 		"verified" : "true"
@@ -5004,6 +5004,28 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/DomesticEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Domači dokazi",
+		"description" : "Dokazila, ki jih izda pristojni organ v izvirni obliki v strukturirani obliki",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/DomesticEvidencePDF" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Domači dokazi v PDF",
+		"description" : "Dokazila, ki jih izda pristojni organ v formatu PDF",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-section-title" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5070,6 +5092,17 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/de4a-section-header/INE" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Národným inštitútom pre štatistiku (NIS)",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/Retrieve" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5087,6 +5120,17 @@
 	"comment" : "",
 	"sl" : {
 		"label" : "Zavrni",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Requester" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Zahtevani dokazi bodo poslani naslednjemu organu",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

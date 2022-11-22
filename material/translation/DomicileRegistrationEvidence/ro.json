@@ -70,7 +70,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"ro" : {
-		"label" : "",
+		"label" : "Țară",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -378,7 +378,7 @@
 	"cardinality" : "11",
 	"comment" : "",
 	"ro" : {
-		"label" : "Etichetă preferată",
+		"label" : "Denumirea",
 		"description" : "„Așa cum este definit în Ontology ORG, o etichetă preferată este utilizată pentru a furniza numele primar, recunoscut legal al organizației. O organizație poate avea doar un astfel de nume într-o anumită limbă. Numele primare pot fi furnizate în mai multe limbi cu mai multe cazuri de proprietatea preferată a etichetei.”",
 		"example" : "",
 		"verified" : "true"
@@ -5004,6 +5004,28 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/DomesticEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dovezi domestice",
+		"description" : "Dovada emisă de autoritatea competentă în forma originală în format structurat",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/DomesticEvidencePDF" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Dovezi interne în PDF",
+		"description" : "Dovada eliberata de autoritatea competenta in format PDF",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-section-title" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5070,6 +5092,17 @@
 		"verified" : "false"
 	}
 } ,
+"GUI/de4a-section-header/INE" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Institutului Național de Statistică (INS)",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
 "GUI/Retrieve" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5087,6 +5120,17 @@
 	"comment" : "",
 	"ro" : {
 		"label" : "Recupera",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/Requester" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"ro" : {
+		"label" : "Probele solicitate vor fi transmise următoarei autorități",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

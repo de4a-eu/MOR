@@ -70,7 +70,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"es" : {
-		"label" : "",
+		"label" : "País",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -312,7 +312,7 @@
 	"cardinality" : "01",
 	"comment" : "",
 	"es" : {
-		"label" : "Apellido",
+		"label" : "Apellidos",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -378,7 +378,7 @@
 	"cardinality" : "11",
 	"comment" : "",
 	"es" : {
-		"label" : "Etiqueta preferida",
+		"label" : "Denominación",
 		"description" : "Nombre principal y legalmente reconocido de la organización. Una organización solo puede tener un nombre de este tipo en cualquier idioma determinado. Los nombres principales se pueden proporcionar en varios idiomas.",
 		"example" : "",
 		"verified" : "true"
@@ -5004,6 +5004,28 @@
 		"verified" : "true"
 	}
 } ,
+"GUI/DomesticEvidence" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Evidencia Original",
+		"description" : "Evidencia emitida por la autoridad competente en la forma original en formato estructurado",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/DomesticEvidencePDF" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Evidencia en formato PDF",
+		"description" : "Evidencia emitida por la autoridad competente en formato PDF",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-section-title" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5070,6 +5092,17 @@
 		"verified" : "true"
 	}
 } ,
+"GUI/de4a-section-header/INE" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "Instituto Nacional de Estadísticas (INE)",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
 "GUI/Retrieve" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5087,6 +5120,17 @@
 	"comment" : "",
 	"es" : {
 		"label" : "Rechazar",
+		"description" : "",
+		"example" : "",
+		"verified" : "true"
+	}
+} ,
+"GUI/Requester" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"es" : {
+		"label" : "La evidencia solicitada será enviada a la siguiente autoridad",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
