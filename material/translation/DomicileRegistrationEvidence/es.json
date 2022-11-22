@@ -92,7 +92,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"es" : {
-		"label" : "Certifica el empadronamiento",
+		"label" : "Certifica el registro en el domicilio",
 		"description" : "Certificación del registro de empadronamiento.",
 		"example" : "",
 		"verified" : "true"
