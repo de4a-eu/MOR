@@ -126,7 +126,9 @@ export class PreviewXmlComponent implements OnInit {
         "</b>" +
         (!this.schemaOnly
           ? v.value
-            ? ': <code class="fw-bold de4a-schema-values">' + v.value + "</code>"
+            ? ': <code class="fw-bold de4a-schema-values">' +
+              v.value +
+              "</code>"
             : ""
           : "") +
         (v.translate && v.translate.description && this.showDescription
@@ -170,7 +172,8 @@ export class PreviewXmlComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges) {
     this.schemaOnly = this.evidenceType != undefined;
-    if (!this.xmlInput) this.xmlInput = this.schemaExamples[this.evidenceType];
+    if (!this.xmlInput || (this.xmlInput && this.schemaOnly))
+      this.xmlInput = this.schemaExamples[this.evidenceType];
     if (this.xmlInput) {
       this.jsOutput = this.parser.parse(this.xmlInput);
       if (Object.keys(this.jsOutput).length > 0) this.translateDocument();
