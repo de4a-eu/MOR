@@ -21,11 +21,6 @@ export class DataLoaderService {
   public disabledCountryCode!: string;
 
   /**
-   * Change events
-   */
-  //selectedLanguageChange: Subject<string> = new Subject<string>();
-
-  /**
    * Private parameters
    */
   public countries: Country[] = [
@@ -64,6 +59,7 @@ export class DataLoaderService {
     { code: "es", name: "Spanish", flagCode: "ES" },
     { code: "pt", name: "Portuguese", flagCode: "PT" },
     { code: "fr", name: "French", flagCode: "FR" },
+    { code: "ro", name: "Romanian", flagCode: "RO" },
   ];
 
   public canonicalEvidenceTypes: CanonicalEvidenceType[] = [
@@ -99,10 +95,6 @@ export class DataLoaderService {
     translate.addLangs(this.languages.map((language) => language.code));
     this.setDefaultLanguage(this.defaultLanguage);
     this.setLanguage(this.selectedLanguage);
-
-    /*this.selectedLanguageChange.subscribe((language: string) => {
-      this.selectedLanguage = language;
-    });*/
   }
 
   /**
@@ -165,7 +157,6 @@ export class DataLoaderService {
    * @param code { string } Country code
    */
   public setLanguage(code: string) {
-    //this.selectedLanguageChange.next(code);
     this.selectedLanguage = code;
     this.translate.use(this.selectedLanguage);
   }
