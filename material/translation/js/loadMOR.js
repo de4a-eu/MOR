@@ -7,7 +7,8 @@ var debug = true
  * In the MVP of MOR, the API call returns all the MOR terms with their definition in one given language 
  */
 //const serverMORapi = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/MOR-app/src/assets/i18n/" /* WP3 mocked URL */
-const serverMORapi = "https://de4a.simplegob.com/ial/mor/"
+const serverMORapi = "https://raw.githubusercontent.com/de4a-wp3/MOR/main/material/translation/DomicileRegistrationEvidence/"
+//const serverMORapi = "https://de4a.simplegob.com/ial/mor/"
 /**
  * JSON object with all the MOR terms with descriptions in some specific language
  */
@@ -103,15 +104,86 @@ var preMorJSON = JSON.parse("{}")
 /**
  * lang(s) of the morJSON 
  */
+
+var addedTerms = new Set()
+function addInheritedChildren(term, type) {
+	if (debug) console.log("[DEBUG]<addInheritedChildren> called term="+term+" ("+morJSON.hasOwnProperty(term)+"), type="+type+" ("+morJSON.hasOwnProperty(type)+")")
+	if (!morJSON.hasOwnProperty(type) || morJSON[type].type == "xs:enumeration") {
+		//nothing can be done for the inheritance if "type" does not exist as a MOR term or its type is "xs:enumeration"
+		if (addedTerms.has(term)) addedTerms.delete(term)
+		if (debug) console.log("[DEBUG]<addInheritedChildren> type "+(morJSON.hasOwnProperty(type)?"as xs:enumeration":" not found "))
+		return null
+	}
+	var hasTerm = morJSON.hasOwnProperty(term)
+	if (! hasTerm || morJSON[term].type == type) {
+		for (var child in morJSON) 
+			if (child.startsWith(type)) {
+			//Each MOR term with an URI starting by "type" is a MOR term potentially inheritable by "term"
+				var termChildPath = term+"/"+child.substring(type.length)
+				termChildPath = termChildPath.replace(/\/\//g,"/")
+				termChildPath = termChildPath.replace(/\/$/,"")
+				if (debug) console.log("[DEBUG]<addInheritedChildren> inspection of child="+child+" as termChildPath=" +termChildPath + " that exists "+morJSON.hasOwnProperty(termChildPath), type,term+"/"+child.substring(type.length))
+				if (morJSON.hasOwnProperty(termChildPath)) {
+					//the MOR term "term" has already a child that overloads the definition of "type"'s child
+					var d = morJSON[termChildPath]
+					for (var ele in d) {
+						var changed = false
+						var val = d[ele]
+						if (debug) console.log("[DEBUG]<addInheritedChildren> checking ele="+ele+" val="+val +" for child="+child+" as termChildPath=" +termChildPath)
+						if (ele == "type" && val != morJSON[child][ele] && morJSON[child][ele].replace(/ /g,"").length >0) {
+							if (debug) console.log("[DEBUG]<addInheritedChildren> replacing type "+ele+" ["+JSON.stringify(d[ele])+"] x ["+JSON.stringify(morJSON[child][ele])+"]")
+							d[ele] = morJSON[child][ele]
+							changed = true
+						} else 
+						if (ele != langMOR && val.replace(/ /g,"").length == 0) {
+							//if the value of the "term"'s element is empty, it is assigned with the value of such element in the "type"'s child
+							if (debug) console.log("[DEBUG]<addInheritedChildren> replacing "+ele+" ["+JSON.stringify(d[ele])+"] x ["+JSON.stringify(morJSON[child][ele])+"]")
+							d[ele] = morJSON[child][ele]
+							if (d[ele].replace(/ /g,"").length > 0) changed = true
+							if (debug) console.log("[DEBUG]<addInheritedChildren> new "+ele+" ["+JSON.stringify(morJSON[termChildPath][ele])+"]")
+						} else 
+						if (ele == langMOR){
+							for (var langEle in d[ele]) {
+								if (debug) console.log("[DEBUG]<addInheritedChildren> lang "+ele+"/"+langEle+" ["+JSON.stringify(morJSON[termChildPath][ele][langEle])+"] from child ["+JSON.stringify(morJSON[child][ele][langEle])+"]")
+								if (d[ele][langEle].replace(/ /g,"").length == 0) {
+									d[ele][langEle] = morJSON[child][ele][langEle]
+									if (d[ele][langEle].replace(/ /g,"").length > 0) changed = true
+									if (debug) console.log("[DEBUG]<addInheritedChildren> new "+ele+"/"+langEle+" ["+JSON.stringify(morJSON[termChildPath][ele][langEle])+"]")
+								}
+							}
+						}
+						if (changed && !morJSON[termChildPath].type.startsWith("xs") && ! termChildPath.match(/[\w-_]+Enum/) ) addedTerms.add(termChildPath)
+					}
+				} else {
+					//"termChildPath" is not a MOR term, so it is added 
+					morJSON[termChildPath] = morJSON[child]
+					if (debug) console.log("[DEBUG]<addInheritedChildren> added new "+termChildPath+" ["+JSON.stringify(morJSON[termChildPath])+"] type="+child+":"+morJSON[child].type)
+					if (! termChildPath.startsWith("GUI") && ! termChildPath.match(/[\w-_]+Enum/) && ! morJSON[termChildPath].type.startsWith("xs") && morJSON[termChildPath].type != "")  
+						addedTerms.add(termChildPath)
+				} 
+			}
+			
+	}
+	if (addedTerms.has(term)) addedTerms.delete(term)
+	if (debug) console.log("[DEBUG]<addInheritedChildren> addedTerms: "+addedTerms.size)
+}
 function fillInheritanceMORjson() {
 	for (var uri in morJSON) {
-		if (! uri.startsWith("GUI") && ! uri.match(/[\w-_]+Enum/) ) {
-			preMorJSON[uri] = JSON.parse(JSON.stringify(morJSON[uri])) //Only for testing purposes with testInheritance.html
-			//if (debug) console.log("[DEBUG]<fillInheritanceMORjson> preMorJSON[uri]: "+JSON.stringify(preMorJSON[uri]))
-			var d = getTermDetail(uri, "")
-			morJSON[uri] = d
+		if (! uri.startsWith("GUI") && ! uri.match(/[\w-_]+Enum/) && ! morJSON[uri].type.startsWith("xs") ) {
+			addInheritedChildren(uri, morJSON[uri].type)
+			if (debug) console.log("[DEBUG]<fillInheritanceMORjson> uri="+uri+" : "+JSON.stringify(morJSON[uri]))
 			//if (debug) console.log("[DEBUG]<fillInheritanceMORjson> POST preMorJSON[uri]: "+JSON.stringify(preMorJSON[uri]))
 		} //GUI and Enum terms have not inheritance 
+	}
+	while (addedTerms.size > 0) {
+		for (var uri of addedTerms) 
+			if (! uri.startsWith("GUI") && ! uri.match(/[\w-_]+Enum/) && ! morJSON[uri].type.startsWith("xs") ) 
+				addInheritedChildren(uri, morJSON[uri].type)
+			else {
+				if (debug) console.log("[DEBUG]<fillInheritanceMORjson> uri="+uri+" of type "+morJSON[uri].type+" not processed")
+				addedTerms.delete(uri)
+			}
+			
 	}
 } 
 /**
@@ -122,6 +194,7 @@ function loadMOR(lang) {
 	callMORMVPapi(lang)
 	langMOR = lang
 	fillInheritanceMORjson()
+	console.log("[INFO]<loadMOR> loaded "+lang)
 }
 /**
  * Function to print the label and description of elements in a canonical evidence structure, considering inheritance behaviour
@@ -132,119 +205,77 @@ function loadMOR(lang) {
  * @param {MOR term path} canonicalSubTerm -optional- //MOR term path (URI) when canonicalType is a superterm in the inheritance 
  */
  var elements = new Array()
- function printCanonicalType (canonicalType, containerElement, lang, level, canonicalSubTerm) {
-	const indent = (level === undefined  || level == null ? 0: level)
-	if (debug) console.log("[DEBUG]<printCanonicalType> "+canonicalType+" level "+level +" sub "+canonicalSubTerm)
-	if (canonicalType == null || canonicalType === undefined) {
-		console.log("[ERROR]<printCanonicalType> not URI for "+canonicalType)
-		return
-	} 	
-	if (indent == 0 && canonicalType.indexOf("/")>0) {
-		console.log("[ERROR]<printCanonicalType> wrong URI for "+canonicalType)
-		return
-	} 
-	if (containerElement == null || containerElement === undefined) {
-		console.log("[ERROR]<printCanonicalType> not container element for  "+canonicalType)
-		return
-	} 	
-	if (morJSON == null || morJSON === undefined) {
-		console.log("[ERROR]<printCanonicalType> ("+canonicalType+") mor JSON not initiated" )
-		return
-	} 
-	if (! morJSON.hasOwnProperty(canonicalType)) {
-		console.log("[ERROR]<printCanonicalType> "+canonicalType+" not found in mor JSON" )
-		return
-	}	
-	var d = morJSON[canonicalType]
-	const parent = d.hasOwnProperty("type")?d.type:""
+ function printCanonicalType (canonicalType, containerElement, lang, level, summary) {
+	if (debug) console.log("[DEBUG]<printCanonicalType> "+canonicalType+" level "+level +" summary "+summary)
 	
-	if (debug) console.log("[DEBUG]<printCanonicalType> "+canonicalType+"\n"+JSON.stringify(d))
-	if (! d.hasOwnProperty(lang)) {
-		console.log("[ERROR]<printCanonicalType> ("+canonicalType+") Lang "+lang+" not found in mor JSON" )
-		return
-	}	
-	if (debug) console.log("[DEBUG]<printCanonicalType> "+canonicalType+","+containerElement.id)
-	if (level == 0) {
-		container.innerHTML = ""
-		elements = []
-	}
-	var div = document.createElement("div");
-	div.classList.add("MORtitle")
-	div.setAttribute("title", canonicalType+"_"+canonicalSubTerm)
-	if (elements.includes((canonicalSubTerm==null||canonicalSubTerm===undefined)?canonicalType:canonicalSubTerm)) return
-	elements.push((canonicalSubTerm==null||canonicalSubTerm===undefined)?canonicalType:canonicalSubTerm)
-	if (debug) console.log("[DEBUG]<printCanonicalType> push elements "+canonicalType+"\n>>>"+elements)
-	let desc = d[lang].hasOwnProperty("description")?d[lang].description:"";
-	let label = d[lang].hasOwnProperty("label")?d[lang].label:"";
-	let card = d.hasOwnProperty("cardinality")?d.cardinality:"";
-	if (morJSON.hasOwnProperty(parent) && morJSON[parent].hasOwnProperty(lang)) {
-		if (desc == "" && morJSON[parent][lang].hasOwnProperty("description")) desc = morJSON[parent][lang].description
-		if (label == "" && morJSON[parent][lang].hasOwnProperty("label")) label = morJSON[parent][lang].label
-		if (card == "" && morJSON[parent].hasOwnProperty("cardinality")) card = morJSON[parent].cardinality
-	}
-	var divdesc = document.createElement("div");
-	divdesc.classList.add("MORdesc")
-	divdesc.classList.add("MORindent")
-	divdesc.setAttribute("style", "--m:" + (indent * 20)+"px")
-	divdesc.innerHTML = desc
-	//divdesc.innerHTML = "<span class=\"MORindent"+indent+"\">"+desc+"</span>"
-	
-	div.setAttribute("id", canonicalType)
-	let cardinality = ""
-	switch (card) {
-			case "00" : cardinality = "[0..1]"
-			case "01" : cardinality = "[0..n]"
-			case "11" : cardinality = "[1..n]"
-			case "10" : cardinality = ""
-			default : console.log("[WARN]<printCanonicalType> ("+canonicalType+") unknown cardinality ") 
-	}
-
-	//div.innerHTML = "<span class=\"MORlabel MORindent"+indent+"\">"+label +" "+ cardinality+"</span>"
-	div.innerHTML = "<span class=\"MORlabel MORindent\" style=\"--m: "+indent*20+"px\">"+label +" "+ cardinality+"</span>"
-	//div.innerHTML = label +" "+ cardinality
-	div.appendChild(divdesc)
-	containerElement.appendChild(div)
-	//containerElement.appendChild(divdesc)
-	let children = new Map()
-	for (var k in morJSON) 
-		if (k.startsWith(canonicalType+"/") && k.indexOf("@")<0) {
-			let depth = k.split("/").length
-			if (debug) console.log("[DEBUG]<printCanonicalType> "+canonicalType+" calling1 ("+(depth)+") to "+k)
-			children.set(k, morJSON[k].type)
-			//printCanonicalType (k, containerElement, lang, indent+1)
-			printCanonicalType (k, containerElement, lang, depth, canonicalSubTerm)
-		} 
-		
-	if (parent != "" && morJSON.hasOwnProperty(parent) && morJSON[parent].hasOwnProperty("type") && morJSON[parent].type != "xs:enumeration") {
-		var divadd = document.createElement("div")
-		divadd.classList.add("MORadd")
-		//divadd.classList.add("MORindent")
-		divadd.setAttribute("style", "display:none;")
-		divadd.setAttribute("id", canonicalType+containerElement.id+lang+level+parent)
-		var cont = 0
-		for (var i in morJSON) 
-			if (i.startsWith(parent+"/") && i.indexOf("@")<0 && ! children.has(i.replace(parent,canonicalType))) {
-				let term = (canonicalSubTerm == null || canonicalSubTerm === undefined)?i.replace(parent,canonicalType):i.replace(parent,canonicalSubTerm)
-				let depth = term.split("/").length
-				if (debug) console.log("[DEBUG]<printCanonicalType> "+canonicalType+" in children "+term+" of "+parent + " calling2 ("+(depth)+")") 
-					//printCanonicalType (i, containerElement, lang, indent+2)
-				//printCanonicalType (i, divadd, lang, indent+depth)
-				printCanonicalType (i, divadd, lang, depth, term)
-				cont++
+			if (canonicalType == null || canonicalType === undefined) {
+				console.log("[ERROR]<printCanonicalType> not URI for "+canonicalType)
+				return
+			} 	
+			if (indent == 0 && canonicalType.indexOf("/")>0) {
+				console.log("[ERROR]<printCanonicalType> wrong URI for "+canonicalType)
+				return
+			} 
+			if (containerElement == null || containerElement === undefined) {
+				console.log("[ERROR]<printCanonicalType> not container element for  "+canonicalType)
+				return
+			} 	
+			if (morJSON == null || morJSON === undefined) {
+				console.log("[ERROR]<printCanonicalType> ("+canonicalType+") mor JSON not initiated" )
+				return
+			} 
+			if (! morJSON.hasOwnProperty(canonicalType)) {
+				console.log("[ERROR]<printCanonicalType> "+canonicalType+" not found in mor JSON" )
+				return
+			}	
+			if (level == 0) {
+				container.innerHTML = ""
+				elements = []
 			}
-			
-		if (cont > 0) {
-			let but = document.createElement("input")
-			but.setAttribute("type", "button")
-			but.setAttribute("value","...")
-			but.classList.add("MORindent")
-			but.setAttribute("style", "--m:" + (indent * 20)+"px;display:block;")
-			but.setAttribute("onclick", "changeDivAdd('"+canonicalType+containerElement.id+lang+level+parent+"')")
-			containerElement.appendChild(but)
-		}
-		containerElement.appendChild(divadd)
-	}
-} 
+			/*
+			var keys = [];
+   			for(var k in morJSON) keys.push(k);
+   			keys.sort()
+   			*/
+   			var keys = Object.keys(morJSON).sort()
+			for (var i in keys) {
+				let uri = keys[i]
+				var indent = uri.split("/").length - 1
+				let mtype = morJSON[uri].type
+				if (debug) console.log("[DEBUG]<printCanonicalType> key="+uri + " indent="+indent, uri.indexOf("@")<0 , uri.startsWith(canonicalType), summary == 0 , uri.indexOf("Certifies")>0 , indent == 2, "/"+mtype+"/", mtype.indexOf("xs:token")) 
+				if (uri.indexOf("@")<0 && uri.startsWith(canonicalType) && (summary == 0 || (uri.indexOf("Certifies")>0 && indent == 2 )) &&  mtype.indexOf("xs:token")<0 ) {
+					var d = morJSON[uri][lang]
+					
+
+					var div = document.createElement("div");
+					div.classList.add("MORtitle")
+					div.setAttribute("title", uri)
+					div.setAttribute("style", "--m:" + (indent * 20)+"px")
+
+					var divdesc = document.createElement("div");
+					divdesc.classList.add("MORdesc")
+					divdesc.classList.add("MORindent")
+					divdesc.innerHTML = d.description
+					//divdesc.innerHTML = "<span class=\"MORindent"+indent+"\">"+desc+"</span>"
+					
+					div.setAttribute("id", uri)
+					let cardinality = ""
+					switch (d.cardinality) {
+							case "00" : cardinality = "[0..1]"
+							case "01" : cardinality = "[0..n]"
+							case "11" : cardinality = "[1..n]"
+							case "10" : cardinality = "[1..1]"
+							default : console.log("[WARN]<printCanonicalType> ("+canonicalType+") unknown cardinality ") 
+					}
+					div.innerHTML = "<span class=\"MORlabel MORindent\" style=\"--m: "+indent*20+"px\">"+d.label +" "+ cardinality+"</span>"
+					//div.innerHTML = label +" "+ cardinality
+					div.appendChild(divdesc)
+					containerElement.appendChild(div)
+				}
+			}
+	
+ }
+ 
 function changeDivAdd(id) {
 	let d = document.getElementById(id)
 	d.style.display = (d.style.display=="none"?"block":"none")
