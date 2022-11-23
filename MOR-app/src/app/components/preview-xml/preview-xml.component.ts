@@ -145,7 +145,7 @@ export class PreviewXmlComponent implements OnInit {
     let result: any[] = [];
     function traverse(o: any, level: number, path = "") {
       for (let k in o) {
-        let shortKey = k.replace(/(n3|cvb|cbc):/g, "");
+        let shortKey = k.replace(/(n3|cvb|cbc|ct|bi):/g, "");
         let fullKey = (path.length > 0 ? path + "/" : "") + shortKey;
         if (typeof o[k] == "object" && o[k].length > 0) {
           for (let i = 0; i < o[k].length; i++) {

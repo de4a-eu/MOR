@@ -74,8 +74,9 @@ export class DataLoaderService {
       morID: "MarriageEvidence",
     },
     {
-      name: "Residency proof",
-      tokenName: "ResidencyProof",
+      name: "Domicile registration certificate",
+      tokenName: "DomicileRegistrationCertificate",
+      morID: "DomicileRegistrationEvidence",
     },
     {
       name: "Company registration",

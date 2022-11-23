@@ -1,0 +1,40 @@
+
+<bi:DomicileRegistrationEvidence xmlns:bi="urn:eu-de4a:xsd:CanonicalEvidenceType::DomicileRegistrationEvidence:v1.6" xmlns="http://www.de4a.eu/2020/data/transferor/v2" xmlns:cvb="http://www.w3.org/ns/corevocabulary/BasicComponents" xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:4.0" xmlns:query="urn:oasis:names:tc:ebxml-regrep:xsd:query:4.0" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:4.0" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:xsd:rs:4.0" xmlns:spi="urn:oasis:names:tc:ebxml-regrep:xsd:spi:4.0" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <bi:IssueDate>2012-01-01</bi:IssueDate>
+  <bi:IssuingAuthority>
+    <bi:PrefLabel>Instituto Nacional de Estadistica</bi:PrefLabel>
+  </bi:IssuingAuthority>
+  <bi:IssuingPlace>
+    <cvb:LocatorDesignator>0074874</cvb:LocatorDesignator>
+    <cvb:Thoroughfare>ES</cvb:Thoroughfare>
+    <cvb:PostCode>52002</cvb:PostCode>
+    <bi:AddressArea>MELILLA</bi:AddressArea>
+    <bi:AdminUnitL2>MELILLA</bi:AdminUnitL2>
+    <bi:AdminUnitL1>ES</bi:AdminUnitL1>
+  </bi:IssuingPlace>
+  <bi:CertifiesDomicile>
+    <bi:Inhabitant>
+      <bi:PersonName>
+        <bi:FamilyName>ApellidoPrimero ApellidoSegundo</bi:FamilyName>
+        <bi:GivenName>Nombre</bi:GivenName>
+      </bi:PersonName>
+      <bi:Identifier>
+        <cvb:Identifier>99999142H</cvb:Identifier>
+      </bi:Identifier>
+      <bi:DateOfBirth>
+        <bi:Year>2000</bi:Year>
+        <bi:Month>--01</bi:Month>
+        <bi:Day>---01</bi:Day>
+      </bi:DateOfBirth>
+      <bi:Gender>UNKNOWN</bi:Gender>
+    </bi:Inhabitant>
+    <bi:Domicile>
+      <cvb:LocatorDesignator>CALLE DEMETRIO, B, floor: 2</cvb:LocatorDesignator>
+      <cvb:Thoroughfare>ES</cvb:Thoroughfare>
+      <cvb:PostName>MELILLA</cvb:PostName>
+      <cvb:PostCode>52002</cvb:PostCode>
+      <bi:AdminUnitL2>MELILLA</bi:AdminUnitL2>
+      <bi:AdminUnitL1>ES</bi:AdminUnitL1>
+    </bi:Domicile>
+  </bi:CertifiesDomicile>
+</bi:DomicileRegistrationEvidence>

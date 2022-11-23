@@ -13,6 +13,7 @@ export class URL {
   public static schemaExamples: any = {
     BirthCertificate: "birth-evidence-1.7-generated-example.xml",
     MarriageCertificate: "marriage-evidence-1.7-generated-example.xml",
+    DomicileRegistrationCertificate: "domicile-evidence-example.xml"
   };
 
   /**
