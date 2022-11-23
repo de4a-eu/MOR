@@ -4470,7 +4470,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Wngleščina",
+		"label" : "angleščina",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4481,7 +4481,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Španski",
+		"label" : "španščina",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4492,7 +4492,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Portugalski",
+		"label" : "portugalščina",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4503,7 +4503,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Francoski",
+		"label" : "francoščina",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4514,7 +4514,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Slovenščina",
+		"label" : "slovenščina",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4525,7 +4525,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "",
+		"label" : "romunščina",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5037,17 +5037,6 @@
 		"verified" : "false"
 	}
 } ,
-"GUI/de4a-legalInfo-content/de4a-section-title" : {
-	"type" : "xs:string",
-	"cardinality" : "00",
-	"comment" : "",
-	"sl" : {
-		"label" : "Pravne informacije",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
 "GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5064,7 +5053,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Z uporabo tega postopka lahko neposredno od nas zahtevate ustrezne informacije in posredovali vam jih bomo najnovejšo različico, ki jo imamo. Podatke boste lahko pregledali in se odločili, ali jih želite uporabiti ali ne. Ni vam treba zahtevati informacij od nas prek te storitve. Če prekličete ta postopek, boste imeli možnost, da dokončajte svoj postopek z ročnim iskanjem in pošiljanjem informacij. Upoštevajte, da je ta storitev del pilotnega projekta. Z izbiro 'Strinjam se' se strinjate s prostovoljnim sodelovanjem v pilotnem programu. Podatke, ki vam jih damo na voljo, uporabite samo za izpolnjevanje postopek in preveriti, ali je bil postopek uspešno zaključen. Za več podrobnosti glejte <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a>.",
+		"label" : "Z uporabo tega postopka lahko neposredno od nas zahtevate ustrezne informacije in posredovali vam jih bomo najnovejšo različico, ki jo imamo. Podatke boste lahko pregledali in se odločili, ali jih želite uporabiti ali ne. Ni vam treba zahtevati informacij od nas prek te storitve. Če prekličete ta postopek, boste imeli možnost, da dokončajte svoj postopek z ročnim iskanjem in pošiljanjem informacij. Upoštevajte, da je ta storitev del pilotnega projekta. Z izbiro 'Strinjam se' se strinjate s prostovoljnim sodelovanjem v pilotnem programu. Podatke, ki vam jih damo na voljo, uporabite samo za izpolnjevanje postopek in preveriti, ali je bil postopek uspešno zaključen. Za več podrobnosti glejte https://www.de4a.eu/aboutproject.",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

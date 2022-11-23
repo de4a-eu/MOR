@@ -4470,7 +4470,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Engleză",
+		"label" : "engleză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4481,7 +4481,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Spaniolă",
+		"label" : "spaniolă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4492,7 +4492,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Portugheză",
+		"label" : "portugheză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4503,7 +4503,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Franceză",
+		"label" : "franceză",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4514,7 +4514,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Slovenă",
+		"label" : "slovenă",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -4525,7 +4525,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Română",
+		"label" : "română",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -5048,6 +5048,17 @@
 		"verified" : "false"
 	}
 } ,
+"" : {
+	"type" : "",
+	"cardinality" : "00",
+	"comment" : "Information légale",
+	"ro" : {
+		"label" : "",
+		"description" : "",
+		"example" : "0",
+		"verified" : "false"
+	}
+} ,
 "GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
@@ -5064,7 +5075,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Utilizând acest proces, ne puteți solicita direct informații relevante și vă vom furniza ultima versiune pe care o avem. Veți putea să revizuiți informațiile și să alegeți dacă să le utilizați sau nu. Nu sunteți obligat să ne solicitați informații prin intermediul acestui serviciu. Dacă anulați acest proces, veți avea posibilitatea finalizați procesul căutând și trimițând manual informațiile. Vă rugăm să rețineți că acest serviciu face parte dintr-un proiect pilot. Selectând „Sunt de acord”, sunteți de acord să participați la programul pilot pe bază de voluntariat. Trebuie să utilizați informațiile pe care vi le punem la dispoziție numai în scopul de a completa procedura și pentru a verifica dacă procedura a fost finalizată cu succes. Consultați <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> pentru mai multe detalii.",
+		"label" : "Utilizând acest proces, ne puteți solicita direct informații relevante și vă vom furniza ultima versiune pe care o avem. Veți putea să revizuiți informațiile și să alegeți dacă să le utilizați sau nu. Nu sunteți obligat să ne solicitați informații prin intermediul acestui serviciu. Dacă anulați acest proces, veți avea posibilitatea finalizați procesul căutând și trimițând manual informațiile. Vă rugăm să rețineți că acest serviciu face parte dintr-un proiect pilot. Selectând „Sunt de acord”, sunteți de acord să participați la programul pilot pe bază de voluntariat. Trebuie să utilizați informațiile pe care vi le punem la dispoziție numai în scopul de a completa procedura și pentru a verifica dacă procedura a fost finalizată cu succes. Consultați https://www.de4a.eu/aboutproject pentru mai multe detalii.",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

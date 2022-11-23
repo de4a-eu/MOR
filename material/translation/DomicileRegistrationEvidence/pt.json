@@ -4525,7 +4525,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "",
+		"label" : "romeno",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5037,34 +5037,12 @@
 		"verified" : "false"
 	}
 } ,
-"GUI/de4a-legalInfo-content/de4a-section-title" : {
-	"type" : "xs:string",
-	"cardinality" : "00",
-	"comment" : "",
-	"pt" : {
-		"label" : "Informação legal",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
-	"type" : "xs:string",
-	"cardinality" : "00",
-	"comment" : "",
-	"pt" : {
-		"label" : "Leia o texto a seguir antes de continuar",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
 "GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Ao usar este processo, você pode solicitar informações relevantes diretamente a nós e forneceremos a você o versão mais recente que temos. Você poderá revisar as informações e escolher se deseja ou não usá-las. Você não é obrigado a nos solicitar informações por meio deste serviço. Se cancelar este processo, terá a possibilidade de conclua seu processo pesquisando e enviando as informações manualmente. Observe que este serviço faz parte de um projeto piloto. Ao selecionar 'Concordo', você concorda em participar do programa piloto de forma voluntária. Você só deve usar as informações que disponibilizamos para o propósito de completar o procedimento e para verificar se o procedimento foi concluído com sucesso. Veja <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> para mais detalhes.",
+		"label" : "Ao usar este processo, você pode solicitar informações relevantes diretamente a nós e forneceremos a você o versão mais recente que temos. Você poderá revisar as informações e escolher se deseja ou não usá-las. Você não é obrigado a nos solicitar informações por meio deste serviço. Se cancelar este processo, terá a possibilidade de conclua seu processo pesquisando e enviando as informações manualmente. Observe que este serviço faz parte de um projeto piloto. Ao selecionar 'Concordo', você concorda em participar do programa piloto de forma voluntária. Você só deve usar as informações que disponibilizamos para o propósito de completar o procedimento e para verificar se o procedimento foi concluído com sucesso. Veja https://www.de4a.eu/aboutproject para mais detalhes.",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

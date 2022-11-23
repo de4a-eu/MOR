@@ -4470,7 +4470,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Anglais",
+		"label" : "anglais",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -4481,7 +4481,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Espagnol",
+		"label" : "espagnol",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -4492,7 +4492,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Portugais",
+		"label" : "portugais",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -4525,7 +4525,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "",
+		"label" : "roumaine",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5037,34 +5037,12 @@
 		"verified" : "false"
 	}
 } ,
-"GUI/de4a-legalInfo-content/de4a-section-title" : {
-	"type" : "xs:string",
-	"cardinality" : "00",
-	"comment" : "",
-	"fr" : {
-		"label" : "Information légale",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
-	"type" : "xs:string",
-	"cardinality" : "00",
-	"comment" : "",
-	"fr" : {
-		"label" : "Lisez le texte suivant avant de continuer",
-		"description" : "",
-		"example" : "",
-		"verified" : "false"
-	}
-} ,
 "GUI/de4a-legalInfo-content/de4a-legalInfo-text" : {
 	"type" : "xs:string",
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "En utilisant ce processus, vous pouvez nous demander directement des informations pertinentes et nous vous fournirons les dernière version que nous avons. Vous pourrez consulter les informations et choisir de les utiliser ou non. Vous n'êtes pas obligé de nous demander des informations par le biais de ce service. Si vous annulez ce processus, vous aurez la possibilité de complétez votre processus en recherchant et en envoyant les informations manuellement. Veuillez noter que ce service fait partie d'un projet pilote. En sélectionnant 'J'accepte', vous acceptez de participer au programme pilote sur une base volontaire. Vous ne devez utiliser les informations que nous mettons à votre disposition que dans le but de remplir le procédure et de vérifier que la procédure s'est déroulée avec succès. Voir <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> pour plus de détails.",
+		"label" : "En utilisant ce processus, vous pouvez nous demander directement des informations pertinentes et nous vous fournirons les dernière version que nous avons. Vous pourrez consulter les informations et choisir de les utiliser ou non. Vous n'êtes pas obligé de nous demander des informations par le biais de ce service. Si vous annulez ce processus, vous aurez la possibilité de complétez votre processus en recherchant et en envoyant les informations manuellement. Veuillez noter que ce service fait partie d'un projet pilote. En sélectionnant 'J'accepte', vous acceptez de participer au programme pilote sur une base volontaire. Vous ne devez utiliser les informations que nous mettons à votre disposition que dans le but de remplir le procédure et de vérifier que la procédure s'est déroulée avec succès. Voir https://www.de4a.eu/aboutproject pour plus de détails.",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

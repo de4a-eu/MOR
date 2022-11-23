@@ -50,7 +50,7 @@
 	"en" : {
 		"label" : "Denomination of the issuing authority",
 		"description" : "As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.",
-		"example" : "IRN -   Institute of Registry and Notary.",
+		"example" : "IRN -  Institute of Registry and Notary.",
 		"verified" : "true"
 	}
 } ,
@@ -5064,7 +5064,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"en" : {
-		"label" : "By using this process, you can request relevant information directly from us, and we’ll provide you with the most current version that we have. You will be able to review the information, and can choose whether you want to use it or not. You are not required to request the information from us through this service. If you cancel, you will have the possibility of completing your procedure by searching for the information and submitting it manually. Note that this service is part of a pilot project. By selecting 'Agree', you agree to participate in the pilot on a voluntary basis. You should only use the information that we make available to you for the purposes of completing the procedure, and to monitor that the procedure was completed successfully. See <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> for further details.",
+		"label" : "By using this process, you can request relevant information directly from us, and we’ll provide you with the most current version that we have. You will be able to review the information, and can choose whether you want to use it or not. You are not required to request the information from us through this service. If you cancel, you will have the possibility of completing your procedure by searching for the information and submitting it manually. Note that this service is part of a pilot project. By selecting 'Agree', you agree to participate in the pilot on a voluntary basis. You should only use the information that we make available to you for the purposes of completing the procedure, and to monitor that the procedure was completed successfully. See https://www.de4a.eu/aboutproject for further details.",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"

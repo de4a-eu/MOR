@@ -5064,7 +5064,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"es" : {
-		"label" : "Al usar este proceso, puede solicitarnos información relevante directamente y le proporcionaremos la versión más actual que tenemos. Podrá revisar la información y elegir si desea usarla o no. No está obligado a solicitarnos la información a través de este servicio. Si cancela este proceso, tendrás la posibilidad de completar su trámite buscando y enviándo la información manualmente. Tenga en cuenta que este servicio es parte de un proyecto piloto. Al seleccionar 'Acepto', acepta participar en el programa piloto de forma voluntaria. Solo debe usar la información que ponemos a su disposición con el fin de completar el procedimiento y para comprobar que el procedimiento se completó con éxito. Consulte <a style='color:black' href='https://www.de4a.eu/aboutproject'>https://www.de4a.eu/aboutproject</a> para más detalles. ",
+		"label" : "Al usar este proceso, puede solicitarnos información relevante directamente y le proporcionaremos la versión más actual que tenemos. Podrá revisar la información y elegir si desea usarla o no. No está obligado a solicitarnos la información a través de este servicio. Si cancela este proceso, tendrás la posibilidad de completar su trámite buscando y enviándo la información manualmente. Tenga en cuenta que este servicio es parte de un proyecto piloto. Al seleccionar 'Acepto', acepta participar en el programa piloto de forma voluntaria. Solo debe usar la información que ponemos a su disposición con el fin de completar el procedimiento y para comprobar que el procedimiento se completó con éxito. Consulte https://www.de4a.eu/aboutproject para más detalles. ",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
@@ -5086,7 +5086,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"es" : {
-		"label" : "la Plataforma de Intermediacion de Datos de la Administración General del Estado español",
+		"label" : "la Plataforma de Intermediación de Datos de la Administración General del Estado español",
 		"description" : "",
 		"example" : "",
 		"verified" : "true"
