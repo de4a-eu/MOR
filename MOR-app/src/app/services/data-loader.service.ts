@@ -94,7 +94,6 @@ export class DataLoaderService {
 
   constructor(public translate: TranslateService, private http: HttpClient) {
     translate.addLangs(this.languages.map((language) => language.code));
-    console.log(translate);
     this.setDefaultLanguage(this.defaultLanguage);
     this.setLanguage(this.selectedLanguage);
   }
