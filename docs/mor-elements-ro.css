@@ -1,0 +1,24 @@
+de4a-mor-er,
+de4a-mor-p {
+  color: rgb(96, 98, 112) !important;
+  font-family: "DidactGothic-Regular" !important;
+}
+.de4a-text,
+.de4a-title {
+  color: rgb(38, 59, 94) !important;
+}
+
+.de4a-button-evidence,
+.de4a-button-choice-dark,
+.de4a-button-choice-light {
+  background-color: rgb(0, 123, 255) !important;
+  border-color: rgb(0, 123, 255) !important;
+  color: white !important;
+}
+.de4a-button-evidence:hover,
+.de4a-button-choice-dark:hover,
+.de4a-button-choice-light:hover {
+  background-color: rgb(0, 105, 217) !important;
+  border-color: rgb(0, 98, 204) !important;
+  color: white !important;
+}
