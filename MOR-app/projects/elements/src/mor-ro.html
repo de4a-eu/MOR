@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DE4A :: WP3 :: MOR-ER Romanian UC1 demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="mor-elements.css" />
+    <link rel="stylesheet" href="mor-elements-ro.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script src="mor-elements.js"></script>
+    <style>
+      h1 {
+        border-bottom: 1px solid darkgrey;
+        padding-top: 20px;
+      }
+      .component-container {
+        text-align: center;
+        padding: 10px;
+        border: 2px solid darkgray;
+        border-radius: 10px;
+      }
+      .side-by-side {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 10px;
+        width: 600px;
+      }
+      #output-mor-er,
+      #output-mor-p {
+        white-space: normal;
+        overflow-wrap: break-word;
+        overflow: scroll;
+        /*height: 100px;
+        color: rgb(132, 132, 132);*/
+      }
+      .highlight {
+        background-color: rgb(240, 240, 240);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- START: Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><b
+            ><i class="fa-regular fa-id-card pe-2"></i>MOR-ER Romanian UC1 demo</b
+          ></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                ><small>DE4A WP3</small></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END: Navigation -->
+
+    <div class="container">
+      <div class="row">
+        <!-- START: Introduction -->
+        <div class="col-12">
+          <h2 class="pt-4">
+            <i class="fa-solid fa-book pe-2"></i>Introduction
+          </h2>
+          <p>
+            The following document contains technical details about the
+            following <b>Multilingual Ontology Repository (MOR)</b> component:
+          </p>
+          <ul>
+            <li>
+              <h4>
+                <a href="#mor-er-demo"
+                  ><span class="badge rounded-pill bg-primary"
+                    ><i class="fa-solid fa-diagram-project pe-1"></i>MOR
+                    Explicit Request (ER)</span
+                  ></a
+                >
+              </h4>
+              <ul>
+                <li>
+                  <b>Supported activities</b>
+                  <ul>
+                    <li>
+                      To be invoked when the user selects the evidence types to
+                      be issued abroad.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Hosting environment</b>
+                  <ul>
+                    <li>Included on a website at Data Evaluator.</li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Actor</b>
+                  <ul>
+                    <li>User</li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Preconditions</b>
+                  <ul>
+                    <li>
+                      User starts cross-border procedure (with service request
+                      to Data Evaluator).
+                    </li>
+                    <li>
+                      User provides authentication details to Data Evaluator.
+                    </li>
+                    <li>User identity at Data Evaluator is matched.</li>
+                    <li>
+                      Data Evaluator determines procedural requirements and
+                      evidence is required.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Postconditions</b>
+                  <ul>
+                    <li>User continues to follow the evidence status.</li>
+                    <li>
+                      Data Evaluator's workflow is redirected to Data Requester
+                      / Data Transferor / Data Owner that provides the evidence.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Interactions</b>
+                  <ul>
+                    <li>
+                      The component provides the content in the default language
+                      that can be changed by the user.
+                    </li>
+                    <li>
+                      The user can see the information provided in the selected
+                      language for each of the canonical types.
+                    </li>
+                    <li>
+                      The user selectes the provider country for each canonical
+                      type.
+                    </li>
+                    <li>
+                      The component provides the IAL provisions per canonical
+                      type and selected provider country.
+                    </li>
+                    <li>
+                      The user selects the IAL provision per canonical type.
+                      <ul>
+                        <li>
+                          The user can optionaly select to upload the evidence
+                          per canonical type.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>The user confirms the selection to proceed.</li>
+                    <li>
+                      The component returns the selected IAL provisions or
+                      uploaded documents by writing the corresponding JSON
+                      structure to the output variable defined by the input
+                      parameter <code>output-j-s-array-id</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Input</b>
+                  <ul>
+                    <li>
+                      <code><b>default-lang</b></code>
+                      <ul>
+                        <li>
+                          This only defines the <b>default language</b>, set at
+                          invocation. While interacting with MOR component the
+                          language can be changed at any time.
+                        </li>
+                        <li>
+                          <b>Codelist</b> based on
+                          <a
+                            href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes"
+                            target="_blank"
+                            >ISO 639-1:2002</a
+                          >.
+                          <ul>
+                            <li>
+                              <a
+                                href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=en"
+                                target="_blank"
+                                ><code>en</code></a
+                              >
+                              (English),
+                              <a
+                                href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=sl"
+                                target="_blank"
+                                ><code>sl</code></a
+                              >
+                              (Slovenian),
+                              <a
+                                href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=es"
+                                target="_blank"
+                                ><code>es</code></a
+                              >
+                              (Spanish),
+                              <a
+                                href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=pt"
+                                target="_blank"
+                                ><code>pt</code></a
+                              >
+                              (Portuguese),
+                              <a
+                                href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=fr"
+                                target="_blank"
+                                ><code>fr</code></a
+                              >
+                              (French),
+                              <a
+                                href="https://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=ro"
+                                target="_blank"
+                                ><code>ro</code></a
+                              >
+                              (Romanian)
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <code><b>requester-country-code</b></code>
+                      <ul>
+                        <li>
+                          <b>Requester country code</b> of Data Evaluator using
+                          component.
+                        </li>
+                        <li>
+                          <b>Codelist</b> based on
+                          <a
+                            href="https://en.wikipedia.org/wiki/Nomenclature_of_Territorial_Units_for_Statistics"
+                            target="_blank"
+                            >NUTS 0</a
+                          >.
+                          <ul>
+                            <li>
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Austria"
+                                target="_blank"
+                                ><code>AT</code></a
+                              >
+                              (Austria),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Belgium"
+                                target="_blank"
+                                ><code>BE</code></a
+                              >
+                              (Belgium),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Bulgaria"
+                                target="_blank"
+                                ><code>BG</code></a
+                              >
+                              (Bulgaria),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Croatia"
+                                target="_blank"
+                                ><code>HR</code></a
+                              >
+                              (Croatia),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Cyprus"
+                                target="_blank"
+                                ><code>CY</code></a
+                              >
+                              (Cyprus),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_the_Czech_Republic"
+                                target="_blank"
+                                ><code>CZ</code></a
+                              >
+                              (Czech Republic),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Denmark"
+                                target="_blank"
+                                ><code>DK</code></a
+                              >
+                              (Denmark),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Estonia"
+                                target="_blank"
+                                ><code>EE</code></a
+                              >
+                              (Estonia),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Finland"
+                                target="_blank"
+                                ><code>FI</code></a
+                              >
+                              (Finland),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_France"
+                                target="_blank"
+                                ><code>FR</code></a
+                              >
+                              (France),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Germany"
+                                target="_blank"
+                                ><code>DE</code></a
+                              >
+                              (Germany),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Greece"
+                                target="_blank"
+                                ><code>EL</code></a
+                              >
+                              (Greece),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Hungary"
+                                target="_blank"
+                                ><code>HU</code></a
+                              >
+                              (Hungary),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Ireland"
+                                target="_blank"
+                                ><code>IE</code></a
+                              >
+                              (Ireland),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Italy"
+                                target="_blank"
+                                ><code>IT</code></a
+                              >
+                              (Italy),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Latvia"
+                                target="_blank"
+                                ><code>LV</code></a
+                              >
+                              (Latvia),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Lithuania"
+                                target="_blank"
+                                ><code>LT</code></a
+                              >
+                              (Lithuania),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Luxembourg"
+                                target="_blank"
+                                ><code>LU</code></a
+                              >
+                              (Luxembourg),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Malta"
+                                target="_blank"
+                                ><code>MT</code></a
+                              >
+                              (Malta),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_the_Netherlands"
+                                target="_blank"
+                                ><code>NL</code></a
+                              >
+                              (Netherlands),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Poland"
+                                target="_blank"
+                                ><code>PL</code></a
+                              >
+                              (Poland),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Portugal"
+                                target="_blank"
+                                ><code>PT</code></a
+                              >
+                              (Portugal),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Romania"
+                                target="_blank"
+                                ><code>RO</code></a
+                              >
+                              (Romania),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Slovakia"
+                                target="_blank"
+                                ><code>SK</code></a
+                              >
+                              (Slovakia),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Slovenia"
+                                target="_blank"
+                                ><code>SI</code></a
+                              >
+                              (Slovenia),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Spain"
+                                target="_blank"
+                                ><code>ES</code></a
+                              >
+                              (Spain),
+                              <a
+                                href="https://en.wikipedia.org/wiki/NUTS_statistical_regions_of_Sweden"
+                                target="_blank"
+                                ><code>SE</code></a
+                              >
+                              (Sweden).
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <code><b>canonical-evidence-types</b></code>
+                      <ul>
+                        <li>
+                          Comma seperated canonical evidence types
+                          <b>token names</b>.
+                        </li>
+                        <li>
+                          <b>Codelist</b>
+                          <ul>
+                            <li>
+                              <del><code>BirthCertificate</code></del
+                              >, <del><code>MarriageCertificate</code></del
+                              >, <del><code>CompanyRegistration</code></del
+                              >, <del><code>HigherEdCertificate</code></del
+                              >, <del><code>SecondaryEdCertificate</code></del
+                              >, <code>DomicileRegistrationCertificate</code>.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <code><b>output-j-s-array-id</b></code>
+                      <ul>
+                        <li>
+                          Name of the output variable with component's results
+                          stored in
+                          <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"
+                            target="_blank"
+                            ><i class="fa-solid fa-database pe-1"></i>Session
+                            Storage</a
+                          >.
+                        </li>
+                        <li>
+                          It's a JSON array
+                          <code
+                            >[ { "canonicalEvidenceType": "...", "provision": {
+                            "atuLevel": "...", "atuCode": "...", "atuLatinName":
+                            "...", "dataOwnerID":"...",
+                            "dataOwnerPrefLabel":"..." } }, ...]</code
+                          >, where code
+                          <code>canonicalEvidenceType</code> follows the
+                          codelist from input parameter
+                          <code>canonical-evidence-types</code> and
+                          <code>provision</code> is an object retrieved from
+                          IAL.
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Output</b>
+                  <ul>
+                    <li>
+                      Explicit message from the user to the Data Evaluator with
+                      <b>results stored in a Session Storage variable</b>
+                      defined by input parameter
+                      <code>output-j-s-array-id</code>.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- END: Introduction -->
+
+        <!-- START: Package and asset files -->
+        <div class="col-12">
+          <h2 class="pt-4">
+            <i class="fa-solid fa-book pe-2"></i>Package and asset files
+          </h2>
+          <p>
+            The integration of <b>MOR components</b> is possible via
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+              target="_blank"
+              ><i class="fa-solid fa-code pe-1"></i>Web Components</a
+            >, where
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements"
+              target="_blank"
+              ><i class="fa-solid fa-code pe-1"></i>custom element</a
+            >
+            <code
+              ><b><i class="fa-solid fa-tags pe-1"></i>de4a-mor-er</b></code
+            >
+            is available.
+          </p>
+          <p>
+            MOR component <b>package contains</b> the following client-side
+            files and assets to be included on a website at Data Evaluator:
+          </p>
+          <ul>
+            <li>
+              <code
+                ><b
+                  ><i class="fa-regular fa-folder-open pe-1"></i>assets</b
+                ></code
+              ><small class="text-muted ps-4"
+                >&larr; static <b>assets</b></small
+              >
+              <ul>
+                <li>
+                  <code
+                    ><b
+                      ><i class="fa-regular fa-folder-open pe-1"></i>flags</b
+                    ></code
+                  ><small class="text-muted ps-4"
+                    >&larr; <b>country flags</b> in scalable vector graphics
+                    format</small
+                  >
+                  <ul>
+                    <li>
+                      <code>at.svg</code>, <code>bg.svg</code>,
+                      <code>cz.svg</code>, <code>dk.svg</code>,
+                      <code>es.svg</code>, <code>fr.svg</code>,
+                      <code>gr.svg</code>, <code>hu.svg</code>,
+                      <code>it.svg</code>, <code>lu.svg</code>,
+                      <code>mt.svg</code>, <code>pl.svg</code>,
+                      <code>ro.svg</code>, <code>si.svg be.svg</code>,
+                      <code>cy.svg</code>, <code>de.svg</code>,
+                      <code>ee.svg</code>, <code>fi.svg</code>,
+                      <code>gb.svg</code>, <code>hr.svg</code>,
+                      <code>ie.svg</code>, <code>lt.svg</code>,
+                      <code>lv.svg</code>, <code>nl.svg</code>,
+                      <code>pt.svg</code>, <code>se.svg</code>,
+                      <code>sk.svg</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code
+                    ><b
+                      ><i class="fa-regular fa-folder-open pe-1"></i>fonts</b
+                    ></code
+                  ><small class="text-muted ps-4"
+                    >&larr;
+                    <a href="https://fontawesome.com/" target="_blank"
+                      ><i class="fa-brands fa-fonticons-fi pe-1"></i>Font
+                      Awesome</a
+                    >
+                    <b>icons</b></small
+                  >
+                  <ul>
+                    <li>
+                      <code>fa-brands-400.ttf</code>,
+                      <code>fa-regular-400.ttf</code>,
+                      <code>fa-solid-900.ttf</code>,
+                      <code> fa-v4compatibility.ttf</code>,
+                      <code>fa-brands-400.woff2</code>,
+                      <code>fa-regular-400.woff2</code>,
+                      <code>fa-solid-900.woff2</code>,
+                      <code>fa-v4compatibility.woff2</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code
+                    ><b
+                      ><i class="fa-regular fa-folder-open pe-1"></i>i18n</b
+                    ></code
+                  ><small class="text-muted ps-4"
+                    >&larr; <b>translation files</b> for localization</small
+                  >
+                  <ul>
+                    <li>
+                      <code>en.json</code>, <code>es.json</code>,
+                      <code>fr.json</code>, <code>pt.json</code>,
+                      <code>ro.json</code>, <code>sl.json</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code
+                    ><b
+                      ><i class="fa-regular fa-folder-open pe-1"></i>schemas</b
+                    ></code
+                  ><small class="text-muted ps-4"
+                    >&larr; canonical evidence types <b>schemas</b></small
+                  >
+                  <ul>
+                    <li>
+                      <code>birth-evidence-1.7-generated-example.xml</code>,
+                      <code>marriage-evidence-1.7-generated-example.xml</code>,
+                      <code>domicile-evidence-example.xml</code>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <code
+                ><a href="mor-elements.css" target="_blank"
+                  ><i class="fa-brands fa-css3-alt me-1"></i>mor-elements.css</a
+                ></code
+              ><small class="text-muted ps-4"
+                >&larr; <b>default styling</b> (with
+                <a href="https://getbootstrap.com/" target="_blank"
+                  ><i class="fa-brands fa-bootstrap pe-1"></i>Bootstrap</a
+                >,
+                <a href="https://fontawesome.com/" target="_blank"
+                  ><i class="fa-brands fa-fonticons-fi pe-1"></i>Font Awesome</a
+                >
+                and custom styles)</small
+              >
+            </li>
+            <li>
+              <code
+                ><a href="mor-elements-ro.css" target="_blank"
+                  ><i class="fa-brands fa-css3-alt me-1"></i
+                  >mor-elements-ro.css</a
+                ></code
+              ><small class="text-muted ps-4"
+                >&larr; Romanian theme demo styling</small
+              >
+            </li>
+            <li>
+              <code
+                ><a href="mor-elements.js" target="_blank"
+                  ><i class="fa-brands fa-js pe-1"></i>mor-elements.js</a
+                ></code
+              ><small class="text-muted ps-4"
+                >&larr; <b>business logic</b> for interaction</small
+              >
+            </li>
+            <li>
+              <code
+                ><a href="mor-elements-ro.zip" target="_blank"
+                  ><i class="fa-solid fa-file-zipper pe-1"></i
+                  >mor-elements-ro.zip</a
+                ></code
+              ><small class="text-muted ps-4"
+                >&larr; <b>compressed package</b> containing all files</small
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- START: Package and asset files -->
+
+        <!-- START: Style customization -->
+        <div class="col-12">
+          <h2 class="pt-4">
+            <i class="fa-solid fa-book pe-2"></i>Style customization
+          </h2>
+          <p>
+            Every element of both components can be completely customized using
+            CSS. To facilitate the customization the following elements and
+            classes have been defined that you can modify:
+          </p>
+          <ul>
+            <li>
+              <b>Global settings</b> at the component level
+              <ul>
+                <li>
+                  <code><b>de4a-mor-er</b></code>
+                  <small class="text-muted ps-4"
+                    >&larr; global setings for individual component</small
+                  >
+                </li>
+                <li>
+                  <code><b>.de4a-title</b></code
+                  ><small class="text-muted ps-4">&larr; titles</small>
+                </li>
+                <li>
+                  <code><b>.de4a-text</b></code
+                  ><small class="text-muted ps-4"
+                    >&larr; confirmation, error or warning messages</small
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Buttons</b>
+              <ul>
+                <li>
+                  <code><b>.de4a-button-evidence</b></code
+                  ><small class="text-muted ps-4"
+                    >&larr; button for actions related to evidence</small
+                  >
+                </li>
+                <li>
+                  <code><b>.de4a-button-choice-dark</b></code
+                  ><small class="text-muted ps-4"
+                    >&larr; dark selection button</small
+                  >
+                </li>
+                <li>
+                  <code><b>.de4a-button-choice-light</b></code
+                  ><small class="text-muted ps-4"
+                    >&larr; light selection button</small
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              Evidence <b>preview</b>
+              <ul>
+                <li>
+                  <code><b>.de4a-schema-values</b></code
+                  ><small class="text-muted ps-4"
+                    >&larr; schema attribute value</small
+                  >
+                </li>
+                <li>
+                  <code><b>.de4a-schema-comment</b></code
+                  ><small class="text-muted ps-4"
+                    >&larr; schema attribute descriptions</small
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Dropdown</b> menus
+              <ul>
+                <li>
+                  <code><b>.de4a-dropdown-menu</b></code
+                  ><small class="text-muted ps-4">&larr; dropdown menu</small>
+                </li>
+                <li>
+                  <code><b>.de4a-dropdown-item</b></code
+                  ><small class="text-muted ps-4">&larr; dropdown item</small>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Radio</b> buttons
+              <ul>
+                <li>
+                  <code><b>.de4a-input-radio</b></code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>File upload</b>
+              <ul>
+                <li>
+                  <code><b>.de4a-input-file</b></code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- START: Asset files -->
+
+        <!-- START: MOR-ER demo -->
+        <div class="col-12">
+          <h2 class="pt-4" id="mor-er-demo">
+            <i class="fa-solid fa-book pe-2"></i>MOR-ER demo
+          </h2>
+          <div class="row">
+            <div class="col-12 col-lg-6 pt-2">
+              <div class="card h-100">
+                <div class="card-header">
+                  <i class="fa-solid fa-code pe-1"></i>Integration of
+                  <b>Web Component</b> into existing webpage
+                </div>
+                <div class="card-body">
+                  <code>
+                    <pre class="text-muted mb-0">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;MOR ER&lt;/title&gt;
+    ...
+    <span style="color:#d63384;">&lt;link rel="stylesheet" href="<b>mor-elements.css</b>" /&gt;
+    &lt;script src="<b>mor-elements.js</b>"&gt;&lt;/script&gt;
+    &lt;script src="<b>mor-elements-ro.js</b>"&gt;&lt;/script&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+    <span style="color:#d63384;">&lt;<b>de4a-mor-er</b>
+      <b>default-lang</b>="ro"
+      <b>requester-country-code</b>="SI"
+      <b>canonical-evidence-types</b>="DomicileRegistrationCertificate"
+      <b>output-j-s-array-id</b>="outputJSArrayIdMorEr"
+    &gt;&lt;<b>/de4a-mor-er</b>&gt;</span>
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+                  </code>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 pt-2">
+              <div class="card h-100">
+                <div class="card-header">
+                  <i class="fa-solid fa-right-from-bracket pe-1"></i
+                  ><b>Output</b> in session storage variable
+                  <code>outputJSArrayIdMorEr</code>
+                </div>
+                <div class="card-body">
+                  <code>
+                    <pre id="output-mor-er" class="text-muted mb-0">
+Empty (please complete explicit request)</pre
+                    >
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mt-3">
+              <div class="card border-secondary">
+                <div class="card-header bg-secondary text-white">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <b
+                        ><i class="fa-solid fa-desktop pe-2"></i
+                        >Visualization</b
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <de4a-mor-er
+                    default-lang="ro"
+                    requester-country-code="SI"
+                    canonical-evidence-types="DomicileRegistrationCertificate"
+                    output-j-s-array-id="outputJSArrayIdMorEr"
+                  ></de4a-mor-er>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: MOR-ER demo -->
+
+        <!-- START: Building from source -->
+        <div class="col-12">
+          <h2 class="pt-4">
+            <i class="fa-solid fa-book pe-2"></i>Building from source
+          </h2>
+          <p>
+            MOR components are build as an
+            <a href="https://angular.io/" target="_blank"
+              ><i class="fa-brands fa-angular pe-1"></i>Angular project</a
+            >
+            and the source code is available in <code>MOR-app</code> folder.
+            Both components (MOR-ER and MOR-P) can be regenerated with the
+            following commands:
+          </p>
+          <ul>
+            <li>
+              <code><b>git clone</b> git@github.com:de4a-wp3/MOR.git</code
+              ><small class="text-muted ps-4"
+                >&larr; clone GitHub repository</small
+              >
+            </li>
+            <li>
+              <code><b>cd</b> MOR/MOR-app</code
+              ><small class="text-muted ps-4"
+                >&larr; change directory to Angular project</small
+              >
+            </li>
+            <li>
+              <code><b>npm run</b> pack:elements</code
+              ><small class="text-muted ps-4"
+                >&larr; build and packe components</small
+              >
+            </li>
+          </ul>
+          <p>
+            The compiled package and assets files are available in folder
+            <code>MOR-app/dist/elements/pack</code>.
+          </p>
+        </div>
+        <!-- END: Building from source -->
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("de4a-mor-er button.de4a-button-choice-dark").click(() => {
+          $("#output-mor-er").text(
+            sessionStorage.getItem("outputJSArrayIdMorEr")
+          );
+        });
+        $("de4a-mor-p button.de4a-button-choice-dark").click(() => {
+          $("#output-mor-p").text(
+            sessionStorage.getItem("confirmedCanonicalEvidenceTypes")
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
