@@ -143,7 +143,7 @@
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "UDT/Text",
+	"type" : "CountryEum",
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
@@ -5045,17 +5045,6 @@
 		"label" : "Informații legale",
 		"description" : "",
 		"example" : "",
-		"verified" : "false"
-	}
-} ,
-"" : {
-	"type" : "",
-	"cardinality" : "00",
-	"comment" : "Information légale",
-	"ro" : {
-		"label" : "",
-		"description" : "",
-		"example" : "0",
 		"verified" : "false"
 	}
 } ,
