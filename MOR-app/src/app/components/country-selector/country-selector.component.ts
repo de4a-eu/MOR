@@ -9,11 +9,7 @@ import { URL } from "../../classes/settings";
 })
 export class CountrySelectorComponent implements OnInit {
   @Input("canonicalEvidenceType") canonicalEvidenceType!: string;
-  constructor(public dataLoader: DataLoaderService, public ial: IalService) {
-    /*this.dataLoader.selectedLanguageChange.subscribe((value) => {
-      console.log("Prišlo je do spremembe jezika ... " + value);
-    });*/
-  }
+  constructor(public dataLoader: DataLoaderService, public ial: IalService) {}
 
   public flagURL?: string;
 
