@@ -143,7 +143,7 @@
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "UDT/Text",
+	"type" : "CountryEum",
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
@@ -5033,6 +5033,17 @@
 	"sl" : {
 		"label" : "Domači dokazi v PDF",
 		"description" : "Dokazila, ki jih izda pristojni organ v formatu PDF",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"sl" : {
+		"label" : "Pravne informacije",
+		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}

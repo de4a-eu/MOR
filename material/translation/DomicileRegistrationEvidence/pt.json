@@ -143,7 +143,7 @@
 	}
 } ,
 "LocationAddress/AdminUnitL1" : {
-	"type" : "UDT/Text",
+	"type" : "CountryEum",
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
@@ -5033,6 +5033,28 @@
 	"pt" : {
 		"label" : "Evidências domésticas em PDF",
 		"description" : "Provas emitidas pela autoridade competente em formato PDF",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-section-title" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Informação legal",
+		"description" : "",
+		"example" : "",
+		"verified" : "false"
+	}
+} ,
+"GUI/de4a-legalInfo-content/de4a-legalInfo-yellow" : {
+	"type" : "xs:string",
+	"cardinality" : "00",
+	"comment" : "",
+	"pt" : {
+		"label" : "Leia o texto a seguir antes de continuar",
+		"description" : "",
 		"example" : "",
 		"verified" : "false"
 	}
