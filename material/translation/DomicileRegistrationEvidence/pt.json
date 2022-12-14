@@ -5009,8 +5009,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Evidência Canônica",
-		"description" : "Provas emitidas pela autoridade competente na forma canónica desse tipo de prova",
+		"label" : "Evidência canônica",
+		"description" : "Evidências emitidas pela autoridade competente na forma canônica de tais evidências",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -5020,8 +5020,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Evidência doméstica",
-		"description" : "Provas emitidas pela autoridade competente no formulário original em formato estruturado",
+		"label" : "Evidência original",
+		"description" : "Evidências emitidas pela autoridade competente na forma original em formato estruturado",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -5031,8 +5031,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Evidências domésticas em PDF",
-		"description" : "Provas emitidas pela autoridade competente em formato PDF",
+		"label" : "Evidência em formato PDF",
+		"description" : "Evidências emitidas pela autoridade competente em formato PDF",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -5053,7 +5053,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Leia o texto a seguir antes de continuar",
+		"label" : "Leia o seguinte texto antes de continuar",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5064,7 +5064,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Ao usar este processo, você pode solicitar informações relevantes diretamente a nós e forneceremos a você o versão mais recente que temos. Você poderá revisar as informações e escolher se deseja ou não usá-las. Você não é obrigado a nos solicitar informações por meio deste serviço. Se cancelar este processo, terá a possibilidade de conclua seu processo pesquisando e enviando as informações manualmente. Observe que este serviço faz parte de um projeto piloto. Ao selecionar 'Concordo', você concorda em participar do programa piloto de forma voluntária. Você só deve usar as informações que disponibilizamos para o propósito de completar o procedimento e para verificar se o procedimento foi concluído com sucesso. Veja https://www.de4a.eu/aboutproject para mais detalhes.",
+		"label" : "Ao usar esse processo, você pode solicitar informações relevantes diretamente e fornecer a você o Versão mais atual que temos. Você pode verificar as informações e escolher se deseja ou não usá -las. Você não é obrigado a solicitar as informações através deste serviço. Se esse processo cancelar, você terá a possibilidade de Conclua seu processo procurando e enviando informações manualmente. Observe que este serviço faz parte de um projeto piloto. Ao selecionar 'Eu aceito', ele concorda em participar do programa piloto voluntariamente. Você deve usar apenas as informações que colocamos à sua disposição para concluir o procedimento e para verificar se o procedimento foi concluído com sucesso. Consulte https://www.de4a.eu/aboutproject para obter mais detalhes. ",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5075,7 +5075,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Provas fornecidas por",
+		"label" : "Evidência fornecida por",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5086,7 +5086,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "a Plataforma de Corretagem de Dados da Administração Geral do Estado Espanhol",
+		"label" : "A plataforma de intermediação de dados da administração em espanhol em geral",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5108,7 +5108,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Instituto Nacional de Estatística (INE)",
+		"label" : "Instituto Nacional de Estatísticas (INE)",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5119,7 +5119,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Recuperar",
+		"label" : "Continuar",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5130,7 +5130,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "Rejeitar",
+		"label" : "Declínio",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5141,7 +5141,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"pt" : {
-		"label" : "As provas solicitadas serão enviadas à seguinte autoridade",
+		"label" : "A evidência solicitada será enviada para a seguinte autoridade",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

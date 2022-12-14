@@ -5009,8 +5009,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Preuve Canonique",
-		"description" : "Preuve délivrée par l'autorité compétente sous la forme canonique de ce type de preuve",
+		"label" : "Preuves canoniques",
+		"description" : "Preuve émise par l'autorité compétente sous la forme canonique de ces preuves",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -5020,8 +5020,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Preuve nationale",
-		"description" : "Preuve délivrée par l'autorité compétente sous la forme originale dans un format structuré",
+		"label" : "Preuves originales",
+		"description" : "Preuve émise par l'autorité compétente sous la forme originale au format structuré",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -5031,8 +5031,8 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Preuve nationale en PDF",
-		"description" : "Preuve délivrée par l'autorité compétente au format PDF",
+		"label" : "Preuve au format PDF",
+		"description" : "Preuve émise par l'autorité compétente au format PDF",
 		"example" : "",
 		"verified" : "false"
 	}
@@ -5064,7 +5064,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "En utilisant ce processus, vous pouvez nous demander directement des informations pertinentes et nous vous fournirons les dernière version que nous avons. Vous pourrez consulter les informations et choisir de les utiliser ou non. Vous n'êtes pas obligé de nous demander des informations par le biais de ce service. Si vous annulez ce processus, vous aurez la possibilité de complétez votre processus en recherchant et en envoyant les informations manuellement. Veuillez noter que ce service fait partie d'un projet pilote. En sélectionnant 'J'accepte', vous acceptez de participer au programme pilote sur une base volontaire. Vous ne devez utiliser les informations que nous mettons à votre disposition que dans le but de remplir le procédure et de vérifier que la procédure s'est déroulée avec succès. Voir https://www.de4a.eu/aboutproject pour plus de détails.",
+		"label" : "Lorsque vous utilisez ce processus, vous pouvez demander directement des informations pertinentes et vous fournir Plus de version actuelle que nous avons. Vous pouvez vérifier les informations et choisir si vous souhaitez les utiliser ou non. Vous n'êtes pas obligé de demander les informations via ce service. Si ce processus annule, vous aurez la possibilité de Remplissez votre processus à la recherche et à l'envoi d'informations manuellement. Notez que ce service fait partie d'un projet pilote. En sélectionnant 'j'accepte', il accepte de participer volontairement au programme pilote. Vous devez uniquement utiliser les informations que nous mettons à votre disposition afin de compléter le procédure et pour vérifier que la procédure a été achevée avec succès. Voir https://www.de4a.eu/aboutproject pour plus de détails. ",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5086,7 +5086,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "la Plate-forme de courtage de données de l'administration générale de l'État espagnol",
+		"label" : "La plate-forme d'intermédiation de données de l'administration d'espagnol générale",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5108,7 +5108,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "l'Institut national de la statistique (INS)",
+		"label" : "Institut national des statistiques (INE)",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5119,7 +5119,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Récupérer",
+		"label" : "Procéder",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5130,7 +5130,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"fr" : {
-		"label" : "Récupérer",
+		"label" : "Déclin",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

@@ -5009,7 +5009,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Dovezi Canonice",
+		"label" : "Dovezi canonice",
 		"description" : "Dovada emisă de autoritatea competentă în forma canonică a acelui tip de probe",
 		"example" : "",
 		"verified" : "false"
@@ -5020,7 +5020,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Dovezi domestice",
+		"label" : "Dovezi originale",
 		"description" : "Dovada emisă de autoritatea competentă în forma originală în format structurat",
 		"example" : "",
 		"verified" : "false"
@@ -5031,7 +5031,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Dovezi interne în PDF",
+		"label" : "Dovezi în format PDF",
 		"description" : "Dovada eliberata de autoritatea competenta in format PDF",
 		"example" : "",
 		"verified" : "false"
@@ -5053,7 +5053,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Informații legale",
+		"label" : "Citiți următorul text înainte de a continua",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5064,7 +5064,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Utilizând acest proces, ne puteți solicita direct informații relevante și vă vom furniza ultima versiune pe care o avem. Veți putea să revizuiți informațiile și să alegeți dacă să le utilizați sau nu. Nu sunteți obligat să ne solicitați informații prin intermediul acestui serviciu. Dacă anulați acest proces, veți avea posibilitatea finalizați procesul căutând și trimițând manual informațiile. Vă rugăm să rețineți că acest serviciu face parte dintr-un proiect pilot. Selectând „Sunt de acord”, sunteți de acord să participați la programul pilot pe bază de voluntariat. Trebuie să utilizați informațiile pe care vi le punem la dispoziție numai în scopul de a completa procedura și pentru a verifica dacă procedura a fost finalizată cu succes. Consultați https://www.de4a.eu/aboutproject pentru mai multe detalii.",
+		"label" : "Când utilizați acest proces, puteți solicita informații relevante direct și vă puteți furniza Mai multe versiuni actuale pe care le avem. Puteți verifica informațiile și alegeți dacă doriți sau nu să le utilizați. Nu sunteți obligat să solicitați informațiile prin acest serviciu. Dacă acest proces se anulează, veți avea posibilitatea de a Completați procesul de căutare și trimiterea de informații manual. Rețineți că acest serviciu face parte dintr -un proiect pilot. Selectând „Accept”, el este de acord să participe în mod voluntar la programul pilot. Ar trebui să utilizați doar informațiile pe care le punem la dispoziție pentru a finaliza procedură și pentru a verifica dacă procedura a fost finalizată cu succes. Consultați https://www.de4a.eu/aboutproject pentru mai multe detalii. ",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5086,7 +5086,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Platforma de brokeraj de date a Administrației generale a statului spaniol",
+		"label" : "Platforma de intermediere a datelor administrației generale spaniole",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5097,7 +5097,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "emis de",
+		"label" : "emit de",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5108,7 +5108,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Institutului Național de Statistică (INS)",
+		"label" : "Institutul Național de Statistică (INE)",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5119,7 +5119,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Recupera",
+		"label" : "Continua",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5130,7 +5130,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Recupera",
+		"label" : "Declin",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5141,7 +5141,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"ro" : {
-		"label" : "Probele solicitate vor fi transmise următoarei autorități",
+		"label" : "Probele solicitate vor fi trimise următoarei autorități",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"

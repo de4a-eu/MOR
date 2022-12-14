@@ -5020,7 +5020,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Domači dokazi",
+		"label" : "Izvirni dokazi",
 		"description" : "Dokazila, ki jih izda pristojni organ v izvirni obliki v strukturirani obliki",
 		"example" : "",
 		"verified" : "false"
@@ -5031,7 +5031,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Domači dokazi v PDF",
+		"label" : "Dokazi v obliki pdf",
 		"description" : "Dokazila, ki jih izda pristojni organ v formatu PDF",
 		"example" : "",
 		"verified" : "false"
@@ -5053,7 +5053,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Preden nadaljujete, preberite naslednje besedilo",
+		"label" : "Pred nadaljevanjem preberite naslednje besedilo",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5064,7 +5064,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Z uporabo tega postopka lahko neposredno od nas zahtevate ustrezne informacije in posredovali vam jih bomo najnovejšo različico, ki jo imamo. Podatke boste lahko pregledali in se odločili, ali jih želite uporabiti ali ne. Ni vam treba zahtevati informacij od nas prek te storitve. Če prekličete ta postopek, boste imeli možnost, da dokončajte svoj postopek z ročnim iskanjem in pošiljanjem informacij. Upoštevajte, da je ta storitev del pilotnega projekta. Z izbiro 'Strinjam se' se strinjate s prostovoljnim sodelovanjem v pilotnem programu. Podatke, ki vam jih damo na voljo, uporabite samo za izpolnjevanje postopek in preveriti, ali je bil postopek uspešno zaključen. Za več podrobnosti glejte https://www.de4a.eu/aboutproject.",
+		"label" : "Ko uporabljate ta postopek, lahko neposredno zahtevate ustrezne informacije in vam zagotovite Več trenutne različice imamo. Lahko preverite informacije in izberete, ali jih želite uporabiti ali ne. Ne želite zahtevati informacij prek te storitve. Če ta postopek odpove, boste imeli možnost Izpolnite svoj postopek iskanja in pošiljanje informacij ročno. Upoštevajte, da je ta storitev del pilotskega projekta. Z izbiro 'Sprejmi' se strinja, da bo prostovoljno sodeloval v pilotnem programu. Za dokončanje postopek in preveriti, ali je bil postopek uspešno zaključen. Za več podrobnosti glejte https://www.de4a.eu/aboutProject. ",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5075,7 +5075,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Dokaze predložil",
+		"label" : "Dokazi, ki jih predloži",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5086,7 +5086,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Platforma za posredovanje podatkov generalne uprave španske države",
+		"label" : "Podatkovni posredniški platformi splošne španske uprave",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5097,7 +5097,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "ki ga oddaja",
+		"label" : "oddajati",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5119,7 +5119,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Pridobi",
+		"label" : "Nadaljevati",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5130,7 +5130,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Zavrni",
+		"label" : "Upad",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
@@ -5141,7 +5141,7 @@
 	"cardinality" : "00",
 	"comment" : "",
 	"sl" : {
-		"label" : "Zahtevani dokazi bodo poslani naslednjemu organu",
+		"label" : "Zahtevani dokazi bodo poslani naslednjim organom",
 		"description" : "",
 		"example" : "",
 		"verified" : "false"
