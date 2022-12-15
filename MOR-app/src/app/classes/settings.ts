@@ -42,6 +42,6 @@ export class DummyData {
   /**
    * If no response is received from IAL service, generate random data
    */
-  public static generateIalData: boolean = true;
+  public static generateIalData: boolean = false;
   public static generateIalDataRange: number[] = [5, 10];
 }

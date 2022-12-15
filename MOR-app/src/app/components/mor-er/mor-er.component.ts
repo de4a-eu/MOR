@@ -124,6 +124,7 @@ export class MORERComponent implements OnInit {
         .split(",")
         .map((x) => URL.canEvidUrn + x)
         .join(",") +
+      ":1.0" +
       (atuCode != "" ? "/" + atuCode : "");
 
     /**
@@ -204,9 +205,9 @@ export class MORERComponent implements OnInit {
           } else if (
             response.hasOwnProperty("items") &&
             response.items.length == 1 &&
-            response.items[0]["canonicalObjectTypeId"].endsWith(
+            response.items[0]["canonicalObjectTypeId"].indexOf(
               canEvidTokenList
-            ) &&
+            ) > -1 &&
             response.items[0].countries.length == 1 &&
             response.items[0].countries[0].countryCode == atuCode
           ) {
@@ -320,14 +321,18 @@ export class MORERComponent implements OnInit {
    * @returns true if one provision is selected
    */
   public isProvisionSelected(): boolean {
-    return (
-      this.ial.provisions[
-        this.modalSelectProvisionData.canonicalEvidenceType
-      ] &&
-      this.ial.provisions[
-        this.modalSelectProvisionData.canonicalEvidenceType
-      ].find((x: any) => x.selected)
-    );
+    let selected = false;
+    try {
+      selected =
+        this.ial.provisions[
+          this.modalSelectProvisionData.canonicalEvidenceType
+        ] &&
+        this.ial.provisions[
+          this.modalSelectProvisionData.canonicalEvidenceType
+        ].find((x: any) => x.selected);
+    } finally {
+      return selected;
+    }
   }
 
   ngOnInit(): void {
