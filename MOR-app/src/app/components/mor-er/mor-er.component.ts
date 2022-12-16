@@ -211,8 +211,14 @@ export class MORERComponent implements OnInit {
             response.items[0].countries.length == 1 &&
             response.items[0].countries[0].countryCode == atuCode
           ) {
-            this.ial.provisions[canEvType!] =
-              response.items[0].countries[0].provisions;
+            let provisions = response.items[0].countries[0].provisions;
+            provisions = provisions.filter((provision: any) =>
+              provision.dataOwnerID.endsWith(
+                URL.serverIALapiEnvironmentFilter["test"]
+              )
+            );
+            if (provisions.length == 0) provisions = "not available";
+            this.ial.provisions[canEvType!] = provisions;
           }
 
           if (

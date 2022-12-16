@@ -30,6 +30,14 @@ export class URL {
     "https://de4a.simplegob.com/ial/api/provision/";
 
   /**
+   * Client side filtering of IAL api environment
+   */
+  public static serverIALapiEnvironmentFilter = {
+    playground: "mock-it2",
+    test: "test-it2",
+  };
+
+  /**
    * {string} Preffix for all canonical evidence URNs
    */
   public static canEvidUrn: string = "urn:de4a-eu:CanonicalEvidenceType::";
