@@ -1,4 +1,11 @@
-# MOR
+# Multilingual Ontology Repository (MOR)
+
+## Authors
+
+- **Dejan Lavbič**, University of Ljubljana, Slovenia,
+- **Ana Rosa Guzmán Carbonell**, Ministry of Economic Affairs and Digital Transformation, Spain,
+- **Slavko Žitnik**, University of Ljubljana, Slovenia,
+- **Thashmee Karunaratne**, Stockholm University, Sweeden.
 
 ## Overview
 
