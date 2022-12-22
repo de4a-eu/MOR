@@ -49,7 +49,8 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><b
-            ><i class="fa-regular fa-id-card pe-2"></i>MOR-ER Romanian UC1 demo</b
+            ><i class="fa-regular fa-id-card pe-2"></i>MOR-ER Romanian UC1
+            demo</b
           ></a
         >
         <button
@@ -482,6 +483,17 @@
                         </li>
                       </ul>
                     </li>
+                    <li>
+                      <code><b>environment</b></code>
+                      <ul>
+                        <li>
+                          Defines the environment for testing IAL
+                          (<code>playground</code>, <code>test</code> and
+                          <code>pilot</code>), where default value is
+                          <code>test</code>.
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -714,6 +726,7 @@
       <b>requester-country-code</b>="SI"
       <b>canonical-evidence-types</b>="DomicileRegistrationCertificate"
       <b>output-j-s-array-id</b>="outputJSArrayIdMorEr"
+      <b>environment</b>="test"
     &gt;&lt;<b>/de4a-mor-er</b>&gt;</span>
     ...
   &lt;/body&gt;
@@ -758,6 +771,7 @@ Empty (please complete explicit request)</pre
                     requester-country-code="SI"
                     canonical-evidence-types="DomicileRegistrationCertificate"
                     output-j-s-array-id="outputJSArrayIdMorEr"
+                    environment="test"
                   ></de4a-mor-er>
                 </div>
               </div>

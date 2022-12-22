@@ -20,6 +20,7 @@ export class MORERComponent implements OnInit {
   requesterCountry: string;
   //canonicalEvidenceTypes: string[];
   outputJSArrayId: string;
+  environment: string;
 
   /**
    * Do not show component content if input parameters are invalid
@@ -62,6 +63,12 @@ export class MORERComponent implements OnInit {
      * check their validity
      */
     const native = this.elementRef.nativeElement;
+    this.environment = native.getAttribute("environment");
+    if (
+      !this.environment ||
+      !["test", "playground", "pilot"].includes(this.environment)
+    )
+      this.environment = "test";
     this.defaultLanguage = native.getAttribute("default-lang");
     if (
       !this.dataLoader
@@ -212,11 +219,22 @@ export class MORERComponent implements OnInit {
             response.items[0].countries[0].countryCode == atuCode
           ) {
             let provisions = response.items[0].countries[0].provisions;
-            provisions = provisions.filter((provision: any) =>
-              provision.dataOwnerID.endsWith(
-                URL.serverIALapiEnvironmentFilter["test"]
-              )
-            );
+            provisions = provisions.filter((provision: any) => {
+              if (this.environment == "pilot") {
+                return (
+                  !provision.dataOwnerID.endsWith(
+                    URL.serverIALapiEnvironmentFilter["test"]
+                  ) &&
+                  !provision.dataOwnerID.endsWith(
+                    URL.serverIALapiEnvironmentFilter["playground"]
+                  )
+                );
+              } else {
+                return provision.dataOwnerID.endsWith(
+                  URL.serverIALapiEnvironmentFilter[this.environment]
+                );
+              }
+            });
             if (provisions.length == 0) provisions = "not available";
             this.ial.provisions[canEvType!] = provisions;
           }

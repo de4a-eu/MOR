@@ -32,9 +32,10 @@ export class URL {
   /**
    * Client side filtering of IAL api environment
    */
-  public static serverIALapiEnvironmentFilter = {
+  public static serverIALapiEnvironmentFilter: any = {
     playground: "mock-it2",
     test: "test-it2",
+    pilot: "",
   };
 
   /**
