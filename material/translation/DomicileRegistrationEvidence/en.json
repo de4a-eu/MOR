@@ -48,7 +48,7 @@
 	"cardinality" : "10",
 	"comment" : "",
 	"en" : {
-		"label" : "Denomination of the issuing authority",
+		"label" : "Issuing authority",
 		"description" : "As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organisation. An organisation may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property.",
 		"example" : "IRN -  Institute of Registry and Notary.",
 		"verified" : "true"
