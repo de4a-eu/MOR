@@ -16,7 +16,7 @@
 
 ## Demo and integration
 
-- https://de4a-wp3.github.io/MOR/
+- https://de4a-eu.github.io/MOR/
 
 ## Video presentation
 
