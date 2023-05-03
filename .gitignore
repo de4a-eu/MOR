@@ -1,2 +1,6 @@
 .DS_store
 MOR-app/dist
+
+.project
+.classpath
+.settings/
